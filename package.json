@@ -1,0 +1,21 @@
+{
+  "name": "webar",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @webar/web",
+    "build": "npm run build -w @webar/web",
+    "preview": "npm run preview -w @webar/web",
+    "check": "tsc --noEmit -p packages/ar-core && tsc --noEmit -p apps/web"
+  },
+  "devDependencies": {
+    "@types/three": "^0.187.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vite-plugin-pwa": "^2.0.0"
+  }
+}

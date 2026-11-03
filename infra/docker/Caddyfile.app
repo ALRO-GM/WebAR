@@ -15,6 +15,13 @@
 		respond `{"ok":true,"version":"{$GIT_SHA}"}` 200
 	}
 
+	# Lo de Vite lleva el hash en el nombre: se puede guardar para siempre. El
+	# service worker, el manifiesto y el HTML, no: así llegan las versiones nuevas.
+	@inmutable path /assets/*
+	header @inmutable Cache-Control "public, max-age=31536000, immutable"
+	@fresco path /sw.js /registerSW.js /manifest.webmanifest / /index.html
+	header @fresco Cache-Control "no-cache"
+
 	handle {
 		root * /srv
 		file_server

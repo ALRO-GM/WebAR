@@ -1,0 +1,13 @@
+{
+  "name": "@webar/ar-core",
+  "version": "0.1.0",
+  "description": "Base de realidad aumentada web: sesión, anclas y proveedores de seguimiento intercambiables sobre three.js",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "peerDependencies": {
+    "three": ">=0.160.0"
+  }
+}

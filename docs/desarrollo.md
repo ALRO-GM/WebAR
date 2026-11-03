@@ -2,19 +2,36 @@
 
 ## Ahora mismo
 
-Aún no hay pila: `public/` se sirve tal cual. Es una página con un botón que
-prueba la cámara trasera, para comprobar que HTTPS y los permisos van bien.
+Monorepo con *npm workspaces*, Vite y TypeScript (la arquitectura y por qué,
+en [arquitectura.md](arquitectura.md)):
+
+- `packages/ar-core`: la base de realidad aumentada, reutilizable.
+- `apps/web`: la PWA (Vite + `vite-plugin-pwa`), con la demo de la esfera.
+
+```sh
+npm install
+npm run dev        # http://localhost:5173 (también en la red local, sin HTTPS)
+npm run check      # tipos de los dos paquetes
+npm run build      # apps/web/dist
+```
+
+La cámara y WebXR solo funcionan en `localhost` o por HTTPS. Para probar en el
+móvil lo más rápido es desplegar (push a `main`) y abrir
+https://webar.peer4u.app. Otra opción, con el móvil por USB:
+`adb reverse tcp:5173 tcp:5173` y abrir `http://localhost:5173` en su Chrome.
+En el ordenador, la extensión *Immersive Web Emulator* simula un móvil con
+WebXR.
+
+La demo de la esfera necesita WebXR: Android con Chrome y los Servicios de
+Google Play para RA. En iPhone avisa de que aún no hay soporte.
+
+Con Docker, igual que en producción:
 
 ```sh
 docker build -f infra/docker/Dockerfile --build-arg GIT_SHA=local -t webar:dev .
 docker run --rm -p 8080:8080 webar:dev
 # http://localhost:8080   ·   http://localhost:8080/health
 ```
-
-O, sin Docker: `python3 -m http.server 8080 -d public`.
-
-La cámara solo funciona en `localhost` o por HTTPS. Para probar en el móvil,
-despliega (push a `main`) y abre https://webar.peer4u.app.
 
 ## El contrato de la imagen
 
@@ -28,33 +45,13 @@ La CI y `deploy.sh` cuentan con esto. Si lo cambias, cámbialos también:
 - La imagen arranca con el sistema de ficheros de **solo lectura** (salvo
   `/tmp`), **sin capacidades** y sin root.
 
-## Meter una pila
+## Dependencias y peso
 
-Por ejemplo, Vite con three.js, A-Frame o MindAR.
-
-1. Crea `package.json` con, como mínimo:
-   - `build`, que genere `dist/`;
-   - `check`, para lint y tipos;
-   - `test`, si hay tests.
-
-   La CI los ejecuta solos en cuanto existe `package.json`.
-2. En el Dockerfile, añade una etapa de build delante:
-   ```dockerfile
-   FROM node:22-alpine AS build
-   WORKDIR /app
-   COPY package*.json ./
-   RUN npm ci
-   COPY . .
-   RUN npm run build
-   ```
-   En la etapa de Caddy, cambia `COPY public/ /srv/` por
-   `COPY --from=build /app/dist/ /srv/`. Mantén la ruta `/health` del
-   `Caddyfile.app`.
-3. Si hace falta un servidor propio (API, WebSocket), que cumpla el mismo
-   contrato: puerto 8080 y `/health` con la versión.
-
-   Con estado (base de datos, ficheros subidos), añade un volumen en
-   `infra/compose.yml` y quita `read_only` solo si no hay otra forma.
-4. Modelos 3D, vídeos o marcadores pesados: pocos megas y comprimidos
-   (glTF/Draco, KTX2). Todo el tráfico de la máquina cuenta en el límite
-   mensual de Oracle (`docs/servidor.md`).
+- Modelos 3D, vídeos o marcadores pesados: pocos megas y comprimidos
+  (glTF/Draco, KTX2). Todo el tráfico de la máquina cuenta en el límite
+  mensual de Oracle (`docs/servidor.md`).
+- El service worker guarda en caché todo lo que hay en `dist/` (precache). Si
+  algo grande no debe ir ahí, sácalo de `workbox.globPatterns` en
+  `apps/web/vite.config.ts`.
+- Si hace falta un servidor propio (API, WebSocket), que cumpla el mismo
+  contrato: puerto 8080 y `/health` con la versión.

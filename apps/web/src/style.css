@@ -1,0 +1,53 @@
+:root {
+  color-scheme: dark;
+  --bg: #111317;
+  --fg: #eef0f3;
+  --muted: #9aa3b2;
+  --accent: #7aa5ff;
+  --accent-fg: #0b1020;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  font: 16px/1.5 system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-tap-highlight-color: transparent;
+}
+/* Durante la sesión se ve la cámara: nada de fondo. */
+body.ar-activo { background: transparent; }
+
+#overlay { position: fixed; inset: 0; pointer-events: none; }
+#overlay > * { pointer-events: auto; }
+
+#inicio {
+  min-height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.75rem; padding: 24px; text-align: center; max-width: 30rem; margin: 0 auto;
+}
+#inicio h1 { margin: 0.25rem 0 0; font-size: 1.6rem; }
+#inicio p { margin: 0; color: var(--muted); }
+#aviso:empty { display: none; }
+#aviso { font-size: 0.95rem; }
+.pista { font-size: 0.85rem; }
+
+button {
+  font: inherit; font-weight: 600; padding: 0.8rem 1.4rem; border: 0; border-radius: 999px;
+  background: var(--accent); color: var(--accent-fg); cursor: pointer; min-width: 10rem;
+}
+button:disabled { opacity: 0.5; cursor: default; }
+button.secundario { background: rgb(255 255 255 / 0.14); color: var(--fg); backdrop-filter: blur(8px); }
+
+/* El HUD no tapa los toques a la escena salvo en sus botones. */
+#hud { position: absolute; inset: 0; pointer-events: none; }
+#hud button { pointer-events: auto; }
+.burbuja {
+  position: absolute; top: max(16px, env(safe-area-inset-top)); left: 50%; transform: translateX(-50%);
+  width: max-content; max-width: calc(100% - 32px); margin: 0; padding: 0.6rem 1rem; border-radius: 12px;
+  background: rgb(0 0 0 / 0.55); color: #fff; text-align: center; font-size: 0.95rem;
+}
+.barra {
+  position: absolute; left: 0; right: 0; bottom: max(24px, env(safe-area-inset-bottom));
+  display: flex; justify-content: center; gap: 12px;
+}
+.barra button { min-width: 0; }

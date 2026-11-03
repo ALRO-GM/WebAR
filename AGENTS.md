@@ -12,7 +12,8 @@ Responde y escribe (commits, docs, comentarios) **en español**.
 | --- | --- |
 | [docs/servidor.md](docs/servidor.md) | La máquina, cómo convive con Peer4U, qué se puede tocar por SSH y qué no |
 | [docs/ci-cd.md](docs/ci-cd.md) | GitHub, la CI, el despliegue automático, cómo vigilarlo y cómo volver atrás |
-| [docs/desarrollo.md](docs/desarrollo.md) | Arrancar en local, el contrato de la imagen y cómo meter una pila (Vite, three.js…) |
+| [docs/arquitectura.md](docs/arquitectura.md) | Por qué three.js + WebXR (+ MindAR) y cómo se separa la base de RA de la app |
+| [docs/desarrollo.md](docs/desarrollo.md) | Arrancar en local (npm workspaces, Vite) y el contrato de la imagen |
 | [.claude/skills/desplegar/SKILL.md](.claude/skills/desplegar/SKILL.md) | Los pasos exactos de un despliegue |
 
 ## El ciclo en una línea

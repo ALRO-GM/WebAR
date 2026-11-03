@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>WebAR · Átomos</title>
+    <meta name="description" content="Realidad aumentada desde la web para aprender química con átomos y moléculas" />
+    <meta name="theme-color" content="#111317" />
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  </head>
+  <body>
+    <!-- La capa que se ve encima de la cámara (dom-overlay de WebXR). -->
+    <div id="overlay">
+      <main id="inicio">
+        <img src="/icons/icon.svg" alt="" width="88" height="88" />
+        <h1>WebAR · Átomos</h1>
+        <p>Realidad aumentada desde la web. Primera prueba: deja una esfera fija en una superficie y muévete a su alrededor.</p>
+        <button id="entrar" type="button" disabled>Comprobando el móvil…</button>
+        <p id="aviso" role="status"></p>
+        <button id="instalar" type="button" class="secundario" hidden>Instalar la app</button>
+        <p id="instalar-ios" class="pista" hidden>Para instalarla en iPhone: botón Compartir → «Añadir a pantalla de inicio».</p>
+      </main>
+
+      <div id="hud" hidden>
+        <p id="pista" class="burbuja">Mueve el móvil despacio apuntando al suelo o a una mesa…</p>
+        <div class="barra">
+          <button id="borrar" type="button" class="secundario">Borrar</button>
+          <button id="salir" type="button">Salir</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
