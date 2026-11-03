@@ -1,0 +1,24 @@
+# El bloque de WebAR en el Caddy de Peer4U (contenedor sanatorio-caddy-1).
+# deploy.sh lo copia a /opt/caddy-sitios/webar.caddy, lo valida y recarga
+# Caddy; si no valida, deja el de antes. Un error aquí podría tumbar Peer4U en
+# el siguiente arranque de Caddy: valida siempre antes de recargar.
+webar.peer4u.app {
+	encode zstd gzip
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		# La realidad aumentada necesita cámara y sensores de esta misma web.
+		Permissions-Policy "camera=(self), microphone=(), geolocation=(self), accelerometer=(self), gyroscope=(self), magnetometer=(self), xr-spatial-tracking=(self), payment=()"
+		-Server
+		-Via
+	}
+
+	# `webar` es el alias del contenedor en la red sanatorio_default.
+	reverse_proxy webar:8080 {
+		health_uri /health
+		health_interval 30s
+		header_down -Via
+	}
+}

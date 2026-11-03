@@ -1,0 +1,44 @@
+# WebAR en la máquina de Peer4U (Oracle, /opt/webar). Lo arranca deploy.sh:
+#
+#   GIT_SHA=<sha> docker compose build web && docker compose up -d
+#
+# No publica puertos: el Caddy de Peer4U le habla por la red sanatorio_default
+# (alias `webar`). Esa red la crea Peer4U; si no existe, Peer4U no está en marcha.
+# En local no hace falta: ver docs/desarrollo.md.
+
+name: webar
+
+services:
+  web:
+    image: webar:local
+    build:
+      context: ..
+      dockerfile: infra/docker/Dockerfile
+      args:
+        GIT_SHA: ${GIT_SHA:-}
+    restart: unless-stopped
+    networks:
+      peer4u:
+        aliases:
+          - webar
+    # Topes para no quitarle a Peer4U lo que necesita (la máquina es compartida).
+    mem_limit: 512m
+    cpus: 1.0
+    pids_limit: 128
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '3'
+
+networks:
+  peer4u:
+    external: true
+    name: sanatorio_default

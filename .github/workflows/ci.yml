@@ -1,0 +1,91 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Comprobaciones e imagen
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      # Solo cuando el proyecto ya tenga package.json (al elegir la pila).
+      - if: hashFiles('package.json') != ''
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - if: hashFiles('package.json') != ''
+        run: npm ci
+      - if: hashFiles('package.json') != ''
+        run: npm run check --if-present
+      - if: hashFiles('package.json') != ''
+        run: npm test --if-present
+
+      - name: Construir la imagen
+        run: docker build -f infra/docker/Dockerfile --build-arg GIT_SHA=${{ github.sha }} -t webar:ci .
+
+      # El mismo contrato que mira deploy.sh: /health con el commit dentro.
+      - name: La imagen arranca y responde
+        run: |
+          set -eu
+          docker run -d --name webar-ci --read-only --tmpfs /tmp --cap-drop ALL -p 8080:8080 webar:ci
+          for i in $(seq 1 20); do
+            if curl -fsS http://127.0.0.1:8080/health | grep -q '"version":"${{ github.sha }}"'; then
+              curl -fsS -o /dev/null http://127.0.0.1:8080/
+              echo "Responde."
+              exit 0
+            fi
+            sleep 1
+          done
+          docker logs webar-ci
+          exit 1
+
+  # El veredicto, como etiqueta de git: `ci-ok/<sha>` o `ci-ko/<sha>`. La
+  # máquina lo mira con `git ls-remote` (sin la API de GitHub ni su cupo).
+  veredicto:
+    name: Etiqueta ci-ok / ci-ko
+    needs: [check]
+    if: always() && github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Publicar el veredicto
+        env:
+          CHECK: ${{ needs.check.result }}
+        run: |
+          set -eu
+          if [ "$CHECK" = success ]; then tag="ci-ok/$GITHUB_SHA"; else tag="ci-ko/$GITHUB_SHA"; fi
+          git tag "$tag" "$GITHUB_SHA"
+          git push origin "refs/tags/$tag"
+          echo "Etiqueta $tag publicada."
+
+      - name: Borrar veredictos de hace más de 30 días
+        run: |
+          set -eu
+          git fetch --quiet origin '+refs/tags/ci-ok/*:refs/tags/ci-ok/*' '+refs/tags/ci-ko/*:refs/tags/ci-ko/*' || true
+          cutoff=$(( $(date +%s) - 30 * 86400 ))
+          old=''
+          for ref in $(git for-each-ref --format='%(refname)' 'refs/tags/ci-ok/*' 'refs/tags/ci-ko/*'); do
+            when=$(git log -1 --format=%ct "$ref" 2>/dev/null || echo 0)
+            [ "$when" -ge "$cutoff" ] || old="$old $ref"
+          done
+          # shellcheck disable=SC2086
+          if [ -n "$old" ]; then git push origin --delete $old; else echo "Nada que borrar."; fi

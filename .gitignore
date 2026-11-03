@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+.env.*
+infra/deploy.log
+.claude/settings.local.json
+.claude/worktrees/
