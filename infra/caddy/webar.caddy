@@ -1,8 +1,8 @@
-# El bloque de WebAR en el Caddy de Peer4U (contenedor sanatorio-caddy-1).
+# El bloque de Labtory (antes WebAR) en el Caddy de Peer4U (contenedor sanatorio-caddy-1).
 # deploy.sh lo copia a /opt/caddy-sitios/webar.caddy, lo valida y recarga
 # Caddy; si no valida, deja el de antes. Un error aquí podría tumbar Peer4U en
 # el siguiente arranque de Caddy: valida siempre antes de recargar.
-webar.peer4u.app {
+labtory.peer4u.app {
 	encode zstd gzip
 
 	header {
@@ -21,4 +21,9 @@ webar.peer4u.app {
 		health_interval 30s
 		header_down -Via
 	}
+}
+
+# El dominio de antes: los enlaces, QR y tarjetas impresas siguen funcionando.
+webar.peer4u.app {
+	redir https://labtory.peer4u.app{uri} permanent
 }

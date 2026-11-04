@@ -1,14 +1,15 @@
-# WebAR
+# Labtory
 
-Realidad aumentada desde la propia web, sin instalar nada. Proyecto de
-hackathon.
+Laboratorio de química con realidad aumentada desde la propia web, sin
+instalar nada de una tienda. Proyecto de hackathon (el repositorio sigue
+llamándose WebAR).
 
-**En marcha:** https://webar.peer4u.app
+**En marcha:** https://labtory.peer4u.app
 
 ## Estado
 
 PWA instalable para aprender química con **tarjetas de átomos en realidad
-aumentada**: se imprimen ([/cartas.html](https://webar.peer4u.app/cartas.html)),
+aumentada**: se imprimen ([/cartas.html](https://labtory.peer4u.app/cartas.html)),
 se apuntan con la cámara (Android o iPhone) y cada una muestra su átomo
 flotando encima. Al juntar las que reaccionan durante 3 s se forma la molécula
 (agua, CO₂, metano, amoniaco, sal… 50 sustancias y 38 reacciones de libro),
@@ -36,10 +37,10 @@ gota que ondula, la evaporación y el gas.
 Para clase: el progreso funciona **sin conexión** (moleculario, tabla periódica
 que se desbloquea, historias, retos, insignias) y, si el alumno se une a una
 clase con un código, se sincroniza con el **panel del profesorado**
-([/profesor.html](https://webar.peer4u.app/profesor.html)): retos, estadísticas
+([/profesor.html](https://labtory.peer4u.app/profesor.html)): retos, estadísticas
 y la meta común de la clase. El profesor puede **emitir su móvil al
 proyector**: con la misma cuenta en el móvil y en el ordenador del aula
-([/proyector.html](https://webar.peer4u.app/proyector.html)), lo que ve en RA
+([/proyector.html](https://labtory.peer4u.app/proyector.html)), lo que ve en RA
 sale en la pantalla grande (WebRTC, o imágenes por el servidor si la red lo
 bloquea). Accesible (alto contraste, texto grande, menos
 movimiento, alternativas a los gestos) y traducible: todos los textos están en
@@ -64,6 +65,7 @@ Las reglas para agentes de IA están en [AGENTS.md](AGENTS.md).
 
 | Fecha | Qué cambió |
 | --- | --- |
+| 2026-11-04 | La app se llama **Labtory** y vive en `labtory.peer4u.app`; `webar.peer4u.app` redirige (enlaces, QR y tarjetas impresas siguen valiendo) |
 | 2026-11-04 | Mesa virtual: «➕ Añadir elemento» abre la tabla periódica (la bandeja se cortaba en el móvil). Explorar átomos y átomos sobre la mesa, en un solo modo con «En 3D / En tu mesa». Foto con científicos en pausa |
 | 2026-11-04 | Botón «Instalar» a la vista en la barra de arriba (solo donde se puede instalar; en iPhone explica los pasos) que desaparece al instalarla; el aviso del navegador ya no se pierde al arrancar |
 | 2026-11-04 | Tarjetas nuevas: degradado con órbitas y enlaces dibujados en los bordes que coinciden al juntarlas (H–O una raya, O=C dos, N≡N tres); la mesa virtual empieza vacía con una bandeja de elementos y cada tarjeta cae en un hueco libre sin reaccionar sola |

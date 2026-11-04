@@ -14,9 +14,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icons/icon.svg', 'icons/apple-touch-icon.png'],
       manifest: {
-        name: 'WebAR · Átomos',
-        short_name: 'Átomos AR',
-        description: 'Realidad aumentada desde la web para aprender química con átomos y moléculas',
+        name: 'Labtory',
+        short_name: 'Labtory',
+        description: 'Laboratorio de química con realidad aumentada en la web: átomos, moléculas y reacciones',
         lang: 'es',
         start_url: '/',
         scope: '/',

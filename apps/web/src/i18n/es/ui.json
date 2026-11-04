@@ -2332,7 +2332,7 @@
   "descripcion": "Aviso sin cámara"
  },
  "aviso.https": {
-  "texto": "Hace falta HTTPS: abre https://webar.peer4u.app.",
+  "texto": "Hace falta HTTPS: abre https://labtory.peer4u.app.",
   "descripcion": "Aviso sin conexión segura"
  },
  "aviso.permiso": {

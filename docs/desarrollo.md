@@ -27,7 +27,7 @@ no funcionan); para probarlos, `npm run server`.
 
 La cámara y WebXR solo funcionan en `localhost` o por HTTPS. Para probar en el
 móvil lo más rápido es desplegar (push a `main`) y abrir
-https://webar.peer4u.app. Otra opción, con el móvil por USB:
+https://labtory.peer4u.app. Otra opción, con el móvil por USB:
 `adb reverse tcp:5173 tcp:5173` y abrir `http://localhost:5173` en su Chrome.
 En el ordenador, la extensión *Immersive Web Emulator* simula un móvil con
 WebXR.

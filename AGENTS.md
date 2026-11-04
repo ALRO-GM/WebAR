@@ -1,8 +1,11 @@
-# WebAR — guía para agentes
+# Labtory (repo WebAR) — guía para agentes
 
 Proyecto de hackathon de Alberto José Rodríguez Díaz (`albrodri` en 42 Madrid,
-`ALRO-GM` en GitHub): **realidad aumentada desde la propia web**. Se sirve en
-**https://webar.peer4u.app** desde la misma máquina de Oracle que Peer4U.
+`ALRO-GM` en GitHub): **Labtory**, un laboratorio de química con **realidad
+aumentada desde la propia web**. Se sirve en **https://labtory.peer4u.app**
+(antes `webar.peer4u.app`, que redirige) desde la misma máquina de Oracle que
+Peer4U. Por dentro (repo, carpeta `/opt/webar`, contenedores `webar-*`) sigue
+llamándose WebAR.
 
 Responde y escribe (commits, docs, comentarios) **en español**.
 
@@ -22,7 +25,7 @@ Responde y escribe (commits, docs, comentarios) **en español**.
 Cambio → comprobación local → commit en `main` → `git push` → la CI de GitHub
 construye y prueba la imagen y deja la etiqueta `ci-ok/<sha>` → la máquina la
 ve en ≤ 2 min (cron) y despliega sola → comprueba
-`curl -s https://webar.peer4u.app/health` (lleva el commit).
+`curl -s https://labtory.peer4u.app/health` (lleva el commit).
 
 ## Reglas
 

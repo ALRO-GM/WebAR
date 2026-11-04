@@ -1,6 +1,6 @@
 # El servidor
 
-WebAR vive en la máquina de Peer4U. Comparte Caddy y red con Peer4U, pero
+Labtory (por dentro, WebAR: repo, carpeta y contenedores) vive en la máquina de Peer4U. Comparte Caddy y red con Peer4U, pero
 tiene su carpeta, su compose y sus contenedores.
 
 | | |
@@ -10,7 +10,7 @@ tiene su carpeta, su compose y sus contenedores.
 | Carpeta | `/opt/webar` (clon de `https://github.com/ALRO-GM/WebAR.git`, rama `main`) |
 | Contenedor | `webar-web-1` (compose `webar`, servicio `web`), imagen `webar:local` y `webar:previous`: Node sirve la PWA, la API de clases y `/health` |
 | Datos | Volumen `webar_datos` montado en `/data` (SQLite `webar.db`: profesorado, clases, alias del alumnado y su progreso, y las ligas con jugadores anónimos) |
-| Dominio | `webar.peer4u.app`, registro `A` en Cloudflare a `51.170.34.214`, nube gris (sin proxy) |
+| Dominio | `labtory.peer4u.app`, registro `A` en Cloudflare a `51.170.34.214`, nube gris (sin proxy). El de antes, `webar.peer4u.app` (mismo registro), redirige con 301 desde Caddy: los enlaces, QR y tarjetas impresas siguen valiendo. Ojo: lo guardado en el navegador (progreso sin clase) es por dominio y no pasa solo |
 | HTTPS | El Caddy de Peer4U (`sanatorio-caddy-1`) pide y renueva el certificado solo |
 | Registro de despliegues | `/opt/webar/infra/deploy.log` |
 
@@ -19,7 +19,7 @@ tiene su carpeta, su compose y sus contenedores.
 ```
 navegador ──443──▶ sanatorio-caddy-1 (Peer4U)
                      ├─ peer4u.app        ──▶ sanatorio-app-1:3000
-                     └─ webar.peer4u.app  ──▶ webar:8080 (webar-web-1)
+                     └─ labtory.peer4u.app  ──▶ webar:8080 (webar-web-1)
                           red docker: sanatorio_default
 ```
 
@@ -228,7 +228,7 @@ muy pesado servido a mucha gente cuenta.
 Se deja apuntada por si hay que rehacerla en otra máquina:
 
 ```sh
-# DNS (desde local): A webar → 51.170.34.214, sin proxy
+# DNS (desde local): A labtory (y el antiguo webar) → 51.170.34.214, sin proxy
 # Máquina:
 sudo install -d -o ubuntu -g ubuntu /opt/caddy-sitios /opt/webar
 git clone https://github.com/ALRO-GM/WebAR.git /opt/webar
@@ -249,4 +249,4 @@ rm /opt/caddy-sitios/webar.caddy
 docker exec sanatorio-caddy-1 caddy reload --config /etc/caddy/Caddyfile --adapter caddyfile
 ```
 
-Después, borrar el registro DNS `webar` en Cloudflare.
+Después, borrar los registros DNS `labtory` y `webar` en Cloudflare.

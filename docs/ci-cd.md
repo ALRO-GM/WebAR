@@ -41,7 +41,7 @@ De push a desplegado suelen pasar unos 3–5 min.
 
 ```sh
 # ¿Qué commit está sirviendo?
-curl -s https://webar.peer4u.app/health
+curl -s https://labtory.peer4u.app/health
 # El registro de despliegues:
 ssh ubuntu@51.170.34.214 'tail -20 /opt/webar/infra/deploy.log' < /dev/null
 ```
@@ -49,7 +49,7 @@ ssh ubuntu@51.170.34.214 'tail -20 /opt/webar/infra/deploy.log' < /dev/null
 Para esperar en segundo plano a que salga tu commit (`sha=$(git rev-parse HEAD)`):
 
 ```sh
-for i in $(seq 1 30); do curl -fsS https://webar.peer4u.app/health 2>/dev/null | grep -q "$sha" && { echo desplegado; exit 0; }; sleep 20; done; echo "no llega"; exit 1
+for i in $(seq 1 30); do curl -fsS https://labtory.peer4u.app/health 2>/dev/null | grep -q "$sha" && { echo desplegado; exit 0; }; sleep 20; done; echo "no llega"; exit 1
 ```
 
 Al buscar procesos con `pgrep -f`, el patrón no puede aparecer en la línea de

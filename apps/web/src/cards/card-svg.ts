@@ -192,7 +192,7 @@ function elementBody(spec: CardSpec): string {
       .join('') +
     bohrIcon(right + 30, 796, 30, c.shells, color) +
     text(shells, right + 72, 806, { size: 28, weight: 800, fill: INK, max: rightW - 72, anchor: 'start' }) +
-    text(`${bondCount(e) ? t('cara.enlaces', { n: bondCount(e) }) : t('cara.sin_enlaces')} · webar.peer4u.app · nº ${markerId}`, SVG_W / 2, 862, { size: 21, weight: 800, fill: INK, opacity: 0.55, max: SVG_W - 80 })
+    text(`${bondCount(e) ? t('cara.enlaces', { n: bondCount(e) }) : t('cara.sin_enlaces')} · labtory.peer4u.app · nº ${markerId}`, SVG_W / 2, 862, { size: 21, weight: 800, fill: INK, opacity: 0.55, max: SVG_W - 80 })
   );
 }
 
