@@ -18,6 +18,11 @@ export interface CardSpec {
   symbol: string;
   /** 1 = primera copia de ese elemento. */
   copy: number;
+  /**
+   * Tarjetas virtuales (mesa): el marcador de la tarjeta impresa a la que
+   * equivalen, para dibujarla igual que la de papel. Si falta, `id`.
+   */
+  marker?: number;
 }
 
 /**

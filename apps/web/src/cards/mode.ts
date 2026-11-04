@@ -4,8 +4,11 @@ import { REACTIONS, SPECIES, composition, contentFormula, formatEquation, reacti
 import { t } from '../i18n';
 import { contentName, num, reactionConditions, reactionName, reactionNote, speciesName } from '../i18n/content';
 import { Effects } from '../effects';
-import { CARD, MARKER_TO_CENTER, cardById, type CardSpec } from './deck';
+import './cards.css';
+import { MAX_CONTENT_SCALE, MIN_CONTENT_SCALE } from './card-visual';
+import { CARD, DECK, MARKER_TO_CENTER, cardById, type CardSpec } from './deck';
 import { CardGame, HOLD_SECONDS } from './game';
+import { TableScene } from './table-scene';
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
 const kj = (n: number) => `${n > 0 ? '+' : n < 0 ? '−' : ''}${num(Math.abs(n))} kJ/mol`;
@@ -28,6 +31,28 @@ export interface CardsModeDeps {
 
 /** Las cartas por defecto en la mesa virtual. */
 const DEFAULT_TABLE = 'H H H H O O O C N N Na Cl'.split(' ');
+const SCALE_KEY = 'webar:escala-tarjetas';
+const SCALE_STEP = 0.25;
+
+/**
+ * La cámara de la mesa virtual: giro lento y con inercia, nunca por debajo de
+ * 35° sobre la mesa (las tarjetas siempre se ven desde arriba), desplazamiento
+ * en el plano de la mesa y zoom con límites para no perderla de vista.
+ */
+const TABLE_CONTROLS = {
+  rotateSpeed: 0.45,
+  dampingFactor: 0.07,
+  zoomSpeed: 0.8,
+  panSpeed: 0.8,
+  enablePan: true,
+  screenSpacePanning: false,
+  zoomToCursor: true,
+  minPolarAngle: 0,
+  maxPolarAngle: THREE.MathUtils.degToRad(90 - 35),
+  minDistance: 0.12,
+  maxDistance: 0.85,
+  panBounds: new THREE.Box3(new THREE.Vector3(-0.42, 0, -0.3), new THREE.Vector3(0.42, 0, 0.3)),
+};
 
 /**
  * El modo tarjetas: con la cámara (marcadores impresos) o en una mesa virtual
@@ -43,9 +68,15 @@ export class CardsMode {
   readonly game: CardGame;
   private kind: CardsKind = 'camara';
   private active = false;
-  private table?: THREE.Mesh;
+  private table?: TableScene;
   private virtualId = 1000;
-  private drag?: { card: THREE.Object3D; anchorId: number; moved: boolean; start: { x: number; y: number } };
+  private drag?: { anchorId: number; moved: boolean; start: { x: number; y: number } };
+  /** Tamaño de los átomos y moléculas (1×-3×), guardado entre visitas. */
+  private contentScale = 1;
+  private scaleOutput?: HTMLOutputElement;
+  /** Pellizco con dos dedos en la cámara: cambia el tamaño. */
+  private readonly pinch = new Map<number, { x: number; y: number }>();
+  private pinchStart?: { distance: number; scale: number };
   private holding = false;
   private holdTime = 0;
   private bannerTimer = 0;
@@ -70,6 +101,7 @@ export class CardsMode {
     );
     this.game.on('charging', (c) => this.showCharging(c));
     this.setupHud();
+    this.setScale(Number(localStorage.getItem(SCALE_KEY)) || 1, false);
   }
 
   get provider() {
@@ -90,6 +122,7 @@ export class CardsMode {
     $('t-reiniciar').hidden = this.kind !== 'mesa';
     this.game.setModel(this.deps.model());
     if (this.kind === 'mesa') this.setupTable();
+    else this.setupPinch();
   }
 
   onEnd(): void {
@@ -98,7 +131,21 @@ export class CardsMode {
     this.game.clear();
     this.effects.clear();
     this.teardownTable();
+    this.teardownPinch();
     $('hud-tarjetas').hidden = true;
+  }
+
+  /** Tamaño de los átomos y moléculas sobre las tarjetas (1× a 3×). */
+  setScale(scale: number, save = true): void {
+    this.contentScale = Math.round(THREE.MathUtils.clamp(scale, MIN_CONTENT_SCALE, MAX_CONTENT_SCALE) * 100) / 100;
+    this.game.setContentScale(this.contentScale);
+    if (save) localStorage.setItem(SCALE_KEY, String(this.contentScale));
+    if (this.scaleOutput) {
+      this.scaleOutput.textContent = t('tarjetas.escala_valor', { n: num(this.contentScale, 2) });
+      const group = this.scaleOutput.parentElement!;
+      group.querySelector<HTMLButtonElement>('[data-paso="-1"]')!.disabled = this.contentScale <= MIN_CONTENT_SCALE;
+      group.querySelector<HTMLButtonElement>('[data-paso="1"]')!.disabled = this.contentScale >= MAX_CONTENT_SCALE;
+    }
   }
 
   setModel(model: AtomModel): void {
@@ -160,6 +207,27 @@ export class CardsMode {
       $('recetas').hidden = false;
     });
     $('cerrar-recetas').addEventListener('click', () => ($('recetas').hidden = true));
+
+    // Control de tamaño (lo crea el código para no tocar el HTML de la pantalla).
+    const group = document.createElement('div');
+    group.className = 't-escala flotante';
+    group.setAttribute('role', 'group');
+    group.setAttribute('aria-label', t('tarjetas.escala'));
+    group.title = t('tarjetas.escala_ayuda');
+    const step = (dir: 1 | -1, glyph: string, label: string) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'btn redondo claro';
+      b.dataset.paso = String(dir);
+      b.textContent = glyph;
+      b.setAttribute('aria-label', label);
+      b.addEventListener('click', () => this.setScale(this.contentScale + dir * SCALE_STEP));
+      return b;
+    };
+    this.scaleOutput = document.createElement('output');
+    this.scaleOutput.setAttribute('aria-live', 'polite');
+    group.append(step(1, '+', t('tarjetas.escala_mas')), this.scaleOutput, step(-1, '−', t('tarjetas.escala_menos')));
+    $('hud-tarjetas').append(group);
   }
 
   private stopHold(): void {
@@ -219,29 +287,39 @@ export class CardsMode {
   private setupTable(): void {
     const { viewer, ar } = this.deps;
     if (!this.table) {
-      this.table = new THREE.Mesh(
-        new THREE.PlaneGeometry(0.9, 0.6).rotateX(-Math.PI / 2),
-        new THREE.MeshStandardMaterial({ color: 0x1d3b33, roughness: 0.95 }),
-      );
-      this.table.position.y = -0.001;
-      ar.scene.add(this.table);
-      const canvas = ar.renderer.domElement;
-      canvas.addEventListener('pointerdown', this.onPointerDown);
-      canvas.addEventListener('pointermove', this.onPointerMove);
-      canvas.addEventListener('pointerup', this.onPointerUp);
-      canvas.addEventListener('pointercancel', this.onPointerUp);
+      this.table = new TableScene(ar.scene);
+      this.table.attach();
+      viewer.setControls(TABLE_CONTROLS);
+      viewer.setDragHandler({ down: this.onDragStart, move: this.onDragMove, up: this.onDragEnd });
     }
-    viewer.setView(new THREE.Vector3(0, 0.38, 0.3), new THREE.Vector3(0, 0, 0.02));
     const cards = this.tableCards();
-    const columns = this.together ? cards.length : Math.min(6, cards.length);
+    // En vertical, menos columnas: así caben todas sin alejar tanto la cámara.
+    const portrait = ar.camera.aspect < 0.9;
+    const columns = this.together ? cards.length : Math.min(portrait ? 3 : 6, cards.length);
+    const rows = Math.ceil(cards.length / columns);
     const spacing = this.together ? CARD.width + 0.004 : CARD.width + 0.03;
+    const rowStep = CARD.height + 0.02;
     cards.forEach((symbol, i) => {
       const col = i % columns;
       const row = Math.floor(i / columns);
-      const x = (col - (columns - 1) / 2) * spacing;
-      const z = (row - (Math.ceil(cards.length / columns) - 1) / 2) * (CARD.height + 0.02);
+      // La última fila, centrada si está incompleta.
+      const inRow = row === rows - 1 ? cards.length - row * columns : columns;
+      const x = (col - (inRow - 1) / 2) * spacing;
+      const z = (row - (rows - 1) / 2) * rowStep;
       this.addVirtualCard(symbol, new THREE.Vector3(x, 0, z));
     });
+    // Cámara desde arriba (≈ 60°) y a la distancia justa para verlas todas.
+    const half = { x: ((columns - 1) * spacing + CARD.width) / 2 + 0.02, z: ((rows - 1) * rowStep + CARD.height) / 2 + 0.03 };
+    const vertical = THREE.MathUtils.degToRad(ar.camera.fov / 2);
+    const horizontal = Math.atan(Math.tan(vertical) * ar.camera.aspect);
+    const elevation = THREE.MathUtils.degToRad(60);
+    const distance = THREE.MathUtils.clamp(
+      Math.max(half.x / Math.tan(horizontal), (half.z * Math.sin(elevation)) / Math.tan(vertical) + half.z * Math.cos(elevation)),
+      0.25,
+      TABLE_CONTROLS.maxDistance,
+    );
+    const target = new THREE.Vector3(0, 0, 0.01);
+    viewer.setView(target.clone().add(new THREE.Vector3(0, Math.sin(elevation), Math.cos(elevation)).multiplyScalar(distance)), target);
   }
 
   /** Las tarjetas de la mesa: las pedidas (o las de siempre que estén desbloqueadas) y las que pida el reto. */
@@ -256,23 +334,66 @@ export class CardsMode {
   }
 
   private addVirtualCard(symbol: string, position?: THREE.Vector3): void {
-    const spec: CardSpec = { id: this.virtualId++, symbol, copy: 0 };
-    const at = position ?? new THREE.Vector3((Math.random() - 0.5) * 0.3, 0, 0.15 + Math.random() * 0.05);
-    this.game.addCard(spec, this.deps.viewer.createAnchor(at));
+    // Se dibuja como su tarjeta impresa (la copia siguiente de ese elemento).
+    const copy = this.game.visuals().filter((v) => v.spec.symbol === symbol).length + 1;
+    const printed = DECK.find((c) => c.symbol === symbol && c.copy === copy) ?? DECK.find((c) => c.symbol === symbol);
+    const spec: CardSpec = { id: this.virtualId++, symbol, copy: 0, marker: printed?.id };
+    const at = position ?? new THREE.Vector3((Math.random() - 0.5) * 0.3, 0, 0.12 + Math.random() * 0.05);
+    this.game.addCard(spec, this.deps.viewer.createAnchor(at)).setCardShadow(true);
   }
 
   private teardownTable(): void {
     if (!this.table) return;
-    const canvas = this.deps.ar.renderer.domElement;
-    canvas.removeEventListener('pointerdown', this.onPointerDown);
-    canvas.removeEventListener('pointermove', this.onPointerMove);
-    canvas.removeEventListener('pointerup', this.onPointerUp);
-    canvas.removeEventListener('pointercancel', this.onPointerUp);
-    this.table.removeFromParent();
-    this.table.geometry.dispose();
-    (this.table.material as THREE.Material).dispose();
+    this.deps.viewer.setDragHandler(null);
+    this.table.dispose();
     this.table = undefined;
+    this.drag = undefined;
   }
+
+  // --- Pellizco en la cámara: tamaño de los átomos ----------------------------------
+
+  private setupPinch(): void {
+    const canvas = this.deps.ar.renderer.domElement;
+    canvas.style.touchAction = 'none';
+    canvas.addEventListener('pointerdown', this.onPinchDown);
+    canvas.addEventListener('pointermove', this.onPinchMove);
+    canvas.addEventListener('pointerup', this.onPinchUp);
+    canvas.addEventListener('pointercancel', this.onPinchUp);
+  }
+
+  private teardownPinch(): void {
+    const canvas = this.deps.ar.renderer.domElement;
+    canvas.removeEventListener('pointerdown', this.onPinchDown);
+    canvas.removeEventListener('pointermove', this.onPinchMove);
+    canvas.removeEventListener('pointerup', this.onPinchUp);
+    canvas.removeEventListener('pointercancel', this.onPinchUp);
+    this.pinch.clear();
+    this.pinchStart = undefined;
+  }
+
+  private pinchDistance(): number {
+    const [a, b] = [...this.pinch.values()];
+    return Math.hypot(a.x - b.x, a.y - b.y);
+  }
+
+  private readonly onPinchDown = (e: PointerEvent) => {
+    this.pinch.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (this.pinch.size === 2) this.pinchStart = { distance: Math.max(this.pinchDistance(), 1), scale: this.contentScale };
+  };
+
+  private readonly onPinchMove = (e: PointerEvent) => {
+    if (!this.pinch.has(e.pointerId)) return;
+    this.pinch.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (this.pinchStart && this.pinch.size === 2) this.setScale((this.pinchStart.scale * this.pinchDistance()) / this.pinchStart.distance, false);
+  };
+
+  private readonly onPinchUp = (e: PointerEvent) => {
+    this.pinch.delete(e.pointerId);
+    if (this.pinchStart && this.pinch.size < 2) {
+      this.pinchStart = undefined;
+      this.setScale(this.contentScale); // guarda el tamaño final
+    }
+  };
 
   private readonly raycaster = new THREE.Raycaster();
   private ray(e: PointerEvent): THREE.Raycaster {
@@ -282,38 +403,49 @@ export class CardsMode {
     return this.raycaster;
   }
 
-  private readonly onPointerDown = (e: PointerEvent) => {
+  // Un dedo sobre una tarjeta la arrastra; en vacío, gira la cámara. Dos dedos
+  // siempre mueven la cámara (ViewerProvider suelta la tarjeta si hacía falta).
+  private readonly onDragStart = (e: PointerEvent): boolean => {
     const faces = this.game.visuals().map((v) => v.face);
     const hit = this.ray(e).intersectObjects(faces, false)[0];
     if (!hit) {
       this.select(null);
-      return;
+      return false;
     }
-    this.deps.viewer.setControlsEnabled(false);
-    this.drag = { card: hit.object, anchorId: hit.object.userData.cardId, moved: false, start: { x: e.clientX, y: e.clientY } };
-    (e.target as Element).setPointerCapture?.(e.pointerId);
+    const id = hit.object.userData.cardId as number;
+    this.drag = { anchorId: id, moved: false, start: { x: e.clientX, y: e.clientY } };
+    const visual = this.game.visuals().find((v) => v.spec.id === id);
+    if (visual) visual.lifted = true;
+    return true;
   };
 
-  private readonly onPointerMove = (e: PointerEvent) => {
+  private readonly onDragMove = (e: PointerEvent) => {
     if (!this.drag) return;
     if (Math.hypot(e.clientX - this.drag.start.x, e.clientY - this.drag.start.y) > 4) this.drag.moved = true;
+    if (!this.drag.moved) return;
     const point = this.ray(e).ray.intersectPlane(new THREE.Plane(new THREE.Vector3(0, 1, 0), 0), new THREE.Vector3());
     const visual = this.game.visuals().find((v) => v.spec.id === this.drag!.anchorId);
-    if (point && visual) visual.anchor.setPose(new THREE.Matrix4().makeTranslation(point.x, 0, point.z));
+    if (!point || !visual) return;
+    // Que no se salga de la mesa.
+    point.x = THREE.MathUtils.clamp(point.x, -0.6, 0.6);
+    point.z = THREE.MathUtils.clamp(point.z, -0.4, 0.4);
+    visual.anchor.setPose(new THREE.Matrix4().makeTranslation(point.x, 0, point.z));
   };
 
-  private readonly onPointerUp = () => {
+  private readonly onDragEnd = (_e: PointerEvent, cancelled: boolean) => {
     if (!this.drag) return;
     const id = this.drag.anchorId;
-    if (!this.drag.moved) {
+    const visual = this.game.visuals().find((v) => v.spec.id === id);
+    if (visual) visual.lifted = false;
+    if (!cancelled && !this.drag.moved) {
       // Un toque: la elige como objetivo de «Descomponer» y, si ya había otra
       // elegida, la pone a su lado (juntar sin arrastrar).
       this.game.preferred = id;
       if (this.selected !== null && this.selected !== id) this.joinNextTo(id, this.selected);
       else this.select(this.selected === id ? null : id);
-    } else this.select(null);
+    } else if (!cancelled) this.select(null);
+    // Si ha caído un segundo dedo (cancelled), la tarjeta se queda donde está y manda la cámara.
     this.drag = undefined;
-    this.deps.viewer.setControlsEnabled(true);
   };
 
   private select(id: number | null): void {

@@ -32,7 +32,16 @@ if ((await detectARSupport()).webxrAR) boton.onclick = () => ar.start()
   tarjeta). `useImage(url)` sustituye la cámara por una foto. `markerSVG(id)`
   (también en `@webar/ar-core/markers`) da el marcador para imprimir.
 - `ViewerProvider`: visor 3D sin cámara con la misma API de anclas
-  (`createAnchor`, `frame`, `setView`).
+  (`createAnchor`, `frame`, `setView`). `setControls({...})` ajusta la cámara
+  de la sesión en marcha (`maxPolarAngle` para no bajar de cierta altura,
+  `dampingFactor`, `rotateSpeed`, `zoomSpeed`, `panSpeed`, `enablePan`,
+  `screenSpacePanning: false` para desplazar sobre una mesa, `zoomToCursor`,
+  `minDistance`/`maxDistance` y `panBounds`, una caja de la que no sale el
+  punto de mira); al parar vuelve a los del constructor (`controls`).
+  `setDragHandler({ down, move, up })` deja arrastrar objetos con un dedo
+  (si `down` devuelve true, la cámara no ve ese dedo); al caer un segundo dedo
+  se cancela el arrastre (`up(e, true)`) y los dos dedos desplazan y hacen
+  zoom aunque estén encima de objetos.
 - `ARSession.advance(segundos)`: avanza la sesión sin esperar al navegador
   (pruebas y capturas automáticas).
 

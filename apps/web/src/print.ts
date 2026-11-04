@@ -1,10 +1,9 @@
+import '@fontsource-variable/nunito/wght.css';
 import './print.css';
-import { markerSVG } from '@webar/ar-core/markers';
-import { atomComposition, getElement } from '@webar/chem';
+import { getElement } from '@webar/chem';
 import { t, translate } from './i18n';
-import { elementName } from './i18n/content';
 import { applySettings } from './settings';
-import { FAMILY_COLORS } from './cards/card-face';
+import { cardSVG } from './cards/card-svg';
 import { KITS, cardsFor, type CardSpec } from './cards/deck';
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
@@ -34,19 +33,9 @@ function selected(): string[] {
     });
 }
 
+/** La misma tarjeta que se ve en la mesa virtual (ver cards/card-svg.ts). */
 function card(spec: CardSpec): string {
-  const e = getElement(spec.symbol);
-  const c = atomComposition(e);
-  return `<article class="carta" style="--fam:${FAMILY_COLORS[e.family]}">
-    <div class="marcador">${markerSVG(spec.id)}</div>
-    <div class="datos">
-      <span class="z">${e.z}</span>
-      <span class="simbolo">${e.symbol}</span>
-      <span class="nombre">${elementName(e.symbol)}</span>
-      <span class="particulas">${c.protons} p⁺ · ${c.neutrons} n⁰ · ${c.electrons} e⁻</span>
-    </div>
-    <footer>webar.peer4u.app · nº ${spec.id}</footer>
-  </article>`;
+  return `<article class="carta">${cardSVG(spec)}</article>`;
 }
 
 function render(): void {

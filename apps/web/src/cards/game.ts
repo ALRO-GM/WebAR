@@ -50,6 +50,7 @@ export class CardGame extends Emitter<CardGameEvents> {
   private hold: { cardId: number; progress: number } | null = null;
   private model: AtomModel;
   private lastCharging = '';
+  private contentScale = 1;
   /** Tarjeta elegida a mano como objetivo de «Descomponer» (si tiene molécula). */
   preferred?: number;
   /** El objetivo de «Descomponer» en el último frame. */
@@ -67,6 +68,7 @@ export class CardGame extends Emitter<CardGameEvents> {
   addCard(spec: CardSpec, anchor: ARAnchor): CardVisual {
     this.removeCard(spec.id);
     const visual = new CardVisual(this.scene, anchor, spec, this.model);
+    visual.setScale(this.contentScale, false);
     this.cards.set(spec.id, { spec, visual, cooldown: false });
     return visual;
   }
@@ -88,6 +90,12 @@ export class CardGame extends Emitter<CardGameEvents> {
 
   visuals(): CardVisual[] {
     return [...this.cards.values()].map((c) => c.visual);
+  }
+
+  /** Tamaño de los átomos y moléculas de todas las tarjetas (1× a 3×). */
+  setContentScale(scale: number): void {
+    this.contentScale = scale;
+    for (const c of this.cards.values()) c.visual.setScale(scale);
   }
 
   setModel(model: AtomModel): void {
