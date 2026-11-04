@@ -338,6 +338,13 @@ Basada en [investigacion-plataforma.md](investigacion-plataforma.md).
 - **Estadísticas y recomendaciones** (`src/teacher/`, ruta
   `profesor.html#clase/<id>/estadisticas`): ver la sección siguiente.
 
+## Actualizaciones de la PWA
+
+`registerSW` (`virtual:pwa-register`, en `main.ts`) con `autoUpdate`: al
+desplegar, el service worker nuevo toma el control y la página se recarga
+sola; con la app abierta, se comprueba cada hora. Antes se veía la copia
+vieja hasta cerrar y abrir la app dos veces.
+
 ## Actividades de clase y demostración
 
 - **Actividades**: el profesorado lanza un acertijo o una Adivina (elige los

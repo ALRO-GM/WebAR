@@ -19,6 +19,7 @@ import { sfx } from './sfx';
 import { RIDDLES, RiddleRun, bestScores, resultHTML, stars, type Riddle, type RiddleResult } from './cards/riddle';
 import { t } from './i18n';
 import { elementName, familyName } from './i18n/content';
+import { registerSW } from 'virtual:pwa-register';
 import { setupInstall } from './install';
 import { setupIntro } from './intro';
 import { markSelected, renderPeriodicTable, updateLocks } from './periodic-table';
@@ -578,6 +579,14 @@ const advance = Number(params.get('avanzar'));
 if (advance > 0) ar.on('start', () => setTimeout(() => ar.advance(advance), 50));
 // La introducción sale la primera vez (no en los enlaces directos a un modo).
 if (!vista && !params.has('sin-intro')) intro.openIfFirstTime();
+
+// Versión nueva: el service worker nuevo toma el control y la página se recarga
+// sola (si no, se veía la copia vieja hasta cerrar la app dos veces). Además se
+// comprueba cada hora, para quien la deja abierta.
+registerSW({
+  immediate: true,
+  onRegisteredSW: (_url, registration) => registration && setInterval(() => void registration.update(), 3600_000),
+});
 
 const support = await detectARSupport();
 setupInstall([$('instalar-top'), $('instalar')], $('instalar-ios'), support.ios, () => hub.toast('📲', t('instalar.boton'), t('instalar.ios')));

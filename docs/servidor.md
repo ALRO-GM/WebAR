@@ -10,7 +10,7 @@ tiene su carpeta, su compose y sus contenedores.
 | Carpeta | `/opt/webar` (clon de `https://github.com/ALRO-GM/WebAR.git`, rama `main`) |
 | Contenedor | `webar-web-1` (compose `webar`, servicio `web`), imagen `webar:local` y `webar:previous`: Node sirve la PWA, la API de clases y `/health` |
 | Datos | Volumen `webar_datos` montado en `/data` (SQLite `webar.db`: profesorado, clases, alias del alumnado y su progreso, y las ligas con jugadores anónimos) |
-| Dominio | `labtory.peer4u.app`, registro `A` en Cloudflare a `51.170.34.214`, nube gris (sin proxy). El de antes, `webar.peer4u.app` (mismo registro), redirige con 301 desde Caddy: los enlaces, QR y tarjetas impresas siguen valiendo. Ojo: lo guardado en el navegador (progreso sin clase) es por dominio y no pasa solo |
+| Dominio | `labtory.peer4u.app`, registro `A` en Cloudflare a `51.170.34.214`, nube gris (sin proxy). El de antes, `webar.peer4u.app` (mismo registro), redirige con 301 desde Caddy: los enlaces, QR y tarjetas impresas siguen valiendo. Ojo: lo guardado en el navegador (progreso sin clase) es por dominio y no pasa solo. La app instalada desde el dominio viejo se quedaba congelada (su service worker no acepta la redirección al pedir `/sw.js`): ahí Caddy sirve un `/sw.js` que borra la caché, se da de baja y lleva a labtory |
 | HTTPS | El Caddy de Peer4U (`sanatorio-caddy-1`) pide y renueva el certificado solo |
 | Registro de despliegues | `/opt/webar/infra/deploy.log` |
 

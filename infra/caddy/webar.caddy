@@ -24,6 +24,25 @@ labtory.peer4u.app {
 }
 
 # El dominio de antes: los enlaces, QR y tarjetas impresas siguen funcionando.
+# La app instalada desde aquí tiene un service worker que sirve su copia y,
+# para actualizarse, pide /sw.js: una redirección no le vale (se quedaría en
+# la versión vieja para siempre). Por eso /sw.js devuelve uno que borra su
+# caché, se da de baja y lleva cada ventana a labtory.peer4u.app.
 webar.peer4u.app {
-	redir https://labtory.peer4u.app{uri} permanent
+	handle /sw.js {
+		header Content-Type "text/javascript; charset=utf-8"
+		header Cache-Control "no-cache"
+		respond `self.addEventListener('install', () => self.skipWaiting());
+self.addEventListener('activate', (event) => event.waitUntil((async () => {
+  for (const key of await caches.keys()) await caches.delete(key);
+  await self.registration.unregister();
+  for (const client of await self.clients.matchAll({ type: 'window' })) {
+    const url = new URL(client.url);
+    client.navigate('https://labtory.peer4u.app' + url.pathname + url.search);
+  }
+})()));` 200
+	}
+	handle {
+		redir https://labtory.peer4u.app{uri} permanent
+	}
 }
