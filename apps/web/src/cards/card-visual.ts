@@ -138,6 +138,11 @@ export class CardVisual {
    * `null` lo quita; también se quita al cambiar el contenido de la tarjeta.
    * El objeto pasa a ser de la tarjeta, pero no se libera al quitarlo.
    */
+  /** Tiene un objeto extra puesto (se quita al cambiar de contenido). */
+  get hasExtra(): boolean {
+    return !!this.extra;
+  }
+
   setExtra(object: THREE.Object3D | null): void {
     if (this.extra) {
       this.extra.object.removeFromParent();

@@ -1,3 +1,4 @@
+import './theme.css';
 import './style.css';
 import './teacher.css';
 import qrcode from 'qrcode-generator';
@@ -131,6 +132,8 @@ async function renderClass(id: number): Promise<void> {
       ${tile(t('profe.tile.retos'), totalChallenges)}
     </section>
 
+    <section class="tarjeta-panel"><h3>${t('profe.liga')}</h3><p class="pequeno">${t('profe.liga_texto')}</p><div id="liga-clase"><p class="pequeno">${t('liga.cargando')}</p></div></section>
+
     <section class="tarjeta-panel"><div class="cabecera-grafica"><h3>${t('profe.actividad')}</h3>
       <button id="alternar" class="secundario">${t('profe.ver_tabla')}</button></div>
       <div id="grafica"></div></section>
@@ -161,6 +164,13 @@ async function renderClass(id: number): Promise<void> {
     <p><button id="borrar-clase" class="peligro">${t('profe.borrar_clase')}</button></p>`;
 
   renderActivity(d.actividad);
+  void api<{ alumnos: Array<{ puesto: number; alias: string; xp: number }> }>('GET', `/api/clases/${id}/liga`)
+    .then((l) => {
+      $('liga-clase').innerHTML = l.alumnos.length
+        ? `<ol class="ranking">${l.alumnos.map((a) => `<li><span class="puesto">${a.puesto <= 3 ? ['🥇', '🥈', '🥉'][a.puesto - 1] : a.puesto}</span><span class="ranking-nombre">${esc(a.alias)}</span><b>${a.xp} XP</b></li>`).join('')}</ol>`
+        : `<p class="pequeno">${t('profe.liga_vacia')}</p>`;
+    })
+    .catch(() => ($('liga-clase').innerHTML = `<p class="pequeno">${t('liga.sin_red')}</p>`));
   let asTable = false;
   $('alternar').addEventListener('click', () => {
     asTable = !asTable;

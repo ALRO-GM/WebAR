@@ -1,0 +1,692 @@
+{
+ "stats.racha_aria": {
+  "texto": "Streak: {n} days in a row"
+ },
+ "stats.quarks_aria": {
+  "texto": "Quarks: {n}. Open the shop in your profile"
+ },
+ "stats.xp_aria": {
+  "texto": "Today's XP: {n} of {meta}"
+ },
+ "perfil.abrir": {
+  "texto": "Your profile"
+ },
+ "nav.aprender": {
+  "texto": "Learn"
+ },
+ "nav.lab": {
+  "texto": "Lab"
+ },
+ "nav.materia": {
+  "texto": "Matter"
+ },
+ "nav.coleccion": {
+  "texto": "Collection"
+ },
+ "nav.liga": {
+  "texto": "League"
+ },
+ "lab.titulo": {
+  "texto": "Lab"
+ },
+ "lab.subtitulo": {
+  "texto": "Experiment with your elements: build molecules, solve riddles and see it all in augmented reality."
+ },
+ "adivina.titulo": {
+  "texto": "Guess"
+ },
+ "adivina.subtitulo": {
+  "texto": "Which element is this object? The Sun, a gold doubloon, a drop of water…"
+ },
+ "adivina.vacio": {
+  "texto": "You don't know any elements with an object yet. Do the first lesson on the path."
+ },
+ "adivina.pregunta": {
+  "texto": "Which element does it represent?"
+ },
+ "adivina.pregunta_sustancia": {
+  "texto": "Which substance does it represent?"
+ },
+ "adivina.objeto_aria": {
+  "texto": "3D object to guess"
+ },
+ "adivina.pista": {
+  "texto": "Hint (half points)"
+ },
+ "adivina.elige": {
+  "texto": "Pick an answer"
+ },
+ "adivina.bien": {
+  "texto": "Yes! {objeto}"
+ },
+ "adivina.era": {
+  "texto": "It was {nombre}"
+ },
+ "adivina.fin": {
+  "texto": "{n} of {total} right"
+ },
+ "foto.titulo": {
+  "texto": "Photo with scientists"
+ },
+ "foto.subtitulo": {
+  "texto": "Stand next to Marie Curie and your molecules in augmented reality and take a photo."
+ },
+ "coleccion.titulo": {
+  "texto": "Your collection"
+ },
+ "coleccion.moleculas": {
+  "texto": "Molecules"
+ },
+ "coleccion.tabla": {
+  "texto": "Table"
+ },
+ "coleccion.personajes": {
+  "texto": "Scientists"
+ },
+ "personajes.explicacion": {
+  "texto": "You meet each scientist when you reach their unit on the path."
+ },
+ "personajes.bloqueado": {
+  "texto": "Not met yet"
+ },
+ "personajes.bloqueado_texto": {
+  "texto": "Keep going along the path: they are waiting for you in a later unit."
+ },
+ "personajes.logro": {
+  "texto": "Their big achievement"
+ },
+ "personajes.sabias": {
+  "texto": "Did you know…?"
+ },
+ "escala.titulo": {
+  "texto": "Size"
+ },
+ "ajustes.meta": {
+  "texto": "Daily goal"
+ },
+ "ajustes.meta.10": {
+  "texto": "Casual · 10 XP a day"
+ },
+ "ajustes.meta.20": {
+  "texto": "Regular · 20 XP a day"
+ },
+ "ajustes.meta.30": {
+  "texto": "Serious · 30 XP a day"
+ },
+ "ajustes.meta.50": {
+  "texto": "Intense · 50 XP a day"
+ },
+ "ajustes.oscuro": {
+  "texto": "Dark theme"
+ },
+ "ajustes.sonido": {
+  "texto": "Sounds"
+ },
+ "ajustes.gato": {
+  "texto": "Show the quantum cat"
+ },
+ "intro.0.titulo": {
+  "texto": "Hi! I'm your quantum cat"
+ },
+ "intro.0.texto": {
+  "texto": "I'll be with you while you discover chemistry. If you don't look at me, I might vanish for a while…"
+ },
+ "intro.camino.titulo": {
+  "texto": "One path, step by step"
+ },
+ "intro.camino.texto": {
+  "texto": "You start with just hydrogen. Each lesson introduces a new element."
+ },
+ "intro.racha.titulo": {
+  "texto": "A little every day"
+ },
+ "intro.racha.texto": {
+  "texto": "Keep your streak, complete quests and climb leagues with your class or the whole world. Free and offline."
+ },
+ "leccion.progreso": {
+  "texto": "Lesson progress"
+ },
+ "leccion.conoce": {
+  "texto": "Meet {nombre}"
+ },
+ "leccion.usos": {
+  "texto": "Where do we find {nombre}?"
+ },
+ "leccion.unico": {
+  "texto": "What makes it unique"
+ },
+ "leccion.protones": {
+  "texto": "How many protons does {nombre} have?"
+ },
+ "leccion.protones_explica": {
+  "texto": "The atomic number of {nombre} is {z}: it has {z} protons (and, when neutral, {z} electrons)."
+ },
+ "leccion.simbolo": {
+  "texto": "What is the symbol for {nombre}?"
+ },
+ "leccion.quien": {
+  "texto": "Which element am I talking about?"
+ },
+ "leccion.continuar": {
+  "texto": "Continue"
+ },
+ "leccion.comprobar": {
+  "texto": "Check"
+ },
+ "leccion.forma": {
+  "texto": "Build {nombre}"
+ },
+ "leccion.forma_texto": {
+  "texto": "Tap the atoms you need (careful, some are extra)."
+ },
+ "leccion.quitar": {
+  "texto": "Remove {nombre}"
+ },
+ "leccion.toca_fichas": {
+  "texto": "Tap the tiles below"
+ },
+ "leccion.combo": {
+  "texto": "🔥 {n} in a row!"
+ },
+ "leccion.bien.1": {
+  "texto": "Great!"
+ },
+ "leccion.bien.2": {
+  "texto": "Correct!"
+ },
+ "leccion.bien.3": {
+  "texto": "Well done!"
+ },
+ "leccion.bien.4": {
+  "texto": "That's it!"
+ },
+ "leccion.solucion": {
+  "texto": "Correct answer:"
+ },
+ "leccion.perfecta": {
+  "texto": "Perfect lesson!"
+ },
+ "leccion.completada": {
+  "texto": "Lesson complete!"
+ },
+ "leccion.stat_xp": {
+  "texto": "Total XP"
+ },
+ "leccion.stat_precision": {
+  "texto": "Accuracy"
+ },
+ "leccion.stat_tiempo": {
+  "texto": "Time"
+ },
+ "camino.meta_aria": {
+  "texto": "Daily goal: {xp} of {meta} XP"
+ },
+ "camino.meta_hecha": {
+  "texto": "Daily goal done!"
+ },
+ "camino.meta": {
+  "texto": "Daily goal: {meta} XP"
+ },
+ "camino.racha_hoy": {
+  "texto": "🔥 {n}-day streak: today counts"
+ },
+ "camino.racha_peligro": {
+  "texto": "🔥 Your {n}-day streak is waiting: do a lesson today"
+ },
+ "camino.racha_empieza": {
+  "texto": "Do a lesson to start your streak"
+ },
+ "camino.mas": {
+  "texto": "… and {n} more units to discover"
+ },
+ "camino.unidad": {
+  "texto": "Unit {n}"
+ },
+ "camino.guia": {
+  "texto": "With {nombre}"
+ },
+ "camino.empieza": {
+  "texto": "Start!"
+ },
+ "camino.estado.hecho": {
+  "texto": "completed"
+ },
+ "camino.estado.actual": {
+  "texto": "next"
+ },
+ "camino.estado.bloqueado": {
+  "texto": "locked"
+ },
+ "camino.lab": {
+  "texto": "Build {formula}"
+ },
+ "camino.adivina": {
+  "texto": "Guess"
+ },
+ "camino.repaso": {
+  "texto": "Review"
+ },
+ "camino.cofre": {
+  "texto": "Chest"
+ },
+ "camino.dice.leccion": {
+  "texto": "Let me introduce {nombre}! You'll be surprised."
+ },
+ "camino.dice.laboratorio": {
+  "texto": "To the lab: put the cards together and {nombre}."
+ },
+ "camino.dice.adivina": {
+  "texto": "Can you recognise each element by its object?"
+ },
+ "camino.dice.repaso": {
+  "texto": "Reviewing is the trick to not forgetting. Let's go!"
+ },
+ "camino.dice.cofre": {
+  "texto": "A chest! Open it, you've earned it."
+ },
+ "camino.que.leccion": {
+  "texto": "History, uses and what makes it unique; then a few questions."
+ },
+ "camino.que.laboratorio": {
+  "texto": "The table opens with the right cards (and a decoy or two)."
+ },
+ "camino.que.adivina": {
+  "texto": "3D objects: guess which element they are."
+ },
+ "camino.que.repaso": {
+  "texto": "Mixed questions about everything so far."
+ },
+ "camino.que.cofre": {
+  "texto": "Quarks for the shop: streak protectors and more."
+ },
+ "camino.repasar": {
+  "texto": "Practise again"
+ },
+ "camino.empezar": {
+  "texto": "Start"
+ },
+ "misiones.titulo": {
+  "texto": "Daily quests"
+ },
+ "misiones.quedan": {
+  "texto": "{h} h"
+ },
+ "misiones.premio": {
+  "texto": "Reward: {n} quarks"
+ },
+ "misiones.todas": {
+  "texto": "Complete all three for {n} extra quarks."
+ },
+ "mision.xp": {
+  "texto": "Earn {n} XP"
+ },
+ "mision.xp.icono": {
+  "texto": "⚡"
+ },
+ "mision.lecciones": {
+  "texto": "Complete {n} lessons"
+ },
+ "mision.lecciones.icono": {
+  "texto": "📘"
+ },
+ "mision.perfectas": {
+  "texto": "Do a lesson with no mistakes"
+ },
+ "mision.perfectas.icono": {
+  "texto": "🎯"
+ },
+ "mision.reacciones": {
+  "texto": "Do {n} reactions with cards"
+ },
+ "mision.reacciones.icono": {
+  "texto": "🧪"
+ },
+ "mision.aciertos": {
+  "texto": "Get {n} right in Guess"
+ },
+ "mision.aciertos.icono": {
+  "texto": "🔮"
+ },
+ "mision.lecturas": {
+  "texto": "Read {n} element cards"
+ },
+ "mision.lecturas.icono": {
+  "texto": "📖"
+ },
+ "mision.nuevas": {
+  "texto": "Discover a new molecule"
+ },
+ "mision.nuevas.icono": {
+  "texto": "✨"
+ },
+ "liga.titulo": {
+  "texto": "Weekly league"
+ },
+ "liga.tu": {
+  "texto": "you"
+ },
+ "liga.clase": {
+  "texto": "My class"
+ },
+ "liga.mundial": {
+  "texto": "Worldwide"
+ },
+ "liga.clase_sin": {
+  "texto": "Join a class (in your profile) to compete with classmates."
+ },
+ "liga.sin_red": {
+  "texto": "Offline: the league updates when you are back online."
+ },
+ "liga.cargando": {
+  "texto": "Loading…"
+ },
+ "liga.mundial_texto": {
+  "texto": "Compete every week with people all over the world. The top 7 move up a league."
+ },
+ "liga.privacidad": {
+  "texto": "Optional and anonymous: you get a fun nickname and only your XP is shown. No names or personal data."
+ },
+ "liga.unirse": {
+  "texto": "Join the league"
+ },
+ "liga.anterior.sube": {
+  "texto": "You came {puesto} and move up to {liga}!"
+ },
+ "liga.anterior.baja": {
+  "texto": "You came {puesto} and drop to {liga}. Go for it!"
+ },
+ "liga.anterior.igual": {
+  "texto": "You came {puesto} and stay in {liga}."
+ },
+ "liga.sin_grupo": {
+  "texto": "Earn XP this week to join a group."
+ },
+ "liga.reglas": {
+  "texto": "Top {sube} move up (green) and bottom {baja} move down (red)."
+ },
+ "liga.apodo": {
+  "texto": "Your nickname: {apodo}"
+ },
+ "liga.otro_apodo": {
+  "texto": "Another nickname"
+ },
+ "liga.salir": {
+  "texto": "Leave the league"
+ },
+ "liga.dias": {
+  "texto": "{n} days"
+ },
+ "liga.semana": {
+  "texto": "You have {xp} XP this week."
+ },
+ "liga.nombre.0": {
+  "texto": "Graphite League"
+ },
+ "liga.nombre.1": {
+  "texto": "Quartz League"
+ },
+ "liga.nombre.2": {
+  "texto": "Copper League"
+ },
+ "liga.nombre.3": {
+  "texto": "Silver League"
+ },
+ "liga.nombre.4": {
+  "texto": "Gold League"
+ },
+ "liga.nombre.5": {
+  "texto": "Platinum League"
+ },
+ "liga.nombre.6": {
+  "texto": "Emerald League"
+ },
+ "liga.nombre.7": {
+  "texto": "Ruby League"
+ },
+ "liga.nombre.8": {
+  "texto": "Sapphire League"
+ },
+ "liga.nombre.9": {
+  "texto": "Diamond League"
+ },
+ "perfil.calendario_aria": {
+  "texto": "Calendar of the last weeks: {n}-day streak"
+ },
+ "perfil.cambiar_avatar": {
+  "texto": "Change your avatar"
+ },
+ "perfil.apodo": {
+  "texto": "In the world league: {apodo}"
+ },
+ "perfil.stat_racha": {
+  "texto": "Current streak"
+ },
+ "perfil.stat_mejor": {
+  "texto": "Best streak"
+ },
+ "perfil.stat_xp": {
+  "texto": "Total XP"
+ },
+ "perfil.stat_quarks": {
+  "texto": "Quarks"
+ },
+ "perfil.stat_moleculas": {
+  "texto": "Molecules"
+ },
+ "perfil.stat_elementos": {
+  "texto": "Elements"
+ },
+ "perfil.racha_titulo": {
+  "texto": "Your streak"
+ },
+ "perfil.protectores": {
+  "texto": "🧊 Streak protectors: {n} (used automatically if you miss a day)"
+ },
+ "perfil.elige_avatar": {
+  "texto": "Choose your avatar"
+ },
+ "perfil.avatar_mas": {
+  "texto": "Meet more scientists on the path to unlock their avatars."
+ },
+ "nivel.10": {
+  "texto": "Quantum mind"
+ },
+ "nivel.11": {
+  "texto": "Atomic mastery"
+ },
+ "nivel.12": {
+  "texto": "Molecular architect"
+ },
+ "nivel.13": {
+  "texto": "Periodic legend"
+ },
+ "nivel.14": {
+  "texto": "Supernova"
+ },
+ "tienda.abrir": {
+  "texto": "Shop"
+ },
+ "tienda.titulo": {
+  "texto": "Quark shop"
+ },
+ "tienda.texto": {
+  "texto": "You have {n} quarks. Earn them with lessons, quests and chests."
+ },
+ "tienda.gratis": {
+  "texto": "Everything here is paid with in-game quarks: the app is 100% free, no real-money purchases."
+ },
+ "tienda.protector": {
+  "texto": "Streak protector"
+ },
+ "tienda.protector.texto": {
+  "texto": "If you miss a day, your streak isn't lost. Max 2."
+ },
+ "tienda.impulso": {
+  "texto": "Double XP"
+ },
+ "tienda.impulso.texto": {
+  "texto": "For 15 minutes, everything you do gives double XP."
+ },
+ "tienda.lleno": {
+  "texto": "You already have the maximum"
+ },
+ "tienda.activo": {
+  "texto": "Active now"
+ },
+ "tienda.comprado.protector": {
+  "texto": "Streak protected!"
+ },
+ "tienda.comprado.impulso": {
+  "texto": "Double XP for 15 minutes!"
+ },
+ "cofre.titulo": {
+  "texto": "Chest opened!"
+ },
+ "cofre.vacio": {
+  "texto": "You already opened this chest"
+ },
+ "cofre.texto": {
+  "texto": "Spend them in the shop in your profile."
+ },
+ "racha.dia_1": {
+  "texto": "First day of your streak!"
+ },
+ "racha.dias": {
+  "texto": "{n}-day streak!"
+ },
+ "racha.texto": {
+  "texto": "Come back tomorrow to keep it growing."
+ },
+ "ficha.descubrimiento": {
+  "texto": "How it was discovered"
+ },
+ "ficha.usos": {
+  "texto": "Where we use it"
+ },
+ "ficha.porque": {
+  "texto": "Why this one and not another?"
+ },
+ "ficha.unico": {
+  "texto": "What makes it unique"
+ },
+ "ficha.curiosidad": {
+  "texto": "Fun fact"
+ },
+ "ficha.porque_especie": {
+  "texto": "Why is it like that?"
+ },
+ "tabla.bloqueado_camino": {
+  "texto": "You'll meet it in unit {unidad} of the path."
+ },
+ "celebrar.mision": {
+  "texto": "Quest complete!"
+ },
+ "insignia.leccion1.nombre": {
+  "texto": "First step"
+ },
+ "insignia.leccion1.descripcion": {
+  "texto": "Complete your first lesson"
+ },
+ "insignia.racha3.nombre": {
+  "texto": "On a roll"
+ },
+ "insignia.racha3.descripcion": {
+  "texto": "3-day streak"
+ },
+ "insignia.racha7.nombre": {
+  "texto": "Full week"
+ },
+ "insignia.racha7.descripcion": {
+  "texto": "7-day streak"
+ },
+ "insignia.racha30.nombre": {
+  "texto": "Unstoppable"
+ },
+ "insignia.racha30.descripcion": {
+  "texto": "30-day streak"
+ },
+ "insignia.perfecto.nombre": {
+  "texto": "Laser precision"
+ },
+ "insignia.perfecto.descripcion": {
+  "texto": "5 lessons with no mistakes"
+ },
+ "insignia.detective.nombre": {
+  "texto": "Detective"
+ },
+ "insignia.detective.descripcion": {
+  "texto": "25 correct in Guess"
+ },
+ "insignia.lector.nombre": {
+  "texto": "Bookworm"
+ },
+ "insignia.lector.descripcion": {
+  "texto": "Read 20 element cards"
+ },
+ "insignia.fotografo.nombre": {
+  "texto": "Science selfie"
+ },
+ "insignia.fotografo.descripcion": {
+  "texto": "Take a photo with a character"
+ },
+ "profe.liga": {
+  "texto": "This week's league"
+ },
+ "profe.liga_texto": {
+  "texto": "XP this week (Monday to Sunday). It is for motivation, not for grading."
+ },
+ "profe.liga_vacia": {
+  "texto": "Nobody has earned XP this week yet."
+ },
+ "foto.pista": {
+  "texto": "Move with one finger, pinch to resize and twist with two fingers."
+ },
+ "foto.pista_ra": {
+  "texto": "Tap the floor to place them. For the photo, use your phone's screenshot."
+ },
+ "foto.personaje": {
+  "texto": "With"
+ },
+ "foto.junto": {
+  "texto": "And"
+ },
+ "foto.ver_atomo": {
+  "texto": "Show atom"
+ },
+ "foto.ver_objeto": {
+  "texto": "Show object"
+ },
+ "foto.girar_camara": {
+  "texto": "Switch camera (selfie)"
+ },
+ "foto.disparar": {
+  "texto": "Take the photo"
+ },
+ "foto.marca": {
+  "texto": "Átomos AR · webar.peer4u.app"
+ },
+ "foto.alt": {
+  "texto": "Your photo with the character"
+ },
+ "foto.compartir": {
+  "texto": "Share"
+ },
+ "foto.guardar": {
+  "texto": "Save"
+ },
+ "foto.otra": {
+  "texto": "Another"
+ },
+ "foto.modo_camara": {
+  "texto": "Photo with the camera"
+ },
+ "foto.modo_camara_texto": {
+  "texto": "Character and molecule over what you see; selfies too."
+ },
+ "foto.modo_ra": {
+  "texto": "In your room (AR)"
+ },
+ "foto.modo_ra_texto": {
+  "texto": "Place them on the floor at figurine size and walk around them."
+ }
+}

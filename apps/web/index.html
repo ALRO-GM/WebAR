@@ -3,105 +3,128 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>WebAR · Átomos</title>
-    <meta name="description" content="Realidad aumentada desde la web para aprender química con átomos y moléculas" />
-    <meta name="theme-color" content="#111317" />
+    <title>Átomos AR</title>
+    <meta name="description" content="Aprende química jugando: átomos y moléculas en realidad aumentada, gratis y sin conexión" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   </head>
   <body>
     <!-- La capa que se ve encima de la cámara (dom-overlay de WebXR) o del visor. -->
     <div id="overlay">
-      <main id="inicio">
-        <header class="perfil">
-          <button id="abrir-logros" type="button" class="perfil-boton" data-t-attr="aria-label:perfil.ver_logros">
-            <img src="/icons/icon.svg" alt="" width="44" height="44" />
-            <span class="perfil-texto">
-              <span class="perfil-nivel"><b id="perfil-nivel"></b> · <span id="perfil-nombre-nivel"></span></span>
-              <span class="xp" role="progressbar" id="perfil-barra" data-t-attr="aria-label:perfil.barra"><span></span></span>
-              <span class="pequeno"><span id="perfil-xp"></span> · <span id="perfil-racha"></span></span>
-            </span>
-          </button>
+      <div id="app" class="app">
+        <header class="barra-top">
+          <button id="abrir-perfil" type="button" class="avatar-boton" data-t-attr="aria-label:perfil.abrir"><span id="perfil-avatar" aria-hidden="true"></span></button>
+          <div class="stats">
+            <button id="chip-racha" type="button" class="stat racha" data-t-attr="aria-label:stats.racha_aria"><span class="stat-icono" aria-hidden="true">🔥</span><b id="racha-n">0</b></button>
+            <button id="chip-quarks" type="button" class="stat quarks" data-t-attr="aria-label:stats.quarks_aria"><span class="stat-icono" aria-hidden="true">⚛</span><b id="quarks-n">0</b></button>
+            <button id="chip-xp" type="button" class="stat xp" data-t-attr="aria-label:stats.xp_aria"><span class="stat-icono" aria-hidden="true">⚡</span><b id="xp-n">0</b></button>
+          </div>
           <span id="estado-red" class="estado-red" role="status"></span>
-          <button id="abrir-ayuda" type="button" class="icono" data-t-attr="aria-label:ayuda.abrir;title:ayuda.abrir">?</button>
-          <button id="abrir-ajustes" type="button" class="icono" data-t-attr="aria-label:ajustes.titulo;title:ajustes.titulo">⚙️</button>
+          <button id="abrir-ayuda" type="button" class="btn claro redondo pequeno" data-t-attr="aria-label:ayuda.abrir;title:ayuda.abrir">?</button>
         </header>
 
-        <section id="p-jugar" role="tabpanel" aria-labelledby="tab-jugar" class="panel">
-          <p id="reto-activo" class="reto-activo" hidden></p>
-          <div class="modos">
-            <button id="entrar-tarjetas" type="button" class="modo modo-principal">
-              <span class="modo-icono" aria-hidden="true">🃏</span>
-              <span><b data-t="modo.tarjetas.titulo"></b><span data-t="modo.tarjetas.texto"></span></span>
-            </button>
-            <button id="entrar-acertijos" type="button" class="modo modo-acertijo">
-              <span class="modo-icono" aria-hidden="true">🕵️</span>
-              <span><b data-t="acertijo.titulo"></b><span data-t="acertijo.subtitulo"></span></span>
-            </button>
-            <button id="entrar-mesa" type="button" class="modo">
-              <span class="modo-icono" aria-hidden="true">🧪</span>
-              <span><b data-t="modo.mesa.titulo"></b><span data-t="modo.mesa.texto"></span></span>
-            </button>
-            <button id="entrar-3d" type="button" class="modo">
-              <span class="modo-icono" aria-hidden="true">⚛️</span>
-              <span><b data-t="modo.explorar.titulo"></b><span data-t="modo.explorar.texto"></span></span>
-            </button>
-            <button id="entrar-ra" type="button" class="modo" disabled>
-              <span class="modo-icono" aria-hidden="true">📱</span>
-              <span><b data-t="modo.ra.titulo"></b><span id="entrar-ra-texto" data-t="modo.ra.comprobando"></span></span>
-            </button>
-          </div>
-          <p class="enlaces">
-            <a href="/cartas.html"><span aria-hidden="true">🖨️ </span><span data-t="enlace.imprimir"></span></a>
-            <a href="/profesor.html"><span aria-hidden="true">👩‍🏫 </span><span data-t="enlace.profe"></span></a>
-          </p>
-          <p id="aviso" class="aviso" role="status"></p>
-          <button id="instalar" type="button" class="secundario" data-t="instalar.boton" hidden></button>
-          <p id="instalar-ios" class="pista" data-t="instalar.ios" hidden></p>
-        </section>
+        <main id="pantallas">
+          <section id="p-aprender" class="pantalla" role="tabpanel" aria-labelledby="tab-aprender">
+            <div id="camino" class="camino"></div>
+          </section>
 
-        <section id="p-moleculario" role="tabpanel" aria-labelledby="tab-moleculario" class="panel" hidden>
-          <h2 data-t="moleculario.titulo"></h2>
-          <p id="moleculario-progreso" class="pequeno"></p>
-          <div id="moleculario" class="coleccion"></div>
-        </section>
+          <section id="p-lab" class="pantalla" role="tabpanel" aria-labelledby="tab-lab" hidden>
+            <h1 data-t="lab.titulo"></h1>
+            <p class="texto-suave" data-t="lab.subtitulo"></p>
+            <p id="reto-activo" class="reto-activo" hidden></p>
+            <div class="modos">
+              <button id="entrar-tarjetas" type="button" class="modo card pulsable modo-principal">
+                <span class="modo-icono" aria-hidden="true">🃏</span>
+                <span><b data-t="modo.tarjetas.titulo"></b><span data-t="modo.tarjetas.texto"></span></span>
+              </button>
+              <button id="entrar-mesa" type="button" class="modo card pulsable">
+                <span class="modo-icono" aria-hidden="true">🧪</span>
+                <span><b data-t="modo.mesa.titulo"></b><span data-t="modo.mesa.texto"></span></span>
+              </button>
+              <button id="entrar-acertijos" type="button" class="modo card pulsable modo-acertijo">
+                <span class="modo-icono" aria-hidden="true">🕵️</span>
+                <span><b data-t="acertijo.titulo"></b><span data-t="acertijo.subtitulo"></span></span>
+              </button>
+              <button id="entrar-adivina" type="button" class="modo card pulsable">
+                <span class="modo-icono" aria-hidden="true">🔮</span>
+                <span><b data-t="adivina.titulo"></b><span data-t="adivina.subtitulo"></span></span>
+              </button>
+              <button id="entrar-3d" type="button" class="modo card pulsable">
+                <span class="modo-icono" aria-hidden="true">⚛️</span>
+                <span><b data-t="modo.explorar.titulo"></b><span data-t="modo.explorar.texto"></span></span>
+              </button>
+              <button id="entrar-ra" type="button" class="modo card pulsable" disabled>
+                <span class="modo-icono" aria-hidden="true">📱</span>
+                <span><b data-t="modo.ra.titulo"></b><span id="entrar-ra-texto" data-t="modo.ra.comprobando"></span></span>
+              </button>
+              <button id="entrar-foto" type="button" class="modo card pulsable">
+                <span class="modo-icono" aria-hidden="true">📸</span>
+                <span><b data-t="foto.titulo"></b><span data-t="foto.subtitulo"></span></span>
+              </button>
+            </div>
+            <p class="enlaces">
+              <a href="/cartas.html" class="btn claro pequeno"><span aria-hidden="true">🖨️</span><span data-t="enlace.imprimir"></span></a>
+              <a href="/profesor.html" class="btn claro pequeno"><span aria-hidden="true">👩‍🏫</span><span data-t="enlace.profe"></span></a>
+            </p>
+            <p id="aviso" class="aviso" role="status"></p>
+          </section>
 
-        <section id="p-tabla" role="tabpanel" aria-labelledby="tab-tabla" class="panel" hidden>
-          <h2 data-t="tabla.titulo"></h2>
-          <p class="pequeno"><span id="tabla-progreso"></span> · <span data-t="tabla.explicacion"></span></p>
-          <div class="tabla-scroll"><div id="tabla-progresiva" class="tabla-celdas"></div></div>
-        </section>
+          <section id="p-materia" class="pantalla" role="tabpanel" aria-labelledby="tab-materia" hidden></section>
 
-        <section id="p-retos" role="tabpanel" aria-labelledby="tab-retos" class="panel" hidden>
-          <h2 data-t="retos.titulo"></h2>
-          <div id="retos"></div>
-        </section>
+          <section id="p-coleccion" class="pantalla" role="tabpanel" aria-labelledby="tab-coleccion" hidden>
+            <h1 data-t="coleccion.titulo"></h1>
+            <div class="subtabs" role="tablist" data-t-attr="aria-label:coleccion.titulo">
+              <button role="tab" id="sub-moleculas" aria-selected="true" aria-controls="c-moleculas" data-t="coleccion.moleculas"></button>
+              <button role="tab" id="sub-tabla" aria-selected="false" aria-controls="c-tabla" data-t="coleccion.tabla"></button>
+              <button role="tab" id="sub-personajes" aria-selected="false" aria-controls="c-personajes" data-t="coleccion.personajes"></button>
+            </div>
+            <div id="c-moleculas" role="tabpanel">
+              <p id="moleculario-progreso" class="pequeno"></p>
+              <div id="moleculario" class="coleccion"></div>
+            </div>
+            <div id="c-tabla" role="tabpanel" hidden>
+              <p class="pequeno"><span id="tabla-progreso"></span> · <span data-t="tabla.explicacion"></span></p>
+              <div class="tabla-scroll"><div id="tabla-progresiva" class="tabla-celdas"></div></div>
+            </div>
+            <div id="c-personajes" role="tabpanel" hidden>
+              <p class="pequeno" data-t="personajes.explicacion"></p>
+              <div id="personajes" class="personajes-rejilla"></div>
+            </div>
+          </section>
 
-        <section id="p-clase" role="tabpanel" aria-labelledby="tab-clase" class="panel" hidden>
-          <h2 data-t="inicio.clase"></h2>
-          <div id="clase"></div>
-        </section>
+          <section id="p-liga" class="pantalla" role="tabpanel" aria-labelledby="tab-liga" hidden>
+            <div id="misiones"></div>
+            <div id="liga"></div>
+            <h2 data-t="retos.titulo"></h2>
+            <div id="retos"></div>
+          </section>
 
-        <section id="p-logros" role="tabpanel" class="panel" hidden>
-          <h2 data-t="logros.titulo"></h2>
-          <div id="logros" class="coleccion"></div>
-        </section>
+          <section id="p-perfil" class="pantalla" role="tabpanel" hidden>
+            <div id="perfil"></div>
+            <h2 data-t="inicio.clase"></h2>
+            <div id="clase"></div>
+            <h2 data-t="logros.titulo"></h2>
+            <div id="logros" class="coleccion"></div>
+          </section>
+        </main>
 
         <nav class="nav-inferior" role="tablist" data-t-attr="aria-label:inicio.secciones">
-          <button role="tab" id="tab-jugar" aria-controls="p-jugar" aria-selected="true"><span aria-hidden="true">🎮</span><span data-t="inicio.jugar"></span></button>
-          <button role="tab" id="tab-moleculario" aria-controls="p-moleculario" aria-selected="false"><span aria-hidden="true">🧪</span><span data-t="inicio.moleculario"></span></button>
-          <button role="tab" id="tab-tabla" aria-controls="p-tabla" aria-selected="false"><span aria-hidden="true">⚛️</span><span data-t="inicio.tabla"></span></button>
-          <button role="tab" id="tab-retos" aria-controls="p-retos" aria-selected="false"><span aria-hidden="true">🏆</span><span data-t="inicio.retos"></span></button>
-          <button role="tab" id="tab-clase" aria-controls="p-clase" aria-selected="false"><span aria-hidden="true">👥</span><span data-t="inicio.clase"></span></button>
+          <button role="tab" id="tab-aprender" aria-controls="p-aprender" aria-selected="true"><span class="tab-icono" aria-hidden="true">🏠</span><span data-t="nav.aprender"></span></button>
+          <button role="tab" id="tab-lab" aria-controls="p-lab" aria-selected="false"><span class="tab-icono" aria-hidden="true">🧪</span><span data-t="nav.lab"></span></button>
+          <button role="tab" id="tab-materia" aria-controls="p-materia" aria-selected="false"><span class="tab-icono" aria-hidden="true">💎</span><span data-t="nav.materia"></span></button>
+          <button role="tab" id="tab-coleccion" aria-controls="p-coleccion" aria-selected="false"><span class="tab-icono" aria-hidden="true">📚</span><span data-t="nav.coleccion"></span></button>
+          <button role="tab" id="tab-liga" aria-controls="p-liga" aria-selected="false"><span class="tab-icono" aria-hidden="true">🏆</span><span data-t="nav.liga"></span></button>
         </nav>
-      </main>
+        <div id="mascota" class="mascota-inicio"></div>
+      </div>
 
       <!-- Explorar átomos -->
       <div id="hud" hidden>
-        <section id="ficha" class="tarjeta" data-ar-ui aria-live="polite">
+        <section id="ficha" class="tarjeta flotante" data-ar-ui aria-live="polite">
           <div id="ficha-simbolo" class="simbolo"></div>
           <div class="ficha-texto">
             <p class="ficha-titulo"><strong id="ficha-nombre"></strong> <span id="ficha-familia"></span></p>
@@ -110,20 +133,21 @@
           </div>
         </section>
         <p id="pista" class="burbuja" hidden></p>
-        <p id="leyenda" class="leyenda" data-ar-ui></p>
+        <p id="leyenda" class="leyenda flotante" data-ar-ui></p>
         <div class="barra">
           <div class="fila">
-            <button id="anterior" type="button" class="secundario redondo" data-t-attr="aria-label:explorar.anterior">‹</button>
-            <button id="abrir-tabla" type="button" class="secundario" data-t="explorar.tabla"></button>
-            <button id="siguiente" type="button" class="secundario redondo" data-t-attr="aria-label:explorar.siguiente">›</button>
+            <button id="anterior" type="button" class="btn claro redondo" data-t-attr="aria-label:explorar.anterior">‹</button>
+            <button id="abrir-tabla" type="button" class="btn claro" data-t="explorar.tabla"></button>
+            <button id="siguiente" type="button" class="btn claro redondo" data-t-attr="aria-label:explorar.siguiente">›</button>
           </div>
           <div class="fila">
             <div class="segmentado" role="radiogroup" data-t-attr="aria-label:modelo.titulo">
               <button id="modelo-bohr" type="button" role="radio" aria-checked="true" data-t="modelo.bohr"></button>
               <button id="modelo-nube" type="button" role="radio" aria-checked="false" data-t="modelo.orbitales"></button>
             </div>
-            <button id="borrar" type="button" class="secundario" data-t="explorar.borrar" hidden></button>
-            <button id="salir" type="button" class="secundario" data-t="comun.salir"></button>
+            <label id="escala-explorar" class="escala flotante" hidden><span data-t="escala.titulo"></span><input id="escala-explorar-valor" type="range" min="1" max="4" step="0.25" value="1" /></label>
+            <button id="borrar" type="button" class="btn claro" data-t="explorar.borrar" hidden></button>
+            <button id="salir" type="button" class="btn claro" data-t="comun.salir"></button>
           </div>
         </div>
       </div>
@@ -132,29 +156,29 @@
       <div id="hud-tarjetas" hidden>
         <p id="t-estado" class="burbuja burbuja-arriba"></p>
         <p id="t-reto" class="reto-juego" hidden></p>
-        <section id="t-banner" class="banner" data-ar-ui role="status" hidden>
+        <section id="t-banner" class="banner flotante" data-ar-ui role="status" hidden>
           <p id="t-banner-titulo" class="banner-titulo"></p>
           <p id="t-banner-ecuacion" class="banner-ecuacion"></p>
           <p id="t-banner-texto" class="banner-texto"></p>
         </section>
-        <section id="t-carga" class="carga" hidden>
+        <section id="t-carga" class="carga flotante" hidden>
           <p id="t-carga-ecuacion"></p>
           <div class="progreso"><div></div></div>
           <p class="pequeno" data-t="juego.manten"></p>
         </section>
         <div class="barra">
           <div class="fila">
-            <button id="t-anadir" type="button" class="secundario" data-t="juego.anadir"></button>
-            <button id="t-reiniciar" type="button" class="secundario" data-t="juego.reiniciar"></button>
-            <button id="t-recetas" type="button" class="secundario" data-t="juego.recetas"></button>
+            <button id="t-anadir" type="button" class="btn claro pequeno" data-t="juego.anadir"></button>
+            <button id="t-reiniciar" type="button" class="btn claro pequeno" data-t="juego.reiniciar"></button>
+            <button id="t-recetas" type="button" class="btn claro pequeno" data-t="juego.recetas"></button>
           </div>
           <div class="fila">
             <div class="segmentado" role="radiogroup" data-t-attr="aria-label:modelo.titulo">
               <button id="t-bohr" type="button" role="radio" aria-checked="true" data-t="modelo.bohr"></button>
               <button id="t-nube" type="button" role="radio" aria-checked="false" data-t="modelo.orbitales"></button>
             </div>
-            <button id="t-descomponer" type="button" class="mantener" data-t="juego.descomponer" disabled></button>
-            <button id="t-salir" type="button" class="secundario" data-t="comun.salir"></button>
+            <button id="t-descomponer" type="button" class="btn mantener" data-t="juego.descomponer" disabled></button>
+            <button id="t-salir" type="button" class="btn claro" data-t="comun.salir"></button>
           </div>
         </div>
       </div>
@@ -162,7 +186,7 @@
       <div id="tabla" class="dialogo" data-ar-ui hidden>
         <div class="dialogo-cabecera">
           <h2 data-t="explorar.tabla"></h2>
-          <button id="cerrar-tabla" type="button" class="secundario redondo" data-t-attr="aria-label:comun.cerrar">×</button>
+          <button id="cerrar-tabla" type="button" class="btn claro redondo" data-t-attr="aria-label:comun.cerrar">×</button>
         </div>
         <div class="tabla-scroll"><div id="tabla-celdas" class="tabla-celdas"></div></div>
       </div>
@@ -170,30 +194,38 @@
       <div id="recetas" class="dialogo" data-ar-ui hidden>
         <div class="dialogo-cabecera">
           <h2 data-t="juego.recetas"></h2>
-          <button id="cerrar-recetas" type="button" class="secundario redondo" data-t-attr="aria-label:comun.cerrar">×</button>
+          <button id="cerrar-recetas" type="button" class="btn claro redondo" data-t-attr="aria-label:comun.cerrar">×</button>
         </div>
         <div id="recetas-lista" class="recetas"></div>
       </div>
     </div>
 
+    <!-- Lección (pantalla completa, al estilo de las apps de idiomas) -->
+    <dialog id="leccion" class="leccion" aria-labelledby="leccion-titulo"></dialog>
+
     <dialog id="detalle" class="detalle" aria-labelledby="detalle-titulo">
       <div id="detalle-contenido"></div>
-      <form method="dialog"><button class="secundario" data-t="comun.cerrar"></button></form>
+      <form method="dialog"><button class="btn" data-t="comun.cerrar"></button></form>
     </dialog>
 
     <dialog id="acertijos" class="detalle" aria-labelledby="acertijos-titulo">
       <h2 id="acertijos-titulo" data-t="acertijo.elige"></h2>
       <div id="acertijos-lista" class="acertijos-lista"></div>
-      <form method="dialog"><button class="secundario" data-t="comun.cerrar"></button></form>
+      <form method="dialog"><button class="btn claro" data-t="comun.cerrar"></button></form>
     </dialog>
 
     <dialog id="acertijo-fin" class="detalle" aria-labelledby="detalle-titulo">
       <div id="acertijo-fin-contenido"></div>
       <div class="fila acertijo-botones">
-        <button id="acertijo-salir" type="button" class="secundario" data-t="acertijo.salir"></button>
-        <button id="acertijo-repetir" type="button" class="secundario" data-t="acertijo.repetir"></button>
-        <button id="acertijo-siguiente" type="button" data-t="acertijo.siguiente"></button>
+        <button id="acertijo-salir" type="button" class="btn claro" data-t="acertijo.salir"></button>
+        <button id="acertijo-repetir" type="button" class="btn claro" data-t="acertijo.repetir"></button>
+        <button id="acertijo-siguiente" type="button" class="btn ok" data-t="acertijo.siguiente"></button>
       </div>
+    </dialog>
+
+    <dialog id="tienda" class="detalle" aria-labelledby="tienda-titulo">
+      <div id="tienda-contenido"></div>
+      <form method="dialog"><button class="btn claro" data-t="comun.cerrar"></button></form>
     </dialog>
 
     <dialog id="ajustes" class="detalle" aria-labelledby="ajustes-titulo">
@@ -201,65 +233,75 @@
       <form id="ajustes-form" class="ajustes">
         <label><span data-t="ajustes.idioma"></span>
           <select name="idioma"><option value="es">Español</option><option value="en">English</option></select></label>
+        <fieldset><legend data-t="ajustes.meta"></legend>
+          <label class="opcion"><input type="radio" name="meta" value="10" /> <span data-t="ajustes.meta.10"></span></label>
+          <label class="opcion"><input type="radio" name="meta" value="20" /> <span data-t="ajustes.meta.20"></span></label>
+          <label class="opcion"><input type="radio" name="meta" value="30" /> <span data-t="ajustes.meta.30"></span></label>
+          <label class="opcion"><input type="radio" name="meta" value="50" /> <span data-t="ajustes.meta.50"></span></label>
+        </fieldset>
         <fieldset><legend data-t="ajustes.letra"></legend>
           <label class="opcion"><input type="radio" name="letra" value="1" /> <span data-t="ajustes.letra.normal"></span></label>
           <label class="opcion"><input type="radio" name="letra" value="1.15" /> <span data-t="ajustes.letra.grande"></span></label>
           <label class="opcion"><input type="radio" name="letra" value="1.3" /> <span data-t="ajustes.letra.muy_grande"></span></label>
         </fieldset>
+        <label class="interruptor"><input type="checkbox" name="oscuro" /> <span data-t="ajustes.oscuro"></span></label>
         <label class="interruptor"><input type="checkbox" name="contraste" /> <span data-t="ajustes.contraste"></span></label>
         <label class="interruptor"><input type="checkbox" name="calma" /> <span data-t="ajustes.calma"></span></label>
+        <label class="interruptor"><input type="checkbox" name="sonido" /> <span data-t="ajustes.sonido"></span></label>
         <label class="interruptor"><input type="checkbox" name="vibrar" /> <span data-t="ajustes.vibrar"></span></label>
+        <label class="interruptor"><input type="checkbox" name="gato" /> <span data-t="ajustes.gato"></span></label>
       </form>
       <div class="ajustes-bloque">
         <h3 data-t="offline.titulo"></h3>
         <p class="pequeno" data-t="offline.texto"></p>
-        <button id="offline-boton" type="button" class="secundario" data-t="offline.boton"></button>
+        <button id="offline-boton" type="button" class="btn claro" data-t="offline.boton"></button>
         <p id="offline-estado" class="pequeno" role="status"></p>
+        <button id="instalar" type="button" class="btn menta" data-t="instalar.boton" hidden></button>
+        <p id="instalar-ios" class="pequeno" data-t="instalar.ios" hidden></p>
       </div>
-      <p><button id="ver-intro" type="button" class="secundario" data-t="ayuda.ver_intro"></button></p>
-      <form method="dialog"><button data-t="comun.listo"></button></form>
+      <p><button id="ver-intro" type="button" class="btn claro" data-t="ayuda.ver_intro"></button></p>
+      <form method="dialog"><button class="btn" data-t="comun.listo"></button></form>
     </dialog>
 
     <dialog id="intro" class="intro" aria-labelledby="intro-titulo">
       <div class="intro-escenas" id="intro-escenas">
         <section class="escena" data-escena="0">
+          <div class="visual v-gato" aria-hidden="true"><div id="intro-gato"></div></div>
+          <h2 id="intro-titulo" data-t="intro.0.titulo"></h2><p data-t="intro.0.texto"></p>
+        </section>
+        <section class="escena" data-escena="1">
+          <div class="visual v-camino" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <h2 data-t="intro.camino.titulo"></h2><p data-t="intro.camino.texto"></p>
+        </section>
+        <section class="escena" data-escena="2">
           <div class="visual v-apuntar" aria-hidden="true">
             <div class="movil"><div class="carta-mini">H</div><div class="atomo-mini"><i></i><i></i><b></b></div></div>
           </div>
-          <h2 id="intro-titulo" data-t="intro.1.titulo"></h2><p data-t="intro.1.texto"></p>
+          <h2 data-t="intro.1.titulo"></h2><p data-t="intro.1.texto"></p>
         </section>
-        <section class="escena" data-escena="1">
+        <section class="escena" data-escena="3">
           <div class="visual v-juntar" aria-hidden="true">
             <div class="carta-mini izq">H</div><div class="carta-mini centro">O</div><div class="carta-mini der">H</div>
             <div class="destello"></div><div class="molecula-mini">H₂O</div>
           </div>
           <h2 data-t="intro.2.titulo"></h2><p data-t="intro.2.texto"></p>
         </section>
-        <section class="escena" data-escena="2">
+        <section class="escena" data-escena="4">
           <div class="visual v-calor" aria-hidden="true">
             <div class="lado fuego"><span>🔥</span><small data-t="intro.3.exo"></small></div>
             <div class="lado hielo"><span>❄️</span><small data-t="intro.3.endo"></small></div>
           </div>
           <h2 data-t="intro.3.titulo"></h2><p data-t="intro.3.texto"></p>
         </section>
-        <section class="escena" data-escena="3">
-          <div class="visual v-coleccion" aria-hidden="true">
-            <span>?</span><span>?</span><span>?</span><span>?</span><span>?</span><span>?</span>
-          </div>
-          <h2 data-t="intro.4.titulo"></h2><p data-t="intro.4.texto"></p>
-        </section>
-        <section class="escena" data-escena="4">
-          <div class="visual v-clase" aria-hidden="true">
-            <div class="avatares"><span>🧑‍🔬</span><span>👩‍🔬</span><span>🧑‍🎓</span><span>👨‍🔬</span></div>
-            <div class="meta"><div></div></div><span class="sin-red">📴 ✓</span>
-          </div>
-          <h2 data-t="intro.5.titulo"></h2><p data-t="intro.5.texto"></p>
+        <section class="escena" data-escena="5">
+          <div class="visual v-racha" aria-hidden="true"><span class="llama">🔥</span><div class="dias"><i></i><i></i><i></i><i></i><i></i></div><span class="copa">🏆</span></div>
+          <h2 data-t="intro.racha.titulo"></h2><p data-t="intro.racha.texto"></p>
         </section>
       </div>
       <div class="intro-pie">
-        <button id="intro-saltar" type="button" class="enlace" data-t="intro.saltar"></button>
+        <button id="intro-saltar" type="button" class="btn fantasma pequeno" data-t="intro.saltar"></button>
         <div id="intro-puntos" class="puntos" role="group" data-t-attr="aria-label:intro.pasos"></div>
-        <button id="intro-siguiente" type="button" data-t="intro.siguiente"></button>
+        <button id="intro-siguiente" type="button" class="btn" data-t="intro.siguiente"></button>
       </div>
     </dialog>
 

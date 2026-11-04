@@ -25,6 +25,8 @@ export interface MarkerTrackingOptions {
   smoothing?: number;
   /** Qué ids aceptar (los demás se ignoran). */
   accept?: (id: number) => boolean;
+  /** Cámara trasera (por defecto) o frontal; la frontal se ve en espejo, como un selfi. */
+  facing?: 'environment' | 'user';
 }
 
 export interface MarkerTrackingEvents {
@@ -85,6 +87,19 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     this.imageUrl = url;
   }
 
+  /** La cámara de la próxima sesión (o de la actual, al reiniciarla). */
+  set facing(value: 'environment' | 'user') {
+    this.options.facing = value;
+  }
+  get facing(): 'environment' | 'user' {
+    return this.options.facing ?? 'environment';
+  }
+
+  /** El vídeo (o la imagen) que se ve de fondo: para hacer fotos con lo de encima. */
+  get source(): HTMLVideoElement | HTMLImageElement | undefined {
+    return this.video;
+  }
+
   /** El ancla de un marcador, si ya se ha visto alguna vez. */
   getAnchor(id: number): ARAnchor | undefined {
     return this.tracked.get(id)?.anchor;
@@ -93,7 +108,7 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
   async start(ctx: ARContext, hooks: ARProviderHooks): Promise<void> {
     const video = this.imageUrl ? await this.openImage(this.imageUrl) : await this.openCamera();
     video.classList.add('ar-video');
-    Object.assign(video.style, { position: 'fixed', inset: '0', width: '100%', height: '100%', objectFit: 'cover' });
+    Object.assign(video.style, { position: 'fixed', inset: '0', width: '100%', height: '100%', objectFit: 'cover', transform: this.facing === 'user' ? 'scaleX(-1)' : '' });
     ctx.renderer.domElement.before(video);
     this.video = video;
     this.ctx = ctx;
@@ -111,7 +126,7 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
   private async openCamera(): Promise<HTMLVideoElement> {
     this.stream = await navigator.mediaDevices.getUserMedia({
       audio: false,
-      video: { facingMode: { ideal: 'environment' }, width: { ideal: 1280 }, height: { ideal: 720 } },
+      video: { facingMode: { ideal: this.facing }, width: { ideal: 1280 }, height: { ideal: 720 } },
     });
     const video = document.createElement('video');
     video.playsInline = true;

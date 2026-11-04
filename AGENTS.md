@@ -53,7 +53,8 @@ ve en ≤ 2 min (cron) y despliega sola → comprueba
    hacen falta ramas; si hay más gente, ramas y PR, que la CI también prueba).
 9. La web necesita **HTTPS** para la cámara y los sensores: siempre se prueba
    en el dominio, o en `localhost` en local.
-10. **Ningún texto de la interfaz en el código**: va en
-    `apps/web/src/i18n/es.json` con su descripción (y en `en.json`).
+10. **Ningún texto de la interfaz en el código**: va en la tabla de textos,
+    repartida por secciones en `apps/web/src/i18n/es/*.json` con su
+    descripción (y en `en/*.json`). Un test impide claves repetidas.
 11. **Datos de alumnos**: solo alias y progreso; nada de nombres reales,
     correos, fotos ni ubicación (guía de la AEPD para centros).

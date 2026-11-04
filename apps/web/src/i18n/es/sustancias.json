@@ -1,0 +1,602 @@
+{
+ "especie.H2.porque": {
+  "texto": "Son dos átomos de hidrógeno unidos por un enlace covalente simple: una molécula diminuta y apolar. Las atracciones entre moléculas son tan débiles que no se licúa hasta los −253 °C.",
+  "descripcion": "Por qué el hidrógeno molecular tiene sus propiedades (nivel ESO)"
+ },
+ "especie.H2.curiosidad": {
+  "texto": "El dirigible Hindenburg flotaba gracias a este gas, y ardió en 1937 en Estados Unidos.",
+  "descripcion": "Curiosidad sobre el hidrógeno molecular"
+ },
+ "especie.H2.pista": {
+  "texto": "Soy el gas más ligero que existe y, cuando ardo, solo dejo agua.",
+  "descripcion": "Pista para adivinar el hidrógeno molecular; no debe contener su nombre ni su fórmula"
+ },
+ "especie.O2.porque": {
+  "texto": "Sus dos átomos comparten un doble enlace y la molécula es apolar; por eso se disuelve poco en agua, aunque a los peces les basta con lo que se disuelve.",
+  "descripcion": "Por qué el oxígeno molecular tiene sus propiedades (nivel ESO)"
+ },
+ "especie.O2.curiosidad": {
+  "texto": "En estado líquido es de color azul pálido y un imán lo atrae.",
+  "descripcion": "Curiosidad sobre el oxígeno molecular"
+ },
+ "especie.O2.pista": {
+  "texto": "Formo una quinta parte del aire y sin mí no arde ni una cerilla.",
+  "descripcion": "Pista para adivinar el oxígeno molecular; no debe contener su nombre ni su fórmula"
+ },
+ "especie.N2.porque": {
+  "texto": "Sus dos átomos están unidos por un triple enlace, uno de los más fuertes que existen. Romperlo cuesta tanta energía que casi nunca reacciona.",
+  "descripcion": "Por qué el nitrógeno molecular tiene sus propiedades (nivel ESO)"
+ },
+ "especie.N2.curiosidad": {
+  "texto": "Las bolsas de patatas fritas van infladas con este gas: evita que se pongan rancias y las protege de los golpes.",
+  "descripcion": "Curiosidad sobre el nitrógeno molecular"
+ },
+ "especie.N2.pista": {
+  "texto": "Formo casi cuatro quintas partes del aire, pero casi nunca reacciono con nada.",
+  "descripcion": "Pista para adivinar el nitrógeno molecular; no debe contener su nombre ni su fórmula"
+ },
+ "especie.F2.porque": {
+  "texto": "Cada átomo es pequeñísimo y atrae los electrones más que ningún otro, y el enlace entre los dos es débil. Se rompe con facilidad y los átomos libres arrancan electrones a casi todo.",
+  "descripcion": "Por qué el flúor molecular tiene sus propiedades (nivel ESO)"
+ },
+ "especie.F2.curiosidad": {
+  "texto": "Es tan reactivo que reacciona hasta con el xenón, un gas noble que casi nunca forma compuestos.",
+  "descripcion": "Curiosidad sobre el flúor molecular"
+ },
+ "especie.F2.pista": {
+  "texto": "Soy un gas amarillo pálido tan agresivo que reacciono incluso con algunos gases nobles.",
+  "descripcion": "Pista para adivinar el flúor molecular; no debe contener su nombre ni su fórmula"
+ },
+ "especie.Cl2.porque": {
+  "texto": "La molécula es apolar, pero cada átomo tiene muchas ganas de ganar un electrón: es un oxidante fuerte que destruye bacterias y virus.",
+  "descripcion": "Por qué el cloro molecular tiene sus propiedades (nivel ESO)"
+ },
+ "especie.Cl2.curiosidad": {
+  "texto": "Fue una de las primeras armas químicas: se usó en la Primera Guerra Mundial, en Ypres (Bélgica), en 1915.",
+  "descripcion": "Curiosidad sobre el cloro molecular"
+ },
+ "especie.Cl2.pista": {
+  "texto": "Soy un gas amarillo verdoso y en las piscinas me encargo de matar microbios.",
+  "descripcion": "Pista para adivinar el cloro molecular; no debe contener su nombre ni su fórmula"
+ },
+ "especie.Br2.porque": {
+  "texto": "Sus moléculas son más grandes y tienen más electrones que las del cloro, así que se atraen más entre sí: lo justo para ser líquido a temperatura ambiente.",
+  "descripcion": "Por qué el bromo molecular tiene sus propiedades (nivel ESO)"
+ },
+ "especie.Br2.curiosidad": {
+  "texto": "Su nombre viene del griego «bromos», hedor, por el olor tan desagradable de sus vapores.",
+  "descripcion": "Curiosidad sobre el bromo molecular"
+ },
+ "especie.Br2.pista": {
+  "texto": "Soy un líquido rojo pardo que suelta vapores apestosos; solo el mercurio me acompaña como elemento líquido a temperatura ambiente.",
+  "descripcion": "Pista para adivinar el bromo molecular; no debe contener su nombre ni su fórmula"
+ },
+ "especie.I2.porque": {
+  "texto": "Sus moléculas son las más grandes de su familia y se atraen con fuerza, por eso es sólido; al calentarlo, pasa directamente a gas (sublima).",
+  "descripcion": "Por qué el yodo molecular tiene sus propiedades (nivel ESO)"
+ },
+ "especie.I2.curiosidad": {
+  "texto": "Su nombre viene del griego «iodes», violeta, por el color de su vapor.",
+  "descripcion": "Curiosidad sobre el yodo molecular"
+ },
+ "especie.I2.pista": {
+  "texto": "Soy un sólido gris oscuro que al calentarse da un vapor violeta, y me añaden a la sal para cuidar el tiroides.",
+  "descripcion": "Pista para adivinar el yodo molecular; no debe contener su nombre ni su fórmula"
+ },
+ "especie.O3.porque": {
+  "texto": "Son tres átomos de oxígeno en forma de V: una molécula inestable que suelta con facilidad un átomo de oxígeno, por eso es muy oxidante. La luz ultravioleta tiene justo la energía para romperla, y así la absorbe.",
+  "descripcion": "Por qué el ozono tiene sus propiedades (nivel ESO)"
+ },
+ "especie.O3.curiosidad": {
+  "texto": "Si todo el de la estratosfera se juntara a nivel del suelo, formaría una capa de solo unos 3 mm de grosor.",
+  "descripcion": "Curiosidad sobre el ozono"
+ },
+ "especie.O3.pista": {
+  "texto": "Soy tres átomos del mismo elemento: allá arriba te protejo del sol y aquí abajo irrito los pulmones.",
+  "descripcion": "Pista para adivinar el ozono; no debe contener su nombre ni su fórmula"
+ },
+ "especie.H2O.porque": {
+  "texto": "La molécula tiene forma de V (unos 104,5°) y el oxígeno atrae más los electrones: es polar. Sus moléculas se unen por puentes de hidrógeno, y por eso hierve a 100 °C, muchísimo más que otras moléculas de su tamaño.",
+  "descripcion": "Por qué el agua tiene sus propiedades (nivel ESO)"
+ },
+ "especie.H2O.curiosidad": {
+  "texto": "El hielo flota porque, al congelarse, sus moléculas forman una red hexagonal con huecos y ocupa más que el líquido.",
+  "descripcion": "Curiosidad sobre el agua"
+ },
+ "especie.H2O.pista": {
+  "texto": "Cubro más de dos tercios de la Tierra y, cuando me congelo, floto sobre mí misma.",
+  "descripcion": "Pista para adivinar el agua; no debe contener su nombre ni su fórmula"
+ },
+ "especie.H2O2.porque": {
+  "texto": "Tiene dos oxígenos unidos por un enlace débil que se rompe con facilidad y libera oxígeno muy reactivo: por eso desinfecta y blanquea.",
+  "descripcion": "Por qué el peróxido de hidrógeno tiene sus propiedades (nivel ESO)"
+ },
+ "especie.H2O2.curiosidad": {
+  "texto": "En una herida hace espuma porque una enzima de la sangre, la catalasa, lo descompone rapidísimo en agua y oxígeno.",
+  "descripcion": "Curiosidad sobre el peróxido de hidrógeno"
+ },
+ "especie.H2O2.pista": {
+  "texto": "Me parezco al agua pero con un oxígeno de más, y hago espuma cuando me echas en una herida.",
+  "descripcion": "Pista para adivinar el peróxido de hidrógeno; no debe contener su nombre ni su fórmula"
+ },
+ "especie.CO.porque": {
+  "texto": "Se une a la hemoglobina de la sangre unas 200 veces más fuerte que el oxígeno y le quita el sitio: las células se quedan sin oxígeno.",
+  "descripcion": "Por qué el monóxido de carbono tiene sus propiedades (nivel ESO)"
+ },
+ "especie.CO.curiosidad": {
+  "texto": "El triple enlace entre sus dos átomos es el más fuerte que se conoce en una molécula de dos átomos, más incluso que el del nitrógeno.",
+  "descripcion": "Curiosidad sobre el monóxido de carbono"
+ },
+ "especie.CO.pista": {
+  "texto": "Soy un gas invisible y sin olor que sale de las estufas mal ventiladas y le robo el sitio al oxígeno en la sangre.",
+  "descripcion": "Pista para adivinar el monóxido de carbono; no debe contener su nombre ni su fórmula"
+ },
+ "especie.CO2.porque": {
+  "texto": "Es lineal (O=C=O): cada enlace es polar, pero tiran en direcciones opuestas y se anulan, así que la molécula es apolar. Al vibrar absorbe radiación infrarroja, y por eso retiene calor en la atmósfera.",
+  "descripcion": "Por qué el dióxido de carbono tiene sus propiedades (nivel ESO)"
+ },
+ "especie.CO2.curiosidad": {
+  "texto": "Sólido es el «hielo seco», que a −78 °C pasa directamente a gas sin fundirse.",
+  "descripcion": "Curiosidad sobre el dióxido de carbono"
+ },
+ "especie.CO2.pista": {
+  "texto": "Soy el gas de las burbujas de los refrescos y el que expulsas al respirar.",
+  "descripcion": "Pista para adivinar el dióxido de carbono; no debe contener su nombre ni su fórmula"
+ },
+ "especie.CH4.porque": {
+  "texto": "Es un tetraedro perfecto con cuatro enlaces C–H casi apolares: la molécula es apolar, por eso es un gas que no se mezcla con el agua.",
+  "descripcion": "Por qué el metano tiene sus propiedades (nivel ESO)"
+ },
+ "especie.CH4.curiosidad": {
+  "texto": "No huele a nada: el olor del gas de la cocina es un compuesto de azufre que se añade para detectar las fugas.",
+  "descripcion": "Curiosidad sobre el metano"
+ },
+ "especie.CH4.pista": {
+  "texto": "Soy el principal componente del gas natural y las vacas me sueltan al eructar.",
+  "descripcion": "Pista para adivinar el metano; no debe contener su nombre ni su fórmula"
+ },
+ "especie.C2H2.porque": {
+  "texto": "Sus dos carbonos están unidos por un triple enlace que guarda muchísima energía; al arder con oxígeno puro, la llama supera los 3000 °C.",
+  "descripcion": "Por qué el acetileno tiene sus propiedades (nivel ESO)"
+ },
+ "especie.C2H2.curiosidad": {
+  "texto": "Las antiguas lámparas de carburo de mineros y espeleólogos lo producían dejando gotear agua sobre carburo de calcio.",
+  "descripcion": "Curiosidad sobre el acetileno"
+ },
+ "especie.C2H2.pista": {
+  "texto": "Soy un gas con un triple enlace entre dos carbonos y mi llama corta el acero.",
+  "descripcion": "Pista para adivinar el acetileno; no debe contener su nombre ni su fórmula"
+ },
+ "especie.HCN.porque": {
+  "texto": "Es una molécula lineal que bloquea una enzima que las células necesitan para usar el oxígeno: aunque respires, tus células se ahogan.",
+  "descripcion": "Por qué el cianuro de hidrógeno tiene sus propiedades (nivel ESO)"
+ },
+ "especie.HCN.curiosidad": {
+  "texto": "Hay quien lo huele como almendras amargas y quien no lo nota en absoluto: depende de los genes.",
+  "descripcion": "Curiosidad sobre el cianuro de hidrógeno"
+ },
+ "especie.HCN.pista": {
+  "texto": "Huelo a almendras amargas y las pepitas de manzana y los huesos de albaricoque pueden liberarme.",
+  "descripcion": "Pista para adivinar el cianuro de hidrógeno; no debe contener su nombre ni su fórmula"
+ },
+ "especie.CH2O.porque": {
+  "texto": "Es una molécula plana y polar, muy soluble en agua y muy reactiva: une entre sí las proteínas, y así «fija» los tejidos y los conserva.",
+  "descripcion": "Por qué el metanal (formaldehído) tiene sus propiedades (nivel ESO)"
+ },
+ "especie.CH2O.curiosidad": {
+  "texto": "Fue la primera molécula orgánica de varios átomos que se detectó en el espacio interestelar, en 1969.",
+  "descripcion": "Curiosidad sobre el metanal (formaldehído)"
+ },
+ "especie.CH2O.pista": {
+  "texto": "Disuelto en agua conservo animales en frascos en los museos de ciencias y huelo fuerte e irritante.",
+  "descripcion": "Pista para adivinar el metanal (formaldehído); no debe contener su nombre ni su fórmula"
+ },
+ "especie.CS2.porque": {
+  "texto": "Es lineal y simétrico como el CO₂, así que es apolar: disuelve grasas, azufre, caucho y otras sustancias apolares.",
+  "descripcion": "Por qué el disulfuro de carbono tiene sus propiedades (nivel ESO)"
+ },
+ "especie.CS2.curiosidad": {
+  "texto": "Sus vapores pueden arder solos al tocar una superficie a unos 100 °C, como una tubería de vapor caliente.",
+  "descripcion": "Curiosidad sobre el disulfuro de carbono"
+ },
+ "especie.CS2.pista": {
+  "texto": "Me parezco al gas que exhalas, pero con azufre en lugar de oxígeno.",
+  "descripcion": "Pista para adivinar el disulfuro de carbono; no debe contener su nombre ni su fórmula"
+ },
+ "especie.CCl4.porque": {
+  "texto": "Es un tetraedro con cuatro enlaces polares que se anulan entre sí: la molécula es apolar, disuelve grasas y no arde.",
+  "descripcion": "Por qué el tetracloruro de carbono tiene sus propiedades (nivel ESO)"
+ },
+ "especie.CCl4.curiosidad": {
+  "texto": "Es más denso que el agua: si los mezclas, no se disuelven y él se va al fondo.",
+  "descripcion": "Curiosidad sobre el tetracloruro de carbono"
+ },
+ "especie.CCl4.pista": {
+  "texto": "Soy un líquido denso que quitaba manchas de grasa en las tintorerías y hoy estoy prohibido por dañar la capa de ozono.",
+  "descripcion": "Pista para adivinar el tetracloruro de carbono; no debe contener su nombre ni su fórmula"
+ },
+ "especie.NH3.porque": {
+  "texto": "Es una pirámide con un par de electrones libre en el nitrógeno: es polar, forma puentes de hidrógeno y se disuelve muy bien en agua. Ese par libre atrapa iones H⁺, por eso es una base.",
+  "descripcion": "Por qué el amoniaco tiene sus propiedades (nivel ESO)"
+ },
+ "especie.NH3.curiosidad": {
+  "texto": "Se calcula que alrededor de la mitad del nitrógeno de tu cuerpo ha pasado antes por una fábrica de abonos que usa el proceso de Haber-Bosch.",
+  "descripcion": "Curiosidad sobre el amoniaco"
+ },
+ "especie.NH3.pista": {
+  "texto": "Huelo muy fuerte, como algunos limpiacristales, y de mí salen casi todos los abonos.",
+  "descripcion": "Pista para adivinar el amoniaco; no debe contener su nombre ni su fórmula"
+ },
+ "especie.NO.porque": {
+  "texto": "Tiene un número impar de electrones, así que uno queda desparejado: es un radical muy reactivo que se combina enseguida con el oxígeno del aire.",
+  "descripcion": "Por qué el monóxido de nitrógeno tiene sus propiedades (nivel ESO)"
+ },
+ "especie.NO.curiosidad": {
+  "texto": "La nitroglicerina que se da a algunos enfermos del corazón funciona porque el cuerpo la convierte en este gas, que relaja los vasos sanguíneos.",
+  "descripcion": "Curiosidad sobre el monóxido de nitrógeno"
+ },
+ "especie.NO.pista": {
+  "texto": "Tengo un electrón desparejado; me forman los rayos al juntar los dos gases principales del aire y tu cuerpo me usa como mensajero.",
+  "descripcion": "Pista para adivinar el monóxido de nitrógeno; no debe contener su nombre ni su fórmula"
+ },
+ "especie.NO2.porque": {
+  "texto": "También tiene un electrón desparejado, y dos moléculas se pueden unir formando N₂O₄, que es incoloro: por eso su color cambia con la temperatura.",
+  "descripcion": "Por qué el dióxido de nitrógeno tiene sus propiedades (nivel ESO)"
+ },
+ "especie.NO2.curiosidad": {
+  "texto": "En una ampolla cerrada se vuelve más pardo al calentarlo y casi incoloro al enfriarlo.",
+  "descripcion": "Curiosidad sobre el dióxido de nitrógeno"
+ },
+ "especie.NO2.pista": {
+  "texto": "Soy el gas pardo rojizo que tiñe el cielo de las ciudades con mucho tráfico.",
+  "descripcion": "Pista para adivinar el dióxido de nitrógeno; no debe contener su nombre ni su fórmula"
+ },
+ "especie.N2O.porque": {
+  "texto": "Es una molécula lineal muy estable a temperatura ambiente, por eso dura en la atmósfera más de un siglo y atrapa calor como gas de efecto invernadero.",
+  "descripcion": "Por qué el óxido de dinitrógeno tiene sus propiedades (nivel ESO)"
+ },
+ "especie.N2O.curiosidad": {
+  "texto": "Es el gas que hace que salga espumosa la nata de los botes de nata montada.",
+  "descripcion": "Curiosidad sobre el óxido de dinitrógeno"
+ },
+ "especie.N2O.pista": {
+  "texto": "En el dentista te relajo, en los botes de nata montada la hago espumosa y tengo un apodo que da risa.",
+  "descripcion": "Pista para adivinar el óxido de dinitrógeno; no debe contener su nombre ni su fórmula"
+ },
+ "especie.HNO3.porque": {
+  "texto": "En agua cede su H⁺ por completo (ácido fuerte) y, además, su nitrógeno rodeado de oxígenos le arranca electrones a los metales: por eso ataca el cobre y la plata.",
+  "descripcion": "Por qué el ácido nítrico tiene sus propiedades (nivel ESO)"
+ },
+ "especie.HNO3.curiosidad": {
+  "texto": "Mezclado con ácido clorhídrico forma el «agua regia», capaz de disolver el oro.",
+  "descripcion": "Curiosidad sobre el ácido nítrico"
+ },
+ "especie.HNO3.pista": {
+  "texto": "Soy un ácido fuerte que tiñe de amarillo la piel y, mezclado con otro ácido, disuelvo el oro.",
+  "descripcion": "Pista para adivinar el ácido nítrico; no debe contener su nombre ni su fórmula"
+ },
+ "especie.HF.porque": {
+  "texto": "El enlace H–F es tan fuerte que en agua se separa poco: es un ácido débil. Pero el ion fluoruro ataca el silicio del vidrio y lo disuelve.",
+  "descripcion": "Por qué el fluoruro de hidrógeno tiene sus propiedades (nivel ESO)"
+ },
+ "especie.HF.curiosidad": {
+  "texto": "Aunque es un ácido débil, es de los más peligrosos: atraviesa la piel y ataca el calcio de los huesos.",
+  "descripcion": "Curiosidad sobre el fluoruro de hidrógeno"
+ },
+ "especie.HF.pista": {
+  "texto": "Soy un ácido débil pero traicionero: me guardan en botellas de plástico porque disuelvo el vidrio.",
+  "descripcion": "Pista para adivinar el fluoruro de hidrógeno; no debe contener su nombre ni su fórmula"
+ },
+ "especie.HCl.porque": {
+  "texto": "El enlace es polar y, en agua, la molécula se separa por completo en H⁺ y Cl⁻: por eso es un ácido fuerte.",
+  "descripcion": "Por qué el cloruro de hidrógeno tiene sus propiedades (nivel ESO)"
+ },
+ "especie.HCl.curiosidad": {
+  "texto": "Si su gas se encuentra con el del amoniaco, aparece de golpe un humo blanco: son cristalitos de cloruro de amonio.",
+  "descripcion": "Curiosidad sobre el cloruro de hidrógeno"
+ },
+ "especie.HCl.pista": {
+  "texto": "Disuelto en agua me venden como salfumán, y también estoy en tu estómago.",
+  "descripcion": "Pista para adivinar el cloruro de hidrógeno; no debe contener su nombre ni su fórmula"
+ },
+ "especie.HBr.porque": {
+  "texto": "El átomo de bromo es más grande que el de cloro, así que el enlace con el hidrógeno es más largo y débil: en agua suelta su H⁺ aún más fácilmente que el ácido clorhídrico.",
+  "descripcion": "Por qué el bromuro de hidrógeno tiene sus propiedades (nivel ESO)"
+ },
+ "especie.HBr.curiosidad": {
+  "texto": "Es un gas incoloro que, en aire húmedo, echa humo: atrapa el vapor de agua y forma gotitas de ácido.",
+  "descripcion": "Curiosidad sobre el bromuro de hidrógeno"
+ },
+ "especie.HBr.pista": {
+  "texto": "Soy un gas incoloro que humea en el aire húmedo y, en agua, formo un ácido aún más fuerte que el del estómago.",
+  "descripcion": "Pista para adivinar el bromuro de hidrógeno; no debe contener su nombre ni su fórmula"
+ },
+ "especie.HI.porque": {
+  "texto": "Como su enlace es el más largo y débil de su familia, en agua suelta el H⁺ con muchísima facilidad: es el más fuerte de los ácidos de los halógenos.",
+  "descripcion": "Por qué el yoduro de hidrógeno tiene sus propiedades (nivel ESO)"
+ },
+ "especie.HI.curiosidad": {
+  "texto": "Sus disoluciones se vuelven pardas con el tiempo porque la luz y el aire liberan yodo.",
+  "descripcion": "Curiosidad sobre el yoduro de hidrógeno"
+ },
+ "especie.HI.pista": {
+  "texto": "Formo el ácido más fuerte de mi familia de hidrácidos y tengo el enlace más largo de todos ellos.",
+  "descripcion": "Pista para adivinar el yoduro de hidrógeno; no debe contener su nombre ni su fórmula"
+ },
+ "especie.H2S.porque": {
+  "texto": "Tiene forma de V como el agua, pero el azufre es más grande y atrae menos los electrones: casi no forma puentes de hidrógeno y por eso es un gas.",
+  "descripcion": "Por qué el sulfuro de hidrógeno tiene sus propiedades (nivel ESO)"
+ },
+ "especie.H2S.curiosidad": {
+  "texto": "En concentraciones altas paraliza el olfato y deja de olerse, por eso es tan traicionero.",
+  "descripcion": "Curiosidad sobre el sulfuro de hidrógeno"
+ },
+ "especie.H2S.pista": {
+  "texto": "Huelo a huevos podridos y me sueltan los volcanes y algunas aguas termales.",
+  "descripcion": "Pista para adivinar el sulfuro de hidrógeno; no debe contener su nombre ni su fórmula"
+ },
+ "especie.SO2.porque": {
+  "texto": "Es una molécula en forma de V, polar, que se disuelve en agua formando un ácido: por eso causa lluvia ácida. También frena a los microbios, y así conserva el vino.",
+  "descripcion": "Por qué el dióxido de azufre tiene sus propiedades (nivel ESO)"
+ },
+ "especie.SO2.curiosidad": {
+  "texto": "La erupción del Pinatubo (Filipinas, 1991) lanzó tanto a la atmósfera que enfrió el planeta alrededor de medio grado durante más de un año.",
+  "descripcion": "Curiosidad sobre el dióxido de azufre"
+ },
+ "especie.SO2.pista": {
+  "texto": "Huelo como una cerilla recién encendida y me añaden en pequeñas dosis al vino.",
+  "descripcion": "Pista para adivinar el dióxido de azufre; no debe contener su nombre ni su fórmula"
+ },
+ "especie.SO3.porque": {
+  "texto": "Es una molécula plana y simétrica, con el azufre muy falto de electrones, así que reacciona con violencia con el agua para formar ácido sulfúrico.",
+  "descripcion": "Por qué el trióxido de azufre tiene sus propiedades (nivel ESO)"
+ },
+ "especie.SO3.curiosidad": {
+  "texto": "Reacciona tan bruscamente con el agua que en la industria se disuelve en ácido sulfúrico en lugar de en agua, para evitar una niebla ácida.",
+  "descripcion": "Curiosidad sobre el trióxido de azufre"
+ },
+ "especie.SO3.pista": {
+  "texto": "Con agua formo el ácido más fabricado del mundo, y reacciono con ella tan bruscamente que se forma una niebla ácida.",
+  "descripcion": "Pista para adivinar el trióxido de azufre; no debe contener su nombre ni su fórmula"
+ },
+ "especie.SiO2.porque": {
+  "texto": "No forma moléculas sueltas: es una red gigante en tres dimensiones de átomos de silicio y oxígeno unidos por enlaces covalentes. Por eso es muy duro y funde a unos 1700 °C.",
+  "descripcion": "Por qué el dióxido de silicio tiene sus propiedades (nivel ESO)"
+ },
+ "especie.SiO2.curiosidad": {
+  "texto": "Un cristal de cuarzo de los relojes vibra exactamente 32 768 veces por segundo cuando recibe corriente, y así marca el tiempo.",
+  "descripcion": "Curiosidad sobre el dióxido de silicio"
+ },
+ "especie.SiO2.pista": {
+  "texto": "Soy la arena de la playa y, fundido, me convierto en vidrio.",
+  "descripcion": "Pista para adivinar el dióxido de silicio; no debe contener su nombre ni su fórmula"
+ },
+ "especie.NaCl.porque": {
+  "texto": "Es iónico: una red cúbica de iones Na⁺ y Cl⁻ que se atraen con fuerza. Por eso es un sólido duro que funde a 801 °C y, disuelto en agua, conduce la electricidad.",
+  "descripcion": "Por qué el cloruro de sodio tiene sus propiedades (nivel ESO)"
+ },
+ "especie.NaCl.curiosidad": {
+  "texto": "Sus cristales son cubitos casi perfectos: compruébalo mirando sal gorda con una lupa.",
+  "descripcion": "Curiosidad sobre el cloruro de sodio"
+ },
+ "especie.NaCl.pista": {
+  "texto": "Me echas en la comida y, si me miras con lupa, verás cubitos transparentes.",
+  "descripcion": "Pista para adivinar el cloruro de sodio; no debe contener su nombre ni su fórmula"
+ },
+ "especie.KCl.porque": {
+  "texto": "Es iónico como la sal común, pero con iones K⁺, más grandes; las plantas necesitan ese potasio para crecer, por eso es abono.",
+  "descripcion": "Por qué el cloruro de potasio tiene sus propiedades (nivel ESO)"
+ },
+ "especie.KCl.curiosidad": {
+  "texto": "Es ligeramente radiactivo por el potasio-40 natural: un saco de este abono hace sonar un contador Geiger.",
+  "descripcion": "Curiosidad sobre el cloruro de potasio"
+ },
+ "especie.KCl.pista": {
+  "texto": "Parezco sal de mesa y la sustituyo en dietas con poco sodio, aunque sé un poco amargo.",
+  "descripcion": "Pista para adivinar el cloruro de potasio; no debe contener su nombre ni su fórmula"
+ },
+ "especie.NaF.porque": {
+  "texto": "El ion fluoruro sustituye a parte del esmalte de los dientes y forma un mineral más resistente a los ácidos que producen las bacterias.",
+  "descripcion": "Por qué el fluoruro de sodio tiene sus propiedades (nivel ESO)"
+ },
+ "especie.NaF.curiosidad": {
+  "texto": "En la dosis justa protege los dientes, pero en exceso deja manchas blancas en el esmalte (fluorosis).",
+  "descripcion": "Curiosidad sobre el fluoruro de sodio"
+ },
+ "especie.NaF.pista": {
+  "texto": "Estoy en muchas pastas de dientes y en el agua de algunas ciudades para que el esmalte resista a las caries.",
+  "descripcion": "Pista para adivinar el fluoruro de sodio; no debe contener su nombre ni su fórmula"
+ },
+ "especie.AgCl.porque": {
+  "texto": "Es iónico pero casi insoluble en agua, por eso aparece como un sólido blanco. La luz arranca electrones a los iones y forma plata metálica, negra.",
+  "descripcion": "Por qué el cloruro de plata tiene sus propiedades (nivel ESO)"
+ },
+ "especie.AgCl.curiosidad": {
+  "texto": "Muchas gafas que se oscurecen al sol funcionan con cristalitos diminutos de sales de plata como esta.",
+  "descripcion": "Curiosidad sobre el cloruro de plata"
+ },
+ "especie.AgCl.pista": {
+  "texto": "Soy un sólido blanco que se vuelve gris oscuro al sol, y con mi ayuda nacieron las primeras fotografías.",
+  "descripcion": "Pista para adivinar el cloruro de plata; no debe contener su nombre ni su fórmula"
+ },
+ "especie.MgCl2.porque": {
+  "texto": "Es iónico y el ion Mg²⁺, pequeño y con doble carga, atrae con fuerza al agua: se disuelve muy bien y hasta absorbe la humedad del aire.",
+  "descripcion": "Por qué el cloruro de magnesio tiene sus propiedades (nivel ESO)"
+ },
+ "especie.MgCl2.curiosidad": {
+  "texto": "Fundiéndolo y haciendo pasar corriente eléctrica se obtiene el magnesio metálico.",
+  "descripcion": "Curiosidad sobre el cloruro de magnesio"
+ },
+ "especie.MgCl2.pista": {
+  "texto": "Me sacan del agua de mar y en Japón sirvo para cuajar la leche de soja.",
+  "descripcion": "Pista para adivinar el cloruro de magnesio; no debe contener su nombre ni su fórmula"
+ },
+ "especie.CaCl2.porque": {
+  "texto": "Es iónico y cada unidad suelta tres iones al disolverse: muchas partículas que bajan mucho el punto de congelación del agua. Además, al disolverse desprende calor.",
+  "descripcion": "Por qué el cloruro de calcio tiene sus propiedades (nivel ESO)"
+ },
+ "especie.CaCl2.curiosidad": {
+  "texto": "Atrapa tanto vapor de agua que acaba disolviéndose en el agua que ha absorbido; por eso se usa en los absorbedores de humedad de los armarios.",
+  "descripcion": "Curiosidad sobre el cloruro de calcio"
+ },
+ "especie.CaCl2.pista": {
+  "texto": "Echado en las carreteras derrito el hielo a temperaturas más bajas que la sal común, y en los armarios atrapo la humedad.",
+  "descripcion": "Pista para adivinar el cloruro de calcio; no debe contener su nombre ni su fórmula"
+ },
+ "especie.ZnCl2.porque": {
+  "texto": "Su enlace es menos iónico que el de la sal común; disuelto, ataca la capa de óxido de los metales y los deja limpios para soldar.",
+  "descripcion": "Por qué el cloruro de cinc tiene sus propiedades (nivel ESO)"
+ },
+ "especie.ZnCl2.curiosidad": {
+  "texto": "Es tan soluble que en 100 g de agua se disuelven unos 400 g.",
+  "descripcion": "Curiosidad sobre el cloruro de cinc"
+ },
+ "especie.ZnCl2.pista": {
+  "texto": "Aparezco al atacar un metal gris azulado con salfumán, y los soldadores me usan para limpiar las piezas.",
+  "descripcion": "Pista para adivinar el cloruro de cinc; no debe contener su nombre ni su fórmula"
+ },
+ "especie.MgO.porque": {
+  "texto": "Es iónico, con iones pequeños de doble carga (Mg²⁺ y O²⁻) que se atraen muchísimo: funde a unos 2800 °C y se usa en hornos.",
+  "descripcion": "Por qué el óxido de magnesio tiene sus propiedades (nivel ESO)"
+ },
+ "especie.MgO.curiosidad": {
+  "texto": "Los antiguos flashes fotográficos quemaban magnesio, y el humo blanco que dejaban era este óxido.",
+  "descripcion": "Curiosidad sobre el óxido de magnesio"
+ },
+ "especie.MgO.pista": {
+  "texto": "Soy el polvo blanco que queda tras la llama cegadora de una cinta metálica ardiendo.",
+  "descripcion": "Pista para adivinar el óxido de magnesio; no debe contener su nombre ni su fórmula"
+ },
+ "especie.CaO.porque": {
+  "texto": "Es iónico y reacciona con el agua formando hidróxido de calcio y desprendiendo muchísimo calor: es una reacción muy exotérmica.",
+  "descripcion": "Por qué el óxido de calcio tiene sus propiedades (nivel ESO)"
+ },
+ "especie.CaO.curiosidad": {
+  "texto": "Calentado a la llama brilla con una luz blanca intensa, que iluminaba los escenarios de los teatros del siglo XIX.",
+  "descripcion": "Curiosidad sobre el óxido de calcio"
+ },
+ "especie.CaO.pista": {
+  "texto": "Me obtienen cociendo piedra en hornos a unos 900 °C y, si me echas agua, chisporroteo y puedo hacerla hervir.",
+  "descripcion": "Pista para adivinar el óxido de calcio; no debe contener su nombre ni su fórmula"
+ },
+ "especie.FeS.porque": {
+  "texto": "Al calentar hierro y azufre, sus átomos se unen y forman una sustancia nueva: por eso el imán ya no puede separarlos como hacía con la mezcla.",
+  "descripcion": "Por qué el sulfuro de hierro(II) tiene sus propiedades (nivel ESO)"
+ },
+ "especie.FeS.curiosidad": {
+  "texto": "Con ácido clorhídrico desprende un gas que huele a huevos podridos; así se preparaba ese gas en los laboratorios escolares.",
+  "descripcion": "Curiosidad sobre el sulfuro de hierro(II)"
+ },
+ "especie.FeS.pista": {
+  "texto": "Me formo al calentar limaduras grises con polvo amarillo, y después un imán ya no puede separarlos.",
+  "descripcion": "Pista para adivinar el sulfuro de hierro(II); no debe contener su nombre ni su fórmula"
+ },
+ "especie.CuO.porque": {
+  "texto": "Es iónico, con el cobre como Cu²⁺; absorbe toda la luz visible y por eso es negro.",
+  "descripcion": "Por qué el óxido de cobre(II) tiene sus propiedades (nivel ESO)"
+ },
+ "especie.CuO.curiosidad": {
+  "texto": "Si se calienta con carbón o con hidrógeno, vuelve a dar metal brillante: es una forma sencilla de reducir un óxido.",
+  "descripcion": "Curiosidad sobre el óxido de cobre(II)"
+ },
+ "especie.CuO.pista": {
+  "texto": "Soy el polvo negro que cubre un hilo metálico rojizo cuando lo calientas en la llama.",
+  "descripcion": "Pista para adivinar el óxido de cobre(II); no debe contener su nombre ni su fórmula"
+ },
+ "especie.Cu2O.porque": {
+  "texto": "Aquí el cobre es Cu⁺ y no Cu²⁺: hay el doble de cobre por cada oxígeno, y esa otra proporción le da otro color, rojo.",
+  "descripcion": "Por qué el óxido de cobre(I) tiene sus propiedades (nivel ESO)"
+ },
+ "especie.Cu2O.curiosidad": {
+  "texto": "El precipitado rojo ladrillo que delata el azúcar en la prueba de Fehling es este óxido.",
+  "descripcion": "Curiosidad sobre el óxido de cobre(I)"
+ },
+ "especie.Cu2O.pista": {
+  "texto": "Soy rojo ladrillo y aparezco en el tubo de ensayo cuando detectas azúcar con el reactivo de Fehling.",
+  "descripcion": "Pista para adivinar el óxido de cobre(I); no debe contener su nombre ni su fórmula"
+ },
+ "especie.ZnO.porque": {
+  "texto": "Absorbe la luz ultravioleta y refleja la visible: por eso es blanco y protege la piel del sol.",
+  "descripcion": "Por qué el óxido de cinc tiene sus propiedades (nivel ESO)"
+ },
+ "especie.ZnO.curiosidad": {
+  "texto": "En caliente se vuelve amarillo y, al enfriarse, recupera el blanco.",
+  "descripcion": "Curiosidad sobre el óxido de cinc"
+ },
+ "especie.ZnO.pista": {
+  "texto": "Soy el polvo blanco de las cremas solares minerales y de las pomadas para el culito de los bebés.",
+  "descripcion": "Pista para adivinar el óxido de cinc; no debe contener su nombre ni su fórmula"
+ },
+ "especie.Fe2O3.porque": {
+  "texto": "Forma una capa porosa que se agrieta y se desprende, así que no protege el metal de debajo y la corrosión sigue avanzando.",
+  "descripcion": "Por qué el óxido de hierro(III) tiene sus propiedades (nivel ESO)"
+ },
+ "especie.Fe2O3.curiosidad": {
+  "texto": "Marte es rojo porque su superficie está cubierta de polvo con este óxido.",
+  "descripcion": "Curiosidad sobre el óxido de hierro(III)"
+ },
+ "especie.Fe2O3.pista": {
+  "texto": "Soy la capa rojiza que se come las barandillas viejas y el color del planeta rojo.",
+  "descripcion": "Pista para adivinar el óxido de hierro(III); no debe contener su nombre ni su fórmula"
+ },
+ "especie.Al2O3.porque": {
+  "texto": "Forma una capa finísima, compacta y bien pegada al metal que impide que el oxígeno siga atacando. Sus iones se atraen con tanta fuerza que es durísimo: un 9 en la escala de Mohs.",
+  "descripcion": "Por qué el óxido de aluminio tiene sus propiedades (nivel ESO)"
+ },
+ "especie.Al2O3.curiosidad": {
+  "texto": "Rubí y zafiro son el mismo mineral: cualquier corindón que no sea rojo se llama zafiro, aunque sea amarillo o rosa.",
+  "descripcion": "Curiosidad sobre el óxido de aluminio"
+ },
+ "especie.Al2O3.pista": {
+  "texto": "Soy la piel invisible que protege las latas de refresco y, con un poco de cromo, me convierto en rubí.",
+  "descripcion": "Pista para adivinar el óxido de aluminio; no debe contener su nombre ni su fórmula"
+ },
+ "especie.NaOH.porque": {
+  "texto": "Es iónico y su ion OH⁻ capta H⁺ con mucha fuerza: es una base fuerte que rompe las grasas y las convierte en jabón.",
+  "descripcion": "Por qué el hidróxido de sodio tiene sus propiedades (nivel ESO)"
+ },
+ "especie.NaOH.curiosidad": {
+  "texto": "Los pretzels alemanes se bañan en una disolución diluida de esta base antes de hornearlos: así consiguen su corteza oscura y brillante.",
+  "descripcion": "Curiosidad sobre el hidróxido de sodio"
+ },
+ "especie.NaOH.pista": {
+  "texto": "Soy una base fuerte que convierte el aceite en jabón y desatasca tuberías.",
+  "descripcion": "Pista para adivinar el hidróxido de sodio; no debe contener su nombre ni su fórmula"
+ },
+ "especie.KOH.porque": {
+  "texto": "Funciona como la sosa cáustica, pero con iones K⁺: es más soluble y sus jabones salen más blandos.",
+  "descripcion": "Por qué el hidróxido de potasio tiene sus propiedades (nivel ESO)"
+ },
+ "especie.KOH.curiosidad": {
+  "texto": "Es el líquido conductor del interior de las pilas alcalinas, y de él les viene el apellido.",
+  "descripcion": "Curiosidad sobre el hidróxido de potasio"
+ },
+ "especie.KOH.pista": {
+  "texto": "Soy la base fuerte que hay dentro de las pilas alcalinas y la que se usa para hacer jabones blandos.",
+  "descripcion": "Pista para adivinar el hidróxido de potasio; no debe contener su nombre ni su fórmula"
+ },
+ "especie.Ca(OH)2.porque": {
+  "texto": "Se disuelve poco y reacciona con el CO₂ del aire hasta convertirse en carbonato de calcio, es decir, en piedra: así se endurecen los morteros.",
+  "descripcion": "Por qué el hidróxido de calcio tiene sus propiedades (nivel ESO)"
+ },
+ "especie.Ca(OH)2.curiosidad": {
+  "texto": "Si soplas con una pajita en su disolución, se enturbia: es una prueba clásica para detectar el CO₂ del aliento.",
+  "descripcion": "Curiosidad sobre el hidróxido de calcio"
+ },
+ "especie.Ca(OH)2.pista": {
+  "texto": "Si soplas con una pajita en mi disolución, se enturbia, y los romanos me usaban en sus morteros.",
+  "descripcion": "Pista para adivinar el hidróxido de calcio; no debe contener su nombre ni su fórmula"
+ },
+ "especie.CaCO3.porque": {
+  "texto": "Los ácidos atacan el ion carbonato y lo convierten en CO₂: por eso burbujea con el vinagre y la lluvia ácida estropea las estatuas de mármol.",
+  "descripcion": "Por qué el carbonato de calcio tiene sus propiedades (nivel ESO)"
+ },
+ "especie.CaCO3.curiosidad": {
+  "texto": "Los acantilados blancos de Dover (Inglaterra) están hechos de caparazones de algas microscópicas formados por este compuesto.",
+  "descripcion": "Curiosidad sobre el carbonato de calcio"
+ },
+ "especie.CaCO3.pista": {
+  "texto": "Formo la tiza, el mármol y las conchas, y burbujeo si me echas vinagre.",
+  "descripcion": "Pista para adivinar el carbonato de calcio; no debe contener su nombre ni su fórmula"
+ }
+}

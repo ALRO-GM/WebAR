@@ -149,7 +149,7 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--fg-strong); font-weight: 800; }
 }
 
 .texto-suave { color: var(--muted); }
-.pequeno { font-size: 0.85rem; color: var(--muted); }
+.pequeno:not(.btn) { font-size: 0.85rem; color: var(--muted); }
 
 /* Entradas */
 .campo, input:not([type=checkbox]):not([type=radio]):not([type=range]), select {

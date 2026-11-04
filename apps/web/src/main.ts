@@ -1,9 +1,17 @@
+import './theme.css';
 import './style.css';
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { ARSession, ViewerProvider, WebXRWorldProvider, detectARSupport, type ARAnchor, type ARProvider } from '@webar/ar-core';
 import { AtomView, ELEMENTS, atomComposition, composition, formatConfiguration, getElement, getSpecies, type AtomModel, type ElementData } from '@webar/chem';
 import { CardsMode, type CardsKind } from './cards/mode';
+import { Mascot, mascotSVG } from './characters';
+import type { AppContext, Experience } from './experience';
+import { playGuess } from './learn/guess';
+import { PATH } from './learn/path';
+import { renderMateriaScreen } from './materia';
+import { PhotoMode } from './photo/photo';
+import { sfx } from './sfx';
 import { RIDDLES, RiddleRun, bestScores, resultHTML, stars, type Riddle, type RiddleResult } from './cards/riddle';
 import { t } from './i18n';
 import { elementName, familyName } from './i18n/content';
@@ -11,7 +19,7 @@ import { setupInstall } from './install';
 import { setupIntro } from './intro';
 import { markSelected, renderPeriodicTable, updateLocks } from './periodic-table';
 import { Hub } from './platform/hub';
-import { applySettings, setupSettingsForm, vibrate } from './settings';
+import { applySettings, onSettingsChange, settings, setupSettingsForm, vibrate } from './settings';
 import { createShadow } from './shadow';
 
 // La app une las dos bases: @webar/ar-core (dónde está cada cosa en el mundo)
@@ -37,7 +45,9 @@ ar.scene.add(sun);
 // Enlaces directos: ?el=Fe&modelo=orbitales&vista=3d · ?vista=mesa&cartas=H,H,O&juntas=1
 const params = new URLSearchParams(location.search);
 let model: AtomModel = (params.get('modelo') ?? localStorage.getItem('webar:modelo')) === 'orbitales' ? 'cloud' : 'bohr';
-let mode: 'explorar' | 'tarjetas' = 'explorar';
+let mode: 'explorar' | 'tarjetas' | 'otra' = 'explorar';
+/** La experiencia en marcha cuando no es explorar ni tarjetas (materia, foto…). */
+let custom: Experience | null = null;
 
 function selectModel(m: AtomModel): void {
   model = m;
@@ -53,12 +63,11 @@ function selectModel(m: AtomModel): void {
 // El progreso del alumno (colección, desbloqueos, retos, clase).
 const hub = new Hub();
 await hub.init();
-$('abrir-logros').addEventListener('click', () => hub.selectTab('logros'));
 
 // Ajustes, ayuda e introducción.
 setupSettingsForm($<HTMLFormElement>('ajustes-form'));
 const intro = setupIntro($<HTMLDialogElement>('intro'));
-$('abrir-ajustes').addEventListener('click', () => $<HTMLDialogElement>('ajustes').showModal());
+$('intro-gato').innerHTML = mascotSVG({ mood: 'feliz', decorative: true });
 $('abrir-ayuda').addEventListener('click', intro.open);
 $('ver-intro').addEventListener('click', () => {
   $<HTMLDialogElement>('ajustes').close();
@@ -88,6 +97,19 @@ $('cerrar-tabla').addEventListener('click', () => ($('tabla').hidden = true));
 const explore = (() => {
   let element: ElementData = initialElement();
   let placed: Array<{ anchor: ARAnchor; atom: AtomView }> = [];
+  // En RA se puede agrandar el átomo para verlo mejor (1× a 4×).
+  let scale = Number(localStorage.getItem('webar:escala-ra') ?? 1);
+  const scaleInput = $<HTMLInputElement>('escala-explorar-valor');
+  scaleInput.value = String(scale);
+  scaleInput.addEventListener('input', () => {
+    scale = Number(scaleInput.value);
+    localStorage.setItem('webar:escala-ra', String(scale));
+    scaleInput.setAttribute('aria-valuetext', `${scale}×`);
+    for (const { atom } of placed) {
+      atom.object.scale.setScalar(scale);
+      atom.object.position.y = atom.radius * 1.15 * scale + 0.01;
+    }
+  });
 
   function initialElement(): ElementData {
     const fromUrl = params.get('el');
@@ -105,8 +127,9 @@ const explore = (() => {
 
   function attach(anchor: ARAnchor, onSurface: boolean) {
     const atom = new AtomView(element, { model });
+    if (onSurface) atom.object.scale.setScalar(scale);
     if (onSurface) {
-      atom.object.position.y = atom.radius * 1.15 + 0.01;
+      atom.object.position.y = atom.radius * 1.15 * scale + 0.01;
       anchor.object.add(createShadow(atom.radius * 0.9));
     }
     anchor.object.add(atom.object);
@@ -178,6 +201,7 @@ const explore = (() => {
     onStart() {
       $('hud').hidden = false;
       $('borrar').hidden = ar.provider !== xr;
+      $('escala-explorar').hidden = ar.provider !== xr;
       $('pista').hidden = ar.provider !== xr;
       if (ar.provider === viewer) showInViewer();
     },
@@ -238,12 +262,12 @@ const riddles = (() => {
     list.innerHTML = RIDDLES.map((r, i) => {
       const score = best[r.id];
       const s = getSpecies(r.target)!;
-      return `<article class="acertijo-item">
+      return `<article class="acertijo-item card">
         <div><b>${i + 1}. ${t('acertijo.quien')}</b>
           <small>${t(`acertijo.dificultad.${r.difficulty}`)} · ${score ? `<span aria-label="${t('acertijo.estrellas', { n: stars(score) })}">${'★'.repeat(stars(score))}</span> ${t('acertijo.mejor', { n: score })}` : t('acertijo.nuevo')}</small>
           ${score ? `<small>${s.formula}</small>` : ''}</div>
-        <div class="fila"><button type="button" data-acertijo="${r.id}" data-tipo="mesa">${t('modo.mesa.titulo')}</button>
-          ${cameraOk ? `<button type="button" class="secundario" data-acertijo="${r.id}" data-tipo="camara">${t('modo.tarjetas.titulo')}</button>` : ''}</div>
+        <div class="fila izquierda"><button type="button" class="btn pequeno" data-acertijo="${r.id}" data-tipo="mesa">${t('modo.mesa.titulo')}</button>
+          ${cameraOk ? `<button type="button" class="btn claro pequeno" data-acertijo="${r.id}" data-tipo="camara">${t('modo.tarjetas.titulo')}</button>` : ''}</div>
       </article>`;
     }).join('');
     list.querySelectorAll<HTMLButtonElement>('[data-acertijo]').forEach((b) =>
@@ -308,23 +332,26 @@ let cameraOk = true;
 
 // --- Sesión ------------------------------------------------------------------------
 
-ar.on('select', () => (mode === 'explorar' ? void explore.onSelect() : undefined));
-ar.on('frame', ({ dt }) => (mode === 'explorar' ? explore.frame(dt) : cards.frame(dt)));
+ar.on('select', () => (custom ? custom.onSelect?.() : mode === 'explorar' ? void explore.onSelect() : undefined));
+ar.on('frame', ({ dt }) => (custom ? custom.frame(dt) : mode === 'explorar' ? explore.frame(dt) : cards.frame(dt)));
 ar.on('start', () => {
   document.body.classList.add('ar-activo');
-  $('inicio').hidden = true;
-  if (mode === 'explorar') explore.onStart();
+  $('app').hidden = true;
+  if (custom) custom.onStart(ar.provider);
+  else if (mode === 'explorar') explore.onStart();
   else {
     cards.onStart();
     riddles.onStart();
   }
 });
 ar.on('end', () => {
+  custom?.onEnd();
+  custom = null;
   riddles.onEnd();
   explore.onEnd();
   cards.onEnd();
   document.body.classList.remove('ar-activo');
-  $('inicio').hidden = false;
+  $('app').hidden = false;
   for (const id of ['tabla', 'recetas']) $(id).hidden = true;
   hub.renderAll();
 });
@@ -332,6 +359,7 @@ ar.on('end', () => {
 async function enter(next: typeof mode, provider: ARProvider): Promise<void> {
   $('aviso').textContent = '';
   mode = next;
+  if (next !== 'otra') custom = null;
   try {
     await ar.start(provider);
   } catch (error) {
@@ -344,6 +372,80 @@ function enterCards(kind: CardsKind, list?: string[], together = false): void {
   cards.prepare(kind, list, together);
   void enter('tarjetas', cards.provider);
 }
+
+let worldAR = false;
+const ctx: AppContext = {
+  ar,
+  viewer,
+  xr,
+  overlay: $('overlay'),
+  supportsWorldAR: () => worldAR,
+  async launch(experience, provider) {
+    if (ar.running) await ar.end();
+    custom = experience;
+    await enter('otra', provider);
+  },
+  exit: () => ar.end(),
+};
+
+// --- Camino: laboratorio y «Adivina» -------------------------------------------------
+
+function guessPool(): string[] {
+  return [...hub.progress.unlocked, ...hub.progress.species];
+}
+
+function startGuess(nodeId?: string): void {
+  playGuess($<HTMLDialogElement>('leccion'), guessPool(), (r) => {
+    if (r) void hub.add('adivina', { aciertos: r.right, total: r.total, xp: r.xp, ...(nodeId ? { nodo: nodeId } : {}) });
+  });
+}
+
+hub.actions = {
+  lab(node) {
+    // La mesa trae lo necesario y un par de tarjetas que despistan.
+    const species = getSpecies(node.species!)!;
+    const atoms = Object.entries(composition(species)).flatMap(([el, n]) => Array<string>(n).fill(el));
+    const decoys = [...hub.progress.unlocked].filter((s) => !atoms.includes(s)).slice(0, 2);
+    riddles.clear();
+    enterCards('mesa', [...atoms, ...decoys]);
+  },
+  guess: (node) => startGuess(node.id),
+};
+$('entrar-adivina').addEventListener('click', () => startGuess());
+
+// Foto con científicos: los que ya conoces en el camino (y el gato) con tus átomos y moléculas.
+const photo = new PhotoMode({
+  ctx,
+  characters: () => ['gato', ...new Set(PATH.filter((u) => u.index <= (hub.progress.current?.unit ?? PATH.length)).map((u) => u.guide))],
+  contents: () => [...hub.progress.unlocked, ...hub.progress.species],
+  onPhoto: () => void hub.add('foto', {}),
+});
+$('entrar-foto').addEventListener('click', () => {
+  if (!worldAR) return void ctx.launch(photo, photo.camera);
+  // Con WebXR: foto con la cámara o personajes en la habitación (RA del mundo).
+  $('detalle-contenido').innerHTML = `<h2 id="detalle-titulo">${t('foto.titulo')}</h2><div class="modos">
+    ${cameraOk ? `<button type="button" class="modo card pulsable" data-foto-modo="camara"><span class="modo-icono" aria-hidden="true">📸</span><span><b>${t('foto.modo_camara')}</b><span>${t('foto.modo_camara_texto')}</span></span></button>` : ''}
+    <button type="button" class="modo card pulsable" data-foto-modo="ra"><span class="modo-icono" aria-hidden="true">🏠</span><span><b>${t('foto.modo_ra')}</b><span>${t('foto.modo_ra_texto')}</span></span></button></div>`;
+  $('detalle-contenido').querySelectorAll<HTMLButtonElement>('[data-foto-modo]').forEach((b) =>
+    b.addEventListener('click', () => {
+      $<HTMLDialogElement>('detalle').close();
+      void ctx.launch(photo, b.dataset.fotoModo === 'ra' ? xr : photo.camera);
+    }),
+  );
+  $<HTMLDialogElement>('detalle').showModal();
+});
+
+// --- La mascota ------------------------------------------------------------------------
+
+const mascot = settings.gato ? new Mascot($('mascota'), { size: 76 }) : null;
+mascot?.greet();
+onSettingsChange.push(() => $('mascota').toggleAttribute('hidden', !settings.gato));
+hub.onCelebrate = (kind) => {
+  if (!mascot) return;
+  if (kind === 'fallo') mascot.react('triste');
+  else mascot.react(kind === 'molecula' ? 'sorpresa' : 'celebra');
+  if (kind === 'racha') sfx.miau();
+};
 
 $('entrar-tarjetas').addEventListener('click', () => (riddles.clear(), enterCards('camara')));
 $('entrar-mesa').addEventListener('click', () => (riddles.clear(), enterCards('mesa')));
@@ -376,6 +478,9 @@ const support = await detectARSupport();
 setupInstall($('instalar'), $('instalar-ios'), support.ios);
 const enterAR = $<HTMLButtonElement>('entrar-ra');
 enterAR.disabled = !support.webxrAR;
+worldAR = support.webxrAR;
+// Materia ofrece «Ver en RA» solo si hay WebXR: se pinta ya sabiéndolo.
+renderMateriaScreen($('p-materia'), ctx);
 $('entrar-ra-texto').textContent = support.webxrAR ? t('modo.ra.texto') : support.ios ? t('modo.ra.ios') : t('modo.ra.no');
 if (!support.camera) {
   $<HTMLButtonElement>('entrar-tarjetas').disabled = true;

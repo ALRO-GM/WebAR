@@ -30,7 +30,9 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,webmanifest}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,webmanifest,woff2}'],
+        // De la fuente basta el alfabeto latino (el resto se descarga si hiciera falta).
+        globIgnores: ['**/*cyrillic*', '**/*vietnamese*', '**/*greek*', '**/*-italic*'],
         // /health es del servidor y tiene que llegar siempre fresco.
         navigateFallbackDenylist: [/^\/health/, /^\/api\//, /^\/profesor/, /^\/cartas/],
       },

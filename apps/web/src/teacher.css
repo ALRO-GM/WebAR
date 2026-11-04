@@ -5,9 +5,19 @@ body.profe { background: var(--bg); overflow-y: auto; height: auto; min-height: 
 .profe-cabecera #profe-quien { display: flex; gap: 8px; align-items: center; color: var(--muted); }
 .profe h2 small { color: var(--muted); font-weight: 500; font-size: 1rem; }
 .profe h3, .profe h4 { margin: 0.4rem 0; }
-.profe a { color: var(--accent); }
+.profe a { color: var(--primary); }
+/* Piezas comunes con el estilo de la app (theme.css) */
+.profe button {
+  font: inherit; font-weight: 800; min-height: var(--tap); padding: 0.55rem 1.1rem; border: 0; border-radius: var(--radius); cursor: pointer;
+  background: var(--primary); color: #fff; box-shadow: 0 var(--press) 0 var(--primary-shadow); transition: transform 0.08s, box-shadow 0.08s;
+}
+.profe button:active { transform: translateY(var(--press)); box-shadow: none; }
+.profe button.secundario { background: var(--surface); color: var(--fg); border: 2px solid var(--line-strong); box-shadow: 0 var(--press) 0 var(--line-strong); }
+.profe button.peligro { background: var(--bad); box-shadow: 0 var(--press) 0 var(--bad-shadow); }
+.tarjeta-panel { display: grid; gap: 8px; padding: 16px; border-radius: var(--radius-lg); background: var(--surface); border: 2px solid var(--line); border-bottom-width: 4px; }
+.tarjeta-panel label { display: grid; gap: 4px; font-weight: 800; font-size: 0.92rem; }
 .profe-dos { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
-.tarjeta-panel select { font: inherit; padding: 0.6rem; border-radius: 10px; background: rgb(0 0 0 / 0.25); color: var(--fg); border: 1px solid rgb(255 255 255 / 0.2); }
+.tarjeta-panel select { font: inherit; padding: 0.6rem; border-radius: 10px; background: var(--bg-2); color: var(--fg); border: 2px solid var(--line); }
 .en-linea { grid-template-columns: 1fr 1fr auto; align-items: end; }
 .en-linea h3, .en-linea .error { grid-column: 1 / -1; }
 @media (max-width: 40rem) { .en-linea { grid-template-columns: 1fr; } }

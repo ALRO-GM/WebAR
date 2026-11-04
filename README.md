@@ -19,6 +19,20 @@ primera persona («soy el gas más abundante del aire…») y hay que formarla c
 las tarjetas; pedir pistas o equivocarse resta puntos y, al acertar, se
 explica cada pista (H₂, O₂, N₂ y H₂O de momento).
 
+**Aprender como en una app de idiomas** (gratis y sin anuncios): un camino de
+lecciones que empieza solo con el hidrógeno y presenta los 118 elementos uno a
+uno (cómo se descubrió, para qué se usa, por qué ese y no otro, qué lo hace
+único), guiado por 16 científicas y científicos de todo el mundo (Marie Curie,
+Mario Molina, Tu Youyou, Alice Ball, Jabir ibn Hayyan…) y por Schrödingato,
+un gato cuántico que se desvanece si no lo miras. Racha diaria con
+protectores, misiones del día, quarks (moneda del juego, nunca dinero), cofres,
+insignias y **ligas semanales** de clase y mundiales (anónimas). En el
+laboratorio también está **Adivina** (el objeto cotidiano de cada elemento en
+3D: el Sol para el helio, un doblón para el oro…) y la **foto con científicos**
+en RA. La sección **Materia** enseña las estructuras cristalinas (cómo crecen,
+capas ABAB/ABC, celda unidad) y los estados del agua: del cubo de hielo a la
+gota que ondula, la evaporación y el gas.
+
 Para clase: el progreso funciona **sin conexión** (moleculario, tabla periódica
 que se desbloquea, historias, retos, insignias) y, si el alumno se une a una
 clase con un código, se sincroniza con el **panel del profesorado**
@@ -46,6 +60,7 @@ Las reglas para agentes de IA están en [AGENTS.md](AGENTS.md).
 
 | Fecha | Qué cambió |
 | --- | --- |
+| 2026-11-04 | Renovación: estilo de juego para aprender, camino de lecciones desde el hidrógeno, personajes históricos y gato cuántico, fichas ampliadas de los 118 elementos, racha diaria, misiones, quarks, ligas semanales (clase y mundial), Adivina con objetos 3D, foto con científicos, sección Materia (cristales y estados del agua), mesa virtual más natural y tarjetas iguales en papel y en pantalla |
 | 2026-11-04 | Acertijos con tarjetas: pistas que restan puntos, fallos que también, y explicación de cada pista al acertar (H₂, O₂, N₂, H₂O) |
 | 2026-11-04 | UX y accesibilidad: navegación inferior, introducción animada, ajustes (idioma, tamaño de texto, alto contraste, menos movimiento, vibración), tocar para juntar en la mesa; todos los textos en una tabla traducible, con inglés |
 | 2026-11-04 | Plataforma educativa: progreso sin conexión (moleculario, tabla que se desbloquea, historias, retos, insignias, racha semanal), clases con código y QR, panel del profesorado con estadísticas y retos, servidor Node + SQLite y tabla de textos traducible |

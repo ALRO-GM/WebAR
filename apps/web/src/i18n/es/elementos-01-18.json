@@ -1,0 +1,866 @@
+{
+ "elemento.H.descubrimiento": {
+  "texto": "Robert Boyle ya lo había obtenido en 1671 echando ácido sobre limaduras de hierro, pero fue Henry Cavendish quien en 1766, en Londres, lo reconoció como una sustancia distinta y lo llamó «aire inflamable». En 1781 demostró que al arder forma agua. Por eso Lavoisier lo bautizó en 1783 con una palabra griega que significa «generador de agua». Cavendish era tan tímido que se comunicaba con sus criadas por notas.",
+  "descripcion": "Ficha del hidrógeno: cómo se descubrió"
+ },
+ "elemento.H.usos": {
+  "texto": "Se usa sobre todo para fabricar amoníaco, la base de los abonos que alimentan a media humanidad, y para refinar combustibles. Las pilas de combustible lo convierten en electricidad para autobuses y camiones, y los cohetes lo queman en forma líquida.",
+  "descripcion": "Ficha del hidrógeno: usos actuales"
+ },
+ "elemento.H.porque": {
+  "texto": "Es el combustible químico que más energía da por kilo: casi tres veces más que la gasolina. Además, al arder solo produce agua, sin CO2. Su pega es que ocupa mucho y hay que comprimirlo o enfriarlo hasta -253 °C.",
+  "descripcion": "Ficha del hidrógeno: por qué se usa este elemento y no otro"
+ },
+ "elemento.H.unico": {
+  "texto": "Es el único elemento cuyo átomo más común no tiene ni un neutrón: solo un protón y un electrón. También es el más ligero y el más abundante del universo.",
+  "descripcion": "Ficha del hidrógeno: cualidad única o récord"
+ },
+ "elemento.H.curiosidad": {
+  "texto": "Casi todo el hidrógeno del agua que bebes se formó en los primeros minutos después del Big Bang, hace unos 13 800 millones de años.",
+  "descripcion": "Ficha del hidrógeno: curiosidad sorprendente"
+ },
+ "elemento.H.pista": {
+  "texto": "Soy el elemento más ligero de todos y las estrellas me fusionan para brillar.",
+  "descripcion": "Juego de adivinar: pista del hidrógeno sin decir su nombre ni su símbolo"
+ },
+ "elemento.H.pregunta": {
+  "texto": "¿Cómo llamó Cavendish al gas que había descubierto?",
+  "descripcion": "Test sobre la ficha del hidrógeno: enunciado de la pregunta"
+ },
+ "elemento.H.pregunta.ok": {
+  "texto": "Aire inflamable",
+  "descripcion": "Test sobre la ficha del hidrógeno: respuesta correcta"
+ },
+ "elemento.H.pregunta.mal1": {
+  "texto": "Aire de fuego",
+  "descripcion": "Test sobre la ficha del hidrógeno: respuesta incorrecta 1"
+ },
+ "elemento.H.pregunta.mal2": {
+  "texto": "Aire viciado",
+  "descripcion": "Test sobre la ficha del hidrógeno: respuesta incorrecta 2"
+ },
+ "elemento.H.pregunta.mal3": {
+  "texto": "Aire luminoso",
+  "descripcion": "Test sobre la ficha del hidrógeno: respuesta incorrecta 3"
+ },
+ "elemento.H.pregunta.explicacion": {
+  "texto": "Cavendish lo llamó «aire inflamable» porque ardía con facilidad al acercarle una llama.",
+  "descripcion": "Test sobre la ficha del hidrógeno: explicación de la respuesta correcta"
+ },
+ "elemento.He.descubrimiento": {
+  "texto": "Se descubrió en el Sol antes que en la Tierra. Durante el eclipse total de 1868, el astrónomo Jules Janssen observó desde Guntur (India) una línea amarilla desconocida en la luz solar, y Norman Lockyer propuso que era un elemento nuevo, al que llamó como Helios, el dios griego del Sol. En 1895 William Ramsay lo encontró en la Tierra, en los gases que soltaba un mineral de uranio al tratarlo con ácido; en Suecia, Per Teodor Cleve y Nils Langlet lo lograron casi a la vez.",
+  "descripcion": "Ficha del helio: cómo se descubrió"
+ },
+ "elemento.He.usos": {
+  "texto": "En estado líquido enfría los imanes superconductores de las resonancias magnéticas de los hospitales. También llena globos y dirigibles, se mezcla con oxígeno en el aire de los buceadores profesionales que bajan a gran profundidad y sirve para detectar fugas diminutas.",
+  "descripcion": "Ficha del helio: usos actuales"
+ },
+ "elemento.He.porque": {
+  "texto": "Es el líquido más frío que existe: hierve a -269 °C, y ningún otro sirve para enfriar los superconductores. En los globos se usa en vez de hidrógeno porque, aunque flota un poco menos, no arde.",
+  "descripcion": "Ficha del helio: por qué se usa este elemento y no otro"
+ },
+ "elemento.He.unico": {
+  "texto": "Es el único elemento que no se vuelve sólido a presión normal, ni siquiera en el cero absoluto: hay que apretarlo unas 25 veces la presión atmosférica.",
+  "descripcion": "Ficha del helio: cualidad única o récord"
+ },
+ "elemento.He.curiosidad": {
+  "texto": "Enfriado por debajo de -271 °C se vuelve superfluido y es capaz de trepar por las paredes del recipiente para escaparse.",
+  "descripcion": "Ficha del helio: curiosidad sorprendente"
+ },
+ "elemento.He.pista": {
+  "texto": "Me vieron primero en la luz del Sol y luego en la Tierra; hago flotar los globos de las fiestas.",
+  "descripcion": "Juego de adivinar: pista del helio sin decir su nombre ni su símbolo"
+ },
+ "elemento.He.pregunta": {
+  "texto": "¿Dónde se detectó este elemento por primera vez?",
+  "descripcion": "Test sobre la ficha del helio: enunciado de la pregunta"
+ },
+ "elemento.He.pregunta.ok": {
+  "texto": "En la luz del Sol",
+  "descripcion": "Test sobre la ficha del helio: respuesta correcta"
+ },
+ "elemento.He.pregunta.mal1": {
+  "texto": "En el agua del mar",
+  "descripcion": "Test sobre la ficha del helio: respuesta incorrecta 1"
+ },
+ "elemento.He.pregunta.mal2": {
+  "texto": "En un volcán de Islandia",
+  "descripcion": "Test sobre la ficha del helio: respuesta incorrecta 2"
+ },
+ "elemento.He.pregunta.mal3": {
+  "texto": "En la orina humana",
+  "descripcion": "Test sobre la ficha del helio: respuesta incorrecta 3"
+ },
+ "elemento.He.pregunta.explicacion": {
+  "texto": "En 1868 se vio en el espectro del Sol una línea amarilla que no pertenecía a ningún elemento conocido.",
+  "descripcion": "Test sobre la ficha del helio: explicación de la respuesta correcta"
+ },
+ "elemento.Li.descubrimiento": {
+  "texto": "Johan August Arfwedson lo descubrió en 1817 en el laboratorio de Berzelius en Estocolmo, analizando la petalita. Ese mineral lo había descrito años antes el naturalista brasileño José Bonifácio de Andrada e Silva, en la isla sueca de Utö. Lo llamaron como la palabra griega para «piedra», porque apareció en un mineral y no en plantas. El metal puro lo obtuvo William Brande en 1821 haciendo pasar electricidad por un compuesto suyo.",
+  "descripcion": "Ficha del litio: cómo se descubrió"
+ },
+ "elemento.Li.usos": {
+  "texto": "Es el corazón de las baterías de móviles, portátiles y coches eléctricos. Sus sales son un medicamento para el trastorno bipolar, y también se usa en vidrios y cerámicas que aguantan el calor, en grasas lubricantes y en aleaciones para aviones.",
+  "descripcion": "Ficha del litio: usos actuales"
+ },
+ "elemento.Li.porque": {
+  "texto": "Para una batería interesa un metal muy ligero que suelte su electrón con facilidad, y el litio es el campeón en las dos cosas. Por eso una batería de litio guarda varias veces más energía por kilo que una de plomo como la de los coches de gasolina.",
+  "descripcion": "Ficha del litio: por qué se usa este elemento y no otro"
+ },
+ "elemento.Li.unico": {
+  "texto": "Es el metal más ligero: su densidad es de 0,53 g/cm³, casi la mitad que la del agua, así que flota en ella (aunque reacciona burbujeando).",
+  "descripcion": "Ficha del litio: cualidad única o récord"
+ },
+ "elemento.Li.curiosidad": {
+  "texto": "Hasta hacia 1950 la receta de la gaseosa 7 Up llevaba citrato de litio, una sal de este metal, y se anunciaba como un tónico para el ánimo.",
+  "descripcion": "Ficha del litio: curiosidad sorprendente"
+ },
+ "elemento.Li.pista": {
+  "texto": "Soy el metal más ligero de todos y viajo en la batería de tu móvil.",
+  "descripcion": "Juego de adivinar: pista del litio sin decir su nombre ni su símbolo"
+ },
+ "elemento.Li.pregunta": {
+  "texto": "¿Por qué se le dio un nombre que significa «piedra»?",
+  "descripcion": "Test sobre la ficha del litio: enunciado de la pregunta"
+ },
+ "elemento.Li.pregunta.ok": {
+  "texto": "Porque se descubrió en un mineral",
+  "descripcion": "Test sobre la ficha del litio: respuesta correcta"
+ },
+ "elemento.Li.pregunta.mal1": {
+  "texto": "Porque es duro como una roca",
+  "descripcion": "Test sobre la ficha del litio: respuesta incorrecta 1"
+ },
+ "elemento.Li.pregunta.mal2": {
+  "texto": "Porque se extrae de las montañas",
+  "descripcion": "Test sobre la ficha del litio: respuesta incorrecta 2"
+ },
+ "elemento.Li.pregunta.mal3": {
+  "texto": "Porque es de color gris piedra",
+  "descripcion": "Test sobre la ficha del litio: respuesta incorrecta 3"
+ },
+ "elemento.Li.pregunta.explicacion": {
+  "texto": "Arfwedson lo encontró en la petalita, un mineral, cuando los otros metales alcalinos conocidos venían de cenizas de plantas.",
+  "descripcion": "Test sobre la ficha del litio: explicación de la respuesta correcta"
+ },
+ "elemento.Be.descubrimiento": {
+  "texto": "El mineralogista René Just Haüy notó que el berilo y la esmeralda tenían cristales idénticos y pidió a Louis-Nicolas Vauquelin que los analizara. En 1798, en París, Vauquelin encontró en ellos una «tierra» nueva. Al principio se llamó glucinio, porque sus sales tienen sabor dulce (y son tóxicas, así que nadie debería probarlas). Friedrich Wöhler y Antoine Bussy aislaron el metal por separado en 1828, calentando su cloruro con potasio.",
+  "descripcion": "Ficha del berilio: cómo se descubrió"
+ },
+ "elemento.Be.usos": {
+  "texto": "Los 18 espejos del telescopio espacial James Webb son de berilio cubierto de oro. Se usa en las ventanas de los aparatos de rayos X, en satélites y en aleaciones con cobre para herramientas que no sueltan chispas en minas y refinerías.",
+  "descripcion": "Ficha del berilio: usos actuales"
+ },
+ "elemento.Be.porque": {
+  "texto": "Es casi tan ligero como el magnesio pero más rígido que el acero, y apenas se deforma en el frío extremo del espacio: por eso se eligió para los espejos del Webb y no el vidrio o el aluminio. Además, sus átomos son tan pequeños que los rayos X lo atraviesan casi sin frenarse.",
+  "descripcion": "Ficha del berilio: por qué se usa este elemento y no otro"
+ },
+ "elemento.Be.unico": {
+  "texto": "Es uno de los pocos metales que combina tan poca masa con tanta rigidez: es unas seis veces más rígido que el aluminio para el mismo peso.",
+  "descripcion": "Ficha del berilio: cualidad única o récord"
+ },
+ "elemento.Be.curiosidad": {
+  "texto": "La esmeralda y la aguamarina son el mismo mineral, berilo; solo cambian las pequeñas impurezas que les dan el color.",
+  "descripcion": "Ficha del berilio: curiosidad sorprendente"
+ },
+ "elemento.Be.pista": {
+  "texto": "Estoy dentro de las esmeraldas y formo los espejos dorados del telescopio James Webb.",
+  "descripcion": "Juego de adivinar: pista del berilio sin decir su nombre ni su símbolo"
+ },
+ "elemento.Be.pregunta": {
+  "texto": "¿Qué nombre tuvo al principio por el sabor de sus sales?",
+  "descripcion": "Test sobre la ficha del berilio: enunciado de la pregunta"
+ },
+ "elemento.Be.pregunta.ok": {
+  "texto": "Glucinio, por su sabor dulce",
+  "descripcion": "Test sobre la ficha del berilio: respuesta correcta"
+ },
+ "elemento.Be.pregunta.mal1": {
+  "texto": "Salinio, por su sabor salado",
+  "descripcion": "Test sobre la ficha del berilio: respuesta incorrecta 1"
+ },
+ "elemento.Be.pregunta.mal2": {
+  "texto": "Acidio, por su sabor ácido",
+  "descripcion": "Test sobre la ficha del berilio: respuesta incorrecta 2"
+ },
+ "elemento.Be.pregunta.mal3": {
+  "texto": "Amargio, por su sabor amargo",
+  "descripcion": "Test sobre la ficha del berilio: respuesta incorrecta 3"
+ },
+ "elemento.Be.pregunta.explicacion": {
+  "texto": "Sus sales saben dulces, así que se llamó glucinio, aunque son tóxicas y no deben probarse.",
+  "descripcion": "Test sobre la ficha del berilio: explicación de la respuesta correcta"
+ },
+ "elemento.B.descubrimiento": {
+  "texto": "Su compuesto más famoso, el bórax, llegaba a Europa desde los lagos salados del Tíbet por la Ruta de la Seda, y los orfebres árabes y persas lo usaban para soldar oro. El elemento se aisló en 1808 casi a la vez en París, por Joseph Louis Gay-Lussac y Louis Jacques Thénard, y en Londres, por Humphry Davy, calentando ácido bórico con potasio. Lo que obtuvieron era un polvo impuro: el boro casi puro no se consiguió hasta 1909.",
+  "descripcion": "Ficha del boro: cómo se descubrió"
+ },
+ "elemento.B.usos": {
+  "texto": "Hace que el vidrio de laboratorio y de las fuentes de horno aguante el calor (vidrio borosilicato). También está en la fibra de vidrio, en los imanes de neodimio de auriculares y motores eléctricos, en detergentes y en las barras que controlan los reactores nucleares.",
+  "descripcion": "Ficha del boro: usos actuales"
+ },
+ "elemento.B.porque": {
+  "texto": "El vidrio con boro se dilata unas tres veces menos al calentarse que el vidrio normal, así que no se raja con los cambios bruscos de temperatura. En los reactores se usa boro porque uno de sus isótopos atrapa neutrones mucho mejor que casi cualquier otro material.",
+  "descripcion": "Ficha del boro: por qué se usa este elemento y no otro"
+ },
+ "elemento.B.unico": {
+  "texto": "Es el único elemento de su grupo de la tabla periódica que no es un metal: sus vecinos de columna (aluminio, galio, indio…) sí lo son.",
+  "descripcion": "Ficha del boro: cualidad única o récord"
+ },
+ "elemento.B.curiosidad": {
+  "texto": "El slime casero se hace elástico gracias a los boratos, que unen entre sí las largas cadenas de la cola blanca.",
+  "descripcion": "Ficha del boro: curiosidad sorprendente"
+ },
+ "elemento.B.pista": {
+  "texto": "Hago que el vidrio de laboratorio aguante el fuego y que el slime casero se estire.",
+  "descripcion": "Juego de adivinar: pista del boro sin decir su nombre ni su símbolo"
+ },
+ "elemento.B.pregunta": {
+  "texto": "¿Para qué sirve añadirlo al vidrio de laboratorio?",
+  "descripcion": "Test sobre la ficha del boro: enunciado de la pregunta"
+ },
+ "elemento.B.pregunta.ok": {
+  "texto": "Para que aguante cambios bruscos de temperatura",
+  "descripcion": "Test sobre la ficha del boro: respuesta correcta"
+ },
+ "elemento.B.pregunta.mal1": {
+  "texto": "Para que tenga un color azulado",
+  "descripcion": "Test sobre la ficha del boro: respuesta incorrecta 1"
+ },
+ "elemento.B.pregunta.mal2": {
+  "texto": "Para que sea más ligero",
+  "descripcion": "Test sobre la ficha del boro: respuesta incorrecta 2"
+ },
+ "elemento.B.pregunta.mal3": {
+  "texto": "Para que conduzca la electricidad",
+  "descripcion": "Test sobre la ficha del boro: respuesta incorrecta 3"
+ },
+ "elemento.B.pregunta.explicacion": {
+  "texto": "El vidrio borosilicato apenas se dilata con el calor, así que no se rompe al pasar del frío al calor.",
+  "descripcion": "Test sobre la ficha del boro: explicación de la respuesta correcta"
+ },
+ "elemento.C.descubrimiento": {
+  "texto": "Se conoce desde la Prehistoria en forma de carbón y hollín, y los diamantes se extraían en la India hace más de 2000 años. En 1772 Antoine Lavoisier quemó un diamante concentrando la luz del Sol con una lente gigante y vio que solo producía dióxido de carbono, como el carbón. En 1789 lo incluyó en su lista de elementos, y en 1797 Smithson Tennant confirmó que el diamante es carbono puro.",
+  "descripcion": "Ficha del carbono: cómo se descubrió"
+ },
+ "elemento.C.usos": {
+  "texto": "Unido a otros átomos forma la gasolina, el plástico, el azúcar y tu ADN. Una pizca de carbono convierte el hierro en acero. Como grafito, está en los lápices y en las baterías de los móviles, y la fibra de carbono forma bicis, raquetas y aviones ligeros.",
+  "descripcion": "Ficha del carbono: usos actuales"
+ },
+ "elemento.C.porque": {
+  "texto": "La fibra de carbono se usa en vez del aluminio porque es más rígida y resistente pesando menos. Y la mina del lápiz es grafito porque sus capas de átomos se deslizan y se quedan en el papel; nunca ha sido de plomo.",
+  "descripcion": "Ficha del carbono: por qué se usa este elemento y no otro"
+ },
+ "elemento.C.unico": {
+  "texto": "Ningún otro elemento forma cadenas y anillos tan largos y estables consigo mismo. Gracias a eso existen millones de compuestos de carbono, la base de toda la vida conocida.",
+  "descripcion": "Ficha del carbono: cualidad única o récord"
+ },
+ "elemento.C.curiosidad": {
+  "texto": "El diamante de un anillo y la mina de tu lápiz son el mismo elemento; solo cambia cómo se ordenan sus átomos.",
+  "descripcion": "Ficha del carbono: curiosidad sorprendente"
+ },
+ "elemento.C.pista": {
+  "texto": "Soy la mina de tu lápiz y también la piedra natural más dura del mundo.",
+  "descripcion": "Juego de adivinar: pista del carbono sin decir su nombre ni su símbolo"
+ },
+ "elemento.C.pregunta": {
+  "texto": "¿Qué tienen en común un diamante y la mina de un lápiz?",
+  "descripcion": "Test sobre la ficha del carbono: enunciado de la pregunta"
+ },
+ "elemento.C.pregunta.ok": {
+  "texto": "Los dos son el mismo elemento",
+  "descripcion": "Test sobre la ficha del carbono: respuesta correcta"
+ },
+ "elemento.C.pregunta.mal1": {
+  "texto": "Los dos contienen plomo",
+  "descripcion": "Test sobre la ficha del carbono: respuesta incorrecta 1"
+ },
+ "elemento.C.pregunta.mal2": {
+  "texto": "Los dos se forman en volcanes",
+  "descripcion": "Test sobre la ficha del carbono: respuesta incorrecta 2"
+ },
+ "elemento.C.pregunta.mal3": {
+  "texto": "Los dos son de silicio",
+  "descripcion": "Test sobre la ficha del carbono: respuesta incorrecta 3"
+ },
+ "elemento.C.pregunta.explicacion": {
+  "texto": "Diamante y grafito son carbono puro: solo cambia la forma en que se colocan sus átomos.",
+  "descripcion": "Test sobre la ficha del carbono: explicación de la respuesta correcta"
+ },
+ "elemento.N.descubrimiento": {
+  "texto": "Daniel Rutherford lo describió en 1772 en su tesis doctoral en Edimburgo. Quemó materiales en un recipiente cerrado y retiró el dióxido de carbono con un álcali: el gas que quedaba apagaba las velas y asfixiaba a los ratones, y lo llamó «aire nocivo». Scheele, Cavendish y Priestley lo estudiaron por las mismas fechas. Lavoisier lo llamó «ázoe» («sin vida»), y en 1790 Jean-Antoine Chaptal le dio el nombre actual, porque forma parte del salitre.",
+  "descripcion": "Ficha del nitrógeno: cómo se descubrió"
+ },
+ "elemento.N.usos": {
+  "texto": "Los abonos nitrogenados permiten alimentar a miles de millones de personas. El nitrógeno líquido, a -196 °C, congela muestras médicas y quita verrugas. Como gas protege los alimentos envasados y se usa en algunos explosivos y airbags.",
+  "descripcion": "Ficha del nitrógeno: usos actuales"
+ },
+ "elemento.N.porque": {
+  "texto": "En las bolsas de patatas fritas se usa nitrógeno porque es muy poco reactivo y barato: desplaza al oxígeno, que pondría rancio el aceite. El argón también serviría, pero cuesta más, y el nitrógeno se saca directamente del aire.",
+  "descripcion": "Ficha del nitrógeno: por qué se usa este elemento y no otro"
+ },
+ "elemento.N.unico": {
+  "texto": "Es el gas más abundante de la atmósfera terrestre: forma el 78 % del aire. Sus dos átomos se unen por un triple enlace, uno de los más fuertes de la química, por eso es tan poco reactivo.",
+  "descripcion": "Ficha del nitrógeno: cualidad única o récord"
+ },
+ "elemento.N.curiosidad": {
+  "texto": "En cada respiración inhalas casi cuatro veces más nitrógeno que oxígeno, y lo devuelves al aire sin haberlo usado.",
+  "descripcion": "Ficha del nitrógeno: curiosidad sorprendente"
+ },
+ "elemento.N.pista": {
+  "texto": "Formo casi cuatro quintas partes del aire que respiras, pero tus pulmones no me usan.",
+  "descripcion": "Juego de adivinar: pista del nitrógeno sin decir su nombre ni su símbolo"
+ },
+ "elemento.N.pregunta": {
+  "texto": "¿Por qué se llenan con este gas las bolsas de patatas fritas?",
+  "descripcion": "Test sobre la ficha del nitrógeno: enunciado de la pregunta"
+ },
+ "elemento.N.pregunta.ok": {
+  "texto": "Para que no se pongan rancias",
+  "descripcion": "Test sobre la ficha del nitrógeno: respuesta correcta"
+ },
+ "elemento.N.pregunta.mal1": {
+  "texto": "Para que pesen menos",
+  "descripcion": "Test sobre la ficha del nitrógeno: respuesta incorrecta 1"
+ },
+ "elemento.N.pregunta.mal2": {
+  "texto": "Para darles sabor salado",
+  "descripcion": "Test sobre la ficha del nitrógeno: respuesta incorrecta 2"
+ },
+ "elemento.N.pregunta.mal3": {
+  "texto": "Para que no se derritan",
+  "descripcion": "Test sobre la ficha del nitrógeno: respuesta incorrecta 3"
+ },
+ "elemento.N.pregunta.explicacion": {
+  "texto": "El nitrógeno desplaza al oxígeno, que es el que estropearía el aceite de las patatas.",
+  "descripcion": "Test sobre la ficha del nitrógeno: explicación de la respuesta correcta"
+ },
+ "elemento.O.descubrimiento": {
+  "texto": "Carl Wilhelm Scheele lo obtuvo en Suecia hacia 1771 calentando varias sustancias y lo llamó «aire de fuego», pero publicó tarde. En 1774 Joseph Priestley, en Inglaterra, concentró la luz del Sol con una lente sobre óxido de mercurio: el gas hacía arder una vela con fuerza y mantenía vivo a un ratón más tiempo. Antoine Lavoisier entendió su papel en la combustión y lo bautizó como «generador de ácidos»; en su laboratorio, Marie-Anne Paulze Lavoisier traducía artículos científicos, anotaba los experimentos y dibujaba los aparatos.",
+  "descripcion": "Ficha del oxígeno: cómo se descubrió"
+ },
+ "elemento.O.usos": {
+  "texto": "Los hospitales lo dan a pacientes con problemas para respirar. La industria del acero sopla oxígeno puro en sus hornos, los sopletes lo usan para cortar metal y los cohetes lo llevan líquido para quemar su combustible. En forma de ozono, también sirve para potabilizar agua.",
+  "descripcion": "Ficha del oxígeno: usos actuales"
+ },
+ "elemento.O.porque": {
+  "texto": "En los hornos de acero se usa oxígeno puro y no aire porque el aire es casi un 80 % nitrógeno, que no reacciona y solo roba calor. Con oxígeno puro, el carbono sobrante arde más rápido y a más temperatura.",
+  "descripcion": "Ficha del oxígeno: por qué se usa este elemento y no otro"
+ },
+ "elemento.O.unico": {
+  "texto": "Es el elemento más abundante de la corteza terrestre: casi la mitad de su masa. Está en las rocas, en el agua y en el aire.",
+  "descripcion": "Ficha del oxígeno: cualidad única o récord"
+ },
+ "elemento.O.curiosidad": {
+  "texto": "El oxígeno líquido es de color azul pálido y se queda pegado a un imán potente.",
+  "descripcion": "Ficha del oxígeno: curiosidad sorprendente"
+ },
+ "elemento.O.pista": {
+  "texto": "Formo el 21 % del aire, estoy en el agua y sin mí las hogueras no arden.",
+  "descripcion": "Juego de adivinar: pista del oxígeno sin decir su nombre ni su símbolo"
+ },
+ "elemento.O.pregunta": {
+  "texto": "¿Qué significa el nombre que le dio Lavoisier?",
+  "descripcion": "Test sobre la ficha del oxígeno: enunciado de la pregunta"
+ },
+ "elemento.O.pregunta.ok": {
+  "texto": "Generador de ácidos",
+  "descripcion": "Test sobre la ficha del oxígeno: respuesta correcta"
+ },
+ "elemento.O.pregunta.mal1": {
+  "texto": "Generador de agua",
+  "descripcion": "Test sobre la ficha del oxígeno: respuesta incorrecta 1"
+ },
+ "elemento.O.pregunta.mal2": {
+  "texto": "Aire de la vida",
+  "descripcion": "Test sobre la ficha del oxígeno: respuesta incorrecta 2"
+ },
+ "elemento.O.pregunta.mal3": {
+  "texto": "Gas del fuego",
+  "descripcion": "Test sobre la ficha del oxígeno: respuesta incorrecta 3"
+ },
+ "elemento.O.pregunta.explicacion": {
+  "texto": "Lavoisier creía, por error, que todos los ácidos contenían este elemento, y el nombre se quedó.",
+  "descripcion": "Test sobre la ficha del oxígeno: explicación de la respuesta correcta"
+ },
+ "elemento.F.descubrimiento": {
+  "texto": "Su mineral, la fluorita, se usaba desde el siglo XVI para que los metales fundieran mejor, y de ahí viene su nombre («fluir»). Aislar el elemento fue tan peligroso que varios químicos se intoxicaron o murieron intentándolo. Henri Moissan lo logró en París en 1886 haciendo pasar electricidad por fluoruro de hidrógeno muy enfriado, en un aparato de platino que el gas no podía atacar. Ganó el Premio Nobel de Química en 1906.",
+  "descripcion": "Ficha del flúor: cómo se descubrió"
+ },
+ "elemento.F.usos": {
+  "texto": "Los fluoruros de la pasta de dientes protegen contra las caries. Forma el teflón de las sartenes, los gases de neveras y aires acondicionados, y está en uno de cada cinco medicamentos aproximadamente. También se usa para enriquecer el uranio de las centrales nucleares.",
+  "descripcion": "Ficha del flúor: usos actuales"
+ },
+ "elemento.F.porque": {
+  "texto": "El fluoruro hace el esmalte más resistente a los ácidos que producen las bacterias de la boca, algo que no consiguen ni el calcio ni el fósforo solos. En el teflón, el enlace entre carbono y flúor es tan fuerte que casi nada se le pega ni lo ataca.",
+  "descripcion": "Ficha del flúor: por qué se usa este elemento y no otro"
+ },
+ "elemento.F.unico": {
+  "texto": "Es el elemento más electronegativo de la tabla periódica: el que con más fuerza atrae los electrones. Por eso reacciona con casi todo, incluso con el gas noble xenón.",
+  "descripcion": "Ficha del flúor: cualidad única o récord"
+ },
+ "elemento.F.curiosidad": {
+  "texto": "El teflón se descubrió por accidente en 1938: Roy Plunkett abrió una bombona de gas que parecía vacía y encontró dentro un polvo blanco y resbaladizo.",
+  "descripcion": "Ficha del flúor: curiosidad sorprendente"
+ },
+ "elemento.F.pista": {
+  "texto": "Soy el elemento más electronegativo; protejo tus dientes y hago que no se pegue la tortilla.",
+  "descripcion": "Juego de adivinar: pista del flúor sin decir su nombre ni su símbolo"
+ },
+ "elemento.F.pregunta": {
+  "texto": "¿Quién consiguió por fin aislarlo en 1886?",
+  "descripcion": "Test sobre la ficha del flúor: enunciado de la pregunta"
+ },
+ "elemento.F.pregunta.ok": {
+  "texto": "Henri Moissan",
+  "descripcion": "Test sobre la ficha del flúor: respuesta correcta"
+ },
+ "elemento.F.pregunta.mal1": {
+  "texto": "Humphry Davy",
+  "descripcion": "Test sobre la ficha del flúor: respuesta incorrecta 1"
+ },
+ "elemento.F.pregunta.mal2": {
+  "texto": "Antoine Lavoisier",
+  "descripcion": "Test sobre la ficha del flúor: respuesta incorrecta 2"
+ },
+ "elemento.F.pregunta.mal3": {
+  "texto": "Marie Curie",
+  "descripcion": "Test sobre la ficha del flúor: respuesta incorrecta 3"
+ },
+ "elemento.F.pregunta.explicacion": {
+  "texto": "Henri Moissan lo aisló en París por electrólisis y recibió el Nobel de Química en 1906.",
+  "descripcion": "Test sobre la ficha del flúor: explicación de la respuesta correcta"
+ },
+ "elemento.Ne.descubrimiento": {
+  "texto": "William Ramsay y Morris Travers lo descubrieron en Londres en 1898. Licuaron aire y lo dejaron evaporarse poco a poco para separar sus gases. Al meter una de las fracciones en un tubo con electricidad, este se encendió con un rojo intenso nunca visto. El hijo de Ramsay, de 13 años, propuso llamarlo «novum» («nuevo» en latín); su padre eligió la palabra griega equivalente.",
+  "descripcion": "Ficha del neón: cómo se descubrió"
+ },
+ "elemento.Ne.usos": {
+  "texto": "Da el brillo rojo anaranjado de los rótulos luminosos clásicos (los de otros colores suelen llevar otros gases). Se usa en láseres, en pilotos indicadores y en los láseres que fabrican chips. Líquido, sirve para enfriar aparatos científicos.",
+  "descripcion": "Ficha del neón: usos actuales"
+ },
+ "elemento.Ne.porque": {
+  "texto": "Con un poco de electricidad emite un rojo anaranjado muy intenso, sin necesidad de pintura ni filtros. Para otros colores se usan argón, mercurio y polvos fluorescentes.",
+  "descripcion": "Ficha del neón: por qué se usa este elemento y no otro"
+ },
+ "elemento.Ne.unico": {
+  "texto": "Se considera el elemento menos reactivo de todos: no se conoce ningún compuesto químico estable que lo contenga.",
+  "descripcion": "Ficha del neón: cualidad única o récord"
+ },
+ "elemento.Ne.curiosidad": {
+  "texto": "Los famosos «letreros de neón» azules, verdes o blancos casi nunca llevan este gas: solo el rojo anaranjado es suyo.",
+  "descripcion": "Ficha del neón: curiosidad sorprendente"
+ },
+ "elemento.Ne.pista": {
+  "texto": "Brillo rojo anaranjado en los letreros luminosos y me separaron del aire líquido en 1898.",
+  "descripcion": "Juego de adivinar: pista del neón sin decir su nombre ni su símbolo"
+ },
+ "elemento.Ne.pregunta": {
+  "texto": "¿Quién propuso el nombre de este elemento?",
+  "descripcion": "Test sobre la ficha del neón: enunciado de la pregunta"
+ },
+ "elemento.Ne.pregunta.ok": {
+  "texto": "El hijo de 13 años de Ramsay",
+  "descripcion": "Test sobre la ficha del neón: respuesta correcta"
+ },
+ "elemento.Ne.pregunta.mal1": {
+  "texto": "La reina Victoria de Inglaterra",
+  "descripcion": "Test sobre la ficha del neón: respuesta incorrecta 1"
+ },
+ "elemento.Ne.pregunta.mal2": {
+  "texto": "El químico Dmitri Mendeléiev",
+  "descripcion": "Test sobre la ficha del neón: respuesta incorrecta 2"
+ },
+ "elemento.Ne.pregunta.mal3": {
+  "texto": "Un periodista de Londres",
+  "descripcion": "Test sobre la ficha del neón: respuesta incorrecta 3"
+ },
+ "elemento.Ne.pregunta.explicacion": {
+  "texto": "El hijo de Ramsay sugirió «nuevo» en latín, y su padre usó la versión griega de esa palabra.",
+  "descripcion": "Test sobre la ficha del neón: explicación de la respuesta correcta"
+ },
+ "elemento.Na.descubrimiento": {
+  "texto": "Sus compuestos se usan desde la Antigüedad: los egipcios momificaban con natrón, un mineral de sodio, y de su nombre latino («natrium») viene el símbolo Na. Humphry Davy aisló el metal en 1807 en Londres, pasando la corriente de una enorme pila eléctrica por sosa cáustica fundida. Vio aparecer bolitas brillantes de metal que ardían en el aire, pocos días después de haber logrado lo mismo con el potasio.",
+  "descripcion": "Ficha del sodio: cómo se descubrió"
+ },
+ "elemento.Na.usos": {
+  "texto": "Unido al cloro forma la sal de mesa. El bicarbonato de sodio está en la repostería y la sosa cáustica en el jabón y el papel. Las farolas antiguas de luz anaranjada eran de vapor de sodio, y ya hay baterías de sodio para guardar energía de la red eléctrica.",
+  "descripcion": "Ficha del sodio: usos actuales"
+ },
+ "elemento.Na.porque": {
+  "texto": "Las baterías de sodio interesan porque el sodio es mil veces más abundante y barato que el litio, aunque pesan más. Las farolas de sodio gastaban muy poca electricidad porque emiten justo el amarillo al que el ojo es más sensible.",
+  "descripcion": "Ficha del sodio: por qué se usa este elemento y no otro"
+ },
+ "elemento.Na.unico": {
+  "texto": "Lo más llamativo es su luz amarilla, tan pura que bajo una farola de sodio de baja presión no se distinguen los colores: todo se ve amarillo y gris.",
+  "descripcion": "Ficha del sodio: cualidad única o récord"
+ },
+ "elemento.Na.curiosidad": {
+  "texto": "La sal de tu comida es un metal que arde al tocar el agua unido a un gas venenoso, y aun así es necesaria para vivir.",
+  "descripcion": "Ficha del sodio: curiosidad sorprendente"
+ },
+ "elemento.Na.pista": {
+  "texto": "Soy un metal tan blando que se corta con un cuchillo, y en la sal de cocina voy unido al cloro.",
+  "descripcion": "Juego de adivinar: pista del sodio sin decir su nombre ni su símbolo"
+ },
+ "elemento.Na.pregunta": {
+  "texto": "¿De dónde viene el símbolo Na?",
+  "descripcion": "Test sobre la ficha del sodio: enunciado de la pregunta"
+ },
+ "elemento.Na.pregunta.ok": {
+  "texto": "De «natrium», por el natrón",
+  "descripcion": "Test sobre la ficha del sodio: respuesta correcta"
+ },
+ "elemento.Na.pregunta.mal1": {
+  "texto": "De «nafta», un combustible",
+  "descripcion": "Test sobre la ficha del sodio: respuesta incorrecta 1"
+ },
+ "elemento.Na.pregunta.mal2": {
+  "texto": "De «nácar», el de las conchas",
+  "descripcion": "Test sobre la ficha del sodio: respuesta incorrecta 2"
+ },
+ "elemento.Na.pregunta.mal3": {
+  "texto": "De «nata», por su color",
+  "descripcion": "Test sobre la ficha del sodio: respuesta incorrecta 3"
+ },
+ "elemento.Na.pregunta.explicacion": {
+  "texto": "El símbolo viene del latín «natrium», relacionado con el natrón que usaban los egipcios.",
+  "descripcion": "Test sobre la ficha del sodio: explicación de la respuesta correcta"
+ },
+ "elemento.Mg.descubrimiento": {
+  "texto": "En 1618 un granjero de Epsom (Inglaterra) notó que sus vacas no querían beber el agua amarga de un pozo: contenía sulfato de magnesio, las famosas «sales de Epsom». En 1755 Joseph Black, en Edimburgo, demostró que la magnesia era distinta de la cal. Humphry Davy aisló una pequeña cantidad del metal en 1808 por electrólisis, y el nombre viene de Magnesia, una región de Grecia.",
+  "descripcion": "Ficha del magnesio: cómo se descubrió"
+ },
+ "elemento.Mg.usos": {
+  "texto": "Sus aleaciones ligeras forman carcasas de portátiles, llantas y piezas de coches y aviones. Arde con luz blanca en bengalas y fuegos artificiales. En medicina está en antiácidos, laxantes y suplementos, y es esencial en tu cuerpo para músculos y nervios.",
+  "descripcion": "Ficha del magnesio: usos actuales"
+ },
+ "elemento.Mg.porque": {
+  "texto": "Es el metal estructural más ligero: pesa un tercio menos que el aluminio. Por eso se usa cuando cada gramo cuenta, como en portátiles o piezas de coches de carreras.",
+  "descripcion": "Ficha del magnesio: por qué se usa este elemento y no otro"
+ },
+ "elemento.Mg.unico": {
+  "texto": "Hay un átomo de magnesio en el centro de cada molécula de clorofila, el pigmento con el que las plantas atrapan la luz del Sol.",
+  "descripcion": "Ficha del magnesio: cualidad única o récord"
+ },
+ "elemento.Mg.curiosidad": {
+  "texto": "El magnesio ardiendo no se apaga con agua: le arranca el oxígeno y arde todavía con más fuerza.",
+  "descripcion": "Ficha del magnesio: curiosidad sorprendente"
+ },
+ "elemento.Mg.pista": {
+  "texto": "Ardo con una luz blanca cegadora y estoy en el centro de la clorofila de las plantas.",
+  "descripcion": "Juego de adivinar: pista del magnesio sin decir su nombre ni su símbolo"
+ },
+ "elemento.Mg.pregunta": {
+  "texto": "¿En qué molécula de las plantas está este átomo en el centro?",
+  "descripcion": "Test sobre la ficha del magnesio: enunciado de la pregunta"
+ },
+ "elemento.Mg.pregunta.ok": {
+  "texto": "En la clorofila",
+  "descripcion": "Test sobre la ficha del magnesio: respuesta correcta"
+ },
+ "elemento.Mg.pregunta.mal1": {
+  "texto": "En la celulosa",
+  "descripcion": "Test sobre la ficha del magnesio: respuesta incorrecta 1"
+ },
+ "elemento.Mg.pregunta.mal2": {
+  "texto": "En el almidón",
+  "descripcion": "Test sobre la ficha del magnesio: respuesta incorrecta 2"
+ },
+ "elemento.Mg.pregunta.mal3": {
+  "texto": "En la glucosa",
+  "descripcion": "Test sobre la ficha del magnesio: respuesta incorrecta 3"
+ },
+ "elemento.Mg.pregunta.explicacion": {
+  "texto": "Cada molécula de clorofila tiene un átomo de magnesio en el centro, y sin él la planta no podría hacer la fotosíntesis.",
+  "descripcion": "Test sobre la ficha del magnesio: explicación de la respuesta correcta"
+ },
+ "elemento.Al.descubrimiento": {
+  "texto": "Hans Christian Ørsted lo aisló en 1825 en Copenhague calentando cloruro de aluminio con potasio, y Friedrich Wöhler mejoró el método en 1827. Durante décadas fue tan caro como la plata. En 1886, Charles Martin Hall (Estados Unidos) y Paul Héroult (Francia), ambos nacidos en 1863, inventaron por separado el método eléctrico que aún se usa. Su hermana Julia, que también había estudiado química, le ayudó en el taller de la casa familiar, aunque los historiadores discuten cuánto aportó.",
+  "descripcion": "Ficha del aluminio: cómo se descubrió"
+ },
+ "elemento.Al.usos": {
+  "texto": "Está en latas, papel de aluminio, envases de zumo, ventanas, bicis, aviones y carcasas de móviles. También en los cables de alta tensión y en los utensilios de cocina. Se recicla una y otra vez sin perder calidad.",
+  "descripcion": "Ficha del aluminio: usos actuales"
+ },
+ "elemento.Al.porque": {
+  "texto": "En los cables de alta tensión se usa aluminio y no cobre porque, aunque conduce algo menos, pesa unas tres veces menos: por kilo conduce el doble y las torres aguantan menos peso. Además, no se oxida por dentro: lo protege una capa finísima de óxido.",
+  "descripcion": "Ficha del aluminio: por qué se usa este elemento y no otro"
+ },
+ "elemento.Al.unico": {
+  "texto": "Es el metal más abundante de la corteza terrestre: alrededor del 8 % de su masa.",
+  "descripcion": "Ficha del aluminio: cualidad única o récord"
+ },
+ "elemento.Al.curiosidad": {
+  "texto": "Se cuenta que Napoleón III reservaba sus cubiertos de aluminio para los invitados más importantes; los demás comían con cubiertos de oro.",
+  "descripcion": "Ficha del aluminio: curiosidad sorprendente"
+ },
+ "elemento.Al.pista": {
+  "texto": "Soy el metal más abundante de la corteza; antes valía como la plata y hoy envuelvo tus bocadillos.",
+  "descripcion": "Juego de adivinar: pista del aluminio sin decir su nombre ni su símbolo"
+ },
+ "elemento.Al.pregunta": {
+  "texto": "¿Por qué se usa en los cables de alta tensión en vez de cobre?",
+  "descripcion": "Test sobre la ficha del aluminio: enunciado de la pregunta"
+ },
+ "elemento.Al.pregunta.ok": {
+  "texto": "Porque pesa mucho menos que el cobre",
+  "descripcion": "Test sobre la ficha del aluminio: respuesta correcta"
+ },
+ "elemento.Al.pregunta.mal1": {
+  "texto": "Porque conduce mejor que el cobre",
+  "descripcion": "Test sobre la ficha del aluminio: respuesta incorrecta 1"
+ },
+ "elemento.Al.pregunta.mal2": {
+  "texto": "Porque no deja pasar los rayos",
+  "descripcion": "Test sobre la ficha del aluminio: respuesta incorrecta 2"
+ },
+ "elemento.Al.pregunta.mal3": {
+  "texto": "Porque es de color plateado",
+  "descripcion": "Test sobre la ficha del aluminio: respuesta incorrecta 3"
+ },
+ "elemento.Al.pregunta.explicacion": {
+  "texto": "Conduce algo peor que el cobre, pero pesa unas tres veces menos, así que las torres soportan menos carga.",
+  "descripcion": "Test sobre la ficha del aluminio: explicación de la respuesta correcta"
+ },
+ "elemento.Si.descubrimiento": {
+  "texto": "La arena y el cuarzo, hechos de silicio y oxígeno, se usan desde siempre: en Mesopotamia y Egipto ya fabricaban vidrio hace más de 3500 años. Jöns Jacob Berzelius aisló el elemento en 1824 en Estocolmo, calentando un compuesto de silicio y flúor con potasio. El silicio cristalino lo obtuvo Henri Sainte-Claire Deville en 1854.",
+  "descripcion": "Ficha del silicio: cómo se descubrió"
+ },
+ "elemento.Si.usos": {
+  "texto": "Es el material de los chips de móviles y ordenadores y de la mayoría de paneles solares. Como sílice está en el vidrio, el hormigón y la cerámica, y combinado con carbono y oxígeno forma las siliconas de moldes y selladores.",
+  "descripcion": "Ficha del silicio: usos actuales"
+ },
+ "elemento.Si.porque": {
+  "texto": "Los primeros transistores eran de germanio, pero el silicio lo sustituyó porque aguanta más temperatura, es muchísimo más abundante y forma una capa de óxido que aísla la electricidad de maravilla, algo clave para fabricar chips.",
+  "descripcion": "Ficha del silicio: por qué se usa este elemento y no otro"
+ },
+ "elemento.Si.unico": {
+  "texto": "Es uno de los pocos elementos que, como el agua, ocupa más volumen sólido que líquido. Y para los chips se purifica hasta un 99,9999999 %, uno de los materiales más puros que fabrica el ser humano.",
+  "descripcion": "Ficha del silicio: cualidad única o récord"
+ },
+ "elemento.Si.curiosidad": {
+  "texto": "Silicon Valley, la zona de California donde nacieron muchas empresas tecnológicas, se llama así por este elemento.",
+  "descripcion": "Ficha del silicio: curiosidad sorprendente"
+ },
+ "elemento.Si.pista": {
+  "texto": "La arena de la playa está hecha sobre todo de mí y oxígeno, y los chips de tu móvil también me llevan.",
+  "descripcion": "Juego de adivinar: pista del silicio sin decir su nombre ni su símbolo"
+ },
+ "elemento.Si.pregunta": {
+  "texto": "¿De qué material eran los primeros transistores, antes del silicio?",
+  "descripcion": "Test sobre la ficha del silicio: enunciado de la pregunta"
+ },
+ "elemento.Si.pregunta.ok": {
+  "texto": "El germanio",
+  "descripcion": "Test sobre la ficha del silicio: respuesta correcta"
+ },
+ "elemento.Si.pregunta.mal1": {
+  "texto": "El cobre",
+  "descripcion": "Test sobre la ficha del silicio: respuesta incorrecta 1"
+ },
+ "elemento.Si.pregunta.mal2": {
+  "texto": "El aluminio",
+  "descripcion": "Test sobre la ficha del silicio: respuesta incorrecta 2"
+ },
+ "elemento.Si.pregunta.mal3": {
+  "texto": "El plomo",
+  "descripcion": "Test sobre la ficha del silicio: respuesta incorrecta 3"
+ },
+ "elemento.Si.pregunta.explicacion": {
+  "texto": "Los primeros transistores eran de germanio; el silicio lo desplazó por resistir más el calor y ser más abundante.",
+  "descripcion": "Test sobre la ficha del silicio: explicación de la respuesta correcta"
+ },
+ "elemento.P.descubrimiento": {
+  "texto": "En 1669 el alquimista Hennig Brand, en Hamburgo, buscaba la piedra filosofal hirviendo enormes cantidades de orina. Obtuvo una sustancia blanca que brillaba en la oscuridad y lo llamó con una palabra griega que significa «portador de luz». Fue el primer elemento cuyo descubridor y fecha conocemos. Lavoisier lo reconoció como elemento en 1777.",
+  "descripcion": "Ficha del fósforo: cómo se descubrió"
+ },
+ "elemento.P.usos": {
+  "texto": "Los fosfatos son abonos imprescindibles para la agricultura. El fósforo rojo está en el rascador de las cajas de cerillas, y hay baterías de litio con fosfato de hierro en coches eléctricos. En tu cuerpo forma parte del ADN, de los huesos y del ATP, la molécula que guarda energía en las células.",
+  "descripcion": "Ficha del fósforo: usos actuales"
+ },
+ "elemento.P.porque": {
+  "texto": "Las cerillas de seguridad llevan fósforo rojo y no blanco porque el blanco se inflama solo al aire y es muy tóxico. En el siglo XIX enfermó a muchas trabajadoras de las fábricas de cerillas, y su huelga de 1888 en Londres ayudó a prohibirlo.",
+  "descripcion": "Ficha del fósforo: por qué se usa este elemento y no otro"
+ },
+ "elemento.P.unico": {
+  "texto": "Es el primer elemento descubierto por una persona con nombre y fecha conocidos: Hennig Brand, en 1669.",
+  "descripcion": "Ficha del fósforo: cualidad única o récord"
+ },
+ "elemento.P.curiosidad": {
+  "texto": "El fósforo blanco brilla en la oscuridad, pero no por fosforescencia: es una reacción lenta con el oxígeno del aire.",
+  "descripcion": "Ficha del fósforo: curiosidad sorprendente"
+ },
+ "elemento.P.pista": {
+  "texto": "Me encontró un alquimista hirviendo orina; brillo en la oscuridad y estoy en tu ADN y tus huesos.",
+  "descripcion": "Juego de adivinar: pista del fósforo sin decir su nombre ni su símbolo"
+ },
+ "elemento.P.pregunta": {
+  "texto": "¿De qué sacó Hennig Brand este elemento?",
+  "descripcion": "Test sobre la ficha del fósforo: enunciado de la pregunta"
+ },
+ "elemento.P.pregunta.ok": {
+  "texto": "De la orina",
+  "descripcion": "Test sobre la ficha del fósforo: respuesta correcta"
+ },
+ "elemento.P.pregunta.mal1": {
+  "texto": "Del agua del mar",
+  "descripcion": "Test sobre la ficha del fósforo: respuesta incorrecta 1"
+ },
+ "elemento.P.pregunta.mal2": {
+  "texto": "De cenizas de madera",
+  "descripcion": "Test sobre la ficha del fósforo: respuesta incorrecta 2"
+ },
+ "elemento.P.pregunta.mal3": {
+  "texto": "De huesos de animales",
+  "descripcion": "Test sobre la ficha del fósforo: respuesta incorrecta 3"
+ },
+ "elemento.P.pregunta.explicacion": {
+  "texto": "Brand hirvió grandes cantidades de orina buscando la piedra filosofal y encontró una sustancia que brillaba.",
+  "descripcion": "Test sobre la ficha del fósforo: explicación de la respuesta correcta"
+ },
+ "elemento.S.descubrimiento": {
+  "texto": "Se conoce desde la Antigüedad porque aparece puro, en cristales amarillos, cerca de los volcanes. En China, hacia el siglo IX, se mezcló con salitre y carbón para inventar la pólvora. Durante siglos los alquimistas lo vieron como el principio de lo que arde, y en 1777 Antoine Lavoisier convenció a la comunidad científica de que era un elemento.",
+  "descripcion": "Ficha del azufre: cómo se descubrió"
+ },
+ "elemento.S.usos": {
+  "texto": "Con él se fabrica ácido sulfúrico, uno de los productos químicos más fabricados del mundo, clave para abonos y baterías. Endurece el caucho de los neumáticos, protege las viñas de los hongos y forma parte de algunos medicamentos.",
+  "descripcion": "Ficha del azufre: usos actuales"
+ },
+ "elemento.S.porque": {
+  "texto": "Al calentar caucho con azufre, sus átomos forman puentes entre las cadenas del caucho, que deja de ser pegajoso con el calor y quebradizo con el frío. Charles Goodyear descubrió este proceso, la vulcanización, en 1839.",
+  "descripcion": "Ficha del azufre: por qué se usa este elemento y no otro"
+ },
+ "elemento.S.unico": {
+  "texto": "Es el elemento con más formas distintas en estado puro: se conocen unas 30, más que de ningún otro.",
+  "descripcion": "Ficha del azufre: cualidad única o récord"
+ },
+ "elemento.S.curiosidad": {
+  "texto": "El azufre puro no huele: el olor a huevo podrido es de un compuesto suyo con hidrógeno.",
+  "descripcion": "Ficha del azufre: curiosidad sorprendente"
+ },
+ "elemento.S.pista": {
+  "texto": "Soy amarillo, salgo de los volcanes y me culpan del olor a huevo podrido.",
+  "descripcion": "Juego de adivinar: pista del azufre sin decir su nombre ni su símbolo"
+ },
+ "elemento.S.pregunta": {
+  "texto": "¿Qué invento chino del siglo IX llevaba este elemento?",
+  "descripcion": "Test sobre la ficha del azufre: enunciado de la pregunta"
+ },
+ "elemento.S.pregunta.ok": {
+  "texto": "La pólvora",
+  "descripcion": "Test sobre la ficha del azufre: respuesta correcta"
+ },
+ "elemento.S.pregunta.mal1": {
+  "texto": "La brújula",
+  "descripcion": "Test sobre la ficha del azufre: respuesta incorrecta 1"
+ },
+ "elemento.S.pregunta.mal2": {
+  "texto": "El papel",
+  "descripcion": "Test sobre la ficha del azufre: respuesta incorrecta 2"
+ },
+ "elemento.S.pregunta.mal3": {
+  "texto": "La porcelana",
+  "descripcion": "Test sobre la ficha del azufre: respuesta incorrecta 3"
+ },
+ "elemento.S.pregunta.explicacion": {
+  "texto": "La pólvora mezcla azufre, salitre y carbón, y se inventó en China hacia el siglo IX.",
+  "descripcion": "Test sobre la ficha del azufre: explicación de la respuesta correcta"
+ },
+ "elemento.Cl.descubrimiento": {
+  "texto": "Carl Wilhelm Scheele lo obtuvo en Suecia en 1774 echando ácido clorhídrico sobre un mineral de manganeso: salió un gas amarillo verdoso, de olor asfixiante, que destiñía las flores. Durante 36 años se pensó que era un compuesto con oxígeno. En 1810 Humphry Davy demostró que era un elemento y lo llamó con la palabra griega que significa «verde amarillento».",
+  "descripcion": "Ficha del cloro: cómo se descubrió"
+ },
+ "elemento.Cl.usos": {
+  "texto": "Desinfecta el agua del grifo y de las piscinas, y está en la lejía. Con él se fabrica el PVC de tuberías y ventanas, y muchos medicamentos. Unido al sodio forma la sal de mesa.",
+  "descripcion": "Ficha del cloro: usos actuales"
+ },
+ "elemento.Cl.porque": {
+  "texto": "En el agua del grifo se usa cloro y no solo ozono o luz ultravioleta porque deja una pequeña cantidad que sigue desinfectando por las tuberías hasta tu casa. El ozono desaparece en minutos.",
+  "descripcion": "Ficha del cloro: por qué se usa este elemento y no otro"
+ },
+ "elemento.Cl.unico": {
+  "texto": "Es el elemento que más energía libera al capturar un electrón, incluso más que el flúor.",
+  "descripcion": "Ficha del cloro: cualidad única o récord"
+ },
+ "elemento.Cl.curiosidad": {
+  "texto": "El fuerte «olor a cloro» de una piscina no es del cloro limpio, sino de compuestos que se forman cuando reacciona con sudor y orina.",
+  "descripcion": "Ficha del cloro: curiosidad sorprendente"
+ },
+ "elemento.Cl.pista": {
+  "texto": "Soy un gas amarillo verdoso que desinfecta piscinas y, unido a un metal blando, formo la sal de mesa.",
+  "descripcion": "Juego de adivinar: pista del cloro sin decir su nombre ni su símbolo"
+ },
+ "elemento.Cl.pregunta": {
+  "texto": "¿Por qué se usa en el agua del grifo además de otros desinfectantes?",
+  "descripcion": "Test sobre la ficha del cloro: enunciado de la pregunta"
+ },
+ "elemento.Cl.pregunta.ok": {
+  "texto": "Sigue desinfectando hasta llegar al grifo",
+  "descripcion": "Test sobre la ficha del cloro: respuesta correcta"
+ },
+ "elemento.Cl.pregunta.mal1": {
+  "texto": "Le da al agua mejor sabor",
+  "descripcion": "Test sobre la ficha del cloro: respuesta incorrecta 1"
+ },
+ "elemento.Cl.pregunta.mal2": {
+  "texto": "Hace el agua más blanda",
+  "descripcion": "Test sobre la ficha del cloro: respuesta incorrecta 2"
+ },
+ "elemento.Cl.pregunta.mal3": {
+  "texto": "Añade minerales buenos para los huesos",
+  "descripcion": "Test sobre la ficha del cloro: respuesta incorrecta 3"
+ },
+ "elemento.Cl.pregunta.explicacion": {
+  "texto": "El cloro deja un pequeño residuo que protege el agua durante su viaje por las tuberías.",
+  "descripcion": "Test sobre la ficha del cloro: explicación de la respuesta correcta"
+ },
+ "elemento.Ar.descubrimiento": {
+  "texto": "Lord Rayleigh notó en 1892 que el nitrógeno sacado del aire pesaba un 0,5 % más que el obtenido de compuestos químicos. En 1894, en Londres, William Ramsay retiró todo el nitrógeno de una muestra de aire haciéndolo reaccionar con magnesio caliente, y quedó un gas que no reaccionaba con nada. Lo llamaron con la palabra griega para «perezoso». Cavendish ya había visto en 1785 una burbujita de aire que no reaccionaba, pero nadie le hizo caso durante un siglo.",
+  "descripcion": "Ficha del argón: cómo se descubrió"
+ },
+ "elemento.Ar.usos": {
+  "texto": "Llena el espacio entre los cristales de las ventanas con doble acristalamiento y las bombillas incandescentes. Protege las soldaduras del aire y se usa al fabricar chips, titanio y acero.",
+  "descripcion": "Ficha del argón: usos actuales"
+ },
+ "elemento.Ar.porque": {
+  "texto": "En soldadura se usa argón y no nitrógeno porque, con el calor del arco, el nitrógeno sí reacciona con el metal fundido y lo debilita. Frente al helio, el argón es más barato porque forma casi el 1 % del aire.",
+  "descripcion": "Ficha del argón: por qué se usa este elemento y no otro"
+ },
+ "elemento.Ar.unico": {
+  "texto": "Es el gas noble más abundante de la Tierra: casi el 1 % del aire que respiras.",
+  "descripcion": "Ficha del argón: cualidad única o récord"
+ },
+ "elemento.Ar.curiosidad": {
+  "texto": "Con cada respiración inhalas unas 20 veces más argón que dióxido de carbono.",
+  "descripcion": "Ficha del argón: curiosidad sorprendente"
+ },
+ "elemento.Ar.pista": {
+  "texto": "Me escondía en el aire: por mi culpa el nitrógeno sacado de la atmósfera pesaba más de la cuenta.",
+  "descripcion": "Juego de adivinar: pista del argón sin decir su nombre ni su símbolo"
+ },
+ "elemento.Ar.pregunta": {
+  "texto": "¿Qué pista llevó a descubrir este elemento?",
+  "descripcion": "Test sobre la ficha del argón: enunciado de la pregunta"
+ },
+ "elemento.Ar.pregunta.ok": {
+  "texto": "El nitrógeno del aire pesaba más",
+  "descripcion": "Test sobre la ficha del argón: respuesta correcta"
+ },
+ "elemento.Ar.pregunta.mal1": {
+  "texto": "El aire brillaba en la oscuridad",
+  "descripcion": "Test sobre la ficha del argón: respuesta incorrecta 1"
+ },
+ "elemento.Ar.pregunta.mal2": {
+  "texto": "El agua del mar burbujeaba",
+  "descripcion": "Test sobre la ficha del argón: respuesta incorrecta 2"
+ },
+ "elemento.Ar.pregunta.mal3": {
+  "texto": "Las velas ardían de color verde",
+  "descripcion": "Test sobre la ficha del argón: respuesta incorrecta 3"
+ },
+ "elemento.Ar.pregunta.explicacion": {
+  "texto": "Rayleigh vio que el nitrógeno del aire pesaba más que el químico: estaba mezclado con argón.",
+  "descripcion": "Test sobre la ficha del argón: explicación de la respuesta correcta"
+ }
+}

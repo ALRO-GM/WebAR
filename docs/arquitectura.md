@@ -163,6 +163,8 @@ dependen de él.
 - [x] Plataforma educativa (ver más abajo).
 - [x] Repaso de UX y accesibilidad, todos los textos en una tabla traducible
   (español e inglés) e introducción animada: ver [ux.md](ux.md).
+- [x] Renovación al estilo de las apps de idiomas: camino, personajes, gato
+  cuántico, rachas, ligas, Adivina, foto en RA y sección Materia.
 
 ## Plataforma educativa
 
@@ -178,14 +180,27 @@ Basada en [investigacion-plataforma.md](investigacion-plataforma.md).
   cada clase tiene un código de 6 caracteres, un enlace `/?unirse=CÓDIGO` y su
   QR. El alumnado se une con el código, un **alias** y un PIN (para entrar
   desde otro móvil). Nada de nombres, correos ni ubicación.
-- **Gamificación** (lo que la investigación apoya): colección de moléculas con
-  siluetas y pistas (moleculario), tabla periódica que se desbloquea (se
-  empieza con H, C, N y O; cada molécula nueva da 3 elementos y cada reacción
-  distinta, 1), historias de descubrimiento, XP y niveles con nombres neutros,
-  insignias ligadas a competencias (óxidos, sales, cursos completos…), racha
-  **semanal** (no diaria), retos por curso y del profesorado, desafío de
-  fórmula al azar, y una **meta cooperativa de clase** con lo último que han
-  descubierto los compañeros. Sin ranking individual público.
+- **Camino de aprendizaje** (`src/learn/path.ts`): unidades con un guía
+  histórico (`src/characters/`) y nodos de lección, laboratorio, Adivina,
+  repaso y cofre. Se empieza solo con el hidrógeno; una lección presenta un
+  elemento y lo desbloquea (también lo desbloquea formar una sustancia que lo
+  lleve). Las 17 primeras unidades están pensadas a mano para que enseguida se
+  puedan formar las moléculas de la ESO; el resto agrupa los elementos de 4
+  en 4. Los ejercicios (`exercises.ts`) salen de las fichas de los elementos
+  (`i18n/es/elementos-*.json`) y el motor de lecciones es `lesson.ts`.
+- **Gamificación** (`progress.ts`, todo recalculado desde los eventos): XP y
+  15 niveles, racha diaria con protectores, meta diaria, tres misiones al día
+  (estables para todos ese día), quarks (moneda del juego: lecciones, misiones,
+  cofres, niveles; se gastan en protectores y doble XP), insignias, colección
+  de moléculas, tabla que se desbloquea, retos por curso y del profesorado,
+  acertijos, meta cooperativa de clase y **ligas semanales** (`league.ts`; el
+  servidor las cierra cada lunes: [servidor.md](servidor.md)).
+- **Experiencias 3D** (`src/experience.ts`): explorar átomos, tarjetas, la
+  sección Materia (`src/materia/`), la foto con científicos (`src/photo/`)
+  comparten una sola `ARSession`; cada una crea y quita su HUD.
+- **Objetos cotidianos** (`src/objects/`): un modelo 3D animado para cada
+  elemento y sustancia (el Sol, un doblón, una gota de agua…), en Adivina, en
+  las lecciones y junto a cada molécula que se forma con las tarjetas.
 - **Panel del profesorado**: alumnado (renombrar, quitar), números de la
   clase, actividad de 14 días (gráfica con tabla alternativa), qué moléculas
   tiene la clase (buenas candidatas para retos) y creación de retos.

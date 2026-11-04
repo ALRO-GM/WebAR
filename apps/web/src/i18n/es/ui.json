@@ -144,7 +144,7 @@
   "descripcion": "Contador de elementos desbloqueados"
  },
  "tabla.explicacion": {
-  "texto": "Cada molécula nueva desbloquea elementos. Empiezas con H, C, N y O.",
+  "texto": "Cada lección del camino te presenta un elemento. Empiezas con el hidrógeno.",
   "descripcion": "Explicación del desbloqueo"
  },
  "tabla.bloqueado": {
@@ -712,7 +712,7 @@
   "descripcion": "Historia del elemento Mg"
  },
  "elemento.Al.historia": {
-  "texto": "Se aisló en la década de 1820 y fue más caro que el oro hasta 1886: Napoleón III lucía cubiertos de aluminio.",
+  "texto": "Wöhler lo aisló en 1827. Fue un metal de lujo, caro como la plata, hasta que en 1886 se inventó la electrólisis que lo abarató.",
   "descripcion": "Historia del elemento Al"
  },
  "elemento.Si.historia": {

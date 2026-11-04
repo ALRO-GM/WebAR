@@ -1,0 +1,922 @@
+{
+ "stats.racha_aria": {
+  "texto": "Racha: {n} días seguidos",
+  "descripcion": "Lectores de pantalla: botón de la racha en la barra de arriba"
+ },
+ "stats.quarks_aria": {
+  "texto": "Quarks: {n}. Abre la tienda en tu perfil",
+  "descripcion": "Lectores de pantalla: botón de los quarks (moneda del juego)"
+ },
+ "stats.xp_aria": {
+  "texto": "XP de hoy: {n} de {meta}",
+  "descripcion": "Lectores de pantalla: botón del XP de hoy"
+ },
+ "perfil.abrir": {
+  "texto": "Tu perfil",
+  "descripcion": "Botón del avatar arriba a la izquierda"
+ },
+ "nav.aprender": {
+  "texto": "Aprender",
+  "descripcion": "Pestaña inferior: el camino de lecciones"
+ },
+ "nav.lab": {
+  "texto": "Laboratorio",
+  "descripcion": "Pestaña inferior: tarjetas, mesa, acertijos, Adivina, RA"
+ },
+ "nav.materia": {
+  "texto": "Materia",
+  "descripcion": "Pestaña inferior: estructuras cristalinas y estados del agua"
+ },
+ "nav.coleccion": {
+  "texto": "Colección",
+  "descripcion": "Pestaña inferior: moléculas, tabla periódica y personajes"
+ },
+ "nav.liga": {
+  "texto": "Liga",
+  "descripcion": "Pestaña inferior: misiones del día, ligas y retos"
+ },
+ "lab.titulo": {
+  "texto": "Laboratorio",
+  "descripcion": "Título de la pantalla del laboratorio"
+ },
+ "lab.subtitulo": {
+  "texto": "Experimenta con tus elementos: forma moléculas, resuelve acertijos y míralo todo en realidad aumentada.",
+  "descripcion": "Subtítulo del laboratorio"
+ },
+ "adivina.titulo": {
+  "texto": "Adivina",
+  "descripcion": "Juego de adivinar el elemento por su objeto cotidiano (botón del laboratorio)"
+ },
+ "adivina.subtitulo": {
+  "texto": "¿De qué elemento es este objeto? El Sol, un doblón de oro, una gota de agua…",
+  "descripcion": "Explicación del juego Adivina"
+ },
+ "adivina.vacio": {
+  "texto": "Aún no conoces elementos con objeto. Haz la primera lección del camino.",
+  "descripcion": "Adivina sin nada que adivinar"
+ },
+ "adivina.pregunta": {
+  "texto": "¿Qué elemento representa?",
+  "descripcion": "Pregunta de Adivina (elemento)"
+ },
+ "adivina.pregunta_sustancia": {
+  "texto": "¿Qué sustancia representa?",
+  "descripcion": "Pregunta de Adivina (molécula o compuesto)"
+ },
+ "adivina.objeto_aria": {
+  "texto": "Objeto en 3D que hay que adivinar",
+  "descripcion": "Lectores de pantalla: el visor 3D de Adivina"
+ },
+ "adivina.pista": {
+  "texto": "Pista (vale la mitad)",
+  "descripcion": "Botón de pista en Adivina"
+ },
+ "adivina.elige": {
+  "texto": "Elige una respuesta",
+  "descripcion": "Botón inferior de Adivina antes de responder"
+ },
+ "adivina.bien": {
+  "texto": "¡Sí! {objeto}",
+  "descripcion": "Acierto en Adivina; {objeto} es el nombre del objeto"
+ },
+ "adivina.era": {
+  "texto": "Era {nombre}",
+  "descripcion": "Fallo en Adivina"
+ },
+ "adivina.fin": {
+  "texto": "{n} de {total} aciertos",
+  "descripcion": "Final de Adivina"
+ },
+ "foto.titulo": {
+  "texto": "Foto con científicos",
+  "descripcion": "Botón del laboratorio: foto en RA con personajes, átomos y moléculas"
+ },
+ "foto.subtitulo": {
+  "texto": "Ponte junto a Marie Curie y tus moléculas en realidad aumentada y hazte una foto.",
+  "descripcion": "Explicación del modo foto"
+ },
+ "coleccion.titulo": {
+  "texto": "Tu colección",
+  "descripcion": "Título de la pantalla de colección"
+ },
+ "coleccion.moleculas": {
+  "texto": "Moléculas",
+  "descripcion": "Subpestaña de la colección"
+ },
+ "coleccion.tabla": {
+  "texto": "Tabla",
+  "descripcion": "Subpestaña de la colección: tabla periódica"
+ },
+ "coleccion.personajes": {
+  "texto": "Científicos",
+  "descripcion": "Subpestaña de la colección: personajes históricos"
+ },
+ "personajes.explicacion": {
+  "texto": "Conoces a cada científica y científico al llegar a su unidad del camino.",
+  "descripcion": "Explicación de la galería de personajes"
+ },
+ "personajes.bloqueado": {
+  "texto": "Aún por conocer",
+  "descripcion": "Personaje sin desbloquear"
+ },
+ "personajes.bloqueado_texto": {
+  "texto": "Sigue el camino de lecciones: te espera en una unidad más adelante.",
+  "descripcion": "Al tocar un personaje sin desbloquear"
+ },
+ "personajes.logro": {
+  "texto": "Su gran logro",
+  "descripcion": "Encabezado en la ficha del personaje"
+ },
+ "personajes.sabias": {
+  "texto": "¿Sabías que…?",
+  "descripcion": "Encabezado de curiosidades del personaje"
+ },
+ "escala.titulo": {
+  "texto": "Tamaño",
+  "descripcion": "Deslizador para agrandar el átomo en RA"
+ },
+ "ajustes.meta": {
+  "texto": "Meta diaria",
+  "descripcion": "Ajustes: cuánto XP quieres hacer al día"
+ },
+ "ajustes.meta.10": {
+  "texto": "Tranqui · 10 XP al día",
+  "descripcion": "Opción de meta diaria"
+ },
+ "ajustes.meta.20": {
+  "texto": "Normal · 20 XP al día",
+  "descripcion": "Opción de meta diaria"
+ },
+ "ajustes.meta.30": {
+  "texto": "En serio · 30 XP al día",
+  "descripcion": "Opción de meta diaria"
+ },
+ "ajustes.meta.50": {
+  "texto": "A tope · 50 XP al día",
+  "descripcion": "Opción de meta diaria"
+ },
+ "ajustes.oscuro": {
+  "texto": "Tema oscuro",
+  "descripcion": "Ajuste"
+ },
+ "ajustes.sonido": {
+  "texto": "Sonidos",
+  "descripcion": "Ajuste"
+ },
+ "ajustes.gato": {
+  "texto": "Mostrar al gato cuántico",
+  "descripcion": "Ajuste: mostrar la mascota"
+ },
+ "intro.0.titulo": {
+  "texto": "¡Hola! Soy tu gato cuántico",
+  "descripcion": "Introducción, escena 1: la mascota se presenta"
+ },
+ "intro.0.texto": {
+  "texto": "Te acompaño mientras descubres la química. Si no me miras, igual desaparezco un rato…",
+  "descripcion": "Introducción, escena 1"
+ },
+ "intro.camino.titulo": {
+  "texto": "Un camino, paso a paso",
+  "descripcion": "Introducción, escena 2"
+ },
+ "intro.camino.texto": {
+  "texto": "Empiezas solo con el hidrógeno. Cada lección te presenta un elemento nuevo.",
+  "descripcion": "Introducción, escena 2"
+ },
+ "intro.racha.titulo": {
+  "texto": "Un poco cada día",
+  "descripcion": "Introducción, última escena"
+ },
+ "intro.racha.texto": {
+  "texto": "Mantén tu racha, cumple misiones y sube de liga con tu clase o con todo el mundo. Gratis y sin internet.",
+  "descripcion": "Introducción, última escena"
+ },
+ "leccion.progreso": {
+  "texto": "Progreso de la lección",
+  "descripcion": "Lectores de pantalla: barra de la lección"
+ },
+ "leccion.conoce": {
+  "texto": "Conoce el {nombre}",
+  "descripcion": "Título de la primera tarjeta de una lección (el artículo puede no cuadrar en algún elemento femenino; se acepta)"
+ },
+ "leccion.usos": {
+  "texto": "¿Dónde está el {nombre}?",
+  "descripcion": "Título de la tarjeta de usos"
+ },
+ "leccion.unico": {
+  "texto": "Lo que lo hace único",
+  "descripcion": "Título de la tarjeta de cualidad única"
+ },
+ "leccion.protones": {
+  "texto": "¿Cuántos protones tiene el {nombre}?",
+  "descripcion": "Pregunta de lección"
+ },
+ "leccion.protones_explica": {
+  "texto": "El número atómico del {nombre} es {z}: tiene {z} protones (y, neutro, {z} electrones).",
+  "descripcion": "Explicación tras responder"
+ },
+ "leccion.simbolo": {
+  "texto": "¿Cuál es el símbolo del {nombre}?",
+  "descripcion": "Pregunta de lección"
+ },
+ "leccion.quien": {
+  "texto": "¿De qué elemento hablo?",
+  "descripcion": "Pregunta de lección con una pista entre comillas"
+ },
+ "leccion.continuar": {
+  "texto": "Continuar",
+  "descripcion": "Botón de lección"
+ },
+ "leccion.comprobar": {
+  "texto": "Comprobar",
+  "descripcion": "Botón de lección"
+ },
+ "leccion.forma": {
+  "texto": "Forma {nombre}",
+  "descripcion": "Ejercicio de formar una sustancia con fichas"
+ },
+ "leccion.forma_texto": {
+  "texto": "Toca los átomos que hacen falta (cuidado, sobran algunos).",
+  "descripcion": "Instrucción del ejercicio de formar"
+ },
+ "leccion.quitar": {
+  "texto": "Quitar {nombre}",
+  "descripcion": "Lectores de pantalla: quitar una ficha puesta"
+ },
+ "leccion.toca_fichas": {
+  "texto": "Toca las fichas de abajo",
+  "descripcion": "Hueco vacío del ejercicio de formar"
+ },
+ "leccion.combo": {
+  "texto": "🔥 ¡{n} seguidas!",
+  "descripcion": "Racha de aciertos dentro de la lección"
+ },
+ "leccion.bien.1": {
+  "texto": "¡Genial!",
+  "descripcion": "Felicitación al acertar"
+ },
+ "leccion.bien.2": {
+  "texto": "¡Correcto!",
+  "descripcion": "Felicitación al acertar"
+ },
+ "leccion.bien.3": {
+  "texto": "¡Muy bien!",
+  "descripcion": "Felicitación al acertar"
+ },
+ "leccion.bien.4": {
+  "texto": "¡Eso es!",
+  "descripcion": "Felicitación al acertar"
+ },
+ "leccion.solucion": {
+  "texto": "Solución correcta:",
+  "descripcion": "Al fallar"
+ },
+ "leccion.perfecta": {
+  "texto": "¡Lección perfecta!",
+  "descripcion": "Final de lección sin fallos"
+ },
+ "leccion.completada": {
+  "texto": "¡Lección completada!",
+  "descripcion": "Final de lección"
+ },
+ "leccion.stat_xp": {
+  "texto": "XP total",
+  "descripcion": "Final de lección"
+ },
+ "leccion.stat_precision": {
+  "texto": "Precisión",
+  "descripcion": "Final de lección"
+ },
+ "leccion.stat_tiempo": {
+  "texto": "Tiempo",
+  "descripcion": "Final de lección"
+ },
+ "camino.meta_aria": {
+  "texto": "Meta diaria: {xp} de {meta} XP",
+  "descripcion": "Lectores de pantalla"
+ },
+ "camino.meta_hecha": {
+  "texto": "¡Meta del día cumplida!",
+  "descripcion": "Tarjeta de meta diaria"
+ },
+ "camino.meta": {
+  "texto": "Meta del día: {meta} XP",
+  "descripcion": "Tarjeta de meta diaria"
+ },
+ "camino.racha_hoy": {
+  "texto": "🔥 Racha de {n} días: hoy ya cuenta",
+  "descripcion": "Bajo la meta diaria"
+ },
+ "camino.racha_peligro": {
+  "texto": "🔥 Tu racha de {n} días te espera: haz una lección hoy",
+  "descripcion": "Bajo la meta diaria"
+ },
+ "camino.racha_empieza": {
+  "texto": "Haz una lección para empezar tu racha",
+  "descripcion": "Bajo la meta diaria"
+ },
+ "camino.mas": {
+  "texto": "… y {n} unidades más por descubrir",
+  "descripcion": "Final del camino visible"
+ },
+ "camino.unidad": {
+  "texto": "Unidad {n}",
+  "descripcion": "Cabecera de unidad"
+ },
+ "camino.guia": {
+  "texto": "Con {nombre}",
+  "descripcion": "Cabecera de unidad: quién guía"
+ },
+ "camino.empieza": {
+  "texto": "¡Empieza!",
+  "descripcion": "Globo sobre el nodo actual"
+ },
+ "camino.estado.hecho": {
+  "texto": "completado",
+  "descripcion": "Lectores de pantalla: estado del nodo"
+ },
+ "camino.estado.actual": {
+  "texto": "siguiente",
+  "descripcion": "Lectores de pantalla: estado del nodo"
+ },
+ "camino.estado.bloqueado": {
+  "texto": "bloqueado",
+  "descripcion": "Lectores de pantalla: estado del nodo"
+ },
+ "camino.lab": {
+  "texto": "Forma {formula}",
+  "descripcion": "Nodo de laboratorio"
+ },
+ "camino.adivina": {
+  "texto": "Adivina",
+  "descripcion": "Nodo Adivina"
+ },
+ "camino.repaso": {
+  "texto": "Repaso",
+  "descripcion": "Nodo de repaso"
+ },
+ "camino.cofre": {
+  "texto": "Cofre",
+  "descripcion": "Nodo cofre"
+ },
+ "camino.dice.leccion": {
+  "texto": "¡Te presento al {nombre}! Te va a sorprender.",
+  "descripcion": "Lo que dice el guía antes de una lección"
+ },
+ "camino.dice.laboratorio": {
+  "texto": "Al laboratorio: junta las tarjetas y {nombre}.",
+  "descripcion": "Lo que dice el guía antes del laboratorio ({nombre} = «Forma H₂O»; se acepta la mayúscula)"
+ },
+ "camino.dice.adivina": {
+  "texto": "¿Reconoces cada elemento por su objeto?",
+  "descripcion": "Lo que dice el guía antes de Adivina"
+ },
+ "camino.dice.repaso": {
+  "texto": "Repasar es el truco para no olvidar. ¡Vamos!",
+  "descripcion": "Lo que dice el guía antes de un repaso"
+ },
+ "camino.dice.cofre": {
+  "texto": "¡Un cofre! Ábrelo, te lo has ganado.",
+  "descripcion": "Lo que dice el guía ante un cofre"
+ },
+ "camino.que.leccion": {
+  "texto": "Historia, usos y lo que lo hace único; luego unas preguntas.",
+  "descripcion": "Qué tiene una lección"
+ },
+ "camino.que.laboratorio": {
+  "texto": "Se abre la mesa con las tarjetas justas (y alguna que despista).",
+  "descripcion": "Qué tiene un laboratorio"
+ },
+ "camino.que.adivina": {
+  "texto": "Objetos en 3D: adivina de qué elemento son.",
+  "descripcion": "Qué tiene Adivina"
+ },
+ "camino.que.repaso": {
+  "texto": "Preguntas variadas de todo lo aprendido.",
+  "descripcion": "Qué tiene un repaso"
+ },
+ "camino.que.cofre": {
+  "texto": "Quarks para la tienda: protectores de racha y más.",
+  "descripcion": "Qué tiene un cofre"
+ },
+ "camino.repasar": {
+  "texto": "Repasar",
+  "descripcion": "Botón en un nodo ya hecho"
+ },
+ "camino.empezar": {
+  "texto": "Empezar",
+  "descripcion": "Botón en el nodo actual"
+ },
+ "misiones.titulo": {
+  "texto": "Misiones del día",
+  "descripcion": "Título"
+ },
+ "misiones.quedan": {
+  "texto": "{h} h",
+  "descripcion": "Horas que quedan para nuevas misiones"
+ },
+ "misiones.premio": {
+  "texto": "Premio: {n} quarks",
+  "descripcion": "Lectores de pantalla"
+ },
+ "misiones.todas": {
+  "texto": "Completa las tres y ganas {n} quarks extra.",
+  "descripcion": "Bajo las misiones"
+ },
+ "mision.xp": {
+  "texto": "Gana {n} XP",
+  "descripcion": "Misión"
+ },
+ "mision.xp.icono": {
+  "texto": "⚡",
+  "descripcion": "Icono de la misión"
+ },
+ "mision.lecciones": {
+  "texto": "Completa {n} lecciones",
+  "descripcion": "Misión"
+ },
+ "mision.lecciones.icono": {
+  "texto": "📘",
+  "descripcion": "Icono de la misión"
+ },
+ "mision.perfectas": {
+  "texto": "Haz una lección sin fallos",
+  "descripcion": "Misión"
+ },
+ "mision.perfectas.icono": {
+  "texto": "🎯",
+  "descripcion": "Icono de la misión"
+ },
+ "mision.reacciones": {
+  "texto": "Haz {n} reacciones con tarjetas",
+  "descripcion": "Misión"
+ },
+ "mision.reacciones.icono": {
+  "texto": "🧪",
+  "descripcion": "Icono de la misión"
+ },
+ "mision.aciertos": {
+  "texto": "Acierta {n} en Adivina",
+  "descripcion": "Misión"
+ },
+ "mision.aciertos.icono": {
+  "texto": "🔮",
+  "descripcion": "Icono de la misión"
+ },
+ "mision.lecturas": {
+  "texto": "Lee {n} fichas de elementos",
+  "descripcion": "Misión"
+ },
+ "mision.lecturas.icono": {
+  "texto": "📖",
+  "descripcion": "Icono de la misión"
+ },
+ "mision.nuevas": {
+  "texto": "Descubre una molécula nueva",
+  "descripcion": "Misión"
+ },
+ "mision.nuevas.icono": {
+  "texto": "✨",
+  "descripcion": "Icono de la misión"
+ },
+ "liga.titulo": {
+  "texto": "Liga semanal",
+  "descripcion": "Título"
+ },
+ "liga.tu": {
+  "texto": "tú",
+  "descripcion": "Marca de tu fila en la clasificación"
+ },
+ "liga.clase": {
+  "texto": "Mi clase",
+  "descripcion": "Pestaña"
+ },
+ "liga.mundial": {
+  "texto": "Mundial",
+  "descripcion": "Pestaña"
+ },
+ "liga.clase_sin": {
+  "texto": "Únete a una clase (en tu perfil) para competir con tus compañeros.",
+  "descripcion": "Liga de clase sin clase"
+ },
+ "liga.sin_red": {
+  "texto": "Sin conexión: la liga se actualiza al volver a tener internet.",
+  "descripcion": "Aviso"
+ },
+ "liga.cargando": {
+  "texto": "Cargando…",
+  "descripcion": "Aviso"
+ },
+ "liga.mundial_texto": {
+  "texto": "Compite cada semana con gente de todo el mundo. Los 7 primeros suben de liga.",
+  "descripcion": "Invitación a la liga mundial"
+ },
+ "liga.privacidad": {
+  "texto": "Es opcional y anónimo: te damos un apodo divertido y solo se ve tu XP. Ni nombre ni datos personales.",
+  "descripcion": "Privacidad de la liga mundial"
+ },
+ "liga.unirse": {
+  "texto": "Entrar en la liga",
+  "descripcion": "Botón"
+ },
+ "liga.anterior.sube": {
+  "texto": "¡Quedaste {puesto}.º y subes a {liga}!",
+  "descripcion": "Resultado de la semana anterior"
+ },
+ "liga.anterior.baja": {
+  "texto": "Quedaste {puesto}.º y bajas a {liga}. ¡A por ello!",
+  "descripcion": "Resultado de la semana anterior"
+ },
+ "liga.anterior.igual": {
+  "texto": "Quedaste {puesto}.º y sigues en {liga}.",
+  "descripcion": "Resultado de la semana anterior"
+ },
+ "liga.sin_grupo": {
+  "texto": "Gana XP esta semana para entrar en un grupo.",
+  "descripcion": "Aviso"
+ },
+ "liga.reglas": {
+  "texto": "Suben los {sube} primeros (zona verde) y bajan los {baja} últimos (zona roja).",
+  "descripcion": "Reglas"
+ },
+ "liga.apodo": {
+  "texto": "Tu apodo: {apodo}",
+  "descripcion": "Apodo en la liga mundial"
+ },
+ "liga.otro_apodo": {
+  "texto": "Otro apodo",
+  "descripcion": "Botón"
+ },
+ "liga.salir": {
+  "texto": "Salir de la liga",
+  "descripcion": "Botón"
+ },
+ "liga.dias": {
+  "texto": "{n} días",
+  "descripcion": "Días que quedan de semana"
+ },
+ "liga.semana": {
+  "texto": "Esta semana llevas {xp} XP.",
+  "descripcion": "Bajo los escudos"
+ },
+ "liga.nombre.0": {
+  "texto": "Liga Grafito",
+  "descripcion": "Nombre de liga 1 (la más baja)"
+ },
+ "liga.nombre.1": {
+  "texto": "Liga Cuarzo",
+  "descripcion": "Nombre de liga 2"
+ },
+ "liga.nombre.2": {
+  "texto": "Liga Cobre",
+  "descripcion": "Nombre de liga 3"
+ },
+ "liga.nombre.3": {
+  "texto": "Liga Plata",
+  "descripcion": "Nombre de liga 4"
+ },
+ "liga.nombre.4": {
+  "texto": "Liga Oro",
+  "descripcion": "Nombre de liga 5"
+ },
+ "liga.nombre.5": {
+  "texto": "Liga Platino",
+  "descripcion": "Nombre de liga 6"
+ },
+ "liga.nombre.6": {
+  "texto": "Liga Esmeralda",
+  "descripcion": "Nombre de liga 7"
+ },
+ "liga.nombre.7": {
+  "texto": "Liga Rubí",
+  "descripcion": "Nombre de liga 8"
+ },
+ "liga.nombre.8": {
+  "texto": "Liga Zafiro",
+  "descripcion": "Nombre de liga 9"
+ },
+ "liga.nombre.9": {
+  "texto": "Liga Diamante",
+  "descripcion": "Nombre de liga 10 (la más alta)"
+ },
+ "perfil.calendario_aria": {
+  "texto": "Calendario de las últimas semanas: racha de {n} días",
+  "descripcion": "Lectores de pantalla"
+ },
+ "perfil.cambiar_avatar": {
+  "texto": "Cambiar tu avatar",
+  "descripcion": "Botón"
+ },
+ "perfil.apodo": {
+  "texto": "En la liga mundial: {apodo}",
+  "descripcion": "Perfil"
+ },
+ "perfil.stat_racha": {
+  "texto": "Racha actual",
+  "descripcion": "Estadística"
+ },
+ "perfil.stat_mejor": {
+  "texto": "Mejor racha",
+  "descripcion": "Estadística"
+ },
+ "perfil.stat_xp": {
+  "texto": "XP total",
+  "descripcion": "Estadística"
+ },
+ "perfil.stat_quarks": {
+  "texto": "Quarks",
+  "descripcion": "Estadística"
+ },
+ "perfil.stat_moleculas": {
+  "texto": "Moléculas",
+  "descripcion": "Estadística"
+ },
+ "perfil.stat_elementos": {
+  "texto": "Elementos",
+  "descripcion": "Estadística"
+ },
+ "perfil.racha_titulo": {
+  "texto": "Tu racha",
+  "descripcion": "Encabezado del calendario"
+ },
+ "perfil.protectores": {
+  "texto": "🧊 Protectores de racha: {n} (se gastan solos si un día no juegas)",
+  "descripcion": "Bajo el calendario"
+ },
+ "perfil.elige_avatar": {
+  "texto": "Elige tu avatar",
+  "descripcion": "Título"
+ },
+ "perfil.avatar_mas": {
+  "texto": "Conoce a más científicos en el camino para desbloquear sus avatares.",
+  "descripcion": "Bajo los avatares"
+ },
+ "nivel.10": {
+  "texto": "Mente cuántica",
+  "descripcion": "Nombre del nivel 11"
+ },
+ "nivel.11": {
+  "texto": "Maestría atómica",
+  "descripcion": "Nombre del nivel 12"
+ },
+ "nivel.12": {
+  "texto": "Arquitectura molecular",
+  "descripcion": "Nombre del nivel 13"
+ },
+ "nivel.13": {
+  "texto": "Leyenda periódica",
+  "descripcion": "Nombre del nivel 14"
+ },
+ "nivel.14": {
+  "texto": "Supernova",
+  "descripcion": "Nombre del nivel 15"
+ },
+ "tienda.abrir": {
+  "texto": "Tienda",
+  "descripcion": "Botón"
+ },
+ "tienda.titulo": {
+  "texto": "Tienda de quarks",
+  "descripcion": "Título"
+ },
+ "tienda.texto": {
+  "texto": "Tienes {n} quarks. Se ganan con lecciones, misiones y cofres.",
+  "descripcion": "Tienda"
+ },
+ "tienda.gratis": {
+  "texto": "Aquí todo se paga con quarks del juego: la app es 100 % gratuita, sin compras con dinero.",
+  "descripcion": "Nota de gratuidad"
+ },
+ "tienda.protector": {
+  "texto": "Protector de racha",
+  "descripcion": "Artículo"
+ },
+ "tienda.protector.texto": {
+  "texto": "Si un día no juegas, tu racha no se pierde. Máximo 2.",
+  "descripcion": "Artículo"
+ },
+ "tienda.impulso": {
+  "texto": "Doble XP",
+  "descripcion": "Artículo"
+ },
+ "tienda.impulso.texto": {
+  "texto": "Durante 15 minutos, todo lo que hagas da el doble de XP.",
+  "descripcion": "Artículo"
+ },
+ "tienda.lleno": {
+  "texto": "Ya tienes el máximo",
+  "descripcion": "Artículo no disponible"
+ },
+ "tienda.activo": {
+  "texto": "Activo ahora",
+  "descripcion": "Artículo en uso"
+ },
+ "tienda.comprado.protector": {
+  "texto": "¡Racha protegida!",
+  "descripcion": "Aviso al comprar"
+ },
+ "tienda.comprado.impulso": {
+  "texto": "¡Doble XP durante 15 minutos!",
+  "descripcion": "Aviso al comprar"
+ },
+ "cofre.titulo": {
+  "texto": "¡Cofre abierto!",
+  "descripcion": "Título"
+ },
+ "cofre.vacio": {
+  "texto": "Este cofre ya lo abriste",
+  "descripcion": "Cofre ya abierto"
+ },
+ "cofre.texto": {
+  "texto": "Gástalos en la tienda de tu perfil.",
+  "descripcion": "Cofre"
+ },
+ "racha.dia_1": {
+  "texto": "¡Primer día de racha!",
+  "descripcion": "Pantalla de racha"
+ },
+ "racha.dias": {
+  "texto": "¡{n} días de racha!",
+  "descripcion": "Pantalla de racha"
+ },
+ "racha.texto": {
+  "texto": "Vuelve mañana para que siga creciendo.",
+  "descripcion": "Pantalla de racha"
+ },
+ "ficha.descubrimiento": {
+  "texto": "Cómo se descubrió",
+  "descripcion": "Encabezado de ficha"
+ },
+ "ficha.usos": {
+  "texto": "Dónde lo usamos",
+  "descripcion": "Encabezado de ficha"
+ },
+ "ficha.porque": {
+  "texto": "¿Por qué este y no otro?",
+  "descripcion": "Encabezado de ficha"
+ },
+ "ficha.unico": {
+  "texto": "Lo que lo hace único",
+  "descripcion": "Encabezado de ficha"
+ },
+ "ficha.curiosidad": {
+  "texto": "Curiosidad",
+  "descripcion": "Encabezado de ficha"
+ },
+ "ficha.porque_especie": {
+  "texto": "¿Por qué es así?",
+  "descripcion": "Encabezado de ficha de sustancia"
+ },
+ "tabla.bloqueado_camino": {
+  "texto": "Lo conocerás en la unidad {unidad} del camino.",
+  "descripcion": "Elemento bloqueado"
+ },
+ "celebrar.mision": {
+  "texto": "¡Misión cumplida!",
+  "descripcion": "Aviso"
+ },
+ "insignia.leccion1.nombre": {
+  "texto": "Primer paso",
+  "descripcion": "Insignia"
+ },
+ "insignia.leccion1.descripcion": {
+  "texto": "Completa tu primera lección",
+  "descripcion": "Insignia"
+ },
+ "insignia.racha3.nombre": {
+  "texto": "En marcha",
+  "descripcion": "Insignia"
+ },
+ "insignia.racha3.descripcion": {
+  "texto": "Racha de 3 días",
+  "descripcion": "Insignia"
+ },
+ "insignia.racha7.nombre": {
+  "texto": "Semana completa",
+  "descripcion": "Insignia"
+ },
+ "insignia.racha7.descripcion": {
+  "texto": "Racha de 7 días",
+  "descripcion": "Insignia"
+ },
+ "insignia.racha30.nombre": {
+  "texto": "Imparable",
+  "descripcion": "Insignia"
+ },
+ "insignia.racha30.descripcion": {
+  "texto": "Racha de 30 días",
+  "descripcion": "Insignia"
+ },
+ "insignia.perfecto.nombre": {
+  "texto": "Precisión láser",
+  "descripcion": "Insignia"
+ },
+ "insignia.perfecto.descripcion": {
+  "texto": "5 lecciones sin fallos",
+  "descripcion": "Insignia"
+ },
+ "insignia.detective.nombre": {
+  "texto": "Detective",
+  "descripcion": "Insignia"
+ },
+ "insignia.detective.descripcion": {
+  "texto": "25 aciertos en Adivina",
+  "descripcion": "Insignia"
+ },
+ "insignia.lector.nombre": {
+  "texto": "Ratón de biblioteca",
+  "descripcion": "Insignia"
+ },
+ "insignia.lector.descripcion": {
+  "texto": "Lee 20 fichas de elementos",
+  "descripcion": "Insignia"
+ },
+ "insignia.fotografo.nombre": {
+  "texto": "Selfi científico",
+  "descripcion": "Insignia"
+ },
+ "insignia.fotografo.descripcion": {
+  "texto": "Hazte una foto con un personaje",
+  "descripcion": "Insignia"
+ },
+ "profe.liga": {
+  "texto": "Liga de la semana",
+  "descripcion": "Panel del profesorado: título del ranking semanal de la clase"
+ },
+ "profe.liga_texto": {
+  "texto": "XP de esta semana (lunes a domingo). Sirve para animar, no para evaluar.",
+  "descripcion": "Panel del profesorado: explicación del ranking"
+ },
+ "profe.liga_vacia": {
+  "texto": "Nadie ha sumado XP esta semana todavía.",
+  "descripcion": "Panel del profesorado: ranking vacío"
+ },
+ "foto.pista": {
+  "texto": "Mueve con un dedo, pellizca para agrandar y gira con dos dedos.",
+  "descripcion": "Instrucciones del modo foto con la cámara"
+ },
+ "foto.pista_ra": {
+  "texto": "Toca el suelo para colocarlos. Para la foto, usa la captura de pantalla del móvil.",
+  "descripcion": "Instrucciones del modo foto en RA del mundo (WebXR)"
+ },
+ "foto.personaje": {
+  "texto": "Con",
+  "descripcion": "Etiqueta del selector de personaje"
+ },
+ "foto.junto": {
+  "texto": "Y",
+  "descripcion": "Etiqueta del selector de átomo o molécula"
+ },
+ "foto.ver_atomo": {
+  "texto": "Ver átomo",
+  "descripcion": "Botón: mostrar el átomo o la molécula en vez del objeto"
+ },
+ "foto.ver_objeto": {
+  "texto": "Ver objeto",
+  "descripcion": "Botón: mostrar el objeto cotidiano en vez del átomo"
+ },
+ "foto.girar_camara": {
+  "texto": "Cambiar de cámara (selfi)",
+  "descripcion": "Lectores de pantalla"
+ },
+ "foto.disparar": {
+  "texto": "Hacer la foto",
+  "descripcion": "Lectores de pantalla: botón disparador"
+ },
+ "foto.marca": {
+  "texto": "Átomos AR · webar.peer4u.app",
+  "descripcion": "Marca de agua de las fotos"
+ },
+ "foto.alt": {
+  "texto": "Tu foto con el personaje",
+  "descripcion": "Texto alternativo de la foto"
+ },
+ "foto.compartir": {
+  "texto": "Compartir",
+  "descripcion": "Botón"
+ },
+ "foto.guardar": {
+  "texto": "Guardar",
+  "descripcion": "Botón"
+ },
+ "foto.otra": {
+  "texto": "Otra",
+  "descripcion": "Botón: volver a hacer foto"
+ },
+ "foto.modo_camara": {
+  "texto": "Foto con la cámara",
+  "descripcion": "Opción del modo foto"
+ },
+ "foto.modo_camara_texto": {
+  "texto": "Personaje y molécula encima de lo que ves; también selfi.",
+  "descripcion": "Opción del modo foto"
+ },
+ "foto.modo_ra": {
+  "texto": "En tu habitación (RA)",
+  "descripcion": "Opción del modo foto con WebXR"
+ },
+ "foto.modo_ra_texto": {
+  "texto": "Colócalos en el suelo a tamaño de muñeco y da vueltas a su alrededor.",
+  "descripcion": "Opción del modo foto con WebXR"
+ }
+}

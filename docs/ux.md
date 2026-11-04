@@ -14,8 +14,10 @@ que la investigación de gamificación dice que funciona con adolescentes
 | **Estado siempre visible** | Cabecera con nivel, XP y racha; barra de carga mientras las tarjetas se juntan; «Descomponer» se llena mientras se mantiene; estado de la conexión (📴 / ⏳ / ☁️) |
 | **Respuesta inmediata** | Destello, fuego o hielo, aviso con la ecuación, vibración (Android) y avisos de logro que se tocan para ver la historia |
 | **Prevenir errores** | Elementos bloqueados visibles pero explicados; confirmación antes de borrar en el panel del profesorado; reenviar datos no duplica nada |
-| **Revelar poco a poco** | Se empieza con 4 elementos; cada molécula desbloquea más y cuenta su historia. Las pistas del moleculario no destripan la respuesta |
-| **Motivación sana** | Colección, metas de clase y racha **semanal** (no diaria); sin ranking individual público |
+| **Revelar poco a poco** | Se empieza solo con el hidrógeno. Cada lección del camino presenta un elemento (enseña primero y pregunta después) y lo desbloquea; los laboratorios piden formar lo que ya se puede. Lo fallado vuelve al final de la lección y cada dos unidades hay un repaso (práctica espaciada) |
+| **Hábito, no presión** | Racha **diaria** (lo pidió el cliente, al estilo de las apps de idiomas) suavizada con protectores que se ganan jugando, meta diaria elegible (10-50 XP) y misiones cortas. Sin vidas que se pierden ni muros de pago: todo se gana con quarks del juego, la app es gratis |
+| **Competir sin exponer** | Ligas semanales: la de clase usa el alias de clase; la mundial es opcional y el apodo lo pone el servidor («Neutrón Veloz 427»), para que nadie use su nombre. Quien no juega una semana no baja |
+| **Personajes y mascota** | 16 guías reales y diversos (sexo, origen, época) con frases escritas para la app (no citas inventadas). Schrödingato reacciona a lo que pasa y, si no lo miras, se vuelve nube de probabilidad; se puede quitar en ajustes |
 
 ## Accesibilidad (WCAG 2.2)
 
@@ -24,11 +26,11 @@ que la investigación de gamificación dice que funciona con adolescentes
 | 1.1.1 Contenido no textual | Emojis decorativos con `aria-hidden`; la tabla periódica y las insignias tienen etiqueta (con «bloqueado» / «pendiente») |
 | 1.3.1 Información y relaciones | Pestañas con `role=tablist`/`tab`/`tabpanel`; tablas de datos con `th scope`; la gráfica tiene vista de tabla |
 | 1.4.1 Uso del color | Exo/endo con icono (🔥/❄️) y texto, no solo con color; protones/neutrones/electrones con nombre en la leyenda |
-| 1.4.3 / 1.4.11 Contraste | Tema oscuro con texto ≥ 4,5:1; **alto contraste** opcional (negro puro, blanco y bordes); el azul de la gráfica, validado ≥ 3:1 |
+| 1.4.3 / 1.4.11 Contraste | Tema claro (y oscuro opcional) con texto ≥ 4,5:1; **alto contraste** opcional (negro puro, blanco y bordes); el azul de la gráfica, validado ≥ 3:1 |
 | 1.4.4 Cambiar el tamaño del texto | Todo en `rem`; ajuste Normal / Grande / Muy grande (hasta el 130 %) sin romper la maquetación |
 | 2.1.1 Teclado | Pestañas con flechas; la introducción con flechas; todo lo interactivo es un botón o un enlace |
 | 2.3.3 Animación por interacción | «Menos movimiento» (o el ajuste del sistema): sin animaciones de interfaz, sin temblores en las tarjetas y la introducción como estampas quietas |
-| 2.4.7 Foco visible | Contorno amarillo de 3 px en todo lo enfocable |
+| 2.4.7 Foco visible | Contorno azul de 3 px en todo lo enfocable |
 | 2.5.1 Gestos del puntero | Arrastrar tarjetas tiene alternativa de **tocar una y luego otra**; deslizar la introducción tiene botones |
 | 2.5.8 Tamaño del objetivo | Mínimo 44 × 44 px (más que los 24 px que pide AA) |
 | 3.1.1 / 3.1.2 Idioma | `lang` del documento según el idioma elegido |
@@ -36,16 +38,19 @@ que la investigación de gamificación dice que funciona con adolescentes
 
 ## Textos e idiomas
 
-- **Todos los textos** están en `apps/web/src/i18n/es.json`: clave →
+- **Todos los textos** están en `apps/web/src/i18n/es/*.json` (un fichero por
+  sección: `ui`, `app`, `personajes`, `elementos-*`, `sustancias`, `objetos`,
+  `materia`, `acertijos`, `tarjetas`…): clave →
   `texto` + `descripcion` (qué es y dónde sale, para quien traduzca). Incluye
   los de `@webar/chem` (nombres de elementos, familias, sustancias, usos y
   reacciones), extraídos de sus datos.
-- `en.json` traduce toda la interfaz y los nombres. Las **historias, los usos
-  y las notas de las reacciones están pendientes** de traducir: mientras
-  tanto salen en español (la tabla cae al español en lo que falte).
-- Añadir un idioma: copiar `en.json` con las mismas claves, importarlo en
-  `src/i18n/index.ts` y añadirlo al selector de `index.html` y a `LANGUAGES`
-  de `src/settings.ts`.
+- `en/*.json` traduce la interfaz y los nombres. **Pendiente de traducir**:
+  las fichas de los elementos y sustancias, los personajes, los objetos, la
+  sección Materia y las historias; mientras tanto salen en español (la tabla
+  cae al español en lo que falte).
+- Añadir un idioma: una carpeta `src/i18n/<idioma>/` con las mismas claves,
+  registrarla en `src/i18n/index.ts` y añadirla al selector de `index.html` y
+  a `LANGUAGES` de `src/settings.ts`.
 - El idioma por defecto es el del navegador si está disponible; si no, español.
 
 ## Lo que queda
@@ -54,4 +59,6 @@ que la investigación de gamificación dice que funciona con adolescentes
   reales.
 - Alternativa accesible a la escena 3D de la mesa (lista de tarjetas que se
   puedan juntar con el teclado).
-- Traducir las historias y los usos al inglés.
+- Traducir al inglés las fichas, los personajes, los objetos y Materia.
+- Probar en móviles reales el pellizco dentro de WebXR (Materia) y la foto con
+  la cámara frontal en iPhone.

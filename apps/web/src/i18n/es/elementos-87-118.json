@@ -1,0 +1,1538 @@
+{
+ "elemento.Fr.descubrimiento": {
+  "texto": "Marguerite Perey lo descubrió en 1939 en el Instituto Curie de París. Purificaba actinio y notó una radiación que no encajaba con nada conocido: venía de un átomo nuevo que nacía cuando el actinio-227 se desintegraba.",
+  "descripcion": "Ficha del francio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Fr.usos": {
+  "texto": "No tiene usos prácticos: es rarísimo y dura muy poco. En laboratorios se fabrican unos miles de átomos y se atrapan con láseres para estudiar cómo funcionan los átomos y poner a prueba la física fundamental.",
+  "descripcion": "Ficha del francio: dónde se usa hoy"
+ },
+ "elemento.Fr.porque": {
+  "texto": "Su isótopo más estable, el francio-223, tiene una semivida de solo 22 minutos: antes de juntar una muestra, ya se ha desintegrado. Interesa a los físicos porque es el alcalino más pesado: un solo electrón externo y un núcleo enorme, ideal para medir efectos muy finos.",
+  "descripcion": "Ficha del francio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Fr.unico": {
+  "texto": "Fue el último elemento que se descubrió primero en la naturaleza y no fabricándolo en un laboratorio. Se calcula que en toda la corteza terrestre hay, en cada momento, apenas unas decenas de gramos.",
+  "descripcion": "Ficha del francio: una cualidad única o un récord"
+ },
+ "elemento.Fr.curiosidad": {
+  "texto": "Perey lo bautizó por su país, y en 1962 se convirtió en la primera mujer elegida para la Academia de Ciencias francesa (como miembro correspondiente).",
+  "descripcion": "Ficha del francio: una curiosidad sorprendente"
+ },
+ "elemento.Fr.pista": {
+  "texto": "Soy el metal alcalino más pesado y una química me encontró en 1939 entre los restos del actinio.",
+  "descripcion": "Ficha del francio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Fr.pregunta": {
+  "texto": "¿Quién descubrió el francio en 1939?",
+  "descripcion": "Ficha del francio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Fr.pregunta.ok": {
+  "texto": "Marguerite Perey",
+  "descripcion": "Ficha del francio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Fr.pregunta.mal1": {
+  "texto": "Marie Curie",
+  "descripcion": "Ficha del francio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Fr.pregunta.mal2": {
+  "texto": "Irène Joliot-Curie",
+  "descripcion": "Ficha del francio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Fr.pregunta.mal3": {
+  "texto": "Lise Meitner",
+  "descripcion": "Ficha del francio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Fr.pregunta.explicacion": {
+  "texto": "Marguerite Perey, que trabajaba en el Instituto Curie, lo encontró al purificar actinio.",
+  "descripcion": "Ficha del francio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Ra.descubrimiento": {
+  "texto": "Marie y Pierre Curie lo anunciaron en diciembre de 1898 en París, junto con Gustave Bémont. Notaron que la pechblenda era más radiactiva que el uranio que contenía, así que debía esconder algo más. Tras procesar toneladas de mineral, Marie Curie aisló el radio metálico en 1910 con André Debierne.",
+  "descripcion": "Ficha del radio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Ra.usos": {
+  "texto": "Hoy el radio-223 se usa en medicina para tratar tumores de próstata que se han extendido a los huesos. Hace un siglo se usaba en pinturas que brillaban en la oscuridad, hasta que se vio lo peligroso que era.",
+  "descripcion": "Ficha del radio: dónde se usa hoy"
+ },
+ "elemento.Ra.porque": {
+  "texto": "El radio es de la misma familia que el calcio, así que el cuerpo lo lleva a los huesos como si fuera calcio. Allí, el radio-223 emite partículas alfa que dañan las células del tumor sin llegar muy lejos.",
+  "descripcion": "Ficha del radio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Ra.unico": {
+  "texto": "La antigua unidad de radiactividad, el curio, se definió a partir de la actividad de un gramo de radio-226. Ese isótopo tiene una semivida de unos 1600 años.",
+  "descripcion": "Ficha del radio: una cualidad única o un récord"
+ },
+ "elemento.Ra.curiosidad": {
+  "texto": "Las obreras que pintaban esferas de reloj con radio en EE. UU. afilaban los pinceles con los labios; su enfermedad y su lucha en los tribunales (las «Radium Girls») cambiaron las leyes de seguridad laboral.",
+  "descripcion": "Ficha del radio: una curiosidad sorprendente"
+ },
+ "elemento.Ra.pista": {
+  "texto": "Un matrimonio de científicos me sacó de toneladas de pechblenda y mi nombre viene de la palabra latina para «rayo».",
+  "descripcion": "Ficha del radio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Ra.pregunta": {
+  "texto": "¿Por qué el radio-223 llega a los huesos?",
+  "descripcion": "Ficha del radio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Ra.pregunta.ok": {
+  "texto": "El cuerpo lo confunde con calcio",
+  "descripcion": "Ficha del radio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Ra.pregunta.mal1": {
+  "texto": "Porque es muy magnético",
+  "descripcion": "Ficha del radio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Ra.pregunta.mal2": {
+  "texto": "Porque pesa más que la sangre",
+  "descripcion": "Ficha del radio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Ra.pregunta.mal3": {
+  "texto": "Porque se disuelve en la grasa",
+  "descripcion": "Ficha del radio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Ra.pregunta.explicacion": {
+  "texto": "Es de la familia del calcio y el cuerpo lo lleva, como al calcio, a los huesos.",
+  "descripcion": "Ficha del radio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Ac.descubrimiento": {
+  "texto": "André-Louis Debierne, colaborador de los Curie, lo encontró en 1899 en París, en los restos de pechblenda de los que ya habían sacado el radio y el polonio. En 1902 el alemán Friedrich Giesel lo descubrió por su cuenta. Aún hoy algunos historiadores discuten si las primeras muestras de Debierne eran de verdad actinio.",
+  "descripcion": "Ficha del actinio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Ac.usos": {
+  "texto": "Casi solo investigación. El actinio-225 se está ensayando en medicina: unido a moléculas que buscan células tumorales, les lleva una dosis de partículas alfa. Mezclado con berilio, el actinio-227 sirve como fuente de neutrones.",
+  "descripcion": "Ficha del actinio: dónde se usa hoy"
+ },
+ "elemento.Ac.porque": {
+  "texto": "El actinio-225 tiene una semivida de unos 10 días: da tiempo a fabricarlo, enviarlo y usarlo, pero no sigue radiando mucho tiempo en el cuerpo. Además, en su cadena de desintegración cada átomo suelta cuatro partículas alfa, lo que lo hace muy eficaz.",
+  "descripcion": "Ficha del actinio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Ac.unico": {
+  "texto": "Da nombre a toda la serie de los actínidos: los 15 elementos que van del actinio (89) al lawrencio (103).",
+  "descripcion": "Ficha del actinio: una cualidad única o un récord"
+ },
+ "elemento.Ac.curiosidad": {
+  "texto": "Es tan radiactivo que brilla en la oscuridad con un resplandor azul pálido, y su nombre viene del griego «aktis», rayo.",
+  "descripcion": "Ficha del actinio: una curiosidad sorprendente"
+ },
+ "elemento.Ac.pista": {
+  "texto": "Doy nombre a toda una fila de la parte de abajo de la tabla y brillo de azul en la oscuridad.",
+  "descripcion": "Ficha del actinio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Ac.pregunta": {
+  "texto": "¿Cuántos elementos forman la serie que lleva su nombre?",
+  "descripcion": "Ficha del actinio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Ac.pregunta.ok": {
+  "texto": "15",
+  "descripcion": "Ficha del actinio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Ac.pregunta.mal1": {
+  "texto": "7",
+  "descripcion": "Ficha del actinio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Ac.pregunta.mal2": {
+  "texto": "10",
+  "descripcion": "Ficha del actinio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Ac.pregunta.mal3": {
+  "texto": "18",
+  "descripcion": "Ficha del actinio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Ac.pregunta.explicacion": {
+  "texto": "La serie de los actínidos va del elemento 89 al 103: son 15 elementos.",
+  "descripcion": "Ficha del actinio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Th.descubrimiento": {
+  "texto": "El sueco Jöns Jacob Berzelius lo descubrió en 1829 en un mineral negro hallado en una isla de Noruega, que le envió el mineralogista noruego Morten Thrane Esmark. Lo llamó así por Thor, el dios nórdico del trueno. En 1898, Marie Curie y Gerhard Schmidt descubrieron por separado que era radiactivo.",
+  "descripcion": "Ficha del torio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Th.usos": {
+  "texto": "Su óxido se usó en las camisas incandescentes de las lámparas de gas y de cámping, y aún se usa en algunos electrodos de soldadura. Países como la India investigan reactores nucleares que lo usen como combustible.",
+  "descripcion": "Ficha del torio: dónde se usa hoy"
+ },
+ "elemento.Th.porque": {
+  "texto": "El torio-232 no se fisiona directamente, pero al absorber un neutrón acaba convirtiéndose en uranio-233, que sí lo hace. Es unas tres veces más abundante que el uranio en la corteza, y por eso interesa como combustible del futuro.",
+  "descripcion": "Ficha del torio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Th.unico": {
+  "texto": "Su óxido, el dióxido de torio, tiene el punto de fusión más alto de todos los óxidos: unos 3350 °C.",
+  "descripcion": "Ficha del torio: una cualidad única o un récord"
+ },
+ "elemento.Th.curiosidad": {
+  "texto": "Berzelius ya había anunciado un «torio» en 1815, pero resultó ser un error; guardó el nombre y se lo puso al elemento auténtico catorce años después.",
+  "descripcion": "Ficha del torio: una curiosidad sorprendente"
+ },
+ "elemento.Th.pista": {
+  "texto": "Me bautizaron como al dios nórdico del trueno y mi óxido aguanta más de 3000 °C sin fundirse.",
+  "descripcion": "Ficha del torio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Th.pregunta": {
+  "texto": "¿En qué acaba convirtiéndose el torio-232 al absorber un neutrón?",
+  "descripcion": "Ficha del torio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Th.pregunta.ok": {
+  "texto": "En uranio-233, que se fisiona",
+  "descripcion": "Ficha del torio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Th.pregunta.mal1": {
+  "texto": "En plutonio-239, que se fisiona",
+  "descripcion": "Ficha del torio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Th.pregunta.mal2": {
+  "texto": "En radio-226, que brilla",
+  "descripcion": "Ficha del torio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Th.pregunta.mal3": {
+  "texto": "En plomo-208, que es estable",
+  "descripcion": "Ficha del torio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Th.pregunta.explicacion": {
+  "texto": "Tras absorber un neutrón y sufrir dos desintegraciones beta, se convierte en uranio-233, un combustible nuclear.",
+  "descripcion": "Ficha del torio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Pa.descubrimiento": {
+  "texto": "En 1913, Kasimir Fajans y Oswald Göhring detectaron un isótopo que duraba poco más de un minuto. En 1917-1918, Lise Meitner y Otto Hahn encontraron en Berlín el protactinio-231, que dura miles de años; Meitner hizo gran parte del trabajo mientras Hahn estaba en la guerra. En Glasgow, Frederick Soddy y John Cranston lo hallaron casi a la vez.",
+  "descripcion": "Ficha del protactinio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Pa.usos": {
+  "texto": "No tiene usos fuera de la investigación. Los geólogos comparan el protactinio-231 y el torio-230 de los sedimentos del fondo del mar para fecharlos y estudiar cómo circulaban los océanos en el pasado.",
+  "descripcion": "Ficha del protactinio: dónde se usa hoy"
+ },
+ "elemento.Pa.porque": {
+  "texto": "Sirve de reloj porque ambos isótopos nacen del uranio disuelto en el agua del mar, pero se desintegran a ritmos distintos: la proporción entre ellos indica cuánto tiempo ha pasado.",
+  "descripcion": "Ficha del protactinio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Pa.unico": {
+  "texto": "Es uno de los elementos naturales más raros y caros: en 1961 el Reino Unido sacó unos 125 gramos de 60 toneladas de residuos de uranio, y durante años esa fue casi toda la reserva mundial.",
+  "descripcion": "Ficha del protactinio: una cualidad única o un récord"
+ },
+ "elemento.Pa.curiosidad": {
+  "texto": "Su nombre significa «antes del actinio», porque al desintegrarse se convierte en actinio.",
+  "descripcion": "Ficha del protactinio: una curiosidad sorprendente"
+ },
+ "elemento.Pa.pista": {
+  "texto": "Una física austriaca me encontró en Berlín y mi nombre dice que voy justo «antes» de otro elemento.",
+  "descripcion": "Ficha del protactinio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Pa.pregunta": {
+  "texto": "¿Qué científica participó en el descubrimiento del protactinio-231?",
+  "descripcion": "Ficha del protactinio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Pa.pregunta.ok": {
+  "texto": "Lise Meitner",
+  "descripcion": "Ficha del protactinio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Pa.pregunta.mal1": {
+  "texto": "Marie Curie",
+  "descripcion": "Ficha del protactinio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Pa.pregunta.mal2": {
+  "texto": "Marguerite Perey",
+  "descripcion": "Ficha del protactinio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Pa.pregunta.mal3": {
+  "texto": "Ida Noddack",
+  "descripcion": "Ficha del protactinio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Pa.pregunta.explicacion": {
+  "texto": "Lise Meitner lo encontró en Berlín junto a Otto Hahn en 1917-1918.",
+  "descripcion": "Ficha del protactinio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.U.descubrimiento": {
+  "texto": "El químico alemán Martin Heinrich Klaproth lo identificó en 1789 en Berlín, en la pechblenda, y lo bautizó por el planeta Urano, descubierto ocho años antes. En realidad había obtenido un óxido: el francés Eugène-Melchior Péligot aisló el metal en 1841.",
+  "descripcion": "Ficha del uranio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.U.usos": {
+  "texto": "Es el combustible de las centrales nucleares, que en España producen cerca de una quinta parte de la electricidad. El uranio empobrecido, muy denso, se usa en blindajes y contrapesos.",
+  "descripcion": "Ficha del uranio: dónde se usa hoy"
+ },
+ "elemento.U.porque": {
+  "texto": "El uranio-235 es el único isótopo natural que se rompe (se fisiona) al chocar con un neutrón lento y suelta más neutrones, que rompen otros núcleos: una reacción en cadena. Como en el mineral solo hay un 0,7 %, se enriquece hasta un 3-5 % para las centrales.",
+  "descripcion": "Ficha del uranio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.U.unico": {
+  "texto": "Es el elemento más pesado que se encuentra en cantidades apreciables en la naturaleza.",
+  "descripcion": "Ficha del uranio: una cualidad única o un récord"
+ },
+ "elemento.U.curiosidad": {
+  "texto": "Hace unos 2000 millones de años, en Oklo (Gabón), un yacimiento de uranio funcionó él solo como un reactor nuclear natural, a ratos, durante cientos de miles de años.",
+  "descripcion": "Ficha del uranio: una curiosidad sorprendente"
+ },
+ "elemento.U.pista": {
+  "texto": "Me bautizaron por un planeta descubierto ocho años antes que yo y alimento las centrales nucleares.",
+  "descripcion": "Ficha del uranio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.U.pregunta": {
+  "texto": "¿Qué isótopo mantiene la reacción en cadena en las centrales?",
+  "descripcion": "Ficha del uranio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.U.pregunta.ok": {
+  "texto": "El uranio-235",
+  "descripcion": "Ficha del uranio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.U.pregunta.mal1": {
+  "texto": "El uranio-238",
+  "descripcion": "Ficha del uranio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.U.pregunta.mal2": {
+  "texto": "El uranio-234",
+  "descripcion": "Ficha del uranio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.U.pregunta.mal3": {
+  "texto": "El uranio-232",
+  "descripcion": "Ficha del uranio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.U.pregunta.explicacion": {
+  "texto": "El uranio-235 se fisiona con neutrones lentos y libera más neutrones, que mantienen la reacción en cadena.",
+  "descripcion": "Ficha del uranio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Np.descubrimiento": {
+  "texto": "Edwin McMillan y Philip Abelson lo fabricaron en 1940 en el Laboratorio de Radiación de Berkeley (EE. UU.). Bombardearon uranio con neutrones: el uranio-238 capturaba uno, se convertía en uranio-239 y este, al emitir un electrón (desintegración beta), se transformaba en el elemento 93.",
+  "descripcion": "Ficha del neptunio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Np.usos": {
+  "texto": "Casi solo investigación. Su principal utilidad es como materia prima: al bombardear neptunio-237 con neutrones se fabrica el plutonio-238 que da energía a las sondas espaciales.",
+  "descripcion": "Ficha del neptunio: dónde se usa hoy"
+ },
+ "elemento.Np.porque": {
+  "texto": "Se usa el neptunio-237 porque aparece como subproducto en los reactores y vive mucho (semivida de unos 2 millones de años), así que se puede acumular y separar químicamente.",
+  "descripcion": "Ficha del neptunio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Np.unico": {
+  "texto": "Fue el primer elemento transuránico, es decir, el primero más allá del uranio, que se consiguió fabricar.",
+  "descripcion": "Ficha del neptunio: una cualidad única o un récord"
+ },
+ "elemento.Np.curiosidad": {
+  "texto": "En 1934 Enrico Fermi creyó haber creado el elemento 93, y la química alemana Ida Noddack sugirió que quizá había partido el núcleo de uranio: tenía razón, pero nadie le hizo caso hasta que se descubrió la fisión en 1938.",
+  "descripcion": "Ficha del neptunio: una curiosidad sorprendente"
+ },
+ "elemento.Np.pista": {
+  "texto": "Fui el primer elemento fabricado más allá del uranio y llevo el nombre del planeta que sigue a Urano.",
+  "descripcion": "Ficha del neptunio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Np.pregunta": {
+  "texto": "¿Por qué fue un hito el neptunio?",
+  "descripcion": "Ficha del neptunio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Np.pregunta.ok": {
+  "texto": "Fue el primer elemento transuránico",
+  "descripcion": "Ficha del neptunio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Np.pregunta.mal1": {
+  "texto": "Fue el primero hallado en meteoritos",
+  "descripcion": "Ficha del neptunio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Np.pregunta.mal2": {
+  "texto": "Es el elemento más denso",
+  "descripcion": "Ficha del neptunio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Np.pregunta.mal3": {
+  "texto": "Fue el primero descubierto en Europa",
+  "descripcion": "Ficha del neptunio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Np.pregunta.explicacion": {
+  "texto": "Fue el primer elemento con más protones que el uranio, es decir, el primer transuránico.",
+  "descripcion": "Ficha del neptunio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Pu.descubrimiento": {
+  "texto": "Glenn Seaborg, Edwin McMillan, Joseph Kennedy y Arthur Wahl lo crearon en Berkeley entre finales de 1940 y principios de 1941, bombardeando uranio con deuterones (núcleos de hidrógeno pesado) en un ciclotrón. Por la Segunda Guerra Mundial, el descubrimiento se mantuvo en secreto hasta 1946.",
+  "descripcion": "Ficha del plutonio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Pu.usos": {
+  "texto": "Se usa como combustible en algunas centrales nucleares mezclado con uranio y, por desgracia, en armas nucleares. El plutonio-238 da electricidad a sondas como las Voyager y a los rovers Curiosity y Perseverance en Marte.",
+  "descripcion": "Ficha del plutonio: dónde se usa hoy"
+ },
+ "elemento.Pu.porque": {
+  "texto": "El plutonio-238 tiene una semivida de unos 88 años y, al desintegrarse, se calienta mucho: ese calor se convierte en electricidad durante décadas, sin necesidad de luz solar. Además emite partículas alfa, que se frenan con muy poco blindaje.",
+  "descripcion": "Ficha del plutonio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Pu.unico": {
+  "texto": "El plutonio metálico cambia seis veces de estructura cristalina entre la temperatura ambiente y su punto de fusión, más que ningún otro elemento.",
+  "descripcion": "Ficha del plutonio: una cualidad única o un récord"
+ },
+ "elemento.Pu.curiosidad": {
+  "texto": "Seaborg eligió el símbolo «Pu» medio en broma, porque en inglés suena como la exclamación que se suelta ante algo que apesta, y le sorprendió que nadie protestara.",
+  "descripcion": "Ficha del plutonio: una curiosidad sorprendente"
+ },
+ "elemento.Pu.pista": {
+  "texto": "Llevo el nombre de un astro que dejó de ser planeta en 2006 y doy energía a sondas que viajan muy lejos del Sol.",
+  "descripcion": "Ficha del plutonio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Pu.pregunta": {
+  "texto": "¿Por qué las sondas espaciales usan plutonio-238?",
+  "descripcion": "Ficha del plutonio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Pu.pregunta.ok": {
+  "texto": "Da calor durante décadas",
+  "descripcion": "Ficha del plutonio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Pu.pregunta.mal1": {
+  "texto": "Es el metal más ligero",
+  "descripcion": "Ficha del plutonio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Pu.pregunta.mal2": {
+  "texto": "Refleja muy bien la luz solar",
+  "descripcion": "Ficha del plutonio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Pu.pregunta.mal3": {
+  "texto": "Atrae el polvo espacial",
+  "descripcion": "Ficha del plutonio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Pu.pregunta.explicacion": {
+  "texto": "Con una semivida de unos 88 años, su calor se transforma en electricidad durante décadas.",
+  "descripcion": "Ficha del plutonio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Am.descubrimiento": {
+  "texto": "Glenn Seaborg, Ralph James, Leon Morgan y Albert Ghiorso lo obtuvieron a finales de 1944 en el Laboratorio Metalúrgico de Chicago (EE. UU.), dentro del Proyecto Manhattan. Metieron plutonio-239 en un reactor: tras capturar neutrones y emitir una partícula beta, apareció el elemento 95.",
+  "descripcion": "Ficha del americio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Am.usos": {
+  "texto": "Casi todos los detectores de humo iónicos llevan una pizca de americio-241, menos de un microgramo. También se usa en medidores de espesor y, mezclado con berilio, como fuente de neutrones para explorar pozos de petróleo.",
+  "descripcion": "Ficha del americio: dónde se usa hoy"
+ },
+ "elemento.Am.porque": {
+  "texto": "El americio-241 emite partículas alfa que ionizan el aire entre dos placas y dejan pasar una corriente pequeñísima; si entra humo, la corriente baja y salta la alarma. Su semivida de unos 430 años hace que el detector funcione décadas sin perder fuerza, y las partículas alfa no atraviesan ni una hoja de papel.",
+  "descripcion": "Ficha del americio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Am.unico": {
+  "texto": "Es uno de los pocos elementos sintéticos que hay en millones de hogares.",
+  "descripcion": "Ficha del americio: una cualidad única o un récord"
+ },
+ "elemento.Am.curiosidad": {
+  "texto": "Seaborg reveló su existencia en 1945 en un programa de radio para niños, «Quiz Kids», cuando un chico le preguntó si se habían descubierto elementos nuevos: lo contó días antes del anuncio oficial.",
+  "descripcion": "Ficha del americio: una curiosidad sorprendente"
+ },
+ "elemento.Am.pista": {
+  "texto": "Me fabricaron durante la Segunda Guerra Mundial y hoy vigilo, desde el techo de muchas casas, que no haya humo.",
+  "descripcion": "Ficha del americio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Am.pregunta": {
+  "texto": "¿Por qué se usa americio-241 en los detectores de humo?",
+  "descripcion": "Ficha del americio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Am.pregunta.ok": {
+  "texto": "Emite partículas alfa durante siglos",
+  "descripcion": "Ficha del americio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Am.pregunta.mal1": {
+  "texto": "Brilla cuando detecta el humo",
+  "descripcion": "Ficha del americio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Am.pregunta.mal2": {
+  "texto": "Huele el humo con su vapor",
+  "descripcion": "Ficha del americio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Am.pregunta.mal3": {
+  "texto": "Atrae las partículas de hollín",
+  "descripcion": "Ficha del americio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Am.pregunta.explicacion": {
+  "texto": "Sus partículas alfa ionizan el aire y su semivida de unos 430 años mantiene el detector activo durante décadas.",
+  "descripcion": "Ficha del americio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Cm.descubrimiento": {
+  "texto": "Glenn Seaborg, Ralph James y Albert Ghiorso lo produjeron en 1944 bombardeando plutonio-239 con partículas alfa en el ciclotrón de Berkeley; la química que lo identificó se hizo en Chicago. Se identificó unos meses antes que el americio, aunque tenga un número más.",
+  "descripcion": "Ficha del curio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Cm.usos": {
+  "texto": "Investigación y espacio: el curio-244 es la fuente de los espectrómetros de rayos X y partículas alfa (APXS) de los rovers de Marte, que analizan de qué están hechas las rocas.",
+  "descripcion": "Ficha del curio: dónde se usa hoy"
+ },
+ "elemento.Cm.porque": {
+  "texto": "El curio-244 emite partículas alfa y rayos X que, al chocar con una roca, hacen que sus átomos devuelvan rayos X propios, como la huella dactilar de cada elemento. Su semivida, de unos 18 años, da para toda una misión.",
+  "descripcion": "Ficha del curio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Cm.unico": {
+  "texto": "Es uno de los dos únicos elementos que homenajean a una mujer científica, Marie Curie (junto a Pierre). El otro es el meitnerio.",
+  "descripcion": "Ficha del curio: una cualidad única o un récord"
+ },
+ "elemento.Cm.curiosidad": {
+  "texto": "Separar el americio del curio era tan difícil que el equipo los apodó «pandemonio» y «delirio».",
+  "descripcion": "Ficha del curio: una curiosidad sorprendente"
+ },
+ "elemento.Cm.pista": {
+  "texto": "Mi nombre homenajea a un matrimonio de científicos que trabajó en París y ayudo a analizar rocas en Marte.",
+  "descripcion": "Ficha del curio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Cm.pregunta": {
+  "texto": "¿Para qué llevan curio-244 los rovers de Marte?",
+  "descripcion": "Ficha del curio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Cm.pregunta.ok": {
+  "texto": "Para analizar de qué son las rocas",
+  "descripcion": "Ficha del curio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Cm.pregunta.mal1": {
+  "texto": "Para calentar las ruedas",
+  "descripcion": "Ficha del curio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Cm.pregunta.mal2": {
+  "texto": "Para comunicarse con la Tierra",
+  "descripcion": "Ficha del curio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Cm.pregunta.mal3": {
+  "texto": "Para fabricar oxígeno",
+  "descripcion": "Ficha del curio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Cm.pregunta.explicacion": {
+  "texto": "Su radiación hace que los átomos de las rocas emitan rayos X que delatan qué elementos contienen.",
+  "descripcion": "Ficha del curio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Bk.descubrimiento": {
+  "texto": "Stanley Thompson, Albert Ghiorso y Glenn Seaborg lo crearon en diciembre de 1949 en Berkeley, bombardeando americio-241 con partículas alfa en el ciclotrón. El primer isótopo, el berkelio-243, duraba unas 4,5 horas.",
+  "descripcion": "Ficha del berkelio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Bk.usos": {
+  "texto": "Solo investigación. Su papel estrella es servir de blanco: en 2009 se usaron 22 miligramos de berkelio-249, fabricados en Oak Ridge (EE. UU.), para crear en Rusia el elemento 117.",
+  "descripcion": "Ficha del berkelio: dónde se usa hoy"
+ },
+ "elemento.Bk.porque": {
+  "texto": "Para fabricar un elemento nuevo hace falta un blanco con muchos protones: el berkelio-249 tiene 97 y, sumando los 20 de un proyectil de calcio-48, da justo 117. Pero solo se produce en reactores especiales y en cantidades de miligramos.",
+  "descripcion": "Ficha del berkelio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Bk.unico": {
+  "texto": "Fue el primer elemento bautizado por una ciudad de EE. UU., igual que el itrio, el terbio, el erbio y el iterbio llevan el nombre del pueblo sueco de Ytterby.",
+  "descripcion": "Ficha del berkelio: una cualidad única o un récord"
+ },
+ "elemento.Bk.curiosidad": {
+  "texto": "Para llevar el berkelio a Rusia, el paquete tuvo que cruzar el Atlántico varias veces porque la aduana lo rechazó por problemas con los papeles.",
+  "descripcion": "Ficha del berkelio: una curiosidad sorprendente"
+ },
+ "elemento.Bk.pista": {
+  "texto": "Llevo el nombre de una ciudad universitaria de California y sirvo de diana para fabricar el elemento 117.",
+  "descripcion": "Ficha del berkelio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Bk.pregunta": {
+  "texto": "¿Para qué se usó el berkelio-249 en 2009?",
+  "descripcion": "Ficha del berkelio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Bk.pregunta.ok": {
+  "texto": "Para fabricar el elemento 117",
+  "descripcion": "Ficha del berkelio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Bk.pregunta.mal1": {
+  "texto": "Para un detector de humo",
+  "descripcion": "Ficha del berkelio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Bk.pregunta.mal2": {
+  "texto": "Como combustible de un cohete",
+  "descripcion": "Ficha del berkelio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Bk.pregunta.mal3": {
+  "texto": "Para fechar fósiles",
+  "descripcion": "Ficha del berkelio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Bk.pregunta.explicacion": {
+  "texto": "Sus 97 protones más los 20 del calcio-48 dieron el elemento 117, el teneso.",
+  "descripcion": "Ficha del berkelio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Cf.descubrimiento": {
+  "texto": "Stanley Thompson, Kenneth Street, Albert Ghiorso y Glenn Seaborg lo crearon en 1950 en Berkeley, bombardeando unos pocos microgramos de curio-242 con partículas alfa. En aquel primer experimento se formaron unos 5000 átomos.",
+  "descripcion": "Ficha del californio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Cf.usos": {
+  "texto": "El californio-252 es una fuente de neutrones compacta: se usa para arrancar reactores nucleares, buscar petróleo, minerales o explosivos, revisar por dentro piezas de aviones y, en algunos casos, tratar cánceres.",
+  "descripcion": "Ficha del californio: dónde se usa hoy"
+ },
+ "elemento.Cf.porque": {
+  "texto": "El californio-252 se rompe solo (fisión espontánea) y, al hacerlo, suelta neutrones: un solo microgramo emite más de 2 millones por segundo. Así se tiene una fuente potente y diminuta que dura años (semivida de unos 2,6 años).",
+  "descripcion": "Ficha del californio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Cf.unico": {
+  "texto": "Es el elemento más pesado que se fabrica en cantidad suficiente para tener usos prácticos, y uno de los materiales más caros del mundo.",
+  "descripcion": "Ficha del californio: una cualidad única o un récord"
+ },
+ "elemento.Cf.curiosidad": {
+  "texto": "La revista The New Yorker bromeó con que deberían haber llamado a los elementos 97 y 98 «universitium» y «ofium»; los descubridores contestaron que así alguien podría llamar al 99 y al 100 «newium» y «yorkium».",
+  "descripcion": "Ficha del californio: una curiosidad sorprendente"
+ },
+ "elemento.Cf.pista": {
+  "texto": "Llevo el nombre de un estado de EE. UU. famoso por sus playas y su cine, y suelto neutrones yo solo.",
+  "descripcion": "Ficha del californio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Cf.pregunta": {
+  "texto": "¿Por qué el californio-252 es una buena fuente de neutrones?",
+  "descripcion": "Ficha del californio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Cf.pregunta.ok": {
+  "texto": "Se fisiona solo y los suelta",
+  "descripcion": "Ficha del californio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Cf.pregunta.mal1": {
+  "texto": "Absorbe neutrones del aire",
+  "descripcion": "Ficha del californio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Cf.pregunta.mal2": {
+  "texto": "Se calienta mucho al sol",
+  "descripcion": "Ficha del californio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Cf.pregunta.mal3": {
+  "texto": "Reacciona con el agua",
+  "descripcion": "Ficha del californio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Cf.pregunta.explicacion": {
+  "texto": "Se rompe espontáneamente y en cada fisión libera neutrones, sin necesidad de ningún reactor.",
+  "descripcion": "Ficha del californio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Es.descubrimiento": {
+  "texto": "Apareció en los restos de «Ivy Mike», la primera bomba de hidrógeno, que EE. UU. probó el 1 de noviembre de 1952 en el atolón de Enewetak (Pacífico). Un equipo de Berkeley, Los Álamos y Argonne, con Albert Ghiorso, analizó el polvo recogido por aviones: núcleos de uranio habían capturado de golpe 15 neutrones. Al principio había unos 200 átomos, y el hallazgo fue secreto hasta 1955.",
+  "descripcion": "Ficha del einstenio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Es.usos": {
+  "texto": "Solo investigación: nunca se ha reunido más de una fracción de miligramo. En 1955 se usó como blanco para fabricar el mendelevio, y en 2021 un equipo de Berkeley estudió sus enlaces químicos con apenas 200 nanogramos.",
+  "descripcion": "Ficha del einstenio: dónde se usa hoy"
+ },
+ "elemento.Es.porque": {
+  "texto": "Para obtenerlo hay que meter en un núcleo muchísimos neutrones seguidos, algo que solo pasa en una explosión nuclear o en reactores muy especiales durante meses. Y se desintegra mientras lo estudias: el einstenio-253 pierde la mitad en unos 20 días.",
+  "descripcion": "Ficha del einstenio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Es.unico": {
+  "texto": "Junto con el fermio, es uno de los dos únicos elementos descubiertos en los restos de una explosión nuclear.",
+  "descripcion": "Ficha del einstenio: una cualidad única o un récord"
+ },
+ "elemento.Es.curiosidad": {
+  "texto": "El nombre se eligió cuando Einstein aún vivía, pero se hizo público meses después de su muerte, en 1955, porque el descubrimiento era secreto militar.",
+  "descripcion": "Ficha del einstenio: una curiosidad sorprendente"
+ },
+ "elemento.Es.pista": {
+  "texto": "Me encontraron en el polvo de la primera bomba de hidrógeno y llevo el nombre del físico de la relatividad.",
+  "descripcion": "Ficha del einstenio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Es.pregunta": {
+  "texto": "¿Dónde se descubrió el einstenio?",
+  "descripcion": "Ficha del einstenio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Es.pregunta.ok": {
+  "texto": "En los restos de una bomba H",
+  "descripcion": "Ficha del einstenio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Es.pregunta.mal1": {
+  "texto": "En un meteorito caído en Australia",
+  "descripcion": "Ficha del einstenio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Es.pregunta.mal2": {
+  "texto": "En una mina de uranio",
+  "descripcion": "Ficha del einstenio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Es.pregunta.mal3": {
+  "texto": "En la luz del Sol",
+  "descripcion": "Ficha del einstenio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Es.pregunta.explicacion": {
+  "texto": "Se halló en el polvo de «Ivy Mike», la primera bomba de hidrógeno, probada en 1952.",
+  "descripcion": "Ficha del einstenio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Fm.descubrimiento": {
+  "texto": "Se descubrió a la vez que el einstenio, en los restos de la bomba «Ivy Mike» de 1952, por el mismo equipo de Albert Ghiorso. En una fracción de segundo, núcleos de uranio-238 habían capturado 17 neutrones y, tras varias desintegraciones beta, se habían convertido en fermio-255. Se publicó en 1955.",
+  "descripcion": "Ficha del fermio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Fm.usos": {
+  "texto": "Solo investigación: nunca se ha obtenido una cantidad visible. Sirve para estudiar cómo se rompen los núcleos muy pesados.",
+  "descripcion": "Ficha del fermio: dónde se usa hoy"
+ },
+ "elemento.Fm.porque": {
+  "texto": "Es el último elemento que se puede fabricar añadiendo neutrones a núcleos más ligeros: el fermio-258 se rompe solo en menos de un milisegundo, así que la cadena se corta ahí. Para ir más allá hay que hacer chocar núcleos en aceleradores.",
+  "descripcion": "Ficha del fermio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Fm.unico": {
+  "texto": "El fermio-257, con una semivida de unos 100 días, vive más que cualquier isótopo de los elementos más pesados que él.",
+  "descripcion": "Ficha del fermio: una cualidad única o un récord"
+ },
+ "elemento.Fm.curiosidad": {
+  "texto": "Lleva el nombre de Enrico Fermi, que puso en marcha el primer reactor nuclear en Chicago en 1942 y murió en 1954, poco antes de que el elemento se hiciera público.",
+  "descripcion": "Ficha del fermio: una curiosidad sorprendente"
+ },
+ "elemento.Fm.pista": {
+  "texto": "Salí, con un hermano, del polvo de una bomba de hidrógeno y honro al físico italiano que encendió el primer reactor nuclear.",
+  "descripcion": "Ficha del fermio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Fm.pregunta": {
+  "texto": "¿Cuántos neutrones capturó el uranio-238 para acabar en fermio-255?",
+  "descripcion": "Ficha del fermio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Fm.pregunta.ok": {
+  "texto": "17",
+  "descripcion": "Ficha del fermio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Fm.pregunta.mal1": {
+  "texto": "3",
+  "descripcion": "Ficha del fermio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Fm.pregunta.mal2": {
+  "texto": "8",
+  "descripcion": "Ficha del fermio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Fm.pregunta.mal3": {
+  "texto": "50",
+  "descripcion": "Ficha del fermio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Fm.pregunta.explicacion": {
+  "texto": "Al capturar 17 neutrones pasó de 238 a 255 de masa; después, las desintegraciones beta subieron su número de protones hasta 100.",
+  "descripcion": "Ficha del fermio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Md.descubrimiento": {
+  "texto": "Albert Ghiorso, Bernard Harvey, Gregory Choppin, Stanley Thompson y Glenn Seaborg lo crearon en 1955 en Berkeley. Bombardearon una muestra minúscula de einstenio-253 (unos mil millones de átomos) con partículas alfa y detectaron, en total, solo 17 átomos de mendelevio-256.",
+  "descripcion": "Ficha del mendelevio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Md.usos": {
+  "texto": "Solo investigación: se fabrica de átomo en átomo y sirve para estudiar la química y la física de los elementos más pesados.",
+  "descripcion": "Ficha del mendelevio: dónde se usa hoy"
+ },
+ "elemento.Md.porque": {
+  "texto": "Necesita como blanco einstenio, que ya es rarísimo, y casi ningún choque funciona: cada experimento daba uno o dos átomos, que además se desintegraban en horas.",
+  "descripcion": "Ficha del mendelevio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Md.unico": {
+  "texto": "Fue el primer elemento descubierto átomo a átomo. Además, en plena Guerra Fría, un equipo de EE. UU. lo dedicó a un científico ruso.",
+  "descripcion": "Ficha del mendelevio: una cualidad única o un récord"
+ },
+ "elemento.Md.curiosidad": {
+  "texto": "Conectaron el detector al timbre de alarma de incendios del edificio, que sonaba cada vez que se desintegraba un átomo nuevo.",
+  "descripcion": "Ficha del mendelevio: una curiosidad sorprendente"
+ },
+ "elemento.Md.pista": {
+  "texto": "Me fabricaron átomo a átomo y llevo el nombre del químico ruso que ordenó la tabla periódica.",
+  "descripcion": "Ficha del mendelevio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Md.pregunta": {
+  "texto": "¿Cuántos átomos de mendelevio se detectaron en 1955?",
+  "descripcion": "Ficha del mendelevio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Md.pregunta.ok": {
+  "texto": "17",
+  "descripcion": "Ficha del mendelevio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Md.pregunta.mal1": {
+  "texto": "1",
+  "descripcion": "Ficha del mendelevio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Md.pregunta.mal2": {
+  "texto": "500",
+  "descripcion": "Ficha del mendelevio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Md.pregunta.mal3": {
+  "texto": "Un millón",
+  "descripcion": "Ficha del mendelevio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Md.pregunta.explicacion": {
+  "texto": "En todos los experimentos de 1955 se contaron solo 17 átomos: fue el primer elemento descubierto átomo a átomo.",
+  "descripcion": "Ficha del mendelevio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.No.descubrimiento": {
+  "texto": "Su historia es un lío: en 1957 un equipo del Instituto Nobel de Física de Estocolmo anunció el elemento 102 y propuso el nombre, pero nadie pudo repetir el resultado. Berkeley lo intentó en 1958 y el laboratorio de Dubna (entonces URSS), dirigido por Georgi Fliórov, hizo entre 1963 y 1966 los experimentos definitivos. En 1992 la IUPAC dio el mérito a Dubna, aunque se mantuvo el nombre.",
+  "descripcion": "Ficha del nobelio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.No.usos": {
+  "texto": "Solo investigación. Se estudia su química con muy pocos átomos para comprobar si sigue las tendencias de la tabla periódica.",
+  "descripcion": "Ficha del nobelio: dónde se usa hoy"
+ },
+ "elemento.No.porque": {
+  "texto": "Para fabricarlo hay que fusionar dos núcleos, por ejemplo curio con carbono, y la mayoría de los choques no funcionan. Su isótopo más estable dura menos de una hora.",
+  "descripcion": "Ficha del nobelio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.No.unico": {
+  "texto": "Es el único actínido que, disuelto en agua, prefiere perder solo dos electrones en lugar de tres, por cómo tiene repartidos los suyos.",
+  "descripcion": "Ficha del nobelio: una cualidad única o un récord"
+ },
+ "elemento.No.curiosidad": {
+  "texto": "Lleva el nombre de Alfred Nobel, el inventor de la dinamita que creó los famosos premios, aunque el equipo sueco que lo propuso no fue el que lo descubrió de verdad.",
+  "descripcion": "Ficha del nobelio: una curiosidad sorprendente"
+ },
+ "elemento.No.pista": {
+  "texto": "Un equipo sueco me anunció por error, pero me quedé con el nombre del inventor de la dinamita.",
+  "descripcion": "Ficha del nobelio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.No.pregunta": {
+  "texto": "¿A qué laboratorio se reconoció el descubrimiento del nobelio?",
+  "descripcion": "Ficha del nobelio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.No.pregunta.ok": {
+  "texto": "Al de Dubna, en la antigua URSS",
+  "descripcion": "Ficha del nobelio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.No.pregunta.mal1": {
+  "texto": "Al Instituto Nobel de Estocolmo",
+  "descripcion": "Ficha del nobelio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.No.pregunta.mal2": {
+  "texto": "Al de Berkeley, en EE. UU.",
+  "descripcion": "Ficha del nobelio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.No.pregunta.mal3": {
+  "texto": "Al RIKEN, en Japón",
+  "descripcion": "Ficha del nobelio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.No.pregunta.explicacion": {
+  "texto": "En 1992 la IUPAC concluyó que los experimentos definitivos fueron los de Dubna.",
+  "descripcion": "Ficha del nobelio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Lr.descubrimiento": {
+  "texto": "Albert Ghiorso, Torbjørn Sikkeland, Almon Larsh y Robert Latimer lo crearon en 1961 en Berkeley, bombardeando unos microgramos de californio con núcleos de boro en un acelerador lineal. El laboratorio de Dubna afinó y corrigió los resultados en los años siguientes, y la IUPAC reconoció a los dos equipos.",
+  "descripcion": "Ficha del lawrencio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Lr.usos": {
+  "texto": "Solo investigación. En 2015, un equipo de la Agencia de Energía Atómica de Japón midió, átomo a átomo, cuánta energía cuesta arrancarle un electrón.",
+  "descripcion": "Ficha del lawrencio: dónde se usa hoy"
+ },
+ "elemento.Lr.porque": {
+  "texto": "Su isótopo más estable dura unas 11 horas, pero solo se forman unos pocos átomos cada vez. Todo lo que sabemos de él se ha medido con un puñado de átomos.",
+  "descripcion": "Ficha del lawrencio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Lr.unico": {
+  "texto": "Es el último de los actínidos y ha avivado un debate entre químicos sobre qué elementos deben ocupar el grupo 3 de la tabla.",
+  "descripcion": "Ficha del lawrencio: una cualidad única o un récord"
+ },
+ "elemento.Lr.curiosidad": {
+  "texto": "Lleva el nombre de Ernest Lawrence, inventor del ciclotrón, la máquina con la que se fabricaron muchos elementos sintéticos.",
+  "descripcion": "Ficha del lawrencio: una curiosidad sorprendente"
+ },
+ "elemento.Lr.pista": {
+  "texto": "Cierro la fila de los actínidos y llevo el nombre del inventor del ciclotrón.",
+  "descripcion": "Ficha del lawrencio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Lr.pregunta": {
+  "texto": "¿Qué serie de la tabla cierra el lawrencio?",
+  "descripcion": "Ficha del lawrencio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Lr.pregunta.ok": {
+  "texto": "La de los actínidos",
+  "descripcion": "Ficha del lawrencio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Lr.pregunta.mal1": {
+  "texto": "La de los lantánidos",
+  "descripcion": "Ficha del lawrencio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Lr.pregunta.mal2": {
+  "texto": "La de los gases nobles",
+  "descripcion": "Ficha del lawrencio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Lr.pregunta.mal3": {
+  "texto": "La de los halógenos",
+  "descripcion": "Ficha del lawrencio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Lr.pregunta.explicacion": {
+  "texto": "Es el elemento 103, el último de los 15 actínidos.",
+  "descripcion": "Ficha del lawrencio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Rf.descubrimiento": {
+  "texto": "En 1964 el laboratorio de Dubna, dirigido por Georgi Fliórov, anunció el elemento 104 bombardeando plutonio con neón. En 1969 el equipo de Albert Ghiorso en Berkeley lo obtuvo bombardeando californio-249 con carbono-12 y puso en duda los datos soviéticos. Fue el inicio de las «guerras de los transférmicos», que la IUPAC cerró repartiendo el mérito.",
+  "descripcion": "Ficha del rutherfordio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Rf.usos": {
+  "texto": "Solo investigación. Con pocos átomos se ha comprobado que se comporta como el circonio y el hafnio, sus vecinos de columna: la tabla periódica sigue funcionando incluso tan lejos.",
+  "descripcion": "Ficha del rutherfordio: dónde se usa hoy"
+ },
+ "elemento.Rf.porque": {
+  "texto": "Cada choque necesita una puntería y una energía exactas para que los núcleos se fundan sin romperse. Su isótopo más estable dura del orden de una hora; los primeros que se vieron duraban segundos.",
+  "descripcion": "Ficha del rutherfordio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Rf.unico": {
+  "texto": "Es el primer elemento transactínido: el primero que viene después de la serie de los actínidos.",
+  "descripcion": "Ficha del rutherfordio: una cualidad única o un récord"
+ },
+ "elemento.Rf.curiosidad": {
+  "texto": "Los soviéticos lo llamaron «kurchatovio» y los estadounidenses «rutherfordio»: durante décadas, el mismo elemento tuvo dos nombres según el libro que leyeras.",
+  "descripcion": "Ficha del rutherfordio: una curiosidad sorprendente"
+ },
+ "elemento.Rf.pista": {
+  "texto": "Llevo el nombre del físico neozelandés que descubrió el núcleo del átomo y soy el primero tras los actínidos.",
+  "descripcion": "Ficha del rutherfordio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Rf.pregunta": {
+  "texto": "¿Qué nombre propusieron los soviéticos para el elemento 104?",
+  "descripcion": "Ficha del rutherfordio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Rf.pregunta.ok": {
+  "texto": "Kurchatovio",
+  "descripcion": "Ficha del rutherfordio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Rf.pregunta.mal1": {
+  "texto": "Dubnio",
+  "descripcion": "Ficha del rutherfordio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Rf.pregunta.mal2": {
+  "texto": "Fliorovio",
+  "descripcion": "Ficha del rutherfordio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Rf.pregunta.mal3": {
+  "texto": "Mendelevio",
+  "descripcion": "Ficha del rutherfordio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Rf.pregunta.explicacion": {
+  "texto": "En honor a Ígor Kurchátov, padre del programa nuclear soviético; la IUPAC acabó eligiendo rutherfordio.",
+  "descripcion": "Ficha del rutherfordio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Db.descubrimiento": {
+  "texto": "En 1968 el laboratorio de Dubna (URSS) anunció el elemento 105 bombardeando americio-243 con neón-22. En 1970 el equipo de Albert Ghiorso en Berkeley lo obtuvo con californio-249 y nitrógeno-15. La IUPAC repartió el mérito y, en 1997, lo bautizó por la ciudad rusa de Dubna.",
+  "descripcion": "Ficha del dubnio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Db.usos": {
+  "texto": "Solo investigación: sirve para comprobar si se parece a sus vecinos de columna, el niobio y el tántalo, o si sus electrones, que se mueven a velocidades cercanas a la de la luz, lo hacen distinto.",
+  "descripcion": "Ficha del dubnio: dónde se usa hoy"
+ },
+ "elemento.Db.porque": {
+  "texto": "Hay que fusionar dos núcleos con mucha carga positiva que se repelen con fuerza, y casi todos los choques fracasan. Por suerte, algunos de sus isótopos duran horas, lo que da tiempo a hacer química.",
+  "descripcion": "Ficha del dubnio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Db.unico": {
+  "texto": "Algunos de sus isótopos, como el dubnio-268, duran horas: muchísimo para un elemento superpesado.",
+  "descripcion": "Ficha del dubnio: una cualidad única o un récord"
+ },
+ "elemento.Db.curiosidad": {
+  "texto": "Berkeley quería llamarlo «hahnio», en honor a Otto Hahn, y durante años muchos libros usaron ese nombre.",
+  "descripcion": "Ficha del dubnio: una curiosidad sorprendente"
+ },
+ "elemento.Db.pista": {
+  "texto": "Llevo el nombre de una ciudad rusa a orillas del Volga famosa por su laboratorio nuclear.",
+  "descripcion": "Ficha del dubnio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Db.pregunta": {
+  "texto": "¿De dónde viene el nombre del dubnio?",
+  "descripcion": "Ficha del dubnio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Db.pregunta.ok": {
+  "texto": "De una ciudad rusa con laboratorio nuclear",
+  "descripcion": "Ficha del dubnio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Db.pregunta.mal1": {
+  "texto": "De un físico alemán",
+  "descripcion": "Ficha del dubnio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Db.pregunta.mal2": {
+  "texto": "De un río de Siberia",
+  "descripcion": "Ficha del dubnio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Db.pregunta.mal3": {
+  "texto": "De un volcán de Kamchatka",
+  "descripcion": "Ficha del dubnio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Db.pregunta.explicacion": {
+  "texto": "Dubna, a orillas del Volga, es la sede del Instituto Conjunto de Investigación Nuclear.",
+  "descripcion": "Ficha del dubnio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Sg.descubrimiento": {
+  "texto": "En 1974, un equipo de Berkeley y Livermore dirigido por Albert Ghiorso y Kenneth Hulet lo obtuvo bombardeando californio-249 con oxígeno-18. Detectaron unos pocos átomos de seaborgio-263, que duraban menos de un segundo. En Dubna, el equipo de Yuri Oganessian probó a la vez otro camino, con plomo y cromo.",
+  "descripcion": "Ficha del seaborgio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Sg.usos": {
+  "texto": "Solo investigación. En 2014, un equipo internacional en el RIKEN (Japón) fabricó su hexacarbonilo, Sg(CO)6, una molécula con enlaces con el carbono, y comprobó que se parece al wolframio.",
+  "descripcion": "Ficha del seaborgio: dónde se usa hoy"
+ },
+ "elemento.Sg.porque": {
+  "texto": "Hay que lograr que dos núcleos se fundan y que el resultado no se rompa al instante. Sus isótopos más estables duran solo minutos.",
+  "descripcion": "Ficha del seaborgio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Sg.unico": {
+  "texto": "Fue el primer elemento bautizado con el nombre de una persona viva: Glenn Seaborg, que murió en 1999.",
+  "descripcion": "Ficha del seaborgio: una cualidad única o un récord"
+ },
+ "elemento.Sg.curiosidad": {
+  "texto": "Seaborg bromeaba con que le podían mandar cartas a «seaborgio, lawrencio, berkelio, californio, americio»: su nombre, su laboratorio, su ciudad, su estado y su país, todos elementos.",
+  "descripcion": "Ficha del seaborgio: una curiosidad sorprendente"
+ },
+ "elemento.Sg.pista": {
+  "texto": "Soy el primer elemento que recibió el nombre de alguien vivo: el químico que codescubrió el plutonio.",
+  "descripcion": "Ficha del seaborgio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Sg.pregunta": {
+  "texto": "¿Qué tiene de especial el nombre del seaborgio?",
+  "descripcion": "Ficha del seaborgio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Sg.pregunta.ok": {
+  "texto": "Honra a alguien que aún vivía",
+  "descripcion": "Ficha del seaborgio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Sg.pregunta.mal1": {
+  "texto": "Es el nombre más largo",
+  "descripcion": "Ficha del seaborgio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Sg.pregunta.mal2": {
+  "texto": "Viene de un dios griego",
+  "descripcion": "Ficha del seaborgio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Sg.pregunta.mal3": {
+  "texto": "Se eligió por votación popular",
+  "descripcion": "Ficha del seaborgio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Sg.pregunta.explicacion": {
+  "texto": "Glenn Seaborg vivía cuando se aprobó el nombre: fue la primera vez que pasó.",
+  "descripcion": "Ficha del seaborgio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Bh.descubrimiento": {
+  "texto": "Peter Armbruster y Gottfried Münzenberg lo crearon en 1981 en el GSI de Darmstadt (Alemania), bombardeando bismuto-209 con cromo-54. Vieron unos pocos átomos de bohrio-262, que se desintegraban en menos de un segundo.",
+  "descripcion": "Ficha del bohrio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Bh.usos": {
+  "texto": "Solo investigación. En el año 2000, en el Instituto Paul Scherrer (Suiza), se formó un compuesto con oxígeno y cloro usando solo seis átomos, y se comportó como el renio, su vecino de columna.",
+  "descripcion": "Ficha del bohrio: dónde se usa hoy"
+ },
+ "elemento.Bh.porque": {
+  "texto": "Se usó la «fusión fría»: un blanco de bismuto o plomo y un proyectil mediano, para que el núcleo nuevo se forme con poca energía y no se rompa. Aun así, sale un átomo tras muchas horas de bombardeo.",
+  "descripcion": "Ficha del bohrio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Bh.unico": {
+  "texto": "Su química se estudió con solo seis átomos: uno de los experimentos químicos más pequeños de la historia.",
+  "descripcion": "Ficha del bohrio: una cualidad única o un récord"
+ },
+ "elemento.Bh.curiosidad": {
+  "texto": "El equipo alemán propuso «nielsbohrio», con nombre y apellido; la IUPAC lo dejó en «bohrio», como hizo con el curio o el einstenio.",
+  "descripcion": "Ficha del bohrio: una curiosidad sorprendente"
+ },
+ "elemento.Bh.pista": {
+  "texto": "Llevo el nombre del físico danés que imaginó los electrones girando en órbitas fijas alrededor del núcleo.",
+  "descripcion": "Ficha del bohrio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Bh.pregunta": {
+  "texto": "¿Con cuántos átomos se hizo el primer experimento químico del bohrio?",
+  "descripcion": "Ficha del bohrio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Bh.pregunta.ok": {
+  "texto": "Con seis",
+  "descripcion": "Ficha del bohrio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Bh.pregunta.mal1": {
+  "texto": "Con seis mil",
+  "descripcion": "Ficha del bohrio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Bh.pregunta.mal2": {
+  "texto": "Con un gramo",
+  "descripcion": "Ficha del bohrio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Bh.pregunta.mal3": {
+  "texto": "Con un millón",
+  "descripcion": "Ficha del bohrio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Bh.pregunta.explicacion": {
+  "texto": "En el año 2000 se formó un compuesto con oxígeno y cloro a partir de solo seis átomos.",
+  "descripcion": "Ficha del bohrio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Hs.descubrimiento": {
+  "texto": "El equipo de Peter Armbruster y Gottfried Münzenberg lo creó en 1984 en el GSI de Darmstadt (Alemania), bombardeando plomo-208 con hierro-58. Detectaron tres átomos de hasio-265.",
+  "descripcion": "Ficha del hasio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Hs.usos": {
+  "texto": "Solo investigación. En 2001 se fabricó en el GSI su tetróxido, HsO4, un gas parecido al tetróxido de osmio: confirmó que es pariente del osmio, su vecino de columna.",
+  "descripcion": "Ficha del hasio: dónde se usa hoy"
+ },
+ "elemento.Hs.porque": {
+  "texto": "Unir plomo y hierro exige que los núcleos choquen con la energía justa: si es poca, rebotan; si es mucha, el núcleo nuevo se rompe. Por eso hacen falta días de bombardeo para cada átomo.",
+  "descripcion": "Ficha del hasio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Hs.unico": {
+  "texto": "El hasio-270, con 108 protones y 162 neutrones, se considera un núcleo «doblemente mágico» con forma de balón de rugby, más estable de lo que le tocaría.",
+  "descripcion": "Ficha del hasio: una cualidad única o un récord"
+ },
+ "elemento.Hs.curiosidad": {
+  "texto": "Su nombre viene de Hassia, el nombre latino del estado alemán de Hesse, donde está el laboratorio.",
+  "descripcion": "Ficha del hasio: una curiosidad sorprendente"
+ },
+ "elemento.Hs.pista": {
+  "texto": "Me fabricaron en Alemania uniendo plomo y hierro, y mi nombre viene del nombre latino del estado donde nací.",
+  "descripcion": "Ficha del hasio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Hs.pregunta": {
+  "texto": "¿Qué compuesto gaseoso se fabricó con hasio en 2001?",
+  "descripcion": "Ficha del hasio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Hs.pregunta.ok": {
+  "texto": "Un tetróxido, como el del osmio",
+  "descripcion": "Ficha del hasio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Hs.pregunta.mal1": {
+  "texto": "Un cloruro, como la sal",
+  "descripcion": "Ficha del hasio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Hs.pregunta.mal2": {
+  "texto": "Un hidruro, como el agua",
+  "descripcion": "Ficha del hasio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Hs.pregunta.mal3": {
+  "texto": "Un carbonato, como la caliza",
+  "descripcion": "Ficha del hasio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Hs.pregunta.explicacion": {
+  "texto": "El HsO4 resultó volátil como el OsO4, lo que confirma que el hasio está en la columna del osmio.",
+  "descripcion": "Ficha del hasio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Mt.descubrimiento": {
+  "texto": "Peter Armbruster y Gottfried Münzenberg lo crearon el 29 de agosto de 1982 en el GSI de Darmstadt (Alemania), bombardeando bismuto-209 con hierro-58 durante días. Vieron un único átomo, que se desintegró en milésimas de segundo.",
+  "descripcion": "Ficha del meitnerio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Mt.usos": {
+  "texto": "Solo investigación. Se han fabricado tan pocos átomos que su química nunca se ha podido estudiar.",
+  "descripcion": "Ficha del meitnerio: dónde se usa hoy"
+ },
+ "elemento.Mt.porque": {
+  "texto": "Los núcleos de bismuto y hierro se repelen con fuerza por sus cargas positivas: solo un choque entre muchísimos logra que se fundan sin que el resultado se rompa al momento.",
+  "descripcion": "Ficha del meitnerio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Mt.unico": {
+  "texto": "Es el único elemento que homenajea solo a una mujer: la física austriaca Lise Meitner.",
+  "descripcion": "Ficha del meitnerio: una cualidad única o un récord"
+ },
+ "elemento.Mt.curiosidad": {
+  "texto": "Meitner explicó la fisión nuclear con su sobrino Otto Frisch, pero el Nobel de Química de 1944 se lo llevó solo Otto Hahn; muchos ven este elemento como una forma de reparar esa injusticia.",
+  "descripcion": "Ficha del meitnerio: una curiosidad sorprendente"
+ },
+ "elemento.Mt.pista": {
+  "texto": "Soy el único elemento que honra solo a una mujer, una física que explicó la fisión nuclear y se quedó sin Nobel.",
+  "descripcion": "Ficha del meitnerio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Mt.pregunta": {
+  "texto": "¿A quién homenajea el nombre del meitnerio?",
+  "descripcion": "Ficha del meitnerio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Mt.pregunta.ok": {
+  "texto": "A la física Lise Meitner",
+  "descripcion": "Ficha del meitnerio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Mt.pregunta.mal1": {
+  "texto": "A una ciudad de Austria",
+  "descripcion": "Ficha del meitnerio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Mt.pregunta.mal2": {
+  "texto": "Al químico Otto Hahn",
+  "descripcion": "Ficha del meitnerio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Mt.pregunta.mal3": {
+  "texto": "A la diosa griega Metis",
+  "descripcion": "Ficha del meitnerio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Mt.pregunta.explicacion": {
+  "texto": "Lise Meitner explicó la fisión nuclear; es la única mujer con un elemento solo para ella.",
+  "descripcion": "Ficha del meitnerio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Ds.descubrimiento": {
+  "texto": "El equipo de Sigurd Hofmann lo creó el 9 de noviembre de 1994 en el GSI de Darmstadt (Alemania), bombardeando plomo-208 con níquel-62. Tras días de bombardeo vieron un átomo de darmstatio-269, que duró menos de un milisegundo.",
+  "descripcion": "Ficha del darmstatio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Ds.usos": {
+  "texto": "Solo investigación. Los cálculos predicen que sería un metal noble como el platino, que tiene encima en su columna, pero nunca se ha podido comprobar.",
+  "descripcion": "Ficha del darmstatio: dónde se usa hoy"
+ },
+ "elemento.Ds.porque": {
+  "texto": "Su isótopo más estable vive unos segundos y los átomos salen de uno en uno: con tan pocos y tan breves, cada dato cuesta meses de experimentos.",
+  "descripcion": "Ficha del darmstatio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Ds.unico": {
+  "texto": "Es uno de los seis elementos descubiertos en el GSI de Darmstadt, que encontró todos los del 107 al 112.",
+  "descripcion": "Ficha del darmstatio: una cualidad única o un récord"
+ },
+ "elemento.Ds.curiosidad": {
+  "texto": "En broma se propuso llamarlo «policium», porque el 110 es el teléfono de la policía en Alemania.",
+  "descripcion": "Ficha del darmstatio: una curiosidad sorprendente"
+ },
+ "elemento.Ds.pista": {
+  "texto": "Mi número atómico coincide con el teléfono de la policía alemana y llevo el nombre de la ciudad de mi laboratorio.",
+  "descripcion": "Ficha del darmstatio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Ds.pregunta": {
+  "texto": "¿Cuántos elementos se descubrieron en el GSI de Darmstadt?",
+  "descripcion": "Ficha del darmstatio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Ds.pregunta.ok": {
+  "texto": "Seis, del 107 al 112",
+  "descripcion": "Ficha del darmstatio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Ds.pregunta.mal1": {
+  "texto": "Uno, solo el 110",
+  "descripcion": "Ficha del darmstatio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Ds.pregunta.mal2": {
+  "texto": "Tres, del 110 al 112",
+  "descripcion": "Ficha del darmstatio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Ds.pregunta.mal3": {
+  "texto": "Diez, del 100 al 109",
+  "descripcion": "Ficha del darmstatio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Ds.pregunta.explicacion": {
+  "texto": "El GSI descubrió el bohrio, el hasio, el meitnerio, el darmstatio, el roentgenio y el copernicio.",
+  "descripcion": "Ficha del darmstatio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Rg.descubrimiento": {
+  "texto": "El equipo de Sigurd Hofmann lo creó el 8 de diciembre de 1994 en el GSI de Darmstadt (Alemania), un mes después del elemento 110. Bombardearon bismuto-209 con níquel-64 y detectaron tres átomos de roentgenio-272.",
+  "descripcion": "Ficha del roentgenio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Rg.usos": {
+  "texto": "Solo investigación. Está en la columna del cobre, la plata y el oro, y los científicos quieren saber si se comporta como un metal noble, pero sus átomos duran demasiado poco.",
+  "descripcion": "Ficha del roentgenio: dónde se usa hoy"
+ },
+ "elemento.Rg.porque": {
+  "texto": "Sus isótopos más duraderos viven como mucho unos minutos y se fabrican de uno en uno: no da tiempo a hacer química con ellos.",
+  "descripcion": "Ficha del roentgenio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Rg.unico": {
+  "texto": "Es el miembro más pesado de la familia de los «metales de acuñación»: cobre, plata y oro.",
+  "descripcion": "Ficha del roentgenio: una cualidad única o un récord"
+ },
+ "elemento.Rg.curiosidad": {
+  "texto": "Wilhelm Röntgen, que ganó el primer Nobel de Física en 1901, no quiso patentar los rayos X para que todo el mundo pudiera usarlos.",
+  "descripcion": "Ficha del roentgenio: una curiosidad sorprendente"
+ },
+ "elemento.Rg.pista": {
+  "texto": "Estoy justo debajo del oro en la tabla y honro al descubridor de los rayos X.",
+  "descripcion": "Ficha del roentgenio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Rg.pregunta": {
+  "texto": "¿Debajo de qué elemento está el roentgenio en la tabla?",
+  "descripcion": "Ficha del roentgenio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Rg.pregunta.ok": {
+  "texto": "Debajo del oro",
+  "descripcion": "Ficha del roentgenio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Rg.pregunta.mal1": {
+  "texto": "Debajo del mercurio",
+  "descripcion": "Ficha del roentgenio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Rg.pregunta.mal2": {
+  "texto": "Debajo del platino",
+  "descripcion": "Ficha del roentgenio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Rg.pregunta.mal3": {
+  "texto": "Debajo del plomo",
+  "descripcion": "Ficha del roentgenio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Rg.pregunta.explicacion": {
+  "texto": "Es el elemento 111 y está en el grupo 11, el del cobre, la plata y el oro.",
+  "descripcion": "Ficha del roentgenio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Cn.descubrimiento": {
+  "texto": "El equipo de Sigurd Hofmann lo creó el 9 de febrero de 1996 en el GSI de Darmstadt (Alemania), bombardeando plomo-208 con cinc-70. Vieron un único átomo de copernicio-277, que duró menos de un milisegundo.",
+  "descripcion": "Ficha del copernicio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Cn.usos": {
+  "texto": "Solo investigación. Experimentos de 2006 y 2007 en Suiza y Rusia mostraron que es muy volátil, como el mercurio que tiene encima en su columna.",
+  "descripcion": "Ficha del copernicio: dónde se usa hoy"
+ },
+ "elemento.Cn.porque": {
+  "texto": "Además de fabricarlo átomo a átomo, hay que llevarlo en segundos hasta un detector muy frío y ver dónde se queda pegado: así se deduce su química.",
+  "descripcion": "Ficha del copernicio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Cn.unico": {
+  "texto": "Se cree que podría ser un metal gaseoso o líquido a temperatura ambiente: los pocos átomos medidos apuntan a que es muy volátil.",
+  "descripcion": "Ficha del copernicio: una cualidad única o un récord"
+ },
+ "elemento.Cn.curiosidad": {
+  "texto": "Su nombre se anunció el 19 de febrero de 2010, aniversario del nacimiento de Copérnico; el símbolo iba a ser Cp, pero se cambió a Cn porque Cp ya se usaba para otras cosas en química.",
+  "descripcion": "Ficha del copernicio: una curiosidad sorprendente"
+ },
+ "elemento.Cn.pista": {
+  "texto": "Soy un pariente superpesado del mercurio y honro al astrónomo que puso el Sol en el centro.",
+  "descripcion": "Ficha del copernicio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Cn.pregunta": {
+  "texto": "¿A qué elemento se parece el copernicio por ser muy volátil?",
+  "descripcion": "Ficha del copernicio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Cn.pregunta.ok": {
+  "texto": "Al mercurio",
+  "descripcion": "Ficha del copernicio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Cn.pregunta.mal1": {
+  "texto": "Al hierro",
+  "descripcion": "Ficha del copernicio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Cn.pregunta.mal2": {
+  "texto": "Al carbono",
+  "descripcion": "Ficha del copernicio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Cn.pregunta.mal3": {
+  "texto": "Al sodio",
+  "descripcion": "Ficha del copernicio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Cn.pregunta.explicacion": {
+  "texto": "Está debajo del mercurio en la tabla y, como él, se evapora con mucha facilidad.",
+  "descripcion": "Ficha del copernicio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Nh.descubrimiento": {
+  "texto": "El equipo de Kosuke Morita en el RIKEN (Wako, Japón) bombardeó bismuto-209 con cinc-70 durante casi nueve años, entre 2003 y 2012. En todo ese tiempo detectaron solo tres átomos de nihonio-278 (en 2004, 2005 y 2012). En 2015 la IUPAC le dio el mérito: fue el primer elemento descubierto en Asia.",
+  "descripcion": "Ficha del nihonio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Nh.usos": {
+  "texto": "Solo investigación. Estudiarlo ayuda a entender hasta dónde puede llegar la tabla periódica y cómo se comportan núcleos con tantos protones.",
+  "descripcion": "Ficha del nihonio: dónde se usa hoy"
+ },
+ "elemento.Nh.porque": {
+  "texto": "La probabilidad de que el bismuto y el cinc se fundan es bajísima: cada átomo exigió un número astronómico de choques. Además, cada átomo duraba unas milésimas de segundo.",
+  "descripcion": "Ficha del nihonio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Nh.unico": {
+  "texto": "Es el primer elemento descubierto en Asia y el primero descubierto fuera de Europa y Norteamérica.",
+  "descripcion": "Ficha del nihonio: una cualidad única o un récord"
+ },
+ "elemento.Nh.curiosidad": {
+  "texto": "En 1908 el japonés Masataka Ogawa anunció el «niponio», pero se equivocó de elemento; un siglo después, Japón tuvo por fin su elemento con un nombre casi igual.",
+  "descripcion": "Ficha del nihonio: una curiosidad sorprendente"
+ },
+ "elemento.Nh.pista": {
+  "texto": "Soy el primer elemento descubierto en Asia y mi nombre significa «tierra del sol naciente».",
+  "descripcion": "Ficha del nihonio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Nh.pregunta": {
+  "texto": "¿Cuántos átomos de nihonio vio el RIKEN en nueve años?",
+  "descripcion": "Ficha del nihonio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Nh.pregunta.ok": {
+  "texto": "Tres",
+  "descripcion": "Ficha del nihonio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Nh.pregunta.mal1": {
+  "texto": "Mil",
+  "descripcion": "Ficha del nihonio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Nh.pregunta.mal2": {
+  "texto": "Uno por semana",
+  "descripcion": "Ficha del nihonio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Nh.pregunta.mal3": {
+  "texto": "Medio millón",
+  "descripcion": "Ficha del nihonio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Nh.pregunta.explicacion": {
+  "texto": "Tras casi nueve años de bombardeo solo detectaron tres átomos, en 2004, 2005 y 2012.",
+  "descripcion": "Ficha del nihonio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Fl.descubrimiento": {
+  "texto": "Un equipo del laboratorio de Dubna (Rusia), con Yuri Oganessian y en colaboración con el Laboratorio Lawrence Livermore (EE. UU.), lo obtuvo a finales de 1998 bombardeando plutonio-244 con calcio-48. Al principio vieron un solo átomo; la IUPAC confirmó el descubrimiento en 2011.",
+  "descripcion": "Ficha del flerovio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Fl.usos": {
+  "texto": "Solo investigación. Está cerca de la «isla de estabilidad», una zona donde los físicos predicen núcleos superpesados que vivirían mucho más que sus vecinos.",
+  "descripcion": "Ficha del flerovio: dónde se usa hoy"
+ },
+ "elemento.Fl.porque": {
+  "texto": "El truco fue usar calcio-48, un isótopo raro (menos del 0,2 % del calcio natural) con muchos neutrones: así el núcleo final queda más cerca de la isla de estabilidad. Aun así, salen unos pocos átomos tras semanas de bombardeo.",
+  "descripcion": "Ficha del flerovio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Fl.unico": {
+  "texto": "Sus isótopos duran segundos, mucho más de lo que se esperaba para un núcleo tan pesado: una de las primeras pistas de que la isla de estabilidad existe.",
+  "descripcion": "Ficha del flerovio: una cualidad única o un récord"
+ },
+ "elemento.Fl.curiosidad": {
+  "texto": "Su nombre honra al laboratorio Fliórov de Dubna, que a su vez recuerda a Georgi Fliórov, el físico que en 1942 escribió a Stalin para avisarle de que otros países preparaban la bomba atómica.",
+  "descripcion": "Ficha del flerovio: una curiosidad sorprendente"
+ },
+ "elemento.Fl.pista": {
+  "texto": "Llevo el nombre de un laboratorio ruso que a su vez homenajea a su fundador, y estoy en la columna del plomo.",
+  "descripcion": "Ficha del flerovio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Fl.pregunta": {
+  "texto": "¿Qué proyectil se usó para crear el flerovio?",
+  "descripcion": "Ficha del flerovio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Fl.pregunta.ok": {
+  "texto": "Calcio-48",
+  "descripcion": "Ficha del flerovio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Fl.pregunta.mal1": {
+  "texto": "Hidrógeno-1",
+  "descripcion": "Ficha del flerovio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Fl.pregunta.mal2": {
+  "texto": "Uranio-238",
+  "descripcion": "Ficha del flerovio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Fl.pregunta.mal3": {
+  "texto": "Helio-4",
+  "descripcion": "Ficha del flerovio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Fl.pregunta.explicacion": {
+  "texto": "El calcio-48, rico en neutrones, chocó contra plutonio-244: 20 + 94 = 114 protones.",
+  "descripcion": "Ficha del flerovio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Mc.descubrimiento": {
+  "texto": "Un equipo ruso-estadounidense de Dubna y Livermore, dirigido por Yuri Oganessian, lo anunció en 2004 tras bombardear americio-243 con calcio-48. Detectaron cuatro átomos. Un equipo internacional en Darmstadt (Alemania), liderado desde Lund (Suecia), confirmó el resultado en 2013.",
+  "descripcion": "Ficha del moscovio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Mc.usos": {
+  "texto": "Solo investigación. Sus cadenas de desintegración sirven para descubrir y estudiar otros núcleos superpesados.",
+  "descripcion": "Ficha del moscovio: dónde se usa hoy"
+ },
+ "elemento.Mc.porque": {
+  "texto": "Sus isótopos viven menos de un segundo y se forman de uno en uno: para cada átomo hacen falta muchísimos choques de calcio contra americio.",
+  "descripcion": "Ficha del moscovio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Mc.unico": {
+  "texto": "Al desintegrarse se transforma en nihonio: así vio Dubna el elemento 113 casi a la vez que Japón.",
+  "descripcion": "Ficha del moscovio: una cualidad única o un récord"
+ },
+ "elemento.Mc.curiosidad": {
+  "texto": "En 1989 un hombre aseguró en la televisión que los ovnis usaban el elemento 115 como combustible; cuando por fin se fabricó, sus átomos duraban menos de un segundo.",
+  "descripcion": "Ficha del moscovio: una curiosidad sorprendente"
+ },
+ "elemento.Mc.pista": {
+  "texto": "Llevo el nombre de la región que rodea la capital rusa, y un famoso bulo me convirtió en combustible de ovnis.",
+  "descripcion": "Ficha del moscovio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Mc.pregunta": {
+  "texto": "¿En qué se transforma un átomo de moscovio al desintegrarse?",
+  "descripcion": "Ficha del moscovio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Mc.pregunta.ok": {
+  "texto": "En nihonio",
+  "descripcion": "Ficha del moscovio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Mc.pregunta.mal1": {
+  "texto": "En oro",
+  "descripcion": "Ficha del moscovio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Mc.pregunta.mal2": {
+  "texto": "En calcio",
+  "descripcion": "Ficha del moscovio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Mc.pregunta.mal3": {
+  "texto": "En uranio",
+  "descripcion": "Ficha del moscovio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Mc.pregunta.explicacion": {
+  "texto": "Al emitir una partícula alfa pierde 2 protones: del 115 pasa al 113, el nihonio.",
+  "descripcion": "Ficha del moscovio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Lv.descubrimiento": {
+  "texto": "El equipo de Dubna y Livermore lo creó el 19 de julio de 2000 bombardeando curio-248 con calcio-48. Vieron un solo átomo, que vivió una fracción de segundo. La IUPAC lo confirmó en 2011 y le puso nombre en 2012.",
+  "descripcion": "Ficha del livermorio: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Lv.usos": {
+  "texto": "Solo investigación. Ayuda a completar el mapa de los núcleos superpesados y a buscar el camino hacia la isla de estabilidad.",
+  "descripcion": "Ficha del livermorio: dónde se usa hoy"
+ },
+ "elemento.Lv.porque": {
+  "texto": "El blanco de curio-248 es rarísimo y solo lo fabrican unos pocos reactores; aun así, cada átomo exige semanas de bombardeo.",
+  "descripcion": "Ficha del livermorio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Lv.unico": {
+  "texto": "Es uno de los pocos elementos que llevan el nombre de un laboratorio: el Laboratorio Nacional Lawrence Livermore, en California.",
+  "descripcion": "Ficha del livermorio: una cualidad única o un récord"
+ },
+ "elemento.Lv.curiosidad": {
+  "texto": "La ciudad de Livermore, que da nombre al laboratorio, recuerda a Robert Livermore, un marinero inglés que se hizo ranchero en la California del siglo XIX.",
+  "descripcion": "Ficha del livermorio: una curiosidad sorprendente"
+ },
+ "elemento.Lv.pista": {
+  "texto": "Llevo el nombre de un laboratorio de California que colaboró con científicos rusos para fabricarme.",
+  "descripcion": "Ficha del livermorio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Lv.pregunta": {
+  "texto": "¿Por qué cuesta tanto fabricar livermorio?",
+  "descripcion": "Ficha del livermorio: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Lv.pregunta.ok": {
+  "texto": "El blanco de curio es rarísimo",
+  "descripcion": "Ficha del livermorio: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Lv.pregunta.mal1": {
+  "texto": "Hace falta mucho oxígeno",
+  "descripcion": "Ficha del livermorio: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Lv.pregunta.mal2": {
+  "texto": "Solo se forma en el Sol",
+  "descripcion": "Ficha del livermorio: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Lv.pregunta.mal3": {
+  "texto": "Se funde a 20 °C",
+  "descripcion": "Ficha del livermorio: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Lv.pregunta.explicacion": {
+  "texto": "El curio-248 solo se produce en unos pocos reactores, y aun así cada átomo cuesta semanas.",
+  "descripcion": "Ficha del livermorio: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Ts.descubrimiento": {
+  "texto": "Fue fruto de una colaboración entre Rusia y EE. UU.: el Laboratorio Nacional de Oak Ridge produjo 22 miligramos de berkelio-249 tras unos 250 días en un reactor, y en Dubna lo bombardearon con calcio-48. En 2010 anunciaron seis átomos.",
+  "descripcion": "Ficha del teneso: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Ts.usos": {
+  "texto": "Solo investigación. Sirve para estudiar cómo se comportan los núcleos con muchos neutrones cerca de la isla de estabilidad.",
+  "descripcion": "Ficha del teneso: dónde se usa hoy"
+ },
+ "elemento.Ts.porque": {
+  "texto": "Necesitaba un blanco de berkelio, que hay que fabricar en un reactor durante meses y que pierde la mitad en menos de un año: todo el experimento fue una carrera contrarreloj.",
+  "descripcion": "Ficha del teneso: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Ts.unico": {
+  "texto": "Es el último elemento descubierto: se anunció en 2010 y desde entonces no se ha confirmado ninguno nuevo, aunque varios laboratorios buscan el 119 y el 120.",
+  "descripcion": "Ficha del teneso: una cualidad única o un récord"
+ },
+ "elemento.Ts.curiosidad": {
+  "texto": "Su nombre viene del estado de Tennessee y termina en «-o», como el cloro o el bromo, porque está en la columna de los halógenos.",
+  "descripcion": "Ficha del teneso: una curiosidad sorprendente"
+ },
+ "elemento.Ts.pista": {
+  "texto": "Soy el elemento descubierto más recientemente y estoy en la columna de los halógenos, debajo del astato.",
+  "descripcion": "Ficha del teneso: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Ts.pregunta": {
+  "texto": "¿Qué elemento sirvió de blanco para crear el teneso?",
+  "descripcion": "Ficha del teneso: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Ts.pregunta.ok": {
+  "texto": "El berkelio-249",
+  "descripcion": "Ficha del teneso: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Ts.pregunta.mal1": {
+  "texto": "El oro-197",
+  "descripcion": "Ficha del teneso: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Ts.pregunta.mal2": {
+  "texto": "El uranio-235",
+  "descripcion": "Ficha del teneso: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Ts.pregunta.mal3": {
+  "texto": "El hierro-56",
+  "descripcion": "Ficha del teneso: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Ts.pregunta.explicacion": {
+  "texto": "Sus 97 protones más los 20 del calcio-48 suman 117.",
+  "descripcion": "Ficha del teneso: explicación de la respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Og.descubrimiento": {
+  "texto": "Un equipo de Dubna y Livermore, con Yuri Oganessian, vio un átomo en 2002 y otros dos en 2005 bombardeando californio-249 con calcio-48. Cada átomo duró menos de un milisegundo. La IUPAC lo confirmó en 2015 y lo bautizó en 2016.",
+  "descripcion": "Ficha del oganesón: cómo se descubrió (quién, cuándo, dónde y cómo)"
+ },
+ "elemento.Og.usos": {
+  "texto": "Solo investigación: apenas se han detectado unos pocos átomos. Sirve para explorar el límite de la tabla: cuántos protones aguanta un núcleo y si siguen valiendo las reglas de la química.",
+  "descripcion": "Ficha del oganesón: dónde se usa hoy"
+ },
+ "elemento.Og.porque": {
+  "texto": "Hay que juntar californio (98 protones) y calcio (20) en un único núcleo, y casi todos los choques fallan: tres átomos costaron meses de bombardeo. Además, se desintegra en menos de un milisegundo.",
+  "descripcion": "Ficha del oganesón: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
+ },
+ "elemento.Og.unico": {
+  "texto": "Es el elemento más pesado conocido. Está en la columna de los gases nobles, pero los cálculos predicen que sería sólido a temperatura ambiente y bastante reactivo.",
+  "descripcion": "Ficha del oganesón: una cualidad única o un récord"
+ },
+ "elemento.Og.curiosidad": {
+  "texto": "En 1999 otro laboratorio de EE. UU. anunció que lo había creado, pero tuvo que retractarse: un investigador se había inventado los datos.",
+  "descripcion": "Ficha del oganesón: una curiosidad sorprendente"
+ },
+ "elemento.Og.pista": {
+  "texto": "Soy el elemento más pesado que se conoce y llevo el nombre de un físico que estaba vivo cuando me bautizaron.",
+  "descripcion": "Ficha del oganesón: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
+ },
+ "elemento.Og.pregunta": {
+  "texto": "¿Qué tiene de especial el oganesón?",
+  "descripcion": "Ficha del oganesón: pregunta tipo test sobre la ficha"
+ },
+ "elemento.Og.pregunta.ok": {
+  "texto": "Es el elemento más pesado conocido",
+  "descripcion": "Ficha del oganesón: respuesta correcta de la pregunta tipo test"
+ },
+ "elemento.Og.pregunta.mal1": {
+  "texto": "Es el gas más ligero",
+  "descripcion": "Ficha del oganesón: primera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Og.pregunta.mal2": {
+  "texto": "Es el metal más abundante",
+  "descripcion": "Ficha del oganesón: segunda respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Og.pregunta.mal3": {
+  "texto": "Es el único elemento líquido",
+  "descripcion": "Ficha del oganesón: tercera respuesta incorrecta de la pregunta tipo test"
+ },
+ "elemento.Og.pregunta.explicacion": {
+  "texto": "Con 118 protones, es el elemento con el número atómico más alto que se ha fabricado.",
+  "descripcion": "Ficha del oganesón: explicación de la respuesta correcta de la pregunta tipo test"
+ }
+}

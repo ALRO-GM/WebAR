@@ -9,6 +9,13 @@ export interface Settings {
   /** Menos movimiento (animaciones mínimas, sin temblores). */
   calma: boolean;
   vibrar: boolean;
+  sonido: boolean;
+  /** Tema oscuro (por defecto, el del sistema). */
+  oscuro: boolean;
+  /** Meta diaria de XP. */
+  meta: number;
+  /** Mostrar la mascota (el gato cuántico). */
+  gato: boolean;
 }
 
 const KEY = 'webar:ajustes';
@@ -22,6 +29,10 @@ function defaults(): Settings {
     contraste: matchMedia('(prefers-contrast: more)').matches,
     calma: matchMedia('(prefers-reduced-motion: reduce)').matches,
     vibrar: true,
+    sonido: true,
+    oscuro: matchMedia('(prefers-color-scheme: dark)').matches,
+    meta: 20,
+    gato: true,
   };
 }
 
@@ -32,6 +43,8 @@ export function applySettings(): void {
   root.style.setProperty('--scale', String(settings.letra));
   root.classList.toggle('alto-contraste', settings.contraste);
   root.classList.toggle('calma', settings.calma);
+  root.classList.toggle('oscuro', settings.oscuro);
+  document.querySelector('meta[name=theme-color]')?.setAttribute('content', settings.oscuro ? '#131a20' : '#ffffff');
   setLanguage(settings.idioma);
   translate();
 }
@@ -44,6 +57,9 @@ export function vibrate(pattern: number | number[]): void {
   if (settings.vibrar) navigator.vibrate?.(pattern);
 }
 
+/** Quién quiere enterarse de que han cambiado los ajustes (p. ej. la mascota, la meta). */
+export const onSettingsChange: Array<() => void> = [];
+
 /** Conecta el formulario de ajustes; cambiar de idioma recarga la página para traducirlo todo. */
 export function setupSettingsForm(form: HTMLFormElement): void {
   const field = <T extends HTMLElement>(name: string) => form.elements.namedItem(name) as T;
@@ -52,6 +68,8 @@ export function setupSettingsForm(form: HTMLFormElement): void {
   field<HTMLInputElement>('contraste').checked = settings.contraste;
   field<HTMLInputElement>('calma').checked = settings.calma;
   field<HTMLInputElement>('vibrar').checked = settings.vibrar;
+  for (const name of ['sonido', 'oscuro', 'gato'] as const) if (form.elements.namedItem(name)) field<HTMLInputElement>(name).checked = settings[name];
+  (form.querySelector(`input[name=meta][value="${settings.meta}"]`) as HTMLInputElement | null)?.setAttribute('checked', '');
   form.addEventListener('change', () => {
     const data = new FormData(form);
     const language = String(data.get('idioma'));
@@ -62,7 +80,12 @@ export function setupSettingsForm(form: HTMLFormElement): void {
       contraste: data.has('contraste'),
       calma: data.has('calma'),
       vibrar: data.has('vibrar'),
+      sonido: data.has('sonido'),
+      oscuro: data.has('oscuro'),
+      gato: data.has('gato'),
+      meta: Number(data.get('meta') ?? settings.meta),
     });
+    onSettingsChange.forEach((fn) => fn());
     localStorage.setItem(KEY, JSON.stringify(settings));
     if (changedLanguage) location.reload();
     else applySettings();

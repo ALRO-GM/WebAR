@@ -1,3 +1,5 @@
+import { calm } from '../settings';
+import { createEveryday, hasEveryday, type EverydayObject } from '../objects';
 import * as THREE from 'three';
 import { MarkerTrackingProvider, type ARSession, type ViewerProvider } from '@webar/ar-core';
 import { REACTIONS, SPECIES, composition, contentFormula, formatEquation, reactionEnthalpy, type AtomModel, type Outcome } from '@webar/chem';
@@ -59,6 +61,8 @@ const TABLE_CONTROLS = {
  * donde las tarjetas se arrastran con el dedo. Mismas reglas en los dos.
  */
 export class CardsMode {
+  /** Objetos cotidianos junto a las moléculas, por tarjeta. */
+  private readonly extras = new Map<number, EverydayObject>();
   readonly marker = new MarkerTrackingProvider({
     markerSize: CARD.marker,
     anchorOffset: new THREE.Matrix4().makeTranslation(0, 0, MARKER_TO_CENTER),
@@ -92,8 +96,16 @@ export class CardsMode {
       const spec = cardById(id);
       if (this.active && spec) this.game.addCard(spec, anchor);
     });
-    this.game.on('reaction', ({ outcome, products }) => {
+    this.game.on('reaction', ({ outcome, products, cards }) => {
       this.showReaction(outcome);
+      // Junto a la molécula nueva, su objeto cotidiano (la esfera de agua, el clavo oxidado…).
+      for (const visual of this.game.visuals()) {
+        if (!cards.includes(visual.spec.id) || !products.includes(visual.content) || !hasEveryday(visual.content)) continue;
+        this.extras.get(visual.spec.id)?.dispose();
+        const extra = createEveryday(visual.content, { size: 0.016, calm: calm() });
+        visual.setExtra(extra.object);
+        this.extras.set(visual.spec.id, extra);
+      }
       deps.onReaction?.(outcome, products);
     });
     this.game.on('decompose', ({ from, to }) =>
@@ -127,6 +139,8 @@ export class CardsMode {
 
   onEnd(): void {
     this.active = false;
+    for (const extra of this.extras.values()) extra.dispose();
+    this.extras.clear();
     this.selected = null;
     this.game.clear();
     this.effects.clear();
@@ -166,6 +180,13 @@ export class CardsMode {
     }
     button.style.setProperty('--p', String(this.holding ? Math.min(this.holdTime / HOLD_SECONDS, 1) : 0));
     this.game.update(dt, camera);
+    for (const [id, extra] of this.extras) {
+      // Si la tarjeta cambió de contenido (descomponer), su objeto ya no va.
+      if (!this.game.visuals().some((v) => v.spec.id === id && v.hasExtra)) {
+        extra.dispose();
+        this.extras.delete(id);
+      } else extra.update(dt);
+    }
 
     const visible = this.game.visibleCount;
     $('t-estado').hidden = this.kind === 'mesa' ? visible > 0 : visible > 1;

@@ -74,6 +74,11 @@ export class ClassSync extends Emitter<SyncEvents> {
     void this.sync();
   }
 
+  /** El token de alumno (para la liga de la clase). */
+  get studentToken(): string | null {
+    return this.token;
+  }
+
   get joined(): boolean {
     return !!this.token;
   }

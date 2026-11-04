@@ -1,0 +1,1442 @@
+{
+  "elemento.La.descubrimiento": {
+    "texto": "Lo descubrió el sueco Carl Gustaf Mosander en 1839, en Estocolmo. Calentó nitrato de cerio, lo trató con ácido nítrico diluido y vio que una parte se disolvía: ahí había un óxido nuevo que llevaba años «escondido» dentro del cerio. Por eso lo llamó con una palabra griega que significa «estar oculto».",
+    "descripcion": "Ficha del lantano: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.La.usos": {
+    "texto": "Está en las baterías de níquel-hidruro metálico de muchos coches híbridos y en las lentes de cámaras y telescopios de calidad. Las refinerías lo usan en catalizadores para romper el petróleo pesado y sacar gasolina.",
+    "descripcion": "Ficha del lantano: para qué se usa hoy"
+  },
+  "elemento.La.porque": {
+    "texto": "Su aleación con níquel absorbe hidrógeno como una esponja y lo suelta al cargar y descargar, ideal para baterías. En el vidrio, el óxido de lantano desvía mucho la luz sin separar los colores, así las lentes pueden ser más finas y nítidas que con vidrio normal.",
+    "descripcion": "Ficha del lantano: por qué se usa este elemento y no otro"
+  },
+  "elemento.La.unico": {
+    "texto": "Da nombre a toda una familia de la tabla periódica, los lantánidos: los 15 elementos que van de él al lutecio.",
+    "descripcion": "Ficha del lantano: su cualidad única o récord"
+  },
+  "elemento.La.curiosidad": {
+    "texto": "La batería de un híbrido de los primeros años 2000 llevaba más de 10 kg de este metal.",
+    "descripcion": "Ficha del lantano: dato curioso"
+  },
+  "elemento.La.pista": {
+    "texto": "Mi nombre significa «estar escondido» y encabezo la fila de las tierras raras.",
+    "descripcion": "Juego de adivinar: pista sobre el lantano que no dice su nombre ni su símbolo"
+  },
+  "elemento.La.pregunta": {
+    "texto": "¿Qué significa el nombre de este elemento?",
+    "descripcion": "Test de la ficha del lantano: enunciado de la pregunta"
+  },
+  "elemento.La.pregunta.ok": {
+    "texto": "Estar escondido",
+    "descripcion": "Test de la ficha del lantano: respuesta correcta (corta)"
+  },
+  "elemento.La.pregunta.mal1": {
+    "texto": "Piedra pesada",
+    "descripcion": "Test de la ficha del lantano: respuesta incorrecta pero creíble"
+  },
+  "elemento.La.pregunta.mal2": {
+    "texto": "Brillo rojizo",
+    "descripcion": "Test de la ficha del lantano: respuesta incorrecta pero creíble"
+  },
+  "elemento.La.pregunta.mal3": {
+    "texto": "Nuevo gemelo",
+    "descripcion": "Test de la ficha del lantano: respuesta incorrecta pero creíble"
+  },
+  "elemento.La.pregunta.explicacion": {
+    "texto": "Mosander lo encontró oculto dentro del cerio y le puso un nombre griego que significa «estar escondido».",
+    "descripcion": "Test de la ficha del lantano: explicación de la respuesta correcta"
+  },
+  "elemento.Ce.descubrimiento": {
+    "texto": "Lo descubrieron en 1803 los suecos Jöns Jacob Berzelius y Wilhelm Hisinger, y a la vez, por su cuenta, el alemán Martin Klaproth. Lo sacaron de un mineral pesado de la mina de Bastnäs (Suecia), la cerita. Le pusieron el nombre de Ceres, un asteroide descubierto solo dos años antes.",
+    "descripcion": "Ficha del cerio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Ce.usos": {
+    "texto": "Es la «piedra» de los mecheros: el ferrocerio suelta chispas al rascarlo. El óxido de cerio pule pantallas, lentes y espejos, y ayuda en los catalizadores de los coches a quemar los gases tóxicos.",
+    "descripcion": "Ficha del cerio: para qué se usa hoy"
+  },
+  "elemento.Ce.porque": {
+    "texto": "Puede cambiar con facilidad entre dos formas (Ce³⁺ y Ce⁴⁺), así que guarda y suelta oxígeno según haga falta: perfecto para un catalizador. Y al rascarlo, sus virutas arden en el aire a poca temperatura, por eso da chispas mejor que el acero.",
+    "descripcion": "Ficha del cerio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Ce.unico": {
+    "texto": "Es la tierra rara más abundante: en la corteza terrestre hay más cerio que cobre. Y es el único lantánido que forma compuestos estables con carga +4 en agua.",
+    "descripcion": "Ficha del cerio: su cualidad única o récord"
+  },
+  "elemento.Ce.curiosidad": {
+    "texto": "Cada vez que enciendes un mechero de rueda, arrancas virutas de un metal que arden solas.",
+    "descripcion": "Ficha del cerio: dato curioso"
+  },
+  "elemento.Ce.pista": {
+    "texto": "Llevo el nombre de un asteroide y doy las chispas de los mecheros.",
+    "descripcion": "Juego de adivinar: pista sobre el cerio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Ce.pregunta": {
+    "texto": "¿En qué objeto cotidiano está este elemento?",
+    "descripcion": "Test de la ficha del cerio: enunciado de la pregunta"
+  },
+  "elemento.Ce.pregunta.ok": {
+    "texto": "En la piedra de los mecheros",
+    "descripcion": "Test de la ficha del cerio: respuesta correcta (corta)"
+  },
+  "elemento.Ce.pregunta.mal1": {
+    "texto": "En la mina de los lápices",
+    "descripcion": "Test de la ficha del cerio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Ce.pregunta.mal2": {
+    "texto": "En el filamento de las bombillas",
+    "descripcion": "Test de la ficha del cerio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Ce.pregunta.mal3": {
+    "texto": "En el cable de los auriculares",
+    "descripcion": "Test de la ficha del cerio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Ce.pregunta.explicacion": {
+    "texto": "La piedra de los mecheros es ferrocerio, una aleación con cerio que suelta chispas al rascarla.",
+    "descripcion": "Test de la ficha del cerio: explicación de la respuesta correcta"
+  },
+  "elemento.Pr.descubrimiento": {
+    "texto": "Lo separó el austriaco Carl Auer von Welsbach en Viena en 1885. Desde 1841 se creía que el «didimio» era un elemento, pero él lo cristalizó una y otra vez con mucha paciencia hasta partirlo en dos: uno daba sales verdes y otro, rosadas. Al verde lo llamó «gemelo verde».",
+    "descripcion": "Ficha del praseodimio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Pr.usos": {
+    "texto": "Tiñe de amarillo intenso azulejos y cerámica, y se añade a los imanes de neodimio. Va en las gafas de los sopladores de vidrio y soldadores, y en aleaciones de magnesio para motores de avión.",
+    "descripcion": "Ficha del praseodimio: para qué se usa hoy"
+  },
+  "elemento.Pr.porque": {
+    "texto": "Junto con el neodimio, sus átomos absorben justo la luz amarilla intensa que suelta el vidrio al rojo vivo, así las gafas dejan ver la pieza sin deslumbrar. Para pintar cerámica aguanta el horno sin perder el color, cosa que muchos pigmentos orgánicos no hacen.",
+    "descripcion": "Ficha del praseodimio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Pr.unico": {
+    "texto": "Una aleación de praseodimio y níquel se enfría tanto al quitarle un imán que ha permitido llegar a una milésima de grado del cero absoluto.",
+    "descripcion": "Ficha del praseodimio: su cualidad única o récord"
+  },
+  "elemento.Pr.curiosidad": {
+    "texto": "Durante más de 40 años los libros de química lo contaban como medio elemento, mezclado con su gemelo en el falso «didimio».",
+    "descripcion": "Ficha del praseodimio: dato curioso"
+  },
+  "elemento.Pr.pista": {
+    "texto": "Soy el gemelo verde: me separaron de mi hermano en Viena en 1885.",
+    "descripcion": "Juego de adivinar: pista sobre el praseodimio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Pr.pregunta": {
+    "texto": "¿Qué elemento falso escondía a este metal y a su gemelo?",
+    "descripcion": "Test de la ficha del praseodimio: enunciado de la pregunta"
+  },
+  "elemento.Pr.pregunta.ok": {
+    "texto": "El didimio",
+    "descripcion": "Test de la ficha del praseodimio: respuesta correcta (corta)"
+  },
+  "elemento.Pr.pregunta.mal1": {
+    "texto": "El flogisto",
+    "descripcion": "Test de la ficha del praseodimio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Pr.pregunta.mal2": {
+    "texto": "El éter",
+    "descripcion": "Test de la ficha del praseodimio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Pr.pregunta.mal3": {
+    "texto": "El nebulio",
+    "descripcion": "Test de la ficha del praseodimio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Pr.pregunta.explicacion": {
+    "texto": "El didimio parecía un elemento, pero Auer von Welsbach demostró que era una mezcla de dos.",
+    "descripcion": "Test de la ficha del praseodimio: explicación de la respuesta correcta"
+  },
+  "elemento.Nd.descubrimiento": {
+    "texto": "Nació en el mismo experimento que su gemelo: Carl Auer von Welsbach partió el «didimio» en dos en Viena en 1885. A este lo llamó «nuevo gemelo». Casi cien años después, en 1982, el japonés Masato Sagawa inventó el imán de neodimio, hierro y boro, que cambió la tecnología.",
+    "descripcion": "Ficha del neodimio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Nd.usos": {
+    "texto": "Sus imanes están en auriculares, altavoces, motores que hacen vibrar el móvil, discos duros, coches eléctricos y aerogeneradores. Los láseres Nd:YAG se usan en cirugía de ojos, en tatuajes y para cortar metal.",
+    "descripcion": "Ficha del neodimio: para qué se usa hoy"
+  },
+  "elemento.Nd.porque": {
+    "texto": "El imán de neodimio es el imán permanente más fuerte que se vende: uno pequeño hace el trabajo de uno de ferrita diez veces más grande. Por eso los auriculares y motores pueden ser tan pequeños y ligeros.",
+    "descripcion": "Ficha del neodimio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Nd.unico": {
+    "texto": "Forma los imanes permanentes más potentes que existen en el mercado.",
+    "descripcion": "Ficha del neodimio: su cualidad única o récord"
+  },
+  "elemento.Nd.curiosidad": {
+    "texto": "El vidrio con neodimio cambia de color según la luz: lila con la del sol y azulado con fluorescentes.",
+    "descripcion": "Ficha del neodimio: dato curioso"
+  },
+  "elemento.Nd.pista": {
+    "texto": "Si tus auriculares inalámbricos son tan pequeños, es por mis imanes súper potentes.",
+    "descripcion": "Juego de adivinar: pista sobre el neodimio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Nd.pregunta": {
+    "texto": "¿Para qué es famoso este elemento?",
+    "descripcion": "Test de la ficha del neodimio: enunciado de la pregunta"
+  },
+  "elemento.Nd.pregunta.ok": {
+    "texto": "Para hacer los imanes más fuertes",
+    "descripcion": "Test de la ficha del neodimio: respuesta correcta (corta)"
+  },
+  "elemento.Nd.pregunta.mal1": {
+    "texto": "Para dar color rojo a los fuegos",
+    "descripcion": "Test de la ficha del neodimio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Nd.pregunta.mal2": {
+    "texto": "Para fabricar baterías de litio",
+    "descripcion": "Test de la ficha del neodimio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Nd.pregunta.mal3": {
+    "texto": "Para hacer pantallas de cristal líquido",
+    "descripcion": "Test de la ficha del neodimio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Nd.pregunta.explicacion": {
+    "texto": "Los imanes de neodimio, hierro y boro son los imanes permanentes más potentes del mercado.",
+    "descripcion": "Test de la ficha del neodimio: explicación de la respuesta correcta"
+  },
+  "elemento.Pm.descubrimiento": {
+    "texto": "Se encontró en 1945 en los laboratorios de Oak Ridge (EE. UU.), entre los restos de la fisión del uranio en un reactor nuclear. Jacob Marinsky, Lawrence Glendenin y Charles Coryell lo separaron con cromatografía de intercambio iónico. El nombre lo propuso Grace Mary Coryell, esposa de Charles, por Prometeo, el titán que robó el fuego a los dioses.",
+    "descripcion": "Ficha del prometio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Pm.usos": {
+    "texto": "Se ha usado en baterías nucleares de larga duración, incluso en marcapasos de los años 70, y en pinturas que brillan en la oscuridad. Hoy sirve sobre todo en medidores que comprueban el grosor de papel o plástico en las fábricas.",
+    "descripcion": "Ficha del prometio: para qué se usa hoy"
+  },
+  "elemento.Pm.porque": {
+    "texto": "El prometio-147 emite radiación beta suave, fácil de frenar con una lámina fina, y dura unos pocos años: suficiente para una pila pequeña y mucho menos peligroso que el radio, que se usaba antes en las esferas luminosas.",
+    "descripcion": "Ficha del prometio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Pm.unico": {
+    "texto": "Es el único lantánido sin ningún isótopo estable: todos sus átomos acaban desintegrándose. Por eso en toda la corteza terrestre se calcula que hay menos de un kilo.",
+    "descripcion": "Ficha del prometio: su cualidad única o récord"
+  },
+  "elemento.Pm.curiosidad": {
+    "texto": "Aunque en la Tierra casi no hay, los astrónomos han visto su huella en la luz de una estrella lejana, la estrella de Przybylski.",
+    "descripcion": "Ficha del prometio: dato curioso"
+  },
+  "elemento.Pm.pista": {
+    "texto": "Me bautizaron como el titán que robó el fuego y nací dentro de un reactor nuclear.",
+    "descripcion": "Juego de adivinar: pista sobre el prometio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Pm.pregunta": {
+    "texto": "¿Quién propuso el nombre de este elemento?",
+    "descripcion": "Test de la ficha del prometio: enunciado de la pregunta"
+  },
+  "elemento.Pm.pregunta.ok": {
+    "texto": "Grace Mary Coryell",
+    "descripcion": "Test de la ficha del prometio: respuesta correcta (corta)"
+  },
+  "elemento.Pm.pregunta.mal1": {
+    "texto": "Marie Curie",
+    "descripcion": "Test de la ficha del prometio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Pm.pregunta.mal2": {
+    "texto": "Lise Meitner",
+    "descripcion": "Test de la ficha del prometio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Pm.pregunta.mal3": {
+    "texto": "Irène Joliot-Curie",
+    "descripcion": "Test de la ficha del prometio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Pm.pregunta.explicacion": {
+    "texto": "Grace Mary Coryell, esposa de uno de los descubridores, propuso llamarlo como Prometeo.",
+    "descripcion": "Test de la ficha del prometio: explicación de la respuesta correcta"
+  },
+  "elemento.Sm.descubrimiento": {
+    "texto": "Lo descubrió el francés Paul-Émile Lecoq de Boisbaudran en París en 1879, al ver líneas nuevas en el espectro de luz de un mineral llamado samarskita. Ese mineral llevaba el nombre de un ingeniero de minas ruso, Vasili Samarski-Bijovets.",
+    "descripcion": "Ficha del samario: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Sm.usos": {
+    "texto": "Los imanes de samario y cobalto van en motores de aviones, satélites, misiles y algunas pastillas de guitarra eléctrica. El samario-153 se usa en medicina para calmar el dolor de los tumores en los huesos.",
+    "descripcion": "Ficha del samario: para qué se usa hoy"
+  },
+  "elemento.Sm.porque": {
+    "texto": "Los imanes de samario-cobalto son algo menos fuertes que los de neodimio, pero siguen funcionando a más de 300 °C y no se oxidan; los de neodimio pierden fuerza mucho antes con el calor.",
+    "descripcion": "Ficha del samario: por qué se usa este elemento y no otro"
+  },
+  "elemento.Sm.unico": {
+    "texto": "Fue el primer elemento con nombre de una persona real, aunque de rebote: a través del mineral que lleva su apellido.",
+    "descripcion": "Ficha del samario: su cualidad única o récord"
+  },
+  "elemento.Sm.curiosidad": {
+    "texto": "Su nombre honra a un ruso que nunca investigó en química: solo dejó a los mineralogistas estudiar las rocas de sus minas.",
+    "descripcion": "Ficha del samario: dato curioso"
+  },
+  "elemento.Sm.pista": {
+    "texto": "Mi nombre viene, a través de un mineral, de un ingeniero de minas ruso.",
+    "descripcion": "Juego de adivinar: pista sobre el samario que no dice su nombre ni su símbolo"
+  },
+  "elemento.Sm.pregunta": {
+    "texto": "¿Por qué los imanes de este elemento se usan en motores muy calientes?",
+    "descripcion": "Test de la ficha del samario: enunciado de la pregunta"
+  },
+  "elemento.Sm.pregunta.ok": {
+    "texto": "Aguantan el calor sin perder fuerza",
+    "descripcion": "Test de la ficha del samario: respuesta correcta (corta)"
+  },
+  "elemento.Sm.pregunta.mal1": {
+    "texto": "Son los imanes más baratos",
+    "descripcion": "Test de la ficha del samario: respuesta incorrecta pero creíble"
+  },
+  "elemento.Sm.pregunta.mal2": {
+    "texto": "Pesan menos que el aluminio",
+    "descripcion": "Test de la ficha del samario: respuesta incorrecta pero creíble"
+  },
+  "elemento.Sm.pregunta.mal3": {
+    "texto": "Conducen mejor la electricidad",
+    "descripcion": "Test de la ficha del samario: respuesta incorrecta pero creíble"
+  },
+  "elemento.Sm.pregunta.explicacion": {
+    "texto": "Los imanes de samario-cobalto siguen funcionando a más de 300 °C y no se oxidan.",
+    "descripcion": "Test de la ficha del samario: explicación de la respuesta correcta"
+  },
+  "elemento.Eu.descubrimiento": {
+    "texto": "Lo identificó el francés Eugène-Anatole Demarçay en París en 1901. Era experto en espectroscopia: vio unas líneas de luz que no eran de ningún elemento conocido en una muestra de samario. Lo llamó como nuestro continente, Europa.",
+    "descripcion": "Ficha del europio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Eu.usos": {
+    "texto": "Da el color rojo (y parte del azul) a las pantallas antiguas de tubo y a las lámparas fluorescentes de bajo consumo. Químicos neerlandeses comprobaron que la tinta que brilla bajo luz ultravioleta en los billetes de euro lleva europio.",
+    "descripcion": "Ficha del europio: para qué se usa hoy"
+  },
+  "elemento.Eu.porque": {
+    "texto": "Sus iones brillan con un color muy puro y estrecho cuando les llega luz ultravioleta o electrones, y ese brillo es muy difícil de copiar. Por eso sirve como marca de seguridad: un falsificador no lo imita con tintas normales.",
+    "descripcion": "Ficha del europio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Eu.unico": {
+    "texto": "Es uno de los dos elementos con nombre de continente (el otro es el americio) y el lantánido más reactivo: se oxida en el aire en pocos días.",
+    "descripcion": "Ficha del europio: su cualidad única o récord"
+  },
+  "elemento.Eu.curiosidad": {
+    "texto": "El elemento que lleva el nombre de Europa vigila que los euros sean de verdad.",
+    "descripcion": "Ficha del europio: dato curioso"
+  },
+  "elemento.Eu.pista": {
+    "texto": "Llevo el nombre de un continente y brillo en rojo cuando me iluminas con luz ultravioleta.",
+    "descripcion": "Juego de adivinar: pista sobre el europio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Eu.pregunta": {
+    "texto": "¿Dónde se ha encontrado este elemento como medida contra falsificaciones?",
+    "descripcion": "Test de la ficha del europio: enunciado de la pregunta"
+  },
+  "elemento.Eu.pregunta.ok": {
+    "texto": "En los billetes de euro",
+    "descripcion": "Test de la ficha del europio: respuesta correcta (corta)"
+  },
+  "elemento.Eu.pregunta.mal1": {
+    "texto": "En los pasaportes de EE. UU.",
+    "descripcion": "Test de la ficha del europio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Eu.pregunta.mal2": {
+    "texto": "En las monedas de dólar",
+    "descripcion": "Test de la ficha del europio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Eu.pregunta.mal3": {
+    "texto": "En los sellos de correos",
+    "descripcion": "Test de la ficha del europio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Eu.pregunta.explicacion": {
+    "texto": "La tinta que brilla con luz ultravioleta en los billetes de euro contiene europio.",
+    "descripcion": "Test de la ficha del europio: explicación de la respuesta correcta"
+  },
+  "elemento.Gd.descubrimiento": {
+    "texto": "El suizo Jean Charles Galissard de Marignac vio sus líneas espectrales en Ginebra en 1880, y Lecoq de Boisbaudran aisló su óxido en 1886. Se llamó así por el mineral gadolinita, que a su vez honra al químico finlandés Johan Gadolin, pionero de las tierras raras.",
+    "descripcion": "Ficha del gadolinio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Gd.usos": {
+    "texto": "Es el contraste que se inyecta en muchas resonancias magnéticas para ver mejor tumores y vasos sanguíneos. También absorbe neutrones en reactores nucleares y está en pantallas de rayos X.",
+    "descripcion": "Ficha del gadolinio: para qué se usa hoy"
+  },
+  "elemento.Gd.porque": {
+    "texto": "El ion de gadolinio tiene siete electrones desparejados, el máximo posible, y eso lo hace muy magnético: acelera la señal del agua cercana y la imagen se ve más clara. Como suelto es tóxico, se inyecta «enjaulado» en una molécula que el riñón expulsa.",
+    "descripcion": "Ficha del gadolinio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Gd.unico": {
+    "texto": "Es el único elemento que deja de ser magnético justo a temperatura ambiente: por debajo de unos 20 °C un imán lo atrae, y por encima, casi nada.",
+    "descripcion": "Ficha del gadolinio: su cualidad única o récord"
+  },
+  "elemento.Gd.curiosidad": {
+    "texto": "Uno de sus isótopos atrapa neutrones mejor que ningún otro isótopo estable conocido.",
+    "descripcion": "Ficha del gadolinio: dato curioso"
+  },
+  "elemento.Gd.pista": {
+    "texto": "Me inyectan en las resonancias magnéticas para que los médicos vean mejor.",
+    "descripcion": "Juego de adivinar: pista sobre el gadolinio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Gd.pregunta": {
+    "texto": "¿Para qué se usa este elemento en los hospitales?",
+    "descripcion": "Test de la ficha del gadolinio: enunciado de la pregunta"
+  },
+  "elemento.Gd.pregunta.ok": {
+    "texto": "Como contraste en resonancias magnéticas",
+    "descripcion": "Test de la ficha del gadolinio: respuesta correcta (corta)"
+  },
+  "elemento.Gd.pregunta.mal1": {
+    "texto": "Para esterilizar el material",
+    "descripcion": "Test de la ficha del gadolinio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Gd.pregunta.mal2": {
+    "texto": "En los empastes dentales",
+    "descripcion": "Test de la ficha del gadolinio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Gd.pregunta.mal3": {
+    "texto": "Para medir la fiebre",
+    "descripcion": "Test de la ficha del gadolinio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Gd.pregunta.explicacion": {
+    "texto": "Su enorme magnetismo hace que la resonancia distinga mejor los tejidos donde llega.",
+    "descripcion": "Test de la ficha del gadolinio: explicación de la respuesta correcta"
+  },
+  "elemento.Tb.descubrimiento": {
+    "texto": "Lo descubrió Carl Gustaf Mosander en Estocolmo en 1843: partió la «itria» del mineral de la cantera de Ytterby en tres óxidos distintos. El nombre viene de ese pueblecito sueco, que ha dado nombre a cuatro elementos: itrio, iterbio, terbio y erbio.",
+    "descripcion": "Ficha del terbio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Tb.usos": {
+    "texto": "Da el color verde a lámparas fluorescentes y pantallas antiguas. Forma, con disprosio y hierro, el Terfenol-D, un material que se estira con los imanes y se usa en sónares y en altavoces que hacen sonar una mesa o una ventana.",
+    "descripcion": "Ficha del terbio: para qué se usa hoy"
+  },
+  "elemento.Tb.porque": {
+    "texto": "Sus iones emiten un verde muy puro e intenso al recibir luz ultravioleta, más eficiente que otros pigmentos. Y en el Terfenol-D cambia de tamaño con un campo magnético mucho más que el hierro o el níquel.",
+    "descripcion": "Ficha del terbio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Tb.unico": {
+    "texto": "El Terfenol-D, hecho con terbio, es el material que más cambia de tamaño con un imán a temperatura ambiente.",
+    "descripcion": "Ficha del terbio: su cualidad única o récord"
+  },
+  "elemento.Tb.curiosidad": {
+    "texto": "Los nombres de este elemento y del erbio se intercambiaron por error años después de su descubrimiento, y así se quedaron.",
+    "descripcion": "Ficha del terbio: dato curioso"
+  },
+  "elemento.Tb.pista": {
+    "texto": "Mi nombre viene de un pueblo sueco con cantera y doy el verde a las lámparas fluorescentes.",
+    "descripcion": "Juego de adivinar: pista sobre el terbio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Tb.pregunta": {
+    "texto": "¿Cuántos elementos llevan el nombre del pueblo sueco de Ytterby?",
+    "descripcion": "Test de la ficha del terbio: enunciado de la pregunta"
+  },
+  "elemento.Tb.pregunta.ok": {
+    "texto": "Cuatro",
+    "descripcion": "Test de la ficha del terbio: respuesta correcta (corta)"
+  },
+  "elemento.Tb.pregunta.mal1": {
+    "texto": "Uno",
+    "descripcion": "Test de la ficha del terbio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Tb.pregunta.mal2": {
+    "texto": "Dos",
+    "descripcion": "Test de la ficha del terbio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Tb.pregunta.mal3": {
+    "texto": "Siete",
+    "descripcion": "Test de la ficha del terbio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Tb.pregunta.explicacion": {
+    "texto": "Itrio, iterbio, terbio y erbio salen del nombre de Ytterby.",
+    "descripcion": "Test de la ficha del terbio: explicación de la respuesta correcta"
+  },
+  "elemento.Dy.descubrimiento": {
+    "texto": "Lo descubrió el francés Paul-Émile Lecoq de Boisbaudran en 1886, dentro de una muestra de óxido de holmio. Le costó más de 30 intentos de disolver y precipitar para separarlo, así que lo llamó con una palabra griega que significa «difícil de conseguir». El metal puro no se obtuvo hasta los años 50.",
+    "descripcion": "Ficha del disprosio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Dy.usos": {
+    "texto": "Se añade a los imanes de neodimio de los coches eléctricos y aerogeneradores, y forma parte del Terfenol-D. También está en dosímetros que miden la radiación que recibe el personal sanitario.",
+    "descripcion": "Ficha del disprosio: para qué se usa hoy"
+  },
+  "elemento.Dy.porque": {
+    "texto": "Sin disprosio, los imanes de neodimio se debilitan cuando el motor se calienta. Unos pocos gramos de disprosio los hacen resistentes al calor, algo que otro metal más barato no consigue igual.",
+    "descripcion": "Ficha del disprosio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Dy.unico": {
+    "texto": "Probablemente sea el nombre más sincero de la tabla periódica: significa «difícil de conseguir».",
+    "descripcion": "Ficha del disprosio: su cualidad única o récord"
+  },
+  "elemento.Dy.curiosidad": {
+    "texto": "En los dosímetros, el disprosio guarda la radiación recibida y la devuelve como un destello de luz al calentarlo.",
+    "descripcion": "Ficha del disprosio: dato curioso"
+  },
+  "elemento.Dy.pista": {
+    "texto": "Mi nombre griego significa «difícil de conseguir» y ayudo a los imanes a aguantar el calor.",
+    "descripcion": "Juego de adivinar: pista sobre el disprosio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Dy.pregunta": {
+    "texto": "¿Qué significa el nombre de este elemento?",
+    "descripcion": "Test de la ficha del disprosio: enunciado de la pregunta"
+  },
+  "elemento.Dy.pregunta.ok": {
+    "texto": "Difícil de conseguir",
+    "descripcion": "Test de la ficha del disprosio: respuesta correcta (corta)"
+  },
+  "elemento.Dy.pregunta.mal1": {
+    "texto": "Brillo verde",
+    "descripcion": "Test de la ficha del disprosio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Dy.pregunta.mal2": {
+    "texto": "Nuevo gemelo",
+    "descripcion": "Test de la ficha del disprosio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Dy.pregunta.mal3": {
+    "texto": "Piedra pesada",
+    "descripcion": "Test de la ficha del disprosio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Dy.pregunta.explicacion": {
+    "texto": "Lecoq de Boisbaudran tardó más de 30 intentos en separarlo y lo llamó «difícil de conseguir».",
+    "descripcion": "Test de la ficha del disprosio: explicación de la respuesta correcta"
+  },
+  "elemento.Ho.descubrimiento": {
+    "texto": "Lo vieron en 1878 los suizos Marc Delafontaine y Jacques-Louis Soret en Ginebra, por las líneas de su espectro. Al año siguiente, el sueco Per Teodor Cleve lo separó químicamente del óxido de erbio en Upsala y le dio el nombre latino de Estocolmo, su ciudad.",
+    "descripcion": "Ficha del holmio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Ho.usos": {
+    "texto": "Los láseres de holmio rompen piedras del riñón y operan la próstata sin cortar. Se usa en piezas que concentran el campo de los imanes más potentes y como patrón para calibrar aparatos que miden la luz.",
+    "descripcion": "Ficha del holmio: para qué se usa hoy"
+  },
+  "elemento.Ho.porque": {
+    "texto": "La luz de su láser la absorbe muy bien el agua, así que corta y pulveriza tejido o piedras en poca profundidad, sin dañar lo de alrededor. Con otros láseres el calor llega más hondo.",
+    "descripcion": "Ficha del holmio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Ho.unico": {
+    "texto": "Tiene el momento magnético más alto de todos los elementos naturales: cada átomo es un imán diminuto muy fuerte.",
+    "descripcion": "Ficha del holmio: su cualidad única o récord"
+  },
+  "elemento.Ho.curiosidad": {
+    "texto": "Con su láser, los urólogos convierten un cálculo del riñón en polvo fino que sale solo con la orina.",
+    "descripcion": "Ficha del holmio: dato curioso"
+  },
+  "elemento.Ho.pista": {
+    "texto": "Llevo en el nombre la capital de Suecia y mi láser pulveriza piedras del riñón.",
+    "descripcion": "Juego de adivinar: pista sobre el holmio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Ho.pregunta": {
+    "texto": "¿De qué ciudad viene el nombre de este elemento?",
+    "descripcion": "Test de la ficha del holmio: enunciado de la pregunta"
+  },
+  "elemento.Ho.pregunta.ok": {
+    "texto": "Estocolmo",
+    "descripcion": "Test de la ficha del holmio: respuesta correcta (corta)"
+  },
+  "elemento.Ho.pregunta.mal1": {
+    "texto": "Ginebra",
+    "descripcion": "Test de la ficha del holmio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Ho.pregunta.mal2": {
+    "texto": "Upsala",
+    "descripcion": "Test de la ficha del holmio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Ho.pregunta.mal3": {
+    "texto": "Copenhague",
+    "descripcion": "Test de la ficha del holmio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Ho.pregunta.explicacion": {
+    "texto": "Cleve lo llamó con el nombre latino de Estocolmo, su ciudad natal.",
+    "descripcion": "Test de la ficha del holmio: explicación de la respuesta correcta"
+  },
+  "elemento.Er.descubrimiento": {
+    "texto": "Lo encontró Carl Gustaf Mosander en 1843, al partir el óxido de itrio de la cantera sueca de Ytterby en tres. El nombre sale de ese pueblo, igual que los de itrio, terbio e iterbio.",
+    "descripcion": "Ficha del erbio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Er.usos": {
+    "texto": "Amplifica la luz que lleva internet por los cables de fibra óptica, incluidos los que cruzan océanos. También da el color rosa a algunos vidrios y joyas, y su láser se usa en dermatología y odontología.",
+    "descripcion": "Ficha del erbio: para qué se usa hoy"
+  },
+  "elemento.Er.porque": {
+    "texto": "El erbio emite justo a 1,55 micrómetros, la longitud de onda que menos se pierde en la fibra de vidrio. Basta un tramo de fibra con erbio para reforzar la señal sin convertirla en electricidad, algo que ningún otro elemento hace tan bien.",
+    "descripcion": "Ficha del erbio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Er.unico": {
+    "texto": "Es la base de los amplificadores ópticos de las redes de internet de todo el mundo.",
+    "descripcion": "Ficha del erbio: su cualidad única o récord"
+  },
+  "elemento.Er.curiosidad": {
+    "texto": "Cuando ves un vídeo de un servidor en otro continente, la luz ha sido reforzada por átomos de erbio bajo el mar.",
+    "descripcion": "Ficha del erbio: dato curioso"
+  },
+  "elemento.Er.pista": {
+    "texto": "Sin mí, la luz que lleva internet bajo el océano se apagaría a los pocos kilómetros.",
+    "descripcion": "Juego de adivinar: pista sobre el erbio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Er.pregunta": {
+    "texto": "¿Qué hace este elemento en los cables de internet?",
+    "descripcion": "Test de la ficha del erbio: enunciado de la pregunta"
+  },
+  "elemento.Er.pregunta.ok": {
+    "texto": "Amplifica la luz de la fibra óptica",
+    "descripcion": "Test de la ficha del erbio: respuesta correcta (corta)"
+  },
+  "elemento.Er.pregunta.mal1": {
+    "texto": "Protege el cable de los tiburones",
+    "descripcion": "Test de la ficha del erbio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Er.pregunta.mal2": {
+    "texto": "Aísla los cables de la electricidad",
+    "descripcion": "Test de la ficha del erbio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Er.pregunta.mal3": {
+    "texto": "Enfría los servidores de datos",
+    "descripcion": "Test de la ficha del erbio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Er.pregunta.explicacion": {
+    "texto": "En la fibra dopada con erbio la señal de luz se refuerza sin pasar a electricidad.",
+    "descripcion": "Test de la ficha del erbio: explicación de la respuesta correcta"
+  },
+  "elemento.Tm.descubrimiento": {
+    "texto": "Lo descubrió el sueco Per Teodor Cleve en Upsala en 1879, al limpiar el óxido de erbio de impurezas y ver que quedaban dos óxidos nuevos. Lo llamó por Thule, el nombre antiguo de una tierra mítica del norte.",
+    "descripcion": "Ficha del tulio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Tm.usos": {
+    "texto": "Se usa en láseres quirúrgicos de fibra y en aparatos portátiles de rayos X: un poco de tulio-170 radiactivo sustituye a la máquina enchufada. También está en algunos materiales que brillan con luz ultravioleta.",
+    "descripcion": "Ficha del tulio: para qué se usa hoy"
+  },
+  "elemento.Tm.porque": {
+    "texto": "El tulio-170 emite rayos poco energéticos parecidos a los X y no necesita electricidad, así que sirve para radiografías en lugares sin red eléctrica. Su láser corta tejido con precisión porque el agua lo absorbe mucho.",
+    "descripcion": "Ficha del tulio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Tm.unico": {
+    "texto": "Es el segundo lantánido menos abundante, solo por detrás del prometio, que es radiactivo.",
+    "descripcion": "Ficha del tulio: su cualidad única o récord"
+  },
+  "elemento.Tm.curiosidad": {
+    "texto": "En 1911, el químico Charles James tuvo que recristalizar una sal unas 15 000 veces para conseguirlo puro.",
+    "descripcion": "Ficha del tulio: dato curioso"
+  },
+  "elemento.Tm.pista": {
+    "texto": "Mi nombre viene de una tierra mítica del norte y soy de los lantánidos más escasos.",
+    "descripcion": "Juego de adivinar: pista sobre el tulio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Tm.pregunta": {
+    "texto": "¿Cuántas veces recristalizó Charles James una sal para purificarlo?",
+    "descripcion": "Test de la ficha del tulio: enunciado de la pregunta"
+  },
+  "elemento.Tm.pregunta.ok": {
+    "texto": "Unas 15 000 veces",
+    "descripcion": "Test de la ficha del tulio: respuesta correcta (corta)"
+  },
+  "elemento.Tm.pregunta.mal1": {
+    "texto": "Unas 15 veces",
+    "descripcion": "Test de la ficha del tulio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Tm.pregunta.mal2": {
+    "texto": "Unas 150 veces",
+    "descripcion": "Test de la ficha del tulio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Tm.pregunta.mal3": {
+    "texto": "Unas 1500 veces",
+    "descripcion": "Test de la ficha del tulio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Tm.pregunta.explicacion": {
+    "texto": "Charles James repitió el proceso unas 15 000 veces en 1911 hasta obtener tulio puro.",
+    "descripcion": "Test de la ficha del tulio: explicación de la respuesta correcta"
+  },
+  "elemento.Yb.descubrimiento": {
+    "texto": "Lo descubrió el suizo Jean Charles Galissard de Marignac en Ginebra en 1878: calentó nitrato de erbio y vio que una parte se comportaba distinto. Lo llamó por Ytterby, el pueblo sueco de la cantera. En 1907 se vio que aún escondía otro elemento, el lutecio.",
+    "descripcion": "Ficha del iterbio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Yb.usos": {
+    "texto": "Los láseres de fibra con iterbio cortan y sueldan metal en la industria. Con átomos de iterbio se han hecho algunos de los relojes atómicos más precisos del mundo.",
+    "descripcion": "Ficha del iterbio: para qué se usa hoy"
+  },
+  "elemento.Yb.porque": {
+    "texto": "Sus átomos tienen una transición de energía tan estrecha y estable que hacen de «péndulo» perfecto para un reloj. En los láseres pierde muy poca energía en forma de calor, más eficiente que otros dopantes.",
+    "descripcion": "Ficha del iterbio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Yb.unico": {
+    "texto": "Los relojes de iterbio son de los más precisos jamás construidos: tardarían miles de millones de años en desviarse un segundo.",
+    "descripcion": "Ficha del iterbio: su cualidad única o récord"
+  },
+  "elemento.Yb.curiosidad": {
+    "texto": "Su resistencia eléctrica sube mucho cuando lo aprietan, por eso sirve en sensores que miden la presión de terremotos y explosiones.",
+    "descripcion": "Ficha del iterbio: dato curioso"
+  },
+  "elemento.Yb.pista": {
+    "texto": "Mis átomos marcan el ritmo de algunos de los relojes más precisos del mundo.",
+    "descripcion": "Juego de adivinar: pista sobre el iterbio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Yb.pregunta": {
+    "texto": "¿Qué aparato de precisión se ha construido con átomos de este elemento?",
+    "descripcion": "Test de la ficha del iterbio: enunciado de la pregunta"
+  },
+  "elemento.Yb.pregunta.ok": {
+    "texto": "Relojes atómicos",
+    "descripcion": "Test de la ficha del iterbio: respuesta correcta (corta)"
+  },
+  "elemento.Yb.pregunta.mal1": {
+    "texto": "Balanzas de laboratorio",
+    "descripcion": "Test de la ficha del iterbio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Yb.pregunta.mal2": {
+    "texto": "Brújulas de barco",
+    "descripcion": "Test de la ficha del iterbio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Yb.pregunta.mal3": {
+    "texto": "Termómetros clínicos",
+    "descripcion": "Test de la ficha del iterbio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Yb.pregunta.explicacion": {
+    "texto": "Una transición muy estable de sus átomos sirve de péndulo para relojes atómicos muy precisos.",
+    "descripcion": "Test de la ficha del iterbio: explicación de la respuesta correcta"
+  },
+  "elemento.Lu.descubrimiento": {
+    "texto": "Lo descubrieron en 1907, casi a la vez y por separado, el francés Georges Urbain, el austriaco Carl Auer von Welsbach y el estadounidense Charles James, separándolo del iterbio. Urbain publicó primero y le dio el nombre latino de París, Lutecia.",
+    "descripcion": "Ficha del lutecio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Lu.usos": {
+    "texto": "Sus cristales detectan la radiación en los escáneres PET de los hospitales. El lutecio-177 se usa en tratamientos contra algunos cánceres, como el de próstata.",
+    "descripcion": "Ficha del lutecio: para qué se usa hoy"
+  },
+  "elemento.Lu.porque": {
+    "texto": "Los cristales con lutecio son muy densos, así que frenan bien los rayos gamma, y emiten un destello rápido y brillante. Eso permite imágenes más nítidas y pruebas más cortas que con los cristales antiguos.",
+    "descripcion": "Ficha del lutecio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Lu.unico": {
+    "texto": "Es el último lantánido y el más duro, el más denso y el de punto de fusión más alto de su familia.",
+    "descripcion": "Ficha del lutecio: su cualidad única o récord"
+  },
+  "elemento.Lu.curiosidad": {
+    "texto": "Es una de las tierras raras más caras, porque cuesta mucho separarla de sus vecinas.",
+    "descripcion": "Ficha del lutecio: dato curioso"
+  },
+  "elemento.Lu.pista": {
+    "texto": "Llevo el nombre latino de París y cierro la fila de las tierras raras.",
+    "descripcion": "Juego de adivinar: pista sobre el lutecio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Lu.pregunta": {
+    "texto": "¿Qué ciudad da nombre a este elemento?",
+    "descripcion": "Test de la ficha del lutecio: enunciado de la pregunta"
+  },
+  "elemento.Lu.pregunta.ok": {
+    "texto": "París",
+    "descripcion": "Test de la ficha del lutecio: respuesta correcta (corta)"
+  },
+  "elemento.Lu.pregunta.mal1": {
+    "texto": "Viena",
+    "descripcion": "Test de la ficha del lutecio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Lu.pregunta.mal2": {
+    "texto": "Londres",
+    "descripcion": "Test de la ficha del lutecio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Lu.pregunta.mal3": {
+    "texto": "Lyon",
+    "descripcion": "Test de la ficha del lutecio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Lu.pregunta.explicacion": {
+    "texto": "Georges Urbain lo llamó como Lutecia, el nombre latino de París.",
+    "descripcion": "Test de la ficha del lutecio: explicación de la respuesta correcta"
+  },
+  "elemento.Hf.descubrimiento": {
+    "texto": "Lo encontraron en 1923 el neerlandés Dirk Coster y el húngaro George de Hevesy en Copenhague, en el instituto de Niels Bohr. La teoría de Bohr decía que el elemento 72 se parecería al circonio, así que lo buscaron en minerales de circonio con rayos X, y allí estaba. Lo llamaron por Hafnia, el nombre latino de Copenhague.",
+    "descripcion": "Ficha del hafnio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Hf.usos": {
+    "texto": "Hace de freno en las barras de control de reactores nucleares, como los de submarinos. Su óxido aísla los transistores de los chips de ordenador y móvil, y está en superaleaciones de motores a reacción.",
+    "descripcion": "Ficha del hafnio: para qué se usa hoy"
+  },
+  "elemento.Hf.porque": {
+    "texto": "Absorbe neutrones muy bien, mientras que el circonio, casi idéntico en todo lo demás, los deja pasar. Por eso en los reactores se separan: el circonio para los tubos del combustible y el hafnio para frenar la reacción.",
+    "descripcion": "Ficha del hafnio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Hf.unico": {
+    "texto": "Es el elemento más parecido a otro: él y el circonio tienen casi el mismo tamaño y química, y separarlos cuesta muchísimo.",
+    "descripcion": "Ficha del hafnio: su cualidad única o récord"
+  },
+  "elemento.Hf.curiosidad": {
+    "texto": "Durante más de un siglo, todo el circonio de los laboratorios llevaba hafnio escondido sin que nadie lo supiera.",
+    "descripcion": "Ficha del hafnio: dato curioso"
+  },
+  "elemento.Hf.pista": {
+    "texto": "Llevo el nombre latino de Copenhague y me escondía dentro del circonio.",
+    "descripcion": "Juego de adivinar: pista sobre el hafnio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Hf.pregunta": {
+    "texto": "¿Dentro de qué minerales se encontró este elemento?",
+    "descripcion": "Test de la ficha del hafnio: enunciado de la pregunta"
+  },
+  "elemento.Hf.pregunta.ok": {
+    "texto": "En minerales de circonio",
+    "descripcion": "Test de la ficha del hafnio: respuesta correcta (corta)"
+  },
+  "elemento.Hf.pregunta.mal1": {
+    "texto": "En minerales de hierro",
+    "descripcion": "Test de la ficha del hafnio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Hf.pregunta.mal2": {
+    "texto": "En minerales de uranio",
+    "descripcion": "Test de la ficha del hafnio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Hf.pregunta.mal3": {
+    "texto": "En sal marina",
+    "descripcion": "Test de la ficha del hafnio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Hf.pregunta.explicacion": {
+    "texto": "La teoría de Bohr predijo que se parecería al circonio, y allí lo buscaron y encontraron.",
+    "descripcion": "Test de la ficha del hafnio: explicación de la respuesta correcta"
+  },
+  "elemento.Ta.descubrimiento": {
+    "texto": "Lo descubrió el sueco Anders Gustaf Ekeberg en Upsala en 1802. Su óxido no se disolvía ni metido en ácido, así que lo llamó por Tántalo, el personaje griego condenado a estar en el agua sin poder beber. Durante décadas se confundió con el niobio, hasta que en 1866 Marignac demostró que eran distintos.",
+    "descripcion": "Ficha del tantalio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Ta.usos": {
+    "texto": "Está en los condensadores diminutos de móviles, portátiles y consolas. Se usa en prótesis, tornillos de huesos y piezas de turbinas. Se extrae sobre todo del coltán, y en el Congo su minería ha financiado guerras.",
+    "descripcion": "Ficha del tantalio: para qué se usa hoy"
+  },
+  "elemento.Ta.porque": {
+    "texto": "Se cubre de una capa de óxido finísima y muy aislante, que permite guardar mucha carga en un condensador muy pequeño. Además, el cuerpo no lo rechaza porque no se corroe.",
+    "descripcion": "Ficha del tantalio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Ta.unico": {
+    "texto": "Tiene el único estado excitado de un núcleo que existe en la naturaleza y que nunca se ha visto desintegrarse: el tantalio-180m.",
+    "descripcion": "Ficha del tantalio: su cualidad única o récord"
+  },
+  "elemento.Ta.curiosidad": {
+    "texto": "Probablemente tienes unos cuantos miligramos dentro del móvil sin saberlo.",
+    "descripcion": "Ficha del tantalio: dato curioso"
+  },
+  "elemento.Ta.pista": {
+    "texto": "Me llamaron como un rey griego castigado a no poder beber y vivo dentro de los condensadores de tu móvil.",
+    "descripcion": "Juego de adivinar: pista sobre el tantalio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Ta.pregunta": {
+    "texto": "¿De qué mineral se extrae sobre todo este elemento?",
+    "descripcion": "Test de la ficha del tantalio: enunciado de la pregunta"
+  },
+  "elemento.Ta.pregunta.ok": {
+    "texto": "Del coltán",
+    "descripcion": "Test de la ficha del tantalio: respuesta correcta (corta)"
+  },
+  "elemento.Ta.pregunta.mal1": {
+    "texto": "De la bauxita",
+    "descripcion": "Test de la ficha del tantalio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Ta.pregunta.mal2": {
+    "texto": "De la pirita",
+    "descripcion": "Test de la ficha del tantalio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Ta.pregunta.mal3": {
+    "texto": "De la galena",
+    "descripcion": "Test de la ficha del tantalio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Ta.pregunta.explicacion": {
+    "texto": "El coltán es una mezcla de columbita y tantalita, la principal fuente de tantalio.",
+    "descripcion": "Test de la ficha del tantalio: explicación de la respuesta correcta"
+  },
+  "elemento.W.descubrimiento": {
+    "texto": "Lo aislaron en 1783 los hermanos riojanos Juan José y Fausto Elhuyar en el Seminario de Bergara (Gipuzkoa). Sacaron el ácido del mineral wolframita y lo calentaron con carbón hasta obtener el metal. Es uno de los pocos elementos descubiertos por científicos españoles, con el platino y el vanadio.",
+    "descripcion": "Ficha del wolframio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.W.usos": {
+    "texto": "Fue el filamento de las bombillas incandescentes. Hoy el carburo de wolframio está en brocas, fresas y bolígrafos, y el metal en contrapesos, dardos y el motor que hace vibrar el móvil.",
+    "descripcion": "Ficha del wolframio: para qué se usa hoy"
+  },
+  "elemento.W.porque": {
+    "texto": "Es el metal que funde a más temperatura, 3422 °C, así que un hilo puede brillar al rojo blanco sin derretirse. Y el carburo de wolframio es casi tan duro como el diamante, pero mucho más barato.",
+    "descripcion": "Ficha del wolframio: por qué se usa este elemento y no otro"
+  },
+  "elemento.W.unico": {
+    "texto": "Tiene el punto de fusión más alto de todos los metales.",
+    "descripcion": "Ficha del wolframio: su cualidad única o récord"
+  },
+  "elemento.W.curiosidad": {
+    "texto": "Su símbolo viene de «wolf rahm», «espuma de lobo»: los mineros alemanes decían que el mineral se «comía» el estaño como un lobo.",
+    "descripcion": "Ficha del wolframio: dato curioso"
+  },
+  "elemento.W.pista": {
+    "texto": "Dos hermanos españoles me aislaron en Bergara y nadie funde a tanta temperatura como yo.",
+    "descripcion": "Juego de adivinar: pista sobre el wolframio que no dice su nombre ni su símbolo"
+  },
+  "elemento.W.pregunta": {
+    "texto": "¿Quiénes aislaron este elemento por primera vez?",
+    "descripcion": "Test de la ficha del wolframio: enunciado de la pregunta"
+  },
+  "elemento.W.pregunta.ok": {
+    "texto": "Los hermanos Elhuyar",
+    "descripcion": "Test de la ficha del wolframio: respuesta correcta (corta)"
+  },
+  "elemento.W.pregunta.mal1": {
+    "texto": "Los hermanos Curie",
+    "descripcion": "Test de la ficha del wolframio: respuesta incorrecta pero creíble"
+  },
+  "elemento.W.pregunta.mal2": {
+    "texto": "Los hermanos Lumière",
+    "descripcion": "Test de la ficha del wolframio: respuesta incorrecta pero creíble"
+  },
+  "elemento.W.pregunta.mal3": {
+    "texto": "Los hermanos Wright",
+    "descripcion": "Test de la ficha del wolframio: respuesta incorrecta pero creíble"
+  },
+  "elemento.W.pregunta.explicacion": {
+    "texto": "Juan José y Fausto Elhuyar lo aislaron en Bergara en 1783.",
+    "descripcion": "Test de la ficha del wolframio: explicación de la respuesta correcta"
+  },
+  "elemento.Re.descubrimiento": {
+    "texto": "Lo encontraron en 1925 los alemanes Walter Noddack, Ida Tacke (luego Ida Noddack) y Otto Berg, buscando sus rayos X en minerales de platino y columbita. Lo llamaron por el río Rin. Años después se comprobó que el japonés Masataka Ogawa lo había visto en 1908, aunque creyó que era otro elemento.",
+    "descripcion": "Ficha del renio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Re.usos": {
+    "texto": "Va en las superaleaciones de níquel de los álabes de los motores a reacción. También forma, con el platino, catalizadores para obtener gasolina de alto octanaje.",
+    "descripcion": "Ficha del renio: para qué se usa hoy"
+  },
+  "elemento.Re.porque": {
+    "texto": "Unos pocos por ciento de renio hacen que las palas de la turbina no se deformen a más de 1000 °C durante miles de horas; sin él, se «estiran» con el calor y la fuerza.",
+    "descripcion": "Ficha del renio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Re.unico": {
+    "texto": "Fue el último elemento estable en descubrirse, y es uno de los más escasos de la corteza terrestre.",
+    "descripcion": "Ficha del renio: su cualidad única o récord"
+  },
+  "elemento.Re.curiosidad": {
+    "texto": "Ida Noddack, una de sus descubridoras, propuso en 1934 que un núcleo de uranio podía partirse, años antes de que se confirmara la fisión.",
+    "descripcion": "Ficha del renio: dato curioso"
+  },
+  "elemento.Re.pista": {
+    "texto": "Llevo el nombre de un gran río europeo y fui el último elemento estable en descubrirse.",
+    "descripcion": "Juego de adivinar: pista sobre el renio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Re.pregunta": {
+    "texto": "¿Qué científica participó en el descubrimiento de este elemento?",
+    "descripcion": "Test de la ficha del renio: enunciado de la pregunta"
+  },
+  "elemento.Re.pregunta.ok": {
+    "texto": "Ida Noddack",
+    "descripcion": "Test de la ficha del renio: respuesta correcta (corta)"
+  },
+  "elemento.Re.pregunta.mal1": {
+    "texto": "Marie Curie",
+    "descripcion": "Test de la ficha del renio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Re.pregunta.mal2": {
+    "texto": "Lise Meitner",
+    "descripcion": "Test de la ficha del renio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Re.pregunta.mal3": {
+    "texto": "Rosalind Franklin",
+    "descripcion": "Test de la ficha del renio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Re.pregunta.explicacion": {
+    "texto": "Ida Tacke, después Ida Noddack, lo descubrió en 1925 con Walter Noddack y Otto Berg.",
+    "descripcion": "Test de la ficha del renio: explicación de la respuesta correcta"
+  },
+  "elemento.Os.descubrimiento": {
+    "texto": "Lo descubrió el inglés Smithson Tennant en Londres en 1803, a la vez que el iridio. Disolvió platino en agua regia y estudió el polvo negro que no se disolvía. Al calentarlo, uno de sus compuestos olía muy fuerte, así que lo llamó con la palabra griega para «olor».",
+    "descripcion": "Ficha del osmio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Os.usos": {
+    "texto": "Antes iba en las puntas de plumas estilográficas y agujas de tocadiscos. Hoy su tetróxido tiñe células para el microscopio electrónico y revela huellas dactilares.",
+    "descripcion": "Ficha del osmio: para qué se usa hoy"
+  },
+  "elemento.Os.porque": {
+    "texto": "Es durísimo y apenas se desgasta, ideal para puntas que rozan sin parar. Su tetróxido se pega a las grasas y, como es muy pesado, las hace visibles con electrones, cosa que no logran los átomos ligeros.",
+    "descripcion": "Ficha del osmio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Os.unico": {
+    "texto": "Es el elemento más denso que existe: un litro pesaría unos 22,6 kg, el doble que el plomo.",
+    "descripcion": "Ficha del osmio: su cualidad única o récord"
+  },
+  "elemento.Os.curiosidad": {
+    "texto": "Su óxido huele parecido al cloro y es tan tóxico que puede dañar los ojos con solo sus vapores.",
+    "descripcion": "Ficha del osmio: dato curioso"
+  },
+  "elemento.Os.pista": {
+    "texto": "Mi nombre significa «olor» y soy el elemento más denso de todos.",
+    "descripcion": "Juego de adivinar: pista sobre el osmio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Os.pregunta": {
+    "texto": "¿Qué récord tiene este elemento?",
+    "descripcion": "Test de la ficha del osmio: enunciado de la pregunta"
+  },
+  "elemento.Os.pregunta.ok": {
+    "texto": "Es el elemento más denso",
+    "descripcion": "Test de la ficha del osmio: respuesta correcta (corta)"
+  },
+  "elemento.Os.pregunta.mal1": {
+    "texto": "Es el metal más blando",
+    "descripcion": "Test de la ficha del osmio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Os.pregunta.mal2": {
+    "texto": "Es el más abundante",
+    "descripcion": "Test de la ficha del osmio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Os.pregunta.mal3": {
+    "texto": "Es el mejor conductor",
+    "descripcion": "Test de la ficha del osmio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Os.pregunta.explicacion": {
+    "texto": "Con unos 22,6 g/cm³, el osmio es el elemento más denso conocido.",
+    "descripcion": "Test de la ficha del osmio: explicación de la respuesta correcta"
+  },
+  "elemento.Ir.descubrimiento": {
+    "texto": "Lo descubrió Smithson Tennant en Londres en 1803, en el mismo polvo negro que dejaba el platino en agua regia. Sus sales salían de tantos colores que lo llamó por Iris, la diosa griega del arcoíris.",
+    "descripcion": "Ficha del iridio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Ir.usos": {
+    "texto": "Está en la punta de bujías de alta duración, en crisoles para fabricar cristales y en contactos eléctricos. El metro y el kilogramo patrón antiguos eran de platino con un 10 % de iridio.",
+    "descripcion": "Ficha del iridio: para qué se usa hoy"
+  },
+  "elemento.Ir.porque": {
+    "texto": "Es el metal que mejor resiste la corrosión: ni el agua regia lo ataca a temperatura ambiente. Por eso aguanta chispas y calor donde otros metales se gastarían.",
+    "descripcion": "Ficha del iridio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Ir.unico": {
+    "texto": "Es el metal más resistente a la corrosión, y una capa con mucho iridio en las rocas de hace 66 millones de años delató el asteroide que extinguió a los dinosaurios.",
+    "descripcion": "Ficha del iridio: su cualidad única o récord"
+  },
+  "elemento.Ir.curiosidad": {
+    "texto": "El físico Luis Walter Álvarez, nieto de un médico asturiano, fue uno de los que descubrió esa capa de iridio en 1980 con su hijo Walter.",
+    "descripcion": "Ficha del iridio: dato curioso"
+  },
+  "elemento.Ir.pista": {
+    "texto": "Me llamaron por la diosa del arcoíris y mi capa en las rocas acusa al asteroide de los dinosaurios.",
+    "descripcion": "Juego de adivinar: pista sobre el iridio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Ir.pregunta": {
+    "texto": "¿Qué ayudó a descubrir una capa de este elemento en las rocas?",
+    "descripcion": "Test de la ficha del iridio: enunciado de la pregunta"
+  },
+  "elemento.Ir.pregunta.ok": {
+    "texto": "El asteroide que extinguió a los dinosaurios",
+    "descripcion": "Test de la ficha del iridio: respuesta correcta (corta)"
+  },
+  "elemento.Ir.pregunta.mal1": {
+    "texto": "La edad exacta de la Tierra",
+    "descripcion": "Test de la ficha del iridio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Ir.pregunta.mal2": {
+    "texto": "El origen del agua en la Tierra",
+    "descripcion": "Test de la ficha del iridio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Ir.pregunta.mal3": {
+    "texto": "La última glaciación del planeta",
+    "descripcion": "Test de la ficha del iridio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Ir.pregunta.explicacion": {
+    "texto": "Hay mucho iridio en los asteroides y poco en la corteza: una capa rica en él indica un gran impacto.",
+    "descripcion": "Test de la ficha del iridio: explicación de la respuesta correcta"
+  },
+  "elemento.Pt.descubrimiento": {
+    "texto": "Los pueblos de la costa de Esmeraldas (Ecuador y Colombia) ya lo trabajaban con oro hace unos 2000 años. El marino español Antonio de Ulloa lo describió en 1748 tras su expedición al virreinato del Perú y lo llamó «platina», pequeña plata. Los químicos europeos lo reconocieron como elemento nuevo a mediados del siglo XVIII.",
+    "descripcion": "Ficha del platino: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Pt.usos": {
+    "texto": "Está en los catalizadores de los coches, en joyas, en electrodos y en marcapasos. El cisplatino es uno de los fármacos contra el cáncer más usados.",
+    "descripcion": "Ficha del platino: para qué se usa hoy"
+  },
+  "elemento.Pt.porque": {
+    "texto": "No se oxida y acelera reacciones sin gastarse, por eso los catalizadores transforman gases tóxicos durante años. El cisplatino se une al ADN de las células cancerosas y les impide dividirse.",
+    "descripcion": "Ficha del platino: por qué se usa este elemento y no otro"
+  },
+  "elemento.Pt.unico": {
+    "texto": "Hasta 2019, el kilogramo de todo el mundo se definía con un cilindro de platino e iridio guardado cerca de París.",
+    "descripcion": "Ficha del platino: su cualidad única o récord"
+  },
+  "elemento.Pt.curiosidad": {
+    "texto": "El cisplatino se descubrió por casualidad en 1965: Barnett Rosenberg vio que las bacterias dejaban de dividirse junto a unos electrodos de este metal.",
+    "descripcion": "Ficha del platino: dato curioso"
+  },
+  "elemento.Pt.pista": {
+    "texto": "Un marino español me llamó «pequeña plata» y ahora limpio el humo de los coches.",
+    "descripcion": "Juego de adivinar: pista sobre el platino que no dice su nombre ni su símbolo"
+  },
+  "elemento.Pt.pregunta": {
+    "texto": "¿Qué marino español describió este metal en 1748?",
+    "descripcion": "Test de la ficha del platino: enunciado de la pregunta"
+  },
+  "elemento.Pt.pregunta.ok": {
+    "texto": "Antonio de Ulloa",
+    "descripcion": "Test de la ficha del platino: respuesta correcta (corta)"
+  },
+  "elemento.Pt.pregunta.mal1": {
+    "texto": "Jorge Juan",
+    "descripcion": "Test de la ficha del platino: respuesta incorrecta pero creíble"
+  },
+  "elemento.Pt.pregunta.mal2": {
+    "texto": "Juan Sebastián Elcano",
+    "descripcion": "Test de la ficha del platino: respuesta incorrecta pero creíble"
+  },
+  "elemento.Pt.pregunta.mal3": {
+    "texto": "Blas de Lezo",
+    "descripcion": "Test de la ficha del platino: respuesta incorrecta pero creíble"
+  },
+  "elemento.Pt.pregunta.explicacion": {
+    "texto": "Antonio de Ulloa lo describió tras su viaje al virreinato del Perú.",
+    "descripcion": "Test de la ficha del platino: explicación de la respuesta correcta"
+  },
+  "elemento.Au.descubrimiento": {
+    "texto": "Se conoce desde la Prehistoria: las joyas trabajadas más antiguas, de hace más de 6000 años, salieron de la necrópolis de Varna (Bulgaria). Aparece puro en los ríos, sin tener que sacarlo de ningún mineral, y por eso fue de los primeros metales usados. Lavoisier lo incluyó en su lista de sustancias simples en 1789.",
+    "descripcion": "Ficha del oro: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Au.usos": {
+    "texto": "Está en los contactos de móviles y ordenadores, en joyas y en las reservas de los bancos centrales. Los visores de los astronautas y los espejos del telescopio James Webb llevan una capa finísima.",
+    "descripcion": "Ficha del oro: para qué se usa hoy"
+  },
+  "elemento.Au.porque": {
+    "texto": "No se oxida ni se corroe, así que un contacto eléctrico funciona décadas. Además refleja casi toda la radiación infrarroja: por eso protege del calor del Sol en el espacio mejor que la plata o el aluminio.",
+    "descripcion": "Ficha del oro: por qué se usa este elemento y no otro"
+  },
+  "elemento.Au.unico": {
+    "texto": "Es el metal más maleable: con un solo gramo se puede hacer una lámina de casi un metro cuadrado.",
+    "descripcion": "Ficha del oro: su cualidad única o récord"
+  },
+  "elemento.Au.curiosidad": {
+    "texto": "En 1940, George de Hevesy disolvió dos medallas del Nobel en agua regia para esconderlas de los nazis; tras la guerra recuperó el metal y se volvieron a fundir.",
+    "descripcion": "Ficha del oro: dato curioso"
+  },
+  "elemento.Au.pista": {
+    "texto": "Los alquimistas soñaban con fabricarme y mi color amarillo nunca se apaga.",
+    "descripcion": "Juego de adivinar: pista sobre el oro que no dice su nombre ni su símbolo"
+  },
+  "elemento.Au.pregunta": {
+    "texto": "¿Qué récord físico tiene este metal?",
+    "descripcion": "Test de la ficha del oro: enunciado de la pregunta"
+  },
+  "elemento.Au.pregunta.ok": {
+    "texto": "Es el más maleable",
+    "descripcion": "Test de la ficha del oro: respuesta correcta (corta)"
+  },
+  "elemento.Au.pregunta.mal1": {
+    "texto": "Es el más duro",
+    "descripcion": "Test de la ficha del oro: respuesta incorrecta pero creíble"
+  },
+  "elemento.Au.pregunta.mal2": {
+    "texto": "Es el más ligero",
+    "descripcion": "Test de la ficha del oro: respuesta incorrecta pero creíble"
+  },
+  "elemento.Au.pregunta.mal3": {
+    "texto": "Es el más magnético",
+    "descripcion": "Test de la ficha del oro: respuesta incorrecta pero creíble"
+  },
+  "elemento.Au.pregunta.explicacion": {
+    "texto": "Con un gramo se puede batir una lámina de casi un metro cuadrado.",
+    "descripcion": "Test de la ficha del oro: explicación de la respuesta correcta"
+  },
+  "elemento.Hg.descubrimiento": {
+    "texto": "Se conoce desde la Antigüedad: había en tumbas egipcias de hace unos 3500 años. En Almadén (Ciudad Real) se ha extraído desde los romanos, y de allí ha salido cerca de un tercio de todo el que ha usado la humanidad. Se vio que era un metal en 1759, cuando lo congelaron en San Petersburgo.",
+    "descripcion": "Ficha del mercurio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Hg.usos": {
+    "texto": "Hoy se usa poco por ser tóxico: está en algunas lámparas fluorescentes y en empastes antiguos. Los termómetros que lo llevaban están prohibidos en la Unión Europea.",
+    "descripcion": "Ficha del mercurio: para qué se usa hoy"
+  },
+  "elemento.Hg.porque": {
+    "texto": "Es el único metal líquido a temperatura ambiente y se dilata de forma muy regular con el calor, por eso era perfecto para termómetros. Hoy se sustituye por alcohol o sensores electrónicos, que no envenenan.",
+    "descripcion": "Ficha del mercurio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Hg.unico": {
+    "texto": "Es el único metal que es líquido a temperatura ambiente y presión normal.",
+    "descripcion": "Ficha del mercurio: su cualidad única o récord"
+  },
+  "elemento.Hg.curiosidad": {
+    "texto": "Las minas de Almadén son Patrimonio de la Humanidad desde 2012.",
+    "descripcion": "Ficha del mercurio: dato curioso"
+  },
+  "elemento.Hg.pista": {
+    "texto": "Soy el único metal líquido a temperatura ambiente y de Almadén ha salido un tercio de todo mi metal.",
+    "descripcion": "Juego de adivinar: pista sobre el mercurio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Hg.pregunta": {
+    "texto": "¿Qué tiene de especial este metal?",
+    "descripcion": "Test de la ficha del mercurio: enunciado de la pregunta"
+  },
+  "elemento.Hg.pregunta.ok": {
+    "texto": "Es líquido a temperatura ambiente",
+    "descripcion": "Test de la ficha del mercurio: respuesta correcta (corta)"
+  },
+  "elemento.Hg.pregunta.mal1": {
+    "texto": "Es transparente como el vidrio",
+    "descripcion": "Test de la ficha del mercurio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Hg.pregunta.mal2": {
+    "texto": "Flota en el agua",
+    "descripcion": "Test de la ficha del mercurio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Hg.pregunta.mal3": {
+    "texto": "Es un gas a 25 °C",
+    "descripcion": "Test de la ficha del mercurio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Hg.pregunta.explicacion": {
+    "texto": "Funde a −39 °C, así que a temperatura ambiente es líquido.",
+    "descripcion": "Test de la ficha del mercurio: explicación de la respuesta correcta"
+  },
+  "elemento.Tl.descubrimiento": {
+    "texto": "Lo descubrió el inglés William Crookes en Londres en 1861. Al quemar residuos de una fábrica de ácido sulfúrico vio una línea verde brillante en el espectro, y lo llamó con la palabra griega para «brote verde». Un año después, el francés Claude-Auguste Lamy aisló el metal.",
+    "descripcion": "Ficha del talio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Tl.usos": {
+    "texto": "El talio-201 se inyecta en pruebas de esfuerzo para ver cómo llega la sangre al corazón. También está en detectores de radiación y lentes para infrarrojos. Antes se usaba como matarratas, hoy prohibido.",
+    "descripcion": "Ficha del talio: para qué se usa hoy"
+  },
+  "elemento.Tl.porque": {
+    "texto": "El ion de talio se comporta como el de potasio, así que las células del corazón lo absorben igual y la cámara ve qué zonas reciben sangre y cuáles no.",
+    "descripcion": "Ficha del talio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Tl.unico": {
+    "texto": "Es uno de los pocos venenos sin sabor, olor ni color, y por eso ha aparecido en novelas policiacas.",
+    "descripcion": "Ficha del talio: su cualidad única o récord"
+  },
+  "elemento.Tl.curiosidad": {
+    "texto": "En 1977 una enfermera de Londres salvó a una niña al reconocer un envenenamiento por talio gracias a una novela de Agatha Christie.",
+    "descripcion": "Ficha del talio: dato curioso"
+  },
+  "elemento.Tl.pista": {
+    "texto": "Me descubrieron por una línea verde y engaño a las células haciéndome pasar por potasio.",
+    "descripcion": "Juego de adivinar: pista sobre el talio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Tl.pregunta": {
+    "texto": "¿Por qué las células del corazón absorben este elemento?",
+    "descripcion": "Test de la ficha del talio: enunciado de la pregunta"
+  },
+  "elemento.Tl.pregunta.ok": {
+    "texto": "Se parece al ion potasio",
+    "descripcion": "Test de la ficha del talio: respuesta correcta (corta)"
+  },
+  "elemento.Tl.pregunta.mal1": {
+    "texto": "Se parece al azúcar",
+    "descripcion": "Test de la ficha del talio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Tl.pregunta.mal2": {
+    "texto": "Es muy ligero",
+    "descripcion": "Test de la ficha del talio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Tl.pregunta.mal3": {
+    "texto": "Es magnético",
+    "descripcion": "Test de la ficha del talio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Tl.pregunta.explicacion": {
+    "texto": "El ion de talio imita al potasio, así que las células lo toman como si lo fuera.",
+    "descripcion": "Test de la ficha del talio: explicación de la respuesta correcta"
+  },
+  "elemento.Pb.descubrimiento": {
+    "texto": "Se conoce desde hace más de 8000 años; es uno de los primeros metales que se fundió. Los romanos lo sacaban a toneladas, también de minas de Hispania como las de Cartagena, para hacer tuberías. Lavoisier lo reconoció como elemento a finales del siglo XVIII.",
+    "descripcion": "Ficha del plomo: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Pb.usos": {
+    "texto": "Está en las baterías de arranque de los coches y en los delantales del dentista que paran los rayos X. Ya no se pone en la gasolina (en España desde 2001) ni en la pintura, porque es tóxico.",
+    "descripcion": "Ficha del plomo: para qué se usa hoy"
+  },
+  "elemento.Pb.porque": {
+    "texto": "Es muy denso y barato, así que una capa fina frena los rayos X mejor que otros metales a ese precio. Sus baterías aguantan picos de corriente y se reciclan casi al 100 %.",
+    "descripcion": "Ficha del plomo: por qué se usa este elemento y no otro"
+  },
+  "elemento.Pb.unico": {
+    "texto": "Es el elemento más pesado que tiene isótopos totalmente estables, y el final de las cadenas de desintegración del uranio y el torio.",
+    "descripcion": "Ficha del plomo: su cualidad única o récord"
+  },
+  "elemento.Pb.curiosidad": {
+    "texto": "El hielo de Groenlandia guarda la contaminación de las minas romanas de hace 2000 años.",
+    "descripcion": "Ficha del plomo: dato curioso"
+  },
+  "elemento.Pb.pista": {
+    "texto": "Los romanos hicieron conmigo sus tuberías y hoy paro los rayos X en el dentista.",
+    "descripcion": "Juego de adivinar: pista sobre el plomo que no dice su nombre ni su símbolo"
+  },
+  "elemento.Pb.pregunta": {
+    "texto": "¿Por qué ya no se añade este metal a la gasolina?",
+    "descripcion": "Test de la ficha del plomo: enunciado de la pregunta"
+  },
+  "elemento.Pb.pregunta.ok": {
+    "texto": "Porque es tóxico",
+    "descripcion": "Test de la ficha del plomo: respuesta correcta (corta)"
+  },
+  "elemento.Pb.pregunta.mal1": {
+    "texto": "Porque es muy caro",
+    "descripcion": "Test de la ficha del plomo: respuesta incorrecta pero creíble"
+  },
+  "elemento.Pb.pregunta.mal2": {
+    "texto": "Porque es radiactivo",
+    "descripcion": "Test de la ficha del plomo: respuesta incorrecta pero creíble"
+  },
+  "elemento.Pb.pregunta.mal3": {
+    "texto": "Porque es muy escaso",
+    "descripcion": "Test de la ficha del plomo: respuesta incorrecta pero creíble"
+  },
+  "elemento.Pb.pregunta.explicacion": {
+    "texto": "El plomo de los gases de escape dañaba el sistema nervioso, sobre todo de niños.",
+    "descripcion": "Test de la ficha del plomo: explicación de la respuesta correcta"
+  },
+  "elemento.Bi.descubrimiento": {
+    "texto": "Se conoce desde el siglo XV, pero se confundía con el estaño y el plomo. En 1753, el francés Claude François Geoffroy demostró que era un metal distinto. Los mineros alemanes le daban un nombre parecido al actual.",
+    "descripcion": "Ficha del bismuto: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Bi.usos": {
+    "texto": "Está en medicamentos para el estómago y en cosméticos con brillo nacarado. Sustituye al plomo en plomos de pesca, perdigones y soldaduras, y forma aleaciones que funden en agua caliente para los rociadores antiincendios.",
+    "descripcion": "Ficha del bismuto: para qué se usa hoy"
+  },
+  "elemento.Bi.porque": {
+    "texto": "Es casi tan denso como el plomo, pero muy poco tóxico. Por eso lo sustituye donde importa la salud o el medio ambiente.",
+    "descripcion": "Ficha del bismuto: por qué se usa este elemento y no otro"
+  },
+  "elemento.Bi.unico": {
+    "texto": "Es el metal más diamagnético: un imán fuerte lo repele. Y es radiactivo, pero su vida media es más de mil millones de veces la edad del universo.",
+    "descripcion": "Ficha del bismuto: su cualidad única o récord"
+  },
+  "elemento.Bi.curiosidad": {
+    "texto": "Sus cristales crecen en escalones y su capa de óxido los tiñe con los colores del arcoíris.",
+    "descripcion": "Ficha del bismuto: dato curioso"
+  },
+  "elemento.Bi.pista": {
+    "texto": "Formo cristales en escalera de colores y tomo el relevo del plomo en los anzuelos.",
+    "descripcion": "Juego de adivinar: pista sobre el bismuto que no dice su nombre ni su símbolo"
+  },
+  "elemento.Bi.pregunta": {
+    "texto": "¿Por qué sustituye este metal al plomo?",
+    "descripcion": "Test de la ficha del bismuto: enunciado de la pregunta"
+  },
+  "elemento.Bi.pregunta.ok": {
+    "texto": "Es denso y poco tóxico",
+    "descripcion": "Test de la ficha del bismuto: respuesta correcta (corta)"
+  },
+  "elemento.Bi.pregunta.mal1": {
+    "texto": "Es más ligero y barato",
+    "descripcion": "Test de la ficha del bismuto: respuesta incorrecta pero creíble"
+  },
+  "elemento.Bi.pregunta.mal2": {
+    "texto": "Es magnético y duro",
+    "descripcion": "Test de la ficha del bismuto: respuesta incorrecta pero creíble"
+  },
+  "elemento.Bi.pregunta.mal3": {
+    "texto": "Es líquido y brillante",
+    "descripcion": "Test de la ficha del bismuto: respuesta incorrecta pero creíble"
+  },
+  "elemento.Bi.pregunta.explicacion": {
+    "texto": "Pesa casi como el plomo pero no envenena, así que es más seguro.",
+    "descripcion": "Test de la ficha del bismuto: explicación de la respuesta correcta"
+  },
+  "elemento.Po.descubrimiento": {
+    "texto": "Lo descubrieron Marie y Pierre Curie en París en 1898. Molieron y disolvieron pecblenda y midieron con un electrómetro la radiactividad de cada fracción: una era mucho más radiactiva que el uranio que contenía. Marie lo llamó por Polonia, su país, que entonces no existía en los mapas.",
+    "descripcion": "Ficha del polonio: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Po.usos": {
+    "texto": "Elimina la electricidad estática en cepillos y fábricas de papel o película. Fue la fuente de calor de los vehículos soviéticos Lunojod que recorrieron la Luna.",
+    "descripcion": "Ficha del polonio: para qué se usa hoy"
+  },
+  "elemento.Po.porque": {
+    "texto": "Emite partículas alfa tan intensas que ioniza el aire de alrededor y neutraliza la carga estática. Como su vida media es corta, 138 días, un gramo suelta muchísimo calor.",
+    "descripcion": "Ficha del polonio: por qué se usa este elemento y no otro"
+  },
+  "elemento.Po.unico": {
+    "texto": "Fue el primer elemento descubierto gracias a la radiactividad, unos meses antes que el radio.",
+    "descripcion": "Ficha del polonio: su cualidad única o récord"
+  },
+  "elemento.Po.curiosidad": {
+    "texto": "Hay rastros de polonio-210 en el humo del tabaco, porque la planta lo toma de los fertilizantes.",
+    "descripcion": "Ficha del polonio: dato curioso"
+  },
+  "elemento.Po.pista": {
+    "texto": "Mi descubridora me puso el nombre de su patria, que entonces estaba repartida entre imperios.",
+    "descripcion": "Juego de adivinar: pista sobre el polonio que no dice su nombre ni su símbolo"
+  },
+  "elemento.Po.pregunta": {
+    "texto": "¿Por qué tiene este nombre el elemento?",
+    "descripcion": "Test de la ficha del polonio: enunciado de la pregunta"
+  },
+  "elemento.Po.pregunta.ok": {
+    "texto": "Por el país de Marie Curie",
+    "descripcion": "Test de la ficha del polonio: respuesta correcta (corta)"
+  },
+  "elemento.Po.pregunta.mal1": {
+    "texto": "Por el polo norte",
+    "descripcion": "Test de la ficha del polonio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Po.pregunta.mal2": {
+    "texto": "Por el polen de las flores",
+    "descripcion": "Test de la ficha del polonio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Po.pregunta.mal3": {
+    "texto": "Por un dios griego",
+    "descripcion": "Test de la ficha del polonio: respuesta incorrecta pero creíble"
+  },
+  "elemento.Po.pregunta.explicacion": {
+    "texto": "Marie Curie lo llamó por Polonia, su país natal, para reclamar su independencia.",
+    "descripcion": "Test de la ficha del polonio: explicación de la respuesta correcta"
+  },
+  "elemento.At.descubrimiento": {
+    "texto": "Lo fabricaron en 1940 Dale Corson, Kenneth MacKenzie y el italiano Emilio Segrè en Berkeley (EE. UU.), bombardeando bismuto con partículas alfa en un ciclotrón. En 1943, las austriacas Berta Karlik y Traude Bernert demostraron que también existe en la naturaleza. Su nombre griego significa «inestable».",
+    "descripcion": "Ficha del astato: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.At.usos": {
+    "texto": "Casi solo se usa en investigación. El astato-211 se prueba en ensayos clínicos para matar células cancerosas desde dentro.",
+    "descripcion": "Ficha del astato: para qué se usa hoy"
+  },
+  "elemento.At.porque": {
+    "texto": "Emite partículas alfa que solo viajan unas pocas células, así que destruye el tumor sin dañar mucho el tejido sano. Además, su vida media de unas 7 horas da tiempo a usarlo sin que se quede en el cuerpo.",
+    "descripcion": "Ficha del astato: por qué se usa este elemento y no otro"
+  },
+  "elemento.At.unico": {
+    "texto": "Es el elemento natural más escaso de la corteza terrestre: se calcula que hay menos de un gramo en todo el planeta.",
+    "descripcion": "Ficha del astato: su cualidad única o récord"
+  },
+  "elemento.At.curiosidad": {
+    "texto": "Nadie ha visto nunca un trozo: su propia radiactividad lo calentaría hasta evaporarlo.",
+    "descripcion": "Ficha del astato: dato curioso"
+  },
+  "elemento.At.pista": {
+    "texto": "Mi nombre significa «inestable» y en toda la Tierra no hay ni un gramo de mí.",
+    "descripcion": "Juego de adivinar: pista sobre el astato que no dice su nombre ni su símbolo"
+  },
+  "elemento.At.pregunta": {
+    "texto": "¿Qué dos científicas demostraron que existe en la naturaleza?",
+    "descripcion": "Test de la ficha del astato: enunciado de la pregunta"
+  },
+  "elemento.At.pregunta.ok": {
+    "texto": "Berta Karlik y Traude Bernert",
+    "descripcion": "Test de la ficha del astato: respuesta correcta (corta)"
+  },
+  "elemento.At.pregunta.mal1": {
+    "texto": "Marie e Irène Curie",
+    "descripcion": "Test de la ficha del astato: respuesta incorrecta pero creíble"
+  },
+  "elemento.At.pregunta.mal2": {
+    "texto": "Lise Meitner e Ida Noddack",
+    "descripcion": "Test de la ficha del astato: respuesta incorrecta pero creíble"
+  },
+  "elemento.At.pregunta.mal3": {
+    "texto": "Rosalind Franklin y Ada Lovelace",
+    "descripcion": "Test de la ficha del astato: respuesta incorrecta pero creíble"
+  },
+  "elemento.At.pregunta.explicacion": {
+    "texto": "Las austriacas Berta Karlik y Traude Bernert lo hallaron en 1943 en desintegraciones naturales.",
+    "descripcion": "Test de la ficha del astato: explicación de la respuesta correcta"
+  },
+  "elemento.Rn.descubrimiento": {
+    "texto": "En 1899, Ernest Rutherford y Robert Owens notaron en Montreal (Canadá) que el torio soltaba un gas radiactivo, y en 1900 el alemán Friedrich Dorn vio lo mismo con el radio. La canadiense Harriet Brooks demostró que era un gas pesado, y en 1910 William Ramsay y Robert Whytlaw-Gray lo aislaron y midieron su densidad.",
+    "descripcion": "Ficha del radón: quién, cuándo y cómo se descubrió"
+  },
+  "elemento.Rn.usos": {
+    "texto": "Hoy no se usa: se mide. Sale del granito del suelo y se acumula en sótanos y plantas bajas; en España hay más en Galicia, Extremadura y la sierra de Madrid, y desde 2019 las casas nuevas deben protegerse de él.",
+    "descripcion": "Ficha del radón: para qué se usa hoy"
+  },
+  "elemento.Rn.porque": {
+    "texto": "Es un gas noble y no reacciona con nada, así que escapa libremente de las rocas. Al ser muy pesado se queda abajo, y al respirarlo sus productos radiactivos se pegan a los pulmones.",
+    "descripcion": "Ficha del radón: por qué se usa este elemento y no otro"
+  },
+  "elemento.Rn.unico": {
+    "texto": "Es el elemento más denso que es gas a temperatura ambiente, unas 8 veces más que el aire.",
+    "descripcion": "Ficha del radón: su cualidad única o récord"
+  },
+  "elemento.Rn.curiosidad": {
+    "texto": "Si se enfría hasta congelarlo, brilla solo: primero amarillo y luego naranja rojizo.",
+    "descripcion": "Ficha del radón: dato curioso"
+  },
+  "elemento.Rn.pista": {
+    "texto": "Soy un gas noble radiactivo que sale del granito y me escondo en los sótanos.",
+    "descripcion": "Juego de adivinar: pista sobre el radón que no dice su nombre ni su símbolo"
+  },
+  "elemento.Rn.pregunta": {
+    "texto": "¿Dónde se acumula este gas en una casa?",
+    "descripcion": "Test de la ficha del radón: enunciado de la pregunta"
+  },
+  "elemento.Rn.pregunta.ok": {
+    "texto": "En sótanos y plantas bajas",
+    "descripcion": "Test de la ficha del radón: respuesta correcta (corta)"
+  },
+  "elemento.Rn.pregunta.mal1": {
+    "texto": "En el tejado y el desván",
+    "descripcion": "Test de la ficha del radón: respuesta incorrecta pero creíble"
+  },
+  "elemento.Rn.pregunta.mal2": {
+    "texto": "Dentro del frigorífico",
+    "descripcion": "Test de la ficha del radón: respuesta incorrecta pero creíble"
+  },
+  "elemento.Rn.pregunta.mal3": {
+    "texto": "En las tuberías del agua",
+    "descripcion": "Test de la ficha del radón: respuesta incorrecta pero creíble"
+  },
+  "elemento.Rn.pregunta.explicacion": {
+    "texto": "Es muy pesado y sale del suelo, así que se queda en las zonas bajas.",
+    "descripcion": "Test de la ficha del radón: explicación de la respuesta correcta"
+  }
+}

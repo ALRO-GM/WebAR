@@ -1,0 +1,866 @@
+{
+ "elemento.K.descubrimiento": {
+  "texto": "Humphry Davy lo aisló en Londres en octubre de 1807, en la Royal Institution. Hizo pasar la corriente de una enorme pila eléctrica por potasa fundida y vio salir bolitas de metal brillante que estallaban en llamas. Según su primo, que trabajaba con él, Davy se puso a bailar por el laboratorio de la emoción. Fue el primer metal obtenido con electricidad, días antes que el sodio.",
+  "descripcion": "Ficha del potasio: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.K.usos": {
+  "texto": "Casi todo el potasio que se extrae acaba en abonos para el campo. También está en la sal baja en sodio, en los fuegos artificiales (nitrato de potasio) y en tu cuerpo: tus nervios y tu corazón lo usan para enviar señales.",
+  "descripcion": "Ficha del potasio: dónde se usa hoy"
+ },
+ "elemento.K.porque": {
+  "texto": "Las plantas usan el ion potasio para abrir y cerrar los poros de las hojas y mover el agua; el sodio no les sirve y, en exceso, estropea el suelo. Por eso los abonos llevan potasio y no sodio, aunque se parezcan mucho químicamente.",
+  "descripcion": "Ficha del potasio: por qué se usa este elemento y no otro"
+ },
+ "elemento.K.unico": {
+  "texto": "Fue el primer metal de la historia separado gracias a la electricidad. Además, uno de sus isótopos, el potasio-40, es la principal fuente de radiactividad natural dentro de tu cuerpo.",
+  "descripcion": "Ficha del potasio: cualidad única o récord"
+ },
+ "elemento.K.curiosidad": {
+  "texto": "Un plátano es un poquito radiactivo por su potasio, tan poco que los físicos usan la «dosis plátano» como unidad de broma para comparar radiaciones.",
+  "descripcion": "Ficha del potasio: dato curioso de una frase"
+ },
+ "elemento.K.pista": {
+  "texto": "Tus nervios me necesitan, los plátanos van cargados de mí y, si me echas al agua, ardo con llama lila.",
+  "descripcion": "Juego de adivinar: pista del potasio, sin decir su nombre ni su símbolo"
+ },
+ "elemento.K.pregunta": {
+  "texto": "¿Qué hizo Davy para aislar este elemento en 1807?",
+  "descripcion": "Test de la ficha del potasio: enunciado de la pregunta"
+ },
+ "elemento.K.pregunta.ok": {
+  "texto": "Pasar corriente eléctrica por potasa fundida",
+  "descripcion": "Test de la ficha del potasio: respuesta correcta"
+ },
+ "elemento.K.pregunta.mal1": {
+  "texto": "Calentar plátanos en un horno",
+  "descripcion": "Test de la ficha del potasio: respuesta incorrecta 1"
+ },
+ "elemento.K.pregunta.mal2": {
+  "texto": "Destilar agua de mar al sol",
+  "descripcion": "Test de la ficha del potasio: respuesta incorrecta 2"
+ },
+ "elemento.K.pregunta.mal3": {
+  "texto": "Golpear una roca con un imán",
+  "descripcion": "Test de la ficha del potasio: respuesta incorrecta 3"
+ },
+ "elemento.K.pregunta.explicacion": {
+  "texto": "Davy usó la corriente de una gran pila eléctrica (electrólisis) sobre potasa fundida, y así obtuvo el primer metal sacado con electricidad.",
+  "descripcion": "Test de la ficha del potasio: explicación de la respuesta correcta"
+ },
+ "elemento.Ca.descubrimiento": {
+  "texto": "La cal y el yeso se usan desde la Antigüedad: los romanos ya hacían mortero con cal. Pero el metal no se aisló hasta 1808, cuando Humphry Davy, en Londres, aplicó electricidad a una mezcla de cal húmeda y óxido de mercurio. Copió una idea de los suecos Berzelius y Pontin, que usaban mercurio para atrapar el metal. Su nombre viene del latín «calx», cal.",
+  "descripcion": "Ficha del calcio: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Ca.usos": {
+  "texto": "Está en el cemento, el yeso, la tiza, el mármol y los antiácidos. Tus huesos y dientes son, en buena parte, fosfato de calcio, y lo tomas con la leche, las legumbres o las sardinas.",
+  "descripcion": "Ficha del calcio: dónde se usa hoy"
+ },
+ "elemento.Ca.porque": {
+  "texto": "El fosfato de calcio forma cristales duros pero que el cuerpo puede deshacer y rehacer, así que los huesos se reparan y sirven de almacén de calcio. En la construcción gana porque la caliza es abundantísima y barata, y la cal y el cemento endurecen al reaccionar con el agua y el aire.",
+  "descripcion": "Ficha del calcio: por qué se usa este elemento y no otro"
+ },
+ "elemento.Ca.unico": {
+  "texto": "Es el metal más abundante del cuerpo humano: una persona adulta lleva alrededor de 1 kg, casi todo en los huesos.",
+  "descripcion": "Ficha del calcio: cualidad única o récord"
+ },
+ "elemento.Ca.curiosidad": {
+  "texto": "En el siglo XIX los teatros iluminaban a los actores calentando cal hasta que brillaba al rojo blanco; de ahí la expresión inglesa «in the limelight», estar en el centro de atención.",
+  "descripcion": "Ficha del calcio: dato curioso de una frase"
+ },
+ "elemento.Ca.pista": {
+  "texto": "Me encuentras en tus huesos, en la leche, en el mármol y en el cemento.",
+  "descripcion": "Juego de adivinar: pista del calcio, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Ca.pregunta": {
+  "texto": "¿Cuál es el metal más abundante en el cuerpo humano?",
+  "descripcion": "Test de la ficha del calcio: enunciado de la pregunta"
+ },
+ "elemento.Ca.pregunta.ok": {
+  "texto": "Este elemento, sobre todo en los huesos",
+  "descripcion": "Test de la ficha del calcio: respuesta correcta"
+ },
+ "elemento.Ca.pregunta.mal1": {
+  "texto": "El hierro de la sangre",
+  "descripcion": "Test de la ficha del calcio: respuesta incorrecta 1"
+ },
+ "elemento.Ca.pregunta.mal2": {
+  "texto": "El sodio de la sal",
+  "descripcion": "Test de la ficha del calcio: respuesta incorrecta 2"
+ },
+ "elemento.Ca.pregunta.mal3": {
+  "texto": "El potasio de los nervios",
+  "descripcion": "Test de la ficha del calcio: respuesta incorrecta 3"
+ },
+ "elemento.Ca.pregunta.explicacion": {
+  "texto": "Un adulto tiene alrededor de 1 kg de este elemento, casi todo en huesos y dientes; ningún otro metal de tu cuerpo llega a tanto.",
+  "descripcion": "Test de la ficha del calcio: explicación de la respuesta correcta"
+ },
+ "elemento.Sc.descubrimiento": {
+  "texto": "En 1871 Mendeléiev predijo que faltaba un elemento al que llamó «eka-boro», y describió cómo sería. En 1879 el sueco Lars Fredrik Nilson, en Uppsala, lo encontró al analizar los minerales euxenita y gadolinita: separó unos 2 g de su óxido y vio en el espectroscopio líneas de luz que no eran de nadie. Su compatriota Per Teodor Cleve comprobó que encajaba con la predicción de Mendeléiev. El metal puro no se obtuvo hasta 1937.",
+  "descripcion": "Ficha del escandio: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Sc.usos": {
+  "texto": "Se añade en pizcas al aluminio para hacer cuadros de bicicleta, bates de béisbol y piezas de aviones. También va en las lámparas de halogenuros metálicos que iluminan estadios y platós de televisión.",
+  "descripcion": "Ficha del escandio: dónde se usa hoy"
+ },
+ "elemento.Sc.porque": {
+  "texto": "Con solo un 0,1-0,5 % de este elemento, el aluminio se vuelve mucho más resistente y se puede soldar sin debilitarse, sin apenas ganar peso. El titanio también es ligero y fuerte, pero es más pesado y difícil de trabajar; el escandio mejora el aluminio sin cambiarlo por otro metal.",
+  "descripcion": "Ficha del escandio: por qué se usa este elemento y no otro"
+ },
+ "elemento.Sc.unico": {
+  "texto": "Es el primer metal de transición de la tabla periódica: con él empieza el bloque d, la gran franja central de metales.",
+  "descripcion": "Ficha del escandio: cualidad única o récord"
+ },
+ "elemento.Sc.curiosidad": {
+  "texto": "En la corteza terrestre hay más que plomo, pero está tan disperso que en todo el mundo solo se producen unas pocas toneladas al año.",
+  "descripcion": "Ficha del escandio: dato curioso de una frase"
+ },
+ "elemento.Sc.pista": {
+  "texto": "Mendeléiev me apodó «eka-boro» antes de que nadie me hubiera visto, y hoy refuerzo cuadros de bicicleta.",
+  "descripcion": "Juego de adivinar: pista del escandio, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Sc.pregunta": {
+  "texto": "¿Cómo llamó Mendeléiev a este elemento antes de que se descubriera?",
+  "descripcion": "Test de la ficha del escandio: enunciado de la pregunta"
+ },
+ "elemento.Sc.pregunta.ok": {
+  "texto": "Eka-boro",
+  "descripcion": "Test de la ficha del escandio: respuesta correcta"
+ },
+ "elemento.Sc.pregunta.mal1": {
+  "texto": "Eka-silicio",
+  "descripcion": "Test de la ficha del escandio: respuesta incorrecta 1"
+ },
+ "elemento.Sc.pregunta.mal2": {
+  "texto": "Eka-aluminio",
+  "descripcion": "Test de la ficha del escandio: respuesta incorrecta 2"
+ },
+ "elemento.Sc.pregunta.mal3": {
+  "texto": "Eka-carbono",
+  "descripcion": "Test de la ficha del escandio: respuesta incorrecta 3"
+ },
+ "elemento.Sc.pregunta.explicacion": {
+  "texto": "Mendeléiev dejó un hueco con el nombre de «eka-boro» y en 1879 Nilson encontró el elemento que lo llenaba.",
+  "descripcion": "Test de la ficha del escandio: explicación de la respuesta correcta"
+ },
+ "elemento.Ti.descubrimiento": {
+  "texto": "En 1791 William Gregor, un cura de Cornualles (Inglaterra) aficionado a la química, encontró un metal desconocido en una arena negra y magnética de un valle de su parroquia. En 1795 el alemán Martin Heinrich Klaproth lo halló por su cuenta en el mineral rutilo y lo bautizó en honor de los Titanes de la mitología griega. Separarlo puro costó más de un siglo: lo logró Matthew Hunter en 1910.",
+  "descripcion": "Ficha del titanio: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Ti.usos": {
+  "texto": "El dióxido de titanio es el blanco de las pinturas, la pasta de dientes y muchas cremas solares. El metal se usa en aviones, prótesis de cadera, implantes dentales, gafas y en la piel del Museo Guggenheim de Bilbao.",
+  "descripcion": "Ficha del titanio: dónde se usa hoy"
+ },
+ "elemento.Ti.porque": {
+  "texto": "Es tan fuerte como muchos aceros pero pesa casi la mitad, no se oxida en el agua del mar y el cuerpo lo tolera: el hueso crece pegado a él. Por eso los implantes se hacen de titanio y no de acero inoxidable, que es más pesado y a la larga puede soltar iones como el níquel.",
+  "descripcion": "Ficha del titanio: por qué se usa este elemento y no otro"
+ },
+ "elemento.Ti.unico": {
+  "texto": "Es uno de los metales con mejor relación entre resistencia y peso, y de los pocos a los que el hueso se une directamente, un fenómeno llamado osteointegración.",
+  "descripcion": "Ficha del titanio: cualidad única o récord"
+ },
+ "elemento.Ti.curiosidad": {
+  "texto": "El Guggenheim de Bilbao está forrado con unas 33 000 láminas de titanio de solo 0,38 mm de grosor, más finas que una tarjeta de crédito.",
+  "descripcion": "Ficha del titanio: dato curioso de una frase"
+ },
+ "elemento.Ti.pista": {
+  "texto": "Mi nombre viene de unos gigantes mitológicos, cubro un famoso museo de Bilbao y tus implantes dentales están hechos de mí.",
+  "descripcion": "Juego de adivinar: pista del titanio, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Ti.pregunta": {
+  "texto": "¿Por qué se usa este elemento en implantes dentales y prótesis?",
+  "descripcion": "Test de la ficha del titanio: enunciado de la pregunta"
+ },
+ "elemento.Ti.pregunta.ok": {
+  "texto": "Ligero, inoxidable y el hueso se une",
+  "descripcion": "Test de la ficha del titanio: respuesta correcta"
+ },
+ "elemento.Ti.pregunta.mal1": {
+  "texto": "Es el metal más barato del mundo",
+  "descripcion": "Test de la ficha del titanio: respuesta incorrecta 1"
+ },
+ "elemento.Ti.pregunta.mal2": {
+  "texto": "Brilla en la oscuridad dentro del cuerpo",
+  "descripcion": "Test de la ficha del titanio: respuesta incorrecta 2"
+ },
+ "elemento.Ti.pregunta.mal3": {
+  "texto": "Es magnético y se pega al hueso",
+  "descripcion": "Test de la ficha del titanio: respuesta incorrecta 3"
+ },
+ "elemento.Ti.pregunta.explicacion": {
+  "texto": "Su ligereza, su resistencia a la corrosión y que el hueso crezca pegado a él lo hacen ideal para el cuerpo.",
+  "descripcion": "Test de la ficha del titanio: explicación de la respuesta correcta"
+ },
+ "elemento.V.descubrimiento": {
+  "texto": "En 1801 el mineralogista Andrés Manuel del Río, nacido en Madrid y profesor en el Real Seminario de Minería de la Ciudad de México, lo descubrió en un mineral de plomo de Zimapán. Lo llamó «eritronio» porque sus sales se volvían rojas al calentarlas. Pero un químico francés le aseguró que era cromo impuro y Del Río retiró su descubrimiento. En 1830 el sueco Nils Gabriel Sefström lo redescubrió, le puso el nombre de la diosa nórdica Vanadis, y poco después Friedrich Wöhler demostró que era el mismo elemento de Del Río.",
+  "descripcion": "Ficha del vanadio: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.V.usos": {
+  "texto": "La mayor parte se usa para endurecer el acero de herramientas como llaves inglesas, muelles y ejes. También está en las baterías de flujo que almacenan la energía de parques solares y eólicos.",
+  "descripcion": "Ficha del vanadio: dónde se usa hoy"
+ },
+ "elemento.V.porque": {
+  "texto": "Una pequeña cantidad (menos del 1 %) forma diminutos granos duros dentro del acero que lo hacen resistente a golpes y desgaste sin volverlo quebradizo. Henry Ford lo eligió para el Ford T porque con él podía hacer piezas más ligeras y fuertes que con acero normal.",
+  "descripcion": "Ficha del vanadio: por qué se usa este elemento y no otro"
+ },
+ "elemento.V.unico": {
+  "texto": "Es de los pocos elementos que pueden llenar los dos lados de una batería: en sus baterías de flujo cambia entre cuatro estados de oxidación, cada uno con su color (violeta, verde, azul y amarillo).",
+  "descripcion": "Ficha del vanadio: cualidad única o récord"
+ },
+ "elemento.V.curiosidad": {
+  "texto": "Algunos animales marinos llamados ascidias acumulan este elemento en su sangre a concentraciones millones de veces mayores que las del agua de mar, y nadie sabe del todo para qué.",
+  "descripcion": "Ficha del vanadio: dato curioso de una frase"
+ },
+ "elemento.V.pista": {
+  "texto": "Me descubrieron en México, pero convencieron a mi descubridor de que solo era cromo impuro.",
+  "descripcion": "Juego de adivinar: pista del vanadio, sin decir su nombre ni su símbolo"
+ },
+ "elemento.V.pregunta": {
+  "texto": "¿Dónde trabajaba Andrés Manuel del Río cuando descubrió este elemento?",
+  "descripcion": "Test de la ficha del vanadio: enunciado de la pregunta"
+ },
+ "elemento.V.pregunta.ok": {
+  "texto": "En la Ciudad de México",
+  "descripcion": "Test de la ficha del vanadio: respuesta correcta"
+ },
+ "elemento.V.pregunta.mal1": {
+  "texto": "En Estocolmo, Suecia",
+  "descripcion": "Test de la ficha del vanadio: respuesta incorrecta 1"
+ },
+ "elemento.V.pregunta.mal2": {
+  "texto": "En París, Francia",
+  "descripcion": "Test de la ficha del vanadio: respuesta incorrecta 2"
+ },
+ "elemento.V.pregunta.mal3": {
+  "texto": "En Londres, Inglaterra",
+  "descripcion": "Test de la ficha del vanadio: respuesta incorrecta 3"
+ },
+ "elemento.V.pregunta.explicacion": {
+  "texto": "Del Río lo descubrió en 1801 en el Real Seminario de Minería de la Ciudad de México, casi 30 años antes de que Sefström lo redescubriera.",
+  "descripcion": "Test de la ficha del vanadio: explicación de la respuesta correcta"
+ },
+ "elemento.Cr.descubrimiento": {
+  "texto": "En 1797 el químico francés Louis Nicolas Vauquelin estudiaba el «plomo rojo de Siberia», un mineral naranja intenso, y encontró en él un elemento nuevo. Al año siguiente obtuvo el metal calentando su óxido con carbón. Lo llamó así por la palabra griega «chroma», color, porque sus compuestos tenían colores de todo tipo.",
+  "descripcion": "Ficha del cromo: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Cr.usos": {
+  "texto": "Da el brillo a los grifos y piezas cromadas, y es el ingrediente clave del acero inoxidable de cubiertos, cocinas y quirófanos. También se usa para curtir cuero y en pigmentos amarillos y verdes.",
+  "descripcion": "Ficha del cromo: dónde se usa hoy"
+ },
+ "elemento.Cr.porque": {
+  "texto": "El cromo reacciona con el oxígeno y forma una película transparente finísima que sella el metal y, si se raya, se regenera sola. Por eso al acero se le añade al menos un 10,5 % de cromo en vez de pintarlo: la pintura se descascarilla, esta capa no.",
+  "descripcion": "Ficha del cromo: por qué se usa este elemento y no otro"
+ },
+ "elemento.Cr.unico": {
+  "texto": "Se considera el metal puro más duro: raya el vidrio y en la escala de Mohs ronda el 8,5.",
+  "descripcion": "Ficha del cromo: cualidad única o récord"
+ },
+ "elemento.Cr.curiosidad": {
+  "texto": "El rojo del rubí y el verde de la esmeralda vienen del mismo elemento: unas pocas impurezas de cromo en cristales diferentes.",
+  "descripcion": "Ficha del cromo: dato curioso de una frase"
+ },
+ "elemento.Cr.pista": {
+  "texto": "Doy el rojo al rubí, el verde a la esmeralda y el brillo a los grifos del baño.",
+  "descripcion": "Juego de adivinar: pista del cromo, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Cr.pregunta": {
+  "texto": "¿Por qué el acero inoxidable no se oxida?",
+  "descripcion": "Test de la ficha del cromo: enunciado de la pregunta"
+ },
+ "elemento.Cr.pregunta.ok": {
+  "texto": "Una capa invisible de óxido lo protege",
+  "descripcion": "Test de la ficha del cromo: respuesta correcta"
+ },
+ "elemento.Cr.pregunta.mal1": {
+  "texto": "Lleva una laca transparente por fuera",
+  "descripcion": "Test de la ficha del cromo: respuesta incorrecta 1"
+ },
+ "elemento.Cr.pregunta.mal2": {
+  "texto": "Tiene oro mezclado por dentro",
+  "descripcion": "Test de la ficha del cromo: respuesta incorrecta 2"
+ },
+ "elemento.Cr.pregunta.mal3": {
+  "texto": "No contiene nada de hierro",
+  "descripcion": "Test de la ficha del cromo: respuesta incorrecta 3"
+ },
+ "elemento.Cr.pregunta.explicacion": {
+  "texto": "El cromo forma una película de óxido invisible que sella el acero y se regenera si se raya.",
+  "descripcion": "Test de la ficha del cromo: explicación de la respuesta correcta"
+ },
+ "elemento.Mn.descubrimiento": {
+  "texto": "Hace decenas de miles de años, neandertales y pintores prehistóricos ya usaban óxido de manganeso como pigmento negro. En 1774 el sueco Carl Wilhelm Scheele demostró que el mineral pirolusita escondía un elemento nuevo, y ese mismo año su amigo Johan Gottlieb Gahn lo aisló calentando el mineral con carbón.",
+  "descripcion": "Ficha del manganeso: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Mn.usos": {
+  "texto": "Casi todo va a la fabricación de acero. También está en las pilas alcalinas (dióxido de manganeso), en las latas de bebida (aleado con aluminio) y en tu cuerpo, que lo necesita para muchas enzimas.",
+  "descripcion": "Ficha del manganeso: dónde se usa hoy"
+ },
+ "elemento.Mn.porque": {
+  "texto": "Al fabricar acero, el manganeso atrapa el azufre y el oxígeno que lo volverían quebradizo, y lo hace mejor y más barato que otros metales. Con un 12 % se obtiene el acero Hadfield, que se endurece al recibir golpes: ideal para cruces de vías de tren y trituradoras.",
+  "descripcion": "Ficha del manganeso: por qué se usa este elemento y no otro"
+ },
+ "elemento.Mn.unico": {
+  "texto": "Es uno de los elementos con más estados de oxidación, del +2 al +7, y casi cada uno tiene un color distinto: rosa pálido, marrón, verde o violeta intenso.",
+  "descripcion": "Ficha del manganeso: cualidad única o récord"
+ },
+ "elemento.Mn.curiosidad": {
+  "texto": "Scheele llamó «camaleón mineral» a uno de sus compuestos porque su disolución cambia de verde a azul, violeta y rojo como si fuera un camaleón.",
+  "descripcion": "Ficha del manganeso: dato curioso de una frase"
+ },
+ "elemento.Mn.pista": {
+  "texto": "Pinté de negro las cuevas prehistóricas y estoy dentro de las pilas alcalinas.",
+  "descripcion": "Juego de adivinar: pista del manganeso, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Mn.pregunta": {
+  "texto": "¿Qué apodo puso Scheele a un compuesto de este elemento?",
+  "descripcion": "Test de la ficha del manganeso: enunciado de la pregunta"
+ },
+ "elemento.Mn.pregunta.ok": {
+  "texto": "Camaleón mineral",
+  "descripcion": "Test de la ficha del manganeso: respuesta correcta"
+ },
+ "elemento.Mn.pregunta.mal1": {
+  "texto": "Piedra filosofal",
+  "descripcion": "Test de la ficha del manganeso: respuesta incorrecta 1"
+ },
+ "elemento.Mn.pregunta.mal2": {
+  "texto": "Arena del diablo",
+  "descripcion": "Test de la ficha del manganeso: respuesta incorrecta 2"
+ },
+ "elemento.Mn.pregunta.mal3": {
+  "texto": "Sangre de dragón",
+  "descripcion": "Test de la ficha del manganeso: respuesta incorrecta 3"
+ },
+ "elemento.Mn.pregunta.explicacion": {
+  "texto": "Su disolución cambia de color como un camaleón, porque el elemento pasa por varios estados de oxidación.",
+  "descripcion": "Test de la ficha del manganeso: explicación de la respuesta correcta"
+ },
+ "elemento.Fe.descubrimiento": {
+  "texto": "Se conoce desde la Antigüedad. Los primeros objetos, como unas cuentas egipcias de hace unos 5200 años, se hicieron con hierro caído del cielo en meteoritos. Hacia el 1200 a. C. se extendió la forma de sacarlo de sus minerales calentándolos con carbón, y empezó la Edad del Hierro. Lavoisier lo incluyó en 1789 en su primera lista de elementos químicos.",
+  "descripcion": "Ficha del hierro: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Fe.usos": {
+  "texto": "El acero (hierro con un poco de carbono) forma edificios, puentes, coches, barcos, latas y herramientas. Es el metal más usado del mundo, y en tu sangre la hemoglobina lo usa para llevar oxígeno.",
+  "descripcion": "Ficha del hierro: dónde se usa hoy"
+ },
+ "elemento.Fe.porque": {
+  "texto": "Es abundante, barato, fácil de sacar y, con un poco de carbono, se convierte en acero muy resistente. El aluminio pesa menos, pero es más caro y menos fuerte, así que para vigas y raíles se elige acero; además, el acero se separa de la basura con un imán y se recicla una y otra vez.",
+  "descripcion": "Ficha del hierro: por qué se usa este elemento y no otro"
+ },
+ "elemento.Fe.unico": {
+  "texto": "Es el elemento más abundante de la Tierra en masa, porque el núcleo del planeta es casi todo hierro. En las estrellas gigantes, la fusión se detiene en el hierro: fabricar elementos más pesados ya no da energía y la estrella acaba colapsando.",
+  "descripcion": "Ficha del hierro: cualidad única o récord"
+ },
+ "elemento.Fe.curiosidad": {
+  "texto": "La daga de Tutankamón se forjó con hierro de un meteorito, como confirmó un análisis en 2016.",
+  "descripcion": "Ficha del hierro: dato curioso de una frase"
+ },
+ "elemento.Fe.pista": {
+  "texto": "Hay unos 4 g de mí en tu cuerpo, la daga de Tutankamón vino del espacio y el núcleo de la Tierra está hecho de mí.",
+  "descripcion": "Juego de adivinar: pista del hierro, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Fe.pregunta": {
+  "texto": "¿De dónde salió el hierro de la daga de Tutankamón?",
+  "descripcion": "Test de la ficha del hierro: enunciado de la pregunta"
+ },
+ "elemento.Fe.pregunta.ok": {
+  "texto": "De un meteorito",
+  "descripcion": "Test de la ficha del hierro: respuesta correcta"
+ },
+ "elemento.Fe.pregunta.mal1": {
+  "texto": "De una mina de Egipto",
+  "descripcion": "Test de la ficha del hierro: respuesta incorrecta 1"
+ },
+ "elemento.Fe.pregunta.mal2": {
+  "texto": "De una espada romana fundida",
+  "descripcion": "Test de la ficha del hierro: respuesta incorrecta 2"
+ },
+ "elemento.Fe.pregunta.mal3": {
+  "texto": "De la arena del Nilo",
+  "descripcion": "Test de la ficha del hierro: respuesta incorrecta 3"
+ },
+ "elemento.Fe.pregunta.explicacion": {
+  "texto": "Un análisis de 2016 mostró que tenía la mezcla de níquel típica del hierro de los meteoritos.",
+  "descripcion": "Test de la ficha del hierro: explicación de la respuesta correcta"
+ },
+ "elemento.Co.descubrimiento": {
+  "texto": "Hacia 1735 el sueco Georg Brandt, en Estocolmo, demostró que el azul intenso de ciertos vidrios no lo daba el bismuto, como se creía, sino un metal nuevo. Se suele considerar el primer metal descubierto del que se conoce el nombre de su descubridor. El nombre viene de «kobold», duende en alemán: los mineros culpaban a los duendes de unos minerales que parecían de plata, no daban nada y soltaban humos venenosos de arsénico.",
+  "descripcion": "Ficha del cobalto: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Co.usos": {
+  "texto": "Está en el cátodo de muchas baterías de litio de móviles y portátiles, en superaleaciones de motores de avión y en imanes potentes. El cobalto-60 se usa en radioterapia y para esterilizar material médico. Más de dos tercios del cobalto del mundo se extraen en la República Democrática del Congo.",
+  "descripcion": "Ficha del cobalto: dónde se usa hoy"
+ },
+ "elemento.Co.porque": {
+  "texto": "En las baterías, el óxido de cobalto y litio guarda mucha energía en poco espacio y mantiene estable su estructura carga tras carga; por eso se ha preferido a otros metales más baratos como el manganeso. En los motores de avión, sus aleaciones no se ablandan aunque superen los 1000 °C.",
+  "descripcion": "Ficha del cobalto: por qué se usa este elemento y no otro"
+ },
+ "elemento.Co.unico": {
+  "texto": "Es el único elemento que forma parte de una vitamina: la vitamina B12 tiene un átomo de cobalto en el centro.",
+  "descripcion": "Ficha del cobalto: cualidad única o récord"
+ },
+ "elemento.Co.curiosidad": {
+  "texto": "El famoso azul de la porcelana china y de los azulejos se consigue con compuestos de este metal desde hace siglos.",
+  "descripcion": "Ficha del cobalto: dato curioso de una frase"
+ },
+ "elemento.Co.pista": {
+  "texto": "Los mineros alemanes culpaban a los duendes de mis minerales, y hoy estoy en la vitamina B12 y en las baterías de tu móvil.",
+  "descripcion": "Juego de adivinar: pista del cobalto, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Co.pregunta": {
+  "texto": "¿Qué vitamina contiene un átomo de este elemento?",
+  "descripcion": "Test de la ficha del cobalto: enunciado de la pregunta"
+ },
+ "elemento.Co.pregunta.ok": {
+  "texto": "La vitamina B12",
+  "descripcion": "Test de la ficha del cobalto: respuesta correcta"
+ },
+ "elemento.Co.pregunta.mal1": {
+  "texto": "La vitamina C",
+  "descripcion": "Test de la ficha del cobalto: respuesta incorrecta 1"
+ },
+ "elemento.Co.pregunta.mal2": {
+  "texto": "La vitamina D",
+  "descripcion": "Test de la ficha del cobalto: respuesta incorrecta 2"
+ },
+ "elemento.Co.pregunta.mal3": {
+  "texto": "La vitamina A",
+  "descripcion": "Test de la ficha del cobalto: respuesta incorrecta 3"
+ },
+ "elemento.Co.pregunta.explicacion": {
+  "texto": "La vitamina B12 tiene un átomo de cobalto en su centro; es la única vitamina con un metal.",
+  "descripcion": "Test de la ficha del cobalto: explicación de la respuesta correcta"
+ },
+ "elemento.Ni.descubrimiento": {
+  "texto": "Los mineros alemanes llamaban «Kupfernickel», cobre del diablo, a un mineral rojizo que parecía de cobre pero del que no salía ni una pizca. En 1751 el sueco Axel Fredrik Cronstedt lo calentó y obtuvo un metal blanco que no era cobre, sino un elemento nuevo. Siglos antes, en China ya se fabricaba el «paktong», una aleación de cobre y níquel parecida a la plata.",
+  "descripcion": "Ficha del níquel: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Ni.usos": {
+  "texto": "Unos dos tercios del níquel van al acero inoxidable de fregaderos y ollas. También está en monedas (las de 1 y 2 euros), en baterías de coches eléctricos e híbridos y en los recubrimientos brillantes.",
+  "descripcion": "Ficha del níquel: dónde se usa hoy"
+ },
+ "elemento.Ni.porque": {
+  "texto": "Añadido al acero inoxidable, el níquel ordena sus átomos de forma que el acero se vuelve más fácil de doblar, más resistente a la corrosión y no magnético. En las monedas se usa porque es duro, no se desgasta y sus aleaciones son difíciles de falsificar.",
+  "descripcion": "Ficha del níquel: por qué se usa este elemento y no otro"
+ },
+ "elemento.Ni.unico": {
+  "texto": "Es uno de los solo cuatro elementos que son magnéticos como un imán a temperatura ambiente, junto al hierro, el cobalto y el gadolinio.",
+  "descripcion": "Ficha del níquel: cualidad única o récord"
+ },
+ "elemento.Ni.curiosidad": {
+  "texto": "La moneda de 5 centavos de EE. UU. se llama «nickel» aunque tiene un 75 % de cobre y solo un 25 % de este metal.",
+  "descripcion": "Ficha del níquel: dato curioso de una frase"
+ },
+ "elemento.Ni.pista": {
+  "texto": "Los mineros me llamaban «cobre del diablo» porque parecía cobre pero no lo era.",
+  "descripcion": "Juego de adivinar: pista del níquel, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Ni.pregunta": {
+  "texto": "¿Cuántos elementos son magnéticos como el hierro a temperatura ambiente?",
+  "descripcion": "Test de la ficha del níquel: enunciado de la pregunta"
+ },
+ "elemento.Ni.pregunta.ok": {
+  "texto": "Cuatro",
+  "descripcion": "Test de la ficha del níquel: respuesta correcta"
+ },
+ "elemento.Ni.pregunta.mal1": {
+  "texto": "Uno",
+  "descripcion": "Test de la ficha del níquel: respuesta incorrecta 1"
+ },
+ "elemento.Ni.pregunta.mal2": {
+  "texto": "Diez",
+  "descripcion": "Test de la ficha del níquel: respuesta incorrecta 2"
+ },
+ "elemento.Ni.pregunta.mal3": {
+  "texto": "Veinte",
+  "descripcion": "Test de la ficha del níquel: respuesta incorrecta 3"
+ },
+ "elemento.Ni.pregunta.explicacion": {
+  "texto": "Solo el hierro, el cobalto, el gadolinio y este elemento son ferromagnéticos a temperatura ambiente.",
+  "descripcion": "Test de la ficha del níquel: explicación de la respuesta correcta"
+ },
+ "elemento.Cu.descubrimiento": {
+  "texto": "Es uno de los primeros metales que usó la humanidad: hay adornos de cobre de hace más de 10 000 años en Oriente Próximo. Hacia el 5000 a. C. se aprendió a fundirlo y, mezclado con estaño, dio el bronce. Ötzi, el hombre de los hielos de hace unos 5300 años, llevaba un hacha de cobre, y en las minas de Riotinto (Huelva) se extrae desde hace unos 5000 años. Su nombre viene de Chipre, la isla de donde lo sacaban los romanos.",
+  "descripcion": "Ficha del cobre: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Cu.usos": {
+  "texto": "Está en los cables eléctricos, los motores, los circuitos de los móviles, las tuberías y las monedas de céntimo. También se usa en superficies de hospitales porque mata microbios.",
+  "descripcion": "Ficha del cobre: dónde se usa hoy"
+ },
+ "elemento.Cu.porque": {
+  "texto": "Conduce la electricidad casi tan bien como la plata pero es muchísimo más barato. Frente al aluminio, conduce mejor con el mismo grosor y se suelda con facilidad, así que se usa en casas y aparatos; el aluminio solo gana en las líneas de alta tensión, donde importa más el peso.",
+  "descripcion": "Ficha del cobre: por qué se usa este elemento y no otro"
+ },
+ "elemento.Cu.unico": {
+  "texto": "Es uno de los pocos metales con color propio: casi todos son grises o plateados, y solo él, el oro y el cesio tienen un color claramente distinto.",
+  "descripcion": "Ficha del cobre: cualidad única o récord"
+ },
+ "elemento.Cu.curiosidad": {
+  "texto": "La Estatua de la Libertad está hecha de chapas de este metal; al principio era rojiza y se volvió verde por la pátina que forma con el aire.",
+  "descripcion": "Ficha del cobre: dato curioso de una frase"
+ },
+ "elemento.Cu.pista": {
+  "texto": "La Estatua de la Libertad está hecha de mí y por eso se volvió verde.",
+  "descripcion": "Juego de adivinar: pista del cobre, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Cu.pregunta": {
+  "texto": "¿Por qué los cables de casa son de este metal y no de plata?",
+  "descripcion": "Test de la ficha del cobre: enunciado de la pregunta"
+ },
+ "elemento.Cu.pregunta.ok": {
+  "texto": "Conduce casi igual y es mucho más barato",
+  "descripcion": "Test de la ficha del cobre: respuesta correcta"
+ },
+ "elemento.Cu.pregunta.mal1": {
+  "texto": "Es más ligero que el aire",
+  "descripcion": "Test de la ficha del cobre: respuesta incorrecta 1"
+ },
+ "elemento.Cu.pregunta.mal2": {
+  "texto": "La plata no conduce la electricidad",
+  "descripcion": "Test de la ficha del cobre: respuesta incorrecta 2"
+ },
+ "elemento.Cu.pregunta.mal3": {
+  "texto": "Es imposible doblar la plata",
+  "descripcion": "Test de la ficha del cobre: respuesta incorrecta 3"
+ },
+ "elemento.Cu.pregunta.explicacion": {
+  "texto": "La plata conduce un poco mejor, pero costaría muchísimo más; este metal es el equilibrio ideal entre conducción y precio.",
+  "descripcion": "Test de la ficha del cobre: explicación de la respuesta correcta"
+ },
+ "elemento.Zn.descubrimiento": {
+  "texto": "El latón, aleación de cobre y cinc, se fabricaba desde la Antigüedad sin saber que contenía un metal nuevo. En Zawar (India) ya se producía cinc metálico a gran escala hace unos 800 años, destilándolo en hornos con cientos de vasijas, y después también en China. En Europa, Andreas Marggraf lo aisló y estudió en 1746, aunque el inglés William Champion ya había patentado su destilación en 1738.",
+  "descripcion": "Ficha del cinc: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Zn.usos": {
+  "texto": "Más o menos la mitad se usa para galvanizar: cubrir el acero de farolas, vallas y coches para que no se oxide. También está en el latón, las pilas, las cremas solares (óxido de cinc) y en tu sistema inmunitario.",
+  "descripcion": "Ficha del cinc: dónde se usa hoy"
+ },
+ "elemento.Zn.porque": {
+  "texto": "El cinc es más reactivo que el hierro, así que si la capa se raya, se oxida él primero y protege al acero: es un «metal de sacrificio». La pintura, en cambio, solo protege mientras está entera.",
+  "descripcion": "Ficha del cinc: por qué se usa este elemento y no otro"
+ },
+ "elemento.Zn.unico": {
+  "texto": "Hierve a solo 907 °C, por debajo de la temperatura necesaria para sacarlo de su mineral; por eso escapaba como vapor y se quemaba, y hubo que inventar hornos que lo condensaran. Esa es la razón de que tardara tanto en conocerse.",
+  "descripcion": "Ficha del cinc: cualidad única o récord"
+ },
+ "elemento.Zn.curiosidad": {
+  "texto": "Desde 1982, los centavos de EE. UU. son casi todo cinc (97,5 %) con una fina capa de cobre por fuera.",
+  "descripcion": "Ficha del cinc: dato curioso de una frase"
+ },
+ "elemento.Zn.pista": {
+  "texto": "Cubro las farolas y vallas para que no se oxiden y estoy en las cremas solares más blancas.",
+  "descripcion": "Juego de adivinar: pista del cinc, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Zn.pregunta": {
+  "texto": "¿Cómo protege este elemento al acero galvanizado?",
+  "descripcion": "Test de la ficha del cinc: enunciado de la pregunta"
+ },
+ "elemento.Zn.pregunta.ok": {
+  "texto": "Se oxida él primero, en lugar del hierro",
+  "descripcion": "Test de la ficha del cinc: respuesta correcta"
+ },
+ "elemento.Zn.pregunta.mal1": {
+  "texto": "Repele el agua como un impermeable",
+  "descripcion": "Test de la ficha del cinc: respuesta incorrecta 1"
+ },
+ "elemento.Zn.pregunta.mal2": {
+  "texto": "Vuelve el acero transparente",
+  "descripcion": "Test de la ficha del cinc: respuesta incorrecta 2"
+ },
+ "elemento.Zn.pregunta.mal3": {
+  "texto": "Enfría el acero para que no reaccione",
+  "descripcion": "Test de la ficha del cinc: respuesta incorrecta 3"
+ },
+ "elemento.Zn.pregunta.explicacion": {
+  "texto": "Es más reactivo que el hierro y se «sacrifica»: se oxida él y deja intacto el acero, aunque haya rayas.",
+  "descripcion": "Test de la ficha del cinc: explicación de la respuesta correcta"
+ },
+ "elemento.Ga.descubrimiento": {
+  "texto": "En 1871 Mendeléiev predijo un «eka-aluminio». En 1875 el francés Paul-Émile Lecoq de Boisbaudran lo encontró usando un espectroscopio: vio dos líneas violetas nuevas en la luz de un mineral de cinc de los Pirineos. Mendeléiev le escribió diciendo que la densidad que había medido estaba mal; Lecoq purificó más su muestra y le dio la razón. Lo llamó como Galia, el nombre latino de Francia.",
+  "descripcion": "Ficha del galio: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Ga.usos": {
+  "texto": "Está en los LED, sobre todo los blancos y azules, en los cargadores rápidos de móvil, en los láseres de los lectores de discos y en los paneles solares de los satélites.",
+  "descripcion": "Ficha del galio: dónde se usa hoy"
+ },
+ "elemento.Ga.porque": {
+  "texto": "El nitruro de galio emite luz azul con mucha eficiencia, algo que el silicio no sabe hacer porque apenas produce luz. Ese LED azul, que permitió la luz LED blanca, valió el Nobel de Física de 2014 a los japoneses Akasaki, Amano y Nakamura.",
+  "descripcion": "Ficha del galio: por qué se usa este elemento y no otro"
+ },
+ "elemento.Ga.unico": {
+  "texto": "Se funde a 29,8 °C pero no hierve hasta unos 2400 °C: es uno de los elementos que se mantienen líquidos en un intervalo de temperaturas más amplio.",
+  "descripcion": "Ficha del galio: cualidad única o récord"
+ },
+ "elemento.Ga.curiosidad": {
+  "texto": "Una broma clásica de química es servir té con una cucharilla de este metal: al remover, la cuchara se derrite y desaparece.",
+  "descripcion": "Ficha del galio: dato curioso de una frase"
+ },
+ "elemento.Ga.pista": {
+  "texto": "Me derrito en la palma de tu mano y gracias a mí existen los LED azules.",
+  "descripcion": "Juego de adivinar: pista del galio, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Ga.pregunta": {
+  "texto": "¿Qué ocurre si sostienes este metal en la mano un rato?",
+  "descripcion": "Test de la ficha del galio: enunciado de la pregunta"
+ },
+ "elemento.Ga.pregunta.ok": {
+  "texto": "Se funde con el calor de la mano",
+  "descripcion": "Test de la ficha del galio: respuesta correcta"
+ },
+ "elemento.Ga.pregunta.mal1": {
+  "texto": "Explota en llamas",
+  "descripcion": "Test de la ficha del galio: respuesta incorrecta 1"
+ },
+ "elemento.Ga.pregunta.mal2": {
+  "texto": "Se vuelve magnético",
+  "descripcion": "Test de la ficha del galio: respuesta incorrecta 2"
+ },
+ "elemento.Ga.pregunta.mal3": {
+  "texto": "Cambia a color rojo",
+  "descripcion": "Test de la ficha del galio: respuesta incorrecta 3"
+ },
+ "elemento.Ga.pregunta.explicacion": {
+  "texto": "Se funde a 29,8 °C, por debajo de la temperatura de tu cuerpo, así que se derrite en la mano.",
+  "descripcion": "Test de la ficha del galio: explicación de la respuesta correcta"
+ },
+ "elemento.Ge.descubrimiento": {
+  "texto": "En 1886 el alemán Clemens Winkler analizaba en Freiberg el mineral argirodita y, al sumar todo lo que encontraba, solo le salía el 93 %: faltaba algo. Buscando ese 7 % perdido descubrió un elemento nuevo y lo llamó como su país. Resultó ser el «eka-silicio» que Mendeléiev había predicho en 1871.",
+  "descripcion": "Ficha del germanio: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Ge.usos": {
+  "texto": "Se usa en la fibra óptica que lleva internet, en las lentes de cámaras térmicas y visores nocturnos, y en células solares de satélites. El primer transistor, inventado en 1947, era de este elemento.",
+  "descripcion": "Ficha del germanio: dónde se usa hoy"
+ },
+ "elemento.Ge.porque": {
+  "texto": "Es transparente a la luz infrarroja, mientras que el vidrio la bloquea; por eso las cámaras de calor llevan lentes de germanio. Los chips pasaron después al silicio porque es más abundante, aguanta más temperatura y forma un óxido estable.",
+  "descripcion": "Ficha del germanio: por qué se usa este elemento y no otro"
+ },
+ "elemento.Ge.unico": {
+  "texto": "Es la predicción de Mendeléiev que mejor se cumplió: había anunciado una masa de 72 y una densidad de 5,5 g/cm³, y la real es de 72,6 y 5,3 g/cm³.",
+  "descripcion": "Ficha del germanio: cualidad única o récord"
+ },
+ "elemento.Ge.curiosidad": {
+  "texto": "Winkler lo encontró porque las cuentas no le cuadraban: un 7 % del mineral había «desaparecido».",
+  "descripcion": "Ficha del germanio: dato curioso de una frase"
+ },
+ "elemento.Ge.pista": {
+  "texto": "Mendeléiev me llamó eka-silicio y el primer transistor de la historia se hizo conmigo.",
+  "descripcion": "Juego de adivinar: pista del germanio, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Ge.pregunta": {
+  "texto": "¿Qué pista llevó a Winkler a descubrir este elemento?",
+  "descripcion": "Test de la ficha del germanio: enunciado de la pregunta"
+ },
+ "elemento.Ge.pregunta.ok": {
+  "texto": "Le faltaba un 7 % del mineral",
+  "descripcion": "Test de la ficha del germanio: respuesta correcta"
+ },
+ "elemento.Ge.pregunta.mal1": {
+  "texto": "Vio una luz violeta en el cielo",
+  "descripcion": "Test de la ficha del germanio: respuesta incorrecta 1"
+ },
+ "elemento.Ge.pregunta.mal2": {
+  "texto": "Un meteorito cayó en su laboratorio",
+  "descripcion": "Test de la ficha del germanio: respuesta incorrecta 2"
+ },
+ "elemento.Ge.pregunta.mal3": {
+  "texto": "El mineral flotaba en el agua",
+  "descripcion": "Test de la ficha del germanio: respuesta incorrecta 3"
+ },
+ "elemento.Ge.pregunta.explicacion": {
+  "texto": "Al sumar todos los componentes de la argirodita solo le salía el 93 %, y ese 7 % que faltaba era el nuevo elemento.",
+  "descripcion": "Test de la ficha del germanio: explicación de la respuesta correcta"
+ },
+ "elemento.As.descubrimiento": {
+  "texto": "Sus minerales amarillos y rojos (oropimente y rejalgar) se usaban desde la Antigüedad como pigmentos y venenos en Egipto, Grecia y China. Se suele atribuir al alemán Alberto Magno, hacia 1250, el primero en aislarlo calentando oropimente con jabón. Lavoisier lo incluyó en 1789 en su lista de elementos.",
+  "descripcion": "Ficha del arsénico: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.As.usos": {
+  "texto": "Se usa en semiconductores de arseniuro de galio para móviles y satélites. Un compuesto suyo, el trióxido de arsénico, cura un tipo de leucemia: su uso moderno lo desarrollaron en los años 70 médicos chinos de Harbin, como Zhang Tingdong.",
+  "descripcion": "Ficha del arsénico: dónde se usa hoy"
+ },
+ "elemento.As.porque": {
+  "texto": "El arseniuro de galio deja moverse a los electrones más rápido que el silicio, ideal para los chips de radio de los móviles. En la leucemia promielocítica, el trióxido de arsénico ataca justo la proteína defectuosa de las células enfermas.",
+  "descripcion": "Ficha del arsénico: por qué se usa este elemento y no otro"
+ },
+ "elemento.As.unico": {
+  "texto": "Es uno de los pocos elementos que, a presión normal, pasan directamente de sólido a gas sin fundirse (a unos 615 °C).",
+  "descripcion": "Ficha del arsénico: cualidad única o récord"
+ },
+ "elemento.As.curiosidad": {
+  "texto": "Fue tan usado para envenenar herencias que en Francia lo llamaban «polvo de sucesión», hasta que en 1836 la prueba de Marsh permitió detectarlo en los cuerpos.",
+  "descripcion": "Ficha del arsénico: dato curioso de una frase"
+ },
+ "elemento.As.pista": {
+  "texto": "Fui el veneno preferido de las novelas de misterio, hasta que una prueba química de 1836 empezó a delatarme.",
+  "descripcion": "Juego de adivinar: pista del arsénico, sin decir su nombre ni su símbolo"
+ },
+ "elemento.As.pregunta": {
+  "texto": "¿Qué enfermedad trata hoy un compuesto de este elemento?",
+  "descripcion": "Test de la ficha del arsénico: enunciado de la pregunta"
+ },
+ "elemento.As.pregunta.ok": {
+  "texto": "Un tipo de leucemia",
+  "descripcion": "Test de la ficha del arsénico: respuesta correcta"
+ },
+ "elemento.As.pregunta.mal1": {
+  "texto": "La gripe común",
+  "descripcion": "Test de la ficha del arsénico: respuesta incorrecta 1"
+ },
+ "elemento.As.pregunta.mal2": {
+  "texto": "La miopía",
+  "descripcion": "Test de la ficha del arsénico: respuesta incorrecta 2"
+ },
+ "elemento.As.pregunta.mal3": {
+  "texto": "El acné",
+  "descripcion": "Test de la ficha del arsénico: respuesta incorrecta 3"
+ },
+ "elemento.As.pregunta.explicacion": {
+  "texto": "El trióxido de arsénico, desarrollado por médicos chinos, cura la leucemia promielocítica aguda en la mayoría de los casos.",
+  "descripcion": "Test de la ficha del arsénico: explicación de la respuesta correcta"
+ },
+ "elemento.Se.descubrimiento": {
+  "texto": "En 1817 los suecos Jöns Jacob Berzelius y Johan Gottlieb Gahn investigaban un lodo rojizo que se acumulaba en una fábrica de ácido sulfúrico. Al principio creyeron que era telurio, pero resultó ser un elemento nuevo. Como el telurio llevaba el nombre de la Tierra, Berzelius llamó al nuevo elemento por la Luna («selene» en griego).",
+  "descripcion": "Ficha del selenio: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Se.usos": {
+  "texto": "Está en el champú anticaspa (sulfuro de selenio), en el vidrio rojo o para quitarle el tono verdoso, en algunas células solares y en tu cuerpo, que lo necesita en pequeñísimas cantidades.",
+  "descripcion": "Ficha del selenio: dónde se usa hoy"
+ },
+ "elemento.Se.porque": {
+  "texto": "Conduce mucho mejor la electricidad cuando le da la luz, así que sirvió para las primeras fotocélulas y para los tambores de las fotocopiadoras. Hoy el silicio lo ha sustituido en casi todo, pero el selenio sigue en algunos paneles solares de capa fina.",
+  "descripcion": "Ficha del selenio: por qué se usa este elemento y no otro"
+ },
+ "elemento.Se.unico": {
+  "texto": "Fue el primer material en el que se descubrió la fotoconductividad, en 1873: su resistencia eléctrica bajaba al iluminarlo.",
+  "descripcion": "Ficha del selenio: cualidad única o récord"
+ },
+ "elemento.Se.curiosidad": {
+  "texto": "Con solo una o dos nueces de Brasil tomas el selenio que necesitas en un día; comer muchas de golpe puede ser demasiado.",
+  "descripcion": "Ficha del selenio: dato curioso de una frase"
+ },
+ "elemento.Se.pista": {
+  "texto": "Mi nombre viene de la Luna y unas pocas nueces de Brasil te dan todo lo que necesitas de mí al día.",
+  "descripcion": "Juego de adivinar: pista del selenio, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Se.pregunta": {
+  "texto": "¿Qué le ocurre a este elemento cuando le da la luz?",
+  "descripcion": "Test de la ficha del selenio: enunciado de la pregunta"
+ },
+ "elemento.Se.pregunta.ok": {
+  "texto": "Conduce mejor la electricidad",
+  "descripcion": "Test de la ficha del selenio: respuesta correcta"
+ },
+ "elemento.Se.pregunta.mal1": {
+  "texto": "Se vuelve invisible",
+  "descripcion": "Test de la ficha del selenio: respuesta incorrecta 1"
+ },
+ "elemento.Se.pregunta.mal2": {
+  "texto": "Se convierte en gas",
+  "descripcion": "Test de la ficha del selenio: respuesta incorrecta 2"
+ },
+ "elemento.Se.pregunta.mal3": {
+  "texto": "Pierde todo su color",
+  "descripcion": "Test de la ficha del selenio: respuesta incorrecta 3"
+ },
+ "elemento.Se.pregunta.explicacion": {
+  "texto": "Es fotoconductor: al iluminarlo baja su resistencia eléctrica, algo que se descubrió por primera vez en él en 1873.",
+  "descripcion": "Test de la ficha del selenio: explicación de la respuesta correcta"
+ },
+ "elemento.Br.descubrimiento": {
+  "texto": "En 1826 Antoine-Jérôme Balard, un estudiante de farmacia de 23 años de Montpellier (Francia), añadió cloro a las aguas madre de unas salinas y vio aparecer un líquido rojo oscuro de olor horrible. El alemán Carl Löwig lo había obtenido poco antes, pero tardó en publicarlo. Justus von Liebig también tuvo una muestra y la confundió con cloruro de yodo; después guardó la etiqueta en su «armario de los errores». Su nombre viene del griego «bromos», hedor.",
+  "descripcion": "Ficha del bromo: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Br.usos": {
+  "texto": "Se usa en retardantes de llama de aparatos y tejidos, para desinfectar piscinas y jacuzzis, en fluidos para perforar pozos y en algunos medicamentos. Antes era clave en la fotografía con película (bromuro de plata).",
+  "descripcion": "Ficha del bromo: dónde se usa hoy"
+ },
+ "elemento.Br.porque": {
+  "texto": "En los jacuzzis se prefiere al cloro porque aguanta mejor el agua caliente y desinfecta bien en más condiciones. En los retardantes de llama, sus átomos atrapan las especies reactivas que mantienen vivo el fuego.",
+  "descripcion": "Ficha del bromo: por qué se usa este elemento y no otro"
+ },
+ "elemento.Br.unico": {
+  "texto": "Es el único no metal líquido a temperatura ambiente; el otro elemento líquido es el mercurio, que es un metal.",
+  "descripcion": "Ficha del bromo: cualidad única o récord"
+ },
+ "elemento.Br.curiosidad": {
+  "texto": "La púrpura de Tiro, el tinte más caro de la Antigüedad reservado a emperadores, se sacaba de caracoles marinos y su molécula contiene este elemento.",
+  "descripcion": "Ficha del bromo: dato curioso de una frase"
+ },
+ "elemento.Br.pista": {
+  "texto": "Soy uno de los dos únicos elementos líquidos a temperatura ambiente, rojo oscuro y con un olor espantoso.",
+  "descripcion": "Juego de adivinar: pista del bromo, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Br.pregunta": {
+  "texto": "¿Qué tiene de especial este elemento a temperatura ambiente?",
+  "descripcion": "Test de la ficha del bromo: enunciado de la pregunta"
+ },
+ "elemento.Br.pregunta.ok": {
+  "texto": "Es el único no metal líquido",
+  "descripcion": "Test de la ficha del bromo: respuesta correcta"
+ },
+ "elemento.Br.pregunta.mal1": {
+  "texto": "Es el único gas de color rojo",
+  "descripcion": "Test de la ficha del bromo: respuesta incorrecta 1"
+ },
+ "elemento.Br.pregunta.mal2": {
+  "texto": "Es el único metal que flota",
+  "descripcion": "Test de la ficha del bromo: respuesta incorrecta 2"
+ },
+ "elemento.Br.pregunta.mal3": {
+  "texto": "Es el único sólido transparente",
+  "descripcion": "Test de la ficha del bromo: respuesta incorrecta 3"
+ },
+ "elemento.Br.pregunta.explicacion": {
+  "texto": "A temperatura ambiente solo hay dos elementos líquidos: el mercurio, que es un metal, y este, que es un no metal.",
+  "descripcion": "Test de la ficha del bromo: explicación de la respuesta correcta"
+ },
+ "elemento.Kr.descubrimiento": {
+  "texto": "El 30 de mayo de 1898, en Londres, William Ramsay y Morris Travers enfriaron aire hasta volverlo líquido y lo dejaron evaporar poco a poco. En el último residuo, el espectroscopio mostró líneas amarillas y verdes que nadie había visto. Lo llamaron por la palabra griega «kryptos», oculto, porque llevaba escondido en el aire todo ese tiempo.",
+  "descripcion": "Ficha del criptón: quién, cuándo y cómo se descubrió"
+ },
+ "elemento.Kr.usos": {
+  "texto": "Se usa como gas aislante entre los vidrios de las ventanas de alta eficiencia, en algunas lámparas y flashes de fotografía, y en láseres para fabricar chips.",
+  "descripcion": "Ficha del criptón: dónde se usa hoy"
+ },
+ "elemento.Kr.porque": {
+  "texto": "Sus átomos son pesados y lentos, así que transmite el calor peor que el argón; con él la cámara entre vidrios puede ser más fina. No se usa en todas las ventanas porque es mucho más caro: en el aire hay solo una millonésima parte.",
+  "descripcion": "Ficha del criptón: por qué se usa este elemento y no otro"
+ },
+ "elemento.Kr.unico": {
+  "texto": "Entre 1960 y 1983 el metro se definía oficialmente con la longitud de onda de la luz naranja que emite uno de sus isótopos, el criptón-86.",
+  "descripcion": "Ficha del criptón: cualidad única o récord"
+ },
+ "elemento.Kr.curiosidad": {
+  "texto": "El planeta natal de Superman y su famosa kriptonita toman el nombre de este gas noble, aunque el elemento real no tiene nada de superpoderes.",
+  "descripcion": "Ficha del criptón: dato curioso de una frase"
+ },
+ "elemento.Kr.pista": {
+  "texto": "Durante 23 años, el metro se midió con la luz naranja que emito.",
+  "descripcion": "Juego de adivinar: pista del criptón, sin decir su nombre ni su símbolo"
+ },
+ "elemento.Kr.pregunta": {
+  "texto": "¿Con qué se definió el metro entre 1960 y 1983?",
+  "descripcion": "Test de la ficha del criptón: enunciado de la pregunta"
+ },
+ "elemento.Kr.pregunta.ok": {
+  "texto": "Con la luz de este gas",
+  "descripcion": "Test de la ficha del criptón: respuesta correcta"
+ },
+ "elemento.Kr.pregunta.mal1": {
+  "texto": "Con una barra de platino",
+  "descripcion": "Test de la ficha del criptón: respuesta incorrecta 1"
+ },
+ "elemento.Kr.pregunta.mal2": {
+  "texto": "Con la velocidad del sonido",
+  "descripcion": "Test de la ficha del criptón: respuesta incorrecta 2"
+ },
+ "elemento.Kr.pregunta.mal3": {
+  "texto": "Con el tamaño de la Tierra",
+  "descripcion": "Test de la ficha del criptón: respuesta incorrecta 3"
+ },
+ "elemento.Kr.pregunta.explicacion": {
+  "texto": "De 1960 a 1983 el metro equivalía a un número fijo de longitudes de onda de la luz naranja del criptón-86.",
+  "descripcion": "Test de la ficha del criptón: explicación de la respuesta correcta"
+ }
+}
