@@ -57,6 +57,53 @@ create table if not exists challenges (
   ends text,
   created text not null default (datetime('now'))
 );
+
+-- Ligas. Un jugador es anónimo: un apodo que genera el servidor, un avatar
+-- (id de personaje) y su liga. Si es de una clase, se enlaza a su alumno.
+create table if not exists players (
+  id integer primary key,
+  nickname text not null,
+  avatar text,
+  student_id integer unique references students(id) on delete set null,
+  league integer not null default 0,
+  created text not null default (datetime('now'))
+);
+create table if not exists player_tokens (
+  hash text primary key,
+  player_id integer not null references players(id) on delete cascade,
+  created text not null default (datetime('now'))
+);
+-- Quién juega cada semana, en qué liga y grupo y con cuánto XP (el máximo recibido).
+create table if not exists league_entries (
+  week text not null,
+  player_id integer not null references players(id) on delete cascade,
+  league integer not null,
+  grp integer not null,
+  xp integer not null default 0,
+  primary key (week, player_id)
+);
+create index if not exists league_entries_group on league_entries(week, league, grp);
+-- Cómo acabó cada uno al cerrar la semana.
+create table if not exists league_results (
+  week text not null,
+  player_id integer not null references players(id) on delete cascade,
+  league integer not null,
+  rank integer not null,
+  change text not null,
+  primary key (week, player_id)
+);
+-- Semanas ya cerradas (para cerrar cada una una sola vez).
+create table if not exists league_weeks (
+  week text primary key,
+  closed text not null
+);
+-- XP semanal del alumno para la liga de su clase.
+create table if not exists class_xp (
+  week text not null,
+  student_id integer not null references students(id) on delete cascade,
+  xp integer not null default 0,
+  primary key (week, student_id)
+);
 `;
 
 export type DB = DatabaseSync;
