@@ -2,14 +2,15 @@ import { calm } from '../settings';
 import { createEveryday, hasEveryday, type EverydayObject } from '../objects';
 import * as THREE from 'three';
 import { MarkerTrackingProvider, type ARSession, type ViewerProvider } from '@webar/ar-core';
-import { REACTIONS, SPECIES, composition, contentFormula, formatEquation, reactionEnthalpy, type AtomModel, type Outcome } from '@webar/chem';
+import { REACTIONS, SPECIES, composition, getElement, contentFormula, formatEquation, reactionEnthalpy, type AtomModel, type Outcome } from '@webar/chem';
 import { t } from '../i18n';
-import { contentName, num, reactionConditions, reactionName, reactionNote, speciesName } from '../i18n/content';
+import { contentName, elementName, num, reactionConditions, reactionName, reactionNote, speciesName } from '../i18n/content';
 import { Effects } from '../effects';
 import './cards.css';
 import { MAX_CONTENT_SCALE, MIN_CONTENT_SCALE } from './card-visual';
 import { CARD, DECK, MARKER_TO_CENTER, cardById, type CardSpec } from './deck';
-import { CardGame, HOLD_SECONDS } from './game';
+import { FAMILY_COLORS } from './card-svg';
+import { CardGame, HOLD_SECONDS, JOIN_DISTANCE } from './game';
 import { TableScene } from './table-scene';
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
@@ -31,8 +32,15 @@ export interface CardsModeDeps {
   challenge?: () => { label: string; atoms: string[] } | null;
 }
 
-/** Las cartas por defecto en la mesa virtual. */
-const DEFAULT_TABLE = 'H H H H O O O C N N Na Cl'.split(' ');
+/**
+ * La mesa virtual empieza vacía: si se reparten muchas tarjetas, quedan tan
+ * cerca que reaccionan solas. Se van poniendo desde la bandeja de elementos.
+ */
+const DEFAULT_TABLE: string[] = [];
+/** La bandeja: los elementos que más se combinan primero (solo los desbloqueados). */
+const TRAY = 'H O C N Na Cl K Mg Ca S F P Fe Cu Zn Al Si Li B Br I He Ne Ag Au'.split(' ');
+/** Separación entre tarjetas sueltas: más que la distancia a la que se juntan. */
+const LOOSE_GAP = JOIN_DISTANCE + 0.015;
 const SCALE_KEY = 'webar:escala-tarjetas';
 const SCALE_STEP = 0.25;
 
@@ -124,15 +132,18 @@ export class CardsMode {
   /** Prepara el modo; luego hay que arrancar la sesión con `provider`. */
   prepare(kind: CardsKind, cards?: string[], together = false): void {
     this.kind = kind;
-    if (cards?.length) this.initialCards = cards;
+    this.initialCards = cards?.length ? cards : DEFAULT_TABLE;
     this.together = together;
   }
 
   onStart(): void {
     this.active = true;
     $('hud-tarjetas').hidden = false;
-    $('t-anadir').hidden = this.kind !== 'mesa';
+    // En la mesa, la bandeja de elementos sustituye al botón «Añadir».
+    $('t-anadir').hidden = true;
     $('t-reiniciar').hidden = this.kind !== 'mesa';
+    this.tray.hidden = this.kind !== 'mesa';
+    if (this.kind === 'mesa') this.renderTray();
     this.game.setModel(this.deps.model());
     if (this.kind === 'mesa') this.setupTable();
     else this.setupPinch();
@@ -198,7 +209,7 @@ export class CardsMode {
       : visible === 0
         ? this.kind === 'camara'
           ? t('juego.apunta')
-          : t('juego.anade')
+          : t('mesa.vacia')
         : t('juego.junta');
 
     if (this.bannerTimer > 0 && (this.bannerTimer -= dt) <= 0) $('t-banner').hidden = true;
@@ -250,6 +261,39 @@ export class CardsMode {
     this.scaleOutput.setAttribute('aria-live', 'polite');
     group.append(step(1, '+', t('tarjetas.escala_mas')), this.scaleOutput, step(-1, '−', t('tarjetas.escala_menos')));
     $('hud-tarjetas').append(group);
+
+    // Bandeja de la mesa virtual: un toque pone la tarjeta en un hueco libre.
+    this.tray.className = 't-bandeja';
+    this.tray.setAttribute('role', 'toolbar');
+    this.tray.setAttribute('aria-label', t('mesa.bandeja'));
+    this.tray.hidden = true;
+    this.tray.addEventListener('click', (e) => {
+      const button = (e.target as Element).closest<HTMLButtonElement>('button');
+      if (!button) return;
+      if (button.dataset.simbolo) this.addVirtualCard(button.dataset.simbolo);
+      else this.deps.pickElement((symbol) => this.addVirtualCard(symbol));
+    });
+    document.querySelector('#hud-tarjetas .barra')!.prepend(this.tray);
+  }
+
+  private readonly tray = document.createElement('div');
+
+  /** Los elementos de la bandeja: los del reto en juego primero (marcados), luego los habituales. */
+  private renderTray(): void {
+    const unlocked = this.deps.isUnlocked ?? (() => true);
+    const needed = [...new Set(this.deps.challenge?.()?.atoms ?? [])];
+    // Los bloqueados también se ven (con candado, al final): así se sabe qué hay por desbloquear.
+    const rest = TRAY.filter((s) => !needed.includes(s));
+    const symbols = [...needed, ...rest.filter(unlocked), ...rest.filter((s) => !unlocked(s))];
+    this.tray.innerHTML =
+      symbols
+        .map((s) => {
+          const color = FAMILY_COLORS[getElement(s).family];
+          if (!unlocked(s) && !needed.includes(s))
+            return `<button type="button" class="ficha-bandeja bloqueada" data-bloqueada style="--c:${color}" aria-label="${t('mesa.bloqueado', { nombre: elementName(s) })}">${s}<span aria-hidden="true">🔒</span></button>`;
+          return `<button type="button" class="ficha-bandeja${needed.includes(s) ? ' pedida' : ''}" data-simbolo="${s}" style="--c:${color}" aria-label="${t('mesa.poner', { nombre: elementName(s) })}">${s}</button>`;
+        })
+        .join('') + `<button type="button" class="ficha-bandeja mas">${t('mesa.mas')}</button>`;
   }
 
   private stopHold(): void {
@@ -317,15 +361,18 @@ export class CardsMode {
     const cards = this.tableCards();
     // En vertical, menos columnas: así caben todas sin alejar tanto la cámara.
     const portrait = ar.camera.aspect < 0.9;
-    const columns = this.together ? cards.length : Math.min(portrait ? 3 : 6, cards.length);
-    const rows = Math.ceil(cards.length / columns);
-    const spacing = this.together ? CARD.width + 0.004 : CARD.width + 0.03;
+    // Mesa vacía: la vista de una fila de 5 tarjetas sueltas (3 en vertical), donde irán cayendo.
+    const count = Math.max(cards.length, this.together ? 1 : portrait ? 3 : 5);
+    const columns = this.together ? count : Math.min(portrait ? 3 : 6, count);
+    const rows = Math.ceil(count / columns);
+    // Sueltas, más separadas que la distancia de unión: si no, reaccionan solas al empezar.
+    const spacing = this.together ? CARD.width + 0.004 : LOOSE_GAP;
     const rowStep = CARD.height + 0.02;
     cards.forEach((symbol, i) => {
       const col = i % columns;
       const row = Math.floor(i / columns);
       // La última fila, centrada si está incompleta.
-      const inRow = row === rows - 1 ? cards.length - row * columns : columns;
+      const inRow = row === rows - 1 ? count - row * columns : columns;
       const x = (col - (inRow - 1) / 2) * spacing;
       const z = (row - (rows - 1) / 2) * rowStep;
       this.addVirtualCard(symbol, new THREE.Vector3(x, 0, z));
@@ -344,15 +391,10 @@ export class CardsMode {
     viewer.setView(target.clone().add(new THREE.Vector3(0, Math.sin(elevation), Math.cos(elevation)).multiplyScalar(distance)), target);
   }
 
-  /** Las tarjetas de la mesa: las pedidas (o las de siempre que estén desbloqueadas) y las que pida el reto. */
+  /** Las tarjetas de la mesa al empezar: las pedidas (acertijos, laboratorio) o ninguna. */
   private tableCards(): string[] {
-    const unlocked = this.deps.isUnlocked ?? (() => true);
-    const base = this.initialCards === DEFAULT_TABLE ? DEFAULT_TABLE.filter(unlocked) : [...this.initialCards];
-    for (const atom of this.deps.challenge?.()?.atoms ?? []) {
-      const need = (this.deps.challenge!()!.atoms.filter((a) => a === atom).length);
-      while (base.filter((b) => b === atom).length < need) base.push(atom);
-    }
-    return base;
+    // La mesa libre empieza vacía (los átomos de un reto salen marcados en la bandeja).
+    return [...this.initialCards];
   }
 
   private addVirtualCard(symbol: string, position?: THREE.Vector3): void {
@@ -360,8 +402,24 @@ export class CardsMode {
     const copy = this.game.visuals().filter((v) => v.spec.symbol === symbol).length + 1;
     const printed = DECK.find((c) => c.symbol === symbol && c.copy === copy) ?? DECK.find((c) => c.symbol === symbol);
     const spec: CardSpec = { id: this.virtualId++, symbol, copy: 0, marker: printed?.id };
-    const at = position ?? new THREE.Vector3((Math.random() - 0.5) * 0.3, 0, 0.12 + Math.random() * 0.05);
+    const at = position ?? this.freeSpot();
     this.game.addCard(spec, this.deps.viewer.createAnchor(at)).setCardShadow(true);
+  }
+
+  /**
+   * Un hueco donde la tarjeta nueva no toque a ninguna (no reacciona hasta que
+   * se junte a mano): primero en la fila de delante, del centro hacia fuera.
+   */
+  private freeSpot(): THREE.Vector3 {
+    // La pose recién puesta (matrix), no la del último fotograma (matrixWorld): así varias seguidas no caen en el mismo sitio.
+    const taken = this.game.visuals().map((v) => new THREE.Vector3().setFromMatrixPosition(v.anchor.object.matrix));
+    const rowStep = CARD.height + 0.03;
+    for (const row of [0, -1, 1, -2, 2, -3])
+      for (const col of [0, 1, -1, 2, -2, 3, -3]) {
+        const p = new THREE.Vector3(col * LOOSE_GAP, 0, row * rowStep);
+        if (taken.every((q) => Math.hypot(q.x - p.x, q.z - p.z) > LOOSE_GAP - 0.002)) return p;
+      }
+    return new THREE.Vector3((Math.random() - 0.5) * 0.4, 0, 0.3);
   }
 
   private teardownTable(): void {

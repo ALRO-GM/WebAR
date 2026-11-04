@@ -7,3 +7,21 @@
 }
 .t-escala .btn.redondo { font-size: 1.5rem; font-weight: 900; line-height: 1; }
 .t-escala output { font-weight: 900; font-size: 0.95rem; color: var(--fg-strong); min-width: 3.2ch; text-align: center; font-variant-numeric: tabular-nums; }
+
+/* Bandeja de la mesa virtual: los elementos en fila, con el color de su tarjeta; se desliza en horizontal. */
+.t-bandeja {
+  display: flex; gap: 6px; overflow-x: auto; padding: 4px 2px 6px; scrollbar-width: thin;
+  scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch;
+}
+.ficha-bandeja {
+  flex: 0 0 auto; min-width: 48px; height: 48px; padding: 0 10px; border-radius: 12px; scroll-snap-align: start;
+  font: 900 1.15rem/1 inherit; font-family: inherit; color: #23232b; cursor: pointer;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--c) 70%, #fff), var(--c));
+  border: 2px solid color-mix(in srgb, var(--c) 70%, #000); box-shadow: 0 3px 0 color-mix(in srgb, var(--c) 60%, #000);
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.ficha-bandeja:active { transform: translateY(3px); box-shadow: none; }
+.ficha-bandeja.pedida { outline: 3px solid #fff; outline-offset: 2px; }
+.ficha-bandeja.mas { --c: #ffffff; font-size: 0.9rem; font-weight: 800; }
+.ficha-bandeja.bloqueada { position: relative; filter: grayscale(0.85); opacity: 0.55; }
+.ficha-bandeja.bloqueada span { position: absolute; right: -4px; top: -6px; font-size: 0.75rem; }

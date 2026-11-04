@@ -18,5 +18,37 @@
  "tarjetas.escala_valor": {
   "texto": "{n}×",
   "descripcion": "Tamaño actual de los átomos; {n} es un número entre 1 y 3 (p. ej. «1,5×»)"
+ },
+ "cara.enlaces": {
+  "texto": "{n} enlaces",
+  "descripcion": "Pie de la tarjeta: cuántos enlaces suele formar el átomo (las rayas de los bordes)"
+ },
+ "cara.enlaces_1": {
+  "texto": "1 enlace",
+  "descripcion": "Singular"
+ },
+ "cara.sin_enlaces": {
+  "texto": "Sin enlaces",
+  "descripcion": "Pie de la tarjeta de un gas noble"
+ },
+ "mesa.bandeja": {
+  "texto": "Elementos para la mesa",
+  "descripcion": "Etiqueta accesible de la bandeja de elementos de la mesa virtual"
+ },
+ "mesa.poner": {
+  "texto": "Poner {nombre} en la mesa",
+  "descripcion": "Etiqueta accesible de un elemento de la bandeja"
+ },
+ "mesa.mas": {
+  "texto": "Más…",
+  "descripcion": "Botón de la bandeja: abre la tabla periódica"
+ },
+ "mesa.vacia": {
+  "texto": "Toca un elemento de abajo para ponerlo en la mesa.",
+  "descripcion": "Estado de la mesa virtual vacía"
+ },
+ "mesa.bloqueado": {
+  "texto": "{nombre}: aún bloqueado (aprende su lección en el camino)",
+  "descripcion": "Etiqueta accesible de un elemento bloqueado en la bandeja"
  }
 }

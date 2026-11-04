@@ -1,5 +1,5 @@
 import { MARKER_COUNT, markerSVG } from '@webar/ar-core/markers';
-import { atomComposition, contentFormula, getElement, getSpecies, type Content } from '@webar/chem';
+import { atomComposition, contentFormula, getElement, getSpecies, type Content, type ElementData } from '@webar/chem';
 import { t } from '../i18n';
 import { elementName, familyName, num, speciesName, speciesUse } from '../i18n/content';
 import { CARD, type CardSpec } from './deck';
@@ -21,12 +21,15 @@ const MARKER = Math.round(CARD.marker * 10000); // 400
 const QUIET = MARKER / 8; // un módulo del marcador: 50
 const MARKER_X = (SVG_W - MARKER) / 2;
 const MARKER_Y = Math.round(CARD.markerTop * 10000);
-/** El panel blanco que contiene el marcador y su margen (con 2 mm de holgura). */
-const PANEL = { x: MARKER_X - QUIET - 20, y: MARKER_Y - QUIET - 8, w: MARKER + 2 * QUIET + 40, h: MARKER + 2 * QUIET + 32 };
+/**
+ * El panel blanco que contiene el marcador y su margen (con 0,8 mm de holgura a
+ * los lados, para dejar sitio a los enlaces; 2 mm abajo).
+ */
+const PANEL = { x: MARKER_X - QUIET - 8, y: MARKER_Y - QUIET - 8, w: MARKER + 2 * QUIET + 16, h: MARKER + 2 * QUIET + 32 };
 
-/** Color de cada familia: planos y vivos, los del tema de la app. */
+/** Color de cada familia: vivos (la cámara los ve claros y el marcador destaca) y con degradado en la tarjeta. */
 export const FAMILY_COLORS: Record<string, string> = {
-  'no-metal': '#7ed957', 'gas-noble': '#c99bff', alcalino: '#ff7b7b', alcalinoterreo: '#ffab3d', metaloide: '#d9cb3a',
+  'no-metal': '#3fd08a', 'gas-noble': '#c99bff', alcalino: '#ff7b7b', alcalinoterreo: '#ffab3d', metaloide: '#d9cb3a',
   halogeno: '#3fd3b6', 'metal-postransicion': '#9db3cf', 'metal-transicion': '#ff8fc2', lantanido: '#ffd23f', actinido: '#ef9ae6',
 };
 const MOLECULE_COLOR = '#7c5cff';
@@ -48,20 +51,99 @@ export interface CardSVGOptions {
  * La tarjeta `spec` en SVG. Con `content` distinto de su elemento (una
  * molécula formada), la «tarjeta de molécula» con el mismo diseño.
  */
+let uid = 0;
+
 export function cardSVG(spec: CardSpec, content: Content = spec.symbol, options: CardSVGOptions = {}): string {
   const molecule = getSpecies(content);
+  const element = molecule ? null : getElement(spec.symbol);
   const body = molecule ? moleculeBody(content, spec) : elementBody(spec);
-  const color = molecule ? (molecule.ionic ? IONIC_COLOR : MOLECULE_COLOR) : FAMILY_COLORS[getElement(spec.symbol).family];
+  const color = molecule ? (molecule.ionic ? IONIC_COLOR : MOLECULE_COLOR) : FAMILY_COLORS[element!.family];
   const cut = options.noCutLine ? '' : `<rect x="1.5" y="1.5" width="${SVG_W - 3}" height="${SVG_H - 3}" rx="31" fill="none" stroke="#000" stroke-opacity="0.28" stroke-width="3"/>`;
+  // Ids únicos: en la hoja de imprimir hay muchas tarjetas en la misma página.
+  const id = `c${++uid}`;
+  const shells = element ? atomComposition(element).shells.length : 3;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${SVG_W} ${SVG_H}" width="${CARD.width * 1000}mm" height="${CARD.height * 1000}mm" font-family="${FONT}">` +
     (options.css ? `<style>${options.css}</style>` : '') +
-    `<rect width="${SVG_W}" height="${SVG_H}" rx="32" fill="${color}"/>` +
-    // Brillo suave arriba: da volumen sin salirse del estilo plano.
-    `<rect x="0" y="0" width="${SVG_W}" height="${PANEL.y + 4}" rx="32" fill="#fff" fill-opacity="0.18"/>` +
+    `<defs><linearGradient id="${id}g" x1="0" y1="0" x2="0.35" y2="1">` +
+    `<stop offset="0" stop-color="${mix(color, '#ffffff', 0.28)}"/><stop offset="0.55" stop-color="${color}"/><stop offset="1" stop-color="${mix(color, '#000000', 0.16)}"/></linearGradient>` +
+    `<clipPath id="${id}c"><rect width="${SVG_W}" height="${SVG_H}" rx="32"/></clipPath></defs>` +
+    `<rect width="${SVG_W}" height="${SVG_H}" rx="32" fill="url(#${id}g)"/>` +
+    // El marcador hace de núcleo: órbitas alrededor (una por capa del átomo).
+    `<g clip-path="url(#${id}c)">${orbits(shells)}</g>` +
     `<rect x="${PANEL.x}" y="${PANEL.y}" width="${PANEL.w}" height="${PANEL.h}" rx="26" fill="#fff"/>` +
+    (element ? bondStubs(element) : '') +
     body +
     cut +
     `</svg>`;
+}
+
+/** Mezcla dos colores #rrggbb (t = cuánto del segundo). */
+function mix(a: string, b: string, t: number): string {
+  const pa = parseInt(a.slice(1), 16);
+  const pb = parseInt(b.slice(1), 16);
+  const ch = (shift: number) => Math.round(((pa >> shift) & 255) * (1 - t) + ((pb >> shift) & 255) * t);
+  return `#${((ch(16) << 16) | (ch(8) << 8) | ch(0)).toString(16).padStart(6, '0')}`;
+}
+
+/** Órbitas suaves centradas en el marcador: se ven en los márgenes y abajo, detrás de los textos. */
+function orbits(shells: number): string {
+  const cx = SVG_W / 2;
+  const cy = SVG_H * 0.52;
+  let out = '';
+  for (let i = 0; i < shells; i++) {
+    const r = 300 + i * 46;
+    out += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#fff" stroke-opacity="${(0.42 - i * 0.04).toFixed(2)}" stroke-width="6"/>`;
+    // Un electrón por órbita, cada uno en un ángulo (en los márgenes o abajo, donde se ven).
+    const a = [0.78, 0.22, 0.62, 0.36, 0.84, 0.15, 0.7][i] * Math.PI;
+    out += `<circle cx="${(cx + Math.cos(a) * r).toFixed(1)}" cy="${(cy + Math.sin(a) * r).toFixed(1)}" r="11" fill="#fff" fill-opacity="0.85"/>`;
+  }
+  return out;
+}
+
+/**
+ * Enlaces que puede formar el átomo (los habituales en la ESO): H, halógenos
+ * y alcalinos 1, O y alcalinotérreos 2, N y B 3, C y Si 4; gases nobles 0. En
+ * los metales de transición, su valencia más común en los compuestos del juego.
+ */
+const BOND_OVERRIDES: Record<string, number> = { H: 1, He: 0, B: 3, Al: 3, Ga: 3, Fe: 3, Cu: 2, Zn: 2, Ag: 1, Au: 3, Ni: 2, Co: 2, Mn: 2, Cr: 3, Ti: 4, V: 3, Pt: 2, Pb: 2, Sn: 4 };
+export function bondCount(e: ElementData): number {
+  if (e.symbol in BOND_OVERRIDES) return BOND_OVERRIDES[e.symbol];
+  if (e.group === null) return 3; // lantánidos y actínidos: +3
+  if (e.group <= 2) return e.group;
+  if (e.group >= 13) {
+    const valence = e.group - 10;
+    return Math.min(valence, 8 - valence);
+  }
+  return 2;
+}
+
+/**
+ * Alturas fijas de los enlaces en los bordes izquierdo y derecho, por orden:
+ * el primero en el centro del marcador, luego arriba, abajo y más arriba.
+ * Como todas las tarjetas usan las mismas alturas, al juntar dos tarjetas los
+ * trazos coinciden: tantas rayas seguidas como el enlace que pueden formar
+ * (H–O una, O=C dos, N≡N tres).
+ */
+export const BOND_SLOTS = [288, 198, 378, 108] as const;
+
+/** Medio enlace saliendo por cada lado; los metales (que ceden electrones: enlace iónico), discontinuo. */
+function bondStubs(e: ElementData): string {
+  const n = Math.min(bondCount(e), BOND_SLOTS.length);
+  const metal = !['no-metal', 'halogeno', 'gas-noble', 'metaloide'].includes(e.family);
+  const len = PANEL.x - 4;
+  const h = 34;
+  let out = '';
+  for (const y of BOND_SLOTS.slice(0, n)) {
+    for (const side of [0, 1]) {
+      const x0 = side ? SVG_W - len : 0;
+      const xEnd = side ? SVG_W - len : len; // el extremo de dentro, con el electrón
+      out += metal
+        ? `<line x1="${side ? SVG_W : 0}" y1="${y}" x2="${xEnd}" y2="${y}" stroke="${INK}" stroke-width="${h}" stroke-dasharray="11 8" stroke-opacity="0.9"/>`
+        : `<rect x="${x0}" y="${y - h / 2}" width="${len}" height="${h}" fill="${INK}" fill-opacity="0.9"/>`;
+      out += `<circle cx="${xEnd}" cy="${y}" r="15" fill="#fff" stroke="${INK}" stroke-width="7"/>`;
+    }
+  }
+  return out;
 }
 
 // --- Tarjeta de elemento ---------------------------------------------------------
@@ -110,7 +192,7 @@ function elementBody(spec: CardSpec): string {
       .join('') +
     bohrIcon(right + 30, 796, 30, c.shells, color) +
     text(shells, right + 72, 806, { size: 28, weight: 800, fill: INK, max: rightW - 72, anchor: 'start' }) +
-    text(`webar.peer4u.app · nº ${markerId}`, SVG_W / 2, 862, { size: 21, weight: 800, fill: INK, opacity: 0.55, max: SVG_W - 80 })
+    text(`${bondCount(e) ? t('cara.enlaces', { n: bondCount(e) }) : t('cara.sin_enlaces')} · webar.peer4u.app · nº ${markerId}`, SVG_W / 2, 862, { size: 21, weight: 800, fill: INK, opacity: 0.55, max: SVG_W - 80 })
   );
 }
 

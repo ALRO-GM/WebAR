@@ -1,7 +1,41 @@
 {
- "tarjetas.escala": { "texto": "Atom size" },
- "tarjetas.escala_ayuda": { "texto": "Make atoms and molecules bigger to see them better (with the camera, you can also pinch with two fingers)" },
- "tarjetas.escala_mas": { "texto": "Bigger atoms" },
- "tarjetas.escala_menos": { "texto": "Smaller atoms" },
- "tarjetas.escala_valor": { "texto": "{n}×" }
+ "tarjetas.escala": {
+  "texto": "Atom size"
+ },
+ "tarjetas.escala_ayuda": {
+  "texto": "Make atoms and molecules bigger to see them better (with the camera, you can also pinch with two fingers)"
+ },
+ "tarjetas.escala_mas": {
+  "texto": "Bigger atoms"
+ },
+ "tarjetas.escala_menos": {
+  "texto": "Smaller atoms"
+ },
+ "tarjetas.escala_valor": {
+  "texto": "{n}×"
+ },
+ "cara.enlaces": {
+  "texto": "{n} bonds"
+ },
+ "cara.enlaces_1": {
+  "texto": "1 bond"
+ },
+ "cara.sin_enlaces": {
+  "texto": "No bonds"
+ },
+ "mesa.bandeja": {
+  "texto": "Elements for the table"
+ },
+ "mesa.poner": {
+  "texto": "Put {nombre} on the table"
+ },
+ "mesa.mas": {
+  "texto": "More…"
+ },
+ "mesa.vacia": {
+  "texto": "Tap an element below to put it on the table."
+ },
+ "mesa.bloqueado": {
+  "texto": "{nombre}: still locked (learn its lesson on the path)"
+ }
 }

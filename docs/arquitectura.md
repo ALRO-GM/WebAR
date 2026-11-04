@@ -195,9 +195,23 @@ luz, tarjetas planas (pegadas a cartulina) y no acercar el móvil a menos de
 La tarjeta se dibuja **una vez**, en SVG (`apps/web/src/cards/card-svg.ts`,
 `cardSVG(spec, content?)`), en décimas de milímetro (630 × 880):
 
-- marco del color de su familia, panel blanco con el marcador (40 mm de negro,
-  a 8 mm del borde superior y centrado) y su **margen blanco de 5 mm**, en el
-  que no se dibuja nada (si no, deja de detectarse);
+- fondo del color de su familia **en degradado** (vivo: con el canal más
+  claro que usa el detector, el fondo queda casi blanco y el marcador
+  destaca) con **órbitas** suaves, una por capa del átomo, como si el
+  marcador fuera el núcleo;
+- panel blanco con el marcador (40 mm de negro, a 8 mm del borde superior y
+  centrado) y su **margen blanco de 5 mm**, en el que no se dibuja nada (si
+  no, deja de detectarse);
+- **enlaces en los bordes**: medio enlace saliendo por la izquierda y por la
+  derecha por cada enlace que suele formar el átomo (`bondCount`: H y
+  halógenos 1, O 2, N 3, C 4, gases nobles 0; metales de transición, su
+  valencia habitual), a **alturas fijas comunes a todas las tarjetas**
+  (`BOND_SLOTS`: primero a la altura del centro del marcador, luego arriba,
+  abajo…). Al juntar dos tarjetas de lado, los trazos coinciden: tantas rayas
+  seguidas como el enlace que pueden formar (H–O una, O=C dos, N≡N tres). Va
+  a ambos lados porque la misma tarjeta puede quedar a la izquierda o a la
+  derecha (H₂O es H–O–H). Los metales, discontinuos: ceden electrones
+  (enlace iónico). El pie dice cuántos enlaces son;
 - debajo: casilla con número atómico, símbolo y masa; nombre, familia,
   p⁺/n⁰/e⁻, capas con un icono del modelo de Bohr, y el nº de la tarjeta;
 - si la tarjeta ha formado una molécula, la «tarjeta de molécula» con el mismo
@@ -214,6 +228,13 @@ reconocen todas y la cara virtual cae encima de la impresa.
 
 ### La mesa virtual
 
+- **Empieza vacía**, con una **bandeja de elementos** abajo (los que más se
+  combinan primero; los aún bloqueados, con candado; «Más…» abre la tabla
+  periódica). Un toque pone la tarjeta en un **hueco libre**, a más de la
+  distancia de unión de las demás: no reacciona hasta que se junta a mano.
+  Antes se repartían 12 tarjetas a 9,3 cm (menos que los 10 cm a los que se
+  juntan) y reaccionaban solas. Los acertijos y el laboratorio siguen
+  poniendo las suyas, también separadas (o juntas si lo piden).
 - **Gestos** (con `ViewerProvider.setDragHandler`): un dedo sobre una tarjeta
   la arrastra (se levanta un poco y su sombra se abre); un dedo en vacío gira;
   dos dedos desplazan y el pellizco acerca, se toquen tarjetas o no (si se

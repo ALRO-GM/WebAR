@@ -2579,10 +2579,6 @@
   "texto": "Apunta la cámara a las tarjetas impresas…",
   "descripcion": "Estado: no se ve ninguna tarjeta"
  },
- "juego.anade": {
-  "texto": "Añade tarjetas a la mesa.",
-  "descripcion": "Estado de la mesa vacía"
- },
  "juego.junta": {
   "texto": "Junta tarjetas que reaccionen y mantenlas juntas 3 segundos.",
   "descripcion": "Estado con tarjetas a la vista"
