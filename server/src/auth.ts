@@ -13,14 +13,17 @@ export function checkSecret(secret: string, stored: string): boolean {
   return timingSafeEqual(candidate, Buffer.from(hash, 'base64'));
 }
 
-const sha256 = (s: string) => createHash('sha256').update(s).digest('hex');
+export const sha256 = (s: string) => createHash('sha256').update(s).digest('hex');
+
+/** Un token nuevo (lo que se guarda es su sha256). */
+export const newToken = () => randomBytes(32).toString('base64url');
 
 /**
  * Tokens de larga duración (uno por dispositivo): la app los guarda y funciona
  * sin conexión; el servidor solo guarda su hash.
  */
 export function issueToken(db: DB, kind: 'teacher' | 'student', ownerId: number): string {
-  const token = randomBytes(32).toString('base64url');
+  const token = newToken();
   db.prepare('insert into tokens (hash, kind, owner_id) values (?, ?, ?)').run(sha256(token), kind, ownerId);
   return token;
 }
