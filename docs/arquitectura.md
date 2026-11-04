@@ -228,9 +228,11 @@ reconocen todas y la cara virtual cae encima de la impresa.
 
 ### La mesa virtual
 
-- **Empieza vacía**, con una **bandeja de elementos** abajo (los que más se
-  combinan primero; los aún bloqueados, con candado; «Más…» abre la tabla
-  periódica). Un toque pone la tarjeta en un **hueco libre**, a más de la
+- **Empieza vacía**, con una **bandeja de elementos** abajo: todos los
+  disponibles (desbloqueados), los que más se combinan primero; ocupa el
+  ancho de la pantalla y se reparte en filas, así en el móvil se ven todos.
+  «Tabla periódica» abre la tabla: un elemento desbloqueado va a la mesa y
+  uno bloqueado explica en qué unidad se aprende. Un toque pone la tarjeta en un **hueco libre**, a más de la
   distancia de unión de las demás: no reacciona hasta que se junta a mano.
   Antes se repartían 12 tarjetas a 9,3 cm (menos que los 10 cm a los que se
   juntan) y reaccionaban solas. Los acertijos y el laboratorio siguen

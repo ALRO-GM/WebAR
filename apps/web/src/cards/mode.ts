@@ -2,7 +2,7 @@ import { calm } from '../settings';
 import { createEveryday, hasEveryday, type EverydayObject } from '../objects';
 import * as THREE from 'three';
 import { MarkerTrackingProvider, type ARSession, type ViewerProvider } from '@webar/ar-core';
-import { REACTIONS, SPECIES, composition, getElement, contentFormula, formatEquation, reactionEnthalpy, type AtomModel, type Outcome } from '@webar/chem';
+import { ELEMENTS, REACTIONS, SPECIES, composition, getElement, contentFormula, formatEquation, reactionEnthalpy, type AtomModel, type Outcome } from '@webar/chem';
 import { t } from '../i18n';
 import { contentName, elementName, num, reactionConditions, reactionName, reactionNote, speciesName } from '../i18n/content';
 import { Effects } from '../effects';
@@ -278,19 +278,20 @@ export class CardsMode {
 
   private readonly tray = document.createElement('div');
 
-  /** Los elementos de la bandeja: los del reto en juego primero (marcados), luego los habituales. */
+  /**
+   * Los elementos de la bandeja: todos los disponibles (desbloqueados), los
+   * del reto en juego primero y marcados, luego los que más se combinan y el
+   * resto por número atómico. Los bloqueados están en la tabla periódica.
+   */
   private renderTray(): void {
     const unlocked = this.deps.isUnlocked ?? (() => true);
     const needed = [...new Set(this.deps.challenge?.()?.atoms ?? [])];
-    // Los bloqueados también se ven (con candado, al final): así se sabe qué hay por desbloquear.
-    const rest = TRAY.filter((s) => !needed.includes(s));
-    const symbols = [...needed, ...rest.filter(unlocked), ...rest.filter((s) => !unlocked(s))];
+    const common = TRAY.filter((s) => unlocked(s) && !needed.includes(s));
+    const others = ELEMENTS.map((e) => e.symbol).filter((s) => unlocked(s) && !needed.includes(s) && !common.includes(s));
     this.tray.innerHTML =
-      symbols
+      [...needed, ...common, ...others]
         .map((s) => {
           const color = FAMILY_COLORS[getElement(s).family];
-          if (!unlocked(s) && !needed.includes(s))
-            return `<button type="button" class="ficha-bandeja bloqueada" data-bloqueada style="--c:${color}" aria-label="${t('mesa.bloqueado', { nombre: elementName(s) })}">${s}<span aria-hidden="true">🔒</span></button>`;
           return `<button type="button" class="ficha-bandeja${needed.includes(s) ? ' pedida' : ''}" data-simbolo="${s}" style="--c:${color}" aria-label="${t('mesa.poner', { nombre: elementName(s) })}">${s}</button>`;
         })
         .join('') + `<button type="button" class="ficha-bandeja mas">${t('mesa.mas')}</button>`;

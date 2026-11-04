@@ -30,12 +30,9 @@
   "texto": "Put {nombre} on the table"
  },
  "mesa.mas": {
-  "texto": "More…"
+  "texto": "Periodic table"
  },
  "mesa.vacia": {
   "texto": "Tap an element below to put it on the table."
- },
- "mesa.bloqueado": {
-  "texto": "{nombre}: still locked (learn its lesson on the path)"
  }
 }

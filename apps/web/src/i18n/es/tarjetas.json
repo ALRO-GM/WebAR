@@ -40,15 +40,11 @@
   "descripcion": "Etiqueta accesible de un elemento de la bandeja"
  },
  "mesa.mas": {
-  "texto": "Más…",
-  "descripcion": "Botón de la bandeja: abre la tabla periódica"
+  "texto": "Tabla periódica",
+  "descripcion": "Botón de la bandeja: abre la tabla periódica para elegir cualquier elemento desbloqueado"
  },
  "mesa.vacia": {
   "texto": "Toca un elemento de abajo para ponerlo en la mesa.",
   "descripcion": "Estado de la mesa virtual vacía"
- },
- "mesa.bloqueado": {
-  "texto": "{nombre}: aún bloqueado (aprende su lección en el camino)",
-  "descripcion": "Etiqueta accesible de un elemento bloqueado en la bandeja"
  }
 }
