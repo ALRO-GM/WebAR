@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es" class="oscuro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proyector · WebAR Átomos</title>
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body class="proyector">
+    <main>
+      <section id="pr-entrar" class="pr-centro flotante" hidden></section>
+
+      <section id="pr-espera" class="pr-centro" hidden>
+        <img src="/icons/icon.svg" alt="" width="96" height="96" class="pr-logo" />
+        <h1 id="pr-espera-titulo" aria-live="polite"></h1>
+        <ol id="pr-pasos">
+          <li data-t="emision.proyector_paso1"></li>
+          <li data-t="emision.proyector_paso2"></li>
+          <li data-t="emision.proyector_paso3"></li>
+        </ol>
+        <div id="pr-lista" class="pr-lista" hidden></div>
+        <p id="pr-error" class="pequeno" role="alert"></p>
+      </section>
+
+      <section id="pr-escena" hidden>
+        <video id="pr-video" autoplay playsinline muted data-t-attr="aria-label:emision.video_etiqueta"></video>
+        <canvas id="pr-lienzo" hidden role="img" data-t-attr="aria-label:emision.video_etiqueta"></canvas>
+      </section>
+    </main>
+
+    <div id="pr-insignia" class="pr-insignia" hidden>
+      <span class="emision-punto" aria-hidden="true"></span>
+      <b data-t="emision.en_directo"></b>
+      <span id="pr-calidad" role="status"></span>
+      <span id="pr-movil" class="pr-movil"></span>
+      <span id="pr-aviso-mundo" class="pr-aviso" data-t="emision.aviso_mundo" hidden></span>
+    </div>
+
+    <nav id="pr-controles" class="pr-controles" data-t-attr="aria-label:emision.controles">
+      <button id="pr-cambiar" type="button" class="btn claro" data-t="emision.cambiar_movil" hidden></button>
+      <button id="pr-pantalla-completa" type="button" class="btn" aria-pressed="false" data-t="emision.pantalla_completa"></button>
+      <a href="/profesor.html" class="btn claro" data-t="emision.volver_panel"></a>
+    </nav>
+    <script type="module" src="/src/cast/projector.ts"></script>
+  </body>
+</html>

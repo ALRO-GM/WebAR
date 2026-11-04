@@ -1,0 +1,174 @@
+{
+ "emision.titulo": {
+  "texto": "Proyectar en clase",
+  "descripcion": "Título del panel del móvil para emitir al proyector"
+ },
+ "emision.explicacion": {
+  "texto": "Lo que ves en el móvil, también en la RA, sale en el ordenador del aula para el proyector o la tele.",
+  "descripcion": "Explicación del panel de emitir"
+ },
+ "emision.solo_profes": {
+  "texto": "Solo para profesorado: entra con la misma cuenta que en el ordenador.",
+  "descripcion": "Aviso encima del formulario de entrar para emitir"
+ },
+ "emision.sin_cuenta": {
+  "texto": "¿Aún sin cuenta?",
+  "descripcion": "Texto antes del enlace para crear cuenta de profesor"
+ },
+ "emision.crear_cuenta": {
+  "texto": "Créala en el panel del profesorado",
+  "descripcion": "Enlace al panel del profesorado para crear cuenta"
+ },
+ "emision.paso_ordenador": {
+  "texto": "En el ordenador del aula abre {url} con tu cuenta.",
+  "descripcion": "Paso 1 en el móvil; {url} es la dirección de la vista de proyector"
+ },
+ "emision.paso_movil": {
+  "texto": "Pulsa «Emitir» y usa la app con normalidad: se ve en el proyector.",
+  "descripcion": "Paso 2 en el móvil"
+ },
+ "emision.comprobando": {
+  "texto": "Buscando ordenadores…",
+  "descripcion": "Mientras se consulta si hay un ordenador esperando"
+ },
+ "emision.sin_pantallas": {
+  "texto": "Ningún ordenador esperando todavía",
+  "descripcion": "Estado: no hay ninguna vista de proyector abierta con esta cuenta"
+ },
+ "emision.pantallas_1": {
+  "texto": "1 ordenador esperando",
+  "descripcion": "Estado: hay una vista de proyector abierta"
+ },
+ "emision.pantallas_n": {
+  "texto": "{n} ordenadores esperando",
+  "descripcion": "Estado: hay {n} vistas de proyector abiertas"
+ },
+ "emision.emitir": {
+  "texto": "📡 Emitir",
+  "descripcion": "Botón para empezar a emitir al proyector"
+ },
+ "emision.dejar": {
+  "texto": "Dejar de emitir",
+  "descripcion": "Botón para dejar de emitir"
+ },
+ "emision.salir": {
+  "texto": "Cerrar sesión de profesor",
+  "descripcion": "Botón para cerrar la sesión de profesor en el móvil"
+ },
+ "emision.sin_sesion": {
+  "texto": "Inicia sesión como profesor/a para emitir.",
+  "descripcion": "Error: no hay sesión de profesor o caducó"
+ },
+ "emision.error_red": {
+  "texto": "Sin conexión con el servidor. Lo reintento solo.",
+  "descripcion": "Error de red al emitir o mirar"
+ },
+ "emision.dispositivo": {
+  "texto": "Móvil {sistema}",
+  "descripcion": "Nombre del móvil en la lista del proyector; {sistema} es Android, iPhone…"
+ },
+ "emision.dispositivo_generico": {
+  "texto": "Móvil",
+  "descripcion": "Nombre del móvil cuando no se sabe el sistema"
+ },
+ "emision.esperando_imagen": {
+  "texto": "Esperando…",
+  "descripcion": "Texto de la imagen que se emite cuando no hay nada en pantalla"
+ },
+ "emision.conectando": {
+  "texto": "Conectando…",
+  "descripcion": "Indicador flotante: arrancando la emisión"
+ },
+ "emision.indicador_esperando": {
+  "texto": "📡 Emitiendo · esperando al ordenador",
+  "descripcion": "Indicador flotante: emitiendo pero ninguna pantalla mira aún"
+ },
+ "emision.indicador_1": {
+  "texto": "📡 Emitiendo",
+  "descripcion": "Indicador flotante: una pantalla mira"
+ },
+ "emision.indicador": {
+  "texto": "📡 Emitiendo a {n} pantallas",
+  "descripcion": "Indicador flotante: {n} pantallas miran"
+ },
+ "emision.indicador_relevo": {
+  "texto": "📡 Emitiendo (modo ahorro de red)",
+  "descripcion": "Indicador flotante: se usa el relevo de imágenes porque la red bloquea el vídeo directo"
+ },
+ "emision.parar": {
+  "texto": "Parar",
+  "descripcion": "Botón del indicador flotante para dejar de emitir"
+ },
+ "emision.proyectar": {
+  "texto": "🖥️ Proyectar",
+  "descripcion": "Botón del panel del profesorado para abrir la vista de proyector"
+ },
+ "emision.proyector_titulo": {
+  "texto": "Proyector",
+  "descripcion": "Título de la vista de proyector (pantalla de entrar)"
+ },
+ "emision.pantalla_nombre": {
+  "texto": "Proyector",
+  "descripcion": "Nombre de la pantalla del ordenador para el móvil"
+ },
+ "emision.esperando_movil": {
+  "texto": "Esperando a que un móvil emita…",
+  "descripcion": "Título de la vista de proyector mientras nadie emite"
+ },
+ "emision.elige_movil": {
+  "texto": "¿Qué móvil quieres ver?",
+  "descripcion": "Título de la lista cuando emiten varios móviles"
+ },
+ "emision.proyector_paso1": {
+  "texto": "En el móvil, abre la app y entra en tu perfil.",
+  "descripcion": "Paso 1 en la vista de proyector"
+ },
+ "emision.proyector_paso2": {
+  "texto": "En «Proyectar en clase», entra con esta misma cuenta de profesor/a.",
+  "descripcion": "Paso 2 en la vista de proyector"
+ },
+ "emision.proyector_paso3": {
+  "texto": "Pulsa «Emitir»: aparecerá aquí solo.",
+  "descripcion": "Paso 3 en la vista de proyector"
+ },
+ "emision.en_directo": {
+  "texto": "En directo",
+  "descripcion": "Insignia de la vista de proyector"
+ },
+ "emision.calidad_directo": {
+  "texto": "Vídeo directo",
+  "descripcion": "Calidad: conexión WebRTC directa entre móvil y ordenador"
+ },
+ "emision.calidad_relevo": {
+  "texto": "Modo ahorro de red",
+  "descripcion": "Calidad: imágenes reenviadas por el servidor porque la red bloquea el vídeo directo"
+ },
+ "emision.reconectando": {
+  "texto": "Reconectando…",
+  "descripcion": "Insignia: no llega imagen y se está volviendo a pedir"
+ },
+ "emision.aviso_mundo": {
+  "texto": "RA del mundo: el móvil no puede compartir su cámara; se ven solo los objetos 3D.",
+  "descripcion": "Aviso en el proyector cuando el móvil usa WebXR"
+ },
+ "emision.video_etiqueta": {
+  "texto": "Lo que se ve en el móvil del profesor/a",
+  "descripcion": "Etiqueta accesible del vídeo del proyector"
+ },
+ "emision.controles": {
+  "texto": "Controles del proyector",
+  "descripcion": "Etiqueta accesible de la barra de botones del proyector"
+ },
+ "emision.cambiar_movil": {
+  "texto": "Cambiar de móvil",
+  "descripcion": "Botón del proyector para elegir otro móvil"
+ },
+ "emision.pantalla_completa": {
+  "texto": "Pantalla completa",
+  "descripcion": "Botón del proyector"
+ },
+ "emision.volver_panel": {
+  "texto": "Volver al panel",
+  "descripcion": "Enlace del proyector al panel del profesorado"
+ }
+}

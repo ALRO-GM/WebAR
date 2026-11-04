@@ -1,0 +1,131 @@
+{
+ "emision.titulo": {
+  "texto": "Project in class"
+ },
+ "emision.explicacion": {
+  "texto": "What you see on your phone, AR included, appears on the classroom computer for the projector or TV."
+ },
+ "emision.solo_profes": {
+  "texto": "Teachers only: sign in with the same account as on the computer."
+ },
+ "emision.sin_cuenta": {
+  "texto": "No account yet?"
+ },
+ "emision.crear_cuenta": {
+  "texto": "Create one in the teacher dashboard"
+ },
+ "emision.paso_ordenador": {
+  "texto": "On the classroom computer open {url} with your account."
+ },
+ "emision.paso_movil": {
+  "texto": "Tap «Broadcast» and use the app as usual: it shows on the projector."
+ },
+ "emision.comprobando": {
+  "texto": "Looking for computers…"
+ },
+ "emision.sin_pantallas": {
+  "texto": "No computer waiting yet"
+ },
+ "emision.pantallas_1": {
+  "texto": "1 computer waiting"
+ },
+ "emision.pantallas_n": {
+  "texto": "{n} computers waiting"
+ },
+ "emision.emitir": {
+  "texto": "📡 Broadcast"
+ },
+ "emision.dejar": {
+  "texto": "Stop broadcasting"
+ },
+ "emision.salir": {
+  "texto": "Sign out (teacher)"
+ },
+ "emision.sin_sesion": {
+  "texto": "Sign in as a teacher to broadcast."
+ },
+ "emision.error_red": {
+  "texto": "No connection to the server. Retrying automatically."
+ },
+ "emision.dispositivo": {
+  "texto": "{sistema} phone"
+ },
+ "emision.dispositivo_generico": {
+  "texto": "Phone"
+ },
+ "emision.esperando_imagen": {
+  "texto": "Waiting…"
+ },
+ "emision.conectando": {
+  "texto": "Connecting…"
+ },
+ "emision.indicador_esperando": {
+  "texto": "📡 Broadcasting · waiting for the computer"
+ },
+ "emision.indicador_1": {
+  "texto": "📡 Broadcasting"
+ },
+ "emision.indicador": {
+  "texto": "📡 Broadcasting to {n} screens"
+ },
+ "emision.indicador_relevo": {
+  "texto": "📡 Broadcasting (network saver mode)"
+ },
+ "emision.parar": {
+  "texto": "Stop"
+ },
+ "emision.proyectar": {
+  "texto": "🖥️ Project"
+ },
+ "emision.proyector_titulo": {
+  "texto": "Projector"
+ },
+ "emision.pantalla_nombre": {
+  "texto": "Projector"
+ },
+ "emision.esperando_movil": {
+  "texto": "Waiting for a phone to broadcast…"
+ },
+ "emision.elige_movil": {
+  "texto": "Which phone do you want to show?"
+ },
+ "emision.proyector_paso1": {
+  "texto": "On your phone, open the app and go to your profile."
+ },
+ "emision.proyector_paso2": {
+  "texto": "In «Project in class», sign in with this same teacher account."
+ },
+ "emision.proyector_paso3": {
+  "texto": "Tap «Broadcast»: it will appear here by itself."
+ },
+ "emision.en_directo": {
+  "texto": "Live"
+ },
+ "emision.calidad_directo": {
+  "texto": "Direct video"
+ },
+ "emision.calidad_relevo": {
+  "texto": "Network saver mode"
+ },
+ "emision.reconectando": {
+  "texto": "Reconnecting…"
+ },
+ "emision.aviso_mundo": {
+  "texto": "World AR: the phone cannot share its camera; only the 3D objects are shown."
+ },
+ "emision.video_etiqueta": {
+  "texto": "What the teacher's phone is showing"
+ },
+ "emision.controles": {
+  "texto": "Projector controls"
+ },
+ "emision.cambiar_movil": {
+  "texto": "Switch phone"
+ },
+ "emision.pantalla_completa": {
+  "texto": "Full screen"
+ },
+ "emision.volver_panel": {
+  "texto": "Back to dashboard"
+ }
+}
