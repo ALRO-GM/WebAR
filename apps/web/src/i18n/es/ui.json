@@ -2331,6 +2331,14 @@
   "texto": "Sin permiso para la cámara: actívalo en los ajustes del navegador.",
   "descripcion": "Aviso al denegar la cámara"
  },
+ "aviso.sin_3d_titulo": {
+  "texto": "Sin 3D en este navegador",
+  "descripcion": "Título del aviso al intentar abrir algo en 3D sin WebGL"
+ },
+ "aviso.sin_3d": {
+  "texto": "Este navegador no puede dibujar en 3D (WebGL), así que los átomos, las tarjetas y la Materia en 3D no se ven. Las lecciones, la colección y la liga funcionan igual. Para arreglarlo, activa la «aceleración por hardware» en los ajustes del navegador y reinícialo, o prueba con otro navegador.",
+  "descripcion": "Aviso cuando el ordenador o el navegador no tiene WebGL (3D)"
+ },
  "aviso.error": {
   "texto": "No se pudo abrir: {error}",
   "descripcion": "Error al abrir un modo; {error} es el mensaje técnico"

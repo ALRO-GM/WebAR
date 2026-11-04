@@ -4,7 +4,7 @@
  * No sabe nada de la aplicación (átomos, moléculas…): da una sesión, anclas y
  * proveedores de seguimiento intercambiables. Ver README.md de este paquete.
  */
-export { ARSession, type ARSessionOptions } from './session';
+export { ARSession, WebGLUnavailableError, createRenderer, type ARSessionOptions } from './session';
 export { ARAnchor, type ARAnchorEvents } from './anchor';
 export { Emitter } from './emitter';
 export { detectARSupport, type ARSupport } from './capabilities';

@@ -317,6 +317,12 @@
  "aviso.permiso": {
   "texto": "No camera permission: enable it in the browser settings."
  },
+ "aviso.sin_3d_titulo": {
+  "texto": "No 3D in this browser"
+ },
+ "aviso.sin_3d": {
+  "texto": "This browser can't draw 3D (WebGL), so atoms, cards and 3D Matter won't show. Lessons, collection and league work as usual. To fix it, turn on “hardware acceleration” in the browser settings and restart it, or try another browser."
+ },
  "aviso.error": {
   "texto": "Couldn't open: {error}"
  },

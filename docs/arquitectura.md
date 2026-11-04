@@ -77,6 +77,17 @@ Los átomos (`@webar/chem`) tampoco saben de realidad aumentada: un
 Los detalles de los átomos (datos, fuentes, modelos y escalas) están en
 [packages/chem/README.md](../packages/chem/README.md).
 
+## Sin WebGL, la app sigue funcionando
+
+Hay ordenadores en los que el navegador no puede crear WebGL (gráfica en su
+lista negra, aceleración por hardware desactivada, escritorios remotos…).
+Antes, `new WebGLRenderer` lanzaba al arrancar y la app se quedaba en blanco
+(solo respondía el botón de tema, que se engancha antes). Ahora `ARSession`
+se crea igual con `has3D = false` y su `start` falla con
+`WebGLUnavailableError`, que la app traduce a un aviso con cómo arreglarlo;
+las vistas 3D pequeñas de las lecciones (`MiniScene`) se ocultan. Lecciones,
+colección, liga, perfil y Materia (salvo sus visores) funcionan igual.
+
 ## Tarjetas: por qué marcadores ArUco
 
 Las tarjetas llevan un marcador ArUco (diccionario MIP 36h12, 250 códigos) en

@@ -24,7 +24,13 @@ export interface ARSessionOptions {
 export class ARSession extends Emitter<ARSessionEvents> {
   readonly scene = new THREE.Scene();
   readonly camera = new THREE.PerspectiveCamera(70, 1, 0.01, 50);
-  readonly renderer: THREE.WebGLRenderer;
+  private readonly _renderer: THREE.WebGLRenderer | null;
+  /**
+   * Hay WebGL. Sin él (gráfica bloqueada por el navegador, aceleración por
+   * hardware desactivada) la sesión se crea igual, para que el resto de la app
+   * funcione, pero `start` falla con un `WebGLUnavailableError`.
+   */
+  readonly has3D: boolean;
   private _provider: ARProvider;
 
   private readonly overlay: HTMLElement;
@@ -38,14 +44,21 @@ export class ARSession extends Emitter<ARSessionEvents> {
     this.overlay = options.overlay;
     this.container = options.container ?? document.body;
 
-    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    this.renderer.setClearColor(0x000000, 0);
-    const canvas = this.renderer.domElement;
+    this._renderer = createRenderer();
+    this.has3D = !!this._renderer;
+    if (!this._renderer) return;
+    this._renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    this._renderer.setClearColor(0x000000, 0);
+    const canvas = this._renderer.domElement;
     canvas.classList.add('ar-canvas');
     Object.assign(canvas.style, { position: 'fixed', inset: '0', width: '100%', height: '100%', display: 'none' });
     this.container.append(canvas);
     window.addEventListener('resize', this.resize);
+  }
+
+  get renderer(): THREE.WebGLRenderer {
+    if (!this._renderer) throw new WebGLUnavailableError();
+    return this._renderer;
   }
 
   /** El proveedor de la sesión en marcha (o de la próxima). */
@@ -63,6 +76,7 @@ export class ARSession extends Emitter<ARSessionEvents> {
    */
   async start(provider: ARProvider = this._provider): Promise<void> {
     if (this._running) return;
+    if (!this._renderer) throw new WebGLUnavailableError();
     this._provider = provider;
     await provider.start(
       { renderer: this.renderer, scene: this.scene, camera: this.camera, overlay: this.overlay },
@@ -119,11 +133,28 @@ export class ARSession extends Emitter<ARSessionEvents> {
   };
 
   private readonly resize = (): void => {
-    if (this.renderer.xr.isPresenting) return; // WebXR fija el tamaño solo.
+    if (!this._renderer || this._renderer.xr.isPresenting) return; // WebXR fija el tamaño solo.
     const { innerWidth: w, innerHeight: h } = window;
     this.renderer.setSize(w, h, false);
     if (this._running && this._provider.resize?.(w, h)) return;
     this.camera.aspect = w / h;
     this.camera.updateProjectionMatrix();
   };
+}
+
+/** Este navegador no puede dibujar en 3D (WebGL). */
+export class WebGLUnavailableError extends Error {
+  override name = 'WebGLUnavailableError';
+  constructor() {
+    super('WebGL no disponible');
+  }
+}
+
+/** El renderizador, o `null` si no hay WebGL (three.js lanza un error al no poder crear el contexto). */
+export function createRenderer(): THREE.WebGLRenderer | null {
+  try {
+    return new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  } catch {
+    return null;
+  }
 }

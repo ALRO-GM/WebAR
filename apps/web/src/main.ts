@@ -55,8 +55,10 @@ $('cambiar-tema').addEventListener('click', () => {
 });
 const ar = new ARSession({ provider: viewer, overlay: $('overlay') });
 
-const pmrem = new THREE.PMREMGenerator(ar.renderer);
-ar.scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+if (ar.has3D) {
+  const pmrem = new THREE.PMREMGenerator(ar.renderer);
+  ar.scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+}
 const sun = new THREE.DirectionalLight(0xffffff, 1.2);
 sun.position.set(0.5, 2, 1);
 ar.scene.add(sun);
@@ -385,7 +387,10 @@ async function enter(next: typeof mode, provider: ARProvider): Promise<void> {
     await ar.start(provider);
   } catch (error) {
     const e = error as Error;
-    $('aviso').textContent = e.name === 'NotAllowedError' ? t('aviso.permiso') : t('aviso.error', { error: e.message });
+    $('aviso').textContent =
+      e.name === 'NotAllowedError' ? t('aviso.permiso') : e.name === 'WebGLUnavailableError' ? t('aviso.sin_3d') : t('aviso.error', { error: e.message });
+    // El aviso está en el Laboratorio: si se entró desde otra pantalla, que se vea.
+    if (!ar.has3D) hub.toast('🖥️', t('aviso.sin_3d_titulo'), t('aviso.sin_3d'));
   }
 }
 
@@ -520,7 +525,8 @@ worldAR = support.webxrAR;
 // Materia ofrece «Ver en RA» solo si hay WebXR: se pinta ya sabiéndolo.
 renderMateriaScreen($('p-materia'), ctx);
 $('entrar-ra-texto').textContent = support.webxrAR ? t('modo.ra.texto') : support.ios ? t('modo.ra.ios') : t('modo.ra.no');
-if (!support.camera) {
+if (!ar.has3D) $('aviso').textContent = t('aviso.sin_3d');
+else if (!support.camera) {
   $<HTMLButtonElement>('entrar-tarjetas').disabled = true;
   cameraOk = false;
   $('aviso').textContent = !support.secureContext ? t('aviso.https') : t('aviso.camara');

@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { createRenderer } from '@webar/ar-core';
 
 export interface Showable {
   object: THREE.Object3D;
@@ -14,7 +15,7 @@ export interface Showable {
  * ejercicio para no dejar contextos WebGL abiertos.
  */
 export class MiniScene {
-  private readonly renderer: THREE.WebGLRenderer;
+  private readonly renderer: THREE.WebGLRenderer | null;
   private readonly scene = new THREE.Scene();
   private readonly camera = new THREE.PerspectiveCamera(35, 1, 0.01, 100);
   private readonly pivot = new THREE.Group();
@@ -25,7 +26,13 @@ export class MiniScene {
   private drag: { x: number; rot: number } | null = null;
 
   constructor(private readonly host: HTMLElement) {
-    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    this.renderer = createRenderer();
+    this.observer = new ResizeObserver(() => this.resize());
+    // Sin WebGL no hay dibujo 3D: el ejercicio sigue igual, solo sin la figura.
+    if (!this.renderer) {
+      host.hidden = true;
+      return;
+    }
     this.renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
     this.renderer.setClearColor(0, 0);
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -38,7 +45,6 @@ export class MiniScene {
     const key = new THREE.DirectionalLight(0xffffff, 1.6);
     key.position.set(1, 2, 2);
     this.scene.add(key, new THREE.AmbientLight(0xffffff, 0.4), this.pivot);
-    this.observer = new ResizeObserver(() => this.resize());
     this.observer.observe(host);
     this.resize();
     // Girar con el dedo (horizontal); el desplazamiento vertical sigue siendo de la página.
@@ -49,6 +55,7 @@ export class MiniScene {
   }
 
   show(item: Showable): void {
+    if (!this.renderer) return item.dispose();
     this.item?.dispose();
     this.pivot.clear();
     this.item = item;
@@ -63,7 +70,7 @@ export class MiniScene {
 
   private resize(): void {
     const { clientWidth: w, clientHeight: h } = this.host;
-    if (!w || !h) return;
+    if (!w || !h || !this.renderer) return;
     this.renderer.setSize(w, h, false);
     this.camera.aspect = w / h;
     this.camera.updateProjectionMatrix();
@@ -76,21 +83,21 @@ export class MiniScene {
     this.last = now;
     if (!this.drag) this.pivot.rotation.y += dt * 0.4;
     this.item?.update(dt);
-    this.renderer.render(this.scene, this.camera);
+    this.renderer?.render(this.scene, this.camera);
   };
 
   /** Avanza la animación a mano (pruebas sin pantalla). */
   advance(seconds: number): void {
     for (let t = 0; t < seconds; t += 1 / 30) this.item?.update(1 / 30);
-    this.renderer.render(this.scene, this.camera);
+    this.renderer?.render(this.scene, this.camera);
   }
 
   dispose(): void {
     cancelAnimationFrame(this.frame);
     this.observer.disconnect();
     this.item?.dispose();
-    this.renderer.dispose();
-    this.renderer.forceContextLoss();
-    this.renderer.domElement.remove();
+    this.renderer?.dispose();
+    this.renderer?.forceContextLoss();
+    this.renderer?.domElement.remove();
   }
 }
