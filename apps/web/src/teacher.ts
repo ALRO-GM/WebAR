@@ -91,7 +91,7 @@ function renderLogin(): void {
 
 async function renderClasses(): Promise<void> {
   const data = await api<{ profesor: { name: string }; clases: ClassRow[] }>('GET', '/api/profesor');
-  $('profe-quien').innerHTML = `${esc(t('profe.hola', { nombre: data.profesor.name }))} <button id="salir" class="secundario">${t('profe.salir')}</button>`;
+  $('profe-quien').innerHTML = `${esc(t('profe.hola', { nombre: data.profesor.name }))} <a id="proyectar" class="btn pequeno" href="/proyector.html">${t('emision.proyectar')}</a> <button id="salir" class="secundario">${t('profe.salir')}</button>`;
   $('salir').addEventListener('click', logout);
   view.innerHTML = `<h2>${t('profe.clases')}</h2>
     <div class="clases">${data.clases.length ? data.clases.map((c) => `<a class="clase" href="#clase/${c.id}"><b>${esc(c.name)}</b><span>${t(`curso.${c.course}`)} · ${t('profe.alumnos_n', { n: c.students ?? 0 })}</span><code>${c.code}</code></a>`).join('') : `<p>${t('profe.ninguna')}</p>`}</div>

@@ -165,6 +165,8 @@ dependen de él.
   (español e inglés) e introducción animada: ver [ux.md](ux.md).
 - [x] Renovación al estilo de las apps de idiomas: camino, personajes, gato
   cuántico, rachas, ligas, Adivina, foto en RA y sección Materia.
+- [x] Emitir al proyector: el móvil del profesor se ve en el ordenador del
+  aula (ver «Emitir al proyector» más abajo).
 
 ## Plataforma educativa
 
@@ -204,3 +206,29 @@ Basada en [investigacion-plataforma.md](investigacion-plataforma.md).
 - **Panel del profesorado**: alumnado (renombrar, quitar), números de la
   clase, actividad de 14 días (gráfica con tabla alternativa), qué moléculas
   tiene la clase (buenas candidatas para retos) y creación de retos.
+
+## Emitir al proyector
+
+El profesor entra con su cuenta en el móvil (perfil → «Proyectar en clase») y
+en el ordenador del aula (`/proyector.html`, o «🖥️ Proyectar» en el panel).
+Sin códigos: las dos pantallas se encuentran por la cuenta (el login da un
+token por dispositivo). Si emiten varios móviles, el ordenador pregunta cuál.
+
+- **Móvil** (`apps/web/src/cast/`): `Compositor` pinta cada frame en un lienzo
+  2D: la cámara recortada como `object-fit: cover` (en espejo si es la
+  frontal) y encima el lienzo WebGL, copiado justo después de pintar (con
+  `deps.onFrame`, o llamando a `deps.renderNow()` justo antes). De ahí sale
+  `canvas.captureStream(24)` hacia WebRTC (≈ 2,5 Mb/s). En RA del mundo
+  (WebXR) la cámara no es accesible: se emite la capa 3D sobre fondo oscuro y
+  el proyector lo avisa. Sin nada que emitir, una imagen con el logo y
+  «Esperando…». `CastSender` es único por página, así que la emisión sigue al
+  cambiar de experiencia; pide `wakeLock` para que no se apague la pantalla.
+- **Plan B**: si WebRTC no conecta en 8 s (redes de centro que lo bloquean),
+  se pasa al relevo de JPEG por el servidor. El proyector lo indica («modo
+  ahorro de red») y vuelve a pedir imagen solo si se corta 12 s.
+- **Ordenador** (`proyector.html`, `src/cast/projector.ts`): fondo negro,
+  imagen centrada y ajustada, insignia «En directo» con la calidad, botones
+  de 44 px (pantalla completa, cambiar de móvil, volver) que se apartan con
+  el ratón quieto. Se reconecta solo y vuelve al mismo móvil si reaparece.
+- Servidor y límites: [servidor.md](servidor.md#emitir-al-proyector-apiemision).
+

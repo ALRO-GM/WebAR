@@ -153,6 +153,46 @@ correo, nombre ni ubicación; el enlace con un alumno es solo para la liga de
 su clase, donde ya se le conoce por su alias. Borrarse (`DELETE
 /api/jugadores/yo`) lo quita todo de la liga mundial.
 
+### Emitir al proyector (`/api/emision`)
+
+El móvil del profesor emite lo que ve (también la RA) a un ordenador con la
+**misma cuenta** (`/proyector.html`). El servidor solo hace de **señalización**
+WebRTC y de **relevo** de imágenes si la red bloquea WebRTC. Código:
+`server/src/cast.ts` (con tests en `cast.test.ts`). Todas las rutas piden
+token de **profesor**; un participante de otro profesor es un 404.
+
+| Ruta | Qué hace |
+| --- | --- |
+| `GET /api/emision` | Estado: `{ emisores: [{ id, nombre, desde, modo }], pantallas: [{ id, nombre }] }` |
+| `POST /api/emision` `{ rol: 'emisor'\|'pantalla', nombre?, dispositivo? }` | Entra → `{ id, ice, limites, ...estado }`. `dispositivo` es un id al azar de la pestaña: si vuelve a entrar, sustituye a su fantasma |
+| `GET /api/emision/:id/buzon` | Espera larga (hasta 25 s): `{ mensajes: [{ de, tipo, datos }], ...estado }`. Despierta al llegar un mensaje o al cambiar quién está |
+| `POST /api/emision/:id/mensajes` `{ a, tipo, datos? }` | Mensaje para el otro lado (siempre emisor ↔ pantalla). Tipos: `ver`, `oferta`, `respuesta`, `ice`, `colgar`, `relevo` |
+| `PATCH /api/emision/:id` `{ modo }` | El emisor dice qué emite: `camara`, `mundo` (WebXR: solo la capa 3D) o `app` |
+| `DELETE /api/emision/:id` | Sale |
+| `PUT /api/emision/:id/imagen` (cuerpo `image/jpeg`) | Relevo: el emisor sube la imagen actual → `{ secuencia, mirando }` |
+| `GET /api/emision/:id/imagen?tras=N` | Relevo: la imagen más nueva que `N` (espera hasta 5 s) → JPEG con `X-Secuencia`, o 204 |
+
+Flujo: la pantalla elige un emisor y le manda `ver`; el emisor crea la oferta
+WebRTC (STUN público de Google, `stun:stun.l.google.com:19302`) y se cruzan
+`respuesta` e `ice`. Si en 8 s no conecta, el emisor manda `relevo` y sube
+JPEG (≈ 640 px, calidad 0,6, 7 por segundo) que la pantalla va pidiendo.
+
+- **Nada se guarda**: todo vive en memoria (`CastHub`) y no toca la base de
+  datos ni el disco. Del relevo se guarda **solo la última imagen** de cada
+  emisor, que se sustituye con la siguiente y se borra a los 4 s sin otra, o
+  al irse el emisor.
+- **Caducidad**: quien no pregunta en 45 s (el buzón se consulta cada ≤ 25 s)
+  se da por ido; se limpia cada 10 s.
+- **Límites**: 3 móviles emitiendo y 4 pantallas por profesor; 30 emisores en
+  todo el servidor; mensajes de 32 KB; buzón de 100 mensajes; imágenes JPEG de
+  300 KB como mucho y como mucho una cada 80 ms por emisor.
+- **Memoria**: el peor caso del relevo son 30 × 300 KB ≈ 9 MB (lo normal, una
+  imagen de 20-40 KB por móvil); los buzones son unos pocos KB. Muy por debajo
+  del tope de 512 MB. El vídeo WebRTC va de móvil a ordenador sin pasar por el
+  servidor; el relevo sí cuenta como tráfico de salida (≈ 7 × 30 KB/s ≈
+  1,5 Mb/s por pantalla).
+- Al apagar, el servidor cierra las esperas largas (no retrasan el despliegue).
+
 ## Recursos
 
 Peer4U usa unos 2 GB y puede subir a 2 GB más; la máquina tiene 24 GB. WebAR va

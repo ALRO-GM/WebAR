@@ -37,7 +37,11 @@ Para clase: el progreso funciona **sin conexión** (moleculario, tabla periódic
 que se desbloquea, historias, retos, insignias) y, si el alumno se une a una
 clase con un código, se sincroniza con el **panel del profesorado**
 ([/profesor.html](https://webar.peer4u.app/profesor.html)): retos, estadísticas
-y la meta común de la clase. Accesible (alto contraste, texto grande, menos
+y la meta común de la clase. El profesor puede **emitir su móvil al
+proyector**: con la misma cuenta en el móvil y en el ordenador del aula
+([/proyector.html](https://webar.peer4u.app/proyector.html)), lo que ve en RA
+sale en la pantalla grande (WebRTC, o imágenes por el servidor si la red lo
+bloquea). Accesible (alto contraste, texto grande, menos
 movimiento, alternativas a los gestos) y traducible: todos los textos están en
 una tabla (español e inglés). Detalles en [docs/arquitectura.md](docs/arquitectura.md)
 y [docs/ux.md](docs/ux.md).
@@ -60,6 +64,7 @@ Las reglas para agentes de IA están en [AGENTS.md](AGENTS.md).
 
 | Fecha | Qué cambió |
 | --- | --- |
+| 2026-11-04 | Emitir al proyector: el móvil del profesor se ve en el ordenador del aula (WebRTC con relevo de JPEG por el servidor si la red lo bloquea), sin códigos, con la misma cuenta |
 | 2026-11-04 | Renovación: estilo de juego para aprender, camino de lecciones desde el hidrógeno, personajes históricos y gato cuántico, fichas ampliadas de los 118 elementos, racha diaria, misiones, quarks, ligas semanales (clase y mundial), Adivina con objetos 3D, foto con científicos, sección Materia (cristales y estados del agua), mesa virtual más natural y tarjetas iguales en papel y en pantalla |
 | 2026-11-04 | Acertijos con tarjetas: pistas que restan puntos, fallos que también, y explicación de cada pista al acertar (H₂, O₂, N₂, H₂O) |
 | 2026-11-04 | UX y accesibilidad: navegación inferior, introducción animada, ajustes (idioma, tamaño de texto, alto contraste, menos movimiento, vibración), tocar para juntar en la mesa; todos los textos en una tabla traducible, con inglés |

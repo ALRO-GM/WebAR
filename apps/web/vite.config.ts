@@ -6,8 +6,8 @@ export default defineConfig({
   build: {
     target: 'es2022',
     chunkSizeWarningLimit: 800,
-    // Tres páginas: la app, la de imprimir tarjetas y el panel del profesorado.
-    rollupOptions: { input: { main: 'index.html', cartas: 'cartas.html', profesor: 'profesor.html' } },
+    // Cuatro páginas: la app, la de imprimir tarjetas, el panel del profesorado y la vista de proyector.
+    rollupOptions: { input: { main: 'index.html', cartas: 'cartas.html', profesor: 'profesor.html', proyector: 'proyector.html' } },
   },
   plugins: [
     VitePWA({
@@ -34,7 +34,7 @@ export default defineConfig({
         // De la fuente basta el alfabeto latino (el resto se descarga si hiciera falta).
         globIgnores: ['**/*cyrillic*', '**/*vietnamese*', '**/*greek*', '**/*-italic*'],
         // /health es del servidor y tiene que llegar siempre fresco.
-        navigateFallbackDenylist: [/^\/health/, /^\/api\//, /^\/profesor/, /^\/cartas/],
+        navigateFallbackDenylist: [/^\/health/, /^\/api\//, /^\/profesor/, /^\/cartas/, /^\/proyector/],
       },
     }),
   ],

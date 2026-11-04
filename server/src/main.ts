@@ -2,6 +2,8 @@ import { createServer, type IncomingMessage, type ServerResponse } from 'node:ht
 import { readFile, stat } from 'node:fs/promises';
 import { extname, join, normalize } from 'node:path';
 import { createApi } from './api.ts';
+import { resolveToken } from './auth.ts';
+import { CastHub, createCastHandler } from './cast.ts';
 import { openDatabase } from './db.ts';
 
 /**
@@ -17,6 +19,13 @@ const MAX_BODY = 512 * 1024;
 
 const db = openDatabase();
 const api = createApi(db);
+// Emisión al proyector: en memoria, solo con token de profesor (ver cast.ts).
+const castHub = new CastHub();
+const cast = createCastHandler(castHub, (token) => {
+  const who = resolveToken(db, token);
+  return who?.kind === 'teacher' ? who.ownerId : null;
+});
+setInterval(() => castHub.sweep(), 10_000).unref();
 
 const TYPES: Record<string, string> = {
   '.html': 'text/html; charset=utf-8',
@@ -78,6 +87,8 @@ const server = createServer(async (req, res) => {
   const url = new URL(req.url ?? '/', 'http://localhost');
   try {
     if (url.pathname === '/health') return send(res, 200, { ok: true, version: VERSION });
+    // Va antes que el resto de la API: tiene esperas largas e imágenes, no solo JSON.
+    if (url.pathname === '/api/emision' || url.pathname.startsWith('/api/emision/')) return await cast(req, res, url);
     if (url.pathname.startsWith('/api/')) {
       let body: unknown;
       try {
@@ -98,4 +109,10 @@ const server = createServer(async (req, res) => {
 });
 
 server.listen(PORT, () => console.log(`WebAR ${VERSION || '(sin versión)'} en :${PORT}, estáticos en ${ROOT}`));
-for (const signal of ['SIGTERM', 'SIGINT']) process.on(signal, () => server.close(() => (db.close(), process.exit(0))));
+for (const signal of ['SIGTERM', 'SIGINT'])
+  process.on(signal, () => {
+    server.close(() => (db.close(), process.exit(0)));
+    // Las esperas largas de la emisión (hasta 25 s) no deben retrasar el apagado.
+    server.closeIdleConnections();
+    setTimeout(() => server.closeAllConnections(), 2000).unref();
+  });

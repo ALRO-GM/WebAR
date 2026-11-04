@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Emitir al proyector: el indicador y el panel del móvil, y la vista de
+   proyector del ordenador. Usa los tokens de theme.css.
+   ========================================================================== */
+
+/* --- Móvil: indicador flotante «📡 Emitiendo» ------------------------------- */
+.emision-indicador {
+  position: fixed; z-index: 50; top: max(10px, env(safe-area-inset-top)); left: 10px; right: 10px; margin-inline: auto; width: fit-content;
+  display: flex; align-items: center; gap: 0.6rem; padding: 0.3rem 0.4rem 0.3rem 0.9rem; border-radius: 999px;
+  font-weight: 800; font-size: 0.9rem; animation: rebote-entrada 0.35s var(--ease-pop) both;
+}
+.emision-indicador .emision-texto { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.emision-indicador[data-estado='conectando'] .emision-punto,
+.emision-indicador[data-estado='esperando'] .emision-punto { background: var(--streak); animation: none; }
+
+.emision-punto {
+  flex: none; width: 0.75rem; height: 0.75rem; border-radius: 50%; background: var(--bad);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--bad) 60%, transparent); animation: emision-latido 1.6s infinite;
+}
+@keyframes emision-latido { 70% { box-shadow: 0 0 0 0.5rem transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+
+/* --- Móvil: panel del perfil ---------------------------------------------------- */
+.emision-panel { display: grid; gap: 0.6rem; }
+.emision-panel h3 { margin: 0; }
+.emision-panel p { margin: 0; }
+.emision-pasos { margin: 0; padding-left: 1.2rem; }
+.emision-pantallas { font-weight: 800; color: var(--muted); }
+.emision-pantallas.hay { color: var(--ok-shadow); }
+.emision-pantallas.hay::before { content: '🖥️ '; }
+.emision-entrar { display: grid; gap: 0.6rem; }
+.emision-entrar label { display: grid; gap: 0.25rem; font-weight: 700; }
+.emision-panel .error, .emision-entrar .error { color: var(--bad-shadow); font-weight: 700; margin: 0; }
+.emision-panel .error:empty, .emision-entrar .error:empty { display: none; }
+
+/* --- Ordenador: vista de proyector --------------------------------------------- */
+body.proyector { background: #000; color: #fff; overflow: hidden; height: 100%; }
+body.proyector main { position: fixed; inset: 0; display: grid; place-items: center; }
+.pr-centro { display: grid; justify-items: center; gap: 1rem; text-align: center; max-width: 40rem; padding: 2rem; }
+.pr-centro h1 { color: #fff; font-size: clamp(1.6rem, 3vw, 2.6rem); margin: 0; }
+#pr-entrar { background: var(--surface); color: var(--fg); justify-items: stretch; text-align: left; width: min(26rem, 92vw); }
+#pr-entrar h1 { color: var(--fg-strong); font-size: 1.5rem; }
+#pr-pasos { text-align: left; font-size: clamp(1rem, 1.6vw, 1.35rem); color: #d6dbe0; display: grid; gap: 0.5rem; margin: 0; }
+.pr-logo { animation: flotar 3s ease-in-out infinite; }
+.pr-lista { display: grid; gap: 0.75rem; width: min(30rem, 90vw); }
+.pr-lista .btn { text-transform: none; font-size: 1.1rem; }
+#pr-error { color: #ffb4b4; min-height: 1.2em; }
+
+#pr-escena { position: fixed; inset: 0; }
+#pr-escena video, #pr-escena canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #000; }
+
+.pr-insignia {
+  position: fixed; top: 1rem; left: 1rem; z-index: 5; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;
+  padding: 0.4rem 0.9rem; border-radius: 999px; background: rgb(0 0 0 / 0.55); color: #fff; font-size: 0.95rem;
+  max-width: calc(100vw - 2rem); transition: opacity 0.4s;
+}
+.pr-insignia b { letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; }
+.pr-insignia:not(.en-vivo) .emision-punto { background: var(--streak); animation: none; }
+.pr-insignia #pr-calidad, .pr-movil { color: #cfd6dd; }
+.pr-movil:empty { display: none; }
+.pr-movil::before { content: '· '; }
+.pr-aviso { flex-basis: 100%; color: var(--xp); font-weight: 700; }
+
+.pr-controles { position: fixed; right: 1rem; bottom: 1rem; z-index: 5; display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: flex-end; transition: opacity 0.4s; }
+/* Con el ratón quieto, todo se aparta (no en las pantallas de espera ni de entrar). */
+body.quieto[data-estado='directo'] .pr-controles { opacity: 0; pointer-events: none; }
+body.quieto[data-estado='directo'] .pr-insignia.en-vivo { opacity: 0.35; }
+body.quieto[data-estado='directo'] { cursor: none; }
+body[data-estado='entrar'] .pr-controles #pr-pantalla-completa { display: none; }
+
+/* .pequeno (texto gris) pisaría el color del botón: tamaño propio. */
+.emision-parar, .emision-salir { min-height: var(--tap); font-size: 0.8rem; padding: 0.45rem 0.9rem; }
