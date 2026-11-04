@@ -1,0 +1,782 @@
+{
+ "materia.titulo": {
+  "texto": "Cómo se ordena la materia",
+  "descripcion": "Título de la sección Materia"
+ },
+ "materia.intro": {
+  "texto": "Los átomos y las moléculas no están sueltos: se ordenan, se agrupan y se mueven. Mira cómo lo hacen en 3D o sobre tu mesa.",
+  "descripcion": "Entradilla de la sección Materia"
+ },
+ "materia.pestana": {
+  "texto": "Materia",
+  "descripcion": "Nombre corto de la sección (pestaña)"
+ },
+ "materia.ver3d": {
+  "texto": "Ver en 3D",
+  "descripcion": "Botón: abrir el visor 3D (girar con el dedo)"
+ },
+ "materia.verRA": {
+  "texto": "Ver en RA",
+  "descripcion": "Botón: abrir la realidad aumentada sobre la mesa o el suelo"
+ },
+ "materia.ver3d.aria": {
+  "texto": "Ver {nombre} en 3D",
+  "descripcion": "Etiqueta accesible del botón Ver en 3D; {nombre} es la estructura o el agua"
+ },
+ "materia.verRA.aria": {
+  "texto": "Ver {nombre} en realidad aumentada",
+  "descripcion": "Etiqueta accesible del botón Ver en RA"
+ },
+ "materia.ra.no": {
+  "texto": "Tu móvil no tiene realidad aumentada del mundo; el visor 3D funciona en todos.",
+  "descripcion": "Aviso bajo los botones cuando no hay WebXR"
+ },
+ "materia.cerrar": {
+  "texto": "Cerrar",
+  "descripcion": "Botón para cerrar una ficha"
+ },
+ "materia.salir": {
+  "texto": "Salir",
+  "descripcion": "Botón para salir del 3D o la RA y volver a la sección"
+ },
+ "materia.error": {
+  "texto": "No se ha podido abrir: {error}",
+  "descripcion": "Aviso si falla al abrir el 3D o la RA"
+ },
+ "materia.estrella": {
+  "texto": "¡Prueba esto!",
+  "descripcion": "Etiqueta destacada de la tarjeta del agua"
+ },
+ "materia.agua.titulo": {
+  "texto": "El agua: hielo, líquido y vapor",
+  "descripcion": "Título de la tarjeta de la simulación del agua"
+ },
+ "materia.agua.texto": {
+  "texto": "Sube y baja la temperatura y mira qué hacen las moléculas: vibran, se sueltan, escapan… y vuelven.",
+  "descripcion": "Texto de la tarjeta de la simulación del agua"
+ },
+ "materia.cristales.titulo": {
+  "texto": "Estructuras cristalinas",
+  "descripcion": "Título del apartado de cristales"
+ },
+ "materia.cristales.intro": {
+  "texto": "En un cristal los átomos se colocan en un patrón que se repite millones de veces en las tres direcciones, como las baldosas de un suelo. La pieza más pequeña que se repite es la celda unidad.",
+  "descripcion": "Explicación al principio del apartado de cristales"
+ },
+ "materia.cristales.abrir": {
+  "texto": "Ver ficha de {nombre}",
+  "descripcion": "Etiqueta accesible de cada tarjeta de cristal"
+ },
+ "materia.ficha.atomos": {
+  "texto": "Qué átomos la forman",
+  "descripcion": "Encabezado en la ficha de un cristal"
+ },
+ "materia.ficha.formacion": {
+  "texto": "Cómo se forma",
+  "descripcion": "Encabezado en la ficha de un cristal"
+ },
+ "materia.ficha.dia": {
+  "texto": "Dónde la encuentras",
+  "descripcion": "Encabezado en la ficha de un cristal"
+ },
+ "materia.ficha.diferencia": {
+  "texto": "En qué se diferencia",
+  "descripcion": "Encabezado en la ficha de un cristal"
+ },
+ "materia.ficha.curiosidad": {
+  "texto": "Curiosidad",
+  "descripcion": "Encabezado en la ficha de un cristal"
+ },
+ "materia.dato.vecinos": {
+  "texto": "{n} vecinos",
+  "descripcion": "Chip: número de coordinación (vecinos más cercanos de cada átomo)"
+ },
+ "materia.dato.vecinos2": {
+  "texto": "{a} y {b} vecinos",
+  "descripcion": "Chip: número de coordinación de los dos tipos de ion"
+ },
+ "materia.dato.ocupado": {
+  "texto": "{p} % lleno",
+  "descripcion": "Chip: porcentaje del espacio ocupado por las esferas"
+ },
+ "materia.dato.plano": {
+  "texto": "1 átomo de grosor",
+  "descripcion": "Chip del grafeno en vez del % lleno"
+ },
+ "materia.enlace.metalico": {
+  "texto": "Enlace metálico",
+  "descripcion": "Chip: tipo de enlace"
+ },
+ "materia.enlace.ionico": {
+  "texto": "Enlace iónico",
+  "descripcion": "Chip: tipo de enlace"
+ },
+ "materia.enlace.covalente": {
+  "texto": "Enlace covalente",
+  "descripcion": "Chip: tipo de enlace"
+ },
+ "materia.enlace.puentes": {
+  "texto": "Puentes de hidrógeno",
+  "descripcion": "Chip: tipo de enlace (hielo)"
+ },
+ "materia.otras.titulo": {
+  "texto": "Otras formas de agruparse",
+  "descripcion": "Título del apartado de sólidos amorfos, moleculares y moléculas polares"
+ },
+ "materia.otras.intro": {
+  "texto": "No todo es un cristal perfecto. Hay sólidos desordenados, sólidos hechos de moléculas enteras y moléculas que se atraen como pequeños imanes.",
+  "descripcion": "Entradilla del apartado"
+ },
+ "materia.s.cubica-simple.nombre": {
+  "texto": "Cúbica simple",
+  "descripcion": "Nombre de la estructura cristalina (cubica-simple)"
+ },
+ "materia.s.cubica-simple.corto": {
+  "texto": "Un átomo en cada esquina del cubo. Muy rara: solo la tiene el polonio.",
+  "descripcion": "Resumen de una línea en la tarjeta (cubica-simple)"
+ },
+ "materia.s.cubica-simple.ejemplo": {
+  "texto": "Polonio",
+  "descripcion": "Sustancia o metales de ejemplo, debajo del nombre (cubica-simple)"
+ },
+ "materia.s.cubica-simple.atomos": {
+  "texto": "Átomos de polonio (Po), todos iguales, un metal radiactivo.",
+  "descripcion": "Ficha: qué átomos o iones la forman (cubica-simple)"
+ },
+ "materia.s.cubica-simple.formacion": {
+  "texto": "Enlace metálico: los átomos comparten sus electrones de fuera en una «nube» común. Se colocan en filas rectas, uno encima de otro, sin encajar en los huecos.",
+  "descripcion": "Ficha: tipo de enlace y cómo se colocan (cubica-simple)"
+ },
+ "materia.s.cubica-simple.dia": {
+  "texto": "Casi en ningún sitio: el polonio es muy radiactivo y escaso. Se usó en cepillos antiestáticos para limpiar fotos y lentes.",
+  "descripcion": "Ficha: dónde se encuentra en el día a día (cubica-simple)"
+ },
+ "materia.s.cubica-simple.diferencia": {
+  "texto": "Cada átomo toca a 6 vecinos (arriba, abajo y 4 a los lados) y las esferas solo llenan el 52 % del espacio: es el empaquetamiento que más hueco deja de los metales.",
+  "descripcion": "Ficha: número de coordinación y espacio ocupado frente a las demás (cubica-simple)"
+ },
+ "materia.s.cubica-simple.curiosidad": {
+  "texto": "El polonio lo descubrieron Marie y Pierre Curie en 1898 y le pusieron el nombre por Polonia, el país de Marie.",
+  "descripcion": "Ficha: una curiosidad (cubica-simple)"
+ },
+ "materia.s.bcc.nombre": {
+  "texto": "Cúbica centrada en el cuerpo",
+  "descripcion": "Nombre de la estructura cristalina (bcc)"
+ },
+ "materia.s.bcc.corto": {
+  "texto": "Un átomo en cada esquina y otro en el centro del cubo. Hierro, sodio, wolframio.",
+  "descripcion": "Resumen de una línea en la tarjeta (bcc)"
+ },
+ "materia.s.bcc.ejemplo": {
+  "texto": "Hierro, sodio, wolframio",
+  "descripcion": "Sustancia o metales de ejemplo, debajo del nombre (bcc)"
+ },
+ "materia.s.bcc.atomos": {
+  "texto": "Átomos de un solo metal: hierro (Fe), sodio (Na), wolframio (W), cromo o potasio, entre otros.",
+  "descripcion": "Ficha: qué átomos o iones la forman (bcc)"
+ },
+ "materia.s.bcc.formacion": {
+  "texto": "Enlace metálico. Cada capa de átomos se apoya en los huecos de la de abajo, pero sin llegar a apretarse del todo.",
+  "descripcion": "Ficha: tipo de enlace y cómo se colocan (bcc)"
+ },
+ "materia.s.bcc.dia": {
+  "texto": "El hierro de los clavos, las herramientas y las vigas; el wolframio de los filamentos de las bombillas antiguas.",
+  "descripcion": "Ficha: dónde se encuentra en el día a día (bcc)"
+ },
+ "materia.s.bcc.diferencia": {
+  "texto": "Cada átomo toca a 8 vecinos (los de las esquinas tocan al del centro) y se llena el 68 % del espacio: más que la cúbica simple, menos que las compactas.",
+  "descripcion": "Ficha: número de coordinación y espacio ocupado frente a las demás (bcc)"
+ },
+ "materia.s.bcc.curiosidad": {
+  "texto": "Al calentarlo por encima de 912 °C, el hierro cambia a cúbica centrada en las caras. Templar el acero (calentar y enfriar de golpe) juega con ese cambio para hacerlo más duro.",
+  "descripcion": "Ficha: una curiosidad (bcc)"
+ },
+ "materia.s.fcc.nombre": {
+  "texto": "Cúbica centrada en las caras",
+  "descripcion": "Nombre de la estructura cristalina (fcc)"
+ },
+ "materia.s.fcc.corto": {
+  "texto": "Esquinas y el centro de cada cara. Cobre, aluminio, oro, plata. ABCABC…",
+  "descripcion": "Resumen de una línea en la tarjeta (fcc)"
+ },
+ "materia.s.fcc.ejemplo": {
+  "texto": "Cobre, aluminio, oro, plata",
+  "descripcion": "Sustancia o metales de ejemplo, debajo del nombre (fcc)"
+ },
+ "materia.s.fcc.atomos": {
+  "texto": "Átomos de un solo metal: cobre (Cu), aluminio (Al), oro (Au), plata (Ag), níquel o plomo, entre otros.",
+  "descripcion": "Ficha: qué átomos o iones la forman (fcc)"
+ },
+ "materia.s.fcc.formacion": {
+  "texto": "Enlace metálico y empaquetamiento compacto: cada capa de esferas encaja en los huecos de la anterior y la tercera capa cae en un sitio nuevo. Las capas se repiten A, B, C, A, B, C…",
+  "descripcion": "Ficha: tipo de enlace y cómo se colocan (fcc)"
+ },
+ "materia.s.fcc.dia": {
+  "texto": "Los cables de cobre, el papel de aluminio y las latas, las joyas de oro y plata.",
+  "descripcion": "Ficha: dónde se encuentra en el día a día (fcc)"
+ },
+ "materia.s.fcc.diferencia": {
+  "texto": "Cada átomo toca a 12 vecinos y se llena el 74 % del espacio: es lo más apretado que se pueden colocar esferas iguales.",
+  "descripcion": "Ficha: número de coordinación y espacio ocupado frente a las demás (fcc)"
+ },
+ "materia.s.fcc.curiosidad": {
+  "texto": "Es como se apilan las naranjas en la frutería. Que no hay forma más apretada lo sospechó Kepler en 1611 y no se demostró hasta 1998. Por sus capas que se deslizan, el oro se puede martillear hasta láminas más finas que una burbuja de jabón.",
+  "descripcion": "Ficha: una curiosidad (fcc)"
+ },
+ "materia.s.hcp.nombre": {
+  "texto": "Hexagonal compacta",
+  "descripcion": "Nombre de la estructura cristalina (hcp)"
+ },
+ "materia.s.hcp.corto": {
+  "texto": "Tan apretada como la anterior, pero con capas ABAB… Magnesio, cinc, titanio.",
+  "descripcion": "Resumen de una línea en la tarjeta (hcp)"
+ },
+ "materia.s.hcp.ejemplo": {
+  "texto": "Magnesio, cinc, titanio",
+  "descripcion": "Sustancia o metales de ejemplo, debajo del nombre (hcp)"
+ },
+ "materia.s.hcp.atomos": {
+  "texto": "Átomos de un solo metal: magnesio (Mg), cinc (Zn), titanio (Ti), cobalto, entre otros.",
+  "descripcion": "Ficha: qué átomos o iones la forman (hcp)"
+ },
+ "materia.s.hcp.formacion": {
+  "texto": "Enlace metálico y empaquetamiento compacto, como la anterior, pero la tercera capa vuelve a caer justo encima de la primera: las capas se repiten A, B, A, B…",
+  "descripcion": "Ficha: tipo de enlace y cómo se colocan (hcp)"
+ },
+ "materia.s.hcp.dia": {
+  "texto": "El titanio de las prótesis, los implantes dentales y algunas gafas; el cinc que protege el acero galvanizado de las farolas y vallas; el magnesio de bicis y llantas ligeras.",
+  "descripcion": "Ficha: dónde se encuentra en el día a día (hcp)"
+ },
+ "materia.s.hcp.diferencia": {
+  "texto": "También 12 vecinos y 74 % de espacio lleno, igual que la cúbica centrada en las caras. Solo cambia el orden de las capas (ABAB frente a ABCABC), y eso la hace menos fácil de doblar.",
+  "descripcion": "Ficha: número de coordinación y espacio ocupado frente a las demás (hcp)"
+ },
+ "materia.s.hcp.curiosidad": {
+  "texto": "Mira los colores: en la vista de capas, la hexagonal alterna solo dos colores y la cúbica centrada en las caras, tres.",
+  "descripcion": "Ficha: una curiosidad (hcp)"
+ },
+ "materia.s.nacl.nombre": {
+  "texto": "Sal común (NaCl)",
+  "descripcion": "Nombre de la estructura cristalina (nacl)"
+ },
+ "materia.s.nacl.corto": {
+  "texto": "Iones de sodio y cloro alternados, como un tablero de ajedrez en 3D.",
+  "descripcion": "Resumen de una línea en la tarjeta (nacl)"
+ },
+ "materia.s.nacl.ejemplo": {
+  "texto": "Cloruro de sodio",
+  "descripcion": "Sustancia o metales de ejemplo, debajo del nombre (nacl)"
+ },
+ "materia.s.nacl.atomos": {
+  "texto": "Iones de sodio (Na⁺, pequeños) y de cloruro (Cl⁻, grandes), uno de cada por cada «molécula» de sal.",
+  "descripcion": "Ficha: qué átomos o iones la forman (nacl)"
+ },
+ "materia.s.nacl.formacion": {
+  "texto": "Enlace iónico: el sodio le da un electrón al cloro y quedan con cargas opuestas que se atraen. Cada ion se rodea de los de signo contrario, alternando en las tres direcciones.",
+  "descripcion": "Ficha: tipo de enlace y cómo se colocan (nacl)"
+ },
+ "materia.s.nacl.dia": {
+  "texto": "La sal del salero. Mírala con una lupa: los granos son cubitos, porque el cristal entero repite la forma de su celda.",
+  "descripcion": "Ficha: dónde se encuentra en el día a día (nacl)"
+ },
+ "materia.s.nacl.diferencia": {
+  "texto": "Cada ion tiene 6 vecinos de la otra carga (arriba, abajo y 4 a los lados). Los iones llenan un 65 % del espacio.",
+  "descripcion": "Ficha: número de coordinación y espacio ocupado frente a las demás (nacl)"
+ },
+ "materia.s.nacl.curiosidad": {
+  "texto": "Un granito de sal tiene alrededor de un trillón (10¹⁸) de iones. Y no hay moléculas sueltas de NaCl: el cristal entero es una sola pieza.",
+  "descripcion": "Ficha: una curiosidad (nacl)"
+ },
+ "materia.s.cscl.nombre": {
+  "texto": "Cloruro de cesio (CsCl)",
+  "descripcion": "Nombre de la estructura cristalina (cscl)"
+ },
+ "materia.s.cscl.corto": {
+  "texto": "Un ion en el centro del cubo y los del otro tipo en las esquinas.",
+  "descripcion": "Resumen de una línea en la tarjeta (cscl)"
+ },
+ "materia.s.cscl.ejemplo": {
+  "texto": "Cloruro de cesio",
+  "descripcion": "Sustancia o metales de ejemplo, debajo del nombre (cscl)"
+ },
+ "materia.s.cscl.atomos": {
+  "texto": "Iones de cesio (Cs⁺) y de cloruro (Cl⁻), casi del mismo tamaño.",
+  "descripcion": "Ficha: qué átomos o iones la forman (cscl)"
+ },
+ "materia.s.cscl.formacion": {
+  "texto": "Enlace iónico, como la sal. Pero el cesio es tan grande que caben 8 cloruros a su alrededor, uno en cada esquina del cubo.",
+  "descripcion": "Ficha: tipo de enlace y cómo se colocan (cscl)"
+ },
+ "materia.s.cscl.dia": {
+  "texto": "No está en casa: se usa en los laboratorios para separar el ADN por su densidad en una centrífuga.",
+  "descripcion": "Ficha: dónde se encuentra en el día a día (cscl)"
+ },
+ "materia.s.cscl.diferencia": {
+  "texto": "8 vecinos por ion en vez de 6 como en la sal: cuanto más parecido es el tamaño de los dos iones, más vecinos caben. Llena un 67 % del espacio.",
+  "descripcion": "Ficha: número de coordinación y espacio ocupado frente a las demás (cscl)"
+ },
+ "materia.s.cscl.curiosidad": {
+  "texto": "Aunque parece la cúbica centrada en el cuerpo, no lo es: el átomo del centro es distinto al de las esquinas.",
+  "descripcion": "Ficha: una curiosidad (cscl)"
+ },
+ "materia.s.fluorita.nombre": {
+  "texto": "Fluorita (CaF₂)",
+  "descripcion": "Nombre de la estructura cristalina (fluorita)"
+ },
+ "materia.s.fluorita.corto": {
+  "texto": "Calcio en las caras del cubo y flúor en los huecos de dentro.",
+  "descripcion": "Resumen de una línea en la tarjeta (fluorita)"
+ },
+ "materia.s.fluorita.ejemplo": {
+  "texto": "Fluoruro de calcio",
+  "descripcion": "Sustancia o metales de ejemplo, debajo del nombre (fluorita)"
+ },
+ "materia.s.fluorita.atomos": {
+  "texto": "Iones de calcio (Ca²⁺) y de fluoruro (F⁻): el doble de fluoruros que de calcios.",
+  "descripcion": "Ficha: qué átomos o iones la forman (fluorita)"
+ },
+ "materia.s.fluorita.formacion": {
+  "texto": "Enlace iónico. Los calcios forman una cúbica centrada en las caras y los fluoruros ocupan los 8 huecos de dentro, cada uno entre 4 calcios.",
+  "descripcion": "Ficha: tipo de enlace y cómo se colocan (fluorita)"
+ },
+ "materia.s.fluorita.dia": {
+  "texto": "Es un mineral precioso, de colores violeta, verde o azul. Se usa en lentes de cámaras y telescopios, y para fundir el hierro en los altos hornos.",
+  "descripcion": "Ficha: dónde se encuentra en el día a día (fluorita)"
+ },
+ "materia.s.fluorita.diferencia": {
+  "texto": "El calcio tiene 8 vecinos y el fluoruro 4: como hay el doble de fluoruros, cada uno necesita la mitad de vecinos.",
+  "descripcion": "Ficha: número de coordinación y espacio ocupado frente a las demás (fluorita)"
+ },
+ "materia.s.fluorita.curiosidad": {
+  "texto": "La palabra «fluorescencia» viene de la fluorita, que brilla con luz ultravioleta. Y fluorita viene del latín «fluere» (fluir), porque ayudaba a fundir los metales.",
+  "descripcion": "Ficha: una curiosidad (fluorita)"
+ },
+ "materia.s.diamante.nombre": {
+  "texto": "Diamante",
+  "descripcion": "Nombre de la estructura cristalina (diamante)"
+ },
+ "materia.s.diamante.corto": {
+  "texto": "Cada carbono unido a 4 en forma de tetraedro. Lo más duro de la naturaleza.",
+  "descripcion": "Resumen de una línea en la tarjeta (diamante)"
+ },
+ "materia.s.diamante.ejemplo": {
+  "texto": "Carbono",
+  "descripcion": "Sustancia o metales de ejemplo, debajo del nombre (diamante)"
+ },
+ "materia.s.diamante.atomos": {
+  "texto": "Solo átomos de carbono (C).",
+  "descripcion": "Ficha: qué átomos o iones la forman (diamante)"
+ },
+ "materia.s.diamante.formacion": {
+  "texto": "Enlace covalente: cada carbono comparte un par de electrones con 4 vecinos colocados en las puntas de un tetraedro. Todo el cristal es una red de enlaces fuertes.",
+  "descripcion": "Ficha: tipo de enlace y cómo se colocan (diamante)"
+ },
+ "materia.s.diamante.dia": {
+  "texto": "En las joyas, pero sobre todo en las brocas y discos que cortan piedra y cristal, y en las limas de uñas de diamante.",
+  "descripcion": "Ficha: dónde se encuentra en el día a día (diamante)"
+ },
+ "materia.s.diamante.diferencia": {
+  "texto": "Solo 4 vecinos y apenas un 34 % del espacio lleno: es muy hueco. Su dureza no viene de estar apretado, sino de que cada enlace es fortísimo.",
+  "descripcion": "Ficha: número de coordinación y espacio ocupado frente a las demás (diamante)"
+ },
+ "materia.s.diamante.curiosidad": {
+  "texto": "Diamante y grafito son el mismo elemento, carbono, ordenado de otra forma. Y un diamante puede arder: es carbono, y a unos 800 °C con aire se quema.",
+  "descripcion": "Ficha: una curiosidad (diamante)"
+ },
+ "materia.s.grafito.nombre": {
+  "texto": "Grafito",
+  "descripcion": "Nombre de la estructura cristalina (grafito)"
+ },
+ "materia.s.grafito.corto": {
+  "texto": "Capas de hexágonos de carbono apiladas que resbalan unas sobre otras.",
+  "descripcion": "Resumen de una línea en la tarjeta (grafito)"
+ },
+ "materia.s.grafito.ejemplo": {
+  "texto": "Carbono",
+  "descripcion": "Sustancia o metales de ejemplo, debajo del nombre (grafito)"
+ },
+ "materia.s.grafito.atomos": {
+  "texto": "Solo átomos de carbono (C), como el diamante.",
+  "descripcion": "Ficha: qué átomos o iones la forman (grafito)"
+ },
+ "materia.s.grafito.formacion": {
+  "texto": "Dentro de cada capa, enlaces covalentes fuertes: cada carbono se une a 3 en hexágonos, como un panal. Entre capas solo hay atracciones débiles, y las capas se apilan desplazadas (A, B, A, B…).",
+  "descripcion": "Ficha: tipo de enlace y cómo se colocan (grafito)"
+ },
+ "materia.s.grafito.dia": {
+  "texto": "La mina del lápiz: al escribir se desprenden capas que se quedan en el papel. También en las baterías de los móviles y en los lubricantes secos.",
+  "descripcion": "Ficha: dónde se encuentra en el día a día (grafito)"
+ },
+ "materia.s.grafito.diferencia": {
+  "texto": "3 vecinos y mucho hueco entre capas (3,35 Å, más del doble que el enlace de 1,42 Å). Por eso es blando y conduce la electricidad: le sobra un electrón por carbono que se mueve por la capa.",
+  "descripcion": "Ficha: número de coordinación y espacio ocupado frente a las demás (grafito)"
+ },
+ "materia.s.grafito.curiosidad": {
+  "texto": "El mismo carbono que el diamante, pero uno es de lo más duro y el otro de lo más blando. Todo depende de cómo se ordenan los átomos.",
+  "descripcion": "Ficha: una curiosidad (grafito)"
+ },
+ "materia.s.grafeno.nombre": {
+  "texto": "Grafeno",
+  "descripcion": "Nombre de la estructura cristalina (grafeno)"
+ },
+ "materia.s.grafeno.corto": {
+  "texto": "Una sola capa de grafito: un panal de carbono de un átomo de grosor.",
+  "descripcion": "Resumen de una línea en la tarjeta (grafeno)"
+ },
+ "materia.s.grafeno.ejemplo": {
+  "texto": "Carbono",
+  "descripcion": "Sustancia o metales de ejemplo, debajo del nombre (grafeno)"
+ },
+ "materia.s.grafeno.atomos": {
+  "texto": "Solo átomos de carbono (C), en una única capa plana.",
+  "descripcion": "Ficha: qué átomos o iones la forman (grafeno)"
+ },
+ "materia.s.grafeno.formacion": {
+  "texto": "Enlace covalente: cada carbono se une a 3 vecinos formando hexágonos. Es una capa de grafito sola.",
+  "descripcion": "Ficha: tipo de enlace y cómo se colocan (grafeno)"
+ },
+ "materia.s.grafeno.dia": {
+  "texto": "Todavía en investigación: pantallas flexibles, baterías, sensores… Al escribir con un lápiz quizá dejas algún trocito de pocas capas.",
+  "descripcion": "Ficha: dónde se encuentra en el día a día (grafeno)"
+ },
+ "materia.s.grafeno.diferencia": {
+  "texto": "Es casi bidimensional: 1 átomo de grosor. Muy fuerte para lo que pesa, flexible, casi transparente y conduce muy bien la electricidad.",
+  "descripcion": "Ficha: número de coordinación y espacio ocupado frente a las demás (grafeno)"
+ },
+ "materia.s.grafeno.curiosidad": {
+  "texto": "Andre Geim y Konstantin Novoselov lo aislaron en 2004 arrancando capas de grafito con cinta adhesiva. Ganaron el Nobel de Física de 2010.",
+  "descripcion": "Ficha: una curiosidad (grafeno)"
+ },
+ "materia.s.hielo.nombre": {
+  "texto": "Hielo",
+  "descripcion": "Nombre de la estructura cristalina (hielo)"
+ },
+ "materia.s.hielo.corto": {
+  "texto": "Moléculas de agua unidas por puentes de hidrógeno en anillos de seis.",
+  "descripcion": "Resumen de una línea en la tarjeta (hielo)"
+ },
+ "materia.s.hielo.ejemplo": {
+  "texto": "Agua sólida (hielo Ih)",
+  "descripcion": "Sustancia o metales de ejemplo, debajo del nombre (hielo)"
+ },
+ "materia.s.hielo.atomos": {
+  "texto": "Moléculas de agua (H₂O): un oxígeno y dos hidrógenos cada una.",
+  "descripcion": "Ficha: qué átomos o iones la forman (hielo)"
+ },
+ "materia.s.hielo.formacion": {
+  "texto": "Puentes de hidrógeno: cada hidrógeno (algo positivo) de una molécula apunta al oxígeno (algo negativo) de la vecina. Cada molécula queda unida a 4 en tetraedro y se forman anillos de seis.",
+  "descripcion": "Ficha: tipo de enlace y cómo se colocan (hielo)"
+ },
+ "materia.s.hielo.dia": {
+  "texto": "Los cubitos, la escarcha y los copos de nieve: tienen seis puntas porque la red del hielo es hexagonal.",
+  "descripcion": "Ficha: dónde se encuentra en el día a día (hielo)"
+ },
+ "materia.s.hielo.diferencia": {
+  "texto": "4 vecinos y solo un 34 % del espacio lleno: los anillos dejan canales vacíos. Por eso el hielo es menos denso que el agua líquida y flota.",
+  "descripcion": "Ficha: número de coordinación y espacio ocupado frente a las demás (hielo)"
+ },
+ "materia.s.hielo.curiosidad": {
+  "texto": "Se conocen unas veinte formas de hielo distintas, que aparecen a presiones altísimas. La de los cubitos se llama hielo Ih (I hexagonal).",
+  "descripcion": "Ficha: una curiosidad (hielo)"
+ },
+ "materia.c.repetir": {
+  "texto": "Repetir",
+  "descripcion": "Botón: volver a ver cómo crece el cristal"
+ },
+ "materia.c.repetir.aria": {
+  "texto": "Repetir la animación de crecimiento",
+  "descripcion": "Etiqueta accesible del botón Repetir"
+ },
+ "materia.c.celda": {
+  "texto": "Celda unidad",
+  "descripcion": "Interruptor: mostrar las aristas de la celda unidad"
+ },
+ "materia.c.compacto": {
+  "texto": "Esferas",
+  "descripcion": "Opción: átomos como esferas que se tocan (tamaño real relativo)"
+ },
+ "materia.c.varillas": {
+  "texto": "Bolas y varillas",
+  "descripcion": "Opción: átomos pequeños unidos por varillas"
+ },
+ "materia.c.modelo": {
+  "texto": "Modelo",
+  "descripcion": "Etiqueta del grupo Esferas / Bolas y varillas"
+ },
+ "materia.c.celdas": {
+  "texto": "Tamaño del bloque",
+  "descripcion": "Etiqueta del grupo de número de celdas"
+ },
+ "materia.c.celdas.valor": {
+  "texto": "{n}×{n}×{n}",
+  "descripcion": "Opción de número de celdas; {n} es 1, 2 o 3"
+ },
+ "materia.c.celdas.plano": {
+  "texto": "{n}×{n}",
+  "descripcion": "Opción de número de celdas en el grafeno (plano)"
+ },
+ "materia.c.capas": {
+  "texto": "Colorear capas",
+  "descripcion": "Interruptor: pintar cada capa de un color (A, B, C)"
+ },
+ "materia.c.capas.leyenda.ab": {
+  "texto": "Capas A y B: la tercera cae encima de la primera (ABAB…).",
+  "descripcion": "Leyenda al colorear capas de la hexagonal compacta o el grafito"
+ },
+ "materia.c.capas.leyenda.abc": {
+  "texto": "Capas A, B y C: la cuarta cae encima de la primera (ABCABC…).",
+  "descripcion": "Leyenda al colorear capas de la cúbica centrada en las caras"
+ },
+ "materia.c.girar": {
+  "texto": "Girar solo",
+  "descripcion": "Interruptor: el modelo gira solo"
+ },
+ "materia.c.metal": {
+  "texto": "Metal",
+  "descripcion": "Etiqueta del grupo para elegir el metal de ejemplo"
+ },
+ "materia.c.info": {
+  "texto": "Saber más",
+  "descripcion": "Botón que despliega la explicación dentro del 3D"
+ },
+ "materia.c.ocultar": {
+  "texto": "Ocultar",
+  "descripcion": "Botón que pliega la explicación dentro del 3D"
+ },
+ "materia.c.creciendo": {
+  "texto": "Los átomos llegan y se colocan en su sitio de la red…",
+  "descripcion": "Texto para lectores de pantalla mientras crece el cristal"
+ },
+ "materia.c.listo": {
+  "texto": "Cristal completo: {n} átomos.",
+  "descripcion": "Texto para lectores de pantalla al acabar de crecer; {n} es un número"
+ },
+ "materia.c.ajustes": {
+  "texto": "Ajustes del modelo",
+  "descripcion": "Etiqueta accesible del panel de controles del cristal"
+ },
+ "materia.ra.pista.suelo": {
+  "texto": "Mueve el móvil despacio apuntando a una mesa o al suelo",
+  "descripcion": "Pista en RA mientras no se detecta una superficie"
+ },
+ "materia.ra.pista.toca": {
+  "texto": "Toca la pantalla para colocarlo aquí",
+  "descripcion": "Pista en RA cuando ya hay superficie"
+ },
+ "materia.ra.pista.mover": {
+  "texto": "Toca en otro sitio para moverlo · pellizca para cambiar el tamaño",
+  "descripcion": "Pista en RA con el modelo ya colocado"
+ },
+ "materia.ra.tamano": {
+  "texto": "Tamaño",
+  "descripcion": "Etiqueta del deslizador de tamaño en RA"
+ },
+ "materia.ra.tamano.valor": {
+  "texto": "×{x}",
+  "descripcion": "Valor del deslizador de tamaño; {x} es el factor de escala (p. ej. 1,5)"
+ },
+ "materia.ra.tamano.texto": {
+  "texto": "{x} veces el tamaño normal",
+  "descripcion": "Texto accesible del deslizador de tamaño"
+ },
+ "materia.w.titulo": {
+  "texto": "Los estados del agua",
+  "descripcion": "Título de la simulación del agua"
+ },
+ "materia.w.temperatura": {
+  "texto": "Temperatura",
+  "descripcion": "Etiqueta del deslizador de temperatura"
+ },
+ "materia.w.temp": {
+  "texto": "{t} °C",
+  "descripcion": "Temperatura mostrada; {t} es un número"
+ },
+ "materia.w.temp.texto": {
+  "texto": "{t} grados, {fase}",
+  "descripcion": "Texto accesible del deslizador de temperatura; {fase} es el estado"
+ },
+ "materia.w.calentar": {
+  "texto": "Calentar",
+  "descripcion": "Botón: subir la temperatura poco a poco"
+ },
+ "materia.w.enfriar": {
+  "texto": "Enfriar",
+  "descripcion": "Botón: bajar la temperatura poco a poco"
+ },
+ "materia.w.parar": {
+  "texto": "Parar",
+  "descripcion": "Botón (mientras calienta o enfría): dejar la temperatura quieta"
+ },
+ "materia.w.puentes": {
+  "texto": "Puentes de H",
+  "descripcion": "Interruptor: mostrar los puentes de hidrógeno (líneas de puntos)"
+ },
+ "materia.w.cuenta": {
+  "texto": "{l} juntas · {g} en el gas",
+  "descripcion": "Contador de moléculas en el sólido/líquido y en el gas"
+ },
+ "materia.w.explicar": {
+  "texto": "Explicación",
+  "descripcion": "Botón para desplegar o plegar la explicación de la fase"
+ },
+ "materia.w.fase.solido.titulo": {
+  "texto": "Sólido: hielo",
+  "descripcion": "Nombre de la fase en la simulación del agua (solido)"
+ },
+ "materia.w.fase.solido.texto": {
+  "texto": "Las moléculas están fijas en una red hexagonal, unidas por puentes de hidrógeno (los puntos). No se desplazan: solo vibran un poco en su sitio. Cuanto más frío, menos vibran.",
+  "descripcion": "Explicación de lo que pasa en la fase (solido)"
+ },
+ "materia.w.fase.fusion.titulo": {
+  "texto": "Fusión a 0 °C",
+  "descripcion": "Nombre de la fase en la simulación del agua (fusion)"
+ },
+ "materia.w.fase.fusion.texto": {
+  "texto": "La vibración ya es tan fuerte que los puentes de hidrógeno se rompen. La red se deshace y el hielo se funde: las moléculas empiezan a moverse unas entre otras. Mientras se funde, la temperatura no sube: el calor se gasta en romper puentes.",
+  "descripcion": "Explicación de lo que pasa en la fase (fusion)"
+ },
+ "materia.w.fase.liquido.titulo": {
+  "texto": "Líquido: agua",
+  "descripcion": "Nombre de la fase en la simulación del agua (liquido)"
+ },
+ "materia.w.fase.liquido.texto": {
+  "texto": "Las moléculas siguen juntas pero se mueven y se cuelan unas entre otras; los puentes de hidrógeno se rompen y se vuelven a formar sin parar. Las más rápidas de la superficie pueden escapar: es la evaporación, que ocurre a cualquier temperatura (así se seca la ropa) y más cuanto más calor.",
+  "descripcion": "Explicación de lo que pasa en la fase (liquido)"
+ },
+ "materia.w.fase.ebullicion.titulo": {
+  "texto": "Ebullición a 100 °C",
+  "descripcion": "Nombre de la fase en la simulación del agua (ebullicion)"
+ },
+ "materia.w.fase.ebullicion.texto": {
+  "texto": "A 100 °C (al nivel del mar) el agua hierve: se forman burbujas de vapor dentro del líquido y las moléculas escapan de todas partes, no solo de la superficie. La gota encoge porque le quedan menos moléculas, y la temperatura no sube hasta que no queda líquido.",
+  "descripcion": "Explicación de lo que pasa en la fase (ebullicion)"
+ },
+ "materia.w.fase.gas.titulo": {
+  "texto": "Gas: vapor de agua",
+  "descripcion": "Nombre de la fase en la simulación del agua (gas)"
+ },
+ "materia.w.fase.gas.texto": {
+  "texto": "Todas las moléculas están sueltas, muy separadas y muy rápidas. Chocan entre sí y con las paredes y ocupan todo el espacio que tienen. Cuanto más calor, más rápido van.",
+  "descripcion": "Explicación de lo que pasa en la fase (gas)"
+ },
+ "materia.w.fase.condensacion.titulo": {
+  "texto": "Condensación",
+  "descripcion": "Nombre de la fase en la simulación del agua (condensacion)"
+ },
+ "materia.w.fase.condensacion.texto": {
+  "texto": "Al enfriarse, las moléculas del gas van más despacio. Cuando chocan con la gota se quedan pegadas por los puentes de hidrógeno: el vapor vuelve a ser líquido, como el vaho en un espejo.",
+  "descripcion": "Explicación de lo que pasa en la fase (condensacion)"
+ },
+ "materia.w.fase.solidificacion.titulo": {
+  "texto": "Solidificación a 0 °C",
+  "descripcion": "Nombre de la fase en la simulación del agua (solidificacion)"
+ },
+ "materia.w.fase.solidificacion.texto": {
+  "texto": "Las moléculas van tan lentas que los puentes de hidrógeno ya no se rompen. Cada una se queda en su sitio de la red hexagonal y el agua se congela. Al ordenarse dejan huecos: por eso el hielo ocupa más y flota.",
+  "descripcion": "Explicación de lo que pasa en la fase (solidificacion)"
+ },
+ "materia.w.fase.solido.corto": {
+  "texto": "sólido",
+  "descripcion": "Estado en minúsculas, para el texto accesible del deslizador"
+ },
+ "materia.w.fase.liquido.corto": {
+  "texto": "líquido",
+  "descripcion": "Estado en minúsculas, para el texto accesible del deslizador"
+ },
+ "materia.w.fase.gas.corto": {
+  "texto": "gas",
+  "descripcion": "Estado en minúsculas, para el texto accesible del deslizador"
+ },
+ "materia.w.fase.mezcla.corto": {
+  "texto": "cambiando de estado",
+  "descripcion": "Estado en minúsculas (mientras funde, hierve o condensa), para el texto accesible del deslizador"
+ },
+ "materia.o.amorfo.titulo": {
+  "texto": "Cristales y sólidos amorfos",
+  "descripcion": "Título de una tarjeta del apartado Otras formas de agruparse"
+ },
+ "materia.o.amorfo.texto": {
+  "texto": "En un cristal (como el cuarzo) los átomos siguen un patrón que se repite. En un sólido amorfo (como el vidrio de una ventana, hecho casi del mismo material, sílice) están desordenados, como congelados a mitad de moverse. Por eso el vidrio no se funde de golpe a una temperatura: se va ablandando poco a poco y se puede soplar y moldear.",
+  "descripcion": "Explicación de la tarjeta"
+ },
+ "materia.o.amorfo.alt": {
+  "texto": "Dos dibujos: a la izquierda, átomos en filas ordenadas (cristal); a la derecha, los mismos átomos desordenados (vidrio).",
+  "descripcion": "Descripción de la ilustración para lectores de pantalla"
+ },
+ "materia.o.molecular.titulo": {
+  "texto": "Sólidos moleculares",
+  "descripcion": "Título de una tarjeta del apartado Otras formas de agruparse"
+ },
+ "materia.o.molecular.texto": {
+  "texto": "Algunos sólidos están hechos de moléculas enteras que se mantienen juntas por atracciones débiles entre ellas, no por enlaces fuertes. Por eso suelen ser blandos y se funden o subliman con poco calor: el azúcar, el hielo, la naftalina o el hielo seco (CO₂ sólido), que a −78 °C pasa directamente a gas.",
+  "descripcion": "Explicación de la tarjeta"
+ },
+ "materia.o.molecular.alt": {
+  "texto": "Moléculas de dióxido de carbono ordenadas en un cristal, con atracciones débiles entre ellas.",
+  "descripcion": "Descripción de la ilustración para lectores de pantalla"
+ },
+ "materia.o.polar.titulo": {
+  "texto": "Moléculas polares: el agua",
+  "descripcion": "Título de una tarjeta del apartado Otras formas de agruparse"
+ },
+ "materia.o.polar.texto": {
+  "texto": "En el agua, el oxígeno atrae los electrones de los enlaces más que los hidrógenos. Queda un poco negativo (δ−) y los hidrógenos un poco positivos (δ+). Como la molécula es angular (104,5°) y no recta, las cargas no se compensan: tiene un lado negativo y otro positivo, como un pequeño imán. Es una molécula polar.",
+  "descripcion": "Explicación de la tarjeta"
+ },
+ "materia.o.polar.alt": {
+  "texto": "Molécula de agua angular, con el oxígeno δ− arriba y los dos hidrógenos δ+ abajo, separados 104,5 grados.",
+  "descripcion": "Descripción de la ilustración para lectores de pantalla"
+ },
+ "materia.o.puentes.titulo": {
+  "texto": "Puentes de hidrógeno",
+  "descripcion": "Título de una tarjeta del apartado Otras formas de agruparse"
+ },
+ "materia.o.puentes.texto": {
+  "texto": "El hidrógeno δ+ de una molécula de agua atrae al oxígeno δ− de otra: es un puente de hidrógeno. Es unas veinte veces más débil que un enlace covalente, pero hay muchísimos. Gracias a ellos el agua hierve a 100 °C y no a −80 °C, como le tocaría por su tamaño, y por eso hay agua líquida en la Tierra.",
+  "descripcion": "Explicación de la tarjeta"
+ },
+ "materia.o.puentes.alt": {
+  "texto": "Tres moléculas de agua: los hidrógenos de una apuntan al oxígeno de otra con líneas de puntos (puentes de hidrógeno).",
+  "descripcion": "Descripción de la ilustración para lectores de pantalla"
+ },
+ "materia.o.flota.titulo": {
+  "texto": "¿Por qué flota el hielo?",
+  "descripcion": "Título de una tarjeta del apartado Otras formas de agruparse"
+ },
+ "materia.o.flota.texto": {
+  "texto": "Casi todas las sustancias ocupan menos cuando se congelan. El agua no: en el hielo, los puentes de hidrógeno obligan a cada molécula a tener 4 vecinas en tetraedro y quedan huecos. El hielo (0,92 g/cm³) es menos denso que el agua líquida (1,00 g/cm³) y flota. Por eso los lagos se congelan por arriba y los peces sobreviven debajo.",
+  "descripcion": "Explicación de la tarjeta"
+ },
+ "materia.o.flota.alt": {
+  "texto": "A la izquierda, hielo: moléculas en anillos de seis con huecos. A la derecha, agua líquida: moléculas más juntas y desordenadas.",
+  "descripcion": "Descripción de la ilustración para lectores de pantalla"
+ },
+ "materia.o.svg.cristal": {
+  "texto": "Cristal",
+  "descripcion": "Rótulo en la ilustración (lado ordenado)"
+ },
+ "materia.o.svg.vidrio": {
+  "texto": "Vidrio",
+  "descripcion": "Rótulo en la ilustración (lado desordenado)"
+ },
+ "materia.o.svg.angulo": {
+  "texto": "104,5°",
+  "descripcion": "Ángulo H–O–H del agua en la ilustración (con la coma decimal del idioma)"
+ },
+ "materia.o.svg.hielo": {
+  "texto": "Hielo",
+  "descripcion": "Rótulo en la ilustración"
+ },
+ "materia.o.svg.agua": {
+  "texto": "Agua",
+  "descripcion": "Rótulo en la ilustración"
+ },
+ "materia.o.svg.puente": {
+  "texto": "puente de H",
+  "descripcion": "Rótulo de la línea de puntos en la ilustración"
+ },
+ "materia.o.ver.hielo": {
+  "texto": "Ver los puentes en el hielo",
+  "descripcion": "Botón: abre la simulación del agua a −10 °C"
+ }
+}
