@@ -1,0 +1,39 @@
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 15px/1.45 system-ui, sans-serif; background: #e9ecf1; color: #15171a; }
+header { max-width: 46rem; margin: 0 auto; padding: 20px 16px; }
+header h1 { margin: 0.3rem 0; }
+.volver { color: #2f6fed; text-decoration: none; font-weight: 600; }
+fieldset { border: 1px solid #c8ced8; border-radius: 12px; display: grid; gap: 8px; padding: 12px; }
+fieldset small { color: #5b6270; }
+.personal { display: block; margin-top: 10px; }
+.personal input { font: inherit; padding: 0.4rem 0.6rem; border-radius: 8px; border: 1px solid #c8ced8; width: 16rem; }
+#imprimir { font: inherit; font-weight: 700; padding: 0.7rem 1.4rem; border: 0; border-radius: 999px; background: #2f6fed; color: #fff; cursor: pointer; }
+
+/* Hoja A4 con 9 tarjetas de 63 × 88 mm (3 × 3) y líneas de corte. */
+.hoja {
+  width: 210mm; height: 297mm; margin: 0 auto 12px; background: #fff; padding: 10mm 0 0;
+  display: grid; grid-template-columns: repeat(3, 63mm); grid-auto-rows: 88mm; gap: 3mm; justify-content: center; align-content: start;
+  break-after: page;
+}
+.carta {
+  position: relative; width: 63mm; height: 88mm; border: 0.2mm dashed #9aa3b2; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center;
+}
+/* El SVG mide 10 unidades y el cuadrado negro 8: 50 mm → marcador de 40 mm, empezando a 8 mm del borde. */
+.marcador { width: 50mm; height: 50mm; margin-top: 3mm; }
+.marcador svg { width: 100%; height: 100%; display: block; shape-rendering: crispEdges; }
+.datos { display: grid; justify-items: center; line-height: 1.1; margin-top: 1mm; }
+.z { font-size: 3.2mm; color: #5b6270; }
+.simbolo { font-size: 12mm; font-weight: 800; }
+.nombre { font-size: 4mm; font-weight: 600; }
+.particulas { font-size: 2.8mm; color: #5b6270; margin-top: 1mm; }
+.carta footer { position: absolute; bottom: 0; left: 0; right: 0; padding: 1mm 0 1.2mm; text-align: center; font-size: 2.2mm; color: #15171a; background: var(--fam); }
+
+@page { size: A4; margin: 0; }
+@media print {
+  body { background: #fff; }
+  .no-imprimir { display: none; }
+  .hoja { margin: 0; }
+  .carta footer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

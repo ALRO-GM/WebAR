@@ -47,6 +47,7 @@ export class AtomView {
   private bohr?: BohrModel;
   private cloud?: ElectronCloud;
   private _model: AtomModel;
+  private readonly k: number;
 
   constructor(
     readonly element: ElementData,
@@ -54,7 +55,9 @@ export class AtomView {
   ) {
     this.composition = atomComposition(element);
     this.radius = element.radius * (options.metersPerPm ?? 0.0004);
-    this.nucleus = new NucleusMesh(this.composition.protons, this.composition.neutrons, options.nucleonRadius ?? 0.0012);
+    // Tamaños de partículas pensados para la escala por defecto; a otra escala, proporcionales.
+    this.k = (options.metersPerPm ?? 0.0004) / 0.0004;
+    this.nucleus = new NucleusMesh(this.composition.protons, this.composition.neutrons, options.nucleonRadius ?? 0.0012 * this.k);
     this.object.add(this.nucleus.object);
     this.object.name = `atomo:${element.symbol}`;
     this._model = options.model ?? 'bohr';
@@ -69,7 +72,7 @@ export class AtomView {
   setModel(model: AtomModel): void {
     this._model = model;
     if (model === 'bohr' && !this.bohr) {
-      const electronRadius = Math.min(Math.max(this.radius * 0.035, 0.0012), 0.0024);
+      const electronRadius = Math.min(Math.max(this.radius * 0.035, 0.0012 * this.k), 0.0024 * this.k);
       const inner = Math.min(this.nucleus.radius + electronRadius * 3, this.radius * 0.6);
       this.bohr = new BohrModel(this.composition.shells, inner, this.radius, electronRadius);
       this.object.add(this.bohr.object);

@@ -39,6 +39,8 @@ export class ViewerProvider implements ARProvider {
     this.hooks = hooks;
     this.previousBackground = ctx.scene.background;
     ctx.scene.background = new THREE.Color(this.options.background ?? 0x15181d);
+    ctx.camera.clearViewOffset();
+    ctx.camera.fov = 50;
     ctx.camera.near = 0.001;
     ctx.camera.position.set(0, 0.05, 0.3);
     ctx.camera.updateProjectionMatrix();
@@ -62,6 +64,21 @@ export class ViewerProvider implements ARProvider {
     this.ctx?.scene.add(anchor.object);
     this.anchors.add(anchor);
     return anchor;
+  }
+
+  /** Pone la cámara en `position` mirando a `target`. */
+  setView(position: THREE.Vector3, target: THREE.Vector3): void {
+    if (!this.ctx || !this.controls) return;
+    this.ctx.camera.position.copy(position);
+    this.controls.target.copy(target);
+    this.controls.minDistance = 0.02;
+    this.controls.maxDistance = position.distanceTo(target) * 4;
+    this.controls.update();
+  }
+
+  /** Activa o desactiva el giro con el dedo (p. ej. mientras se arrastra algo). */
+  setControlsEnabled(enabled: boolean): void {
+    if (this.controls) this.controls.enabled = enabled;
   }
 
   /** Coloca la cámara para ver entera una esfera de radio `radius` alrededor de `center`. */

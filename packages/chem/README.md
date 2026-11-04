@@ -16,6 +16,17 @@ atomo.setModel('cloud')                       // nubes de probabilidad
 atomo.dispose()
 ```
 
+## Sustancias y reacciones
+
+- `SPECIES`: 35 sustancias de hasta 5 átomos de la ESO y el Bachillerato,
+  con geometría 3D (VSEPR, enlaces reales en Å), ΔHf° (NBS) y para qué sirven.
+- `REACTIONS`: 38 reacciones de libro ajustadas (combustiones, Haber,
+  neutralización, termita…); ΔH por la ley de Hess, o el medido cuando las
+  condiciones lo cambian (disolución, vapor).
+- `findOutcome(contenidos)`: qué pasa al juntar unas cartas (reacción de libro
+  o síntesis directa: H + H + O → H₂O). `assignProducts` dice qué carta se
+  queda cada producto. `MoleculeView`: bolas y varillas que vibran.
+
 ## Los datos
 
 `src/data/elements.ts` lo genera `scripts/generar-elementos.py` (las

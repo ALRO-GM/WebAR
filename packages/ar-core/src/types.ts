@@ -39,6 +39,11 @@ export interface ARProvider {
   start(ctx: ARContext, hooks: ARProviderHooks): Promise<void>;
   /** Se llama antes de pintar cada frame. `xrFrame` solo existe con WebXR. */
   update(time: number, xrFrame?: XRFrame): void;
+  /**
+   * Opcional: el lienzo ha cambiado de tamaño. Si el proveedor ajusta él la
+   * cámara (p. ej. para cuadrar con un vídeo), devuelve `true`.
+   */
+  resize?(width: number, height: number): boolean;
   stop(): Promise<void>;
 }
 

@@ -3,7 +3,12 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   // three.js ocupa casi todo el paquete (~140 KB con gzip); es lo esperado.
-  build: { target: 'es2022', chunkSizeWarningLimit: 700 },
+  build: {
+    target: 'es2022',
+    chunkSizeWarningLimit: 800,
+    // Dos páginas: la app y la de imprimir tarjetas.
+    rollupOptions: { input: { main: 'index.html', cartas: 'cartas.html' } },
+  },
   plugins: [
     VitePWA({
       registerType: 'autoUpdate',

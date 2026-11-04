@@ -28,14 +28,30 @@ La realidad aumentada necesita WebXR: Android con Chrome y los Servicios de
 Google Play para RA. En cualquier otro sitio (iPhone, ordenador) está «Ver en
 3D», el mismo átomo en un visor sin cámara.
 
-Enlaces directos: `?el=Fe&modelo=orbitales&vista=3d` abre el hierro con sus
-orbitales en el visor (`el` admite símbolo o número; `modelo`, `bohr` u
-`orbitales`). Sirven para compartir un átomo y para capturas sin pantalla:
+Enlaces directos (para compartir y para pruebas):
+
+| Parámetro | Qué hace |
+| --- | --- |
+| `vista=3d`, `el=Fe`, `modelo=orbitales` | Abre el visor de átomos con ese elemento y modelo |
+| `vista=mesa&cartas=H,H,O&juntas=1` | Mesa virtual con esas tarjetas (juntas: reaccionan solas) |
+| `vista=tarjetas&imagen=/foto.png` | Modo tarjetas sobre una foto en vez de la cámara |
+| `avanzar=3.4` | Adelanta la animación esos segundos (`ARSession.advance`) |
+
+Capturas y pruebas sin pantalla (Chrome sin interfaz apenas pinta frames, por
+eso `avanzar`; y siempre con un perfil nuevo, o el service worker servirá una
+versión vieja):
 
 ```sh
-google-chrome --headless=new --enable-unsafe-swiftshader --window-size=412,860 \
-  --virtual-time-budget=4000 --screenshot=fe.png 'http://localhost:4173/?el=Fe&vista=3d'
+npm run build && npm run preview &
+P=$(mktemp -d); google-chrome --headless=new --user-data-dir=$P --enable-unsafe-swiftshader \
+  --window-size=412,860 --timeout=3000 --screenshot=agua.png \
+  'http://localhost:4173/?vista=mesa&cartas=H,H,O&juntas=1&avanzar=3.4'
+# Para leer el DOM: --dump-dom con --virtual-time-budget=6000 (--timeout no espera).
 ```
+
+En Chrome sin interfaz `getUserMedia` no responde ni con
+`--use-fake-device-for-media-stream`: para probar la detección de tarjetas,
+usa `imagen=` con una foto (o una imagen generada) de tarjetas impresas.
 
 Los datos de los elementos se regeneran con
 `packages/chem/scripts/generar-elementos.py` (instrucciones dentro).

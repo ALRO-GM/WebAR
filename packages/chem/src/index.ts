@@ -23,3 +23,23 @@ export { AtomView, type AtomModel, type AtomViewOptions } from './three/atom-vie
 export { ORBITAL_COLORS, type CloudOptions } from './three/cloud';
 export { ELECTRON_COLOR } from './three/bohr';
 export { NEUTRON_COLOR, PROTON_COLOR } from './three/nucleus-mesh';
+export { ATOM_DELTA_HF, SPECIES, composition, compositionKey, getSpecies, type Bond, type MoleculeAtom, type Species, type State } from './species';
+export {
+  REACTIONS,
+  assignProducts,
+  contentComposition,
+  contentDeltaHf,
+  contentFormula,
+  contentMass,
+  contentName,
+  findOutcome,
+  formatEquation,
+  isMolecule,
+  reactionEnthalpy,
+  termsComposition,
+  type Content,
+  type Outcome,
+  type Reaction,
+  type Term,
+} from './reactions';
+export { MoleculeView, type MoleculeViewOptions } from './three/molecule-view';

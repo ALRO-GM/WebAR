@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Imprimir tarjetas · WebAR Átomos</title>
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#111317" />
+  </head>
+  <body>
+    <header class="no-imprimir">
+      <a href="/" class="volver">← Volver</a>
+      <h1>Imprimir tarjetas</h1>
+      <p>Cada tarjeta lleva un marcador que la app reconoce con la cámara. Imprime en <b>A4 al 100 %</b> (sin «Ajustar a la página»), recorta por las líneas y, si puedes, pégalas sobre cartulina: el marcador tiene que quedar plano.</p>
+      <form id="opciones">
+        <fieldset id="kits"></fieldset>
+        <label class="personal">Mis tarjetas: <input id="personal" placeholder="H H O C N" autocomplete="off" /></label>
+        <p id="resumen"></p>
+        <button type="button" id="imprimir">🖨️ Imprimir</button>
+      </form>
+    </header>
+    <main id="hojas"></main>
+    <script type="module" src="/src/print.ts"></script>
+  </body>
+</html>

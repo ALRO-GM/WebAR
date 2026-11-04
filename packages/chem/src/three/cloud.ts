@@ -111,7 +111,7 @@ export class ElectronCloud {
     this.points = new THREE.Points(
       geometry,
       new THREE.PointsMaterial({
-        size: Math.max(atomRadius * 0.03, 0.0008),
+        size: atomRadius * 0.03,
         map: dotTexture(),
         vertexColors: true,
         transparent: true,
@@ -129,7 +129,7 @@ export class ElectronCloud {
     this.pointType = Uint8Array.from(pointType);
 
     // Una chispa por electrón.
-    const sparkGeometry = new THREE.SphereGeometry(Math.max(atomRadius * 0.014, 0.0007), 10, 8);
+    const sparkGeometry = new THREE.SphereGeometry(atomRadius * 0.016, 10, 8);
     this.sparks = new THREE.InstancedMesh(
       sparkGeometry,
       new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.95 }),

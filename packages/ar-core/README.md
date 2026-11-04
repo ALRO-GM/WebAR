@@ -26,6 +26,15 @@ if ((await detectARSupport()).webxrAR) boton.onclick = () => ar.start()
   (`isSupported`, `start`, `update`, `stop`).
 - `WebXRWorldProvider`: superficies y anclas con WebXR (Android con Chrome).
   Muestra un anillo donde caerá el siguiente objeto (`reticle`).
+- `MarkerTrackingProvider`: marcadores ArUco impresos con la cámara (cualquier
+  móvil). Un ancla por marcador (evento `marker`), con la y hacia fuera del
+  papel y `anchorOffset` para mover el ancla (p. ej. al centro de una
+  tarjeta). `useImage(url)` sustituye la cámara por una foto. `markerSVG(id)`
+  (también en `@webar/ar-core/markers`) da el marcador para imprimir.
+- `ViewerProvider`: visor 3D sin cámara con la misma API de anclas
+  (`createAnchor`, `frame`, `setView`).
+- `ARSession.advance(segundos)`: avanza la sesión sin esperar al navegador
+  (pruebas y capturas automáticas).
 
 En la capa HTML (`overlay`), los toques en `button`, `a`, campos de formulario
 o en cualquier cosa con `data-ar-ui` no cuentan como `select` en la escena.

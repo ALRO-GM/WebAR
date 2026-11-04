@@ -123,3 +123,68 @@ button.redondo { width: 2.8rem; height: 2.8rem; padding: 0; font-size: 1.4rem; l
 .celda[data-family='metal-transicion'] { --fam: #f3b3c8; }
 .celda[data-family='lantanido'] { --fam: #ffd9a8; }
 .celda[data-family='actinido'] { --fam: #f0b8f0; }
+
+/* --- Portada: modos ----------------------------------------------------- */
+.modos { display: grid; gap: 10px; width: 100%; margin-top: 0.5rem; }
+#inicio button.modo {
+  width: 100%; text-align: left; border-radius: 16px; padding: 0.9rem 1rem; display: grid; gap: 2px;
+  background: rgb(255 255 255 / 0.07); color: var(--fg); border: 1px solid rgb(255 255 255 / 0.1); font-weight: 400;
+}
+#inicio button.modo:not(:disabled):hover, #inicio button.modo:not(:disabled):focus-visible { background: rgb(122 165 255 / 0.18); border-color: var(--accent); }
+.modo b { font-size: 1.05rem; }
+.modo span { color: var(--muted); font-size: 0.88rem; }
+.enlaces a { color: var(--accent); font-weight: 600; text-decoration: none; }
+
+/* --- Tarjetas ------------------------------------------------------------ */
+#hud-tarjetas { position: absolute; inset: 0; pointer-events: none; }
+#hud-tarjetas > * { pointer-events: auto; }
+#hud-tarjetas .burbuja, #hud-tarjetas .carga { pointer-events: none; }
+.burbuja-arriba { top: max(12px, env(safe-area-inset-top)); }
+
+.banner {
+  position: absolute; top: max(12px, env(safe-area-inset-top)); left: 12px; right: 12px; max-width: 30rem; margin: 0 auto;
+  padding: 0.8rem 1rem; border-radius: 16px; background: var(--panel); backdrop-filter: blur(10px);
+  border: 1px solid rgb(255 255 255 / 0.12); animation: aparecer 0.35s ease-out;
+}
+.banner p { margin: 0; }
+.banner.exo { border-color: #ff9f43; box-shadow: 0 0 24px rgb(255 120 40 / 0.35); }
+.banner.endo { border-color: #7fd3ff; box-shadow: 0 0 24px rgb(120 200 255 / 0.35); }
+.banner.energia { border-color: #fff2a8; }
+.banner-titulo { font-weight: 700; }
+.banner-ecuacion { font-size: 1.35rem; font-weight: 800; letter-spacing: 0.01em; margin: 0.15rem 0 0.25rem !important; }
+.banner-texto { font-size: 0.86rem; color: var(--muted); }
+.banner.exo .banner-ecuacion { color: #ffc27a; }
+.banner.endo .banner-ecuacion { color: #a8e3ff; }
+@keyframes aparecer { from { transform: translateY(-10px) scale(0.97); opacity: 0; } }
+
+.carga {
+  --p: 0;
+  position: absolute; left: 50%; bottom: calc(max(16px, env(safe-area-inset-bottom)) + 7.6rem); transform: translateX(-50%);
+  width: min(20rem, calc(100% - 32px)); text-align: center; padding: 0.6rem 0.9rem; border-radius: 14px; background: var(--panel);
+}
+.carga p { margin: 0; }
+#t-carga-ecuacion { font-weight: 800; font-size: 1.1rem; }
+.progreso { height: 6px; margin: 0.4rem 0; border-radius: 3px; background: rgb(255 255 255 / 0.15); overflow: hidden; }
+.progreso div { height: 100%; width: calc(var(--p) * 100%); background: linear-gradient(90deg, #ffd166, #ff6b6b); }
+
+button.mantener {
+  --p: 0;
+  position: relative; overflow: hidden; touch-action: none; user-select: none; -webkit-user-select: none;
+  background: linear-gradient(90deg, #ffd166 calc(var(--p) * 100%), rgb(255 255 255 / 0.14) 0);
+  color: var(--fg);
+}
+button.mantener:not(:disabled) { color: #0b1020; background: linear-gradient(90deg, #ff9f43 calc(var(--p) * 100%), #ffd166 0); }
+
+.recetas { flex: 1; overflow: auto; padding: 0 16px 16px; max-width: 34rem; margin: 0 auto; width: 100%; }
+.recetas h3 { margin: 1rem 0 0.4rem; font-size: 1rem; color: var(--accent); }
+.recetas ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.recetas li { display: grid; grid-template-columns: 1fr auto; gap: 0 10px; padding: 0.5rem 0.7rem; border-radius: 10px; background: rgb(255 255 255 / 0.06); }
+.recetas li small { grid-column: 1 / -1; color: var(--muted); }
+.recetas .ecuacion { font-weight: 700; }
+.recetas .dh { font-size: 0.82rem; font-weight: 700; }
+.dh.exo { color: #ffb066; } .dh.endo { color: #8fd8ff; }
+.fila { flex-wrap: wrap; justify-content: center; max-width: calc(100vw - 16px); }
+@media (max-width: 430px) {
+  .fila button { padding: 0.6rem 0.85rem; font-size: 0.92rem; }
+  .segmentado button { padding: 0.5rem 0.75rem; }
+}

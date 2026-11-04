@@ -5,7 +5,8 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./markers": "./src/markers.ts"
   },
   "peerDependencies": {
     "three": ">=0.160.0"

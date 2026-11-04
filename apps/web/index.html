@@ -16,15 +16,71 @@
     <!-- La capa que se ve encima de la cámara (dom-overlay de WebXR) o del visor. -->
     <div id="overlay">
       <main id="inicio">
-        <img src="/icons/icon.svg" alt="" width="88" height="88" />
+        <img src="/icons/icon.svg" alt="" width="80" height="80" />
         <h1>WebAR · Átomos</h1>
-        <p>Los 118 elementos con sus protones, neutrones y electrones, en el modelo de Bohr o con sus nubes de probabilidad. Ponlos sobre tu mesa con realidad aumentada.</p>
-        <button id="entrar-ra" type="button" disabled>Comprobando el móvil…</button>
-        <button id="entrar-3d" type="button" class="secundario">Ver en 3D (sin cámara)</button>
+        <p>Combina tarjetas de átomos y forma moléculas en realidad aumentada.</p>
+
+        <section class="modos">
+          <button id="entrar-tarjetas" type="button" class="modo">
+            <b>🃏 Tarjetas con la cámara</b>
+            <span>Apunta a las tarjetas impresas y júntalas para que reaccionen.</span>
+          </button>
+          <button id="entrar-mesa" type="button" class="modo">
+            <b>🧪 Mesa virtual</b>
+            <span>Las mismas reacciones arrastrando tarjetas por la pantalla, sin imprimir nada.</span>
+          </button>
+          <button id="entrar-3d" type="button" class="modo">
+            <b>⚛️ Explorar átomos</b>
+            <span>Los 118 elementos en 3D: modelo de Bohr y orbitales.</span>
+          </button>
+          <button id="entrar-ra" type="button" class="modo" disabled>
+            <b>📱 Átomos sobre la mesa</b>
+            <span id="entrar-ra-texto">Comprobando el móvil…</span>
+          </button>
+        </section>
+
+        <p class="enlaces"><a href="/cartas.html">🖨️ Imprimir tarjetas</a></p>
         <p id="aviso" role="status"></p>
         <button id="instalar" type="button" class="secundario" hidden>Instalar la app</button>
         <p id="instalar-ios" class="pista" hidden>Para instalarla en iPhone: botón Compartir → «Añadir a pantalla de inicio».</p>
       </main>
+
+      <div id="hud-tarjetas" hidden>
+        <p id="t-estado" class="burbuja burbuja-arriba"></p>
+        <section id="t-banner" class="banner" data-ar-ui hidden>
+          <p id="t-banner-titulo" class="banner-titulo"></p>
+          <p id="t-banner-ecuacion" class="banner-ecuacion"></p>
+          <p id="t-banner-texto" class="banner-texto"></p>
+        </section>
+        <section id="t-carga" class="carga" hidden>
+          <p id="t-carga-ecuacion"></p>
+          <div class="progreso"><div></div></div>
+          <p class="pequeno">Mantén las tarjetas juntas…</p>
+        </section>
+        <div class="barra">
+          <div class="fila">
+            <button id="t-anadir" type="button" class="secundario">+ Tarjeta</button>
+            <button id="t-reiniciar" type="button" class="secundario">Reiniciar</button>
+            <button id="t-recetas" type="button" class="secundario">Recetas</button>
+          </div>
+          <div class="fila">
+            <div class="segmentado" role="radiogroup" aria-label="Modelo de los átomos">
+              <button id="t-bohr" type="button" role="radio" aria-checked="true">Bohr</button>
+              <button id="t-nube" type="button" role="radio" aria-checked="false">Orbitales</button>
+            </div>
+            <button id="t-descomponer" type="button" class="mantener" disabled>Descomponer</button>
+            <button id="t-salir" type="button" class="secundario">Salir</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="recetas" class="dialogo" data-ar-ui hidden>
+        <div class="dialogo-cabecera">
+          <h2>Recetas</h2>
+          <button id="cerrar-recetas" type="button" class="secundario redondo" aria-label="Cerrar">×</button>
+        </div>
+        <div id="recetas-lista" class="recetas"></div>
+      </div>
 
       <div id="hud" hidden>
         <section id="ficha" class="tarjeta" data-ar-ui aria-live="polite">

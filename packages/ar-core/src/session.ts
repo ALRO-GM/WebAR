@@ -71,14 +71,34 @@ export class ARSession extends Emitter<ARSessionEvents> {
     this._running = true;
     if (!this.renderer.xr.isPresenting) this.renderer.domElement.style.display = 'block';
     this.resize();
+    window.addEventListener('orientationchange', this.resize);
     this.timer.reset();
     this.renderer.setAnimationLoop((time, xrFrame) => {
       this.timer.update(time);
-      this._provider.update(time, xrFrame);
-      this.emit('frame', { time, dt: Math.min(this.timer.getDelta(), 0.1) });
-      this.renderer.render(this.scene, this.camera);
+      // La marca del primer frame puede ser anterior al reset: nunca un dt negativo.
+      this.step(THREE.MathUtils.clamp(this.timer.getDelta(), 0, 0.1), xrFrame);
     });
     this.emit('start', undefined);
+  }
+
+  /**
+   * Avanza la sesión `seconds` a pasos fijos sin esperar al navegador. Para
+   * capturas y pruebas automáticas (un navegador sin pantalla apenas pinta
+   * frames) y demos que empiezan a mitad de una animación.
+   */
+  advance(seconds: number, step = 1 / 30): void {
+    if (!this._running) return;
+    for (let t = 0; t < seconds; t += step) this.step(step, undefined, false);
+    this.renderer.render(this.scene, this.camera);
+  }
+
+  /** Tiempo de la sesión en ms: la suma de los pasos (así `advance` y el bucle cuadran). */
+  private clock = 0;
+  private step(dt: number, xrFrame?: XRFrame, render = true): void {
+    this.clock += dt * 1000;
+    this._provider.update(this.clock, xrFrame);
+    this.emit('frame', { time: this.clock, dt });
+    if (render) this.renderer.render(this.scene, this.camera);
   }
 
   /** Termina la sesión. Se avisa con el evento `end`. */
@@ -98,6 +118,7 @@ export class ARSession extends Emitter<ARSessionEvents> {
     if (this.renderer.xr.isPresenting) return; // WebXR fija el tamaño solo.
     const { innerWidth: w, innerHeight: h } = window;
     this.renderer.setSize(w, h, false);
+    if (this._running && this._provider.resize?.(w, h)) return;
     this.camera.aspect = w / h;
     this.camera.updateProjectionMatrix();
   };

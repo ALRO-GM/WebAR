@@ -36,14 +36,21 @@ packages/ar-core/      @webar/ar-core: la base reutilizable (no sabe de química
   src/types.ts           ARProvider: el contrato de un sistema de seguimiento
   src/providers/
     webxr-world.ts       WebXR: superficies y anclas (Android)
+    marker-tracking.ts   tarjetas impresas con marcadores ArUco (cualquier móvil con cámara)
     viewer.ts            visor 3D sin cámara (iPhone, ordenador, desarrollo)
+  src/pose.ts            pose de un marcador a partir de sus 4 esquinas (homografía)
+  src/vendor/js-aruco2/  detector ArUco (MIT), pasado a ESM
 packages/chem/         @webar/chem: los 118 elementos y sus átomos en 3D (no sabe de RA)
   src/data/elements.ts   datos generados (scripts/generar-elementos.py)
   src/configuration.ts   capas, subniveles, Hund y Slater
   src/nucleus.ts         cómo se apilan protones y neutrones
   src/orbitals.ts        nubes de probabilidad |ψ|²
-  src/three/             AtomView: núcleo + Bohr o nubes, con su animación
+  src/species.ts         35 sustancias de ≤5 átomos: geometría 3D y ΔHf°
+  src/reactions.ts       38 reacciones de libro, síntesis directa, ΔH (Hess) y reparto en tarjetas
+  src/three/             AtomView (núcleo + Bohr o nubes) y MoleculeView (bolas y varillas)
 apps/web/              la PWA: une las dos; interfaz e instalación
+  src/cards/             el juego de tarjetas: baraja, caras, reglas, mesa virtual
+  cartas.html            imprimir las tarjetas en A4
 ```
 
 - La **sesión** es dueña del renderizador y del bucle y emite `start`, `frame`,
@@ -63,12 +70,49 @@ Los átomos (`@webar/chem`) tampoco saben de realidad aumentada: un
 Los detalles de los átomos (datos, fuentes, modelos y escalas) están en
 [packages/chem/README.md](../packages/chem/README.md).
 
+## Tarjetas: por qué marcadores ArUco
+
+Las tarjetas llevan un marcador ArUco (diccionario MIP 36h12, 250 códigos) en
+lugar de una imagen para MindAR:
+
+- se detectan en milisegundos y se siguen **muchas a la vez** (MindAR sufre a
+  partir de 2-3 imágenes), que es justo lo que pide combinar átomos;
+- funcionan en **cualquier móvil con cámara**, iPhone incluido;
+- una tarjeta nueva es un número nuevo: no hay que compilar imágenes.
+
+La pose se calcula con la homografía de las 4 esquinas (sin la ambigüedad de
+POSIT) y se suaviza con un filtro adaptativo; encima, cada átomo persigue a su
+tarjeta con retardo, para que se deslice suave al moverla. La cara de la
+tarjeta se tapa con una virtual con los datos de lo que contiene.
+
+Cada tarjeta física tiene un id distinto (la primera de cada elemento, su
+número atómico; las copias extra de H, O, C… del 119 en adelante), en
+`apps/web/src/cards/deck.ts`. **No cambiar ese orden**: los ids ya impresos
+dependen de él.
+
+### Reglas del juego
+
+- Tarjetas a menos de 10 cm entre centros forman un grupo. Si el grupo
+  reacciona (reacción de libro con esas tarjetas exactas, o síntesis directa
+  cuando sus átomos forman una sustancia conocida), se carga 3 s: vibran,
+  brillan y se acercan.
+- Al reaccionar, cada sustancia nueva va a la tarjeta del elemento más pesado
+  que contenga; las demás vuelven a su elemento impreso (quedan libres). Fuego
+  si ΔH < 0, hielo si ΔH > 0, y un destello.
+- Las tarjetas que acaban de reaccionar no vuelven a hacerlo hasta separarlas.
+- «Descomponer» (mantener 3 s) devuelve la tarjeta apuntada a su elemento.
+- Las cartas de H, N, O, F, Cl, Br e I son átomos sueltos (su ΔHf es la de
+  atomización); las de C, Na, Fe… el elemento tal cual (ΔHf = 0). Así los
+  números salen de la ley de Hess y coinciden con los libros
+  (2 C + O₂ → 2 CO: −221 kJ).
+
 ## Hecho y lo siguiente
 
 - [x] Base de RA con WebXR y visor 3D sin cámara.
 - [x] Los 118 elementos: protones, neutrones, electrones, capas y
   configuración; átomos con modelo de Bohr y con orbitales.
-- [ ] Proveedor `MindARImageProvider` (`image`): cartas con un `.mind`
-  compilado desde sus imágenes, varias a la vez (`maxTrack`).
-- [ ] Reglas de enlace (valencias) en `@webar/chem` y detección de cercanía
-  entre anclas → animación de la molécula formada.
+- [x] Tarjetas con marcadores, mesa virtual, reacciones con fuego/hielo,
+  descomponer e impresión de tarjetas.
+- [ ] Plataforma educativa: cuentas de profesor, clases, retos, estadísticas,
+  colección y desbloqueos, y uso sin conexión (ver
+  [investigacion-plataforma.md](investigacion-plataforma.md)).
