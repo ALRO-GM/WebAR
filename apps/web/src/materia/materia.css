@@ -1,0 +1,152 @@
+/* Sección «Materia»: pantalla (tarjetas, ficha) y HUD de sus experiencias 3D/RA.
+   Usa los tokens y piezas de theme.css (.btn, .card, .chip, .flotante). */
+
+.materia {
+  max-width: 60rem; margin: 0 auto; padding: 1rem 1rem calc(6rem + env(safe-area-inset-bottom));
+  display: flex; flex-direction: column; gap: 0.9rem;
+}
+.materia h1 { font-size: 1.8rem; margin: 0.3rem 0 0.2rem; }
+.materia .texto-suave { margin: 0; }
+.mat-apartado { font-size: 1.35rem; margin: 1.2rem 0 0; }
+.mat-svg { display: block; width: 100%; height: 100%; }
+.mat-svg-txt { font: 800 14px var(--font); fill: var(--fg-strong); }
+.mat-svg-txt.mat-menos { fill: #e8333b; font-size: 20px; }
+.mat-svg-txt.mat-mas { fill: #1c8fe0; font-size: 20px; }
+
+/* Tarjeta destacada del agua */
+.mat-estrella {
+  position: relative; display: flex; flex-direction: column; gap: 0.5rem; padding: 1.1rem;
+  background: linear-gradient(160deg, #e8f6ff 0%, #f3efff 55%, #fff2e3 100%); border-color: #cfe7fb;
+}
+:root.oscuro .mat-estrella { background: linear-gradient(160deg, #15303f 0%, #241f47 60%, #3a2a18 100%); border-color: var(--line); }
+.mat-estrella h2 { margin: 0; font-size: 1.45rem; }
+.mat-estrella p { margin: 0; }
+.mat-estrella-dibujo { aspect-ratio: 340 / 140; max-height: 11rem; }
+.mat-insignia { position: absolute; top: -0.8rem; right: 1rem; background: var(--xp); border-color: var(--xp-shadow); color: #3a2a00; }
+.mat-botones { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; margin-top: 0.3rem; }
+.mat-botones .btn { flex: 1 1 9rem; }
+.mat-nota { flex-basis: 100%; margin: 0; }
+.mat-aviso:empty { display: none; }
+.mat-aviso { margin: 0; padding: 0.6rem 0.9rem; border-radius: var(--radius); background: var(--bad-soft); color: var(--fg-strong); font-weight: 700; }
+
+/* Rejilla de cristales */
+.mat-rejilla { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); }
+.mat-cristal { display: flex; flex-direction: column; gap: 0.25rem; height: 100%; min-height: var(--tap); }
+.mat-cristal strong { color: var(--fg-strong); font-size: 1.02rem; line-height: 1.2; }
+.mat-cristal-dibujo {
+  display: block; aspect-ratio: 1; padding: 0.5rem; margin-bottom: 0.3rem; border-radius: var(--radius);
+  background: radial-gradient(circle at 50% 40%, #ffffff 0%, var(--bg-2) 70%);
+}
+:root.oscuro .mat-cristal-dibujo { background: radial-gradient(circle at 50% 40%, #26323c 0%, var(--bg-2) 70%); }
+.mat-enlace-metalico { --tono: var(--info); }
+.mat-enlace-ionico { --tono: var(--streak); }
+.mat-enlace-covalente { --tono: var(--quark); }
+.mat-enlace-puentes { --tono: var(--cold); }
+.mat-cristal { border-bottom-color: var(--tono, var(--line)); }
+.chip.mat-enlace-metalico, .chip.mat-enlace-ionico, .chip.mat-enlace-covalente, .chip.mat-enlace-puentes { border-color: var(--tono); }
+
+/* Otras formas de agruparse */
+.mat-otras { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); }
+.mat-otra { display: flex; flex-direction: column; gap: 0.4rem; }
+.mat-otra h3 { margin: 0.2rem 0 0; font-size: 1.15rem; }
+.mat-otra p { margin: 0; }
+.mat-otra .btn { align-self: flex-start; margin-top: 0.3rem; }
+.mat-otra-dibujo { aspect-ratio: 2 / 1; }
+
+/* Ficha de un cristal */
+.mat-ficha {
+  width: min(36rem, calc(100vw - 1.5rem)); max-height: calc(100dvh - 1.5rem); padding: 0; border: 2px solid var(--line);
+  border-radius: var(--radius-lg); background: var(--surface); color: var(--fg); overflow: hidden;
+}
+.mat-ficha[open] { display: flex; flex-direction: column; animation: rebote-entrada 0.35s var(--ease-pop) both; }
+.mat-ficha::backdrop { background: rgb(20 20 30 / 0.45); backdrop-filter: blur(2px); }
+.mat-ficha-cuerpo { overflow-y: auto; padding: 1rem 1.1rem 0.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.mat-ficha-cabeza { display: grid; grid-template-columns: 6rem 1fr auto; gap: 0.8rem; align-items: center; }
+.mat-ficha-cabeza h2 { margin: 0; font-size: 1.35rem; }
+.mat-ficha-cabeza p { margin: 0.15rem 0 0; }
+.mat-ficha-dibujo { width: 6rem; aspect-ratio: 1; border-radius: var(--radius); background: var(--bg-2); padding: 0.35rem; }
+.mat-ficha section h3 { margin: 0.4rem 0 0.15rem; font-size: 1rem; color: var(--primary); }
+.mat-ficha section p { margin: 0; }
+.mat-curiosidad { background: var(--primary-soft); border-radius: var(--radius); padding: 0.4rem 0.8rem 0.7rem; margin-top: 0.3rem; }
+.mat-ficha-pie { padding: 0.8rem 1.1rem calc(0.9rem + env(safe-area-inset-bottom)); border-top: 2px solid var(--line); background: var(--surface); }
+.mat-ficha-pie .mat-botones { margin: 0; }
+.mat-datos { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+
+/* --- HUD encima del 3D / la cámara ------------------------------------------------------ */
+.mat-hud {
+  position: fixed; inset: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 0.5rem;
+  padding: max(0.75rem, env(safe-area-inset-top)) 0.75rem max(0.75rem, env(safe-area-inset-bottom));
+  pointer-events: none !important; /* el 3D de debajo se sigue girando con el dedo */
+}
+.mat-hud > * { pointer-events: none; }
+.mat-hud-arriba { display: flex; gap: 0.5rem; align-items: center; }
+.mat-hud-arriba > *, .mat-panel { pointer-events: auto; }
+.mat-titulo { padding: 0.4rem 0.9rem; display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
+.mat-titulo strong { color: var(--fg-strong); }
+.mat-titulo .pequeno { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mat-panel {
+  align-self: center; width: min(34rem, 100%); padding: 0.7rem; display: flex; flex-direction: column; gap: 0.5rem;
+  max-height: 52dvh; overflow-y: auto; animation: subir-entrada 0.35s var(--ease-pop) both;
+}
+.mat-fila { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+.mat-toggle {
+  font: inherit; font-weight: 800; font-size: 0.85rem; min-height: var(--tap); padding: 0.35rem 0.8rem; border-radius: 999px; cursor: pointer;
+  border: 2px solid var(--line-strong); background: var(--surface); color: var(--fg);
+}
+.mat-toggle::before { content: ''; display: inline-block; width: 0.8rem; height: 0.8rem; margin-right: 0.4rem; border-radius: 50%; border: 2px solid currentColor; vertical-align: -0.1rem; }
+.mat-toggle[aria-pressed='true'] { background: var(--primary-soft); border-color: var(--primary); color: var(--primary); }
+.mat-toggle[aria-pressed='true']::before { background: currentColor; }
+.mat-seg { display: flex; padding: 3px; gap: 3px; border-radius: 14px; background: var(--bg-2); border: 2px solid var(--line); }
+.mat-seg > button {
+  flex: 1; font: inherit; font-weight: 800; font-size: 0.85rem; min-height: calc(var(--tap) - 6px); padding: 0.25rem 0.5rem;
+  border: 0; border-radius: 11px; background: transparent; color: var(--muted); cursor: pointer; transition: background 0.15s, color 0.15s;
+}
+.mat-seg > button[aria-checked='true'] { background: var(--surface); color: var(--primary); box-shadow: 0 2px 0 var(--line-strong); }
+.mat-leyenda { margin: 0; font-size: 0.85rem; font-weight: 700; }
+.mat-leyenda::before { content: ''; display: inline-block; width: 2.4rem; height: 0.7rem; margin-right: 0.4rem; border-radius: 999px; background: linear-gradient(90deg, #7c5cff 33%, #2ec4a6 33% 66%, #ff9600 66%); vertical-align: -0.05rem; }
+.btn.mat-peq { min-height: var(--tap); font-size: 0.8rem; padding: 0.45rem 0.9rem; }
+.mat-plegables { display: flex; flex-wrap: wrap; gap: 0 1rem; }
+.mat-plegables > details { flex: 1 1 10rem; }
+.mat-plegables > details[open] { flex-basis: 100%; }
+.mat-ajustes { display: flex; flex-direction: column; gap: 0.45rem; padding-bottom: 0.3rem; }
+.mat-info summary { cursor: pointer; font-weight: 800; color: var(--primary); min-height: var(--tap); display: flex; align-items: center; }
+.mat-info p { margin: 0 0 0.4rem; font-size: 0.92rem; }
+.mat-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); margin: 0; }
+
+/* RA: pista y deslizador de tamaño */
+.mat-ra { display: flex; flex-direction: column; gap: 0.3rem; }
+.mat-pista { margin: 0; font-weight: 800; text-align: center; color: var(--fg-strong); }
+.mat-deslizador { display: grid; grid-template-columns: auto 1fr 3rem; gap: 0.5rem; align-items: center; font-weight: 800; font-size: 0.9rem; }
+.mat-valor { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Agua */
+.mat-panel-agua { --fase: var(--cold); border-top: 6px solid var(--fase); }
+.mat-panel-agua[data-fase='fusion'], .mat-panel-agua[data-fase='solidificacion'] { --fase: var(--mint); }
+.mat-panel-agua[data-fase='liquido'], .mat-panel-agua[data-fase='condensacion'] { --fase: var(--info); }
+.mat-panel-agua[data-fase='ebullicion'] { --fase: var(--hot); }
+.mat-panel-agua[data-fase='gas'] { --fase: var(--bad); }
+.mat-cabeza { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
+.mat-fase { margin: 0; font-size: 1.2rem; }
+.mat-grados { font-size: 1.6rem; font-weight: 900; color: var(--fase); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.mat-explica { margin: 0; font-size: 0.92rem; line-height: 1.4; }
+.mat-termo { display: grid; grid-template-columns: auto 1fr auto; gap: 0.5rem; align-items: center; }
+.mat-termo .btn { padding-inline: 0.7rem; }
+.mat-termo .btn[aria-pressed='true'] { outline: 3px solid var(--fg-strong); outline-offset: 2px; }
+input[type=range].mat-temp {
+  -webkit-appearance: none; appearance: none; height: var(--tap); background: transparent; margin: 0;
+}
+input[type=range].mat-temp::-webkit-slider-runnable-track {
+  height: 0.9rem; border-radius: 999px; background: linear-gradient(90deg, #3fb6ff 0%, #9fe3ff 16.7%, #58c3ff 17%, #1cb0f6 72%, #ff9a3d 72.5%, #ff4b4b 100%);
+}
+input[type=range].mat-temp::-moz-range-track {
+  height: 0.9rem; border-radius: 999px; background: linear-gradient(90deg, #3fb6ff 0%, #9fe3ff 16.7%, #58c3ff 17%, #1cb0f6 72%, #ff9a3d 72.5%, #ff4b4b 100%);
+}
+input[type=range].mat-temp::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 1.8rem; height: 1.8rem; margin-top: -0.45rem; border-radius: 50%; background: #fff; border: 4px solid var(--fg-strong); box-shadow: 0 2px 0 rgb(0 0 0 / 0.25);
+}
+input[type=range].mat-temp::-moz-range-thumb { width: 1.4rem; height: 1.4rem; border-radius: 50%; background: #fff; border: 4px solid var(--fg-strong); }
+.mat-cuenta { font-variant-numeric: tabular-nums; }
+
+@media (min-width: 48rem) {
+  .mat-panel { align-self: flex-start; }
+}
