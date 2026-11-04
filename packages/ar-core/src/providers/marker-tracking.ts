@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { ARAnchor } from '../anchor';
 import { Emitter } from '../emitter';
-import { IdentityGate, type IdentityGateOptions } from '../gate';
+import { IdentityGate, type DetectionStatus, type IdentityGateOptions } from '../gate';
 import { MARKER_DICTIONARY } from '../markers';
 import { OneEuroQuaternion, OneEuroVector, type OneEuroOptions } from '../one-euro';
 import { alignCoplanar, markerPose, type PinholeCamera } from '../pose';
@@ -36,7 +36,9 @@ export interface MarkerTrackingOptions {
   coplanar?: boolean;
   /**
    * Bits erróneos (de 36) que se toleran al leer un código. El detector, de
-   * serie, aceptaba hasta 11 y se inventaba tarjetas; 2 es lo prudente.
+   * serie, aceptaba hasta 11 y se inventaba tarjetas. 3 deja margen a las
+   * tarjetas dibujadas a mano; la confirmación en varios fotogramas evita los
+   * fantasmas.
    */
   maxBitErrors?: number;
   /** Confirmación de tarjetas nuevas y bloqueo de identidad (ver `gate.ts`). */
@@ -63,6 +65,16 @@ interface Tracked {
 
 const POSITION_FILTER: OneEuroOptions = { minCutoff: 0.5, beta: 30, dCutoff: 0.5 };
 const ROTATION_FILTER: OneEuroOptions = { minCutoff: 0.5, beta: 2, dCutoff: 0.3 };
+
+/** Colores del modo diagnóstico. */
+const DEBUG_COLORS: Record<DetectionStatus | 'desconocida', string> = {
+  aceptada: '#2ee66b', // se sigue
+  pendiente: '#ffd166', // confirmándose (vista menos de 3 fotogramas)
+  ocupado: '#ff4d5a', // otro número donde ya hay una tarjeta
+  repetida: '#ff4d5a', // el mismo número en dos sitios
+  solapada: '#ff9f43', // dos lecturas del mismo marcador
+  desconocida: '#9aa3b2', // un código que no es de ninguna tarjeta
+};
 
 /** Área en píxeles del cuadrilátero (fórmula del zapatero): cuánto pesa su medida. */
 function area(c: readonly { x: number; y: number }[]): number {
@@ -107,6 +119,9 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
   private freshFrame = true;
   private frameCallback?: number;
   private gate: IdentityGate;
+  /** Lienzo del modo diagnóstico (lo que lee el detector, dibujado sobre la cámara). */
+  private debugCanvas?: HTMLCanvasElement;
+  private debugEnabled = false;
 
   constructor(private readonly options: MarkerTrackingOptions) {
     super();
@@ -153,7 +168,15 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     this.ctx = ctx;
     this.hooks = hooks;
     // El detector compara con `<`: 2 bits erróneos como mucho → 3.
-    this.detector = new AR.Detector({ dictionaryName: MARKER_DICTIONARY, maxHammingDistance: (this.options.maxBitErrors ?? 2) + 1 });
+    this.detector = new AR.Detector({
+      dictionaryName: MARKER_DICTIONARY,
+      maxHammingDistance: (this.options.maxBitErrors ?? 3) + 1,
+      // Que las líneas de un papel cuadriculado o de color no cuenten como tinta (ver cv.js).
+      // Valores elegidos con las fotos sintéticas de cards.test.ts (impresas y a mano).
+      relativeThreshold: 0.16,
+      thresholdKernel: 3,
+      brightestChannel: true,
+    });
     this.gate.reset();
     this.watchFrames();
 
@@ -211,10 +234,10 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
 
     const { width, height } = this.canvas;
     this.g.drawImage(this.video, 0, 0, width, height);
-    const markers = this.gate.filter(
-      this.detector.detect(this.g.getImageData(0, 0, width, height)).filter((m) => !this.options.accept || this.options.accept(m.id)),
-      time,
-    );
+    const raw = this.detector.detect(this.g.getImageData(0, 0, width, height));
+    const known = raw.filter((m) => !this.options.accept || this.options.accept(m.id));
+    const markers = this.gate.filter(known, time);
+    if (this.debugEnabled) this.drawDebug([...this.gate.last, ...raw.filter((m) => !known.includes(m)).map((detection) => ({ detection, status: 'desconocida' as const }))]);
 
     const seen: { id: number; pose: THREE.Matrix4; weight: number }[] = [];
     for (const marker of markers) {
@@ -233,6 +256,58 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
 
   private markLost(time: number, lostAfter: number): void {
     for (const t of this.tracked.values()) if (time - t.lastSeen > lostAfter) t.anchor.setTracking(false);
+  }
+
+  /**
+   * Modo diagnóstico: dibuja sobre la cámara cada marcador leído, con su
+   * número y un color según lo que se hizo con él (ver `DEBUG_COLORS`).
+   */
+  set debug(on: boolean) {
+    this.debugEnabled = on;
+    if (!on) {
+      this.debugCanvas?.remove();
+      this.debugCanvas = undefined;
+    }
+  }
+  get debug(): boolean {
+    return this.debugEnabled;
+  }
+
+  private drawDebug(items: Array<{ detection: { id: number; corners: { x: number; y: number }[] }; status: DetectionStatus | 'desconocida' }>): void {
+    if (!this.ctx) return;
+    if (!this.debugCanvas) {
+      this.debugCanvas = document.createElement('canvas');
+      this.debugCanvas.className = 'ar-diagnostico';
+      Object.assign(this.debugCanvas.style, { position: 'fixed', inset: '0', width: '100%', height: '100%', pointerEvents: 'none', zIndex: '1' });
+      this.ctx.renderer.domElement.after(this.debugCanvas);
+    }
+    const canvas = this.debugCanvas;
+    const { width: sw, height: sh } = this.screen;
+    if (canvas.width !== sw || canvas.height !== sh) [canvas.width, canvas.height] = [sw, sh];
+    const g = canvas.getContext('2d')!;
+    g.clearRect(0, 0, sw, sh);
+    // Del lienzo de detección a la pantalla: el vídeo se ve recortado para cubrirla (y en espejo con la frontal).
+    const { width: vw, height: vh } = this.sourceSize();
+    const toVideo = vw / this.canvas.width;
+    const cover = Math.max(sw / vw, sh / vh);
+    const ox = (sw - vw * cover) / 2;
+    const oy = (sh - vh * cover) / 2;
+    const mirror = this.facing === 'user';
+    const map = (p: { x: number; y: number }) => {
+      const x = ox + p.x * toVideo * cover;
+      return { x: mirror ? sw - x : x, y: oy + p.y * toVideo * cover };
+    };
+    g.lineWidth = 3;
+    g.font = 'bold 16px system-ui, sans-serif';
+    for (const { detection, status } of items) {
+      const pts = detection.corners.map(map);
+      g.strokeStyle = g.fillStyle = DEBUG_COLORS[status];
+      g.beginPath();
+      pts.forEach((p, i) => (i ? g.lineTo(p.x, p.y) : g.moveTo(p.x, p.y)));
+      g.closePath();
+      g.stroke();
+      g.fillText(`#${detection.id}`, pts[0].x, pts[0].y - 6);
+    }
   }
 
   /** Avisa de cada fotograma nuevo de la cámara (si el navegador sabe; si no, se analiza siempre). */
@@ -255,6 +330,8 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     this.ctx.camera.clearViewOffset();
     for (const t of this.tracked.values()) t.anchor.dispose();
     this.tracked.clear();
+    this.debugCanvas?.remove();
+    this.debugCanvas = undefined;
     this.ctx = this.video = this.stream = this.detector = undefined;
     if (this.frameCallback !== undefined && video instanceof HTMLVideoElement) video.cancelVideoFrameCallback(this.frameCallback);
     this.frameCallback = undefined;

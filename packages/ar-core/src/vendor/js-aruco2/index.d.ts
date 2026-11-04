@@ -19,6 +19,6 @@ export interface ArucoDictionary {
   generateSVG(id: number): string;
 }
 export declare const AR: {
-  Detector: new (config?: { dictionaryName?: string; maxHammingDistance?: number }) => ArucoDetector;
+  Detector: new (config?: { dictionaryName?: string; maxHammingDistance?: number; relativeThreshold?: number; brightestChannel?: boolean; thresholdKernel?: number }) => ArucoDetector;
   Dictionary: new (name: string) => ArucoDictionary;
 };

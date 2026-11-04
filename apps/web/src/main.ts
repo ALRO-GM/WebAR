@@ -36,7 +36,8 @@ const xr = new WebXRWorldProvider();
 const viewer = new ViewerProvider();
 
 // Tema claro u oscuro: la interfaz (clase en <html>) y el fondo del visor 3D.
-const VIEWER_BACKGROUND = { claro: 0xeef0f7, oscuro: 0x15181d };
+// También en el tema claro, un fondo oscuro de «escenario»: las nubes y los destellos de los electrones brillan y sobre blanco apenas se veían.
+const VIEWER_BACKGROUND = { claro: 0x22264a, oscuro: 0x15181d };
 function applyTheme(): void {
   viewer.setBackground(isDark() ? VIEWER_BACKGROUND.oscuro : VIEWER_BACKGROUND.claro);
   const button = document.getElementById('cambiar-tema')!;
@@ -271,6 +272,10 @@ const cards = new CardsMode({
     return { label, atoms };
   },
 });
+
+// Modo diagnóstico (Ajustes): recuadra lo que lee el detector sobre la cámara.
+cards.marker.debug = settings.diagnostico;
+onSettingsChange.push(() => (cards.marker.debug = settings.diagnostico));
 
 // --- Acertijos: pistas → formar la sustancia con las tarjetas --------------------
 

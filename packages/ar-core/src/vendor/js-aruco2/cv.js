@@ -38,9 +38,22 @@ CV.Image = function(width, height, data){
   this.data = data || [];
 };
 
-CV.grayscale = function(imageSrc, imageDst){
+// WebAR: con `brightest`, cada píxel vale su canal más claro. La tinta negra
+// sigue siendo oscura en los tres, pero las líneas de color de una libreta
+// (azules, verdes, rojas) quedan casi blancas, como el papel.
+CV.grayscale = function(imageSrc, imageDst, brightest){
   var src = imageSrc.data, dst = imageDst.data, len = src.length,
       i = 0, j = 0;
+
+  if (brightest){
+    for (; i < len; i += 4){
+      var r = src[i], g = src[i + 1], b = src[i + 2];
+      dst[j ++] = r > g ? (r > b ? r : b) : (g > b ? g : b);
+    }
+    imageDst.width = imageSrc.width;
+    imageDst.height = imageSrc.height;
+    return imageDst;
+  }
 
   for (; i < len; i += 4){
     dst[j ++] =
@@ -71,17 +84,27 @@ CV.threshold = function(imageSrc, imageDst, threshold){
   return imageDst;
 };
 
-CV.adaptiveThreshold = function(imageSrc, imageDst, kernelSize, threshold){
+// WebAR: `relative` (0-1) exige además que el píxel sea esa fracción más
+// oscuro que su entorno. Así las líneas finas y claras (papel cuadriculado,
+// pautas) no cuentan como tinta y no unen los marcadores entre sí.
+CV.adaptiveThreshold = function(imageSrc, imageDst, kernelSize, threshold, relative){
   var src = imageSrc.data, dst = imageDst.data, len = src.length, tab = [], i;
 
   CV.stackBoxBlur(imageSrc, imageDst, kernelSize);
 
-  for (i = 0; i < 768; ++ i){
-    tab[i] = (i - 255 <= -threshold)? 255: 0;
-  }
+  if (relative){
+    for (i = 0; i < len; ++ i){
+      var mean = dst[i];
+      dst[i] = (mean - src[i] >= Math.max(threshold, mean * relative))? 255: 0;
+    }
+  } else {
+    for (i = 0; i < 768; ++ i){
+      tab[i] = (i - 255 <= -threshold)? 255: 0;
+    }
 
-  for (i = 0; i < len; ++ i){
-    dst[i] = tab[ src[i] - dst[i] + 255 ];
+    for (i = 0; i < len; ++ i){
+      dst[i] = tab[ src[i] - dst[i] + 255 ];
+    }
   }
 
   imageDst.width = imageSrc.width;

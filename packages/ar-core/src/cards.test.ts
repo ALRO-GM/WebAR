@@ -12,6 +12,8 @@ function gauss(rnd: () => number) {
   return Math.sqrt(-2 * Math.log(rnd() || 1e-9)) * Math.cos(2 * Math.PI * rnd());
 }
 const dict = new AR.Dictionary(MARKER_DICTIONARY);
+/** Los ajustes del detector que usa `MarkerTrackingProvider`. */
+const WEBAR = { relativeThreshold: 0.16, thresholdKernel: 3, brightestChannel: true };
 
 /** Foto sintética de tarjetas sobre una mesa: marcador, panel blanco, marco de color; desenfoque y ruido. */
 function photo(markers: { pose: THREE.Matrix4; id: number }[], rnd: () => number, width: number, height: number, focal: number, blur: number, noise: number) {
@@ -64,10 +66,10 @@ const FOCAL = H / 2 / Math.tan(THREE.MathUtils.degToRad(32.5));
 describe('5 tarjetas a la vez con la cámara', () => {
   it('las lee todas, sin tarjetas inventadas, de 40 a 60 cm, rectas o inclinadas, con desenfoque', () => {
     const rnd = random(3);
-    const strict = new AR.Detector({ dictionaryName: MARKER_DICTIONARY, maxHammingDistance: 3 });
+    const strict = new AR.Detector({ dictionaryName: MARKER_DICTIONARY, maxHammingDistance: 4, ...WEBAR });
     for (const dist of [0.4, 0.5, 0.6])
       for (const tilt of [0, 0.6])
-        for (const blur of [0, 2]) {
+        for (const blur of [0, 2, 3]) {
           // El mismo marcador puede salir 2 veces (contorno exterior e interior): la puerta de identidad lo junta.
           const ids = [...new Set(strict.detect(photo(scene(dist, tilt), rnd, W, H, FOCAL, blur, 4)).map((m) => m.id))];
           expect(ids.sort((a, b) => a - b), `${dist} m, ${tilt} rad, desenfoque ${blur}`).toEqual([1, 6, 7, 8, 119]);
@@ -124,3 +126,82 @@ describe('identidad de las tarjetas', () => {
     expect(out.map((d) => d.id).sort((a, b) => a - b)).toEqual([1, 6, 7, 8, 119]);
   });
 });
+
+/**
+ * Tarjetas dibujadas a mano con rotulador en papel cuadriculado (cuadros de
+ * 5 mm, como los cuadros del marcador): toda la hoja tiene líneas de la
+ * cuadrícula, también dentro de los cuadros blancos, y los bordes de la tinta
+ * no son rectos del todo.
+ */
+function handDrawn(dist: number, tilt: number, rnd: () => number, line: [number, number, number] = [150, 150, 150]) {
+  const ids = [1, 8, 6, 119, 7];
+  const table = new THREE.Matrix4().compose(new THREE.Vector3(0, 0, -dist), new THREE.Quaternion().setFromEuler(new THREE.Euler(-tilt, 0, 0)), new THREE.Vector3(1, 1, 1));
+  const inv = table.clone().invert();
+  const origin = new THREE.Vector3().setFromMatrixPosition(inv);
+  const ray = new THREE.Vector3();
+  const cell = 0.005;
+  // Esquina superior izquierda de cada marcador, en cuadros de la hoja.
+  const at = ids.map((_, k) => [((k % 3) - 1) * 14 - 4, k < 3 ? 12 : -2]);
+  const value = (px: number, py: number) => {
+    ray.set((px - W / 2) / FOCAL, -(py - H / 2) / FOCAL, -1).transformDirection(inv);
+    const s = -origin.z / ray.z;
+    const X = origin.x + ray.x * s;
+    const Y = origin.y + ray.y * s;
+    const gx = X / cell;
+    const gy = Y / cell;
+    // Trazo a mano: el borde de la tinta ondula ±0,4 mm.
+    const wobble = 0.08 * Math.sin(gx * 2.3 + gy * 1.7) + 0.06 * Math.sin(gy * 3.1 - gx * 0.9);
+    for (let k = 0; k < ids.length; k++) {
+      const u = gx - at[k][0] + wobble;
+      const v = at[k][1] - gy + wobble;
+      if (u < 0 || v < 0 || u >= 8 || v >= 8) continue;
+      const i = Math.floor(u);
+      const j = Math.floor(v);
+      const black = i === 0 || j === 0 || i === 7 || j === 7 || dict.codeList[ids[k]][(j - 1) * 6 + (i - 1)] !== '1';
+      if (black) return 45;
+    }
+    return Math.min(Math.abs(gx - Math.round(gx)), Math.abs(gy - Math.round(gy))) * cell < 0.0002 ? -1 : 215;
+  };
+  const data = new Uint8ClampedArray(W * H * 4);
+  for (let y = 0; y < H; y++)
+    for (let x = 0; x < W; x++) {
+      const rgb = [0, 0, 0];
+      for (let k = 0; k < 4; k++) {
+        const v = value(x + 0.25 + (k % 2) * 0.5, y + 0.25 + Math.floor(k / 2) * 0.5);
+        for (let c = 0; c < 3; c++) rgb[c] += (v < 0 ? line[c] : v) / 4; // -1: línea de la cuadrícula
+      }
+      const noise = gauss(rnd) * 3;
+      const p = (y * W + x) * 4;
+      for (let c = 0; c < 3; c++) data[p + c] = rgb[c] + noise;
+      data[p + 3] = 255;
+    }
+  return { width: W, height: H, data };
+}
+
+describe('tarjetas dibujadas a mano en papel cuadriculado', () => {
+  /** Fracción de fotogramas en que se lee cada tarjeta (la peor de las 5). */
+  function worstRate(line: [number, number, number], options: { relativeThreshold?: number; brightestChannel?: boolean }): number {
+    const rnd = random(9);
+    const detector = new AR.Detector({ dictionaryName: MARKER_DICTIONARY, maxHammingDistance: 4, ...options });
+    const seen = new Map<number, number>();
+    let frames = 0;
+    for (const dist of [0.35, 0.5])
+      for (const tilt of [0, 0.5])
+        for (let f = 0; f < 3; f++) {
+          frames++;
+          for (const id of new Set(detector.detect(handDrawn(dist, tilt, rnd, line)).map((m) => m.id))) seen.set(id, (seen.get(id) ?? 0) + 1);
+        }
+    return Math.min(...[1, 6, 7, 8, 119].map((id) => (seen.get(id) ?? 0) / frames));
+  }
+
+  it('cuadrícula gris clara: antes se perdía la mitad de las veces, ahora se leen todas', () => {
+    expect(worstRate([150, 150, 150], {})).toBeLessThan(0.7);
+    expect(worstRate([150, 150, 150], WEBAR)).toBeGreaterThanOrEqual(0.9);
+  }, 120000);
+
+  it('cuadrícula azul bien marcada (libreta): se leen todas', () => {
+    expect(worstRate([90, 120, 210], {})).toBeLessThan(0.7);
+    expect(worstRate([90, 120, 210], WEBAR)).toBeGreaterThanOrEqual(0.9);
+  }, 120000);
+});
+

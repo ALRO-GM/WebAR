@@ -77,6 +77,16 @@ Los átomos (`@webar/chem`) tampoco saben de realidad aumentada: un
 Los detalles de los átomos (datos, fuentes, modelos y escalas) están en
 [packages/chem/README.md](../packages/chem/README.md).
 
+## Átomos: tamaños y fondo
+
+Protones y neutrones se exageran mucho (3,2 mm de radio a la escala por
+defecto) para que se vean; en los átomos pesados se reducen lo justo para que
+el núcleo no pase del 40 % del radio. Los electrones son destellos
+(`three/glow.ts`: núcleo blanco y halo aditivo): en Bohr titilan al girar; en
+orbitales estallan cada vez que el electrón «aparece» en otro sitio. Como el
+brillo aditivo no se ve sobre blanco, el visor 3D usa un fondo oscuro de
+escenario también en el tema claro.
+
 ## Sin WebGL, la app sigue funcionando
 
 Hay ordenadores en los que el navegador no puede crear WebGL (gráfica en su
@@ -149,6 +159,29 @@ reales:
 
 `cards.test.ts` fotografía (sintéticamente) 5 tarjetas a 40-60 cm, rectas e
 inclinadas, con desenfoque: se leen las 5 y ninguna inventada.
+
+### Tarjetas dibujadas a mano y papel cuadriculado
+
+El umbral adaptativo del detector marcaba como tinta cualquier línea un poco
+más oscura que su entorno: en papel cuadriculado, las líneas cruzan los
+marcadores y los unen en una red, y deja de haber cuadrados sueltos. Dos
+cambios en `vendor/js-aruco2/cv.js` (marcados con «WebAR»):
+
+- **umbral relativo** (`relativeThreshold: 0.16`, ventana 3): además de ser
+  más oscuro que su entorno, el píxel tiene que serlo en un 16 %; las líneas
+  claras no pasan;
+- **canal más claro** (`brightestChannel`): cada píxel vale su canal más
+  claro, así que una línea azul, verde o roja queda casi blanca y el
+  rotulador negro sigue negro.
+
+Con fotos sintéticas: tarjetas impresas 60/60 (también desenfocadas);
+cuadrícula gris clara o azul, las 5 tarjetas en ≥ 90 % de los fotogramas
+(antes, en torno a la mitad). Una cuadrícula gris oscura sigue molestando:
+ayuda repasar fuerte el borde negro y dejar un cuadro en blanco alrededor.
+Se toleran 3 bits erróneos (trazo a mano); la confirmación evita fantasmas.
+
+**Modo diagnóstico** (Ajustes → «Ver lo que lee la cámara»): recuadra cada
+marcador leído con su número y un color según lo que se hizo con él.
 
 Lo que hacen ARKit y ARCore y aquí no se puede: fundir la cámara con el
 giroscopio y el acelerómetro (odometría visual-inercial) para que la tarjeta

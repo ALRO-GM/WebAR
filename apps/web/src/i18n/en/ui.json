@@ -299,6 +299,12 @@
  "ajustes.calma": {
   "texto": "Reduce motion"
  },
+ "ajustes.diagnostico": {
+  "texto": "Show what the camera reads on the cards"
+ },
+ "ajustes.diagnostico_ayuda": {
+  "texto": "Each marker gets a box with its number: green, tracked; yellow, being confirmed; red, repeated or where another card is; orange, read twice; grey, not one of our cards. If a card has no box, the camera can't see it: more light, closer, or a bolder black border."
+ },
  "ajustes.vibrar": {
   "texto": "Vibrate on reactions"
  },

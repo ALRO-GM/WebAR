@@ -2299,6 +2299,14 @@
   "texto": "Menos movimiento",
   "descripcion": "Interruptor: quita animaciones y temblores"
  },
+ "ajustes.diagnostico": {
+  "texto": "Ver lo que lee la cámara en las tarjetas",
+  "descripcion": "Interruptor del modo diagnóstico de las tarjetas con cámara"
+ },
+ "ajustes.diagnostico_ayuda": {
+  "texto": "Recuadra cada marcador con su número: verde, se sigue; amarillo, confirmándose; rojo, repetido o en el sitio de otra tarjeta; naranja, leído 2 veces; gris, no es de ninguna tarjeta. Si una tarjeta no tiene recuadro, la cámara no la ve: más luz, más cerca o el borde negro más marcado.",
+  "descripcion": "Explicación de los colores del modo diagnóstico"
+ },
  "ajustes.vibrar": {
   "texto": "Vibrar al reaccionar",
   "descripcion": "Interruptor: vibración del móvil (Android)"

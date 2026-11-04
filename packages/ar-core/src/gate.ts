@@ -16,6 +16,9 @@ export interface IdentityGateOptions {
   hold?: number;
 }
 
+/** Qué se decidió con cada lectura del último fotograma (para el modo diagnóstico). */
+export type DetectionStatus = 'aceptada' | 'pendiente' | 'solapada' | 'repetida' | 'ocupado';
+
 interface Pending {
   count: number;
   last: number;
@@ -71,6 +74,8 @@ export class IdentityGate {
   private readonly confirmFrames: number;
   private readonly confirmWindow: number;
   private readonly hold: number;
+  /** Las lecturas del último fotograma y qué se hizo con cada una. */
+  last: Array<{ detection: Detection; status: DetectionStatus }> = [];
 
   constructor(options: IdentityGateOptions = {}) {
     this.confirmFrames = options.confirmFrames ?? 3;
@@ -81,15 +86,27 @@ export class IdentityGate {
   filter<T extends Detection>(detections: readonly T[], time: number): T[] {
     const ordered = [...detections].sort((a, b) => a.hammingDistance - b.hammingDistance || area(b.corners) - area(a.corners));
     const kept: T[] = [];
+    this.last = [];
     for (const d of ordered) {
       const c = center(d.corners);
-      // Solapada con otra lectura mejor de este mismo fotograma, o repetida.
-      if (kept.some((k) => k.id === d.id || inside(c, k.corners) || inside(center(k.corners), d.corners))) continue;
+      // Solapada con otra lectura mejor de este mismo fotograma (el mismo marcador leído dos veces).
+      if (kept.some((k) => inside(c, k.corners) || inside(center(k.corners), d.corners))) {
+        this.last.push({ detection: d, status: 'solapada' });
+        continue;
+      }
+      // El mismo número en dos sitios: dos tarjetas iguales (solo cuenta la primera).
+      if (kept.some((k) => k.id === d.id)) {
+        this.last.push({ detection: d, status: 'repetida' });
+        continue;
+      }
       // En el sitio de una tarjeta conocida con otro número (y que no se ve en otra parte).
       const usurps = [...this.known].some(
         ([id, k]) => id !== d.id && time - k.lastSeen < this.hold && inside(c, k.corners) && !detections.some((o) => o.id === id),
       );
-      if (usurps) continue;
+      if (usurps) {
+        this.last.push({ detection: d, status: 'ocupado' });
+        continue;
+      }
       kept.push(d);
     }
 
@@ -102,9 +119,13 @@ export class IdentityGate {
         const near = p && time - p.last <= this.confirmWindow && Math.hypot(p.center.x - c.x, p.center.y - c.y) < side(d.corners);
         const count = near ? p.count + 1 : 1;
         this.pending.set(d.id, { count, last: time, center: c });
-        if (count < this.confirmFrames) continue;
+        if (count < this.confirmFrames) {
+          this.last.push({ detection: d, status: 'pendiente' });
+          continue;
+        }
         this.pending.delete(d.id);
       }
+      this.last.push({ detection: d, status: 'aceptada' });
       this.known.set(d.id, { corners: d.corners.map((p) => ({ ...p })), lastSeen: time });
       accepted.push(d);
     }

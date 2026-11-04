@@ -3,6 +3,7 @@ import { atomComposition, type AtomComposition } from '../configuration';
 import type { ElementData } from '../types';
 import { BohrModel } from './bohr';
 import { ElectronCloud, type CloudOptions } from './cloud';
+import { nucleusLayout } from '../nucleus';
 import { NucleusMesh } from './nucleus-mesh';
 
 /** `bohr`: electrones en órbitas. `cloud`: nubes de probabilidad (orbitales). */
@@ -18,8 +19,9 @@ export interface AtomViewOptions {
   metersPerPm?: number;
   /**
    * Radio de un protón o neutrón, en metros. Un núcleo real es ~100 000 veces
-   * más pequeño que su átomo: invisible. Aquí se exagera, pero entre núcleos
-   * se respeta la proporción (radio ∝ A^⅓).
+   * más pequeño que su átomo: invisible. Aquí se exagera mucho, para que
+   * protones y neutrones se vean bien; en los átomos pesados se reduce lo
+   * justo para que el núcleo no pase del 40 % del radio del átomo.
    */
   nucleonRadius?: number;
   cloud?: CloudOptions;
@@ -57,7 +59,9 @@ export class AtomView {
     this.radius = element.radius * (options.metersPerPm ?? 0.0004);
     // Tamaños de partículas pensados para la escala por defecto; a otra escala, proporcionales.
     this.k = (options.metersPerPm ?? 0.0004) / 0.0004;
-    this.nucleus = new NucleusMesh(this.composition.protons, this.composition.neutrons, options.nucleonRadius ?? 0.0012 * this.k);
+    const { protons, neutrons } = this.composition;
+    const nucleonRadius = options.nucleonRadius ?? Math.min(0.0032 * this.k, (this.radius * 0.4) / nucleusLayout(protons, neutrons).radius);
+    this.nucleus = new NucleusMesh(protons, neutrons, nucleonRadius);
     this.object.add(this.nucleus.object);
     this.object.name = `atomo:${element.symbol}`;
     this._model = options.model ?? 'bohr';
@@ -72,7 +76,7 @@ export class AtomView {
   setModel(model: AtomModel): void {
     this._model = model;
     if (model === 'bohr' && !this.bohr) {
-      const electronRadius = Math.min(Math.max(this.radius * 0.035, 0.0012 * this.k), 0.0024 * this.k);
+      const electronRadius = Math.min(Math.max(this.radius * 0.035, 0.0012 * this.k), 0.0022 * this.k);
       const inner = Math.min(this.nucleus.radius + electronRadius * 3, this.radius * 0.6);
       this.bohr = new BohrModel(this.composition.shells, inner, this.radius, electronRadius);
       this.object.add(this.bohr.object);
@@ -84,7 +88,7 @@ export class AtomView {
     if (this.bohr) this.bohr.object.visible = model === 'bohr';
     if (this.cloud) this.cloud.object.visible = model === 'cloud';
     // En la nube el núcleo se encoge: ahí lo que importa son los orbitales.
-    this.nucleus.object.scale.setScalar(model === 'cloud' ? 0.5 : 1);
+    this.nucleus.object.scale.setScalar(model === 'cloud' ? 0.6 : 1);
   }
 
   update(dt: number): void {

@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { L_LETTERS, effectiveCharge, orbitalOccupancy, type Subshell } from '../configuration';
 import { orbitalPeakRadius, sampleOrbital } from '../orbitals';
 import { seededRandom } from '../random';
+import { glowMaterial } from './glow';
 
 /** Color de cada tipo de orbital: s, p, d, f. */
 export const ORBITAL_COLORS = [0x58a6ff, 0xff9f43, 0x2ee6a6, 0xd38bff];
@@ -35,6 +36,8 @@ export class ElectronCloud {
   private readonly pointType: Uint8Array; // l del orbital de cada punto
   private readonly palette: Array<[THREE.Color, THREE.Color]>; // [positivo, negativo] por l
   private readonly sparks: THREE.InstancedMesh;
+  private readonly flashes: THREE.Sprite[] = [];
+  private readonly flashSize: number;
   private readonly sparkOrbital: Int32Array;
   private readonly sparkFrom: Float32Array;
   private readonly sparkTo: Float32Array;
@@ -111,7 +114,7 @@ export class ElectronCloud {
     this.points = new THREE.Points(
       geometry,
       new THREE.PointsMaterial({
-        size: atomRadius * 0.03,
+        size: atomRadius * 0.038,
         map: dotTexture(),
         vertexColors: true,
         transparent: true,
@@ -128,8 +131,8 @@ export class ElectronCloud {
     this.pointSign = Int8Array.from(pointSign);
     this.pointType = Uint8Array.from(pointType);
 
-    // Una chispa por electrón.
-    const sparkGeometry = new THREE.SphereGeometry(atomRadius * 0.016, 10, 8);
+    // Una chispa por electrón: un punto blanco con un destello intenso que estalla al aparecer.
+    const sparkGeometry = new THREE.SphereGeometry(atomRadius * 0.014, 10, 8);
     this.sparks = new THREE.InstancedMesh(
       sparkGeometry,
       new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.95 }),
@@ -137,6 +140,14 @@ export class ElectronCloud {
     );
     this.sparks.name = 'electrones';
     this.object.add(this.sparks);
+    this.flashSize = atomRadius * 0.2;
+    const flash = glowMaterial(0xffffff);
+    for (let i = 0; i < sparkOrbital.length; i++) {
+      const sprite = new THREE.Sprite(flash);
+      sprite.scale.setScalar(this.flashSize);
+      this.flashes.push(sprite);
+      this.object.add(sprite);
+    }
     this.sparkOrbital = Int32Array.from(sparkOrbital);
     this.sparkFrom = new Float32Array(sparkOrbital.length * 3);
     this.sparkTo = new Float32Array(sparkOrbital.length * 3);
@@ -182,6 +193,11 @@ export class ElectronCloud {
         this.sparkFrom[i * 3 + 2] + (this.sparkTo[i * 3 + 2] - this.sparkFrom[i * 3 + 2]) * e,
       );
       this.sparks.setMatrixAt(i, this.matrix);
+      // Al «medirlo» en un sitio nuevo, destello fuerte que se apaga enseguida.
+      const burst = Math.max(0, 1 - this.sparkClock[i] * 2.5);
+      const sprite = this.flashes[i];
+      sprite.position.setFromMatrixPosition(this.matrix);
+      sprite.scale.setScalar(this.flashSize * (0.55 + 1.6 * burst * burst));
     }
     this.sparks.instanceMatrix.needsUpdate = true;
     this.object.rotation.y += dt * 0.12;
@@ -192,6 +208,7 @@ export class ElectronCloud {
     (this.points.material as THREE.Material).dispose();
     this.sparks.geometry.dispose();
     (this.sparks.material as THREE.Material).dispose();
+    this.flashes[0]?.material.dispose();
   }
 
   private jump(i: number, immediate: boolean): void {

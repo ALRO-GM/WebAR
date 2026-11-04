@@ -1,30 +1,30 @@
 import * as THREE from 'three';
+import { glowMaterial } from './glow';
 
 export const ELECTRON_COLOR = 0x6fd8ff;
 
 /**
- * Modelo de Bohr: los electrones como bolitas que giran en órbitas circulares,
+ * Modelo de Bohr: los electrones como destellos que giran en órbitas circulares,
  * una por capa (n = 1, 2, 3…), con tantos electrones como tiene esa capa.
  * Las capas internas giran más deprisa, como en el modelo original.
  */
 export class BohrModel {
   readonly object = new THREE.Group();
 
-  private readonly shells: Array<{ pivot: THREE.Group; electrons: THREE.InstancedMesh; radius: number; speed: number; count: number }> = [];
+  private readonly shells: Array<{ pivot: THREE.Group; electrons: THREE.InstancedMesh; glows: THREE.Sprite[]; radius: number; speed: number; count: number }> = [];
+  private readonly glowSize: number;
   private readonly disposables: Array<THREE.BufferGeometry | THREE.Material> = [];
   private readonly matrix = new THREE.Matrix4();
   private time = 0;
 
   constructor(shells: number[], innerRadius: number, outerRadius: number, electronRadius: number) {
-    const electronGeometry = new THREE.SphereGeometry(electronRadius, 14, 10);
-    const electronMaterial = new THREE.MeshStandardMaterial({
-      color: ELECTRON_COLOR,
-      emissive: ELECTRON_COLOR,
-      emissiveIntensity: 0.6,
-      roughness: 0.3,
-    });
-    const ringMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.28, depthWrite: false });
-    this.disposables.push(electronGeometry, electronMaterial, ringMaterial);
+    // Un núcleo blanco pequeño y un halo de luz a su alrededor que titila.
+    const electronGeometry = new THREE.SphereGeometry(electronRadius * 0.7, 12, 8);
+    const electronMaterial = new THREE.MeshBasicMaterial({ color: 0xeafaff });
+    const glow = glowMaterial(ELECTRON_COLOR, 0.95);
+    const ringMaterial = new THREE.MeshBasicMaterial({ color: 0x9fe6ff, transparent: true, opacity: 0.3, depthWrite: false });
+    this.disposables.push(electronGeometry, electronMaterial, glow, ringMaterial);
+    this.glowSize = electronRadius * 7;
 
     const n = shells.length;
     shells.forEach((count, i) => {
@@ -40,20 +40,32 @@ export class BohrModel {
       const electrons = new THREE.InstancedMesh(electronGeometry, electronMaterial, Math.max(count, 1));
       electrons.count = count;
       pivot.add(electrons);
+      const glows = Array.from({ length: count }, () => {
+        const sprite = new THREE.Sprite(glow);
+        sprite.scale.setScalar(this.glowSize);
+        pivot.add(sprite);
+        return sprite;
+      });
       this.object.add(pivot);
-      this.shells.push({ pivot, electrons, radius, speed: 2.4 / (i + 1) ** 1.5, count });
+      this.shells.push({ pivot, electrons, glows, radius, speed: 2.4 / (i + 1) ** 1.5, count });
     });
     this.update(0);
   }
 
   update(dt: number): void {
     this.time += dt;
-    this.shells.forEach(({ pivot, electrons, radius, speed, count }, i) => {
+    this.shells.forEach(({ pivot, electrons, glows, radius, speed, count }, i) => {
       const offset = this.time * speed;
       for (let e = 0; e < count; e++) {
         const angle = offset + (e / count) * Math.PI * 2;
-        this.matrix.makeTranslation(Math.cos(angle) * radius, 0, Math.sin(angle) * radius);
+        const x = Math.cos(angle) * radius;
+        const z = Math.sin(angle) * radius;
+        this.matrix.makeTranslation(x, 0, z);
         electrons.setMatrixAt(e, this.matrix);
+        // Titileo: cada electrón a su ritmo.
+        const twinkle = 0.8 + 0.35 * Math.sin(this.time * (7 + ((e * 5 + i * 3) % 7)) + e * 2.1 + i);
+        glows[e].position.set(x, 0, z);
+        glows[e].scale.setScalar(this.glowSize * twinkle);
       }
       electrons.instanceMatrix.needsUpdate = true;
       // Las órbitas también rotan despacio (precesión), para dar volumen.

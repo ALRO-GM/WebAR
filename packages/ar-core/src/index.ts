@@ -13,7 +13,7 @@ export { ViewerProvider, type ViewerOptions } from './providers/viewer';
 export { MarkerTrackingProvider, type MarkerTrackingEvents, type MarkerTrackingOptions } from './providers/marker-tracking';
 export { MARKER_COUNT, MARKER_DICTIONARY, markerSVG } from './markers';
 export { homography, markerPose, type PinholeCamera, type Point2 } from './pose';
-export { IdentityGate, type Detection, type IdentityGateOptions } from './gate';
+export { IdentityGate, type Detection, type DetectionStatus, type IdentityGateOptions } from './gate';
 export { refineCorners, type GreyImage } from './refine';
 export { OneEuroQuaternion, OneEuroVector, type OneEuroOptions } from './one-euro';
 export type { ARCapability, ARContext, ARProvider, ARProviderHooks, ARSessionEvents } from './types';

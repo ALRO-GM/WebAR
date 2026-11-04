@@ -16,6 +16,8 @@ export interface Settings {
   meta: number;
   /** Mostrar la mascota (el gato cuántico). */
   gato: boolean;
+  /** Tarjetas con cámara: dibujar lo que lee el detector (para ver por qué una tarjeta no sale). */
+  diagnostico: boolean;
 }
 
 const KEY = 'webar:ajustes';
@@ -33,6 +35,7 @@ function defaults(): Settings {
     tema: 'claro',
     meta: 20,
     gato: true,
+    diagnostico: false,
   };
 }
 
@@ -88,7 +91,7 @@ export function setupSettingsForm(form: HTMLFormElement): void {
   field<HTMLInputElement>('calma').checked = settings.calma;
   field<HTMLInputElement>('vibrar').checked = settings.vibrar;
   (form.querySelector(`input[name=tema][value="${settings.tema}"]`) as HTMLInputElement | null)?.setAttribute('checked', '');
-  for (const name of ['sonido', 'gato'] as const) if (form.elements.namedItem(name)) field<HTMLInputElement>(name).checked = settings[name];
+  for (const name of ['sonido', 'gato', 'diagnostico'] as const) if (form.elements.namedItem(name)) field<HTMLInputElement>(name).checked = settings[name];
   (form.querySelector(`input[name=meta][value="${settings.meta}"]`) as HTMLInputElement | null)?.setAttribute('checked', '');
   form.addEventListener('change', () => {
     const data = new FormData(form);
@@ -103,6 +106,7 @@ export function setupSettingsForm(form: HTMLFormElement): void {
       sonido: data.has('sonido'),
       tema: (data.get('tema') ?? settings.tema) as Settings['tema'],
       gato: data.has('gato'),
+      diagnostico: data.has('diagnostico'),
       meta: Number(data.get('meta') ?? settings.meta),
     });
     onSettingsChange.forEach((fn) => fn());
