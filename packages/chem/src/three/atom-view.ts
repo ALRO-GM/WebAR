@@ -76,7 +76,8 @@ export class AtomView {
   setModel(model: AtomModel): void {
     this._model = model;
     if (model === 'bohr' && !this.bohr) {
-      const electronRadius = Math.min(Math.max(this.radius * 0.035, 0.0012 * this.k), 0.0022 * this.k);
+      // El doble que al principio: los electrones se veían poco (sobre todo en la cámara).
+      const electronRadius = Math.min(Math.max(this.radius * 0.07, 0.0024 * this.k), 0.0044 * this.k);
       const inner = Math.min(this.nucleus.radius + electronRadius * 3, this.radius * 0.6);
       this.bohr = new BohrModel(this.composition.shells, inner, this.radius, electronRadius);
       this.object.add(this.bohr.object);

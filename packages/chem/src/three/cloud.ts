@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { L_LETTERS, effectiveCharge, orbitalOccupancy, type Subshell } from '../configuration';
 import { orbitalPeakRadius, sampleOrbital } from '../orbitals';
 import { seededRandom } from '../random';
-import { glowMaterial } from './glow';
+import { glowTexture } from './glow';
 
 /** Color de cada tipo de orbital: s, p, d, f. */
 export const ORBITAL_COLORS = [0x58a6ff, 0xff9f43, 0x2ee6a6, 0xd38bff];
@@ -36,8 +36,8 @@ export class ElectronCloud {
   private readonly pointType: Uint8Array; // l del orbital de cada punto
   private readonly palette: Array<[THREE.Color, THREE.Color]>; // [positivo, negativo] por l
   private readonly sparks: THREE.InstancedMesh;
-  private readonly flashes: THREE.Sprite[] = [];
-  private readonly flashSize: number;
+  /** Destellos de los electrones: una nube de puntos (una llamada de dibujo), su intensidad en el color. */
+  private readonly flashes: THREE.Points;
   private readonly sparkOrbital: Int32Array;
   private readonly sparkFrom: Float32Array;
   private readonly sparkTo: Float32Array;
@@ -132,7 +132,7 @@ export class ElectronCloud {
     this.pointType = Uint8Array.from(pointType);
 
     // Una chispa por electrón: un punto blanco con un destello intenso que estalla al aparecer.
-    const sparkGeometry = new THREE.SphereGeometry(atomRadius * 0.014, 10, 8);
+    const sparkGeometry = new THREE.SphereGeometry(atomRadius * 0.028, 10, 8);
     this.sparks = new THREE.InstancedMesh(
       sparkGeometry,
       new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.95 }),
@@ -140,14 +140,15 @@ export class ElectronCloud {
     );
     this.sparks.name = 'electrones';
     this.object.add(this.sparks);
-    this.flashSize = atomRadius * 0.2;
-    const flash = glowMaterial(0xffffff);
-    for (let i = 0; i < sparkOrbital.length; i++) {
-      const sprite = new THREE.Sprite(flash);
-      sprite.scale.setScalar(this.flashSize);
-      this.flashes.push(sprite);
-      this.object.add(sprite);
-    }
+    const flashGeometry = new THREE.BufferGeometry();
+    flashGeometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(sparkOrbital.length * 3), 3).setUsage(THREE.DynamicDrawUsage));
+    flashGeometry.setAttribute('color', new THREE.BufferAttribute(new Float32Array(sparkOrbital.length * 3), 3).setUsage(THREE.DynamicDrawUsage));
+    this.flashes = new THREE.Points(
+      flashGeometry,
+      new THREE.PointsMaterial({ size: atomRadius * 0.34, map: glowTexture(), vertexColors: true, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }),
+    );
+    this.flashes.frustumCulled = false;
+    this.object.add(this.flashes);
     this.sparkOrbital = Int32Array.from(sparkOrbital);
     this.sparkFrom = new Float32Array(sparkOrbital.length * 3);
     this.sparkTo = new Float32Array(sparkOrbital.length * 3);
@@ -182,6 +183,8 @@ export class ElectronCloud {
     }
 
     // 2. Chispas: cada electrón salta a otra posición probable de su orbital.
+    const flashPosition = this.flashes.geometry.getAttribute('position') as THREE.BufferAttribute;
+    const flashColor = this.flashes.geometry.getAttribute('color') as THREE.BufferAttribute;
     for (let i = 0; i < this.sparkOrbital.length; i++) {
       this.sparkClock[i] += dt * 7;
       if (this.sparkClock[i] >= 1) this.jump(i, false);
@@ -195,11 +198,13 @@ export class ElectronCloud {
       this.sparks.setMatrixAt(i, this.matrix);
       // Al «medirlo» en un sitio nuevo, destello fuerte que se apaga enseguida.
       const burst = Math.max(0, 1 - this.sparkClock[i] * 2.5);
-      const sprite = this.flashes[i];
-      sprite.position.setFromMatrixPosition(this.matrix);
-      sprite.scale.setScalar(this.flashSize * (0.55 + 1.6 * burst * burst));
+      const glow = 0.4 + 0.6 * burst * burst;
+      flashPosition.setXYZ(i, this.matrix.elements[12], this.matrix.elements[13], this.matrix.elements[14]);
+      flashColor.setXYZ(i, glow, glow, glow);
     }
     this.sparks.instanceMatrix.needsUpdate = true;
+    flashPosition.needsUpdate = true;
+    flashColor.needsUpdate = true;
     this.object.rotation.y += dt * 0.12;
   }
 
@@ -208,7 +213,8 @@ export class ElectronCloud {
     (this.points.material as THREE.Material).dispose();
     this.sparks.geometry.dispose();
     (this.sparks.material as THREE.Material).dispose();
-    this.flashes[0]?.material.dispose();
+    this.flashes.geometry.dispose();
+    (this.flashes.material as THREE.Material).dispose();
   }
 
   private jump(i: number, immediate: boolean): void {

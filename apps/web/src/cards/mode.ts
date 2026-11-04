@@ -186,12 +186,16 @@ export class CardsMode {
     }
     button.style.setProperty('--p', String(this.holding ? Math.min(this.holdTime / HOLD_SECONDS, 1) : 0));
     this.game.update(dt, camera);
+    const visuals = new Map(this.game.visuals().map((v) => [v.spec.id, v]));
     for (const [id, extra] of this.extras) {
+      const visual = visuals.get(id);
       // Si la tarjeta cambió de contenido (descomponer), su objeto ya no va.
-      if (!this.game.visuals().some((v) => v.spec.id === id && v.hasExtra)) {
+      if (!visual?.hasExtra) {
         extra.dispose();
         this.extras.delete(id);
-      } else extra.update(dt);
+      } else if (visual.isVisible) extra.update(dt);
+      // Las que no se ven no se animan: antes, cada molécula formada dejaba su objeto
+      // animándose para siempre aunque su tarjeta ya no estuviera, y todo iba más lento.
     }
 
     const visible = this.game.visibleCount;

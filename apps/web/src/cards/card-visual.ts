@@ -12,8 +12,9 @@ import { CARD_SHADOW, cardShadowTexture, roundShadowTexture } from './table-scen
  * partículas serían motas invisibles; aquí el radio se comprime (H ≈ 13 mm,
  * Cs ≈ 35 mm): los grandes siguen siendo más grandes, pero todos se ven.
  */
-const atomRadius = (pm: number) => 0.008 + pm * 0.00009;
-const METERS_PER_ANGSTROM = 0.011;
+// Más grandes que al principio (se veían pequeños sobre la tarjeta): H ≈ 1,9 cm de radio.
+const atomRadius = (pm: number) => 0.012 + pm * 0.00013;
+const METERS_PER_ANGSTROM = 0.015;
 /** Cuánto tarda el contenido en alcanzar la tarjeta al moverla (más = más «flotante»). */
 const FOLLOW = 7;
 
@@ -102,6 +103,11 @@ export class CardVisual {
 
   get content(): Content {
     return this._content;
+  }
+
+  /** Se está viendo (o acaba de dejar de verse): si no, no hace falta animarla. */
+  get isVisible(): boolean {
+    return this.holder.visible;
   }
 
   /** Radio del contenido tal como se ve (con su tamaño 1×-3×), en metros. */
@@ -275,6 +281,9 @@ export class CardVisual {
     this.halo.material.opacity = this.charge * (0.75 + 0.25 * Math.sin(this.time * 18));
     this.ring.material.color.set(this.selected ? 0xffd166 : 0x7fe3ff);
     this.ring.material.opacity = this.targeted || this.selected ? 0.6 + 0.3 * Math.sin(this.time * 6) : 0;
+    // Transparentes del todo: fuera (si no, se dibujan igual y cuestan).
+    this.halo.visible = this.halo.material.opacity > 0.01;
+    this.ring.visible = this.ring.material.opacity > 0.01;
     this.view!.update(dt * (1 + this.charge * 3));
   }
 

@@ -195,10 +195,10 @@ luz, tarjetas planas (pegadas a cartulina) y no acercar el móvil a menos de
 La tarjeta se dibuja **una vez**, en SVG (`apps/web/src/cards/card-svg.ts`,
 `cardSVG(spec, content?)`), en décimas de milímetro (630 × 880):
 
-- fondo del color de su familia **en degradado** (vivo: con el canal más
-  claro que usa el detector, el fondo queda casi blanco y el marcador
-  destaca) con **órbitas** suaves, una por capa del átomo, como si el
-  marcador fuera el núcleo;
+- fondo **neutro, como papel claro** (antes del color de su familia: el
+  átomo de encima se confundía con la tarjeta); el color de la familia va
+  en un **marco** fino y en las **órbitas** (una por capa del átomo, como si
+  el marcador fuera el núcleo). La cámara la ve clara y el marcador destaca;
 - panel blanco con el marcador (40 mm de negro, a 8 mm del borde superior y
   centrado) y su **margen blanco de 5 mm**, en el que no se dibuja nada (si
   no, deja de detectarse);
@@ -337,6 +337,28 @@ Basada en [investigacion-plataforma.md](investigacion-plataforma.md).
   tiene la clase (buenas candidatas para retos) y creación de retos.
 - **Estadísticas y recomendaciones** (`src/teacher/`, ruta
   `profesor.html#clase/<id>/estadisticas`): ver la sección siguiente.
+
+## Rendimiento de la RA
+
+Al juntar tarjetas iba cada vez más lento. Causas y arreglos:
+
+- **Objetos de las moléculas sin ver**: cada molécula formada pone su objeto
+  cotidiano al lado, y se seguía animando aunque la tarjeta ya no se viera:
+  con cada fusión, uno más. Ahora solo se anima lo que se ve
+  (`CardVisual.isVisible`).
+- **Una llamada de dibujo por electrón**: los destellos eran un sprite por
+  electrón (el hierro, 26); ahora son una nube de puntos por capa
+  (`BohrModel`) y otra para los orbitales (`ElectronCloud`). Los halos de
+  carga y selección no se dibujan si son transparentes.
+- **Detección en otro hilo** (`detect-worker.ts`, como en las librerías de RA
+  de verdad): el fotograma reducido va al worker como `ImageBitmap` (sin
+  copia), que busca los marcadores y afina las esquinas; el hilo principal
+  solo calcula poses y dibuja. Si el worker está ocupado, ese fotograma se
+  salta (mejor uno por detrás que una cola). Sin Worker/OffscreenCanvas, se
+  detecta como antes.
+
+Átomos más grandes sobre la tarjeta (H ≈ 1,9 cm de radio, moléculas un 35 %
+mayores) y electrones al doble.
 
 ## Actualizaciones de la PWA
 

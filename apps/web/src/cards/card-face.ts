@@ -45,12 +45,15 @@ export function cardFaceTexture(content: Content, spec: CardSpec): THREE.CanvasT
   const texture = new THREE.CanvasTexture(canvas);
   texture.colorSpace = THREE.SRGBColorSpace;
   texture.anisotropy = 8;
-  // Mientras carga: el color de la tarjeta, para que no parpadee en blanco.
+  // Mientras carga: el papel de la tarjeta, con el marco del color de su familia.
   const species = getSpecies(content);
-  g.fillStyle = species ? '#7c5cff' : FAMILY_COLORS[getElement(spec.symbol).family];
+  g.fillStyle = '#f4f2ec';
+  g.strokeStyle = species ? '#7c5cff' : FAMILY_COLORS[getElement(spec.symbol).family];
+  g.lineWidth = (14 * W) / SVG_W;
   g.beginPath();
   g.roundRect(0, 0, W, H, (32 * W) / SVG_W);
   g.fill();
+  g.stroke();
 
   void embeddedFont().then((css) => {
     const svg = cardSVG(spec, content, { css, noCutLine: true });

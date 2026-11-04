@@ -65,6 +65,7 @@ Las reglas para agentes de IA están en [AGENTS.md](AGENTS.md).
 
 | Fecha | Qué cambió |
 | --- | --- |
+| 2026-11-05 | RA más fluida: la detección de tarjetas va en otro hilo, los objetos de moléculas que no se ven ya no se animan (iba cada vez más lento) y los destellos de electrones se dibujan de una vez; átomos más grandes, electrones al doble y tarjetas de fondo neutro con el color de la familia en el marco |
 | 2026-11-04 | Pestaña **Clase** (actividades del profesorado, meta común, retos de clase, proyectar); laboratorio ordenado en «Formar moléculas», «Mirar de cerca» y retos; acertijos y Adivina los lanza el profesorado a su clase y ve los resultados; **modo demostración** (clase con alias inventados en el panel y alumno con todo desbloqueado: Ajustes o `?demo=alumno`) |
 | 2026-11-04 | La app se llama **Labtory** y vive en `labtory.peer4u.app`; `webar.peer4u.app` redirige (enlaces, QR y tarjetas impresas siguen valiendo) |
 | 2026-11-04 | Mesa virtual: «➕ Añadir elemento» abre la tabla periódica (la bandeja se cortaba en el móvil). Explorar átomos y átomos sobre la mesa, en un solo modo con «En 3D / En tu mesa». Foto con científicos en pausa |

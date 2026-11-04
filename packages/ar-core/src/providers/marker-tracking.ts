@@ -2,12 +2,11 @@ import * as THREE from 'three';
 import { ARAnchor } from '../anchor';
 import { Emitter } from '../emitter';
 import { IdentityGate, type DetectionStatus, type IdentityGateOptions } from '../gate';
-import { MARKER_DICTIONARY } from '../markers';
 import { OneEuroQuaternion, OneEuroVector, type OneEuroOptions } from '../one-euro';
 import { alignCoplanar, markerPose, type PinholeCamera } from '../pose';
-import { refineCorners } from '../refine';
 import type { ARContext, ARProvider, ARProviderHooks } from '../types';
-import { AR, type ArucoDetector } from '../vendor/js-aruco2/index.js';
+import { createDetector, detectMarkers, type DetectedMarker } from '../detection';
+import type { ArucoDetector } from '../vendor/js-aruco2/index.js';
 
 export interface MarkerTrackingOptions {
   /** Lado del cuadrado negro del marcador impreso, en metros. */
@@ -122,6 +121,15 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
   /** Lienzo del modo diagnóstico (lo que lee el detector, dibujado sobre la cámara). */
   private debugCanvas?: HTMLCanvasElement;
   private debugEnabled = false;
+  /**
+   * La detección en otro hilo (detect-worker.ts): si no hay Worker,
+   * OffscreenCanvas o createImageBitmap, se detecta aquí como antes.
+   */
+  private worker?: Worker;
+  private workerBusy = false;
+  private workerFrame = 0;
+  private workerResult?: { markers: DetectedMarker[]; time: number };
+  private workerSent = new Map<number, number>();
 
   constructor(private readonly options: MarkerTrackingOptions) {
     super();
@@ -167,16 +175,8 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     this.video = video;
     this.ctx = ctx;
     this.hooks = hooks;
-    // El detector compara con `<`: 2 bits erróneos como mucho → 3.
-    this.detector = new AR.Detector({
-      dictionaryName: MARKER_DICTIONARY,
-      maxHammingDistance: (this.options.maxBitErrors ?? 3) + 1,
-      // Que las líneas de un papel cuadriculado o de color no cuenten como tinta (ver cv.js).
-      // Valores elegidos con las fotos sintéticas de cards.test.ts (impresas y a mano).
-      relativeThreshold: 0.16,
-      thresholdKernel: 3,
-      brightestChannel: true,
-    });
+    this.detector = createDetector(this.options.maxBitErrors ?? 3);
+    this.startWorker();
     this.gate.reset();
     this.watchFrames();
 
@@ -228,21 +228,75 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     if (!this.video || !this.detector || !source.ready) return;
     if (this.canvas.dataset.size !== `${source.width}x${source.height}`) this.configureCamera();
     const lostAfter = this.options.lostAfter ?? 400;
+    // Lo que haya terminado el worker se aplica en cuanto llega, haya fotograma nuevo o no.
+    if (this.workerResult) {
+      const { markers, time: at } = this.workerResult;
+      this.workerResult = undefined;
+      this.process(markers, at);
+    }
     // Mismo fotograma que la vez anterior: analizarlo otra vez solo gasta batería.
     if (!this.freshFrame) return this.markLost(time, lostAfter);
     if (this.frameCallback !== undefined) this.freshFrame = false;
 
+    if (this.worker) return this.updateWithWorker(time, lostAfter);
     const { width, height } = this.canvas;
     this.g.drawImage(this.video, 0, 0, width, height);
-    const raw = this.detector.detect(this.g.getImageData(0, 0, width, height));
+    this.process(detectMarkers(this.detector, this.g.getImageData(0, 0, width, height)), time);
+    this.markLost(time, lostAfter);
+  }
+
+  private startWorker(): void {
+    if (typeof Worker === 'undefined' || typeof OffscreenCanvas === 'undefined' || typeof createImageBitmap === 'undefined') return;
+    try {
+      this.worker = new Worker(new URL('./detect-worker.ts', import.meta.url), { type: 'module' });
+    } catch {
+      return;
+    }
+    this.worker.onmessage = (e: MessageEvent<{ frame: number; markers: DetectedMarker[] }>) => {
+      this.workerBusy = false;
+      const time = this.workerSent.get(e.data.frame);
+      this.workerSent.delete(e.data.frame);
+      if (time !== undefined) this.workerResult = { markers: e.data.markers, time };
+    };
+    // Si el worker falla (navegador raro), se vuelve a detectar en el hilo principal.
+    this.worker.onerror = () => {
+      this.worker?.terminate();
+      this.worker = undefined;
+      this.workerBusy = false;
+    };
+  }
+
+  /**
+   * Con worker: se le manda el fotograma nuevo si está libre (si no, se salta:
+   * mejor ir un fotograma por detrás que acumular cola) y se aplica el último
+   * resultado que haya llegado, con la hora del fotograma que analizó.
+   */
+  private updateWithWorker(time: number, lostAfter: number): void {
+    if (!this.workerBusy && this.video) {
+      this.workerBusy = true;
+      const frame = ++this.workerFrame;
+      this.workerSent.set(frame, time);
+      const worker = this.worker!;
+      createImageBitmap(this.video, { resizeWidth: this.canvas.width, resizeHeight: this.canvas.height, resizeQuality: 'medium' })
+        .then((bitmap) => worker.postMessage({ frame, bitmap, maxBitErrors: this.options.maxBitErrors ?? 3 }, [bitmap]))
+        .catch(() => {
+          this.workerBusy = false;
+          this.workerSent.delete(frame);
+        });
+    } else if (this.frameCallback !== undefined) this.freshFrame = true; // ocupado: este fotograma no se ha analizado
+    this.markLost(time, lostAfter);
+  }
+
+  /** Identidades, poses y anclas a partir de lo detectado en un fotograma. */
+  private process(raw: DetectedMarker[], time: number): void {
+    const lostAfter = this.options.lostAfter ?? 400;
     const known = raw.filter((m) => !this.options.accept || this.options.accept(m.id));
     const markers = this.gate.filter(known, time);
     if (this.debugEnabled) this.drawDebug([...this.gate.last, ...raw.filter((m) => !known.includes(m)).map((detection) => ({ detection, status: 'desconocida' as const }))]);
 
     const seen: { id: number; pose: THREE.Matrix4; weight: number }[] = [];
     for (const marker of markers) {
-      // El detector da esquinas en píxeles enteros: afinarlas quita la mayor parte del temblor.
-      const corners = this.detector.grey ? refineCorners(this.detector.grey, marker.corners) : marker.corners;
+      const corners = marker.refined;
       const previous = this.tracked.get(marker.id);
       const hint = previous && time - previous.lastSeen < lostAfter ? previous.raw : undefined;
       const pose = markerPose(corners, this.options.markerSize, this.pinhole, new THREE.Matrix4(), hint);
@@ -251,7 +305,6 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     }
     if (this.options.coplanar) alignCoplanar(seen.map((s) => s.pose), seen.map((s) => s.weight));
     for (const { id, pose } of seen) this.updateTracked(id, pose, time);
-    this.markLost(time, lostAfter);
   }
 
   private markLost(time: number, lostAfter: number): void {
@@ -332,6 +385,11 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     this.tracked.clear();
     this.debugCanvas?.remove();
     this.debugCanvas = undefined;
+    this.worker?.terminate();
+    this.worker = undefined;
+    this.workerBusy = false;
+    this.workerResult = undefined;
+    this.workerSent.clear();
     this.ctx = this.video = this.stream = this.detector = undefined;
     if (this.frameCallback !== undefined && video instanceof HTMLVideoElement) video.cancelVideoFrameCallback(this.frameCallback);
     this.frameCallback = undefined;

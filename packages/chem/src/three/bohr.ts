@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { glowMaterial } from './glow';
+import { glowTexture } from './glow';
 
 export const ELECTRON_COLOR = 0x6fd8ff;
 
@@ -11,8 +11,8 @@ export const ELECTRON_COLOR = 0x6fd8ff;
 export class BohrModel {
   readonly object = new THREE.Group();
 
-  private readonly shells: Array<{ pivot: THREE.Group; electrons: THREE.InstancedMesh; glows: THREE.Sprite[]; radius: number; speed: number; count: number }> = [];
-  private readonly glowSize: number;
+  private readonly shells: Array<{ pivot: THREE.Group; electrons: THREE.InstancedMesh; glows: THREE.Points; radius: number; speed: number; count: number }> = [];
+  private readonly color = new THREE.Color(ELECTRON_COLOR);
   private readonly disposables: Array<THREE.BufferGeometry | THREE.Material> = [];
   private readonly matrix = new THREE.Matrix4();
   private time = 0;
@@ -21,10 +21,21 @@ export class BohrModel {
     // Un núcleo blanco pequeño y un halo de luz a su alrededor que titila.
     const electronGeometry = new THREE.SphereGeometry(electronRadius * 0.7, 12, 8);
     const electronMaterial = new THREE.MeshBasicMaterial({ color: 0xeafaff });
-    const glow = glowMaterial(ELECTRON_COLOR, 0.95);
+    // Los destellos de una capa son UNA nube de puntos (una sola llamada de
+    // dibujo), no un sprite por electrón: con átomos grandes y varias tarjetas
+    // eran cientos de llamadas por fotograma. El titileo va en el color (con
+    // mezcla aditiva, más oscuro = más tenue).
+    const glow = new THREE.PointsMaterial({
+      // Con perspectiva, un punto se ve algo más pequeño que un sprite del mismo tamaño: por eso 12 y no 7.
+      size: electronRadius * 12,
+      map: glowTexture(),
+      vertexColors: true,
+      transparent: true,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+    });
     const ringMaterial = new THREE.MeshBasicMaterial({ color: 0x9fe6ff, transparent: true, opacity: 0.3, depthWrite: false });
     this.disposables.push(electronGeometry, electronMaterial, glow, ringMaterial);
-    this.glowSize = electronRadius * 7;
 
     const n = shells.length;
     shells.forEach((count, i) => {
@@ -40,12 +51,13 @@ export class BohrModel {
       const electrons = new THREE.InstancedMesh(electronGeometry, electronMaterial, Math.max(count, 1));
       electrons.count = count;
       pivot.add(electrons);
-      const glows = Array.from({ length: count }, () => {
-        const sprite = new THREE.Sprite(glow);
-        sprite.scale.setScalar(this.glowSize);
-        pivot.add(sprite);
-        return sprite;
-      });
+      const glowGeometry = new THREE.BufferGeometry();
+      glowGeometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(count * 3), 3).setUsage(THREE.DynamicDrawUsage));
+      glowGeometry.setAttribute('color', new THREE.BufferAttribute(new Float32Array(count * 3), 3).setUsage(THREE.DynamicDrawUsage));
+      this.disposables.push(glowGeometry);
+      const glows = new THREE.Points(glowGeometry, glow);
+      glows.frustumCulled = false;
+      pivot.add(glows);
       this.object.add(pivot);
       this.shells.push({ pivot, electrons, glows, radius, speed: 2.4 / (i + 1) ** 1.5, count });
     });
@@ -56,6 +68,8 @@ export class BohrModel {
     this.time += dt;
     this.shells.forEach(({ pivot, electrons, glows, radius, speed, count }, i) => {
       const offset = this.time * speed;
+      const position = glows.geometry.getAttribute('position') as THREE.BufferAttribute;
+      const color = glows.geometry.getAttribute('color') as THREE.BufferAttribute;
       for (let e = 0; e < count; e++) {
         const angle = offset + (e / count) * Math.PI * 2;
         const x = Math.cos(angle) * radius;
@@ -63,11 +77,13 @@ export class BohrModel {
         this.matrix.makeTranslation(x, 0, z);
         electrons.setMatrixAt(e, this.matrix);
         // Titileo: cada electrón a su ritmo.
-        const twinkle = 0.8 + 0.35 * Math.sin(this.time * (7 + ((e * 5 + i * 3) % 7)) + e * 2.1 + i);
-        glows[e].position.set(x, 0, z);
-        glows[e].scale.setScalar(this.glowSize * twinkle);
+        const twinkle = 0.7 + 0.3 * Math.sin(this.time * (7 + ((e * 5 + i * 3) % 7)) + e * 2.1 + i);
+        position.setXYZ(e, x, 0, z);
+        color.setXYZ(e, this.color.r * twinkle, this.color.g * twinkle, this.color.b * twinkle);
       }
       electrons.instanceMatrix.needsUpdate = true;
+      position.needsUpdate = true;
+      color.needsUpdate = true;
       // Las órbitas también rotan despacio (precesión), para dar volumen.
       pivot.rotation.y += dt * 0.15 * (i % 2 ? -1 : 1);
     });

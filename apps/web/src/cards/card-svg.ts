@@ -27,14 +27,19 @@ const MARKER_Y = Math.round(CARD.markerTop * 10000);
  */
 const PANEL = { x: MARKER_X - QUIET - 8, y: MARKER_Y - QUIET - 8, w: MARKER + 2 * QUIET + 16, h: MARKER + 2 * QUIET + 32 };
 
-/** Color de cada familia: vivos (la cámara los ve claros y el marcador destaca) y con degradado en la tarjeta. */
+/** Color de cada familia: el marco, las órbitas y los detalles de la tarjeta (el fondo es papel neutro). */
 export const FAMILY_COLORS: Record<string, string> = {
   'no-metal': '#3fd08a', 'gas-noble': '#c99bff', alcalino: '#ff7b7b', alcalinoterreo: '#ffab3d', metaloide: '#d9cb3a',
   halogeno: '#3fd3b6', 'metal-postransicion': '#9db3cf', 'metal-transicion': '#ff8fc2', lantanido: '#ffd23f', actinido: '#ef9ae6',
 };
 const MOLECULE_COLOR = '#7c5cff';
+/** El papel de la tarjeta: blanco roto, un poco más oscuro abajo. */
+const PAPER_TOP = '#fbfaf6';
+const PAPER_BOTTOM = '#ebe8df';
 const IONIC_COLOR = '#1cb0f6';
 const INK = '#23232b';
+/** Borde suave de las piezas blancas sobre el papel. */
+const LINE = '#d9d5ca';
 const FONT = `'Nunito Variable', 'Nunito', system-ui, sans-serif`;
 const PROTON = '#ff4d5a';
 const NEUTRON = '#7d8696';
@@ -64,12 +69,15 @@ export function cardSVG(spec: CardSpec, content: Content = spec.symbol, options:
   const shells = element ? atomComposition(element).shells.length : 3;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${SVG_W} ${SVG_H}" width="${CARD.width * 1000}mm" height="${CARD.height * 1000}mm" font-family="${FONT}">` +
     (options.css ? `<style>${options.css}</style>` : '') +
-    `<defs><linearGradient id="${id}g" x1="0" y1="0" x2="0.35" y2="1">` +
-    `<stop offset="0" stop-color="${mix(color, '#ffffff', 0.28)}"/><stop offset="0.55" stop-color="${color}"/><stop offset="1" stop-color="${mix(color, '#000000', 0.16)}"/></linearGradient>` +
+    // Fondo neutro (papel claro): el átomo de encima no se confunde con la tarjeta y
+    // la cámara la ve clara. El color de la familia, solo en el marco y detalles.
+    `<defs><linearGradient id="${id}g" x1="0" y1="0" x2="0.3" y2="1">` +
+    `<stop offset="0" stop-color="${PAPER_TOP}"/><stop offset="1" stop-color="${PAPER_BOTTOM}"/></linearGradient>` +
     `<clipPath id="${id}c"><rect width="${SVG_W}" height="${SVG_H}" rx="32"/></clipPath></defs>` +
     `<rect width="${SVG_W}" height="${SVG_H}" rx="32" fill="url(#${id}g)"/>` +
     // El marcador hace de núcleo: órbitas alrededor (una por capa del átomo).
-    `<g clip-path="url(#${id}c)">${orbits(shells)}</g>` +
+    `<g clip-path="url(#${id}c)">${orbits(shells, color)}</g>` +
+    `<rect x="9" y="9" width="${SVG_W - 18}" height="${SVG_H - 18}" rx="25" fill="none" stroke="${color}" stroke-width="14"/>` +
     `<rect x="${PANEL.x}" y="${PANEL.y}" width="${PANEL.w}" height="${PANEL.h}" rx="26" fill="#fff"/>` +
     (element ? bondStubs(element) : '') +
     body +
@@ -77,25 +85,17 @@ export function cardSVG(spec: CardSpec, content: Content = spec.symbol, options:
     `</svg>`;
 }
 
-/** Mezcla dos colores #rrggbb (t = cuánto del segundo). */
-function mix(a: string, b: string, t: number): string {
-  const pa = parseInt(a.slice(1), 16);
-  const pb = parseInt(b.slice(1), 16);
-  const ch = (shift: number) => Math.round(((pa >> shift) & 255) * (1 - t) + ((pb >> shift) & 255) * t);
-  return `#${((ch(16) << 16) | (ch(8) << 8) | ch(0)).toString(16).padStart(6, '0')}`;
-}
-
-/** Órbitas suaves centradas en el marcador: se ven en los márgenes y abajo, detrás de los textos. */
-function orbits(shells: number): string {
+/** Órbitas suaves centradas en el marcador, del color de la familia: se ven en los márgenes y abajo. */
+function orbits(shells: number, color: string): string {
   const cx = SVG_W / 2;
   const cy = SVG_H * 0.52;
   let out = '';
   for (let i = 0; i < shells; i++) {
     const r = 300 + i * 46;
-    out += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#fff" stroke-opacity="${(0.42 - i * 0.04).toFixed(2)}" stroke-width="6"/>`;
+    out += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${color}" stroke-opacity="${(0.45 - i * 0.04).toFixed(2)}" stroke-width="5"/>`;
     // Un electrón por órbita, cada uno en un ángulo (en los márgenes o abajo, donde se ven).
     const a = [0.78, 0.22, 0.62, 0.36, 0.84, 0.15, 0.7][i] * Math.PI;
-    out += `<circle cx="${(cx + Math.cos(a) * r).toFixed(1)}" cy="${(cy + Math.sin(a) * r).toFixed(1)}" r="11" fill="#fff" fill-opacity="0.85"/>`;
+    out += `<circle cx="${(cx + Math.cos(a) * r).toFixed(1)}" cy="${(cy + Math.sin(a) * r).toFixed(1)}" r="11" fill="${color}"/>`;
   }
   return out;
 }
@@ -172,7 +172,7 @@ function elementBody(spec: CardSpec): string {
   return (
     marker +
     // Casilla de la tabla periódica: número atómico, símbolo y masa.
-    `<rect x="${tile.x}" y="${tile.y}" width="${tile.w}" height="${tile.h}" rx="22" fill="#fff"/>` +
+    `<rect x="${tile.x}" y="${tile.y}" width="${tile.w}" height="${tile.h}" rx="22" fill="#fff" stroke="${LINE}" stroke-width="3"/>` +
     `<rect x="${tile.x}" y="${tile.y + tile.h - 10}" width="${tile.w}" height="10" fill="${color}" fill-opacity="0.35"/>` +
     `<text x="${tile.x + 20}" y="${tile.y + 50}" font-size="42" font-weight="900" fill="${INK}">${e.z}</text>` +
     text(e.symbol, tile.x + tile.w / 2, tile.y + 168, { size: 132, weight: 900, fill: INK, max: tile.w - 24 }) +
@@ -184,7 +184,7 @@ function elementBody(spec: CardSpec): string {
       .map(([n, letter, sign, col], i) => {
         const x = right + i * (pillW + 8);
         return (
-          `<rect x="${x}" y="696" width="${pillW}" height="58" rx="29" fill="#fff"/>` +
+          `<rect x="${x}" y="696" width="${pillW}" height="58" rx="29" fill="#fff" stroke="${LINE}" stroke-width="3"/>` +
           `<text x="${x + pillW / 2}" y="737" text-anchor="middle" font-weight="900" fill="${col}" font-size="${n >= 100 ? 28 : 32}">${n}` +
           `<tspan font-size="22" font-weight="800" fill="${INK}" fill-opacity="0.6" dx="5">${letter}</tspan><tspan font-size="16" font-weight="900" fill="${INK}" fill-opacity="0.6" dy="-10">${sign}</tspan></text>`
         );
@@ -200,7 +200,7 @@ function elementBody(spec: CardSpec): string {
 function bohrIcon(cx: number, cy: number, r: number, shells: number[], color: string): string {
   const n = shells.length;
   const nucleus = Math.max(5, r * 0.26);
-  let out = `<circle cx="${cx}" cy="${cy}" r="${r + 3}" fill="#fff"/>`;
+  let out = `<circle cx="${cx}" cy="${cy}" r="${r + 3}" fill="#fff" stroke="${LINE}" stroke-width="2"/>`;
   shells.forEach((count, i) => {
     const radius = nucleus + ((r - nucleus) * (i + 1)) / n;
     out += `<circle cx="${cx}" cy="${cy}" r="${radius.toFixed(1)}" fill="none" stroke="${INK}" stroke-opacity="0.3" stroke-width="1.6"/>`;
@@ -231,10 +231,10 @@ function moleculeBody(id: string, spec: CardSpec): string {
     text(`ΔHf° = ${num(dh, 2)} kJ/mol`, cx, PANEL.y + PANEL.h - 26, { size: 26, weight: 800, fill: dhColor, max: PANEL.w - 40 }) +
     // Fórmula, nombre y uso.
     formula(contentFormula(id), SVG_W / 2, 650, 88, SVG_W - 90) +
-    text(speciesName(id), SVG_W / 2, 702, { size: 40, weight: 900, fill: '#fff', max: SVG_W - 90 }) +
-    use.map((line, i) => text(line, SVG_W / 2, 742 + i * 30, { size: 24, weight: 700, fill: '#fff', opacity: 0.9, max: SVG_W - 90 })).join('') +
+    text(speciesName(id), SVG_W / 2, 702, { size: 40, weight: 900, fill: INK, max: SVG_W - 90 }) +
+    use.map((line, i) => text(line, SVG_W / 2, 742 + i * 30, { size: 24, weight: 700, fill: INK, opacity: 0.8, max: SVG_W - 90 })).join('') +
     text(`${t('cara.tarjeta', { simbolo: spec.symbol, n: spec.marker ?? spec.id })} · ${t('cara.descomponer', { simbolo: spec.symbol })}`, SVG_W / 2, 862, {
-      size: 19, weight: 800, fill: '#fff', opacity: 0.75, max: SVG_W - 70,
+      size: 19, weight: 800, fill: INK, opacity: 0.6, max: SVG_W - 70,
     })
   );
 }
@@ -336,7 +336,7 @@ function formula(f: string, x: number, y: number, size: number, max: number): st
     out += `<tspan${dy ? ` dy="${(dy * s).toFixed(1)}"` : ''}${next !== 'n' ? ` font-size="${(s * 0.6).toFixed(1)}"` : ''}>${glyph}</tspan>`;
     mode = next;
   }
-  return `<text x="${x}" y="${y}" text-anchor="middle" font-size="${s.toFixed(1)}" font-weight="900" fill="#fff">${out}</text>`;
+  return `<text x="${x}" y="${y}" text-anchor="middle" font-size="${s.toFixed(1)}" font-weight="900" fill="${INK}">${out}</text>`;
 }
 
 function wrapLines(content: string, size: number, max: number, lines: number): string[] {
