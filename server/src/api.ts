@@ -18,6 +18,8 @@ const EVENT_TYPES = new Set(['descubrir', 'reaccion', 'reto', 'elemento', 'lecci
 const MAX_EVENT_DATA = 2000;
 const AVATAR = /^[a-z0-9-]{1,30}$/;
 const MAX_EVENTS_PER_SYNC = 500;
+/** Eventos que se dan al panel de estadísticas de una clase (los más recientes). */
+const MAX_STATS_EVENTS = 100_000;
 
 class HttpError extends Error {
   readonly status: number;
@@ -170,6 +172,23 @@ export function createApi(db: DB, options: ApiOptions = {}) {
       return { profesor: publicTeacher(id), clases: classes };
     }],
 
+    // Cada clase en números de la última semana, para compararlas.
+    ['GET', /^\/api\/profesor\/resumen$/, (req) => {
+      const id = teacherFrom(req);
+      const since = new Date(now().getTime() - 7 * 86400000).toISOString();
+      const rows = q(
+        `select c.id,
+           (select count(*) from students s where s.class_id = c.id) as alumnos,
+           (select count(distinct student_id) from events e where e.class_id = c.id and e.client_time >= ?) as activos,
+           (select count(*) from events e where e.class_id = c.id and e.client_time >= ?) as acciones,
+           (select count(*) from events e where e.class_id = c.id and e.type = 'leccion' and e.client_time >= ?) as lecciones,
+           (select coalesce(sum(json_extract(data, '$.aciertos')), 0) from events e where e.class_id = c.id and e.type in ('leccion', 'adivina')) as aciertos,
+           (select coalesce(sum(json_extract(data, '$.total')), 0) from events e where e.class_id = c.id and e.type in ('leccion', 'adivina')) as preguntas
+         from classes c where c.teacher_id = ? order by c.created desc`,
+      ).all(since, since, since, id);
+      return { desde: since, clases: rows };
+    }],
+
     // --- Clases -------------------------------------------------------------
     ['POST', /^\/api\/clases$/, (req) => {
       const teacher = teacherFrom(req);
@@ -200,6 +219,17 @@ export function createApi(db: DB, options: ApiOptions = {}) {
          where class_id = ? and type = 'reaccion' group by reaction order by times desc limit 15`,
       ).all(id);
       return { clase: cls, alumnos: students, retos: challengesOf(id), actividad: activity, reacciones: reactions, ...classSummary(id) };
+    }],
+    // Los eventos de la clase para las estadísticas: el panel los analiza (con
+    // el mismo cálculo de progreso que la app). Solo alias y lo que se ha hecho.
+    ['GET', /^\/api\/clases\/(\d+)\/eventos$/, (req, m) => {
+      const cls = ownClass(teacherFrom(req), Number(m[1]));
+      const alumnos = q('select id, alias, created, last_seen from students where class_id = ? order by alias').all(cls.id as number);
+      const rows = q(
+        `select student_id, type, data, client_time from events where class_id = ? order by client_time desc limit ${MAX_STATS_EVENTS}`,
+      ).all(cls.id as number) as Array<{ student_id: number; type: string; data: string; client_time: string }>;
+      const eventos = rows.reverse().map((r) => [r.student_id, r.type, JSON.parse(r.data), r.client_time]);
+      return { clase: { id: cls.id, name: cls.name, course: cls.course }, alumnos, eventos, completo: rows.length < MAX_STATS_EVENTS };
     }],
     ['DELETE', /^\/api\/clases\/(\d+)$/, (req, m) => {
       ownClass(teacherFrom(req), Number(m[1]));

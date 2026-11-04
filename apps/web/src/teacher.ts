@@ -6,8 +6,10 @@ import { REACTIONS, SPECIES, getSpecies } from '@webar/chem';
 import { t, translate } from './i18n';
 import { applySettings } from './settings';
 import { COURSES, COURSE_SPECIES } from './platform/progress';
+import { wireTooltips } from './teacher/charts';
+import { compareClasses, renderStats, type ClassEventsResponse } from './teacher/stats-view';
 
-// Panel del profesorado: cuenta, clases, alumnado, estadísticas y retos.
+// Panel del profesorado: cuenta, clases, alumnado, estadísticas (teacher/) y retos.
 // Necesita conexión (el alumnado es quien usa la app sin ella).
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
@@ -98,7 +100,12 @@ async function renderClasses(): Promise<void> {
     <form id="f-clase" class="tarjeta-panel en-linea"><h3>${t('profe.nueva_clase')}</h3>
       <label>${t('profe.nombre_clase')}<input name="nombre" required maxlength="80" /></label>
       <label>${t('profe.curso')}<select name="curso">${COURSES.map((c) => `<option value="${c}">${t(`curso.${c}`)}</option>`).join('')}</select></label>
-      <button>${t('profe.crear')}</button><p class="error" role="alert"></p></form>`;
+      <button>${t('profe.crear')}</button><p class="error" role="alert"></p></form>
+    <div id="comparar"></div>`;
+  if (data.clases.length > 1)
+    void api<{ clases: Parameters<typeof compareClasses>[0] }>('GET', '/api/profesor/resumen')
+      .then((r) => ($('comparar').innerHTML = compareClasses(r.clases, new Map(data.clases.map((c) => [c.id, c.name])))))
+      .catch(() => undefined);
   const form = $<HTMLFormElement>('f-clase');
   guard(form, async () => {
     const c = await api<ClassRow>('POST', '/api/clases', Object.fromEntries(new FormData(form)));
@@ -120,6 +127,7 @@ async function renderClass(id: number): Promise<void> {
 
   view.innerHTML = `<p><a href="#">${t('profe.volver')}</a></p>
     <h2>${esc(d.clase.name)} <small>${t(`curso.${d.clase.course}`)}</small></h2>
+    <a class="boton-estadisticas" href="#clase/${id}/estadisticas"><span aria-hidden="true">📊</span><span><b>${t('estadisticas.abrir')}</b><small>${t('estadisticas.abrir_texto')}</small></span></a>
     <section class="codigo-clase tarjeta-panel">
       <div><h3>${t('profe.codigo')}</h3><p class="codigo">${d.clase.code}</p><p class="pequeno">${t('profe.codigo_texto')}</p><p class="pequeno"><a href="${esc(link)}">${esc(link)}</a></p></div>
       <div class="qr" role="img" aria-label="QR: ${esc(link)}">${qr.createSvgTag({ cellSize: 5, margin: 2, scalable: true })}</div>
@@ -283,8 +291,11 @@ function renderActivity(rows: Detail['actividad'], asTable = false): void {
 async function route(): Promise<void> {
   try {
     if (!token) return renderLogin();
-    const m = location.hash.match(/^#clase\/(\d+)$/);
-    if (m) await renderClass(Number(m[1]));
+    const m = location.hash.match(/^#clase\/(\d+)(\/estadisticas)?$/);
+    if (m?.[2]) {
+      view.innerHTML = `<p class="pequeno">${t('estadisticas.cargando')}</p>`;
+      renderStats(view, await api<ClassEventsResponse>('GET', `/api/clases/${m[1]}/eventos`));
+    } else if (m) await renderClass(Number(m[1]));
     else await renderClasses();
   } catch (error) {
     view.innerHTML = `<p class="error" role="alert">${esc((error as Error).message)}</p>`;
@@ -293,5 +304,6 @@ async function route(): Promise<void> {
 
 applySettings();
 translate();
+wireTooltips(view, $('tooltip'));
 window.addEventListener('hashchange', () => void route());
 void route();

@@ -11,8 +11,29 @@ import type { PathNode } from './path';
  */
 export type Exercise =
   | { kind: 'ensena'; symbol: string; title: string; text: string; extra?: string; visual: 'atomo' | 'objeto' | 'guia' }
-  | { kind: 'opcion'; prompt: string; quote?: string; options: string[]; answer: number; explain?: string; symbol?: string }
+  | { kind: 'opcion'; prompt: string; quote?: string; options: string[]; answer: number; explain?: string; symbol?: string; skill: Skill; topic: string }
   | { kind: 'formula'; species: string; tiles: string[] };
+
+/**
+ * Qué se pregunta: con esto y el elemento (o la sustancia) cada respuesta se
+ * guarda en el progreso, y el profesorado ve qué cuesta más (estadísticas).
+ */
+export const SKILLS = ['dato', 'protones', 'electrones', 'neutrones', 'simbolo', 'pista', 'formula', 'objeto'] as const;
+export type Skill = (typeof SKILLS)[number];
+
+/** Una respuesta: tipo de pregunta, elemento o sustancia, y si se acertó a la primera. */
+export interface Answer {
+  tipo: Skill;
+  tema: string;
+  ok: boolean;
+}
+
+/** El tipo y el tema de un ejercicio (null: las tarjetas que solo enseñan). */
+export function answerKey(ex: Exercise): { tipo: Skill; tema: string } | null {
+  if (ex.kind === 'formula') return { tipo: 'formula', tema: ex.species };
+  if (ex.kind === 'opcion') return { tipo: ex.skill, tema: ex.topic };
+  return null;
+}
 
 const shuffle = <T>(list: T[], rnd = Math.random): T[] => {
   const a = [...list];
@@ -25,9 +46,9 @@ const shuffle = <T>(list: T[], rnd = Math.random): T[] => {
 
 const pick = <T>(list: T[], n: number, rnd = Math.random) => shuffle(list, rnd).slice(0, n);
 
-function choice(prompt: string, right: string, wrong: string[], extra: Partial<Extract<Exercise, { kind: 'opcion' }>> = {}): Exercise {
+function choice(skill: Skill, topic: string, prompt: string, right: string, wrong: string[], extra: Partial<Extract<Exercise, { kind: 'opcion' }>> = {}): Exercise {
   const options = shuffle([right, ...wrong.filter((w) => w !== right).slice(0, 3)]);
-  return { kind: 'opcion', prompt, options, answer: options.indexOf(right), ...extra };
+  return { kind: 'opcion', skill, topic, prompt, options, answer: options.indexOf(right), ...extra };
 }
 
 /** Otros elementos para despistar: los conocidos y, si faltan, los primeros de la tabla. */
@@ -43,7 +64,7 @@ const key = (symbol: string, field: string) => `elemento.${symbol}.${field}`;
 function factQuestion(symbol: string): Exercise | null {
   const q = key(symbol, 'pregunta');
   if (!has(q)) return null;
-  return choice(t(q), t(`${q}.ok`), [t(`${q}.mal1`), t(`${q}.mal2`), t(`${q}.mal3`)], { explain: t(`${q}.explicacion`), symbol });
+  return choice('dato', symbol, t(q), t(`${q}.ok`), [t(`${q}.mal1`), t(`${q}.mal2`), t(`${q}.mal3`)], { explain: t(`${q}.explicacion`), symbol });
 }
 
 /** Nombre de un elemento dentro de una frase: «el hidrógeno», no «el Hidrógeno». */
@@ -68,7 +89,7 @@ export function particleQuestion(symbol: string, kind = (['protones', 'electrone
   const vars = { nombre: inSentence(symbol), simbolo: e.symbol, z: e.z, a: e.massNumber, neutrones: n };
   const right = kind === 'neutrones' ? n : e.z;
   const wrong = kind === 'neutrones' ? nearby(n, [e.z, e.massNumber]) : nearby(e.z, [n, e.massNumber]);
-  return choice(t(`leccion.${kind}`, vars), String(right), wrong, { explain: t(`leccion.${kind}_explica`, vars), symbol });
+  return choice(kind, symbol, t(`leccion.${kind}`, vars), String(right), wrong, { explain: t(`leccion.${kind}_explica`, vars), symbol });
 }
 
 function symbolQuestion(symbol: string, known: string[]): Exercise {
@@ -76,13 +97,13 @@ function symbolQuestion(symbol: string, known: string[]): Exercise {
   // Símbolos parecidos: misma inicial primero.
   const similar = ELEMENTS.filter((x) => x.symbol !== symbol && x.symbol[0] === symbol[0]).map((x) => x.symbol);
   const wrong = [...pick(similar, 2), ...distractors(symbol, known)];
-  return choice(t('leccion.simbolo', { nombre: inSentence(symbol) }), e.symbol, [...new Set(wrong)]);
+  return choice('simbolo', symbol, t('leccion.simbolo', { nombre: inSentence(symbol) }), e.symbol, [...new Set(wrong)]);
 }
 
 function clueQuestion(symbol: string, known: string[]): Exercise | null {
   const k = key(symbol, 'pista');
   if (!has(k)) return null;
-  return choice(t('leccion.quien'), elementName(symbol), distractors(symbol, known).map(elementName), { quote: t(k), symbol });
+  return choice('pista', symbol, t('leccion.quien'), elementName(symbol), distractors(symbol, known).map(elementName), { quote: t(k), symbol });
 }
 
 /** Una sustancia que se pueda formar con lo conocido y que lleve `symbol`. */

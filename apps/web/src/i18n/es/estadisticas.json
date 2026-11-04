@@ -1,0 +1,526 @@
+{
+ "estadisticas.abrir": {
+  "texto": "Estadísticas y recomendaciones",
+  "descripcion": "Botón grande en la página de una clase"
+ },
+ "estadisticas.abrir_texto": {
+  "texto": "Qué cuesta más, quién necesita ayuda y parejas para ayudarse",
+  "descripcion": "Subtítulo del botón de estadísticas"
+ },
+ "estadisticas.cargando": {
+  "texto": "Calculando las estadísticas…",
+  "descripcion": "Mientras se cargan"
+ },
+ "estadisticas.titulo": {
+  "texto": "Estadísticas",
+  "descripcion": "Título de la página"
+ },
+ "estadisticas.volver_clase": {
+  "texto": "← Volver a la clase",
+  "descripcion": "Enlace de vuelta"
+ },
+ "estadisticas.indice": {
+  "texto": "Secciones",
+  "descripcion": "Etiqueta accesible del índice"
+ },
+ "estadisticas.seccion.recomendaciones": {
+  "texto": "Recomendaciones",
+  "descripcion": "Nombre de sección e índice"
+ },
+ "estadisticas.seccion.uso": {
+  "texto": "Uso",
+  "descripcion": "Nombre de sección e índice"
+ },
+ "estadisticas.seccion.preguntas": {
+  "texto": "Preguntas",
+  "descripcion": "Nombre de sección e índice"
+ },
+ "estadisticas.seccion.avance": {
+  "texto": "Avance",
+  "descripcion": "Nombre de sección e índice"
+ },
+ "estadisticas.seccion.alumnado": {
+  "texto": "Alumnado",
+  "descripcion": "Nombre de sección e índice"
+ },
+ "estadisticas.incompleto": {
+  "texto": "La clase tiene muchísima actividad: se analizan los 100 000 eventos más recientes.",
+  "descripcion": "Aviso si se recortan datos"
+ },
+ "estadisticas.vacia": {
+  "texto": "Aún no hay actividad. Cuando el alumnado se una con el código de la clase y empiece a jugar, aquí verás cómo va.",
+  "descripcion": "Clase sin actividad"
+ },
+ "estadisticas.tile.empezado": {
+  "texto": "Han empezado",
+  "descripcion": "Tarjeta: alumnado con alguna actividad"
+ },
+ "estadisticas.tile.activos": {
+  "texto": "Activos en 7 días",
+  "descripcion": "Tarjeta"
+ },
+ "estadisticas.tile.acierto": {
+  "texto": "Aciertos a la primera",
+  "descripcion": "Tarjeta: porcentaje de aciertos al primer intento"
+ },
+ "estadisticas.tile.acierto_ayuda": {
+  "texto": "{n} respuestas",
+  "descripcion": "Bajo el porcentaje"
+ },
+ "estadisticas.tile.acierto_ayuda_1": {
+  "texto": "1 respuesta",
+  "descripcion": "Singular"
+ },
+ "estadisticas.tile.minutos": {
+  "texto": "Minutos en lecciones",
+  "descripcion": "Tarjeta"
+ },
+ "estadisticas.trabajar": {
+  "texto": "Para trabajar en clase",
+  "descripcion": "Recomendación: lo que más falla"
+ },
+ "estadisticas.trabajar_ayuda": {
+  "texto": "Lo que más se falla a la primera (con al menos 5 respuestas).",
+  "descripcion": "Explicación"
+ },
+ "estadisticas.fallan": {
+  "texto": "Falla a la primera el {pct} % · lo ha fallado alguna vez: {n} de {de}",
+  "descripcion": "Detalle de una dificultad"
+ },
+ "estadisticas.preguntas_concretas": {
+  "texto": "Preguntas concretas que más fallan",
+  "descripcion": "Desplegable"
+ },
+ "estadisticas.nada_dificil": {
+  "texto": "Nada destaca: todo se acierta a la primera más del 70 % de las veces. ¡Bien!",
+  "descripcion": "Sin dificultades"
+ },
+ "estadisticas.sin_respuestas": {
+  "texto": "Todavía no hay respuestas a preguntas (llegan con las lecciones y «Adivina»).",
+  "descripcion": "Sin datos de preguntas"
+ },
+ "estadisticas.empujon": {
+  "texto": "Necesitan un empujón",
+  "descripcion": "Recomendación: alumnado retrasado o que no entra"
+ },
+ "estadisticas.empujon_ayuda": {
+  "texto": "Van por detrás de la mitad de la clase, fallan mucho o hace días que no entran.",
+  "descripcion": "Explicación"
+ },
+ "estadisticas.nadie_retrasado": {
+  "texto": "Nadie se está quedando atrás.",
+  "descripcion": "Lista vacía"
+ },
+ "estadisticas.sin_empezar": {
+  "texto": "Sin empezar ({n}): {lista}",
+  "descripcion": "Alumnado sin actividad"
+ },
+ "estadisticas.adelantados": {
+  "texto": "Van más adelantados",
+  "descripcion": "Recomendación"
+ },
+ "estadisticas.adelantados_ayuda": {
+  "texto": "Avanzan más que la mayoría y aciertan mucho: pueden explicar a otras personas o probar retos más difíciles.",
+  "descripcion": "Explicación"
+ },
+ "estadisticas.nadie_adelantado": {
+  "texto": "Nadie destaca por delante todavía.",
+  "descripcion": "Lista vacía"
+ },
+ "estadisticas.grupos": {
+  "texto": "Grupos para ayudarse",
+  "descripcion": "Recomendación: tutoría entre iguales"
+ },
+ "estadisticas.grupos_ayuda": {
+  "texto": "Mezclan niveles para que quien va por delante explique a quien va por detrás. Explicar también consolida lo aprendido.",
+  "descripcion": "Explicación"
+ },
+ "estadisticas.parejas": {
+  "texto": "Parejas",
+  "descripcion": "Botón"
+ },
+ "estadisticas.equipos": {
+  "texto": "Equipos de 4",
+  "descripcion": "Botón"
+ },
+ "estadisticas.copiar": {
+  "texto": "Copiar",
+  "descripcion": "Botón: copiar los grupos"
+ },
+ "estadisticas.copiado": {
+  "texto": "Copiado ✓",
+  "descripcion": "Tras copiar"
+ },
+ "estadisticas.no_copiado": {
+  "texto": "No se pudo copiar",
+  "descripcion": "Error al copiar"
+ },
+ "estadisticas.ayuda_a": {
+  "texto": "puede ayudar a",
+  "descripcion": "Frase: A puede ayudar a B"
+ },
+ "estadisticas.y": {
+  "texto": "y",
+  "descripcion": "Conjunción"
+ },
+ "estadisticas.con": {
+  "texto": "En: {lista}",
+  "descripcion": "Temas en los que puede ayudar"
+ },
+ "estadisticas.equipo": {
+  "texto": "Equipo {n}",
+  "descripcion": "Nombre de equipo"
+ },
+ "estadisticas.grupos_como": {
+  "texto": "Cómo se forman: se ordena por avance y acierto, se parte la lista por la mitad y se empareja a la primera persona de cada mitad, la segunda con la segunda… Así hay distinto nivel, pero no tanto como para no entenderse. Los equipos reparten en serpiente para que haya de todos los niveles. Es una propuesta: ajústala con lo que sabes de tu clase.",
+  "descripcion": "Explicación del método"
+ },
+ "estadisticas.pocos_para_grupos": {
+  "texto": "Hacen falta al menos 2 personas con actividad.",
+  "descripcion": "Sin grupos"
+ },
+ "estadisticas.diario": {
+  "texto": "Alumnado activo cada día",
+  "descripcion": "Gráfica: últimos 30 días"
+ },
+ "estadisticas.diario_ayuda": {
+  "texto": "Últimos 30 días. Al pasar por encima: acciones y lecciones de ese día.",
+  "descripcion": "Explicación"
+ },
+ "estadisticas.dia_tip": {
+  "texto": "{dia} · alumnado activo: {n} · acciones: {acciones} · lecciones: {lecciones}",
+  "descripcion": "Tooltip de un día"
+ },
+ "estadisticas.calor": {
+  "texto": "Cuándo se usa: día y hora",
+  "descripcion": "Gráfica de calor"
+ },
+ "estadisticas.calor_ayuda": {
+  "texto": "Más color, más actividad. El momento con más: {dia} a las {hora} h.",
+  "descripcion": "Explicación"
+ },
+ "estadisticas.calor_tip": {
+  "texto": "{dia}, {hora} h: {n} acciones",
+  "descripcion": "Tooltip de una celda"
+ },
+ "estadisticas.calor_tip_1": {
+  "texto": "{dia}, {hora} h: 1 acción",
+  "descripcion": "Singular"
+ },
+ "estadisticas.menos": {
+  "texto": "Menos",
+  "descripcion": "Leyenda"
+ },
+ "estadisticas.mas": {
+  "texto": "Más",
+  "descripcion": "Leyenda"
+ },
+ "estadisticas.por_tipo": {
+  "texto": "Acierto a la primera por tipo de pregunta",
+  "descripcion": "Gráfica"
+ },
+ "estadisticas.por_tipo_ayuda": {
+  "texto": "De peor a mejor. Lo de arriba es lo que más conviene repasar.",
+  "descripcion": "Explicación"
+ },
+ "estadisticas.nota_tasa": {
+  "texto": "{n} respuestas · han fallado: {fallaron} de {de}",
+  "descripcion": "Nota de una barra"
+ },
+ "estadisticas.temas_dificiles": {
+  "texto": "Elementos y sustancias que más cuestan",
+  "descripcion": "Gráfica"
+ },
+ "estadisticas.temas_ayuda": {
+  "texto": "Con al menos 3 respuestas.",
+  "descripcion": "Explicación"
+ },
+ "estadisticas.temas_faciles": {
+  "texto": "Los que mejor se llevan",
+  "descripcion": "Gráfica"
+ },
+ "estadisticas.todas_preguntas": {
+  "texto": "Todas las preguntas, de más a menos difícil",
+  "descripcion": "Desplegable"
+ },
+ "estadisticas.unidades": {
+  "texto": "Avance por unidades",
+  "descripcion": "Gráfica"
+ },
+ "estadisticas.unidades_ayuda": {
+  "texto": "Cuántas personas han hecho todas las lecciones de cada unidad. A mitad de la clase se han completado {mediana} pasos del camino.",
+  "descripcion": "Explicación"
+ },
+ "estadisticas.unidad_hecha": {
+  "texto": "Terminada",
+  "descripcion": "Leyenda"
+ },
+ "estadisticas.unidad_en_curso": {
+  "texto": "En curso",
+  "descripcion": "Leyenda"
+ },
+ "estadisticas.unidad_sin_llegar": {
+  "texto": "Sin llegar",
+  "descripcion": "Leyenda"
+ },
+ "estadisticas.unidad_tip": {
+  "texto": "{unidad} · terminada: {hecha} · en curso: {curso} · sin llegar: {sin}",
+  "descripcion": "Tooltip"
+ },
+ "estadisticas.elementos": {
+  "texto": "Elementos aprendidos",
+  "descripcion": "Gráfica"
+ },
+ "estadisticas.elementos_ayuda": {
+  "texto": "Cada elemento, con cuántas personas han hecho su lección (más color, más gente).",
+  "descripcion": "Explicación"
+ },
+ "estadisticas.elemento_tip": {
+  "texto": "{nombre}: lo han hecho {n} de {de} · acierto: {acierto}",
+  "descripcion": "Tooltip"
+ },
+ "estadisticas.nadie": {
+  "texto": "Nadie",
+  "descripcion": "Leyenda"
+ },
+ "estadisticas.toda_la_clase": {
+  "texto": "Toda la clase",
+  "descripcion": "Leyenda"
+ },
+ "estadisticas.alumnado_ayuda": {
+  "texto": "Primero quien necesita más atención. Pulsa un alias para ver su ficha.",
+  "descripcion": "Explicación"
+ },
+ "estadisticas.hoy": {
+  "texto": "Hoy",
+  "descripcion": "Última actividad hoy"
+ },
+ "estadisticas.ficha_resumen": {
+  "texto": "Nivel {nivel} · {xp} XP · moléculas: {moleculas} · racha: {racha}",
+  "descripcion": "Resumen de la ficha"
+ },
+ "estadisticas.de_n": {
+  "texto": "{a} de {n}",
+  "descripcion": "Aciertos de respuestas"
+ },
+ "estadisticas.falla_en": {
+  "texto": "Donde más falla:",
+  "descripcion": "Ficha del alumno"
+ },
+ "estadisticas.sin_datos": {
+  "texto": "Sin datos todavía.",
+  "descripcion": "Gráfica vacía"
+ },
+ "estadisticas.nota_privacidad": {
+  "texto": "Las estadísticas se calculan en tu navegador con lo que hace cada alias en la app; no se guarda nada más. Son orientativas: tu criterio va primero.",
+  "descripcion": "Nota final"
+ },
+ "estadisticas.comparar": {
+  "texto": "Comparar clases",
+  "descripcion": "Lista de clases"
+ },
+ "estadisticas.comparar_ayuda": {
+  "texto": "Alumnado activo en los últimos 7 días, por clase.",
+  "descripcion": "Explicación"
+ },
+ "estadisticas.activos_de": {
+  "texto": "activos: {n} de {de}",
+  "descripcion": "Nota de barra"
+ },
+ "estadisticas.col.alias": {
+  "texto": "Alias",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.estado": {
+  "texto": "Estado",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.unidad": {
+  "texto": "Unidad",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.lecciones": {
+  "texto": "Lecciones",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.acierto": {
+  "texto": "Acierto",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.dias": {
+  "texto": "Días activos (30)",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.minutos": {
+  "texto": "Minutos",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.ultima": {
+  "texto": "Última vez",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.activos": {
+  "texto": "Activos",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.acciones": {
+  "texto": "Acciones",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.dia_semana": {
+  "texto": "Día",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.tipo": {
+  "texto": "Tipo de pregunta",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.respuestas": {
+  "texto": "Respuestas",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.fallaron": {
+  "texto": "Han fallado",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.tema": {
+  "texto": "Elemento o sustancia",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.elemento": {
+  "texto": "Elemento",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.han_hecho": {
+  "texto": "La han hecho",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.alumnos": {
+  "texto": "Alumnado",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.activos7": {
+  "texto": "Activos (7 días)",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.acciones7": {
+  "texto": "Acciones (7 días)",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.col.lecciones7": {
+  "texto": "Lecciones (7 días)",
+  "descripcion": "Columna de tabla"
+ },
+ "estadisticas.estado.avanzado": {
+  "texto": "Adelantado",
+  "descripcion": "Estado de un alumno (va con icono)"
+ },
+ "estadisticas.estado.en-marcha": {
+  "texto": "Al día",
+  "descripcion": "Estado de un alumno (va con icono)"
+ },
+ "estadisticas.estado.retrasado": {
+  "texto": "Necesita ayuda",
+  "descripcion": "Estado de un alumno (va con icono)"
+ },
+ "estadisticas.estado.inactivo": {
+  "texto": "Sin entrar",
+  "descripcion": "Estado de un alumno (va con icono)"
+ },
+ "estadisticas.estado.sin-empezar": {
+  "texto": "Sin empezar",
+  "descripcion": "Estado de un alumno (va con icono)"
+ },
+ "estadisticas.motivo.poco_avance": {
+  "texto": "Lleva {n} pasos del camino; la mitad de la clase, {mediana}",
+  "descripcion": "Motivo"
+ },
+ "estadisticas.motivo.acierto_bajo": {
+  "texto": "Acierta a la primera el {pct} %",
+  "descripcion": "Motivo"
+ },
+ "estadisticas.motivo.sin_entrar": {
+  "texto": "No entra desde hace {n} días",
+  "descripcion": "Motivo"
+ },
+ "estadisticas.motivo.sin_entrar_1": {
+  "texto": "No entra desde hace 1 día",
+  "descripcion": "Singular"
+ },
+ "estadisticas.motivo.flojo_en": {
+  "texto": "Le cuesta: {tipo} ({pct} %)",
+  "descripcion": "Motivo"
+ },
+ "estadisticas.motivo.adelantado": {
+  "texto": "{n} pasos del camino y {pct} % de acierto",
+  "descripcion": "Motivo"
+ },
+ "estadisticas.tipo.dato": {
+  "texto": "Datos de la ficha",
+  "descripcion": "Tipo de pregunta"
+ },
+ "estadisticas.idea.dato": {
+  "texto": "Repasad las fichas de los elementos: historia, usos y curiosidades. Una ronda rápida de preguntas en voz alta funciona bien.",
+  "descripcion": "Idea para trabajar en clase ese tipo de pregunta"
+ },
+ "estadisticas.tipo.protones": {
+  "texto": "Protones",
+  "descripcion": "Tipo de pregunta"
+ },
+ "estadisticas.idea.protones": {
+  "texto": "Protones = número atómico (Z). Practicad a leerlo en la tabla periódica.",
+  "descripcion": "Idea para trabajar en clase ese tipo de pregunta"
+ },
+ "estadisticas.tipo.electrones": {
+  "texto": "Electrones",
+  "descripcion": "Tipo de pregunta"
+ },
+ "estadisticas.idea.electrones": {
+  "texto": "En un átomo neutro hay tantos electrones como protones. Insistid en la palabra «neutro».",
+  "descripcion": "Idea para trabajar en clase ese tipo de pregunta"
+ },
+ "estadisticas.tipo.neutrones": {
+  "texto": "Neutrones",
+  "descripcion": "Tipo de pregunta"
+ },
+ "estadisticas.idea.neutrones": {
+  "texto": "Neutrones = número másico (A) − número atómico (Z). Haced varios en la pizarra con elementos de la tabla.",
+  "descripcion": "Idea para trabajar en clase ese tipo de pregunta"
+ },
+ "estadisticas.tipo.simbolo": {
+  "texto": "Símbolos",
+  "descripcion": "Tipo de pregunta"
+ },
+ "estadisticas.idea.simbolo": {
+  "texto": "Los símbolos que empiezan igual (C, Ca, Cl, Co, Cu…) se confunden: un juego de parejas símbolo–nombre ayuda.",
+  "descripcion": "Idea para trabajar en clase ese tipo de pregunta"
+ },
+ "estadisticas.tipo.pista": {
+  "texto": "Reconocer por pistas",
+  "descripcion": "Tipo de pregunta"
+ },
+ "estadisticas.idea.pista": {
+  "texto": "Relacionad cada elemento con sus propiedades y usos: que cada persona presente un elemento en 1 minuto.",
+  "descripcion": "Idea para trabajar en clase ese tipo de pregunta"
+ },
+ "estadisticas.tipo.formula": {
+  "texto": "Formar fórmulas",
+  "descripcion": "Tipo de pregunta"
+ },
+ "estadisticas.idea.formula": {
+  "texto": "Contar átomos con los subíndices. Formad las moléculas con las tarjetas en la mesa, en grupo.",
+  "descripcion": "Idea para trabajar en clase ese tipo de pregunta"
+ },
+ "estadisticas.tipo.objeto": {
+  "texto": "Objetos cotidianos",
+  "descripcion": "Tipo de pregunta"
+ },
+ "estadisticas.idea.objeto": {
+  "texto": "Buscad en el aula objetos y de qué elementos están hechos; la sección «Materia» da ideas.",
+  "descripcion": "Idea para trabajar en clase ese tipo de pregunta"
+ },
+ "estadisticas.col.clase": {
+  "texto": "Clase",
+  "descripcion": "Columna de tabla"
+ }
+}

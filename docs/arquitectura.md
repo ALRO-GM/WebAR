@@ -56,6 +56,7 @@ apps/web/              la PWA: une las dos; interfaz e instalación
   src/platform/          progreso, colección, desbloqueos, retos y clase (sin conexión)
   src/i18n/              la tabla de textos (es.json) y t()
   cartas.html            imprimir las tarjetas en A4
+  src/teacher/           estadísticas del profesorado: cálculo (stats.ts), gráficas y página
   profesor.html          panel del profesorado: clases, alumnado, estadísticas y retos
 server/                Node sin dependencias: PWA + API de clases + /health (SQLite)
 ```
@@ -306,6 +307,50 @@ Basada en [investigacion-plataforma.md](investigacion-plataforma.md).
 - **Panel del profesorado**: alumnado (renombrar, quitar), números de la
   clase, actividad de 14 días (gráfica con tabla alternativa), qué moléculas
   tiene la clase (buenas candidatas para retos) y creación de retos.
+- **Estadísticas y recomendaciones** (`src/teacher/`, ruta
+  `profesor.html#clase/<id>/estadisticas`): ver la sección siguiente.
+
+## Estadísticas del profesorado
+
+Cada respuesta del alumnado se guarda con su **tipo de pregunta** (datos de
+la ficha, protones, electrones, neutrones, símbolo, pista, fórmula, objeto
+cotidiano), su **tema** (elemento o sustancia) y si se acertó **a la
+primera** (lo que se repite hasta acertar no cuenta como acierto). Va dentro
+del evento `leccion` o `adivina`: así funciona sin conexión y no hace falta
+otra tabla.
+
+El servidor solo entrega los eventos de la clase (`GET
+/api/clases/:id/eventos`); el panel los analiza en el navegador
+(`teacher/stats.ts`, puro y con tests) con el **mismo** `computeProgress` de
+la app, así que lo que ve el profesorado cuadra con lo que ve cada alumno.
+
+- **Uso**: alumnado activo por día (30 días) y mapa de calor día × hora.
+- **Preguntas**: acierto a la primera por tipo de pregunta, por elemento o
+  sustancia y por pregunta concreta. Una dificultad cuenta con al menos 5
+  respuestas de al menos 2 personas, para que un mal día de alguien no
+  parezca un problema de la clase.
+- **Avance**: cada unidad del camino (terminada, en curso, sin llegar) y
+  cuántas personas han hecho la lección de cada elemento.
+- **Estado de cada alias**, comparado con la propia clase (no con un nivel
+  fijo): *necesita ayuda* si va por debajo del 60 % de la mediana de pasos
+  del camino (y a 2 o más) o acierta menos del 60 % con 10 o más respuestas;
+  *sin entrar* si lleva 7 días sin actividad y el resto sí entra;
+  *adelantado* si está en el cuarto que más avanza, por encima de la mediana
+  y con un 80 % de aciertos. Cada estado dice por qué.
+- **Para trabajar en clase**: los tipos de pregunta y temas con menos
+  aciertos, con una idea concreta para cada tipo.
+- **Parejas y equipos** (tutoría entre iguales): se ordena por avance
+  (60 %) y acierto (40 %, ajustado hacia la media de la clase si hay pocas
+  respuestas); las parejas emparejan la primera persona de cada mitad, la
+  segunda con la segunda… (como PALS: distinto nivel, pero no los extremos),
+  con un trío si son impares. Cada pareja dice en qué puede ayudar quien
+  explica: los tipos de pregunta en los que va bien y su pareja no, y la
+  unidad de su pareja si ya la ha terminado. Los equipos de 4 se reparten en
+  serpiente para que cada uno tenga todos los niveles.
+- Las gráficas siguen la guía de visualización: una serie azul, escala
+  secuencial de un tono con pasos propios en claro y en oscuro (validados),
+  estado con icono y palabra (nunca solo color), tooltip y vista de tabla en
+  cada gráfica.
 
 ## Emitir al proyector
 

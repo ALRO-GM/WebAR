@@ -427,7 +427,7 @@ function guessPool(): string[] {
 
 function startGuess(nodeId?: string): void {
   playGuess($<HTMLDialogElement>('leccion'), guessPool(), (r) => {
-    if (r) void hub.add('adivina', { aciertos: r.right, total: r.total, xp: r.xp, ...(nodeId ? { nodo: nodeId } : {}) });
+    if (r) void hub.add('adivina', { aciertos: r.right, total: r.total, xp: r.xp, preguntas: r.answers, ...(nodeId ? { nodo: nodeId } : {}) });
   });
 }
 

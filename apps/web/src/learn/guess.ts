@@ -4,12 +4,14 @@ import { contentName } from '../i18n/content';
 import { createEveryday, everydayArchetype, hasEveryday } from '../objects';
 import { calm, vibrate } from '../settings';
 import { sfx } from '../sfx';
+import type { Answer } from './exercises';
 import { MiniScene } from './mini-scene';
 
 export interface GuessResult {
   right: number;
   total: number;
   xp: number;
+  answers: Answer[];
 }
 
 const ROUNDS = 5;
@@ -38,6 +40,7 @@ export function playGuess(dialog: HTMLDialogElement, pool: string[], onClose: (r
   let round = 0;
   let score = 0;
   let right = 0;
+  const answers: Answer[] = [];
   let mini: MiniScene | null = null;
   let answered = false;
   let usedClue = false;
@@ -118,6 +121,7 @@ export function playGuess(dialog: HTMLDialogElement, pool: string[], onClose: (r
     const ok = button.dataset.o === target;
     body.querySelectorAll<HTMLButtonElement>('[data-o]').forEach((b) => b.classList.toggle('correcta', b.dataset.o === target));
     if (!ok) button.classList.add('incorrecta');
+    answers.push({ tipo: 'objeto', tema: target, ok });
     if (ok) {
       right++;
       score += usedClue ? 1 : 2;
@@ -153,6 +157,6 @@ export function playGuess(dialog: HTMLDialogElement, pool: string[], onClose: (r
       <div class="fin-stat precision"><small>${t('leccion.stat_precision')}</small><b>🎯 ${Math.round((right / rounds.length) * 100)}%</b></div></div></div>`;
     action.textContent = t('leccion.continuar');
     action.className = 'btn ancho';
-    action.onclick = () => close({ right, total: rounds.length, xp });
+    action.onclick = () => close({ right, total: rounds.length, xp, answers });
   }
 }

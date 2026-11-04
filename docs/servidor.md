@@ -96,6 +96,21 @@ Eventos aceptados en `POST /api/sync` (alumno): `descubrir`, `reaccion`,
 `foto`, `racha`. `datos` es libre, hasta 2000 caracteres en JSON; si se pasa,
 el evento no se acepta (antes se recortaba y quedaba JSON roto).
 
+`leccion` y `adivina` llevan `preguntas: [{ tipo, tema, ok }]`: el tipo de
+pregunta (`dato`, `protones`, `electrones`, `neutrones`, `simbolo`, `pista`,
+`formula`, `objeto`), el elemento o sustancia y si se acertó a la primera.
+Una lección de repaso son unas 8, unos 400 caracteres.
+
+### Estadísticas del profesorado
+
+| Ruta | Token | Qué hace |
+| --- | --- | --- |
+| `GET /api/clases/:id/eventos` | profesor | `{ clase, alumnos: [{ id, alias, created, last_seen }], eventos: [[alumno, tipo, datos, fecha]], completo }`: los eventos de la clase (como mucho los 100 000 más recientes; `completo: false` si se recortan). El panel calcula las estadísticas en el navegador |
+| `GET /api/profesor/resumen` | profesor | Cada clase en números: `alumnos`, y de los últimos 7 días `activos`, `acciones` y `lecciones`; y en total `aciertos` y `preguntas` (para comparar clases) |
+
+Pesa poco: 30 alumnos con un curso de uso son unos miles de eventos, y el
+Caddy de delante comprime la respuesta.
+
 ### Ligas semanales
 
 | Ruta | Token | Qué hace |

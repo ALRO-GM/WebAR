@@ -1,0 +1,395 @@
+{
+ "estadisticas.abrir": {
+  "texto": "Statistics and recommendations"
+ },
+ "estadisticas.abrir_texto": {
+  "texto": "What is hardest, who needs help and pairs to help each other"
+ },
+ "estadisticas.cargando": {
+  "texto": "Working out the statistics…"
+ },
+ "estadisticas.titulo": {
+  "texto": "Statistics"
+ },
+ "estadisticas.volver_clase": {
+  "texto": "← Back to the class"
+ },
+ "estadisticas.indice": {
+  "texto": "Sections"
+ },
+ "estadisticas.seccion.recomendaciones": {
+  "texto": "Recommendations"
+ },
+ "estadisticas.seccion.uso": {
+  "texto": "Usage"
+ },
+ "estadisticas.seccion.preguntas": {
+  "texto": "Questions"
+ },
+ "estadisticas.seccion.avance": {
+  "texto": "Progress"
+ },
+ "estadisticas.seccion.alumnado": {
+  "texto": "Students"
+ },
+ "estadisticas.incompleto": {
+  "texto": "This class has a lot of activity: only the latest 100,000 events are analysed."
+ },
+ "estadisticas.vacia": {
+  "texto": "No activity yet. Once students join with the class code and start playing, you will see how they are doing here."
+ },
+ "estadisticas.tile.empezado": {
+  "texto": "Have started"
+ },
+ "estadisticas.tile.activos": {
+  "texto": "Active in 7 days"
+ },
+ "estadisticas.tile.acierto": {
+  "texto": "Right first time"
+ },
+ "estadisticas.tile.acierto_ayuda": {
+  "texto": "{n} answers"
+ },
+ "estadisticas.tile.acierto_ayuda_1": {
+  "texto": "1 answer"
+ },
+ "estadisticas.tile.minutos": {
+  "texto": "Minutes in lessons"
+ },
+ "estadisticas.trabajar": {
+  "texto": "To work on in class"
+ },
+ "estadisticas.trabajar_ayuda": {
+  "texto": "What is most often wrong first time (at least 5 answers)."
+ },
+ "estadisticas.fallan": {
+  "texto": "{pct} % wrong first time · got it wrong at least once: {n} of {de}"
+ },
+ "estadisticas.preguntas_concretas": {
+  "texto": "Specific questions most often wrong"
+ },
+ "estadisticas.nada_dificil": {
+  "texto": "Nothing stands out: everything is right first time over 70 % of the time. Well done!"
+ },
+ "estadisticas.sin_respuestas": {
+  "texto": "No answers yet (they come from lessons and «Guess»)."
+ },
+ "estadisticas.empujon": {
+  "texto": "Need a nudge"
+ },
+ "estadisticas.empujon_ayuda": {
+  "texto": "Behind the middle of the class, getting many wrong, or not logged in for days."
+ },
+ "estadisticas.nadie_retrasado": {
+  "texto": "Nobody is falling behind."
+ },
+ "estadisticas.sin_empezar": {
+  "texto": "Not started ({n}): {lista}"
+ },
+ "estadisticas.adelantados": {
+  "texto": "Further ahead"
+ },
+ "estadisticas.adelantados_ayuda": {
+  "texto": "Ahead of most and very accurate: they can explain to others or try harder challenges."
+ },
+ "estadisticas.nadie_adelantado": {
+  "texto": "Nobody stands out ahead yet."
+ },
+ "estadisticas.grupos": {
+  "texto": "Groups to help each other"
+ },
+ "estadisticas.grupos_ayuda": {
+  "texto": "They mix levels so whoever is ahead explains to whoever is behind. Explaining also consolidates learning."
+ },
+ "estadisticas.parejas": {
+  "texto": "Pairs"
+ },
+ "estadisticas.equipos": {
+  "texto": "Teams of 4"
+ },
+ "estadisticas.copiar": {
+  "texto": "Copy"
+ },
+ "estadisticas.copiado": {
+  "texto": "Copied ✓"
+ },
+ "estadisticas.no_copiado": {
+  "texto": "Could not copy"
+ },
+ "estadisticas.ayuda_a": {
+  "texto": "can help"
+ },
+ "estadisticas.y": {
+  "texto": "and"
+ },
+ "estadisticas.con": {
+  "texto": "With: {lista}"
+ },
+ "estadisticas.equipo": {
+  "texto": "Team {n}"
+ },
+ "estadisticas.grupos_como": {
+  "texto": "How they are made: students are ranked by progress and accuracy, the list is split in half and the first of each half are paired, then the second… Different levels, but not too far apart to understand each other. Teams are dealt in a snake so every level is present. It is a suggestion: adjust it with what you know about your class."
+ },
+ "estadisticas.pocos_para_grupos": {
+  "texto": "At least 2 active students are needed."
+ },
+ "estadisticas.diario": {
+  "texto": "Active students per day"
+ },
+ "estadisticas.diario_ayuda": {
+  "texto": "Last 30 days. Hover for actions and lessons that day."
+ },
+ "estadisticas.dia_tip": {
+  "texto": "{dia} · active students: {n} · actions: {acciones} · lessons: {lecciones}"
+ },
+ "estadisticas.calor": {
+  "texto": "When it is used: day and hour"
+ },
+ "estadisticas.calor_ayuda": {
+  "texto": "More colour, more activity. Busiest: {dia} at {hora}:00."
+ },
+ "estadisticas.calor_tip": {
+  "texto": "{dia}, {hora}:00: {n} actions"
+ },
+ "estadisticas.calor_tip_1": {
+  "texto": "{dia}, {hora}:00: 1 action"
+ },
+ "estadisticas.menos": {
+  "texto": "Less"
+ },
+ "estadisticas.mas": {
+  "texto": "More"
+ },
+ "estadisticas.por_tipo": {
+  "texto": "Right first time by question type"
+ },
+ "estadisticas.por_tipo_ayuda": {
+  "texto": "Worst to best. The top ones are worth reviewing."
+ },
+ "estadisticas.nota_tasa": {
+  "texto": "{n} answers · got it wrong: {fallaron} of {de}"
+ },
+ "estadisticas.temas_dificiles": {
+  "texto": "Hardest elements and substances"
+ },
+ "estadisticas.temas_ayuda": {
+  "texto": "With at least 3 answers."
+ },
+ "estadisticas.temas_faciles": {
+  "texto": "The ones they know best"
+ },
+ "estadisticas.todas_preguntas": {
+  "texto": "All questions, hardest first"
+ },
+ "estadisticas.unidades": {
+  "texto": "Progress by unit"
+ },
+ "estadisticas.unidades_ayuda": {
+  "texto": "How many have finished every lesson in each unit. The middle of the class has completed {mediana} steps of the path."
+ },
+ "estadisticas.unidad_hecha": {
+  "texto": "Finished"
+ },
+ "estadisticas.unidad_en_curso": {
+  "texto": "In progress"
+ },
+ "estadisticas.unidad_sin_llegar": {
+  "texto": "Not reached"
+ },
+ "estadisticas.unidad_tip": {
+  "texto": "{unidad} · finished: {hecha} · in progress: {curso} · not reached: {sin}"
+ },
+ "estadisticas.elementos": {
+  "texto": "Elements learned"
+ },
+ "estadisticas.elementos_ayuda": {
+  "texto": "Each element and how many have done its lesson (more colour, more people)."
+ },
+ "estadisticas.elemento_tip": {
+  "texto": "{nombre}: done by {n} of {de} · accuracy: {acierto}"
+ },
+ "estadisticas.nadie": {
+  "texto": "Nobody"
+ },
+ "estadisticas.toda_la_clase": {
+  "texto": "Whole class"
+ },
+ "estadisticas.alumnado_ayuda": {
+  "texto": "Those who need most attention first. Tap an alias to see their details."
+ },
+ "estadisticas.hoy": {
+  "texto": "Today"
+ },
+ "estadisticas.ficha_resumen": {
+  "texto": "Level {nivel} · {xp} XP · molecules: {moleculas} · streak: {racha}"
+ },
+ "estadisticas.de_n": {
+  "texto": "{a} of {n}"
+ },
+ "estadisticas.falla_en": {
+  "texto": "Where they struggle most:"
+ },
+ "estadisticas.sin_datos": {
+  "texto": "No data yet."
+ },
+ "estadisticas.nota_privacidad": {
+  "texto": "Statistics are calculated in your browser from what each alias does in the app; nothing else is stored. They are a guide: your judgement comes first."
+ },
+ "estadisticas.comparar": {
+  "texto": "Compare classes"
+ },
+ "estadisticas.comparar_ayuda": {
+  "texto": "Students active in the last 7 days, by class."
+ },
+ "estadisticas.activos_de": {
+  "texto": "active: {n} of {de}"
+ },
+ "estadisticas.col.alias": {
+  "texto": "Alias"
+ },
+ "estadisticas.col.estado": {
+  "texto": "Status"
+ },
+ "estadisticas.col.unidad": {
+  "texto": "Unit"
+ },
+ "estadisticas.col.lecciones": {
+  "texto": "Lessons"
+ },
+ "estadisticas.col.acierto": {
+  "texto": "Accuracy"
+ },
+ "estadisticas.col.dias": {
+  "texto": "Active days (30)"
+ },
+ "estadisticas.col.minutos": {
+  "texto": "Minutes"
+ },
+ "estadisticas.col.ultima": {
+  "texto": "Last seen"
+ },
+ "estadisticas.col.activos": {
+  "texto": "Active"
+ },
+ "estadisticas.col.acciones": {
+  "texto": "Actions"
+ },
+ "estadisticas.col.dia_semana": {
+  "texto": "Day"
+ },
+ "estadisticas.col.tipo": {
+  "texto": "Question type"
+ },
+ "estadisticas.col.respuestas": {
+  "texto": "Answers"
+ },
+ "estadisticas.col.fallaron": {
+  "texto": "Got it wrong"
+ },
+ "estadisticas.col.tema": {
+  "texto": "Element or substance"
+ },
+ "estadisticas.col.elemento": {
+  "texto": "Element"
+ },
+ "estadisticas.col.han_hecho": {
+  "texto": "Done by"
+ },
+ "estadisticas.col.alumnos": {
+  "texto": "Students"
+ },
+ "estadisticas.col.activos7": {
+  "texto": "Active (7 days)"
+ },
+ "estadisticas.col.acciones7": {
+  "texto": "Actions (7 days)"
+ },
+ "estadisticas.col.lecciones7": {
+  "texto": "Lessons (7 days)"
+ },
+ "estadisticas.estado.avanzado": {
+  "texto": "Ahead"
+ },
+ "estadisticas.estado.en-marcha": {
+  "texto": "On track"
+ },
+ "estadisticas.estado.retrasado": {
+  "texto": "Needs help"
+ },
+ "estadisticas.estado.inactivo": {
+  "texto": "Not logging in"
+ },
+ "estadisticas.estado.sin-empezar": {
+  "texto": "Not started"
+ },
+ "estadisticas.motivo.poco_avance": {
+  "texto": "{n} steps of the path done; the middle of the class, {mediana}"
+ },
+ "estadisticas.motivo.acierto_bajo": {
+  "texto": "Right first time {pct} %"
+ },
+ "estadisticas.motivo.sin_entrar": {
+  "texto": "Not logged in for {n} days"
+ },
+ "estadisticas.motivo.sin_entrar_1": {
+  "texto": "Not logged in for 1 day"
+ },
+ "estadisticas.motivo.flojo_en": {
+  "texto": "Struggles with: {tipo} ({pct} %)"
+ },
+ "estadisticas.motivo.adelantado": {
+  "texto": "{n} steps of the path and {pct} % accuracy"
+ },
+ "estadisticas.tipo.dato": {
+  "texto": "Facts from the card"
+ },
+ "estadisticas.idea.dato": {
+  "texto": "Review the element cards: history, uses and fun facts. A quick round of questions out loud works well."
+ },
+ "estadisticas.tipo.protones": {
+  "texto": "Protons"
+ },
+ "estadisticas.idea.protones": {
+  "texto": "Protons = atomic number (Z). Practise reading it from the periodic table."
+ },
+ "estadisticas.tipo.electrones": {
+  "texto": "Electrons"
+ },
+ "estadisticas.idea.electrones": {
+  "texto": "A neutral atom has as many electrons as protons. Stress the word «neutral»."
+ },
+ "estadisticas.tipo.neutrones": {
+  "texto": "Neutrons"
+ },
+ "estadisticas.idea.neutrones": {
+  "texto": "Neutrons = mass number (A) − atomic number (Z). Work through several on the board."
+ },
+ "estadisticas.tipo.simbolo": {
+  "texto": "Symbols"
+ },
+ "estadisticas.idea.simbolo": {
+  "texto": "Symbols starting the same way (C, Ca, Cl, Co, Cu…) get mixed up: a symbol–name matching game helps."
+ },
+ "estadisticas.tipo.pista": {
+  "texto": "Recognise from clues"
+ },
+ "estadisticas.idea.pista": {
+  "texto": "Link each element to its properties and uses: each student presents one element in 1 minute."
+ },
+ "estadisticas.tipo.formula": {
+  "texto": "Building formulas"
+ },
+ "estadisticas.idea.formula": {
+  "texto": "Count atoms using subscripts. Build the molecules with the cards on the table, in groups."
+ },
+ "estadisticas.tipo.objeto": {
+  "texto": "Everyday objects"
+ },
+ "estadisticas.idea.objeto": {
+  "texto": "Look for objects in the classroom and the elements they are made of; the «Matter» section has ideas."
+ },
+ "estadisticas.col.clase": {
+  "texto": "Class"
+ }
+}

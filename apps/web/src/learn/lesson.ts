@@ -6,7 +6,7 @@ import { createEveryday, hasEveryday } from '../objects';
 import { calm, vibrate } from '../settings';
 import { sfx } from '../sfx';
 import { bohrSVG } from './bohr-svg';
-import type { Exercise } from './exercises';
+import { answerKey, type Answer, type Exercise } from './exercises';
 import { MiniScene } from './mini-scene';
 
 export interface LessonResult {
@@ -15,6 +15,8 @@ export interface LessonResult {
   right: number;
   xp: number;
   seconds: number;
+  /** Cada pregunta, la primera vez que se responde (para las estadísticas del profesorado). */
+  answers: Answer[];
 }
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
@@ -31,6 +33,8 @@ export function playLesson(
   const queue = [...opts.exercises];
   const questions = queue.filter((e) => e.kind !== 'ensena').length;
   const failed = new Set<Exercise>();
+  const answered = new Set<Exercise>();
+  const answers: Answer[] = [];
   const started = performance.now();
   let doneCount = 0;
   let current: Exercise | null = null;
@@ -215,6 +219,11 @@ export function playLesson(
       solution = `${Object.entries(want).map(([el, n]) => (n > 1 ? `${n} ${el}` : el)).join(' + ')} → ${s.formula}`;
       body.querySelector('.formula-hueco')!.classList.add(ok ? 'correcta' : 'incorrecta');
     }
+    const key = answerKey(current);
+    if (key && !answered.has(current)) {
+      answered.add(current);
+      answers.push({ ...key, ok });
+    }
     if (ok) {
       sfx.ok();
       vibrate(15);
@@ -268,7 +277,7 @@ export function playLesson(
     action.textContent = t('leccion.continuar');
     action.className = 'btn ancho';
     action.disabled = false;
-    action.onclick = () => close({ total: questions, right, xp, seconds });
+    action.onclick = () => close({ total: questions, right, xp, seconds, answers });
     action.removeEventListener('click', onAction);
   }
 }

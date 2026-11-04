@@ -42,9 +42,20 @@ describe('API de clases', () => {
     const detail = call('GET', `/api/clases/${cls.id}`, undefined, teacher).body as { alumnos: Array<{ alias: string; discovered: number; reactions: number }> };
     expect(detail.alumnos).toEqual([expect.objectContaining({ alias: 'Neón', discovered: 1, reactions: 1 })]);
 
+    // Estadísticas: los eventos de la clase (con alias, sin nada más del alumno) y el resumen por clase.
+    const stats = call('GET', `/api/clases/${cls.id}/eventos`, undefined, teacher).body as { alumnos: Array<Record<string, unknown>>; eventos: unknown[][] };
+    expect(stats.alumnos).toEqual([expect.objectContaining({ alias: 'Neón' })]);
+    expect(Object.keys(stats.alumnos[0])).not.toContain('pin');
+    expect(stats.eventos.map((e) => e[1])).toEqual(['descubrir', 'reaccion']);
+    expect(stats.eventos[0][2]).toEqual({ sustancia: 'H2O' });
+    const resumen = call('GET', '/api/profesor/resumen', undefined, teacher).body as { clases: Array<{ alumnos: number }> };
+    expect(resumen.clases).toEqual([expect.objectContaining({ id: cls.id, alumnos: 1 })]);
+
     // Otro profesor no ve la clase; un alumno no puede usar rutas de profesor.
     const other = (call('POST', '/api/profesores', { email: 'otro@insti.es', nombre: 'Luis', password: 'segura123' }).body as { token: string }).token;
     expect(call('GET', `/api/clases/${cls.id}`, undefined, other).status).toBe(404);
+    expect(call('GET', `/api/clases/${cls.id}/eventos`, undefined, other).status).toBe(404);
+    expect(call('GET', `/api/clases/${cls.id}/eventos`, undefined, student).status).toBe(401);
     expect(call('GET', '/api/profesor', undefined, student).status).toBe(401);
   });
 });
