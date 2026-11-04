@@ -2746,5 +2746,9 @@
  "tabla.bloqueado_corto": {
   "texto": "bloqueado",
   "descripcion": "Para lectores de pantalla"
+ },
+ "instalar.corto": {
+  "texto": "Instalar",
+  "descripcion": "Botón corto de instalar en la barra de arriba"
  }
 }

@@ -36,6 +36,15 @@ a { color: var(--primary); }
 .stat.quarks b { color: var(--quark); }
 .stat.xp b { color: var(--xp-shadow); }
 .estado-red { font-size: 1rem; }
+/* Instalar: a la vista desde el principio; en móviles estrechos, solo la flecha. */
+.instalar-top { display: inline-flex; gap: 6px; align-items: center; white-space: nowrap; }
+.instalar-top[hidden] { display: none; }
+@media (max-width: 480px) {
+  .instalar-texto { display: none; }
+  .instalar-top { padding-inline: 12px; }
+  .barra-top:has(.instalar-top:not([hidden])) .stat { padding: 0 6px; }
+  .barra-top:has(.instalar-top:not([hidden])) { gap: 4px; padding-inline: 8px; }
+}
 
 #pantallas { flex: 1; overflow-y: auto; overscroll-behavior: contain; scroll-behavior: smooth; }
 .pantalla { max-width: 40rem; margin: 0 auto; padding: 14px 16px calc(6rem + env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 12px; }

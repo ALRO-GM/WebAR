@@ -64,6 +64,7 @@ Las reglas para agentes de IA están en [AGENTS.md](AGENTS.md).
 
 | Fecha | Qué cambió |
 | --- | --- |
+| 2026-11-04 | Botón «Instalar» a la vista en la barra de arriba (solo donde se puede instalar; en iPhone explica los pasos) que desaparece al instalarla; el aviso del navegador ya no se pierde al arrancar |
 | 2026-11-04 | Tarjetas nuevas: degradado con órbitas y enlaces dibujados en los bordes que coinciden al juntarlas (H–O una raya, O=C dos, N≡N tres); la mesa virtual empieza vacía con una bandeja de elementos y cada tarjeta cae en un hueco libre sin reaccionar sola |
 | 2026-11-04 | Estadísticas para el profesorado: uso por días y horas, qué preguntas y temas se fallan (y cuáles se aciertan), avance por unidades y elementos, quién necesita ayuda o va adelantado, parejas y equipos de distinto nivel para ayudarse, y comparativa entre clases. Cada respuesta se guarda con su tipo y tema |
 | 2026-11-04 | Tarjetas a mano en papel cuadriculado (umbral relativo y canal más claro), modo diagnóstico de la cámara; núcleos más grandes, electrones como destellos y fondo de escenario oscuro en el visor 3D |

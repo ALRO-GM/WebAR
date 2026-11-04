@@ -523,7 +523,7 @@ if (advance > 0) ar.on('start', () => setTimeout(() => ar.advance(advance), 50))
 if (!vista && !params.has('sin-intro')) intro.openIfFirstTime();
 
 const support = await detectARSupport();
-setupInstall($('instalar'), $('instalar-ios'), support.ios);
+setupInstall([$('instalar-top'), $('instalar')], $('instalar-ios'), support.ios, () => hub.toast('📲', t('instalar.boton'), t('instalar.ios')));
 const enterAR = $<HTMLButtonElement>('entrar-ra');
 enterAR.disabled = !support.webxrAR;
 worldAR = support.webxrAR;

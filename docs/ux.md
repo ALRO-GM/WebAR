@@ -19,6 +19,20 @@ que la investigación de gamificación dice que funciona con adolescentes
 | **Competir sin exponer** | Ligas semanales: la de clase usa el alias de clase; la mundial es opcional y el apodo lo pone el servidor («Neutrón Veloz 427»), para que nadie use su nombre. Quien no juega una semana no baja |
 | **Personajes y mascota** | 16 guías reales y diversos (sexo, origen, época) con frases escritas para la app (no citas inventadas). Schrödingato reacciona a lo que pasa y, si no lo miras, se vuelve nube de probabilidad; se puede quitar en ajustes |
 
+## Instalar la app
+
+Botón «⬇ Instalar» en la barra de arriba (en móviles estrechos, solo la
+flecha) y otro en Ajustes (`src/install.ts`). Solo sale donde se puede:
+
+- Chrome, Edge, Samsung Internet (Android y escritorio): cuando el navegador
+  avisa (`beforeinstallprompt`), y abre su diálogo de instalación. El aviso se
+  escucha nada más cargar el módulo: antes se escuchaba tras comprobar la
+  cámara y a veces llegaba antes, y el botón no salía.
+- iPhone y iPad: no hay aviso; el botón enseña los pasos (Compartir →
+  «Añadir a pantalla de inicio»).
+- Firefox de escritorio y similares: no instalan PWA, sin botón.
+- Instalada (`appinstalled`, o abierta como app): desaparece.
+
 ## Accesibilidad (WCAG 2.2)
 
 | Criterio | Qué hay |
