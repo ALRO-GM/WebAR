@@ -1,0 +1,1346 @@
+{
+ "objeto.H": {
+  "texto": "Un dirigible",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «H» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.H.porque": {
+  "texto": "Los primeros dirigibles se llenaban de hidrógeno, el gas más ligero que existe, para flotar en el aire.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «H» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.He": {
+  "texto": "El Sol",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «He» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.He.porque": {
+  "texto": "El Sol está hecho sobre todo de hidrógeno y helio; el helio se descubrió en su luz antes que en la Tierra.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «He» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Li": {
+  "texto": "La batería de un móvil",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Li» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Li.porque": {
+  "texto": "Las baterías de los móviles son de iones de litio, el metal más ligero de todos.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Li» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Be": {
+  "texto": "Una esmeralda",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Be» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Be.porque": {
+  "texto": "La esmeralda es berilo, un mineral de berilio; su verde se lo da una pizca de cromo.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Be» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.B": {
+  "texto": "Una jarra de vidrio resistente al calor",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «B» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.B.porque": {
+  "texto": "El vidrio de borosilicato lleva boro y aguanta cambios bruscos de temperatura sin romperse.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «B» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.C": {
+  "texto": "Un diamante y un lápiz",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «C» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.C.porque": {
+  "texto": "El diamante y el grafito de la mina de los lápices son carbono puro; solo cambia cómo se ordenan sus átomos.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «C» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.N": {
+  "texto": "Una bolsa de patatas fritas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «N» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.N.porque": {
+  "texto": "Las bolsas de patatas se llenan de nitrógeno, que no reacciona, para que no se pongan rancias.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «N» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.O": {
+  "texto": "Una planta acuática soltando burbujas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «O» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.O.porque": {
+  "texto": "Con la fotosíntesis, las plantas fabrican el oxígeno que respiramos: bajo el agua se ve salir en burbujas.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «O» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.F": {
+  "texto": "Una sartén antiadherente",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «F» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.F.porque": {
+  "texto": "El teflón que recubre las sartenes antiadherentes es un plástico de carbono y flúor.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «F» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ne": {
+  "texto": "Un letrero de neón",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ne» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ne.porque": {
+  "texto": "El gas neón brilla con luz rojo anaranjada cuando lo atraviesa la electricidad.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ne» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Na": {
+  "texto": "Una farola de luz naranja",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Na» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Na.porque": {
+  "texto": "Las farolas de vapor de sodio dan esa luz amarilla anaranjada tan típica de las calles.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Na» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Mg": {
+  "texto": "Una bengala",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Mg» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Mg.porque": {
+  "texto": "El magnesio arde con una luz blanca cegadora; por eso se usa en bengalas y fuegos artificiales.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Mg» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Al": {
+  "texto": "Una lata de refresco",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Al» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Al.porque": {
+  "texto": "Las latas de refresco son de aluminio: ligero, resistente y se recicla una y otra vez sin perder calidad.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Al» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Si": {
+  "texto": "Un chip de ordenador",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Si» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Si.porque": {
+  "texto": "Los chips se fabrican sobre obleas de silicio purísimo, un semiconductor.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Si» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.P": {
+  "texto": "Una cerilla",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «P» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.P.porque": {
+  "texto": "La tira de rascar de las cajas de cerillas lleva fósforo rojo, que prende la cabeza de la cerilla con el roce.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «P» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.S": {
+  "texto": "Cristales de azufre",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «S» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.S.porque": {
+  "texto": "El azufre forma cristales amarillos alrededor de las fumarolas de los volcanes.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «S» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Cl": {
+  "texto": "Una piscina",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Cl» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Cl.porque": {
+  "texto": "Al agua de las piscinas se le añade cloro para matar los microbios.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Cl» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ar": {
+  "texto": "Una bombona de soldadura",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ar» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ar.porque": {
+  "texto": "El argón no reacciona con casi nada: al soldar, rodea el metal fundido y lo protege del aire.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ar» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.K": {
+  "texto": "Un plátano",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «K» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.K.porque": {
+  "texto": "El plátano es famoso por ser rico en potasio, un mineral que necesitan nuestros músculos y nervios.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «K» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ca": {
+  "texto": "Un hueso",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ca» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ca.porque": {
+  "texto": "Los huesos y los dientes están hechos sobre todo de fosfato de calcio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ca» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Sc": {
+  "texto": "Un foco de estadio",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Sc» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Sc.porque": {
+  "texto": "Algunas lámparas de los estadios llevan yoduro de escandio para dar una luz blanca parecida a la del sol.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Sc» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ti": {
+  "texto": "Un implante dental",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ti» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ti.porque": {
+  "texto": "Los implantes dentales son de titanio: es fuerte, ligero y el cuerpo no lo rechaza.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ti» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.V": {
+  "texto": "Una llave inglesa",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «V» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.V.porque": {
+  "texto": "Muchas herramientas son de acero al cromo-vanadio, más duro y resistente que el acero normal.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «V» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Cr": {
+  "texto": "Un grifo cromado",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Cr» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Cr.porque": {
+  "texto": "El brillo plateado de los grifos es una capa finísima de cromo que los protege de la corrosión.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Cr» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Mn": {
+  "texto": "Una pila alcalina",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Mn» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Mn.porque": {
+  "texto": "Dentro de las pilas alcalinas hay dióxido de manganeso, que recoge los electrones en el polo positivo.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Mn» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Fe": {
+  "texto": "Unos clavos",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Fe» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Fe.porque": {
+  "texto": "Los clavos son de acero, que es hierro con un poco de carbono.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Fe» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Co": {
+  "texto": "Un jarrón azul cobalto",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Co» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Co.porque": {
+  "texto": "Una pizca de cobalto tiñe el vidrio y la cerámica de un azul intenso.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Co» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ni": {
+  "texto": "Una moneda de un euro",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ni» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ni.porque": {
+  "texto": "Las monedas de 1 y 2 euros llevan níquel en sus aleaciones.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ni» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Cu": {
+  "texto": "Un cable de cobre",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Cu» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Cu.porque": {
+  "texto": "El cobre conduce muy bien la electricidad: está dentro de casi todos los cables.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Cu» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Zn": {
+  "texto": "Un cubo galvanizado",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Zn» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Zn.porque": {
+  "texto": "Una capa de cinc protege el acero de cubos, vallas y farolas para que no se oxide.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Zn» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ga": {
+  "texto": "Un led azul",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ga» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ga.porque": {
+  "texto": "Los ledes azules y blancos se fabrican con nitruro de galio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ga» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ge": {
+  "texto": "Un transistor",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ge» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ge.porque": {
+  "texto": "Los primeros transistores, inventados en 1947, se hicieron con germanio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ge» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.As": {
+  "texto": "Un chip de móvil",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «As» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.As.porque": {
+  "texto": "El arseniuro de galio se usa en los chips que emiten y reciben la señal en los móviles.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «As» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Se": {
+  "texto": "Un champú anticaspa",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Se» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Se.porque": {
+  "texto": "Algunos champús anticaspa llevan sulfuro de selenio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Se» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Br": {
+  "texto": "Un jacuzzi",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Br» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Br.porque": {
+  "texto": "En muchos jacuzzis se usa bromo en vez de cloro para desinfectar el agua caliente.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Br» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Kr": {
+  "texto": "Un tubo luminoso de kriptón",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Kr» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Kr.porque": {
+  "texto": "El kriptón brilla con luz blanca violácea; se usa en algunos tubos luminosos y en flashes de fotografía.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Kr» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Rb": {
+  "texto": "Un reloj atómico",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Rb» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Rb.porque": {
+  "texto": "Los satélites GPS llevan relojes atómicos de rubidio para saber la hora con precisión.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Rb» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Sr": {
+  "texto": "Fuegos artificiales rojos",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Sr» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Sr.porque": {
+  "texto": "Las sales de estroncio dan el rojo intenso de los fuegos artificiales.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Sr» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Y": {
+  "texto": "Un led blanco",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Y» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Y.porque": {
+  "texto": "La luz blanca de muchos ledes sale de un material de itrio (el YAG) que brilla en amarillo sobre un led azul.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Y» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Zr": {
+  "texto": "Una circonita",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Zr» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Zr.porque": {
+  "texto": "Las circonitas, que imitan a los diamantes, son óxido de circonio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Zr» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Nb": {
+  "texto": "Una máquina de resonancia magnética",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Nb» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Nb.porque": {
+  "texto": "Sus imanes superconductores llevan cables de niobio y titanio enfriados con helio líquido.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Nb» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Mo": {
+  "texto": "Una broca de taladro",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Mo» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Mo.porque": {
+  "texto": "Las brocas de acero rápido llevan molibdeno para seguir duras aunque se calienten al taladrar.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Mo» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Tc": {
+  "texto": "Una inyección para una gammagrafía",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Tc» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Tc.porque": {
+  "texto": "El tecnecio-99m es el radiactivo más usado en medicina para ver los órganos por dentro.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Tc» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ru": {
+  "texto": "Unos lingotes de rutenio",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ru» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ru.porque": {
+  "texto": "El rutenio es un metal precioso de la familia del platino, muy duro y escaso.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ru» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Rh": {
+  "texto": "Un anillo de oro blanco",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Rh» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Rh.porque": {
+  "texto": "El brillo de las joyas de oro blanco viene de un baño finísimo de rodio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Rh» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Pd": {
+  "texto": "Unos lingotes de paladio",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Pd» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Pd.porque": {
+  "texto": "El paladio es un metal precioso que se usa sobre todo en los catalizadores de los coches para limpiar los gases del motor.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Pd» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ag": {
+  "texto": "Una medalla de plata",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ag» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ag.porque": {
+  "texto": "Las medallas de plata de los Juegos Olímpicos son casi toda de plata, un metal precioso y brillante.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ag» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Cd": {
+  "texto": "Un tubo de pintura amarilla",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Cd» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Cd.porque": {
+  "texto": "El «amarillo cadmio» de los pintores es sulfuro de cadmio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Cd» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.In": {
+  "texto": "La pantalla táctil de un móvil",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «In» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.In.porque": {
+  "texto": "Las pantallas táctiles llevan una capa transparente de óxido de indio y estaño que conduce la electricidad.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «In» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Sn": {
+  "texto": "Una lata de conservas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Sn» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Sn.porque": {
+  "texto": "Las latas de conservas son de hojalata: acero recubierto de estaño para que no se oxide.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Sn» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Sb": {
+  "texto": "Un tarro de maquillaje del antiguo Egipto",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Sb» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Sb.porque": {
+  "texto": "El kohl con el que se pintaban los ojos en el antiguo Egipto se hacía a veces con estibina, un mineral de antimonio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Sb» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Te": {
+  "texto": "Un panel solar",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Te» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Te.porque": {
+  "texto": "Muchos paneles solares de lámina fina son de telururo de cadmio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Te» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.I": {
+  "texto": "Un bote de yodo",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «I» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.I.porque": {
+  "texto": "La tintura de yodo, de color marrón, se ha usado mucho para desinfectar heridas.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «I» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Xe": {
+  "texto": "El faro de xenón de un coche",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Xe» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Xe.porque": {
+  "texto": "Los faros de xenón tienen dentro este gas y dan una luz blanca azulada muy potente.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Xe» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Cs": {
+  "texto": "Un reloj atómico",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Cs» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Cs.porque": {
+  "texto": "El segundo se define con los átomos de cesio: los relojes atómicos de cesio apenas se desvían un segundo en millones de años.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Cs» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ba": {
+  "texto": "Fuegos artificiales verdes",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ba» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ba.porque": {
+  "texto": "Las sales de bario dan el color verde de los fuegos artificiales.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ba» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.La": {
+  "texto": "El objetivo de una cámara",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «La» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.La.porque": {
+  "texto": "El vidrio con lantano desvía mucho la luz y permite hacer lentes de cámara más finas y nítidas.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «La» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ce": {
+  "texto": "Un mechero de piedra",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ce» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ce.porque": {
+  "texto": "La «piedra» de los mecheros es ferrocerio, una aleación con cerio que suelta chispas al rascarla.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ce» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Pr": {
+  "texto": "Un vaso de vidrio verde amarillento",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Pr» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Pr.porque": {
+  "texto": "El praseodimio se usa para teñir el vidrio y la cerámica de verde amarillento.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Pr» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Nd": {
+  "texto": "Unos imanes de neodimio",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Nd» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Nd.porque": {
+  "texto": "Los imanes más potentes son de neodimio, hierro y boro: están en auriculares, altavoces y motores.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Nd» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Pm": {
+  "texto": "Un reloj con números que brillan",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Pm» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Pm.porque": {
+  "texto": "Hace años se usaba prometio en la pintura que hacía brillar en la oscuridad las agujas de los relojes.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Pm» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Sm": {
+  "texto": "Un imán de samario-cobalto",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Sm» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Sm.porque": {
+  "texto": "Los imanes de samario-cobalto aguantan altas temperaturas sin perder fuerza.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Sm» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Eu": {
+  "texto": "Un billete bajo luz ultravioleta",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Eu» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Eu.porque": {
+  "texto": "Bajo luz ultravioleta, unas tintas con europio hacen brillar los billetes de euro y ayudan a detectar los falsos.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Eu» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Gd": {
+  "texto": "Un contraste para resonancia magnética",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Gd» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Gd.porque": {
+  "texto": "Se inyectan compuestos de gadolinio para que los órganos se vean mejor en la resonancia magnética.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Gd» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Tb": {
+  "texto": "Una bombilla de bajo consumo",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Tb» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Tb.porque": {
+  "texto": "La luz verde de las bombillas fluorescentes sale de un compuesto de terbio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Tb» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Dy": {
+  "texto": "El motor de un coche eléctrico",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Dy» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Dy.porque": {
+  "texto": "Se añade disprosio a los imanes de neodimio de los motores eléctricos para que no se debiliten al calentarse.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Dy» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ho": {
+  "texto": "Un láser médico",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ho» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ho.porque": {
+  "texto": "Los láseres de holmio se usan en medicina, por ejemplo para romper piedras del riñón.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ho» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Er": {
+  "texto": "Un cable de fibra óptica",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Er» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Er.porque": {
+  "texto": "El erbio amplifica la luz dentro de los cables de fibra óptica que llevan internet de un continente a otro.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Er» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Tm": {
+  "texto": "Un láser de cirugía",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Tm» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Tm.porque": {
+  "texto": "Los láseres de tulio cortan con mucha precisión en algunas operaciones.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Tm» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Yb": {
+  "texto": "Un reloj atómico de iterbio",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Yb» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Yb.porque": {
+  "texto": "Los relojes atómicos de iterbio están entre los más precisos que se han construido.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Yb» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Lu": {
+  "texto": "El cristal de un escáner PET",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Lu» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Lu.porque": {
+  "texto": "Los escáneres PET de los hospitales detectan la radiación con cristales que llevan lutecio y que destellan.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Lu» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Hf": {
+  "texto": "Un procesador moderno",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Hf» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Hf.porque": {
+  "texto": "Los transistores de los procesadores actuales llevan óxido de hafnio como aislante.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Hf» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ta": {
+  "texto": "Un móvil por dentro",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ta» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ta.porque": {
+  "texto": "Los móviles llevan diminutos condensadores de tantalio que guardan carga eléctrica.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ta» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.W": {
+  "texto": "Una bombilla de filamento",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «W» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.W.porque": {
+  "texto": "El filamento de las bombillas es de wolframio, el metal que aguanta más temperatura sin fundirse.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «W» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Re": {
+  "texto": "Un motor de avión",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Re» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Re.porque": {
+  "texto": "Las palas de las turbinas de los aviones llevan renio para aguantar temperaturas altísimas.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Re» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Os": {
+  "texto": "Unos lingotes de osmio",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Os» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Os.porque": {
+  "texto": "El osmio es el elemento más denso: un lingote pesa el doble que otro igual de plomo.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Os» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ir": {
+  "texto": "El kilogramo patrón",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ir» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ir.porque": {
+  "texto": "El antiguo kilogramo patrón de París era un cilindro de platino con un 10 % de iridio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ir» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Pt": {
+  "texto": "Un anillo de platino",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Pt» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Pt.porque": {
+  "texto": "El platino es un metal precioso que no se oxida, muy usado en joyería.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Pt» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Au": {
+  "texto": "Un doblón de oro",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Au» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Au.porque": {
+  "texto": "El oro no se oxida y conserva su brillo durante siglos: por eso se usó en monedas como el doblón español.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Au» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Hg": {
+  "texto": "Un termómetro antiguo",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Hg» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Hg.porque": {
+  "texto": "Los termómetros antiguos tenían mercurio, el único metal líquido a temperatura ambiente; hoy están prohibidos por su toxicidad.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Hg» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Tl": {
+  "texto": "Un frasco de matarratas antiguo",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Tl» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Tl.porque": {
+  "texto": "Hace décadas se usaban sales de talio como matarratas; hoy están prohibidas por lo tóxicas que son.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Tl» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Pb": {
+  "texto": "La batería de un coche",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Pb» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Pb.porque": {
+  "texto": "Las baterías de arranque de los coches son de plomo y ácido sulfúrico.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Pb» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Bi": {
+  "texto": "Un cristal de bismuto",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Bi» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Bi.porque": {
+  "texto": "El bismuto forma cristales en escalera con colores de arcoíris por una capa finísima de óxido.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Bi» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Po": {
+  "texto": "Un núcleo inestable",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Po» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Po.porque": {
+  "texto": "El polonio, descubierto por Marie Curie, es tan radiactivo que una muestra brilla con luz azulada en la oscuridad.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Po» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.At": {
+  "texto": "Un núcleo inestable",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «At» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.At.porque": {
+  "texto": "El astato es el elemento natural más escaso: en toda la corteza terrestre habría menos de un gramo.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «At» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Rn": {
+  "texto": "Gas que sale del granito",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Rn» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Rn.porque": {
+  "texto": "El radón es un gas radiactivo que se escapa de rocas como el granito y puede acumularse en sótanos mal ventilados.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Rn» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Fr": {
+  "texto": "Un núcleo inestable",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Fr» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Fr.porque": {
+  "texto": "El francio es tan inestable que la mitad de sus átomos se desintegra en unos 22 minutos.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Fr» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ra": {
+  "texto": "Un reloj antiguo con números que brillan",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ra» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ra.porque": {
+  "texto": "Hace un siglo se pintaban los números de los relojes con radio para que brillaran; era peligroso y se prohibió.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ra» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ac": {
+  "texto": "Un tratamiento contra el cáncer",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ac» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ac.porque": {
+  "texto": "El actinio-225 se ensaya en medicina para destruir células de cáncer desde dentro.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ac» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Th": {
+  "texto": "Un farol de gas antiguo",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Th» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Th.porque": {
+  "texto": "Las camisas de los faroles de gas antiguos llevaban óxido de torio para dar una luz blanca y brillante.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Th» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Pa": {
+  "texto": "Un núcleo inestable",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Pa» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Pa.porque": {
+  "texto": "El protactinio es uno de los elementos naturales más escasos; aparece en pequeñísimas cantidades en los minerales de uranio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Pa» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.U": {
+  "texto": "Barras de combustible nuclear",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «U» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.U.porque": {
+  "texto": "Las centrales nucleares obtienen energía rompiendo núcleos de uranio-235; el agua que las rodea brilla en azul.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «U» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Np": {
+  "texto": "Un núcleo inestable",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Np» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Np.porque": {
+  "texto": "El neptunio fue el primer elemento más pesado que el uranio fabricado por el ser humano, en 1940.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Np» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Pu": {
+  "texto": "La pila nuclear de una sonda espacial",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Pu» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Pu.porque": {
+  "texto": "El calor del plutonio-238 da electricidad a sondas como las Voyager o al robot Curiosity en Marte.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Pu» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Am": {
+  "texto": "Un detector de humo",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Am» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Am.porque": {
+  "texto": "Muchos detectores de humo llevan una pizca de americio-241 que ioniza el aire de su interior.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Am» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Cm": {
+  "texto": "Un núcleo inestable",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Cm» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Cm.porque": {
+  "texto": "El curio se llama así por Marie y Pierre Curie; es tan radiactivo que brilla en la oscuridad.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Cm» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Bk": {
+  "texto": "Un núcleo inestable",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Bk» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Bk.porque": {
+  "texto": "El berkelio se llama así por Berkeley, la ciudad de California donde se fabricó por primera vez.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Bk» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Cf": {
+  "texto": "Un núcleo inestable",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Cf» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Cf.porque": {
+  "texto": "El californio-252 suelta tantos neutrones que se usa para arrancar reactores nucleares y para buscar petróleo bajo tierra.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Cf» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Es": {
+  "texto": "Un núcleo inestable",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Es» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Es.porque": {
+  "texto": "El einstenio se descubrió en los restos de la primera bomba de hidrógeno, en 1952, y lleva el nombre de Einstein.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Es» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Fm": {
+  "texto": "Un núcleo inestable",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Fm» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Fm.porque": {
+  "texto": "El fermio, por Enrico Fermi, también apareció en los restos de la primera bomba de hidrógeno.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Fm» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Md": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Md» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Md.porque": {
+  "texto": "El mendelevio, por Mendeléiev, el creador de la tabla periódica, se fabricó átomo a átomo en un acelerador.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Md» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.No": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «No» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.No.porque": {
+  "texto": "El nobelio, por Alfred Nobel, solo se ha fabricado en aceleradores de partículas.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «No» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Lr": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Lr» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Lr.porque": {
+  "texto": "El lawrencio lleva el nombre de Ernest Lawrence, que inventó el ciclotrón, un tipo de acelerador de partículas.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Lr» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Rf": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Rf» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Rf.porque": {
+  "texto": "El rutherfordio se llama así por Ernest Rutherford, que descubrió el núcleo atómico; solo existe unos instantes en los aceleradores.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Rf» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Db": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Db» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Db.porque": {
+  "texto": "El dubnio se llama así por Dubná, la ciudad rusa con uno de los laboratorios que fabrican elementos nuevos.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Db» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Sg": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Sg» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Sg.porque": {
+  "texto": "El seaborgio lleva el nombre de Glenn Seaborg, que descubrió el plutonio y otros nueve elementos.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Sg» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Bh": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Bh» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Bh.porque": {
+  "texto": "El bohrio se llama así por Niels Bohr, el del modelo atómico de capas; se fabrica átomo a átomo.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Bh» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Hs": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Hs» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Hs.porque": {
+  "texto": "El hasio se llama así por Hesse, la región de Alemania donde está el laboratorio que lo fabricó.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Hs» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Mt": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Mt» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Mt.porque": {
+  "texto": "El meitnerio honra a Lise Meitner, que explicó la fisión nuclear; solo dura instantes.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Mt» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ds": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ds» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ds.porque": {
+  "texto": "El darmstatio se llama así por Darmstadt, la ciudad alemana donde se fabricó en un acelerador.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ds» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Rg": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Rg» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Rg.porque": {
+  "texto": "El roentgenio honra a Wilhelm Röntgen, el descubridor de los rayos X.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Rg» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Cn": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Cn» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Cn.porque": {
+  "texto": "El copernicio honra a Copérnico, que puso el Sol en el centro del sistema solar.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Cn» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Nh": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Nh» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Nh.porque": {
+  "texto": "El nihonio se llama así por Nihon, «Japón» en japonés: fue el primer elemento descubierto en Asia.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Nh» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Fl": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Fl» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Fl.porque": {
+  "texto": "El flerovio se llama así por Gueorgui Fliórov, fundador del laboratorio ruso donde se fabricó.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Fl» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Mc": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Mc» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Mc.porque": {
+  "texto": "El moscovio se llama así por la región de Moscú, donde está Dubná; solo existe unas décimas de segundo.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Mc» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Lv": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Lv» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Lv.porque": {
+  "texto": "El livermorio se llama así por el laboratorio de Livermore, en California, que ayudó a descubrirlo.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Lv» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ts": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ts» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ts.porque": {
+  "texto": "El teneso se llama así por Tennessee, el estado de EE. UU. donde se preparó el material para fabricarlo.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ts» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Og": {
+  "texto": "Un núcleo en un acelerador de partículas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Og» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Og.porque": {
+  "texto": "El oganesón honra a Yuri Oganessian; es el elemento más pesado fabricado hasta hoy.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Og» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.H2": {
+  "texto": "Un cohete",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «H2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.H2.porque": {
+  "texto": "Grandes cohetes, como el transbordador espacial, quemaban hidrógeno líquido con oxígeno líquido.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «H2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.O2": {
+  "texto": "Una bombona de oxígeno",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «O2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.O2.porque": {
+  "texto": "En hospitales y en la alta montaña se respira oxígeno de bombonas cuando falta aire.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «O2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.N2": {
+  "texto": "La atmósfera de la Tierra",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «N2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.N2.porque": {
+  "texto": "Casi 4 de cada 5 moléculas del aire que respiramos son de nitrógeno.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «N2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.F2": {
+  "texto": "Una nube de gas amarillo pálido",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «F2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.F2.porque": {
+  "texto": "El flúor puro es un gas amarillo pálido tan reactivo que reacciona con casi todo, hasta con el agua.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «F2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Cl2": {
+  "texto": "Una nube de gas amarillo verdoso",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Cl2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Cl2.porque": {
+  "texto": "El cloro es un gas amarillo verdoso y tóxico; disuelto en poca cantidad desinfecta el agua.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Cl2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Br2": {
+  "texto": "Un frasco con bromo líquido",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Br2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Br2.porque": {
+  "texto": "El bromo es uno de los dos elementos líquidos a temperatura ambiente: rojo pardo y con vapores.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Br2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.I2": {
+  "texto": "Cristales de yodo",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «I2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.I2.porque": {
+  "texto": "El yodo sólido forma cristales gris violeta que, al calentarlos, pasan directamente a gas violeta.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «I2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.O3": {
+  "texto": "La capa de ozono",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «O3» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.O3.porque": {
+  "texto": "Entre unos 15 y 35 km de altura, el ozono filtra buena parte de la radiación ultravioleta del Sol.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «O3» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.H2O": {
+  "texto": "Una gota de agua",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «H2O» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.H2O.porque": {
+  "texto": "El agua cubre más del 70 % de la Tierra y es más de la mitad de nuestro cuerpo.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «H2O» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.H2O2": {
+  "texto": "Un bote de agua oxigenada",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «H2O2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.H2O2.porque": {
+  "texto": "El agua oxigenada es peróxido de hidrógeno diluido: hace espuma al desinfectar las heridas.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «H2O2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.CO": {
+  "texto": "Un detector de monóxido de carbono",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «CO» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.CO.porque": {
+  "texto": "El monóxido de carbono no huele ni se ve: estos detectores avisan si una estufa o caldera lo produce.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «CO» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.CO2": {
+  "texto": "Un vaso de refresco",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «CO2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.CO2.porque": {
+  "texto": "Las burbujas de los refrescos son dióxido de carbono disuelto que escapa al abrirlos.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «CO2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.CH4": {
+  "texto": "Un fuego de cocina de gas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «CH4» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.CH4.porque": {
+  "texto": "El gas natural de las cocinas es casi todo metano, y arde con llama azul.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «CH4» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.C2H2": {
+  "texto": "Un soplete",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «C2H2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.C2H2.porque": {
+  "texto": "La llama del acetileno con oxígeno supera los 3000 °C: corta y suelda metales.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «C2H2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.HCN": {
+  "texto": "Una manzana con sus pepitas",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «HCN» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.HCN.porque": {
+  "texto": "Las pepitas de manzana tienen una sustancia que libera cianuro de hidrógeno si se mastican; tragadas enteras no hacen daño.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «HCN» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.CH2O": {
+  "texto": "Un tarro con una muestra en formol",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «CH2O» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.CH2O.porque": {
+  "texto": "El formol, metanal disuelto en agua, conserva muestras biológicas en los laboratorios.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «CH2O» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.CS2": {
+  "texto": "Un frasco de disolvente",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «CS2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.CS2.porque": {
+  "texto": "El disulfuro de carbono es un líquido que disuelve el azufre y el caucho; se usó para fabricar la seda artificial (viscosa).",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «CS2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.CCl4": {
+  "texto": "Un extintor antiguo",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «CCl4» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.CCl4.porque": {
+  "texto": "Hace décadas se usaba en extintores, hasta que se supo que es tóxico y daña la capa de ozono.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «CCl4» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.NH3": {
+  "texto": "Un limpiacristales con amoniaco",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «NH3» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.NH3.porque": {
+  "texto": "El amoniaco disuelto en agua es un limpiador clásico de cristales.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «NH3» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.NO": {
+  "texto": "Una nube de tormenta con rayos",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «NO» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.NO.porque": {
+  "texto": "Los rayos calientan tanto el aire que el nitrógeno y el oxígeno se unen y forman monóxido de nitrógeno.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «NO» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.NO2": {
+  "texto": "La boina de contaminación de una ciudad",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «NO2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.NO2.porque": {
+  "texto": "El color pardo de la contaminación sobre las ciudades lo da sobre todo el dióxido de nitrógeno de los motores.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «NO2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.N2O": {
+  "texto": "Un sifón de nata",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «N2O» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.N2O.porque": {
+  "texto": "Las cargas de los sifones de nata montada llevan óxido de dinitrógeno, que hace espumosa la nata.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «N2O» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.HNO3": {
+  "texto": "Un saco de abono",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «HNO3» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.HNO3.porque": {
+  "texto": "El ácido nítrico se usa para fabricar nitratos, los abonos que ayudan a crecer a las plantas.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «HNO3» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.HF": {
+  "texto": "Un vaso de vidrio grabado",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «HF» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.HF.porque": {
+  "texto": "El ácido fluorhídrico ataca el vidrio y se usa para grabar dibujos en él.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «HF» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.HCl": {
+  "texto": "Una garrafa de salfumán",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «HCl» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.HCl.porque": {
+  "texto": "El salfumán es ácido clorhídrico; nuestro estómago fabrica el mismo ácido para digerir.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «HCl» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.HBr": {
+  "texto": "Un tubo de ensayo que humea",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «HBr» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.HBr.porque": {
+  "texto": "El bromuro de hidrógeno es un gas que humea al contacto con el aire húmedo y en agua forma un ácido fuerte.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «HBr» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.HI": {
+  "texto": "Un tubo de ensayo con ácido",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «HI» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.HI.porque": {
+  "texto": "Disuelto en agua, el yoduro de hidrógeno es el más fuerte de los ácidos de los halógenos.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «HI» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.H2S": {
+  "texto": "Un huevo podrido",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «H2S» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.H2S.porque": {
+  "texto": "El olor a huevo podrido es sulfuro de hidrógeno, que se forma cuando se descomponen las proteínas con azufre.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «H2S» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.SO2": {
+  "texto": "Un volcán",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «SO2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.SO2.porque": {
+  "texto": "Los volcanes expulsan dióxido de azufre, que en el aire puede acabar formando lluvia ácida.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «SO2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.SO3": {
+  "texto": "Una nube de lluvia ácida",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «SO3» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.SO3.porque": {
+  "texto": "El trióxido de azufre del aire se disuelve en las gotas de lluvia y forma ácido sulfúrico: la lluvia ácida.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «SO3» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.SiO2": {
+  "texto": "Un cristal de cuarzo",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «SiO2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.SiO2.porque": {
+  "texto": "El cuarzo y la arena de la playa son dióxido de silicio; fundido se convierte en vidrio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «SiO2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.NaCl": {
+  "texto": "Un salero",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «NaCl» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.NaCl.porque": {
+  "texto": "La sal de mesa es cloruro de sodio, en cristales cúbicos diminutos.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «NaCl» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.KCl": {
+  "texto": "Un salero de sal sin sodio",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «KCl» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.KCl.porque": {
+  "texto": "La «sal sin sodio» es cloruro de potasio: sala parecido sin aportar sodio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «KCl» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.NaF": {
+  "texto": "Un tubo de pasta de dientes",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «NaF» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.NaF.porque": {
+  "texto": "El flúor de muchas pastas de dientes es fluoruro de sodio, que fortalece el esmalte.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «NaF» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.AgCl": {
+  "texto": "Unas gafas que se oscurecen al sol",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «AgCl» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.AgCl.porque": {
+  "texto": "Algunas gafas fotocromáticas llevan cristalitos de cloruro de plata que se oscurecen con la luz ultravioleta.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «AgCl» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.MgCl2": {
+  "texto": "El agua del mar",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «MgCl2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.MgCl2.porque": {
+  "texto": "Después de la sal común, el cloruro de magnesio es una de las sales más abundantes del agua del mar.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «MgCl2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.CaCl2": {
+  "texto": "Un saco de sal para la nieve",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «CaCl2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.CaCl2.porque": {
+  "texto": "El cloruro de calcio se echa en las carreteras para derretir el hielo; al disolverse desprende calor.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «CaCl2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.ZnCl2": {
+  "texto": "Cinc burbujeando en ácido",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «ZnCl2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.ZnCl2.porque": {
+  "texto": "Al echar cinc en ácido clorhídrico salen burbujas de hidrógeno y queda cloruro de cinc disuelto.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «ZnCl2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.MgO": {
+  "texto": "Un crisol con ceniza blanca",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «MgO» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.MgO.porque": {
+  "texto": "Al quemar magnesio con su luz cegadora queda un polvo blanco: óxido de magnesio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «MgO» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.CaO": {
+  "texto": "Un saco de cal viva",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «CaO» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.CaO.porque": {
+  "texto": "La cal viva se obtiene calentando la caliza y se usa para hacer cemento y morteros.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «CaO» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.FeS": {
+  "texto": "Hierro y azufre calentándose",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «FeS» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.FeS.porque": {
+  "texto": "Al calentar limaduras de hierro con azufre se forma sulfuro de hierro, una reacción clásica del laboratorio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «FeS» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.CuO": {
+  "texto": "Un hilo de cobre ennegrecido",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «CuO» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.CuO.porque": {
+  "texto": "Al calentar el cobre al aire se cubre de una capa negra de óxido de cobre(II).",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «CuO» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Cu2O": {
+  "texto": "Un vaso de vidrio rojo",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Cu2O» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Cu2O.porque": {
+  "texto": "El óxido de cobre(I) da color rojo a algunos vidrios y esmaltes.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Cu2O» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.ZnO": {
+  "texto": "Un tubo de crema solar",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «ZnO» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.ZnO.porque": {
+  "texto": "El óxido de cinc es el polvo blanco de las cremas solares minerales: frena la radiación ultravioleta.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «ZnO» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Fe2O3": {
+  "texto": "Un candado oxidado",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Fe2O3» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Fe2O3.porque": {
+  "texto": "La herrumbre naranja que cubre el hierro viejo es sobre todo óxido de hierro(III) hidratado.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Fe2O3» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Al2O3": {
+  "texto": "Un rubí",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Al2O3» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Al2O3.porque": {
+  "texto": "El rubí y el zafiro son óxido de aluminio (corindón) con trazas de cromo, o de hierro y titanio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Al2O3» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.NaOH": {
+  "texto": "Una pastilla de jabón",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «NaOH» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.NaOH.porque": {
+  "texto": "El jabón se fabrica calentando grasas o aceites con sosa cáustica.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «NaOH» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.KOH": {
+  "texto": "Un bote de jabón líquido",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «KOH» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.KOH.porque": {
+  "texto": "Los jabones blandos y líquidos se hacen con potasa cáustica en vez de sosa.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «KOH» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.Ca(OH)2": {
+  "texto": "Un cubo de cal para encalar",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «Ca(OH)2» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.Ca(OH)2.porque": {
+  "texto": "La cal apagada mezclada con agua es la pintura blanca de las casas encaladas.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «Ca(OH)2» (dato verdadero, para alumnado de ESO)"
+ },
+ "objeto.CaCO3": {
+  "texto": "La cáscara de un huevo",
+  "descripcion": "Nombre del objeto cotidiano en 3D que representa a «CaCO3» (elemento o sustancia); frase corta con artículo"
+ },
+ "objeto.CaCO3.porque": {
+  "texto": "La cáscara de los huevos, como las conchas, la caliza y el mármol, es carbonato de calcio.",
+  "descripcion": "Una frase: qué relación tiene ese objeto con «CaCO3» (dato verdadero, para alumnado de ESO)"
+ }
+}
