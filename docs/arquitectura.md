@@ -118,8 +118,8 @@ dependen de él.
 - [x] Tarjetas con marcadores, mesa virtual, reacciones con fuego/hielo,
   descomponer e impresión de tarjetas.
 - [x] Plataforma educativa (ver más abajo).
-- [ ] Repaso de UX y accesibilidad, todos los textos en la tabla (también los
-  de `@webar/chem`) y una animación inicial que explique cómo se usa.
+- [x] Repaso de UX y accesibilidad, todos los textos en una tabla traducible
+  (español e inglés) e introducción animada: ver [ux.md](ux.md).
 
 ## Plataforma educativa
 

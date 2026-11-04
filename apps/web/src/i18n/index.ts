@@ -1,3 +1,4 @@
+import en from './en.json';
 import es from './es.json';
 
 /**
@@ -11,7 +12,7 @@ export interface TextEntry {
 }
 export type TextTable = Record<string, TextEntry>;
 
-const TABLES: Record<string, TextTable> = { es: es as TextTable };
+const TABLES: Record<string, TextTable> = { es: es as TextTable, en: en as TextTable };
 let current: TextTable = TABLES.es;
 
 export function setLanguage(lang: string): void {

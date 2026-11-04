@@ -13,7 +13,8 @@ Responde y escribe (commits, docs, comentarios) **en español**.
 | [docs/servidor.md](docs/servidor.md) | La máquina, cómo convive con Peer4U, qué se puede tocar por SSH y qué no |
 | [docs/ci-cd.md](docs/ci-cd.md) | GitHub, la CI, el despliegue automático, cómo vigilarlo y cómo volver atrás |
 | [docs/arquitectura.md](docs/arquitectura.md) | Por qué three.js + WebXR (+ MindAR) y cómo se separa la base de RA de la app |
-| [docs/desarrollo.md](docs/desarrollo.md) | Arrancar en local (npm workspaces, Vite) y el contrato de la imagen |
+| [docs/desarrollo.md](docs/desarrollo.md) | Arrancar en local (npm workspaces, Vite, servidor) y el contrato de la imagen |
+| [docs/ux.md](docs/ux.md) | Principios de UX, accesibilidad (WCAG 2.2) y cómo se traducen los textos |
 | [.claude/skills/desplegar/SKILL.md](.claude/skills/desplegar/SKILL.md) | Los pasos exactos de un despliegue |
 
 ## El ciclo en una línea
@@ -52,3 +53,7 @@ ve en ≤ 2 min (cron) y despliega sola → comprueba
    hacen falta ramas; si hay más gente, ramas y PR, que la CI también prueba).
 9. La web necesita **HTTPS** para la cámara y los sensores: siempre se prueba
    en el dominio, o en `localhost` en local.
+10. **Ningún texto de la interfaz en el código**: va en
+    `apps/web/src/i18n/es.json` con su descripción (y en `en.json`).
+11. **Datos de alumnos**: solo alias y progreso; nada de nombres reales,
+    correos, fotos ni ubicación (guía de la AEPD para centros).

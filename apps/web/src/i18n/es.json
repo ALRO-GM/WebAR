@@ -1014,5 +1014,1717 @@
  "perfil.racha_1": {
   "texto": "🔥 1 semana seguida",
   "descripcion": "Racha semanal de una sola semana (singular de perfil.racha)"
+ },
+ "elemento.H.nombre": {
+  "texto": "Hidrógeno",
+  "descripcion": "Nombre del elemento H"
+ },
+ "elemento.He.nombre": {
+  "texto": "Helio",
+  "descripcion": "Nombre del elemento He"
+ },
+ "elemento.Li.nombre": {
+  "texto": "Litio",
+  "descripcion": "Nombre del elemento Li"
+ },
+ "elemento.Be.nombre": {
+  "texto": "Berilio",
+  "descripcion": "Nombre del elemento Be"
+ },
+ "elemento.B.nombre": {
+  "texto": "Boro",
+  "descripcion": "Nombre del elemento B"
+ },
+ "elemento.C.nombre": {
+  "texto": "Carbono",
+  "descripcion": "Nombre del elemento C"
+ },
+ "elemento.N.nombre": {
+  "texto": "Nitrógeno",
+  "descripcion": "Nombre del elemento N"
+ },
+ "elemento.O.nombre": {
+  "texto": "Oxígeno",
+  "descripcion": "Nombre del elemento O"
+ },
+ "elemento.F.nombre": {
+  "texto": "Flúor",
+  "descripcion": "Nombre del elemento F"
+ },
+ "elemento.Ne.nombre": {
+  "texto": "Neón",
+  "descripcion": "Nombre del elemento Ne"
+ },
+ "elemento.Na.nombre": {
+  "texto": "Sodio",
+  "descripcion": "Nombre del elemento Na"
+ },
+ "elemento.Mg.nombre": {
+  "texto": "Magnesio",
+  "descripcion": "Nombre del elemento Mg"
+ },
+ "elemento.Al.nombre": {
+  "texto": "Aluminio",
+  "descripcion": "Nombre del elemento Al"
+ },
+ "elemento.Si.nombre": {
+  "texto": "Silicio",
+  "descripcion": "Nombre del elemento Si"
+ },
+ "elemento.P.nombre": {
+  "texto": "Fósforo",
+  "descripcion": "Nombre del elemento P"
+ },
+ "elemento.S.nombre": {
+  "texto": "Azufre",
+  "descripcion": "Nombre del elemento S"
+ },
+ "elemento.Cl.nombre": {
+  "texto": "Cloro",
+  "descripcion": "Nombre del elemento Cl"
+ },
+ "elemento.Ar.nombre": {
+  "texto": "Argón",
+  "descripcion": "Nombre del elemento Ar"
+ },
+ "elemento.K.nombre": {
+  "texto": "Potasio",
+  "descripcion": "Nombre del elemento K"
+ },
+ "elemento.Ca.nombre": {
+  "texto": "Calcio",
+  "descripcion": "Nombre del elemento Ca"
+ },
+ "elemento.Sc.nombre": {
+  "texto": "Escandio",
+  "descripcion": "Nombre del elemento Sc"
+ },
+ "elemento.Ti.nombre": {
+  "texto": "Titanio",
+  "descripcion": "Nombre del elemento Ti"
+ },
+ "elemento.V.nombre": {
+  "texto": "Vanadio",
+  "descripcion": "Nombre del elemento V"
+ },
+ "elemento.Cr.nombre": {
+  "texto": "Cromo",
+  "descripcion": "Nombre del elemento Cr"
+ },
+ "elemento.Mn.nombre": {
+  "texto": "Manganeso",
+  "descripcion": "Nombre del elemento Mn"
+ },
+ "elemento.Fe.nombre": {
+  "texto": "Hierro",
+  "descripcion": "Nombre del elemento Fe"
+ },
+ "elemento.Co.nombre": {
+  "texto": "Cobalto",
+  "descripcion": "Nombre del elemento Co"
+ },
+ "elemento.Ni.nombre": {
+  "texto": "Níquel",
+  "descripcion": "Nombre del elemento Ni"
+ },
+ "elemento.Cu.nombre": {
+  "texto": "Cobre",
+  "descripcion": "Nombre del elemento Cu"
+ },
+ "elemento.Zn.nombre": {
+  "texto": "Zinc",
+  "descripcion": "Nombre del elemento Zn"
+ },
+ "elemento.Ga.nombre": {
+  "texto": "Galio",
+  "descripcion": "Nombre del elemento Ga"
+ },
+ "elemento.Ge.nombre": {
+  "texto": "Germanio",
+  "descripcion": "Nombre del elemento Ge"
+ },
+ "elemento.As.nombre": {
+  "texto": "Arsénico",
+  "descripcion": "Nombre del elemento As"
+ },
+ "elemento.Se.nombre": {
+  "texto": "Selenio",
+  "descripcion": "Nombre del elemento Se"
+ },
+ "elemento.Br.nombre": {
+  "texto": "Bromo",
+  "descripcion": "Nombre del elemento Br"
+ },
+ "elemento.Kr.nombre": {
+  "texto": "Kriptón",
+  "descripcion": "Nombre del elemento Kr"
+ },
+ "elemento.Rb.nombre": {
+  "texto": "Rubidio",
+  "descripcion": "Nombre del elemento Rb"
+ },
+ "elemento.Sr.nombre": {
+  "texto": "Estroncio",
+  "descripcion": "Nombre del elemento Sr"
+ },
+ "elemento.Y.nombre": {
+  "texto": "Itrio",
+  "descripcion": "Nombre del elemento Y"
+ },
+ "elemento.Zr.nombre": {
+  "texto": "Circonio",
+  "descripcion": "Nombre del elemento Zr"
+ },
+ "elemento.Nb.nombre": {
+  "texto": "Niobio",
+  "descripcion": "Nombre del elemento Nb"
+ },
+ "elemento.Mo.nombre": {
+  "texto": "Molibdeno",
+  "descripcion": "Nombre del elemento Mo"
+ },
+ "elemento.Tc.nombre": {
+  "texto": "Tecnecio",
+  "descripcion": "Nombre del elemento Tc"
+ },
+ "elemento.Ru.nombre": {
+  "texto": "Rutenio",
+  "descripcion": "Nombre del elemento Ru"
+ },
+ "elemento.Rh.nombre": {
+  "texto": "Rodio",
+  "descripcion": "Nombre del elemento Rh"
+ },
+ "elemento.Pd.nombre": {
+  "texto": "Paladio",
+  "descripcion": "Nombre del elemento Pd"
+ },
+ "elemento.Ag.nombre": {
+  "texto": "Plata",
+  "descripcion": "Nombre del elemento Ag"
+ },
+ "elemento.Cd.nombre": {
+  "texto": "Cadmio",
+  "descripcion": "Nombre del elemento Cd"
+ },
+ "elemento.In.nombre": {
+  "texto": "Indio",
+  "descripcion": "Nombre del elemento In"
+ },
+ "elemento.Sn.nombre": {
+  "texto": "Estaño",
+  "descripcion": "Nombre del elemento Sn"
+ },
+ "elemento.Sb.nombre": {
+  "texto": "Antimonio",
+  "descripcion": "Nombre del elemento Sb"
+ },
+ "elemento.Te.nombre": {
+  "texto": "Telurio",
+  "descripcion": "Nombre del elemento Te"
+ },
+ "elemento.I.nombre": {
+  "texto": "Yodo",
+  "descripcion": "Nombre del elemento I"
+ },
+ "elemento.Xe.nombre": {
+  "texto": "Xenón",
+  "descripcion": "Nombre del elemento Xe"
+ },
+ "elemento.Cs.nombre": {
+  "texto": "Cesio",
+  "descripcion": "Nombre del elemento Cs"
+ },
+ "elemento.Ba.nombre": {
+  "texto": "Bario",
+  "descripcion": "Nombre del elemento Ba"
+ },
+ "elemento.La.nombre": {
+  "texto": "Lantano",
+  "descripcion": "Nombre del elemento La"
+ },
+ "elemento.Ce.nombre": {
+  "texto": "Cerio",
+  "descripcion": "Nombre del elemento Ce"
+ },
+ "elemento.Pr.nombre": {
+  "texto": "Praseodimio",
+  "descripcion": "Nombre del elemento Pr"
+ },
+ "elemento.Nd.nombre": {
+  "texto": "Neodimio",
+  "descripcion": "Nombre del elemento Nd"
+ },
+ "elemento.Pm.nombre": {
+  "texto": "Prometio",
+  "descripcion": "Nombre del elemento Pm"
+ },
+ "elemento.Sm.nombre": {
+  "texto": "Samario",
+  "descripcion": "Nombre del elemento Sm"
+ },
+ "elemento.Eu.nombre": {
+  "texto": "Europio",
+  "descripcion": "Nombre del elemento Eu"
+ },
+ "elemento.Gd.nombre": {
+  "texto": "Gadolinio",
+  "descripcion": "Nombre del elemento Gd"
+ },
+ "elemento.Tb.nombre": {
+  "texto": "Terbio",
+  "descripcion": "Nombre del elemento Tb"
+ },
+ "elemento.Dy.nombre": {
+  "texto": "Disprosio",
+  "descripcion": "Nombre del elemento Dy"
+ },
+ "elemento.Ho.nombre": {
+  "texto": "Holmio",
+  "descripcion": "Nombre del elemento Ho"
+ },
+ "elemento.Er.nombre": {
+  "texto": "Erbio",
+  "descripcion": "Nombre del elemento Er"
+ },
+ "elemento.Tm.nombre": {
+  "texto": "Tulio",
+  "descripcion": "Nombre del elemento Tm"
+ },
+ "elemento.Yb.nombre": {
+  "texto": "Iterbio",
+  "descripcion": "Nombre del elemento Yb"
+ },
+ "elemento.Lu.nombre": {
+  "texto": "Lutecio",
+  "descripcion": "Nombre del elemento Lu"
+ },
+ "elemento.Hf.nombre": {
+  "texto": "Hafnio",
+  "descripcion": "Nombre del elemento Hf"
+ },
+ "elemento.Ta.nombre": {
+  "texto": "Tantalio",
+  "descripcion": "Nombre del elemento Ta"
+ },
+ "elemento.W.nombre": {
+  "texto": "Wolframio",
+  "descripcion": "Nombre del elemento W"
+ },
+ "elemento.Re.nombre": {
+  "texto": "Renio",
+  "descripcion": "Nombre del elemento Re"
+ },
+ "elemento.Os.nombre": {
+  "texto": "Osmio",
+  "descripcion": "Nombre del elemento Os"
+ },
+ "elemento.Ir.nombre": {
+  "texto": "Iridio",
+  "descripcion": "Nombre del elemento Ir"
+ },
+ "elemento.Pt.nombre": {
+  "texto": "Platino",
+  "descripcion": "Nombre del elemento Pt"
+ },
+ "elemento.Au.nombre": {
+  "texto": "Oro",
+  "descripcion": "Nombre del elemento Au"
+ },
+ "elemento.Hg.nombre": {
+  "texto": "Mercurio",
+  "descripcion": "Nombre del elemento Hg"
+ },
+ "elemento.Tl.nombre": {
+  "texto": "Talio",
+  "descripcion": "Nombre del elemento Tl"
+ },
+ "elemento.Pb.nombre": {
+  "texto": "Plomo",
+  "descripcion": "Nombre del elemento Pb"
+ },
+ "elemento.Bi.nombre": {
+  "texto": "Bismuto",
+  "descripcion": "Nombre del elemento Bi"
+ },
+ "elemento.Po.nombre": {
+  "texto": "Polonio",
+  "descripcion": "Nombre del elemento Po"
+ },
+ "elemento.At.nombre": {
+  "texto": "Astato",
+  "descripcion": "Nombre del elemento At"
+ },
+ "elemento.Rn.nombre": {
+  "texto": "Radón",
+  "descripcion": "Nombre del elemento Rn"
+ },
+ "elemento.Fr.nombre": {
+  "texto": "Francio",
+  "descripcion": "Nombre del elemento Fr"
+ },
+ "elemento.Ra.nombre": {
+  "texto": "Radio",
+  "descripcion": "Nombre del elemento Ra"
+ },
+ "elemento.Ac.nombre": {
+  "texto": "Actinio",
+  "descripcion": "Nombre del elemento Ac"
+ },
+ "elemento.Th.nombre": {
+  "texto": "Torio",
+  "descripcion": "Nombre del elemento Th"
+ },
+ "elemento.Pa.nombre": {
+  "texto": "Protactinio",
+  "descripcion": "Nombre del elemento Pa"
+ },
+ "elemento.U.nombre": {
+  "texto": "Uranio",
+  "descripcion": "Nombre del elemento U"
+ },
+ "elemento.Np.nombre": {
+  "texto": "Neptunio",
+  "descripcion": "Nombre del elemento Np"
+ },
+ "elemento.Pu.nombre": {
+  "texto": "Plutonio",
+  "descripcion": "Nombre del elemento Pu"
+ },
+ "elemento.Am.nombre": {
+  "texto": "Americio",
+  "descripcion": "Nombre del elemento Am"
+ },
+ "elemento.Cm.nombre": {
+  "texto": "Curio",
+  "descripcion": "Nombre del elemento Cm"
+ },
+ "elemento.Bk.nombre": {
+  "texto": "Berkelio",
+  "descripcion": "Nombre del elemento Bk"
+ },
+ "elemento.Cf.nombre": {
+  "texto": "Californio",
+  "descripcion": "Nombre del elemento Cf"
+ },
+ "elemento.Es.nombre": {
+  "texto": "Einstenio",
+  "descripcion": "Nombre del elemento Es"
+ },
+ "elemento.Fm.nombre": {
+  "texto": "Fermio",
+  "descripcion": "Nombre del elemento Fm"
+ },
+ "elemento.Md.nombre": {
+  "texto": "Mendelevio",
+  "descripcion": "Nombre del elemento Md"
+ },
+ "elemento.No.nombre": {
+  "texto": "Nobelio",
+  "descripcion": "Nombre del elemento No"
+ },
+ "elemento.Lr.nombre": {
+  "texto": "Lawrencio",
+  "descripcion": "Nombre del elemento Lr"
+ },
+ "elemento.Rf.nombre": {
+  "texto": "Rutherfordio",
+  "descripcion": "Nombre del elemento Rf"
+ },
+ "elemento.Db.nombre": {
+  "texto": "Dubnio",
+  "descripcion": "Nombre del elemento Db"
+ },
+ "elemento.Sg.nombre": {
+  "texto": "Seaborgio",
+  "descripcion": "Nombre del elemento Sg"
+ },
+ "elemento.Bh.nombre": {
+  "texto": "Bohrio",
+  "descripcion": "Nombre del elemento Bh"
+ },
+ "elemento.Hs.nombre": {
+  "texto": "Hasio",
+  "descripcion": "Nombre del elemento Hs"
+ },
+ "elemento.Mt.nombre": {
+  "texto": "Meitnerio",
+  "descripcion": "Nombre del elemento Mt"
+ },
+ "elemento.Ds.nombre": {
+  "texto": "Darmstatio",
+  "descripcion": "Nombre del elemento Ds"
+ },
+ "elemento.Rg.nombre": {
+  "texto": "Roentgenio",
+  "descripcion": "Nombre del elemento Rg"
+ },
+ "elemento.Cn.nombre": {
+  "texto": "Copernicio",
+  "descripcion": "Nombre del elemento Cn"
+ },
+ "elemento.Nh.nombre": {
+  "texto": "Nihonio",
+  "descripcion": "Nombre del elemento Nh"
+ },
+ "elemento.Fl.nombre": {
+  "texto": "Flerovio",
+  "descripcion": "Nombre del elemento Fl"
+ },
+ "elemento.Mc.nombre": {
+  "texto": "Moscovio",
+  "descripcion": "Nombre del elemento Mc"
+ },
+ "elemento.Lv.nombre": {
+  "texto": "Livermorio",
+  "descripcion": "Nombre del elemento Lv"
+ },
+ "elemento.Ts.nombre": {
+  "texto": "Teneso",
+  "descripcion": "Nombre del elemento Ts"
+ },
+ "elemento.Og.nombre": {
+  "texto": "Oganesón",
+  "descripcion": "Nombre del elemento Og"
+ },
+ "familia.no-metal": {
+  "texto": "No metal",
+  "descripcion": "Familia de la tabla periódica"
+ },
+ "familia.gas-noble": {
+  "texto": "Gas noble",
+  "descripcion": "Familia de la tabla periódica"
+ },
+ "familia.alcalino": {
+  "texto": "Metal alcalino",
+  "descripcion": "Familia de la tabla periódica"
+ },
+ "familia.alcalinoterreo": {
+  "texto": "Metal alcalinotérreo",
+  "descripcion": "Familia de la tabla periódica"
+ },
+ "familia.metaloide": {
+  "texto": "Metaloide",
+  "descripcion": "Familia de la tabla periódica"
+ },
+ "familia.halogeno": {
+  "texto": "Halógeno",
+  "descripcion": "Familia de la tabla periódica"
+ },
+ "familia.metal-postransicion": {
+  "texto": "Metal del bloque p",
+  "descripcion": "Familia de la tabla periódica"
+ },
+ "familia.metal-transicion": {
+  "texto": "Metal de transición",
+  "descripcion": "Familia de la tabla periódica"
+ },
+ "familia.lantanido": {
+  "texto": "Lantánido",
+  "descripcion": "Familia de la tabla periódica"
+ },
+ "familia.actinido": {
+  "texto": "Actínido",
+  "descripcion": "Familia de la tabla periódica"
+ },
+ "especie.H2.nombre": {
+  "texto": "Hidrógeno molecular",
+  "descripcion": "Nombre de la sustancia H2"
+ },
+ "especie.H2.uso": {
+  "texto": "El gas más ligero; combustible limpio: al arder solo da agua.",
+  "descripcion": "Para qué sirve H2 hoy (texto corto)"
+ },
+ "especie.O2.nombre": {
+  "texto": "Oxígeno molecular",
+  "descripcion": "Nombre de la sustancia O2"
+ },
+ "especie.O2.uso": {
+  "texto": "El 21 % del aire. Lo respiramos y hace posible la combustión.",
+  "descripcion": "Para qué sirve O2 hoy (texto corto)"
+ },
+ "especie.N2.nombre": {
+  "texto": "Nitrógeno molecular",
+  "descripcion": "Nombre de la sustancia N2"
+ },
+ "especie.N2.uso": {
+  "texto": "El 78 % del aire. Su triple enlace lo hace muy poco reactivo.",
+  "descripcion": "Para qué sirve N2 hoy (texto corto)"
+ },
+ "especie.F2.nombre": {
+  "texto": "Flúor molecular",
+  "descripcion": "Nombre de la sustancia F2"
+ },
+ "especie.F2.uso": {
+  "texto": "El elemento más reactivo de todos.",
+  "descripcion": "Para qué sirve F2 hoy (texto corto)"
+ },
+ "especie.Cl2.nombre": {
+  "texto": "Cloro molecular",
+  "descripcion": "Nombre de la sustancia Cl2"
+ },
+ "especie.Cl2.uso": {
+  "texto": "Gas amarillo verdoso; desinfecta el agua de las piscinas.",
+  "descripcion": "Para qué sirve Cl2 hoy (texto corto)"
+ },
+ "especie.Br2.nombre": {
+  "texto": "Bromo molecular",
+  "descripcion": "Nombre de la sustancia Br2"
+ },
+ "especie.Br2.uso": {
+  "texto": "Uno de los dos elementos líquidos a temperatura ambiente.",
+  "descripcion": "Para qué sirve Br2 hoy (texto corto)"
+ },
+ "especie.I2.nombre": {
+  "texto": "Yodo molecular",
+  "descripcion": "Nombre de la sustancia I2"
+ },
+ "especie.I2.uso": {
+  "texto": "Sólido violeta; la tintura de yodo es antiséptica.",
+  "descripcion": "Para qué sirve I2 hoy (texto corto)"
+ },
+ "especie.O3.nombre": {
+  "texto": "Ozono",
+  "descripcion": "Nombre de la sustancia O3"
+ },
+ "especie.O3.uso": {
+  "texto": "La capa de ozono nos protege de la radiación ultravioleta.",
+  "descripcion": "Para qué sirve O3 hoy (texto corto)"
+ },
+ "especie.H2O.nombre": {
+  "texto": "Agua",
+  "descripcion": "Nombre de la sustancia H2O"
+ },
+ "especie.H2O.uso": {
+  "texto": "La molécula de la vida. Angular: por eso es polar y disuelve tanto.",
+  "descripcion": "Para qué sirve H2O hoy (texto corto)"
+ },
+ "especie.H2O2.nombre": {
+  "texto": "Peróxido de hidrógeno",
+  "descripcion": "Nombre de la sustancia H2O2"
+ },
+ "especie.H2O2.uso": {
+  "texto": "Agua oxigenada: desinfectante; se descompone en agua y oxígeno.",
+  "descripcion": "Para qué sirve H2O2 hoy (texto corto)"
+ },
+ "especie.CO.nombre": {
+  "texto": "Monóxido de carbono",
+  "descripcion": "Nombre de la sustancia CO"
+ },
+ "especie.CO.uso": {
+  "texto": "Gas tóxico de las combustiones con poco oxígeno.",
+  "descripcion": "Para qué sirve CO hoy (texto corto)"
+ },
+ "especie.CO2.nombre": {
+  "texto": "Dióxido de carbono",
+  "descripcion": "Nombre de la sustancia CO2"
+ },
+ "especie.CO2.uso": {
+  "texto": "Lo exhalamos y lo usan las plantas en la fotosíntesis. Gas de efecto invernadero.",
+  "descripcion": "Para qué sirve CO2 hoy (texto corto)"
+ },
+ "especie.CH4.nombre": {
+  "texto": "Metano",
+  "descripcion": "Nombre de la sustancia CH4"
+ },
+ "especie.CH4.uso": {
+  "texto": "El gas natural de las cocinas. Tetraédrico.",
+  "descripcion": "Para qué sirve CH4 hoy (texto corto)"
+ },
+ "especie.C2H2.nombre": {
+  "texto": "Acetileno (etino)",
+  "descripcion": "Nombre de la sustancia C2H2"
+ },
+ "especie.C2H2.uso": {
+  "texto": "Su llama (soplete oxiacetilénico) corta y suelda metales.",
+  "descripcion": "Para qué sirve C2H2 hoy (texto corto)"
+ },
+ "especie.HCN.nombre": {
+  "texto": "Cianuro de hidrógeno",
+  "descripcion": "Nombre de la sustancia HCN"
+ },
+ "especie.HCN.uso": {
+  "texto": "Muy tóxico; aparece en las semillas de algunas frutas.",
+  "descripcion": "Para qué sirve HCN hoy (texto corto)"
+ },
+ "especie.CH2O.nombre": {
+  "texto": "Metanal (formaldehído)",
+  "descripcion": "Nombre de la sustancia CH2O"
+ },
+ "especie.CH2O.uso": {
+  "texto": "El formol que conserva muestras biológicas.",
+  "descripcion": "Para qué sirve CH2O hoy (texto corto)"
+ },
+ "especie.CS2.nombre": {
+  "texto": "Disulfuro de carbono",
+  "descripcion": "Nombre de la sustancia CS2"
+ },
+ "especie.CS2.uso": {
+  "texto": "Disolvente; se forma absorbiendo calor.",
+  "descripcion": "Para qué sirve CS2 hoy (texto corto)"
+ },
+ "especie.CCl4.nombre": {
+  "texto": "Tetracloruro de carbono",
+  "descripcion": "Nombre de la sustancia CCl4"
+ },
+ "especie.CCl4.uso": {
+  "texto": "Disolvente antiguo, hoy prohibido por dañar la capa de ozono.",
+  "descripcion": "Para qué sirve CCl4 hoy (texto corto)"
+ },
+ "especie.NH3.nombre": {
+  "texto": "Amoniaco",
+  "descripcion": "Nombre de la sustancia NH3"
+ },
+ "especie.NH3.uso": {
+  "texto": "Base de los abonos (síntesis de Haber). Piramidal.",
+  "descripcion": "Para qué sirve NH3 hoy (texto corto)"
+ },
+ "especie.NO.nombre": {
+  "texto": "Monóxido de nitrógeno",
+  "descripcion": "Nombre de la sustancia NO"
+ },
+ "especie.NO.uso": {
+  "texto": "Se forma en los motores y los rayos a partir del aire.",
+  "descripcion": "Para qué sirve NO hoy (texto corto)"
+ },
+ "especie.NO2.nombre": {
+  "texto": "Dióxido de nitrógeno",
+  "descripcion": "Nombre de la sustancia NO2"
+ },
+ "especie.NO2.uso": {
+  "texto": "Gas pardo de la contaminación urbana.",
+  "descripcion": "Para qué sirve NO2 hoy (texto corto)"
+ },
+ "especie.N2O.nombre": {
+  "texto": "Óxido de dinitrógeno",
+  "descripcion": "Nombre de la sustancia N2O"
+ },
+ "especie.N2O.uso": {
+  "texto": "El «gas de la risa», anestésico.",
+  "descripcion": "Para qué sirve N2O hoy (texto corto)"
+ },
+ "especie.HNO3.nombre": {
+  "texto": "Ácido nítrico",
+  "descripcion": "Nombre de la sustancia HNO3"
+ },
+ "especie.HNO3.uso": {
+  "texto": "Ácido fuerte: abonos y explosivos.",
+  "descripcion": "Para qué sirve HNO3 hoy (texto corto)"
+ },
+ "especie.HF.nombre": {
+  "texto": "Fluoruro de hidrógeno",
+  "descripcion": "Nombre de la sustancia HF"
+ },
+ "especie.HF.uso": {
+  "texto": "Ataca el vidrio: se usa para grabarlo.",
+  "descripcion": "Para qué sirve HF hoy (texto corto)"
+ },
+ "especie.HCl.nombre": {
+  "texto": "Cloruro de hidrógeno",
+  "descripcion": "Nombre de la sustancia HCl"
+ },
+ "especie.HCl.uso": {
+  "texto": "Disuelto en agua es el ácido clorhídrico (salfumán, jugo gástrico).",
+  "descripcion": "Para qué sirve HCl hoy (texto corto)"
+ },
+ "especie.HBr.nombre": {
+  "texto": "Bromuro de hidrógeno",
+  "descripcion": "Nombre de la sustancia HBr"
+ },
+ "especie.HBr.uso": {
+  "texto": "Ácido fuerte en disolución.",
+  "descripcion": "Para qué sirve HBr hoy (texto corto)"
+ },
+ "especie.HI.nombre": {
+  "texto": "Yoduro de hidrógeno",
+  "descripcion": "Nombre de la sustancia HI"
+ },
+ "especie.HI.uso": {
+  "texto": "El más débil de los enlaces H–halógeno.",
+  "descripcion": "Para qué sirve HI hoy (texto corto)"
+ },
+ "especie.H2S.nombre": {
+  "texto": "Sulfuro de hidrógeno",
+  "descripcion": "Nombre de la sustancia H2S"
+ },
+ "especie.H2S.uso": {
+  "texto": "Huele a huevos podridos.",
+  "descripcion": "Para qué sirve H2S hoy (texto corto)"
+ },
+ "especie.SO2.nombre": {
+  "texto": "Dióxido de azufre",
+  "descripcion": "Nombre de la sustancia SO2"
+ },
+ "especie.SO2.uso": {
+  "texto": "Causa la lluvia ácida; conserva el vino.",
+  "descripcion": "Para qué sirve SO2 hoy (texto corto)"
+ },
+ "especie.SO3.nombre": {
+  "texto": "Trióxido de azufre",
+  "descripcion": "Nombre de la sustancia SO3"
+ },
+ "especie.SO3.uso": {
+  "texto": "Paso previo al ácido sulfúrico (método de contacto).",
+  "descripcion": "Para qué sirve SO3 hoy (texto corto)"
+ },
+ "especie.SiO2.nombre": {
+  "texto": "Dióxido de silicio",
+  "descripcion": "Nombre de la sustancia SiO2"
+ },
+ "especie.SiO2.uso": {
+  "texto": "Cuarzo y arena; con él se hace el vidrio.",
+  "descripcion": "Para qué sirve SiO2 hoy (texto corto)"
+ },
+ "especie.NaCl.nombre": {
+  "texto": "Cloruro de sodio",
+  "descripcion": "Nombre de la sustancia NaCl"
+ },
+ "especie.NaCl.uso": {
+  "texto": "La sal común. Compuesto iónico: Na⁺ y Cl⁻.",
+  "descripcion": "Para qué sirve NaCl hoy (texto corto)"
+ },
+ "especie.KCl.nombre": {
+  "texto": "Cloruro de potasio",
+  "descripcion": "Nombre de la sustancia KCl"
+ },
+ "especie.KCl.uso": {
+  "texto": "Sal sin sodio y abono potásico.",
+  "descripcion": "Para qué sirve KCl hoy (texto corto)"
+ },
+ "especie.NaF.nombre": {
+  "texto": "Fluoruro de sodio",
+  "descripcion": "Nombre de la sustancia NaF"
+ },
+ "especie.NaF.uso": {
+  "texto": "El flúor de las pastas de dientes.",
+  "descripcion": "Para qué sirve NaF hoy (texto corto)"
+ },
+ "especie.AgCl.nombre": {
+  "texto": "Cloruro de plata",
+  "descripcion": "Nombre de la sustancia AgCl"
+ },
+ "especie.AgCl.uso": {
+  "texto": "Precipitado blanco que se oscurece con la luz (fotografía).",
+  "descripcion": "Para qué sirve AgCl hoy (texto corto)"
+ },
+ "especie.MgCl2.nombre": {
+  "texto": "Cloruro de magnesio",
+  "descripcion": "Nombre de la sustancia MgCl2"
+ },
+ "especie.MgCl2.uso": {
+  "texto": "Del agua de mar; complemento de magnesio.",
+  "descripcion": "Para qué sirve MgCl2 hoy (texto corto)"
+ },
+ "especie.CaCl2.nombre": {
+  "texto": "Cloruro de calcio",
+  "descripcion": "Nombre de la sustancia CaCl2"
+ },
+ "especie.CaCl2.uso": {
+  "texto": "Sal para deshelar carreteras: su disolución desprende calor.",
+  "descripcion": "Para qué sirve CaCl2 hoy (texto corto)"
+ },
+ "especie.ZnCl2.nombre": {
+  "texto": "Cloruro de cinc",
+  "descripcion": "Nombre de la sustancia ZnCl2"
+ },
+ "especie.ZnCl2.uso": {
+  "texto": "Sale al atacar cinc con ácido clorhídrico.",
+  "descripcion": "Para qué sirve ZnCl2 hoy (texto corto)"
+ },
+ "especie.MgO.nombre": {
+  "texto": "Óxido de magnesio",
+  "descripcion": "Nombre de la sustancia MgO"
+ },
+ "especie.MgO.uso": {
+  "texto": "Lo que queda al quemar magnesio con su luz blanca cegadora.",
+  "descripcion": "Para qué sirve MgO hoy (texto corto)"
+ },
+ "especie.CaO.nombre": {
+  "texto": "Óxido de calcio",
+  "descripcion": "Nombre de la sustancia CaO"
+ },
+ "especie.CaO.uso": {
+  "texto": "Cal viva: con agua se calienta mucho.",
+  "descripcion": "Para qué sirve CaO hoy (texto corto)"
+ },
+ "especie.FeS.nombre": {
+  "texto": "Sulfuro de hierro(II)",
+  "descripcion": "Nombre de la sustancia FeS"
+ },
+ "especie.FeS.uso": {
+  "texto": "La reacción clásica del laboratorio: limaduras de hierro y azufre.",
+  "descripcion": "Para qué sirve FeS hoy (texto corto)"
+ },
+ "especie.CuO.nombre": {
+  "texto": "Óxido de cobre(II)",
+  "descripcion": "Nombre de la sustancia CuO"
+ },
+ "especie.CuO.uso": {
+  "texto": "Polvo negro que sale al calentar cobre al aire.",
+  "descripcion": "Para qué sirve CuO hoy (texto corto)"
+ },
+ "especie.Cu2O.nombre": {
+  "texto": "Óxido de cobre(I)",
+  "descripcion": "Nombre de la sustancia Cu2O"
+ },
+ "especie.Cu2O.uso": {
+  "texto": "Rojo: da color a algunos vidrios.",
+  "descripcion": "Para qué sirve Cu2O hoy (texto corto)"
+ },
+ "especie.ZnO.nombre": {
+  "texto": "Óxido de cinc",
+  "descripcion": "Nombre de la sustancia ZnO"
+ },
+ "especie.ZnO.uso": {
+  "texto": "Blanco: cremas solares y pomadas.",
+  "descripcion": "Para qué sirve ZnO hoy (texto corto)"
+ },
+ "especie.Fe2O3.nombre": {
+  "texto": "Óxido de hierro(III)",
+  "descripcion": "Nombre de la sustancia Fe2O3"
+ },
+ "especie.Fe2O3.uso": {
+  "texto": "La herrumbre (óxido) del hierro.",
+  "descripcion": "Para qué sirve Fe2O3 hoy (texto corto)"
+ },
+ "especie.Al2O3.nombre": {
+  "texto": "Óxido de aluminio",
+  "descripcion": "Nombre de la sustancia Al2O3"
+ },
+ "especie.Al2O3.uso": {
+  "texto": "Corindón: el rubí y el zafiro. Protege el aluminio.",
+  "descripcion": "Para qué sirve Al2O3 hoy (texto corto)"
+ },
+ "especie.NaOH.nombre": {
+  "texto": "Hidróxido de sodio",
+  "descripcion": "Nombre de la sustancia NaOH"
+ },
+ "especie.NaOH.uso": {
+  "texto": "Sosa cáustica: jabones y desatascadores.",
+  "descripcion": "Para qué sirve NaOH hoy (texto corto)"
+ },
+ "especie.KOH.nombre": {
+  "texto": "Hidróxido de potasio",
+  "descripcion": "Nombre de la sustancia KOH"
+ },
+ "especie.KOH.uso": {
+  "texto": "Potasa cáustica: jabones blandos y pilas alcalinas.",
+  "descripcion": "Para qué sirve KOH hoy (texto corto)"
+ },
+ "especie.Ca(OH)2.nombre": {
+  "texto": "Hidróxido de calcio",
+  "descripcion": "Nombre de la sustancia Ca(OH)2"
+ },
+ "especie.Ca(OH)2.uso": {
+  "texto": "Cal apagada: morteros y encalado.",
+  "descripcion": "Para qué sirve Ca(OH)2 hoy (texto corto)"
+ },
+ "especie.CaCO3.nombre": {
+  "texto": "Carbonato de calcio",
+  "descripcion": "Nombre de la sustancia CaCO3"
+ },
+ "especie.CaCO3.uso": {
+  "texto": "Caliza, mármol, conchas y la tiza.",
+  "descripcion": "Para qué sirve CaCO3 hoy (texto corto)"
+ },
+ "reaccion.combustion-h2.nombre": {
+  "texto": "Combustión del hidrógeno",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.combustion-h2.nota": {
+  "texto": "Explosiva. Es la reacción de los cohetes y de las pilas de combustible.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.combustion-c.nombre": {
+  "texto": "Combustión completa del carbono",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.combustion-c.nota": {
+  "texto": "El carbón arde con oxígeno suficiente.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.combustion-c-incompleta.nombre": {
+  "texto": "Combustión incompleta del carbono",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.combustion-c-incompleta.nota": {
+  "texto": "Con poco oxígeno sale monóxido de carbono, tóxico.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.combustion-co.nombre": {
+  "texto": "Combustión del monóxido de carbono",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.combustion-co.nota": {
+  "texto": "La llama azul del CO.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.boudouard.nombre": {
+  "texto": "Reacción de Boudouard",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.boudouard.nota": {
+  "texto": "En los altos hornos: el CO2 se reduce con carbón al rojo.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.gas-agua.nombre": {
+  "texto": "Gas de agua",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.gas-agua.nota": {
+  "texto": "Vapor sobre carbón al rojo: un combustible antiguo.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.gas-agua.condiciones": {
+  "texto": "con vapor de agua",
+  "descripcion": "Condiciones en las que se mide el calor"
+ },
+ "reaccion.desplazamiento-gas-agua.nombre": {
+  "texto": "Desplazamiento del gas de agua",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.desplazamiento-gas-agua.nota": {
+  "texto": "Así se obtiene hidrógeno en la industria.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.desplazamiento-gas-agua.condiciones": {
+  "texto": "con vapor de agua",
+  "descripcion": "Condiciones en las que se mide el calor"
+ },
+ "reaccion.combustion-metano.nombre": {
+  "texto": "Combustión del metano",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.combustion-metano.nota": {
+  "texto": "La llama de la cocina de gas.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.sintesis-metano.nombre": {
+  "texto": "Síntesis del metano",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.sintesis-metano.nota": {
+  "texto": "Carbono e hidrógeno: el hidrocarburo más sencillo.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.sintesis-acetileno.nombre": {
+  "texto": "Síntesis del acetileno",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.sintesis-acetileno.nota": {
+  "texto": "Hace falta mucha energía: es endotérmica.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.haber.nombre": {
+  "texto": "Síntesis de Haber-Bosch",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.haber.nota": {
+  "texto": "Da de comer al mundo: el amoniaco de los abonos.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.no-aire.nombre": {
+  "texto": "Óxido de nitrógeno del aire",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.no-aire.nota": {
+  "texto": "Solo ocurre con mucho calor: rayos y motores.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.no2.nombre": {
+  "texto": "Oxidación del NO",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.no2.nota": {
+  "texto": "El humo pardo de la contaminación.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.no2-directo.nombre": {
+  "texto": "Dióxido de nitrógeno",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.no2-directo.nota": {
+  "texto": "Endotérmica: hay que darle energía.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.gas-risa.nombre": {
+  "texto": "Gas de la risa",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.gas-risa.nota": {
+  "texto": "Endotérmica.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.ozono.nombre": {
+  "texto": "Formación del ozono",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.ozono.nota": {
+  "texto": "En la estratosfera, con luz ultravioleta.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.agua-oxigenada.nombre": {
+  "texto": "Síntesis del agua oxigenada",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.agua-oxigenada.nota": {
+  "texto": "Peróxido de hidrógeno.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.combustion-mg.nombre": {
+  "texto": "Combustión del magnesio",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.combustion-mg.nota": {
+  "texto": "Una luz blanca cegadora: los flashes antiguos.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.oxidacion-ca.nombre": {
+  "texto": "Oxidación del calcio",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.oxidacion-ca.nota": {
+  "texto": "Da cal viva.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.oxidacion-cu.nombre": {
+  "texto": "Oxidación del cobre",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.oxidacion-cu.nota": {
+  "texto": "El cobre se ennegrece al calentarlo.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.cal-apagada.nombre": {
+  "texto": "Apagado de la cal",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.cal-apagada.nota": {
+  "texto": "Desprende tanto calor que puede hervir el agua.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.carbonatacion.nombre": {
+  "texto": "Carbonatación de la cal",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.carbonatacion.nota": {
+  "texto": "Los morteros de cal se endurecen así, con el CO2 del aire.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.combustion-s.nombre": {
+  "texto": "Combustión del azufre",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.combustion-s.nota": {
+  "texto": "Llama azul y olor picante.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.contacto.nombre": {
+  "texto": "Método de contacto",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.contacto.nota": {
+  "texto": "Paso clave para fabricar ácido sulfúrico.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.fe-s.nombre": {
+  "texto": "Hierro y azufre",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.fe-s.nota": {
+  "texto": "La reacción clásica del laboratorio: mezcla frente a compuesto.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.sintesis-nacl.nombre": {
+  "texto": "Síntesis de la sal",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.sintesis-nacl.nota": {
+  "texto": "Un metal explosivo y un gas venenoso dan sal de mesa.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.sintesis-hcl.nombre": {
+  "texto": "Síntesis del cloruro de hidrógeno",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.sintesis-hcl.nota": {
+  "texto": "Con luz, explosiva.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.sintesis-hf.nombre": {
+  "texto": "Síntesis del fluoruro de hidrógeno",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.sintesis-hf.nota": {
+  "texto": "Violentísima, incluso a oscuras y en frío.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.sintesis-h2s.nombre": {
+  "texto": "Síntesis del sulfuro de hidrógeno",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.sintesis-h2s.nota": {
+  "texto": "Huele a huevos podridos.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.combustion-si.nombre": {
+  "texto": "Oxidación del silicio",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.combustion-si.nota": {
+  "texto": "Así se forma la sílice.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.sintesis-cs2.nombre": {
+  "texto": "Síntesis del disulfuro de carbono",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.sintesis-cs2.nota": {
+  "texto": "Endotérmica: necesita un horno.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.na-agua.nombre": {
+  "texto": "Sodio en agua",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.na-agua.nota": {
+  "texto": "El sodio corre por el agua y hasta arde.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.k-agua.nombre": {
+  "texto": "Potasio en agua",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.k-agua.nota": {
+  "texto": "Aún más violento que el sodio: llama lila.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.neutralizacion.nombre": {
+  "texto": "Neutralización",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.neutralizacion.nota": {
+  "texto": "Ácido + base → sal + agua.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.neutralizacion.condiciones": {
+  "texto": "en disolución",
+  "descripcion": "Condiciones en las que se mide el calor"
+ },
+ "reaccion.zn-hcl.nombre": {
+  "texto": "Cinc y ácido clorhídrico",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.zn-hcl.nota": {
+  "texto": "Metal + ácido: burbujas de hidrógeno.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.zn-hcl.condiciones": {
+  "texto": "en disolución",
+  "descripcion": "Condiciones en las que se mide el calor"
+ },
+ "reaccion.mg-hcl.nombre": {
+  "texto": "Magnesio y ácido clorhídrico",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.mg-hcl.nota": {
+  "texto": "Metal + ácido: el tubo de ensayo se calienta.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.mg-hcl.condiciones": {
+  "texto": "en disolución",
+  "descripcion": "Condiciones en las que se mide el calor"
+ },
+ "reaccion.caliza-hcl.nombre": {
+  "texto": "Caliza y ácido clorhídrico",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.caliza-hcl.nota": {
+  "texto": "La efervescencia que delata un carbonato.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.caliza-hcl.condiciones": {
+  "texto": "en disolución",
+  "descripcion": "Condiciones en las que se mide el calor"
+ },
+ "reaccion.termita.nombre": {
+  "texto": "Termita",
+  "descripcion": "Nombre de una reacción"
+ },
+ "reaccion.termita.nota": {
+  "texto": "Tan caliente que funde el hierro: se usa para soldar vías de tren.",
+  "descripcion": "Lo que conviene contar de la reacción"
+ },
+ "reaccion.sintesis": {
+  "texto": "Formación de {nombre}",
+  "descripcion": "Nombre de una síntesis directa; {nombre} en minúscula"
+ },
+ "ajustes.titulo": {
+  "texto": "Ajustes",
+  "descripcion": "Título del panel de ajustes y del botón ⚙️"
+ },
+ "ajustes.idioma": {
+  "texto": "Idioma",
+  "descripcion": "Selector de idioma"
+ },
+ "ajustes.letra": {
+  "texto": "Tamaño del texto",
+  "descripcion": "Grupo de opciones de tamaño"
+ },
+ "ajustes.letra.normal": {
+  "texto": "Normal",
+  "descripcion": "Tamaño de texto"
+ },
+ "ajustes.letra.grande": {
+  "texto": "Grande",
+  "descripcion": "Tamaño de texto"
+ },
+ "ajustes.letra.muy_grande": {
+  "texto": "Muy grande",
+  "descripcion": "Tamaño de texto"
+ },
+ "ajustes.contraste": {
+  "texto": "Alto contraste",
+  "descripcion": "Interruptor: colores con más contraste"
+ },
+ "ajustes.calma": {
+  "texto": "Menos movimiento",
+  "descripcion": "Interruptor: quita animaciones y temblores"
+ },
+ "ajustes.vibrar": {
+  "texto": "Vibrar al reaccionar",
+  "descripcion": "Interruptor: vibración del móvil (Android)"
+ },
+ "comun.listo": {
+  "texto": "Listo",
+  "descripcion": "Botón para cerrar los ajustes"
+ },
+ "comun.salir": {
+  "texto": "Salir",
+  "descripcion": "Botón para salir de un modo de juego"
+ },
+ "ayuda.abrir": {
+  "texto": "Ayuda: cómo se juega",
+  "descripcion": "Botón «?» de la cabecera"
+ },
+ "ayuda.ver_intro": {
+  "texto": "Ver otra vez la introducción",
+  "descripcion": "Botón en ajustes"
+ },
+ "aviso.camara": {
+  "texto": "Este navegador no da acceso a la cámara. Prueba la mesa virtual.",
+  "descripcion": "Aviso sin cámara"
+ },
+ "aviso.https": {
+  "texto": "Hace falta HTTPS: abre https://webar.peer4u.app.",
+  "descripcion": "Aviso sin conexión segura"
+ },
+ "aviso.permiso": {
+  "texto": "Sin permiso para la cámara: actívalo en los ajustes del navegador.",
+  "descripcion": "Aviso al denegar la cámara"
+ },
+ "aviso.error": {
+  "texto": "No se pudo abrir: {error}",
+  "descripcion": "Error al abrir un modo; {error} es el mensaje técnico"
+ },
+ "cara.protones": {
+  "texto": "protones",
+  "descripcion": "Etiqueta bajo el número en la cara de la tarjeta"
+ },
+ "cara.neutrones": {
+  "texto": "neutrones",
+  "descripcion": "Etiqueta bajo el número en la cara de la tarjeta"
+ },
+ "cara.electrones": {
+  "texto": "electrones",
+  "descripcion": "Etiqueta bajo el número en la cara de la tarjeta"
+ },
+ "cara.molecula": {
+  "texto": "Molécula",
+  "descripcion": "Cabecera de la cara de una tarjeta con molécula"
+ },
+ "cara.ionico": {
+  "texto": "Compuesto iónico",
+  "descripcion": "Cabecera de la cara de una tarjeta con compuesto iónico"
+ },
+ "cara.tarjeta": {
+  "texto": "Tarjeta {simbolo} · nº {n}",
+  "descripcion": "Pie de la cara: elemento impreso y número de la tarjeta"
+ },
+ "cara.descomponer": {
+  "texto": "Mantén «Descomponer» para volver a {simbolo}",
+  "descripcion": "Pista en la cara de una molécula"
+ },
+ "enlace.imprimir": {
+  "texto": "Imprimir tarjetas",
+  "descripcion": "Enlace a la página de imprimir"
+ },
+ "enlace.profe": {
+  "texto": "Soy profe",
+  "descripcion": "Enlace al panel del profesorado"
+ },
+ "explorar.anterior": {
+  "texto": "Elemento anterior",
+  "descripcion": "Botón ‹ (lector de pantalla)"
+ },
+ "explorar.siguiente": {
+  "texto": "Elemento siguiente",
+  "descripcion": "Botón › (lector de pantalla)"
+ },
+ "explorar.tabla": {
+  "texto": "Tabla periódica",
+  "descripcion": "Botón y título del selector de elementos"
+ },
+ "explorar.borrar": {
+  "texto": "Borrar",
+  "descripcion": "Botón: quitar los átomos colocados"
+ },
+ "explorar.capas": {
+  "texto": "Capas {capas}",
+  "descripcion": "Electrones por capa, p. ej. «Capas 2·6»"
+ },
+ "explorar.radio": {
+  "texto": "radio {pm} pm",
+  "descripcion": "Radio atómico en picómetros"
+ },
+ "explorar.estimado": {
+  "texto": "estimado",
+  "descripcion": "Aclaración: el radio es una estimación"
+ },
+ "explorar.teorica": {
+  "texto": "teórica",
+  "descripcion": "Aclaración: configuración no medida"
+ },
+ "explorar.radiactivo": {
+  "texto": "radiactivo",
+  "descripcion": "Aclaración del isótopo"
+ },
+ "explorar.pista_suelo": {
+  "texto": "Mueve el móvil despacio apuntando al suelo o a una mesa…",
+  "descripcion": "Pista en RA mientras busca superficie"
+ },
+ "explorar.pista_toca": {
+  "texto": "Toca la pantalla para poner un átomo de {elemento} en el anillo.",
+  "descripcion": "Pista en RA cuando hay superficie"
+ },
+ "imprimir.volver": {
+  "texto": "← Volver",
+  "descripcion": "Enlace de vuelta a la app"
+ },
+ "imprimir.titulo": {
+  "texto": "Imprimir tarjetas",
+  "descripcion": "Título de la página"
+ },
+ "imprimir.instrucciones": {
+  "texto": "Cada tarjeta lleva un marcador que la app reconoce con la cámara. Imprime en A4 al 100 % (sin «Ajustar a la página»), recorta por las líneas y, si puedes, pégalas sobre cartulina: el marcador tiene que quedar plano.",
+  "descripcion": "Instrucciones de impresión"
+ },
+ "imprimir.que": {
+  "texto": "Qué imprimir",
+  "descripcion": "Título del grupo de opciones"
+ },
+ "imprimir.personal": {
+  "texto": "Las que yo elija",
+  "descripcion": "Opción de tarjetas a medida"
+ },
+ "imprimir.mias": {
+  "texto": "Mis tarjetas:",
+  "descripcion": "Etiqueta del campo de símbolos"
+ },
+ "imprimir.boton": {
+  "texto": "🖨️ Imprimir",
+  "descripcion": "Botón"
+ },
+ "imprimir.resumen": {
+  "texto": "{tarjetas} tarjetas en {hojas} hojas.",
+  "descripcion": "Resumen (plural)"
+ },
+ "imprimir.resumen_1": {
+  "texto": "{tarjetas} tarjetas en 1 hoja.",
+  "descripcion": "Resumen (una hoja)"
+ },
+ "imprimir.faltan": {
+  "texto": "({n} sin imprimir: no hay tantas copias de ese elemento.)",
+  "descripcion": "Aviso de tarjetas que no se pueden imprimir"
+ },
+ "kit.basico.nombre": {
+  "texto": "Kit de clase ({n} tarjetas)",
+  "descripcion": "Nombre del kit"
+ },
+ "kit.basico.descripcion": {
+  "texto": "Con estas tarjetas salen todas las reacciones de la app: combustiones, síntesis del agua y del amoniaco, sales, óxidos, termita…",
+  "descripcion": "Descripción del kit"
+ },
+ "kit.minimo.nombre": {
+  "texto": "Kit mínimo ({n} tarjetas)",
+  "descripcion": "Nombre del kit"
+ },
+ "kit.minimo.descripcion": {
+  "texto": "Para empezar: agua, oxígeno, dióxido de carbono, metano y amoniaco.",
+  "descripcion": "Descripción del kit"
+ },
+ "kit.tabla.nombre": {
+  "texto": "Tabla periódica completa ({n} tarjetas)",
+  "descripcion": "Nombre del kit"
+ },
+ "kit.tabla.descripcion": {
+  "texto": "Una tarjeta de cada elemento, para explorar los átomos.",
+  "descripcion": "Descripción del kit"
+ },
+ "inicio.secciones": {
+  "texto": "Secciones",
+  "descripcion": "Etiqueta de la barra de navegación inferior"
+ },
+ "instalar.boton": {
+  "texto": "Instalar la app",
+  "descripcion": "Botón de instalación (PWA)"
+ },
+ "instalar.ios": {
+  "texto": "Para instalarla en iPhone: botón Compartir → «Añadir a pantalla de inicio».",
+  "descripcion": "Instrucciones de instalación en iPhone"
+ },
+ "intro.1.titulo": {
+  "texto": "Apunta a una tarjeta",
+  "descripcion": "Introducción, escena 1: título"
+ },
+ "intro.1.texto": {
+  "texto": "Con la cámara, cada tarjeta muestra su átomo en 3D.",
+  "descripcion": "Introducción, escena 1: texto (muy corto)"
+ },
+ "intro.2.titulo": {
+  "texto": "Júntalas 3 segundos",
+  "descripcion": "Introducción, escena 2: título"
+ },
+ "intro.2.texto": {
+  "texto": "Si reaccionan, ¡nace una molécula!",
+  "descripcion": "Introducción, escena 2: texto"
+ },
+ "intro.3.titulo": {
+  "texto": "¿Calor o frío?",
+  "descripcion": "Introducción, escena 3: título"
+ },
+ "intro.3.texto": {
+  "texto": "Fuego si la reacción desprende calor; hielo si lo absorbe.",
+  "descripcion": "Introducción, escena 3: texto"
+ },
+ "intro.3.exo": {
+  "texto": "Desprende calor",
+  "descripcion": "Etiqueta bajo el fuego"
+ },
+ "intro.3.endo": {
+  "texto": "Absorbe calor",
+  "descripcion": "Etiqueta bajo el hielo"
+ },
+ "intro.4.titulo": {
+  "texto": "Colecciona",
+  "descripcion": "Introducción, escena 4: título"
+ },
+ "intro.4.texto": {
+  "texto": "Cada molécula nueva desbloquea elementos e historias.",
+  "descripcion": "Introducción, escena 4: texto"
+ },
+ "intro.5.titulo": {
+  "texto": "Solo o con tu clase",
+  "descripcion": "Introducción, escena 5: título"
+ },
+ "intro.5.texto": {
+  "texto": "Retos, logros y metas en equipo. Funciona sin internet.",
+  "descripcion": "Introducción, escena 5: texto"
+ },
+ "intro.siguiente": {
+  "texto": "Siguiente",
+  "descripcion": "Botón de la introducción"
+ },
+ "intro.empezar": {
+  "texto": "¡A jugar!",
+  "descripcion": "Último botón de la introducción"
+ },
+ "intro.saltar": {
+  "texto": "Saltar",
+  "descripcion": "Botón para cerrar la introducción"
+ },
+ "intro.paso": {
+  "texto": "Paso {n} de {total}",
+  "descripcion": "Punto de la introducción (lector de pantalla)"
+ },
+ "intro.pasos": {
+  "texto": "Pasos de la introducción",
+  "descripcion": "Grupo de puntos"
+ },
+ "juego.apunta": {
+  "texto": "Apunta la cámara a las tarjetas impresas…",
+  "descripcion": "Estado: no se ve ninguna tarjeta"
+ },
+ "juego.anade": {
+  "texto": "Añade tarjetas a la mesa.",
+  "descripcion": "Estado de la mesa vacía"
+ },
+ "juego.junta": {
+  "texto": "Junta tarjetas que reaccionen y mantenlas juntas 3 segundos.",
+  "descripcion": "Estado con tarjetas a la vista"
+ },
+ "juego.seleccionada": {
+  "texto": "{nombre} elegida: toca otra tarjeta para juntarlas.",
+  "descripcion": "Mesa: una tarjeta elegida con un toque"
+ },
+ "juego.manten": {
+  "texto": "Mantén las tarjetas juntas…",
+  "descripcion": "Debajo de la barra de carga"
+ },
+ "juego.anadir": {
+  "texto": "+ Tarjeta",
+  "descripcion": "Botón de la mesa virtual"
+ },
+ "juego.reiniciar": {
+  "texto": "Reiniciar",
+  "descripcion": "Botón de la mesa virtual"
+ },
+ "juego.recetas": {
+  "texto": "Recetas",
+  "descripcion": "Botón y título de la lista de reacciones"
+ },
+ "juego.descomponer": {
+  "texto": "Descomponer",
+  "descripcion": "Botón que hay que mantener 3 s"
+ },
+ "juego.descomposicion": {
+  "texto": "Descomposición",
+  "descripcion": "Título del aviso al descomponer"
+ },
+ "juego.descomposicion_texto": {
+  "texto": "Se rompen los enlaces de {nombre}: la tarjeta vuelve a ser un átomo libre, lista para otra reacción.",
+  "descripcion": "Texto del aviso al descomponer"
+ },
+ "juego.exo": {
+  "texto": "🔥 Exotérmica: desprende {kj} kJ por mol",
+  "descripcion": "Tipo de reacción; {kj} es un número"
+ },
+ "juego.endo": {
+  "texto": "❄️ Endotérmica: absorbe {kj} kJ por mol",
+  "descripcion": "Tipo de reacción; {kj} es un número"
+ },
+ "juego.neutro": {
+  "texto": "Casi sin intercambio de calor",
+  "descripcion": "Reacción con ΔH ≈ 0"
+ },
+ "logros.pendiente": {
+  "texto": "pendiente",
+  "descripcion": "Insignia aún no conseguida (lector de pantalla)"
+ },
+ "modelo.titulo": {
+  "texto": "Modelo de los átomos",
+  "descripcion": "Grupo Bohr/Orbitales"
+ },
+ "modelo.bohr": {
+  "texto": "Bohr",
+  "descripcion": "Botón del modelo de Bohr"
+ },
+ "modelo.orbitales": {
+  "texto": "Orbitales",
+  "descripcion": "Botón del modelo de orbitales"
+ },
+ "modelo.bohr.titulo": {
+  "texto": "Modelo de Bohr",
+  "descripcion": "Leyenda"
+ },
+ "modelo.bohr.texto": {
+  "texto": "los electrones giran en órbitas, una por capa.",
+  "descripcion": "Leyenda del modelo de Bohr"
+ },
+ "modelo.orbitales.titulo": {
+  "texto": "Orbitales",
+  "descripcion": "Leyenda"
+ },
+ "modelo.orbitales.texto": {
+  "texto": "donde es probable encontrar cada electrón; la chispa salta porque su posición es incierta.",
+  "descripcion": "Leyenda de los orbitales"
+ },
+ "modelo.orbitales.fase": {
+  "texto": "tono oscuro: fase opuesta",
+  "descripcion": "Leyenda de los colores de fase"
+ },
+ "particula.proton": {
+  "texto": "protón",
+  "descripcion": "Leyenda"
+ },
+ "particula.neutron": {
+  "texto": "neutrón",
+  "descripcion": "Leyenda"
+ },
+ "particula.electron": {
+  "texto": "electrón",
+  "descripcion": "Leyenda"
+ },
+ "modo.tarjetas.titulo": {
+  "texto": "Tarjetas con la cámara",
+  "descripcion": "Modo principal"
+ },
+ "modo.tarjetas.texto": {
+  "texto": "Apunta a las tarjetas impresas y júntalas para que reaccionen.",
+  "descripcion": "Descripción del modo"
+ },
+ "modo.mesa.titulo": {
+  "texto": "Mesa virtual",
+  "descripcion": "Modo"
+ },
+ "modo.mesa.texto": {
+  "texto": "Las mismas reacciones arrastrando (o tocando) tarjetas, sin imprimir nada.",
+  "descripcion": "Descripción del modo"
+ },
+ "modo.explorar.titulo": {
+  "texto": "Explorar átomos",
+  "descripcion": "Modo"
+ },
+ "modo.explorar.texto": {
+  "texto": "Tus elementos en 3D: modelo de Bohr y orbitales.",
+  "descripcion": "Descripción del modo"
+ },
+ "modo.ra.titulo": {
+  "texto": "Átomos sobre la mesa",
+  "descripcion": "Modo WebXR"
+ },
+ "modo.ra.comprobando": {
+  "texto": "Comprobando el móvil…",
+  "descripcion": "Mientras se detecta WebXR"
+ },
+ "modo.ra.texto": {
+  "texto": "Deja átomos sobre el suelo o una mesa (Android con Chrome).",
+  "descripcion": "Descripción con WebXR"
+ },
+ "modo.ra.ios": {
+  "texto": "Necesita WebXR, que Safari de iPhone aún no tiene. Las tarjetas sí funcionan.",
+  "descripcion": "Sin WebXR en iPhone"
+ },
+ "modo.ra.no": {
+  "texto": "Este navegador no tiene WebXR. Las tarjetas y la mesa virtual sí funcionan.",
+  "descripcion": "Sin WebXR"
+ },
+ "moleculario.bloqueada_lector": {
+  "texto": "Molécula sin descubrir:",
+  "descripcion": "Para lectores de pantalla"
+ },
+ "perfil.barra": {
+  "texto": "Progreso hasta el siguiente nivel",
+  "descripcion": "Barra de XP (lector de pantalla)"
+ },
+ "perfil.ver_logros": {
+  "texto": "Tu nivel y tus logros",
+  "descripcion": "Botón del perfil"
+ },
+ "recetas.reacciones": {
+  "texto": "Reacciones",
+  "descripcion": "Encabezado"
+ },
+ "recetas.moleculas": {
+  "texto": "Moléculas juntando átomos",
+  "descripcion": "Encabezado"
+ },
+ "recetas.pasos": {
+  "texto": "También valen pasos intermedios: H + H → H₂ y luego H₂ + O → H₂O.",
+  "descripcion": "Explicación"
+ },
+ "tabla.bloqueado_corto": {
+  "texto": "bloqueado",
+  "descripcion": "Para lectores de pantalla"
  }
 }

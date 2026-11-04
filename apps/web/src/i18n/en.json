@@ -1,0 +1,1541 @@
+{
+ "perfil.nivel": {
+  "texto": "Level {nivel}"
+ },
+ "perfil.xp": {
+  "texto": "{xp} XP"
+ },
+ "perfil.xp_siguiente": {
+  "texto": "{faltan} XP to the next level"
+ },
+ "perfil.racha": {
+  "texto": "🔥 {semanas} weeks in a row"
+ },
+ "perfil.racha_1": {
+  "texto": "🔥 1 week in a row"
+ },
+ "perfil.racha_cero": {
+  "texto": "Start your streak this week"
+ },
+ "perfil.barra": {
+  "texto": "Progress to the next level"
+ },
+ "perfil.ver_logros": {
+  "texto": "Your level and achievements"
+ },
+ "nivel.0": {
+  "texto": "Curious atom"
+ },
+ "nivel.1": {
+  "texto": "Lab apprentice"
+ },
+ "nivel.2": {
+  "texto": "Test-tube hands"
+ },
+ "nivel.3": {
+  "texto": "Formula in progress"
+ },
+ "nivel.4": {
+  "texto": "Synthetic mind"
+ },
+ "nivel.5": {
+  "texto": "Modern alchemy"
+ },
+ "nivel.6": {
+  "texto": "White coat"
+ },
+ "nivel.7": {
+  "texto": "Elite research"
+ },
+ "nivel.8": {
+  "texto": "Heading for the Nobel"
+ },
+ "nivel.9": {
+  "texto": "Periodic table legend"
+ },
+ "inicio.jugar": {
+  "texto": "Play"
+ },
+ "inicio.moleculario": {
+  "texto": "Collection"
+ },
+ "inicio.tabla": {
+  "texto": "Table"
+ },
+ "inicio.retos": {
+  "texto": "Challenges"
+ },
+ "inicio.clase": {
+  "texto": "Class"
+ },
+ "inicio.logros": {
+  "texto": "Achievements"
+ },
+ "inicio.secciones": {
+  "texto": "Sections"
+ },
+ "moleculario.titulo": {
+  "texto": "Molecule collection"
+ },
+ "moleculario.progreso": {
+  "texto": "{tienes} of {total} discovered"
+ },
+ "moleculario.bloqueada": {
+  "texto": "?"
+ },
+ "moleculario.bloqueada_lector": {
+  "texto": "Undiscovered molecule:"
+ },
+ "moleculario.pista_atomos": {
+  "texto": "{n} atoms"
+ },
+ "moleculario.pista_elemento": {
+  "texto": "Contains {elemento}"
+ },
+ "moleculario.como": {
+  "texto": "How to make it"
+ },
+ "moleculario.historia": {
+  "texto": "Its story"
+ },
+ "moleculario.hoy": {
+  "texto": "Today"
+ },
+ "moleculario.curso": {
+  "texto": "Studied in {curso}"
+ },
+ "curso.2ESO": {
+  "texto": "Year 8 (2.º ESO)"
+ },
+ "curso.3ESO": {
+  "texto": "Year 9 (3.º ESO)"
+ },
+ "curso.4ESO": {
+  "texto": "Year 10 (4.º ESO)"
+ },
+ "curso.1BACH": {
+  "texto": "Year 12 (1.º Bach.)"
+ },
+ "tabla.titulo": {
+  "texto": "Your periodic table"
+ },
+ "tabla.progreso": {
+  "texto": "{tienes} of 118 elements"
+ },
+ "tabla.explicacion": {
+  "texto": "Each new molecule unlocks elements. You start with H, C, N and O."
+ },
+ "tabla.bloqueado": {
+  "texto": "Locked element: discover more molecules to get it"
+ },
+ "tabla.bloqueado_corto": {
+  "texto": "locked"
+ },
+ "elemento.antiguedad": {
+  "texto": "Known since ancient times."
+ },
+ "elemento.descubierto": {
+  "texto": "Discovered in {anio}."
+ },
+ "retos.titulo": {
+  "texto": "Challenges"
+ },
+ "retos.clase": {
+  "texto": "Your class challenges"
+ },
+ "retos.curso": {
+  "texto": "Challenges by year"
+ },
+ "retos.formula": {
+  "texto": "Formula challenge"
+ },
+ "retos.formula_texto": {
+  "texto": "We give you a formula; build it with the cards or on the table."
+ },
+ "retos.jugar": {
+  "texto": "Play"
+ },
+ "retos.completado": {
+  "texto": "Done!"
+ },
+ "retos.progreso": {
+  "texto": "{tienes}/{total}"
+ },
+ "retos.hasta": {
+  "texto": "Until {fecha}"
+ },
+ "retos.activo": {
+  "texto": "Challenge: make {formula}"
+ },
+ "retos.ninguno": {
+  "texto": "Your teacher hasn't set any challenges yet."
+ },
+ "reto.curso.titulo": {
+  "texto": "Molecules of {curso}"
+ },
+ "clase.unirse": {
+  "texto": "Join your class"
+ },
+ "clase.unirse_texto": {
+  "texto": "Ask your teacher for the code. Choose a nickname (not your real name) and a 4-digit PIN to log in from another phone."
+ },
+ "clase.codigo": {
+  "texto": "Class code"
+ },
+ "clase.alias": {
+  "texto": "Your nickname"
+ },
+ "clase.pin": {
+  "texto": "PIN (4 digits)"
+ },
+ "clase.entrar": {
+  "texto": "Join"
+ },
+ "clase.salir": {
+  "texto": "Leave the class"
+ },
+ "clase.meta": {
+  "texto": "Class goal: {tienen} of {total} molecules"
+ },
+ "clase.actividad": {
+  "texto": "Latest in your class"
+ },
+ "clase.descubrio": {
+  "texto": "{alias} discovered {formula}"
+ },
+ "clase.completo_reto": {
+  "texto": "{alias} completed a challenge"
+ },
+ "clase.companeros": {
+  "texto": "{n} in the class"
+ },
+ "clase.sin_conexion": {
+  "texto": "Offline: your progress is saved on the phone and will be sent later."
+ },
+ "clase.pendientes": {
+  "texto": "{n} items to send"
+ },
+ "clase.sincronizado": {
+  "texto": "All synced"
+ },
+ "clase.solo": {
+  "texto": "No class: your progress is saved only on this phone."
+ },
+ "clase.error_red": {
+  "texto": "No connection. Try again when you're online."
+ },
+ "logros.titulo": {
+  "texto": "Achievements"
+ },
+ "logros.pendiente": {
+  "texto": "pending"
+ },
+ "celebrar.molecula": {
+  "texto": "New molecule!"
+ },
+ "celebrar.elementos": {
+  "texto": "New elements: {lista}"
+ },
+ "celebrar.insignia": {
+  "texto": "Badge: {nombre}"
+ },
+ "celebrar.nivel": {
+  "texto": "Level {nivel}: {nombre}!"
+ },
+ "celebrar.reto": {
+  "texto": "Challenge complete!"
+ },
+ "comun.cerrar": {
+  "texto": "Close"
+ },
+ "comun.vale": {
+  "texto": "OK!"
+ },
+ "comun.listo": {
+  "texto": "Done"
+ },
+ "comun.salir": {
+  "texto": "Exit"
+ },
+ "offline.titulo": {
+  "texto": "Use without internet"
+ },
+ "offline.texto": {
+  "texto": "The app already works offline. Install it and press the button so the phone keeps your data."
+ },
+ "offline.boton": {
+  "texto": "Keep on this phone"
+ },
+ "offline.ok": {
+  "texto": "✓ Ready to use without internet"
+ },
+ "offline.no": {
+  "texto": "The browser may delete your data if space runs low. Install the app to avoid it."
+ },
+ "ajustes.titulo": {
+  "texto": "Settings"
+ },
+ "ajustes.idioma": {
+  "texto": "Language"
+ },
+ "ajustes.letra": {
+  "texto": "Text size"
+ },
+ "ajustes.letra.normal": {
+  "texto": "Normal"
+ },
+ "ajustes.letra.grande": {
+  "texto": "Large"
+ },
+ "ajustes.letra.muy_grande": {
+  "texto": "Extra large"
+ },
+ "ajustes.contraste": {
+  "texto": "High contrast"
+ },
+ "ajustes.calma": {
+  "texto": "Reduce motion"
+ },
+ "ajustes.vibrar": {
+  "texto": "Vibrate on reactions"
+ },
+ "ayuda.abrir": {
+  "texto": "Help: how to play"
+ },
+ "ayuda.ver_intro": {
+  "texto": "Watch the introduction again"
+ },
+ "aviso.camara": {
+  "texto": "This browser can't use the camera. Try the virtual table."
+ },
+ "aviso.https": {
+  "texto": "HTTPS is required: open https://webar.peer4u.app."
+ },
+ "aviso.permiso": {
+  "texto": "No camera permission: enable it in the browser settings."
+ },
+ "aviso.error": {
+  "texto": "Couldn't open: {error}"
+ },
+ "cara.protones": {
+  "texto": "protons"
+ },
+ "cara.neutrones": {
+  "texto": "neutrons"
+ },
+ "cara.electrones": {
+  "texto": "electrons"
+ },
+ "cara.molecula": {
+  "texto": "Molecule"
+ },
+ "cara.ionico": {
+  "texto": "Ionic compound"
+ },
+ "cara.tarjeta": {
+  "texto": "Card {simbolo} · no. {n}"
+ },
+ "cara.descomponer": {
+  "texto": "Hold «Break down» to return to {simbolo}"
+ },
+ "enlace.imprimir": {
+  "texto": "Print cards"
+ },
+ "enlace.profe": {
+  "texto": "I'm a teacher"
+ },
+ "explorar.anterior": {
+  "texto": "Previous element"
+ },
+ "explorar.siguiente": {
+  "texto": "Next element"
+ },
+ "explorar.tabla": {
+  "texto": "Periodic table"
+ },
+ "explorar.borrar": {
+  "texto": "Clear"
+ },
+ "explorar.capas": {
+  "texto": "Shells {capas}"
+ },
+ "explorar.radio": {
+  "texto": "radius {pm} pm"
+ },
+ "explorar.estimado": {
+  "texto": "estimated"
+ },
+ "explorar.teorica": {
+  "texto": "predicted"
+ },
+ "explorar.radiactivo": {
+  "texto": "radioactive"
+ },
+ "explorar.pista_suelo": {
+  "texto": "Slowly move the phone pointing at the floor or a table…"
+ },
+ "explorar.pista_toca": {
+  "texto": "Tap the screen to place a {elemento} atom on the ring."
+ },
+ "imprimir.volver": {
+  "texto": "← Back"
+ },
+ "imprimir.titulo": {
+  "texto": "Print cards"
+ },
+ "imprimir.instrucciones": {
+  "texto": "Each card has a marker the app recognises with the camera. Print on A4 at 100 % (no «fit to page»), cut along the lines and, if you can, glue them onto card: the marker must stay flat."
+ },
+ "imprimir.que": {
+  "texto": "What to print"
+ },
+ "imprimir.personal": {
+  "texto": "My own selection"
+ },
+ "imprimir.mias": {
+  "texto": "My cards:"
+ },
+ "imprimir.boton": {
+  "texto": "🖨️ Print"
+ },
+ "imprimir.resumen": {
+  "texto": "{tarjetas} cards on {hojas} sheets."
+ },
+ "imprimir.resumen_1": {
+  "texto": "{tarjetas} cards on 1 sheet."
+ },
+ "imprimir.faltan": {
+  "texto": "({n} not printed: there aren't that many copies of that element.)"
+ },
+ "kit.basico.nombre": {
+  "texto": "Class kit ({n} cards)"
+ },
+ "kit.basico.descripcion": {
+  "texto": "Every reaction in the app: combustions, water and ammonia synthesis, salts, oxides, thermite…"
+ },
+ "kit.minimo.nombre": {
+  "texto": "Starter kit ({n} cards)"
+ },
+ "kit.minimo.descripcion": {
+  "texto": "To begin: water, oxygen, carbon dioxide, methane and ammonia."
+ },
+ "kit.tabla.nombre": {
+  "texto": "Full periodic table ({n} cards)"
+ },
+ "kit.tabla.descripcion": {
+  "texto": "One card per element, to explore atoms."
+ },
+ "instalar.boton": {
+  "texto": "Install the app"
+ },
+ "instalar.ios": {
+  "texto": "To install on iPhone: Share button → «Add to Home Screen»."
+ },
+ "intro.1.titulo": {
+  "texto": "Point at a card"
+ },
+ "intro.1.texto": {
+  "texto": "Through the camera, each card shows its atom in 3D."
+ },
+ "intro.2.titulo": {
+  "texto": "Hold them together 3 seconds"
+ },
+ "intro.2.texto": {
+  "texto": "If they react, a molecule is born!"
+ },
+ "intro.3.titulo": {
+  "texto": "Hot or cold?"
+ },
+ "intro.3.texto": {
+  "texto": "Fire if the reaction releases heat; ice if it absorbs it."
+ },
+ "intro.3.exo": {
+  "texto": "Releases heat"
+ },
+ "intro.3.endo": {
+  "texto": "Absorbs heat"
+ },
+ "intro.4.titulo": {
+  "texto": "Collect them"
+ },
+ "intro.4.texto": {
+  "texto": "Each new molecule unlocks elements and stories."
+ },
+ "intro.5.titulo": {
+  "texto": "On your own or with your class"
+ },
+ "intro.5.texto": {
+  "texto": "Challenges, badges and team goals. Works offline."
+ },
+ "intro.siguiente": {
+  "texto": "Next"
+ },
+ "intro.empezar": {
+  "texto": "Let's play!"
+ },
+ "intro.saltar": {
+  "texto": "Skip"
+ },
+ "intro.paso": {
+  "texto": "Step {n} of {total}"
+ },
+ "intro.pasos": {
+  "texto": "Introduction steps"
+ },
+ "juego.apunta": {
+  "texto": "Point the camera at the printed cards…"
+ },
+ "juego.anade": {
+  "texto": "Add cards to the table."
+ },
+ "juego.junta": {
+  "texto": "Put reacting cards together and hold them for 3 seconds."
+ },
+ "juego.seleccionada": {
+  "texto": "{nombre} selected: tap another card to join them."
+ },
+ "juego.manten": {
+  "texto": "Keep the cards together…"
+ },
+ "juego.anadir": {
+  "texto": "+ Card"
+ },
+ "juego.reiniciar": {
+  "texto": "Reset"
+ },
+ "juego.recetas": {
+  "texto": "Recipes"
+ },
+ "juego.descomponer": {
+  "texto": "Break down"
+ },
+ "juego.descomposicion": {
+  "texto": "Breaking down"
+ },
+ "juego.descomposicion_texto": {
+  "texto": "The bonds of {nombre} break: the card becomes a free atom again, ready for another reaction."
+ },
+ "juego.exo": {
+  "texto": "🔥 Exothermic: releases {kj} kJ per mole"
+ },
+ "juego.endo": {
+  "texto": "❄️ Endothermic: absorbs {kj} kJ per mole"
+ },
+ "juego.neutro": {
+  "texto": "Almost no heat exchanged"
+ },
+ "modelo.titulo": {
+  "texto": "Atom model"
+ },
+ "modelo.bohr": {
+  "texto": "Bohr"
+ },
+ "modelo.orbitales": {
+  "texto": "Orbitals"
+ },
+ "modelo.bohr.titulo": {
+  "texto": "Bohr model"
+ },
+ "modelo.bohr.texto": {
+  "texto": "electrons travel in orbits, one per shell."
+ },
+ "modelo.orbitales.titulo": {
+  "texto": "Orbitals"
+ },
+ "modelo.orbitales.texto": {
+  "texto": "where each electron is likely to be found; the spark jumps because its position is uncertain."
+ },
+ "modelo.orbitales.fase": {
+  "texto": "dark shade: opposite phase"
+ },
+ "particula.proton": {
+  "texto": "proton"
+ },
+ "particula.neutron": {
+  "texto": "neutron"
+ },
+ "particula.electron": {
+  "texto": "electron"
+ },
+ "modo.tarjetas.titulo": {
+  "texto": "Cards with the camera"
+ },
+ "modo.tarjetas.texto": {
+  "texto": "Point at the printed cards and put them together to react."
+ },
+ "modo.mesa.titulo": {
+  "texto": "Virtual table"
+ },
+ "modo.mesa.texto": {
+  "texto": "The same reactions by dragging (or tapping) cards, nothing to print."
+ },
+ "modo.explorar.titulo": {
+  "texto": "Explore atoms"
+ },
+ "modo.explorar.texto": {
+  "texto": "Your elements in 3D: Bohr model and orbitals."
+ },
+ "modo.ra.titulo": {
+  "texto": "Atoms on the table"
+ },
+ "modo.ra.comprobando": {
+  "texto": "Checking your phone…"
+ },
+ "modo.ra.texto": {
+  "texto": "Place atoms on the floor or a table (Android with Chrome)."
+ },
+ "modo.ra.ios": {
+  "texto": "Needs WebXR, which iPhone Safari doesn't have yet. The cards do work."
+ },
+ "modo.ra.no": {
+  "texto": "This browser has no WebXR. The cards and the virtual table do work."
+ },
+ "recetas.reacciones": {
+  "texto": "Reactions"
+ },
+ "recetas.moleculas": {
+  "texto": "Molecules from atoms"
+ },
+ "recetas.pasos": {
+  "texto": "Steps also work: H + H → H₂, then H₂ + O → H₂O."
+ },
+ "reaccion.sintesis": {
+  "texto": "Formation of {nombre}"
+ },
+ "insignia.primera.nombre": {
+  "texto": "First molecule"
+ },
+ "insignia.primera.descripcion": {
+  "texto": "Make your first molecule"
+ },
+ "insignia.agua.nombre": {
+  "texto": "Source of life"
+ },
+ "insignia.agua.descripcion": {
+  "texto": "Make water"
+ },
+ "insignia.aire.nombre": {
+  "texto": "What you breathe"
+ },
+ "insignia.aire.descripcion": {
+  "texto": "Make N₂, O₂ and CO₂, the gases of air"
+ },
+ "insignia.fuego.nombre": {
+  "texto": "Fireworks"
+ },
+ "insignia.fuego.descripcion": {
+  "texto": "Do 5 exothermic reactions"
+ },
+ "insignia.hielo.nombre": {
+  "texto": "Cryogenics"
+ },
+ "insignia.hielo.descripcion": {
+  "texto": "Do 3 endothermic reactions"
+ },
+ "insignia.oxidos.nombre": {
+  "texto": "Oxide master"
+ },
+ "insignia.oxidos.descripcion": {
+  "texto": "Discover every oxide"
+ },
+ "insignia.sales.nombre": {
+  "texto": "Salt shaker"
+ },
+ "insignia.sales.descripcion": {
+  "texto": "Discover every salt"
+ },
+ "insignia.acidos.nombre": {
+  "texto": "All acid"
+ },
+ "insignia.acidos.descripcion": {
+  "texto": "Discover every hydracid and nitric acid"
+ },
+ "insignia.industria.nombre": {
+  "texto": "Industrial chemistry"
+ },
+ "insignia.industria.descripcion": {
+  "texto": "Do the Haber synthesis and the contact process"
+ },
+ "insignia.curso-2ESO.nombre": {
+  "texto": "Year 8 complete"
+ },
+ "insignia.curso-2ESO.descripcion": {
+  "texto": "Every Year 8 molecule"
+ },
+ "insignia.curso-3ESO.nombre": {
+  "texto": "Year 9 complete"
+ },
+ "insignia.curso-3ESO.descripcion": {
+  "texto": "Every Year 9 molecule"
+ },
+ "insignia.curso-4ESO.nombre": {
+  "texto": "Year 10 complete"
+ },
+ "insignia.curso-4ESO.descripcion": {
+  "texto": "Every Year 10 molecule"
+ },
+ "insignia.curso-1BACH.nombre": {
+  "texto": "Year 12 complete"
+ },
+ "insignia.curso-1BACH.descripcion": {
+  "texto": "Every Year 12 molecule"
+ },
+ "insignia.coleccion.nombre": {
+  "texto": "Collector"
+ },
+ "insignia.coleccion.descripcion": {
+  "texto": "Discover 25 molecules"
+ },
+ "insignia.todas.nombre": {
+  "texto": "Full collection"
+ },
+ "insignia.todas.descripcion": {
+  "texto": "Discover every molecule"
+ },
+ "insignia.tabla.nombre": {
+  "texto": "The whole table"
+ },
+ "insignia.tabla.descripcion": {
+  "texto": "Unlock all 118 elements"
+ },
+ "insignia.retos.nombre": {
+  "texto": "Go for it"
+ },
+ "insignia.retos.descripcion": {
+  "texto": "Complete 3 challenges"
+ },
+ "insignia.racha.nombre": {
+  "texto": "Consistency"
+ },
+ "insignia.racha.descripcion": {
+  "texto": "4 weeks in a row learning"
+ },
+ "familia.no-metal": {
+  "texto": "Nonmetal"
+ },
+ "familia.gas-noble": {
+  "texto": "Noble gas"
+ },
+ "familia.alcalino": {
+  "texto": "Alkali metal"
+ },
+ "familia.alcalinoterreo": {
+  "texto": "Alkaline earth metal"
+ },
+ "familia.metaloide": {
+  "texto": "Metalloid"
+ },
+ "familia.halogeno": {
+  "texto": "Halogen"
+ },
+ "familia.metal-postransicion": {
+  "texto": "Post-transition metal"
+ },
+ "familia.metal-transicion": {
+  "texto": "Transition metal"
+ },
+ "familia.lantanido": {
+  "texto": "Lanthanide"
+ },
+ "familia.actinido": {
+  "texto": "Actinide"
+ },
+ "elemento.H.nombre": {
+  "texto": "Hydrogen"
+ },
+ "elemento.He.nombre": {
+  "texto": "Helium"
+ },
+ "elemento.Li.nombre": {
+  "texto": "Lithium"
+ },
+ "elemento.Be.nombre": {
+  "texto": "Beryllium"
+ },
+ "elemento.B.nombre": {
+  "texto": "Boron"
+ },
+ "elemento.C.nombre": {
+  "texto": "Carbon"
+ },
+ "elemento.N.nombre": {
+  "texto": "Nitrogen"
+ },
+ "elemento.O.nombre": {
+  "texto": "Oxygen"
+ },
+ "elemento.F.nombre": {
+  "texto": "Fluorine"
+ },
+ "elemento.Ne.nombre": {
+  "texto": "Neon"
+ },
+ "elemento.Na.nombre": {
+  "texto": "Sodium"
+ },
+ "elemento.Mg.nombre": {
+  "texto": "Magnesium"
+ },
+ "elemento.Al.nombre": {
+  "texto": "Aluminum"
+ },
+ "elemento.Si.nombre": {
+  "texto": "Silicon"
+ },
+ "elemento.P.nombre": {
+  "texto": "Phosphorus"
+ },
+ "elemento.S.nombre": {
+  "texto": "Sulfur"
+ },
+ "elemento.Cl.nombre": {
+  "texto": "Chlorine"
+ },
+ "elemento.Ar.nombre": {
+  "texto": "Argon"
+ },
+ "elemento.K.nombre": {
+  "texto": "Potassium"
+ },
+ "elemento.Ca.nombre": {
+  "texto": "Calcium"
+ },
+ "elemento.Sc.nombre": {
+  "texto": "Scandium"
+ },
+ "elemento.Ti.nombre": {
+  "texto": "Titanium"
+ },
+ "elemento.V.nombre": {
+  "texto": "Vanadium"
+ },
+ "elemento.Cr.nombre": {
+  "texto": "Chromium"
+ },
+ "elemento.Mn.nombre": {
+  "texto": "Manganese"
+ },
+ "elemento.Fe.nombre": {
+  "texto": "Iron"
+ },
+ "elemento.Co.nombre": {
+  "texto": "Cobalt"
+ },
+ "elemento.Ni.nombre": {
+  "texto": "Nickel"
+ },
+ "elemento.Cu.nombre": {
+  "texto": "Copper"
+ },
+ "elemento.Zn.nombre": {
+  "texto": "Zinc"
+ },
+ "elemento.Ga.nombre": {
+  "texto": "Gallium"
+ },
+ "elemento.Ge.nombre": {
+  "texto": "Germanium"
+ },
+ "elemento.As.nombre": {
+  "texto": "Arsenic"
+ },
+ "elemento.Se.nombre": {
+  "texto": "Selenium"
+ },
+ "elemento.Br.nombre": {
+  "texto": "Bromine"
+ },
+ "elemento.Kr.nombre": {
+  "texto": "Krypton"
+ },
+ "elemento.Rb.nombre": {
+  "texto": "Rubidium"
+ },
+ "elemento.Sr.nombre": {
+  "texto": "Strontium"
+ },
+ "elemento.Y.nombre": {
+  "texto": "Yttrium"
+ },
+ "elemento.Zr.nombre": {
+  "texto": "Zirconium"
+ },
+ "elemento.Nb.nombre": {
+  "texto": "Niobium"
+ },
+ "elemento.Mo.nombre": {
+  "texto": "Molybdenum"
+ },
+ "elemento.Tc.nombre": {
+  "texto": "Technetium"
+ },
+ "elemento.Ru.nombre": {
+  "texto": "Ruthenium"
+ },
+ "elemento.Rh.nombre": {
+  "texto": "Rhodium"
+ },
+ "elemento.Pd.nombre": {
+  "texto": "Palladium"
+ },
+ "elemento.Ag.nombre": {
+  "texto": "Silver"
+ },
+ "elemento.Cd.nombre": {
+  "texto": "Cadmium"
+ },
+ "elemento.In.nombre": {
+  "texto": "Indium"
+ },
+ "elemento.Sn.nombre": {
+  "texto": "Tin"
+ },
+ "elemento.Sb.nombre": {
+  "texto": "Antimony"
+ },
+ "elemento.Te.nombre": {
+  "texto": "Tellurium"
+ },
+ "elemento.I.nombre": {
+  "texto": "Iodine"
+ },
+ "elemento.Xe.nombre": {
+  "texto": "Xenon"
+ },
+ "elemento.Cs.nombre": {
+  "texto": "Cesium"
+ },
+ "elemento.Ba.nombre": {
+  "texto": "Barium"
+ },
+ "elemento.La.nombre": {
+  "texto": "Lanthanum"
+ },
+ "elemento.Ce.nombre": {
+  "texto": "Cerium"
+ },
+ "elemento.Pr.nombre": {
+  "texto": "Praseodymium"
+ },
+ "elemento.Nd.nombre": {
+  "texto": "Neodymium"
+ },
+ "elemento.Pm.nombre": {
+  "texto": "Promethium"
+ },
+ "elemento.Sm.nombre": {
+  "texto": "Samarium"
+ },
+ "elemento.Eu.nombre": {
+  "texto": "Europium"
+ },
+ "elemento.Gd.nombre": {
+  "texto": "Gadolinium"
+ },
+ "elemento.Tb.nombre": {
+  "texto": "Terbium"
+ },
+ "elemento.Dy.nombre": {
+  "texto": "Dysprosium"
+ },
+ "elemento.Ho.nombre": {
+  "texto": "Holmium"
+ },
+ "elemento.Er.nombre": {
+  "texto": "Erbium"
+ },
+ "elemento.Tm.nombre": {
+  "texto": "Thulium"
+ },
+ "elemento.Yb.nombre": {
+  "texto": "Ytterbium"
+ },
+ "elemento.Lu.nombre": {
+  "texto": "Lutetium"
+ },
+ "elemento.Hf.nombre": {
+  "texto": "Hafnium"
+ },
+ "elemento.Ta.nombre": {
+  "texto": "Tantalum"
+ },
+ "elemento.W.nombre": {
+  "texto": "Tungsten"
+ },
+ "elemento.Re.nombre": {
+  "texto": "Rhenium"
+ },
+ "elemento.Os.nombre": {
+  "texto": "Osmium"
+ },
+ "elemento.Ir.nombre": {
+  "texto": "Iridium"
+ },
+ "elemento.Pt.nombre": {
+  "texto": "Platinum"
+ },
+ "elemento.Au.nombre": {
+  "texto": "Gold"
+ },
+ "elemento.Hg.nombre": {
+  "texto": "Mercury"
+ },
+ "elemento.Tl.nombre": {
+  "texto": "Thallium"
+ },
+ "elemento.Pb.nombre": {
+  "texto": "Lead"
+ },
+ "elemento.Bi.nombre": {
+  "texto": "Bismuth"
+ },
+ "elemento.Po.nombre": {
+  "texto": "Polonium"
+ },
+ "elemento.At.nombre": {
+  "texto": "Astatine"
+ },
+ "elemento.Rn.nombre": {
+  "texto": "Radon"
+ },
+ "elemento.Fr.nombre": {
+  "texto": "Francium"
+ },
+ "elemento.Ra.nombre": {
+  "texto": "Radium"
+ },
+ "elemento.Ac.nombre": {
+  "texto": "Actinium"
+ },
+ "elemento.Th.nombre": {
+  "texto": "Thorium"
+ },
+ "elemento.Pa.nombre": {
+  "texto": "Protactinium"
+ },
+ "elemento.U.nombre": {
+  "texto": "Uranium"
+ },
+ "elemento.Np.nombre": {
+  "texto": "Neptunium"
+ },
+ "elemento.Pu.nombre": {
+  "texto": "Plutonium"
+ },
+ "elemento.Am.nombre": {
+  "texto": "Americium"
+ },
+ "elemento.Cm.nombre": {
+  "texto": "Curium"
+ },
+ "elemento.Bk.nombre": {
+  "texto": "Berkelium"
+ },
+ "elemento.Cf.nombre": {
+  "texto": "Californium"
+ },
+ "elemento.Es.nombre": {
+  "texto": "Einsteinium"
+ },
+ "elemento.Fm.nombre": {
+  "texto": "Fermium"
+ },
+ "elemento.Md.nombre": {
+  "texto": "Mendelevium"
+ },
+ "elemento.No.nombre": {
+  "texto": "Nobelium"
+ },
+ "elemento.Lr.nombre": {
+  "texto": "Lawrencium"
+ },
+ "elemento.Rf.nombre": {
+  "texto": "Rutherfordium"
+ },
+ "elemento.Db.nombre": {
+  "texto": "Dubnium"
+ },
+ "elemento.Sg.nombre": {
+  "texto": "Seaborgium"
+ },
+ "elemento.Bh.nombre": {
+  "texto": "Bohrium"
+ },
+ "elemento.Hs.nombre": {
+  "texto": "Hassium"
+ },
+ "elemento.Mt.nombre": {
+  "texto": "Meitnerium"
+ },
+ "elemento.Ds.nombre": {
+  "texto": "Darmstadtium"
+ },
+ "elemento.Rg.nombre": {
+  "texto": "Roentgenium"
+ },
+ "elemento.Cn.nombre": {
+  "texto": "Copernicium"
+ },
+ "elemento.Nh.nombre": {
+  "texto": "Nihonium"
+ },
+ "elemento.Fl.nombre": {
+  "texto": "Flerovium"
+ },
+ "elemento.Mc.nombre": {
+  "texto": "Moscovium"
+ },
+ "elemento.Lv.nombre": {
+  "texto": "Livermorium"
+ },
+ "elemento.Ts.nombre": {
+  "texto": "Tennessine"
+ },
+ "elemento.Og.nombre": {
+  "texto": "Oganesson"
+ },
+ "especie.H2.nombre": {
+  "texto": "Hydrogen"
+ },
+ "especie.O2.nombre": {
+  "texto": "Oxygen"
+ },
+ "especie.N2.nombre": {
+  "texto": "Nitrogen"
+ },
+ "especie.F2.nombre": {
+  "texto": "Fluorine"
+ },
+ "especie.Cl2.nombre": {
+  "texto": "Chlorine"
+ },
+ "especie.Br2.nombre": {
+  "texto": "Bromine"
+ },
+ "especie.I2.nombre": {
+  "texto": "Iodine"
+ },
+ "especie.O3.nombre": {
+  "texto": "Ozone"
+ },
+ "especie.H2O.nombre": {
+  "texto": "Water"
+ },
+ "especie.H2O2.nombre": {
+  "texto": "Hydrogen peroxide"
+ },
+ "especie.CO.nombre": {
+  "texto": "Carbon monoxide"
+ },
+ "especie.CO2.nombre": {
+  "texto": "Carbon dioxide"
+ },
+ "especie.CH4.nombre": {
+  "texto": "Methane"
+ },
+ "especie.C2H2.nombre": {
+  "texto": "Acetylene (ethyne)"
+ },
+ "especie.HCN.nombre": {
+  "texto": "Hydrogen cyanide"
+ },
+ "especie.CH2O.nombre": {
+  "texto": "Formaldehyde (methanal)"
+ },
+ "especie.CS2.nombre": {
+  "texto": "Carbon disulfide"
+ },
+ "especie.CCl4.nombre": {
+  "texto": "Carbon tetrachloride"
+ },
+ "especie.NH3.nombre": {
+  "texto": "Ammonia"
+ },
+ "especie.NO.nombre": {
+  "texto": "Nitric oxide"
+ },
+ "especie.NO2.nombre": {
+  "texto": "Nitrogen dioxide"
+ },
+ "especie.N2O.nombre": {
+  "texto": "Nitrous oxide"
+ },
+ "especie.HNO3.nombre": {
+  "texto": "Nitric acid"
+ },
+ "especie.HF.nombre": {
+  "texto": "Hydrogen fluoride"
+ },
+ "especie.HCl.nombre": {
+  "texto": "Hydrogen chloride"
+ },
+ "especie.HBr.nombre": {
+  "texto": "Hydrogen bromide"
+ },
+ "especie.HI.nombre": {
+  "texto": "Hydrogen iodide"
+ },
+ "especie.H2S.nombre": {
+  "texto": "Hydrogen sulfide"
+ },
+ "especie.SO2.nombre": {
+  "texto": "Sulfur dioxide"
+ },
+ "especie.SO3.nombre": {
+  "texto": "Sulfur trioxide"
+ },
+ "especie.SiO2.nombre": {
+  "texto": "Silicon dioxide"
+ },
+ "especie.NaCl.nombre": {
+  "texto": "Sodium chloride"
+ },
+ "especie.KCl.nombre": {
+  "texto": "Potassium chloride"
+ },
+ "especie.NaF.nombre": {
+  "texto": "Sodium fluoride"
+ },
+ "especie.AgCl.nombre": {
+  "texto": "Silver chloride"
+ },
+ "especie.MgCl2.nombre": {
+  "texto": "Magnesium chloride"
+ },
+ "especie.CaCl2.nombre": {
+  "texto": "Calcium chloride"
+ },
+ "especie.ZnCl2.nombre": {
+  "texto": "Zinc chloride"
+ },
+ "especie.MgO.nombre": {
+  "texto": "Magnesium oxide"
+ },
+ "especie.CaO.nombre": {
+  "texto": "Calcium oxide"
+ },
+ "especie.FeS.nombre": {
+  "texto": "Iron(II) sulfide"
+ },
+ "especie.CuO.nombre": {
+  "texto": "Copper(II) oxide"
+ },
+ "especie.Cu2O.nombre": {
+  "texto": "Copper(I) oxide"
+ },
+ "especie.ZnO.nombre": {
+  "texto": "Zinc oxide"
+ },
+ "especie.Fe2O3.nombre": {
+  "texto": "Iron(III) oxide"
+ },
+ "especie.Al2O3.nombre": {
+  "texto": "Aluminium oxide"
+ },
+ "especie.NaOH.nombre": {
+  "texto": "Sodium hydroxide"
+ },
+ "especie.KOH.nombre": {
+  "texto": "Potassium hydroxide"
+ },
+ "especie.Ca(OH)2.nombre": {
+  "texto": "Calcium hydroxide"
+ },
+ "especie.CaCO3.nombre": {
+  "texto": "Calcium carbonate"
+ },
+ "reaccion.combustion-h2.nombre": {
+  "texto": "Hydrogen combustion"
+ },
+ "reaccion.combustion-c.nombre": {
+  "texto": "Complete carbon combustion"
+ },
+ "reaccion.combustion-c-incompleta.nombre": {
+  "texto": "Incomplete carbon combustion"
+ },
+ "reaccion.combustion-co.nombre": {
+  "texto": "Carbon monoxide combustion"
+ },
+ "reaccion.boudouard.nombre": {
+  "texto": "Boudouard reaction"
+ },
+ "reaccion.gas-agua.nombre": {
+  "texto": "Water gas"
+ },
+ "reaccion.desplazamiento-gas-agua.nombre": {
+  "texto": "Water–gas shift"
+ },
+ "reaccion.combustion-metano.nombre": {
+  "texto": "Methane combustion"
+ },
+ "reaccion.sintesis-metano.nombre": {
+  "texto": "Methane synthesis"
+ },
+ "reaccion.sintesis-acetileno.nombre": {
+  "texto": "Acetylene synthesis"
+ },
+ "reaccion.haber.nombre": {
+  "texto": "Haber–Bosch synthesis"
+ },
+ "reaccion.no-aire.nombre": {
+  "texto": "Nitric oxide from air"
+ },
+ "reaccion.no2.nombre": {
+  "texto": "Oxidation of NO"
+ },
+ "reaccion.no2-directo.nombre": {
+  "texto": "Nitrogen dioxide"
+ },
+ "reaccion.gas-risa.nombre": {
+  "texto": "Laughing gas"
+ },
+ "reaccion.ozono.nombre": {
+  "texto": "Ozone formation"
+ },
+ "reaccion.agua-oxigenada.nombre": {
+  "texto": "Hydrogen peroxide synthesis"
+ },
+ "reaccion.combustion-mg.nombre": {
+  "texto": "Magnesium combustion"
+ },
+ "reaccion.oxidacion-ca.nombre": {
+  "texto": "Calcium oxidation"
+ },
+ "reaccion.oxidacion-cu.nombre": {
+  "texto": "Copper oxidation"
+ },
+ "reaccion.cal-apagada.nombre": {
+  "texto": "Slaking lime"
+ },
+ "reaccion.carbonatacion.nombre": {
+  "texto": "Lime carbonation"
+ },
+ "reaccion.combustion-s.nombre": {
+  "texto": "Sulfur combustion"
+ },
+ "reaccion.contacto.nombre": {
+  "texto": "Contact process"
+ },
+ "reaccion.fe-s.nombre": {
+  "texto": "Iron and sulfur"
+ },
+ "reaccion.sintesis-nacl.nombre": {
+  "texto": "Salt synthesis"
+ },
+ "reaccion.sintesis-hcl.nombre": {
+  "texto": "Hydrogen chloride synthesis"
+ },
+ "reaccion.sintesis-hf.nombre": {
+  "texto": "Hydrogen fluoride synthesis"
+ },
+ "reaccion.sintesis-h2s.nombre": {
+  "texto": "Hydrogen sulfide synthesis"
+ },
+ "reaccion.combustion-si.nombre": {
+  "texto": "Silicon oxidation"
+ },
+ "reaccion.sintesis-cs2.nombre": {
+  "texto": "Carbon disulfide synthesis"
+ },
+ "reaccion.na-agua.nombre": {
+  "texto": "Sodium in water"
+ },
+ "reaccion.k-agua.nombre": {
+  "texto": "Potassium in water"
+ },
+ "reaccion.neutralizacion.nombre": {
+  "texto": "Neutralisation"
+ },
+ "reaccion.zn-hcl.nombre": {
+  "texto": "Zinc and hydrochloric acid"
+ },
+ "reaccion.mg-hcl.nombre": {
+  "texto": "Magnesium and hydrochloric acid"
+ },
+ "reaccion.caliza-hcl.nombre": {
+  "texto": "Limestone and hydrochloric acid"
+ },
+ "reaccion.termita.nombre": {
+  "texto": "Thermite"
+ },
+ "reaccion.gas-agua.condiciones": {
+  "texto": "with steam"
+ },
+ "reaccion.desplazamiento-gas-agua.condiciones": {
+  "texto": "with steam"
+ },
+ "reaccion.neutralizacion.condiciones": {
+  "texto": "in solution"
+ },
+ "reaccion.zn-hcl.condiciones": {
+  "texto": "in solution"
+ },
+ "reaccion.mg-hcl.condiciones": {
+  "texto": "in solution"
+ },
+ "reaccion.caliza-hcl.condiciones": {
+  "texto": "in solution"
+ },
+ "profe.titulo": {
+  "texto": "Teacher dashboard"
+ },
+ "profe.entrar": {
+  "texto": "Log in"
+ },
+ "profe.crear_cuenta": {
+  "texto": "Create account"
+ },
+ "profe.nombre": {
+  "texto": "Your name"
+ },
+ "profe.email": {
+  "texto": "Email"
+ },
+ "profe.password": {
+  "texto": "Password (at least 8)"
+ },
+ "profe.salir": {
+  "texto": "Log out"
+ },
+ "profe.hola": {
+  "texto": "Hi, {nombre}"
+ },
+ "profe.clases": {
+  "texto": "Your classes"
+ },
+ "profe.nueva_clase": {
+  "texto": "New class"
+ },
+ "profe.nombre_clase": {
+  "texto": "Name (e.g. 9B)"
+ },
+ "profe.curso": {
+  "texto": "Year"
+ },
+ "profe.crear": {
+  "texto": "Create"
+ },
+ "profe.ninguna": {
+  "texto": "You have no classes yet. Create one and share the code with your students."
+ },
+ "profe.alumnos_n": {
+  "texto": "{n} students"
+ },
+ "profe.volver": {
+  "texto": "← Your classes"
+ },
+ "profe.codigo": {
+  "texto": "Join code"
+ },
+ "profe.codigo_texto": {
+  "texto": "Students type it in the app (Class tab) or scan the QR code."
+ },
+ "profe.tile.alumnos": {
+  "texto": "Students"
+ },
+ "profe.tile.moleculas": {
+  "texto": "Molecules discovered"
+ },
+ "profe.tile.reacciones": {
+  "texto": "Reactions done"
+ },
+ "profe.tile.retos": {
+  "texto": "Challenges completed"
+ },
+ "profe.actividad": {
+  "texto": "Activity over the last 14 days"
+ },
+ "profe.actividad_eje": {
+  "texto": "actions per day"
+ },
+ "profe.ver_tabla": {
+  "texto": "View as table"
+ },
+ "profe.ver_grafica": {
+  "texto": "View chart"
+ },
+ "profe.dia": {
+  "texto": "Day"
+ },
+ "profe.acciones": {
+  "texto": "Actions"
+ },
+ "profe.alumnado": {
+  "texto": "Students"
+ },
+ "profe.col.alias": {
+  "texto": "Nickname"
+ },
+ "profe.col.moleculas": {
+  "texto": "Molecules"
+ },
+ "profe.col.reacciones": {
+  "texto": "Reactions"
+ },
+ "profe.col.retos": {
+  "texto": "Challenges"
+ },
+ "profe.col.ultima": {
+  "texto": "Last seen"
+ },
+ "profe.nunca": {
+  "texto": "—"
+ },
+ "profe.renombrar": {
+  "texto": "Rename"
+ },
+ "profe.quitar": {
+  "texto": "Remove"
+ },
+ "profe.confirmar_quitar": {
+  "texto": "Remove {alias} from the class? Their progress in it will be deleted."
+ },
+ "profe.nuevo_alias": {
+  "texto": "New nickname for {alias}"
+ },
+ "profe.sin_alumnos": {
+  "texto": "Nobody has joined yet."
+ },
+ "profe.cobertura": {
+  "texto": "Class molecules"
+ },
+ "profe.cobertura_texto": {
+  "texto": "In brackets, how many students made it. Molecules nobody has yet make good challenges."
+ },
+ "profe.retos": {
+  "texto": "Challenges"
+ },
+ "profe.nuevo_reto": {
+  "texto": "New challenge"
+ },
+ "profe.reto_titulo": {
+  "texto": "Title"
+ },
+ "profe.reto_descripcion": {
+  "texto": "Description (optional)"
+ },
+ "profe.reto_fin": {
+  "texto": "Deadline (optional)"
+ },
+ "profe.reto_moleculas": {
+  "texto": "Molecules to make"
+ },
+ "profe.reto_todo_curso": {
+  "texto": "All of {curso}"
+ },
+ "profe.borrar": {
+  "texto": "Delete"
+ },
+ "profe.borrar_clase": {
+  "texto": "Delete class"
+ },
+ "profe.confirmar_borrar_clase": {
+  "texto": "Delete class {nombre} and all its progress? This can't be undone."
+ },
+ "profe.privacidad": {
+  "texto": "Privacy: for students only a nickname and their in-app progress are stored; no names, emails or location. The camera is processed on the phone itself. Before using it in class, inform your school (it is the data controller)."
+ },
+ "profe.error_red": {
+  "texto": "No connection to the server."
+ }
+}

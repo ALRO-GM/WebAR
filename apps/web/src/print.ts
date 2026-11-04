@@ -1,19 +1,24 @@
 import './print.css';
 import { markerSVG } from '@webar/ar-core/markers';
 import { atomComposition, getElement } from '@webar/chem';
+import { t, translate } from './i18n';
+import { elementName } from './i18n/content';
+import { applySettings } from './settings';
 import { FAMILY_COLORS } from './cards/card-face';
 import { KITS, cardsFor, type CardSpec } from './cards/deck';
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
 const PER_PAGE = 9;
 
+applySettings();
+translate();
 const kits = $('kits');
 kits.innerHTML =
-  '<legend>Qué imprimir</legend>' +
+  `<legend>${t('imprimir.que')}</legend>` +
   Object.entries(KITS)
-    .map(([key, kit], i) => `<label><input type="radio" name="kit" value="${key}" ${i === 0 ? 'checked' : ''}/> <b>${kit.name}</b><br/><small>${kit.description}</small></label>`)
+    .map(([key, kit], i) => `<label><input type="radio" name="kit" value="${key}" ${i === 0 ? 'checked' : ''}/> <b>${t(`kit.${key}.nombre`, { n: kit.symbols.length })}</b><br/><small>${t(`kit.${key}.descripcion`)}</small></label>`)
     .join('') +
-  '<label><input type="radio" name="kit" value="personal"/> <b>Las que yo elija</b></label>';
+  `<label><input type="radio" name="kit" value="personal"/> <b>${t('imprimir.personal')}</b></label>`;
 
 function selected(): string[] {
   const kit = (document.querySelector('input[name=kit]:checked') as HTMLInputElement).value;
@@ -37,7 +42,7 @@ function card(spec: CardSpec): string {
     <div class="datos">
       <span class="z">${e.z}</span>
       <span class="simbolo">${e.symbol}</span>
-      <span class="nombre">${e.name}</span>
+      <span class="nombre">${elementName(e.symbol)}</span>
       <span class="particulas">${c.protons} p⁺ · ${c.neutrons} n⁰ · ${c.electrons} e⁻</span>
     </div>
     <footer>webar.peer4u.app · nº ${spec.id}</footer>
@@ -52,8 +57,8 @@ function render(): void {
   $('hojas').innerHTML = pages.join('');
   const missing = symbols.length - specs.length;
   $('resumen').textContent =
-    `${specs.length} tarjetas en ${pages.length} ${pages.length === 1 ? 'hoja' : 'hojas'}.` +
-    (missing > 0 ? ` (${missing} sin imprimir: no hay tantas copias de ese elemento.)` : '');
+    t(pages.length === 1 ? 'imprimir.resumen_1' : 'imprimir.resumen', { tarjetas: specs.length, hojas: pages.length }) +
+    (missing > 0 ? ` ${t('imprimir.faltan', { n: missing })}` : '');
 }
 
 $('opciones').addEventListener('change', render);

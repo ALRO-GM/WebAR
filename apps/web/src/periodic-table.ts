@@ -1,4 +1,6 @@
 import { ELEMENTS, tablePosition, type ElementData } from '@webar/chem';
+import { t } from './i18n';
+import { elementName } from './i18n/content';
 
 /**
  * Pinta la tabla periódica como botones; `onPick` recibe el elemento tocado.
@@ -30,7 +32,7 @@ export function updateLocks(container: HTMLElement, isLocked?: (element: Element
     const element = ELEMENTS[Number(cell.dataset.z) - 1];
     const locked = !!isLocked?.(element);
     cell.classList.toggle('bloqueada', locked);
-    cell.setAttribute('aria-label', `${element.name}${locked ? ' (bloqueado)' : ''}`);
+    cell.setAttribute('aria-label', `${elementName(element.symbol)}${locked ? ` (${t('tabla.bloqueado_corto')})` : ''}`);
   });
 }
 

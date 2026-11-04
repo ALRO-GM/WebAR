@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import type { ARAnchor } from '@webar/ar-core';
 import { AtomView, MoleculeView, getElement, getSpecies, type AtomModel, type Content } from '@webar/chem';
 import { glowTexture, ringTexture } from '../effects';
+import { calm } from '../settings';
 import { cardFaceTexture } from './card-face';
 import { CARD, type CardSpec } from './deck';
 
@@ -43,6 +44,8 @@ export class CardVisual {
   readonly approach = new THREE.Vector3();
   /** Marcada como objetivo del botón «Descomponer». */
   targeted = false;
+  /** Elegida en la mesa para juntarle otra (anillo amarillo). */
+  selected = false;
 
   private readonly target = { p: new THREE.Vector3(), q: new THREE.Quaternion(), s: new THREE.Vector3() };
 
@@ -150,7 +153,7 @@ export class CardVisual {
 
     // Acercamiento hacia las otras tarjetas y temblor creciente con la carga.
     const local = this.approach.clone().applyQuaternion(this.holder.quaternion.clone().invert());
-    const amp = this.charge * this.charge * this.radius * 0.18;
+    const amp = calm() ? 0 : this.charge * this.charge * this.radius * 0.18;
     this.shake.position.set(
       local.x + Math.sin(this.time * 61) * amp,
       local.y + Math.sin(this.time * 53 + 1) * amp,
@@ -160,7 +163,8 @@ export class CardVisual {
     this.pop = Math.min(1, this.pop + dt / 0.6);
     this.view!.object.scale.setScalar(Math.max(0.001, easeOutBack(this.pop) * this.presence));
     this.halo.material.opacity = this.charge * (0.75 + 0.25 * Math.sin(this.time * 18));
-    this.ring.material.opacity = this.targeted ? 0.55 + 0.35 * Math.sin(this.time * 6) : 0;
+    this.ring.material.color.set(this.selected ? 0xffd166 : 0x7fe3ff);
+    this.ring.material.opacity = this.targeted || this.selected ? 0.6 + 0.3 * Math.sin(this.time * 6) : 0;
     this.view!.update(dt * (1 + this.charge * 3));
   }
 

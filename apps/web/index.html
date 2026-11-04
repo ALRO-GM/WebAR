@@ -16,49 +16,47 @@
     <!-- La capa que se ve encima de la cámara (dom-overlay de WebXR) o del visor. -->
     <div id="overlay">
       <main id="inicio">
-        <header class="perfil" aria-label="Tu progreso">
-          <img src="/icons/icon.svg" alt="" width="44" height="44" />
-          <div class="perfil-texto">
-            <p class="perfil-nivel"><b id="perfil-nivel"></b> · <span id="perfil-nombre-nivel"></span></p>
-            <div class="xp" role="progressbar" aria-labelledby="perfil-nivel" id="perfil-barra"><div></div></div>
-            <p class="pequeno"><span id="perfil-xp"></span> · <span id="perfil-racha"></span></p>
-          </div>
+        <header class="perfil">
+          <button id="abrir-logros" type="button" class="perfil-boton" data-t-attr="aria-label:perfil.ver_logros">
+            <img src="/icons/icon.svg" alt="" width="44" height="44" />
+            <span class="perfil-texto">
+              <span class="perfil-nivel"><b id="perfil-nivel"></b> · <span id="perfil-nombre-nivel"></span></span>
+              <span class="xp" role="progressbar" id="perfil-barra" data-t-attr="aria-label:perfil.barra"><span></span></span>
+              <span class="pequeno"><span id="perfil-xp"></span> · <span id="perfil-racha"></span></span>
+            </span>
+          </button>
           <span id="estado-red" class="estado-red" role="status"></span>
+          <button id="abrir-ayuda" type="button" class="icono" data-t-attr="aria-label:ayuda.abrir;title:ayuda.abrir">?</button>
+          <button id="abrir-ajustes" type="button" class="icono" data-t-attr="aria-label:ajustes.titulo;title:ajustes.titulo">⚙️</button>
         </header>
-
-        <nav class="pestanas" role="tablist" aria-label="Secciones">
-          <button role="tab" id="tab-jugar" aria-controls="p-jugar" aria-selected="true" data-t="inicio.jugar"></button>
-          <button role="tab" id="tab-moleculario" aria-controls="p-moleculario" aria-selected="false" data-t="inicio.moleculario"></button>
-          <button role="tab" id="tab-tabla" aria-controls="p-tabla" aria-selected="false" data-t="inicio.tabla"></button>
-          <button role="tab" id="tab-retos" aria-controls="p-retos" aria-selected="false" data-t="inicio.retos"></button>
-          <button role="tab" id="tab-clase" aria-controls="p-clase" aria-selected="false" data-t="inicio.clase"></button>
-          <button role="tab" id="tab-logros" aria-controls="p-logros" aria-selected="false" data-t="inicio.logros"></button>
-        </nav>
 
         <section id="p-jugar" role="tabpanel" aria-labelledby="tab-jugar" class="panel">
           <p id="reto-activo" class="reto-activo" hidden></p>
           <div class="modos">
-            <button id="entrar-tarjetas" type="button" class="modo">
-              <b>🃏 Tarjetas con la cámara</b>
-              <span>Apunta a las tarjetas impresas y júntalas para que reaccionen.</span>
+            <button id="entrar-tarjetas" type="button" class="modo modo-principal">
+              <span class="modo-icono" aria-hidden="true">🃏</span>
+              <span><b data-t="modo.tarjetas.titulo"></b><span data-t="modo.tarjetas.texto"></span></span>
             </button>
             <button id="entrar-mesa" type="button" class="modo">
-              <b>🧪 Mesa virtual</b>
-              <span>Las mismas reacciones arrastrando tarjetas por la pantalla, sin imprimir nada.</span>
+              <span class="modo-icono" aria-hidden="true">🧪</span>
+              <span><b data-t="modo.mesa.titulo"></b><span data-t="modo.mesa.texto"></span></span>
             </button>
             <button id="entrar-3d" type="button" class="modo">
-              <b>⚛️ Explorar átomos</b>
-              <span>Los elementos que tienes, en 3D: modelo de Bohr y orbitales.</span>
+              <span class="modo-icono" aria-hidden="true">⚛️</span>
+              <span><b data-t="modo.explorar.titulo"></b><span data-t="modo.explorar.texto"></span></span>
             </button>
             <button id="entrar-ra" type="button" class="modo" disabled>
-              <b>📱 Átomos sobre la mesa</b>
-              <span id="entrar-ra-texto">Comprobando el móvil…</span>
+              <span class="modo-icono" aria-hidden="true">📱</span>
+              <span><b data-t="modo.ra.titulo"></b><span id="entrar-ra-texto" data-t="modo.ra.comprobando"></span></span>
             </button>
           </div>
-          <p class="enlaces"><a href="/cartas.html">🖨️ Imprimir tarjetas</a> · <a href="/profesor.html">👩‍🏫 Soy profe</a></p>
-          <p id="aviso" role="status"></p>
-          <button id="instalar" type="button" class="secundario" hidden>Instalar la app</button>
-          <p id="instalar-ios" class="pista" hidden>Para instalarla en iPhone: botón Compartir → «Añadir a pantalla de inicio».</p>
+          <p class="enlaces">
+            <a href="/cartas.html"><span aria-hidden="true">🖨️ </span><span data-t="enlace.imprimir"></span></a>
+            <a href="/profesor.html"><span aria-hidden="true">👩‍🏫 </span><span data-t="enlace.profe"></span></a>
+          </p>
+          <p id="aviso" class="aviso" role="status"></p>
+          <button id="instalar" type="button" class="secundario" data-t="instalar.boton" hidden></button>
+          <p id="instalar-ios" class="pista" data-t="instalar.ios" hidden></p>
         </section>
 
         <section id="p-moleculario" role="tabpanel" aria-labelledby="tab-moleculario" class="panel" hidden>
@@ -74,70 +72,30 @@
         </section>
 
         <section id="p-retos" role="tabpanel" aria-labelledby="tab-retos" class="panel" hidden>
+          <h2 data-t="retos.titulo"></h2>
           <div id="retos"></div>
         </section>
 
         <section id="p-clase" role="tabpanel" aria-labelledby="tab-clase" class="panel" hidden>
+          <h2 data-t="inicio.clase"></h2>
           <div id="clase"></div>
-          <div class="tarjeta-panel">
-            <h3 data-t="offline.titulo"></h3>
-            <p class="pequeno" data-t="offline.texto"></p>
-            <button id="offline-boton" type="button" class="secundario" data-t="offline.boton"></button>
-            <p id="offline-estado" class="pequeno" role="status"></p>
-          </div>
         </section>
 
-        <section id="p-logros" role="tabpanel" aria-labelledby="tab-logros" class="panel" hidden>
+        <section id="p-logros" role="tabpanel" class="panel" hidden>
           <h2 data-t="logros.titulo"></h2>
           <div id="logros" class="coleccion"></div>
         </section>
+
+        <nav class="nav-inferior" role="tablist" data-t-attr="aria-label:inicio.secciones">
+          <button role="tab" id="tab-jugar" aria-controls="p-jugar" aria-selected="true"><span aria-hidden="true">🎮</span><span data-t="inicio.jugar"></span></button>
+          <button role="tab" id="tab-moleculario" aria-controls="p-moleculario" aria-selected="false"><span aria-hidden="true">🧪</span><span data-t="inicio.moleculario"></span></button>
+          <button role="tab" id="tab-tabla" aria-controls="p-tabla" aria-selected="false"><span aria-hidden="true">⚛️</span><span data-t="inicio.tabla"></span></button>
+          <button role="tab" id="tab-retos" aria-controls="p-retos" aria-selected="false"><span aria-hidden="true">🏆</span><span data-t="inicio.retos"></span></button>
+          <button role="tab" id="tab-clase" aria-controls="p-clase" aria-selected="false"><span aria-hidden="true">👥</span><span data-t="inicio.clase"></span></button>
+        </nav>
       </main>
 
-      <dialog id="detalle" class="detalle" aria-labelledby="detalle-titulo">
-        <div id="detalle-contenido"></div>
-        <form method="dialog"><button class="secundario" data-t="comun.cerrar"></button></form>
-      </dialog>
-
-      <div id="avisos" class="avisos" aria-live="polite"></div>
-
-      <div id="hud-tarjetas" hidden>
-        <p id="t-estado" class="burbuja burbuja-arriba"></p>
-        <section id="t-banner" class="banner" data-ar-ui hidden>
-          <p id="t-banner-titulo" class="banner-titulo"></p>
-          <p id="t-banner-ecuacion" class="banner-ecuacion"></p>
-          <p id="t-banner-texto" class="banner-texto"></p>
-        </section>
-        <p id="t-reto" class="reto-juego" hidden></p>
-        <section id="t-carga" class="carga" hidden>
-          <p id="t-carga-ecuacion"></p>
-          <div class="progreso"><div></div></div>
-          <p class="pequeno">Mantén las tarjetas juntas…</p>
-        </section>
-        <div class="barra">
-          <div class="fila">
-            <button id="t-anadir" type="button" class="secundario">+ Tarjeta</button>
-            <button id="t-reiniciar" type="button" class="secundario">Reiniciar</button>
-            <button id="t-recetas" type="button" class="secundario">Recetas</button>
-          </div>
-          <div class="fila">
-            <div class="segmentado" role="radiogroup" aria-label="Modelo de los átomos">
-              <button id="t-bohr" type="button" role="radio" aria-checked="true">Bohr</button>
-              <button id="t-nube" type="button" role="radio" aria-checked="false">Orbitales</button>
-            </div>
-            <button id="t-descomponer" type="button" class="mantener" disabled>Descomponer</button>
-            <button id="t-salir" type="button" class="secundario">Salir</button>
-          </div>
-        </div>
-      </div>
-
-      <div id="recetas" class="dialogo" data-ar-ui hidden>
-        <div class="dialogo-cabecera">
-          <h2>Recetas</h2>
-          <button id="cerrar-recetas" type="button" class="secundario redondo" aria-label="Cerrar">×</button>
-        </div>
-        <div id="recetas-lista" class="recetas"></div>
-      </div>
-
+      <!-- Explorar átomos -->
       <div id="hud" hidden>
         <section id="ficha" class="tarjeta" data-ar-ui aria-live="polite">
           <div id="ficha-simbolo" class="simbolo"></div>
@@ -149,32 +107,144 @@
         </section>
         <p id="pista" class="burbuja" hidden></p>
         <p id="leyenda" class="leyenda" data-ar-ui></p>
-
         <div class="barra">
           <div class="fila">
-            <button id="anterior" type="button" class="secundario redondo" aria-label="Elemento anterior">‹</button>
-            <button id="abrir-tabla" type="button" class="secundario">Tabla periódica</button>
-            <button id="siguiente" type="button" class="secundario redondo" aria-label="Elemento siguiente">›</button>
+            <button id="anterior" type="button" class="secundario redondo" data-t-attr="aria-label:explorar.anterior">‹</button>
+            <button id="abrir-tabla" type="button" class="secundario" data-t="explorar.tabla"></button>
+            <button id="siguiente" type="button" class="secundario redondo" data-t-attr="aria-label:explorar.siguiente">›</button>
           </div>
           <div class="fila">
-            <div class="segmentado" role="radiogroup" aria-label="Modelo">
-              <button id="modelo-bohr" type="button" role="radio" aria-checked="true">Bohr</button>
-              <button id="modelo-nube" type="button" role="radio" aria-checked="false">Orbitales</button>
+            <div class="segmentado" role="radiogroup" data-t-attr="aria-label:modelo.titulo">
+              <button id="modelo-bohr" type="button" role="radio" aria-checked="true" data-t="modelo.bohr"></button>
+              <button id="modelo-nube" type="button" role="radio" aria-checked="false" data-t="modelo.orbitales"></button>
             </div>
-            <button id="borrar" type="button" class="secundario" hidden>Borrar</button>
-            <button id="salir" type="button" class="secundario">Salir</button>
+            <button id="borrar" type="button" class="secundario" data-t="explorar.borrar" hidden></button>
+            <button id="salir" type="button" class="secundario" data-t="comun.salir"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjetas (cámara o mesa virtual) -->
+      <div id="hud-tarjetas" hidden>
+        <p id="t-estado" class="burbuja burbuja-arriba"></p>
+        <p id="t-reto" class="reto-juego" hidden></p>
+        <section id="t-banner" class="banner" data-ar-ui role="status" hidden>
+          <p id="t-banner-titulo" class="banner-titulo"></p>
+          <p id="t-banner-ecuacion" class="banner-ecuacion"></p>
+          <p id="t-banner-texto" class="banner-texto"></p>
+        </section>
+        <section id="t-carga" class="carga" hidden>
+          <p id="t-carga-ecuacion"></p>
+          <div class="progreso"><div></div></div>
+          <p class="pequeno" data-t="juego.manten"></p>
+        </section>
+        <div class="barra">
+          <div class="fila">
+            <button id="t-anadir" type="button" class="secundario" data-t="juego.anadir"></button>
+            <button id="t-reiniciar" type="button" class="secundario" data-t="juego.reiniciar"></button>
+            <button id="t-recetas" type="button" class="secundario" data-t="juego.recetas"></button>
+          </div>
+          <div class="fila">
+            <div class="segmentado" role="radiogroup" data-t-attr="aria-label:modelo.titulo">
+              <button id="t-bohr" type="button" role="radio" aria-checked="true" data-t="modelo.bohr"></button>
+              <button id="t-nube" type="button" role="radio" aria-checked="false" data-t="modelo.orbitales"></button>
+            </div>
+            <button id="t-descomponer" type="button" class="mantener" data-t="juego.descomponer" disabled></button>
+            <button id="t-salir" type="button" class="secundario" data-t="comun.salir"></button>
           </div>
         </div>
       </div>
 
       <div id="tabla" class="dialogo" data-ar-ui hidden>
         <div class="dialogo-cabecera">
-          <h2>Tabla periódica</h2>
-          <button id="cerrar-tabla" type="button" class="secundario redondo" aria-label="Cerrar">×</button>
+          <h2 data-t="explorar.tabla"></h2>
+          <button id="cerrar-tabla" type="button" class="secundario redondo" data-t-attr="aria-label:comun.cerrar">×</button>
         </div>
         <div class="tabla-scroll"><div id="tabla-celdas" class="tabla-celdas"></div></div>
       </div>
+
+      <div id="recetas" class="dialogo" data-ar-ui hidden>
+        <div class="dialogo-cabecera">
+          <h2 data-t="juego.recetas"></h2>
+          <button id="cerrar-recetas" type="button" class="secundario redondo" data-t-attr="aria-label:comun.cerrar">×</button>
+        </div>
+        <div id="recetas-lista" class="recetas"></div>
+      </div>
     </div>
+
+    <dialog id="detalle" class="detalle" aria-labelledby="detalle-titulo">
+      <div id="detalle-contenido"></div>
+      <form method="dialog"><button class="secundario" data-t="comun.cerrar"></button></form>
+    </dialog>
+
+    <dialog id="ajustes" class="detalle" aria-labelledby="ajustes-titulo">
+      <h2 id="ajustes-titulo" data-t="ajustes.titulo"></h2>
+      <form id="ajustes-form" class="ajustes">
+        <label><span data-t="ajustes.idioma"></span>
+          <select name="idioma"><option value="es">Español</option><option value="en">English</option></select></label>
+        <fieldset><legend data-t="ajustes.letra"></legend>
+          <label class="opcion"><input type="radio" name="letra" value="1" /> <span data-t="ajustes.letra.normal"></span></label>
+          <label class="opcion"><input type="radio" name="letra" value="1.15" /> <span data-t="ajustes.letra.grande"></span></label>
+          <label class="opcion"><input type="radio" name="letra" value="1.3" /> <span data-t="ajustes.letra.muy_grande"></span></label>
+        </fieldset>
+        <label class="interruptor"><input type="checkbox" name="contraste" /> <span data-t="ajustes.contraste"></span></label>
+        <label class="interruptor"><input type="checkbox" name="calma" /> <span data-t="ajustes.calma"></span></label>
+        <label class="interruptor"><input type="checkbox" name="vibrar" /> <span data-t="ajustes.vibrar"></span></label>
+      </form>
+      <div class="ajustes-bloque">
+        <h3 data-t="offline.titulo"></h3>
+        <p class="pequeno" data-t="offline.texto"></p>
+        <button id="offline-boton" type="button" class="secundario" data-t="offline.boton"></button>
+        <p id="offline-estado" class="pequeno" role="status"></p>
+      </div>
+      <p><button id="ver-intro" type="button" class="secundario" data-t="ayuda.ver_intro"></button></p>
+      <form method="dialog"><button data-t="comun.listo"></button></form>
+    </dialog>
+
+    <dialog id="intro" class="intro" aria-labelledby="intro-titulo">
+      <div class="intro-escenas" id="intro-escenas">
+        <section class="escena" data-escena="0">
+          <div class="visual v-apuntar" aria-hidden="true">
+            <div class="movil"><div class="carta-mini">H</div><div class="atomo-mini"><i></i><i></i><b></b></div></div>
+          </div>
+          <h2 id="intro-titulo" data-t="intro.1.titulo"></h2><p data-t="intro.1.texto"></p>
+        </section>
+        <section class="escena" data-escena="1">
+          <div class="visual v-juntar" aria-hidden="true">
+            <div class="carta-mini izq">H</div><div class="carta-mini centro">O</div><div class="carta-mini der">H</div>
+            <div class="destello"></div><div class="molecula-mini">H₂O</div>
+          </div>
+          <h2 data-t="intro.2.titulo"></h2><p data-t="intro.2.texto"></p>
+        </section>
+        <section class="escena" data-escena="2">
+          <div class="visual v-calor" aria-hidden="true">
+            <div class="lado fuego"><span>🔥</span><small data-t="intro.3.exo"></small></div>
+            <div class="lado hielo"><span>❄️</span><small data-t="intro.3.endo"></small></div>
+          </div>
+          <h2 data-t="intro.3.titulo"></h2><p data-t="intro.3.texto"></p>
+        </section>
+        <section class="escena" data-escena="3">
+          <div class="visual v-coleccion" aria-hidden="true">
+            <span>?</span><span>?</span><span>?</span><span>?</span><span>?</span><span>?</span>
+          </div>
+          <h2 data-t="intro.4.titulo"></h2><p data-t="intro.4.texto"></p>
+        </section>
+        <section class="escena" data-escena="4">
+          <div class="visual v-clase" aria-hidden="true">
+            <div class="avatares"><span>🧑‍🔬</span><span>👩‍🔬</span><span>🧑‍🎓</span><span>👨‍🔬</span></div>
+            <div class="meta"><div></div></div><span class="sin-red">📴 ✓</span>
+          </div>
+          <h2 data-t="intro.5.titulo"></h2><p data-t="intro.5.texto"></p>
+        </section>
+      </div>
+      <div class="intro-pie">
+        <button id="intro-saltar" type="button" class="enlace" data-t="intro.saltar"></button>
+        <div id="intro-puntos" class="puntos" role="group" data-t-attr="aria-label:intro.pasos"></div>
+        <button id="intro-siguiente" type="button" data-t="intro.siguiente"></button>
+      </div>
+    </dialog>
+
+    <div id="avisos" class="avisos" aria-live="polite"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

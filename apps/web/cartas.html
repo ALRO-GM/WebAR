@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Imprimir tarjetas · WebAR Átomos</title>
+    <title>WebAR · Átomos</title>
     <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
     <meta name="theme-color" content="#111317" />
   </head>
   <body>
     <header class="no-imprimir">
-      <a href="/" class="volver">← Volver</a>
-      <h1>Imprimir tarjetas</h1>
-      <p>Cada tarjeta lleva un marcador que la app reconoce con la cámara. Imprime en <b>A4 al 100 %</b> (sin «Ajustar a la página»), recorta por las líneas y, si puedes, pégalas sobre cartulina: el marcador tiene que quedar plano.</p>
+      <a href="/" class="volver" data-t="imprimir.volver"></a>
+      <h1 data-t="imprimir.titulo"></h1>
+      <p data-t="imprimir.instrucciones"></p>
       <form id="opciones">
         <fieldset id="kits"></fieldset>
-        <label class="personal">Mis tarjetas: <input id="personal" placeholder="H H O C N" autocomplete="off" /></label>
-        <p id="resumen"></p>
-        <button type="button" id="imprimir">🖨️ Imprimir</button>
+        <label class="personal"><span data-t="imprimir.mias"></span> <input id="personal" placeholder="H H O C N" autocomplete="off" /></label>
+        <p id="resumen" role="status"></p>
+        <button type="button" id="imprimir" data-t="imprimir.boton"></button>
       </form>
     </header>
     <main id="hojas"></main>

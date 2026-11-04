@@ -2,12 +2,15 @@ import './style.css';
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { ARSession, ViewerProvider, WebXRWorldProvider, detectARSupport, type ARAnchor, type ARProvider } from '@webar/ar-core';
-import { AtomView, ELEMENTS, FAMILY_NAMES, atomComposition, formatConfiguration, getElement, type AtomModel, type ElementData } from '@webar/chem';
+import { AtomView, ELEMENTS, atomComposition, composition, formatConfiguration, getElement, getSpecies, type AtomModel, type ElementData } from '@webar/chem';
 import { CardsMode, type CardsKind } from './cards/mode';
+import { t } from './i18n';
+import { elementName, familyName } from './i18n/content';
 import { setupInstall } from './install';
+import { setupIntro } from './intro';
 import { markSelected, renderPeriodicTable, updateLocks } from './periodic-table';
 import { Hub } from './platform/hub';
-import { composition, getSpecies } from '@webar/chem';
+import { applySettings, setupSettingsForm, vibrate } from './settings';
 import { createShadow } from './shadow';
 
 // La app une las dos bases: @webar/ar-core (dónde está cada cosa en el mundo)
@@ -15,6 +18,8 @@ import { createShadow } from './shadow';
 // el reparto entre modos: explorar átomos o jugar con tarjetas.
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
+
+applySettings();
 
 const xr = new WebXRWorldProvider();
 const viewer = new ViewerProvider();
@@ -47,6 +52,17 @@ function selectModel(m: AtomModel): void {
 // El progreso del alumno (colección, desbloqueos, retos, clase).
 const hub = new Hub();
 await hub.init();
+$('abrir-logros').addEventListener('click', () => hub.selectTab('logros'));
+
+// Ajustes, ayuda e introducción.
+setupSettingsForm($<HTMLFormElement>('ajustes-form'));
+const intro = setupIntro($<HTMLDialogElement>('intro'));
+$('abrir-ajustes').addEventListener('click', () => $<HTMLDialogElement>('ajustes').showModal());
+$('abrir-ayuda').addEventListener('click', intro.open);
+$('ver-intro').addEventListener('click', () => {
+  $<HTMLDialogElement>('ajustes').close();
+  intro.open();
+});
 
 // La tabla periódica es un selector compartido: cada modo decide qué hacer al
 // elegir. Los elementos bloqueados se ven, pero no se pueden usar todavía.
@@ -124,14 +140,16 @@ const explore = (() => {
     const symbol = $('ficha-simbolo');
     symbol.textContent = element.symbol;
     symbol.style.setProperty('--color', element.color);
-    $('ficha-nombre').textContent = `${element.name} · Z = ${element.z}`;
-    $('ficha-familia').textContent = FAMILY_NAMES[element.family];
+    $('ficha-nombre').textContent = `${elementName(element.symbol)} · Z = ${element.z}`;
+    $('ficha-familia').textContent = familyName(element.family);
+    const isotope = `${element.symbol}-${element.massNumber}${element.radioactive ? `, ${t('explorar.radiactivo')}` : ''}`;
     $('ficha-particulas').innerHTML =
-      `<span class="p">${element.z} p⁺</span> · <span class="n">${n} n⁰</span> · <span class="e">${element.z} e⁻</span>` +
-      ` <span class="pequeno">(${element.symbol}-${element.massNumber}${element.radioactive ? ', radiactivo' : ''})</span>`;
-    $('ficha-detalle').textContent =
-      `Capas ${atomComposition(element).shells.join('·')} · ${formatConfiguration(element)}${element.configurationPredicted ? ' (teórica)' : ''}` +
-      ` · radio ${element.radius} pm${element.radiusEstimated ? ' (estimado)' : ''}`;
+      `<span class="p">${element.z} p⁺</span> · <span class="n">${n} n⁰</span> · <span class="e">${element.z} e⁻</span> <span class="pequeno">(${isotope})</span>`;
+    $('ficha-detalle').textContent = [
+      t('explorar.capas', { capas: atomComposition(element).shells.join('·') }),
+      formatConfiguration(element) + (element.configurationPredicted ? ` (${t('explorar.teorica')})` : ''),
+      t('explorar.radio', { pm: element.radius }) + (element.radiusEstimated ? ` (${t('explorar.estimado')})` : ''),
+    ].join(' · ');
   }
 
   $('abrir-tabla').addEventListener('click', () => pickElement(select, element.z));
@@ -148,16 +166,13 @@ const explore = (() => {
   renderCard();
 
   return {
-    get element() {
-      return element;
-    },
     setModel(m: AtomModel) {
       for (const { atom } of placed) atom.setModel(m);
       if (ar.running && mode === 'explorar' && ar.provider === viewer && placed[0]) fit(placed[0].atom);
       $('leyenda').innerHTML =
         m === 'bohr'
-          ? '<b>Modelo de Bohr</b>: los electrones giran en órbitas, una por capa. <i class="p">●</i> protón <i class="n">●</i> neutrón <i class="e">●</i> electrón'
-          : '<b>Orbitales</b>: donde es probable encontrar cada electrón; la chispa salta porque su posición es incierta. <i class="s">●</i> s <i class="pp">●</i> p <i class="d">●</i> d <i class="f">●</i> f · tono oscuro: fase opuesta';
+          ? `<b>${t('modelo.bohr.titulo')}</b>: ${t('modelo.bohr.texto')} <i class="p">●</i> ${t('particula.proton')} <i class="n">●</i> ${t('particula.neutron')} <i class="e">●</i> ${t('particula.electron')}`
+          : `<b>${t('modelo.orbitales.titulo')}</b>: ${t('modelo.orbitales.texto')} <i class="s">●</i> s <i class="pp">●</i> p <i class="d">●</i> d <i class="f">●</i> f · ${t('modelo.orbitales.fase')}`;
     },
     onStart() {
       $('hud').hidden = false;
@@ -172,15 +187,16 @@ const explore = (() => {
     async onSelect() {
       if (ar.provider !== xr || !$('tabla').hidden) return;
       const anchor = await xr.placeAnchor();
-      if (anchor) attach(anchor, true);
+      if (anchor) {
+        attach(anchor, true);
+        vibrate(20);
+      }
     },
     frame(dt: number) {
       for (const { atom } of placed) atom.update(dt);
       if (ar.provider !== xr) return;
       $('pista').hidden = placed.length > 0 && xr.hasHit;
-      $('pista').textContent = !xr.hasHit
-        ? 'Mueve el móvil despacio apuntando al suelo o a una mesa…'
-        : `Toca la pantalla para poner un átomo de ${element.name.toLowerCase()} en el anillo.`;
+      $('pista').textContent = !xr.hasHit ? t('explorar.pista_suelo') : t('explorar.pista_toca', { elemento: elementName(element.symbol).toLowerCase() });
     },
   };
 })();
@@ -192,7 +208,10 @@ const cards = new CardsMode({
   viewer,
   model: () => model,
   pickElement: (handler) => pickElement((el) => handler(el.symbol)),
-  onReaction: (outcome, products) => void hub.record(outcome, products),
+  onReaction: (outcome, products) => {
+    vibrate(outcome.deltaH < 0 ? [30, 40, 80] : [60, 60, 60]);
+    void hub.record(outcome, products);
+  },
   isUnlocked: (symbol) => hub.isUnlocked(symbol),
   challenge: () => {
     const label = hub.challengeLabel();
@@ -221,6 +240,7 @@ ar.on('end', () => {
   document.body.classList.remove('ar-activo');
   $('inicio').hidden = false;
   for (const id of ['tabla', 'recetas']) $(id).hidden = true;
+  hub.renderAll();
 });
 
 async function enter(next: typeof mode, provider: ARProvider): Promise<void> {
@@ -230,8 +250,7 @@ async function enter(next: typeof mode, provider: ARProvider): Promise<void> {
     await ar.start(provider);
   } catch (error) {
     const e = error as Error;
-    $('aviso').textContent =
-      e.name === 'NotAllowedError' ? 'Sin permiso para la cámara: actívalo en los ajustes del navegador.' : `No se pudo abrir: ${e.message}`;
+    $('aviso').textContent = e.name === 'NotAllowedError' ? t('aviso.permiso') : t('aviso.error', { error: e.message });
   }
 }
 
@@ -261,19 +280,15 @@ if (vista === 'mesa') enterCards('mesa', params.get('cartas')?.split(',').filter
 // ?avanzar=3.5: adelanta la animación (capturas automáticas, demos).
 const advance = Number(params.get('avanzar'));
 if (advance > 0) ar.on('start', () => setTimeout(() => ar.advance(advance), 50));
+// La introducción sale la primera vez (no en los enlaces directos a un modo).
+if (!vista && !params.has('sin-intro')) intro.openIfFirstTime();
 
 const support = await detectARSupport();
 setupInstall($('instalar'), $('instalar-ios'), support.ios);
 const enterAR = $<HTMLButtonElement>('entrar-ra');
-if (support.webxrAR) {
-  enterAR.disabled = false;
-  $('entrar-ra-texto').textContent = 'Deja átomos sobre el suelo o una mesa (Android con Chrome).';
-} else {
-  $('entrar-ra-texto').textContent = support.ios
-    ? 'Necesita WebXR, que Safari de iPhone aún no tiene. Las tarjetas sí funcionan.'
-    : 'Este navegador no tiene WebXR. Las tarjetas y la mesa virtual sí funcionan.';
-}
+enterAR.disabled = !support.webxrAR;
+$('entrar-ra-texto').textContent = support.webxrAR ? t('modo.ra.texto') : support.ios ? t('modo.ra.ios') : t('modo.ra.no');
 if (!support.camera) {
   $<HTMLButtonElement>('entrar-tarjetas').disabled = true;
-  $('aviso').textContent = !support.secureContext ? 'Hace falta HTTPS: abre https://webar.peer4u.app.' : 'Este navegador no da acceso a la cámara.';
+  $('aviso').textContent = !support.secureContext ? t('aviso.https') : t('aviso.camara');
 }

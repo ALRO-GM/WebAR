@@ -74,10 +74,16 @@ docker run --rm -p 8080:8080 webar:dev
 
 ## Textos e idiomas
 
-Todos los textos nuevos van en `apps/web/src/i18n/es.json`: clave → `texto` y
-`descripcion` (para quien traduzca). En el código, `t('clave', { variable })`;
-en el HTML, `data-t="clave"` (o `data-t-attr="aria-label:clave"`). Otro idioma
-es otro fichero con las mismas claves.
+Ningún texto va escrito en el código: todos están en
+`apps/web/src/i18n/es.json` (clave → `texto` y `descripcion`, para quien
+traduzca). En el código, `t('clave', { variable })`; en el HTML,
+`data-t="clave"` (o `data-t-attr="aria-label:clave"`). Los nombres de
+`@webar/chem` se muestran con `src/i18n/content.ts`. Hay inglés (`en.json`);
+cómo añadir otro idioma, en [ux.md](ux.md).
+
+Para probar la interfaz sin móvil va bien controlar Chrome por el protocolo de
+depuración (CDP), con el `WebSocket` que ya trae Node 22: navegar, evaluar
+JavaScript, pulsar botones y hacer capturas.
 
 ## El contrato de la imagen
 

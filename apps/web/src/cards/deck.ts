@@ -41,21 +41,15 @@ export const DECK: readonly CardSpec[] = (() => {
 const BY_ID = new Map(DECK.map((c) => [c.id, c]));
 export const cardById = (id: number) => BY_ID.get(id);
 
-/** Juegos de tarjetas para imprimir. */
-export const KITS: Record<string, { name: string; description: string; symbols: string[] }> = {
+/** Juegos de tarjetas para imprimir (nombre y descripción en la tabla de textos: kit.<id>.*). */
+export const KITS: Record<string, { symbols: string[] }> = {
   basico: {
-    name: 'Kit de clase (34 tarjetas)',
-    description: 'Con estas tarjetas salen todas las reacciones de la app: combustiones, síntesis del agua y del amoniaco, sales, óxidos, termita…',
     symbols: 'H H H H O O O O C C N N Na Na Cl Cl Mg Mg S S Ca Ca Fe Fe Al Al Cu Cu K K F F Zn Si'.split(' '),
   },
   minimo: {
-    name: 'Kit mínimo (9 tarjetas)',
-    description: 'Para empezar: agua, oxígeno, dióxido de carbono, metano y amoniaco.',
     symbols: 'H H H H O O O C N'.split(' '),
   },
   tabla: {
-    name: 'Tabla periódica completa (118 tarjetas)',
-    description: 'Una tarjeta de cada elemento, para explorar los átomos.',
     symbols: ELEMENTS.map((e) => e.symbol),
   },
 };

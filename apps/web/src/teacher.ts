@@ -3,6 +3,7 @@ import './teacher.css';
 import qrcode from 'qrcode-generator';
 import { REACTIONS, SPECIES, getSpecies } from '@webar/chem';
 import { t, translate } from './i18n';
+import { applySettings } from './settings';
 import { COURSES, COURSE_SPECIES } from './platform/progress';
 
 // Panel del profesorado: cuenta, clases, alumnado, estadísticas y retos.
@@ -280,6 +281,7 @@ async function route(): Promise<void> {
   }
 }
 
+applySettings();
 translate();
 window.addEventListener('hashchange', () => void route());
 void route();

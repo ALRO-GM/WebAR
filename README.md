@@ -20,7 +20,10 @@ Para clase: el progreso funciona **sin conexión** (moleculario, tabla periódic
 que se desbloquea, historias, retos, insignias) y, si el alumno se une a una
 clase con un código, se sincroniza con el **panel del profesorado**
 ([/profesor.html](https://webar.peer4u.app/profesor.html)): retos, estadísticas
-y la meta común de la clase. Detalles en [docs/arquitectura.md](docs/arquitectura.md).
+y la meta común de la clase. Accesible (alto contraste, texto grande, menos
+movimiento, alternativas a los gestos) y traducible: todos los textos están en
+una tabla (español e inglés). Detalles en [docs/arquitectura.md](docs/arquitectura.md)
+y [docs/ux.md](docs/ux.md).
 
 ## Cómo funciona
 
@@ -40,6 +43,7 @@ Las reglas para agentes de IA están en [AGENTS.md](AGENTS.md).
 
 | Fecha | Qué cambió |
 | --- | --- |
+| 2026-11-04 | UX y accesibilidad: navegación inferior, introducción animada, ajustes (idioma, tamaño de texto, alto contraste, menos movimiento, vibración), tocar para juntar en la mesa; todos los textos en una tabla traducible, con inglés |
 | 2026-11-04 | Plataforma educativa: progreso sin conexión (moleculario, tabla que se desbloquea, historias, retos, insignias, racha semanal), clases con código y QR, panel del profesorado con estadísticas y retos, servidor Node + SQLite y tabla de textos traducible |
 | 2026-11-04 | Tarjetas de átomos con marcadores ArUco: reacciones al juntarlas (50 sustancias, 38 reacciones, ΔH), fuego/hielo, descomponer, mesa virtual e impresión de tarjetas |
 | 2026-11-04 | `@webar/chem`: los 118 elementos (PubChem + radios de Clementi), átomos con núcleo, modelo de Bohr y orbitales; tabla periódica, ficha y visor 3D sin cámara |

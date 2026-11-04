@@ -1,12 +1,14 @@
 import * as THREE from 'three';
 import { MarkerTrackingProvider, type ARSession, type ViewerProvider } from '@webar/ar-core';
 import { REACTIONS, SPECIES, composition, contentFormula, formatEquation, reactionEnthalpy, type AtomModel, type Outcome } from '@webar/chem';
+import { t } from '../i18n';
+import { contentName, num, reactionConditions, reactionName, reactionNote, speciesName } from '../i18n/content';
 import { Effects } from '../effects';
 import { CARD, MARKER_TO_CENTER, cardById, type CardSpec } from './deck';
 import { CardGame, HOLD_SECONDS } from './game';
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
-const kj = (n: number) => `${n > 0 ? '+' : ''}${n.toLocaleString('es', { maximumFractionDigits: 1 })} kJ/mol`;
+const kj = (n: number) => `${n > 0 ? '+' : n < 0 ? '−' : ''}${num(Math.abs(n))} kJ/mol`;
 
 export type CardsKind = 'camara' | 'mesa';
 
@@ -48,6 +50,8 @@ export class CardsMode {
   private holdTime = 0;
   private bannerTimer = 0;
   private initialCards: string[] = DEFAULT_TABLE;
+  /** Mesa: tarjeta tocada para juntarle otra con un segundo toque (alternativa a arrastrar). */
+  private selected: number | null = null;
   private together = false;
 
   constructor(private readonly deps: CardsModeDeps) {
@@ -62,12 +66,7 @@ export class CardsMode {
       deps.onReaction?.(outcome, products);
     });
     this.game.on('decompose', ({ from, to }) =>
-      this.showBanner(
-        'Descomposición',
-        `${contentFormula(from)} → ${to} + …`,
-        'Se rompen sus enlaces y la tarjeta vuelve a ser un átomo libre, lista para otra reacción.',
-        'energia',
-      ),
+      this.showBanner(t('juego.descomposicion'), `${contentFormula(from)} → ${to} + …`, t('juego.descomposicion_texto', { nombre: contentName(from) }), 'energia'),
     );
     this.game.on('charging', (c) => this.showCharging(c));
     this.setupHud();
@@ -95,6 +94,7 @@ export class CardsMode {
 
   onEnd(): void {
     this.active = false;
+    this.selected = null;
     this.game.clear();
     this.effects.clear();
     this.teardownTable();
@@ -122,12 +122,15 @@ export class CardsMode {
 
     const visible = this.game.visibleCount;
     $('t-estado').hidden = this.kind === 'mesa' ? visible > 0 : visible > 1;
-    $('t-estado').textContent =
-      visible === 0
+    const selected = this.game.visuals().find((v) => v.spec.id === this.selected);
+    if (selected) $('t-estado').hidden = false;
+    $('t-estado').textContent = selected
+      ? t('juego.seleccionada', { nombre: contentName(selected.content) })
+      : visible === 0
         ? this.kind === 'camara'
-          ? 'Apunta la cámara a las tarjetas impresas…'
-          : 'Añade tarjetas a la mesa.'
-        : 'Junta dos o más tarjetas que reaccionen y mantenlas juntas 3 segundos.';
+          ? t('juego.apunta')
+          : t('juego.anade')
+        : t('juego.junta');
 
     if (this.bannerTimer > 0 && (this.bannerTimer -= dt) <= 0) $('t-banner').hidden = true;
     const challenge = this.deps.challenge?.();
@@ -173,18 +176,14 @@ export class CardsMode {
   }
 
   private showReaction(outcome: Outcome): void {
-    const exo = outcome.deltaH < 0;
-    const kind = Math.abs(outcome.deltaH) < 5 ? '' : exo ? 'exo' : 'endo';
-    const heat =
-      kind === 'exo'
-        ? `🔥 Exotérmica: desprende ${Math.abs(outcome.deltaH).toLocaleString('es', { maximumFractionDigits: 1 })} kJ por mol`
-        : kind === 'endo'
-          ? `❄️ Endotérmica: absorbe ${outcome.deltaH.toLocaleString('es', { maximumFractionDigits: 1 })} kJ por mol`
-          : 'Casi sin intercambio de calor';
+    const kind = Math.abs(outcome.deltaH) < 5 ? '' : outcome.deltaH < 0 ? 'exo' : 'endo';
+    const amount = num(Math.abs(outcome.deltaH));
+    const heat = kind === 'exo' ? t('juego.exo', { kj: amount }) : kind === 'endo' ? t('juego.endo', { kj: amount }) : t('juego.neutro');
+    const conditions = reactionConditions(outcome.reaction);
     this.showBanner(
-      outcome.reaction.name,
+      reactionName(outcome.reaction),
       outcome.equation,
-      `${heat} (ΔH = ${kj(outcome.deltaH)}${outcome.reaction.conditions ? `, ${outcome.reaction.conditions}` : ''}). ${outcome.reaction.note}`,
+      `${heat} (ΔH = ${kj(outcome.deltaH)}${conditions ? `, ${conditions}` : ''}). ${reactionNote(outcome.reaction)}`,
       kind,
     );
   }
@@ -204,15 +203,15 @@ export class CardsMode {
     if (list.childElementCount) return;
     const reactions = REACTIONS.map((r) => {
       const dh = reactionEnthalpy(r);
-      return `<li><span class="ecuacion">${formatEquation(r)}</span><span class="dh ${dh < 0 ? 'exo' : 'endo'}">${kj(dh)}</span><small>${r.name}</small></li>`;
+      return `<li><span class="ecuacion">${formatEquation(r)}</span><span class="dh ${dh < 0 ? 'exo' : 'endo'}">${dh < 0 ? '🔥' : '❄️'} ${kj(dh)}</span><small>${reactionName(r)}</small></li>`;
     }).join('');
     const species = SPECIES.map((s) => {
       const atoms = Object.entries(composition(s))
         .map(([el, n]) => (n > 1 ? `${n} ${el}` : el))
         .join(' + ');
-      return `<li><span class="ecuacion">${atoms} → ${s.formula}</span><small>${s.name}</small></li>`;
+      return `<li><span class="ecuacion">${atoms} → ${s.formula}</span><small>${speciesName(s.id)}</small></li>`;
     }).join('');
-    list.innerHTML = `<h3>Reacciones</h3><ul>${reactions}</ul><h3>Moléculas juntando átomos</h3><p class="pequeno">También valen pasos intermedios: H + H → H₂ y luego H₂ + O → H₂O.</p><ul>${species}</ul>`;
+    list.innerHTML = `<h3>${t('recetas.reacciones')}</h3><ul>${reactions}</ul><h3>${t('recetas.moleculas')}</h3><p class="pequeno">${t('recetas.pasos')}</p><ul>${species}</ul>`;
   }
 
   // --- Mesa virtual -----------------------------------------------------------
@@ -286,7 +285,10 @@ export class CardsMode {
   private readonly onPointerDown = (e: PointerEvent) => {
     const faces = this.game.visuals().map((v) => v.face);
     const hit = this.ray(e).intersectObjects(faces, false)[0];
-    if (!hit) return;
+    if (!hit) {
+      this.select(null);
+      return;
+    }
     this.deps.viewer.setControlsEnabled(false);
     this.drag = { card: hit.object, anchorId: hit.object.userData.cardId, moved: false, start: { x: e.clientX, y: e.clientY } };
     (e.target as Element).setPointerCapture?.(e.pointerId);
@@ -302,9 +304,36 @@ export class CardsMode {
 
   private readonly onPointerUp = () => {
     if (!this.drag) return;
-    // Un toque sin arrastrar elige esa tarjeta como objetivo de «Descomponer».
-    if (!this.drag.moved) this.game.preferred = this.drag.anchorId;
+    const id = this.drag.anchorId;
+    if (!this.drag.moved) {
+      // Un toque: la elige como objetivo de «Descomponer» y, si ya había otra
+      // elegida, la pone a su lado (juntar sin arrastrar).
+      this.game.preferred = id;
+      if (this.selected !== null && this.selected !== id) this.joinNextTo(id, this.selected);
+      else this.select(this.selected === id ? null : id);
+    } else this.select(null);
     this.drag = undefined;
     this.deps.viewer.setControlsEnabled(true);
   };
+
+  private select(id: number | null): void {
+    this.selected = id;
+    for (const v of this.game.visuals()) v.selected = v.spec.id === id;
+  }
+
+  /** Mueve la tarjeta `moving` justo a la derecha de `target`. */
+  private joinNextTo(moving: number, target: number): void {
+    const visuals = this.game.visuals();
+    const a = visuals.find((v) => v.spec.id === target);
+    const b = visuals.find((v) => v.spec.id === moving);
+    if (a && b) {
+      const p = a.cardPosition();
+      // Si a la derecha ya hay otra, debajo.
+      const right = new THREE.Vector3(p.x + CARD.width + 0.004, 0, p.z);
+      const busy = visuals.some((v) => v !== b && v.cardPosition().distanceTo(right) < CARD.width * 0.6);
+      const to = busy ? new THREE.Vector3(p.x, 0, p.z + CARD.height + 0.004) : right;
+      b.anchor.setPose(new THREE.Matrix4().makeTranslation(to.x, 0, to.z));
+    }
+    this.select(null);
+  }
 }

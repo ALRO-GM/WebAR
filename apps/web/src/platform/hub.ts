@@ -1,5 +1,6 @@
 import { SPECIES, composition, getElement, getSpecies, type ElementData, type Outcome } from '@webar/chem';
 import { has, t, translate } from '../i18n';
+import { elementName, num, speciesName, speciesUse } from '../i18n/content';
 import { renderPeriodicTable, updateLocks } from '../periodic-table';
 import { BADGES, COURSES, COURSE_SPECIES, computeProgress, courseOf, progressDiff, type Progress } from './progress';
 import { addEvent, allEvents, isPersisted, persistStorage } from './store';
@@ -84,7 +85,7 @@ export class Hub {
   // --- Pestañas ------------------------------------------------------------------
 
   private setupTabs(): void {
-    const tabs = [...document.querySelectorAll<HTMLButtonElement>('.pestanas [role=tab]')];
+    const tabs = [...document.querySelectorAll<HTMLButtonElement>('.nav-inferior [role=tab]')];
     tabs.forEach((tab, i) => {
       tab.addEventListener('click', () => this.selectTab(tab.id.slice(4)));
       // Flechas para moverse entre pestañas (patrón ARIA de pestañas).
@@ -98,14 +99,15 @@ export class Hub {
     });
   }
 
+  /** Muestra una sección (las de la barra de abajo, o «logros», que se abre desde el perfil). */
   selectTab(name: string): void {
-    document.querySelectorAll<HTMLButtonElement>('.pestanas [role=tab]').forEach((tab) => {
+    document.querySelectorAll<HTMLElement>('#inicio > [role=tabpanel]').forEach((panel) => (panel.hidden = panel.id !== `p-${name}`));
+    document.querySelectorAll<HTMLButtonElement>('.nav-inferior [role=tab]').forEach((tab) => {
       const on = tab.id === `tab-${name}`;
       tab.setAttribute('aria-selected', String(on));
-      tab.tabIndex = on ? 0 : -1;
-      $(tab.getAttribute('aria-controls')!).hidden = !on;
-      if (on) tab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      tab.tabIndex = on || (name === 'logros' && tab.id === 'tab-jugar') ? 0 : -1;
     });
+    $('inicio').scrollTop = 0;
   }
 
   // --- Pintar ----------------------------------------------------------------------
@@ -149,8 +151,8 @@ export class Hub {
           .map((id) => {
             const s = getSpecies(id)!;
             const got = p.species.has(id);
-            return `<button type="button" class="ficha-mini ${got ? '' : 'bloqueada'}" data-especie="${id}" aria-label="${got ? esc(s.name) : t('moleculario.bloqueada')}">
-              <b>${got ? s.formula : t('moleculario.bloqueada')}</b><small>${got ? esc(s.name) : t('moleculario.pista_atomos', { n: s.atoms.length })}</small></button>`;
+            return `<button type="button" class="ficha-mini ${got ? '' : 'bloqueada'}" data-especie="${id}" aria-label="${got ? esc(speciesName(id)) : `${t('moleculario.bloqueada_lector')} ${t('moleculario.pista_atomos', { n: s.atoms.length })}`}">
+              <b>${got ? s.formula : t('moleculario.bloqueada')}</b><small>${got ? esc(speciesName(id)) : t('moleculario.pista_atomos', { n: s.atoms.length })}</small></button>`;
           })
           .join('')}</div>`,
     ).join('');
@@ -249,7 +251,7 @@ export class Hub {
   private renderBadges(): void {
     $('logros').innerHTML = `<div class="rejilla">${BADGES.map((b) => {
       const got = this.progress.badges.has(b.id);
-      return `<div class="insignia ${got ? '' : 'bloqueada'}" role="img" aria-label="${esc(t(`insignia.${b.id}.nombre`))}${got ? '' : ' (pendiente)'}">
+      return `<div class="insignia ${got ? '' : 'bloqueada'}" role="img" aria-label="${esc(t(`insignia.${b.id}.nombre`))}${got ? '' : ` (${t('logros.pendiente')})`}: ${esc(t(`insignia.${b.id}.descripcion`))}">
         <span aria-hidden="true">${got ? '🏅' : '🔒'}</span><b>${t(`insignia.${b.id}.nombre`)}</b><small>${t(`insignia.${b.id}.descripcion`)}</small></div>`;
     }).join('')}</div>`;
   }
@@ -270,13 +272,13 @@ export class Hub {
     const hint = Object.keys(composition(s))[0];
     this.openDetail(
       got
-        ? `<h2 id="detalle-titulo">${s.formula} <small>${esc(s.name)}</small></h2>
-           <p class="pequeno">${course ? t('moleculario.curso', { curso: t(`curso.${course}`) }) : ''} · ΔHf° = ${s.deltaHf.toLocaleString(document.documentElement.lang)} kJ/mol</p>
+        ? `<h2 id="detalle-titulo">${s.formula} <small>${esc(speciesName(id))}</small></h2>
+           <p class="pequeno">${course ? t('moleculario.curso', { curso: t(`curso.${course}`) }) : ''} · ΔHf° = ${num(s.deltaHf, 2)} kJ/mol</p>
            <h3>${t('moleculario.como')}</h3><p>${atoms} → ${s.formula}</p>
            <h3>${t('moleculario.historia')}</h3><p>${t(`especie.${id}.historia`)}</p>
-           <h3>${t('moleculario.hoy')}</h3><p>${esc(s.note)}</p>`
+           <h3>${t('moleculario.hoy')}</h3><p>${esc(speciesUse(id))}</p>`
         : `<h2 id="detalle-titulo">${t('moleculario.bloqueada')}</h2>
-           <p>${t('moleculario.pista_atomos', { n: s.atoms.length })} · ${t('moleculario.pista_elemento', { elemento: getElement(hint).name })}</p>
+           <p>${t('moleculario.pista_atomos', { n: s.atoms.length })} · ${t('moleculario.pista_elemento', { elemento: elementName(getElement(hint).symbol) })}</p>
            <p class="pequeno">${course ? t('moleculario.curso', { curso: t(`curso.${course}`) }) : ''}</p>`,
     );
   }
@@ -286,7 +288,7 @@ export class Hub {
       this.openDetail(`<h2 id="detalle-titulo">🔒 ${el.z}</h2><p>${t('tabla.bloqueado')}</p>`);
       return;
     }
-    this.openDetail(`<h2 id="detalle-titulo">${el.symbol} <small>${esc(el.name)} · Z = ${el.z}</small></h2>
+    this.openDetail(`<h2 id="detalle-titulo">${el.symbol} <small>${esc(elementName(el.symbol))} · Z = ${el.z}</small></h2>
       <p>${el.z} p⁺ · ${el.massNumber - el.z} n⁰ · ${el.z} e⁻</p>
       <h3>${t('moleculario.historia')}</h3><p>${elementStory(el)}</p>`);
   }
@@ -302,23 +304,41 @@ export class Hub {
     const diff = progressDiff(before, after);
     for (const id of diff.species) {
       const s = getSpecies(id)!;
-      this.toast('✨', `${t('celebrar.molecula')} ${s.formula}`, s.name, () => this.showSpecies(id));
+      this.toast('✨', `${t('celebrar.molecula')} ${s.formula}`, speciesName(id), () => this.showSpecies(id));
     }
     if (diff.elements.length) this.toast('🔓', t('celebrar.elementos', { lista: diff.elements.join(', ') }), '', () => this.selectTab('tabla'));
     for (const b of diff.badges) this.toast('🏅', t('celebrar.insignia', { nombre: t(`insignia.${b}.nombre`) }), t(`insignia.${b}.descripcion`));
     if (diff.levelUp) this.toast('⭐', t('celebrar.nivel', { nivel: after.level + 1, nombre: t(`nivel.${after.level}`) }), '');
   }
 
-  /** Aviso breve encima de todo (también dentro del juego). */
+  /**
+   * Aviso breve encima de todo (también dentro del juego). Van en cola, dos
+   * como mucho a la vez, para no tapar las tarjetas justo cuando reaccionan.
+   */
   toast(icon: string, title: string, text: string, onClick?: () => void): void {
-    const box = $('avisos');
-    const el = document.createElement(onClick ? 'button' : 'div');
-    el.className = 'aviso-logro';
-    el.innerHTML = `<span aria-hidden="true">${icon}</span><div><b>${esc(title)}</b>${text ? `<small>${esc(text)}</small>` : ''}</div>`;
-    if (onClick) el.addEventListener('click', () => (el.remove(), onClick()));
-    box.append(el);
-    setTimeout(() => el.classList.add('saliendo'), 4500);
-    setTimeout(() => el.remove(), 5000);
+    this.toasts.push({ icon, title, text, onClick });
+    this.pumpToasts();
+  }
+
+  private readonly toasts: Array<{ icon: string; title: string; text: string; onClick?: () => void }> = [];
+  private showing = 0;
+
+  private pumpToasts(): void {
+    while (this.showing < 2 && this.toasts.length) {
+      const { icon, title, text, onClick } = this.toasts.shift()!;
+      const el = document.createElement(onClick ? 'button' : 'div');
+      el.className = 'aviso-logro';
+      el.innerHTML = `<span aria-hidden="true">${icon}</span><div><b>${esc(title)}</b>${text ? `<small>${esc(text)}</small>` : ''}</div>`;
+      if (onClick) el.addEventListener('click', () => (el.remove(), onClick()));
+      $('avisos').append(el);
+      this.showing++;
+      setTimeout(() => el.classList.add('saliendo'), 3000);
+      setTimeout(() => {
+        el.remove();
+        this.showing--;
+        this.pumpToasts();
+      }, 3400);
+    }
   }
 }
 

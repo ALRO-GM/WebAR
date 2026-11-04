@@ -1,5 +1,7 @@
 import * as THREE from 'three';
-import { FAMILY_NAMES, atomComposition, contentFormula, getElement, getSpecies, isMolecule, formatConfiguration, type Content } from '@webar/chem';
+import { atomComposition, contentFormula, getElement, getSpecies, isMolecule, formatConfiguration, type Content } from '@webar/chem';
+import { t } from '../i18n';
+import { elementName, familyName, num, speciesName, speciesUse } from '../i18n/content';
 import { CARD } from './deck';
 
 const W = 512;
@@ -26,7 +28,7 @@ export function cardFaceTexture(content: Content, printed: string, cardId: numbe
   g.fillStyle = 'rgba(255,255,255,0.45)';
   g.font = '500 22px system-ui, sans-serif';
   g.textAlign = 'center';
-  g.fillText(`Tarjeta ${printed} · nº ${cardId}`, W / 2, H - 22);
+  g.fillText(t('cara.tarjeta', { simbolo: printed, n: cardId }), W / 2, H - 22);
   g.restore();
   const texture = new THREE.CanvasTexture(canvas);
   texture.colorSpace = THREE.SRGBColorSpace;
@@ -46,7 +48,7 @@ function drawElement(g: CanvasRenderingContext2D, symbol: string): void {
   g.fillText(String(e.z), 30, 62);
   g.textAlign = 'right';
   g.font = '600 30px system-ui, sans-serif';
-  g.fillText(`${e.atomicMass.toFixed(e.atomicMass < 100 ? 2 : 1)} u`, W - 30, 60);
+  g.fillText(`${num(e.atomicMass, e.atomicMass < 100 ? 2 : 1)} u`, W - 30, 60);
 
   g.textAlign = 'center';
   g.fillStyle = color;
@@ -54,15 +56,15 @@ function drawElement(g: CanvasRenderingContext2D, symbol: string): void {
   g.fillText(e.symbol, W / 2, 330);
   g.fillStyle = '#ffffff';
   g.font = '700 54px system-ui, sans-serif';
-  fitText(g, e.name, W / 2, 410, W - 60);
+  fitText(g, elementName(e.symbol), W / 2, 410, W - 60);
   g.fillStyle = 'rgba(255,255,255,0.7)';
   g.font = '500 28px system-ui, sans-serif';
-  g.fillText(FAMILY_NAMES[e.family], W / 2, 452);
+  g.fillText(familyName(e.family), W / 2, 452);
 
   const rows: Array<[string, string, string]> = [
-    ['#ff4d5a', `${c.protons}`, 'protones'],
-    ['#c3cad6', `${c.neutrons}`, 'neutrones'],
-    ['#6fd8ff', `${c.electrons}`, 'electrones'],
+    ['#ff4d5a', `${c.protons}`, t('cara.protones')],
+    ['#c3cad6', `${c.neutrons}`, t('cara.neutrones')],
+    ['#6fd8ff', `${c.electrons}`, t('cara.electrones')],
   ];
   rows.forEach(([col, n, label], i) => {
     const x = 90 + i * 166;
@@ -75,7 +77,7 @@ function drawElement(g: CanvasRenderingContext2D, symbol: string): void {
   });
   g.fillStyle = 'rgba(255,255,255,0.85)';
   g.font = '500 26px system-ui, sans-serif';
-  fitText(g, `Capas ${c.shells.join('·')}  ·  ${formatConfiguration(e)}`, W / 2, 630, W - 50);
+  fitText(g, `${t('explorar.capas', { capas: c.shells.join('·') })}  ·  ${formatConfiguration(e)}`, W / 2, 630, W - 50);
 }
 
 function drawMolecule(g: CanvasRenderingContext2D, id: string, printed: string): void {
@@ -88,22 +90,22 @@ function drawMolecule(g: CanvasRenderingContext2D, id: string, printed: string):
   g.fillStyle = '#0b1020';
   g.font = '700 30px system-ui, sans-serif';
   g.textAlign = 'center';
-  g.fillText(s.ionic ? 'COMPUESTO IÓNICO' : 'MOLÉCULA', W / 2, 60);
+  g.fillText((s.ionic ? t('cara.ionico') : t('cara.molecula')).toUpperCase(), W / 2, 60);
 
   g.fillStyle = '#ffffff';
   g.font = '800 150px system-ui, sans-serif';
   fitText(g, contentFormula(id), W / 2, 280, W - 50);
   g.font = '700 46px system-ui, sans-serif';
-  fitText(g, s.name, W / 2, 360, W - 50);
+  fitText(g, speciesName(id), W / 2, 360, W - 50);
   g.fillStyle = 'rgba(255,255,255,0.75)';
   g.font = '500 28px system-ui, sans-serif';
-  wrap(g, s.note, W / 2, 420, W - 70, 36, 4);
+  wrap(g, speciesUse(id), W / 2, 420, W - 70, 36, 4);
   g.fillStyle = s.deltaHf < 0 ? '#ff9f43' : s.deltaHf > 0 ? '#7fd3ff' : 'rgba(255,255,255,0.7)';
   g.font = '600 28px system-ui, sans-serif';
-  g.fillText(`ΔHf° = ${s.deltaHf.toLocaleString('es')} kJ/mol`, W / 2, 605);
+  g.fillText(`ΔHf° = ${num(s.deltaHf, 2)} kJ/mol`, W / 2, 605);
   g.fillStyle = 'rgba(255,255,255,0.55)';
   g.font = '500 22px system-ui, sans-serif';
-  g.fillText(`Mantén «Descomponer» para volver a ${printed}`, W / 2, 650);
+  g.fillText(t('cara.descomponer', { simbolo: printed }), W / 2, 650);
 }
 
 function fitText(g: CanvasRenderingContext2D, text: string, x: number, y: number, max: number): void {
