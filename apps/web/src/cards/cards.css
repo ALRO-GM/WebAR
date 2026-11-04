@@ -8,26 +8,3 @@
 .t-escala .btn.redondo { font-size: 1.5rem; font-weight: 900; line-height: 1; }
 .t-escala output { font-weight: 900; font-size: 0.95rem; color: var(--fg-strong); min-width: 3.2ch; text-align: center; font-variant-numeric: tabular-nums; }
 
-/*
- * Bandeja de la mesa virtual: los elementos disponibles en filas que se
- * reparten a lo ancho (en móvil caben todos a la vista; si hay muchos, se
- * desliza en vertical). Ocupa el ancho de la pantalla: la barra centra a sus
- * hijos y, si no, lo que no cabía quedaba cortado por los lados.
- */
-.t-bandeja {
-  align-self: stretch; margin: 0 max(10px, env(safe-area-inset-left)); pointer-events: auto;
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; padding: 8px;
-  max-height: 128px; overflow-y: auto; overscroll-behavior: contain;
-  border-radius: 16px; background: color-mix(in srgb, var(--surface) 82%, transparent); border: 2px solid var(--line);
-}
-.ficha-bandeja {
-  flex: 0 0 auto; min-width: 46px; height: 46px; padding: 0 10px; border-radius: 12px;
-  font-family: inherit; font-weight: 900; font-size: 1.15rem; line-height: 1; color: #23232b; cursor: pointer;
-  background: linear-gradient(160deg, color-mix(in srgb, var(--c) 70%, #fff), var(--c));
-  border: 2px solid color-mix(in srgb, var(--c) 70%, #000); box-shadow: 0 3px 0 color-mix(in srgb, var(--c) 60%, #000);
-  transition: transform 0.08s, box-shadow 0.08s;
-}
-.ficha-bandeja:active { transform: translateY(3px); box-shadow: none; }
-.ficha-bandeja.pedida { outline: 3px solid #fff; outline-offset: 2px; }
-.ficha-bandeja.mas { --c: #ffffff; font-size: 0.9rem; font-weight: 800; }
-.ficha-bandeja.mas::before { content: '🧪 '; }

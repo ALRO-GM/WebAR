@@ -2,14 +2,13 @@ import { calm } from '../settings';
 import { createEveryday, hasEveryday, type EverydayObject } from '../objects';
 import * as THREE from 'three';
 import { MarkerTrackingProvider, type ARSession, type ViewerProvider } from '@webar/ar-core';
-import { ELEMENTS, REACTIONS, SPECIES, composition, getElement, contentFormula, formatEquation, reactionEnthalpy, type AtomModel, type Outcome } from '@webar/chem';
+import { REACTIONS, SPECIES, composition, contentFormula, formatEquation, reactionEnthalpy, type AtomModel, type Outcome } from '@webar/chem';
 import { t } from '../i18n';
-import { contentName, elementName, num, reactionConditions, reactionName, reactionNote, speciesName } from '../i18n/content';
+import { contentName, num, reactionConditions, reactionName, reactionNote, speciesName } from '../i18n/content';
 import { Effects } from '../effects';
 import './cards.css';
 import { MAX_CONTENT_SCALE, MIN_CONTENT_SCALE } from './card-visual';
 import { CARD, DECK, MARKER_TO_CENTER, cardById, type CardSpec } from './deck';
-import { FAMILY_COLORS } from './card-svg';
 import { CardGame, HOLD_SECONDS, JOIN_DISTANCE } from './game';
 import { TableScene } from './table-scene';
 
@@ -34,11 +33,9 @@ export interface CardsModeDeps {
 
 /**
  * La mesa virtual empieza vacía: si se reparten muchas tarjetas, quedan tan
- * cerca que reaccionan solas. Se van poniendo desde la bandeja de elementos.
+ * cerca que reaccionan solas. Se van poniendo con «Añadir elemento» (tabla periódica).
  */
 const DEFAULT_TABLE: string[] = [];
-/** La bandeja: los elementos que más se combinan primero (solo los desbloqueados). */
-const TRAY = 'H O C N Na Cl K Mg Ca S F P Fe Cu Zn Al Si Li B Br I He Ne Ag Au'.split(' ');
 /** Separación entre tarjetas sueltas: más que la distancia a la que se juntan. */
 const LOOSE_GAP = JOIN_DISTANCE + 0.015;
 const SCALE_KEY = 'webar:escala-tarjetas';
@@ -139,11 +136,8 @@ export class CardsMode {
   onStart(): void {
     this.active = true;
     $('hud-tarjetas').hidden = false;
-    // En la mesa, la bandeja de elementos sustituye al botón «Añadir».
-    $('t-anadir').hidden = true;
+    $('t-anadir').hidden = this.kind !== 'mesa';
     $('t-reiniciar').hidden = this.kind !== 'mesa';
-    this.tray.hidden = this.kind !== 'mesa';
-    if (this.kind === 'mesa') this.renderTray();
     this.game.setModel(this.deps.model());
     if (this.kind === 'mesa') this.setupTable();
     else this.setupPinch();
@@ -262,40 +256,8 @@ export class CardsMode {
     group.append(step(1, '+', t('tarjetas.escala_mas')), this.scaleOutput, step(-1, '−', t('tarjetas.escala_menos')));
     $('hud-tarjetas').append(group);
 
-    // Bandeja de la mesa virtual: un toque pone la tarjeta en un hueco libre.
-    this.tray.className = 't-bandeja';
-    this.tray.setAttribute('role', 'toolbar');
-    this.tray.setAttribute('aria-label', t('mesa.bandeja'));
-    this.tray.hidden = true;
-    this.tray.addEventListener('click', (e) => {
-      const button = (e.target as Element).closest<HTMLButtonElement>('button');
-      if (!button) return;
-      if (button.dataset.simbolo) this.addVirtualCard(button.dataset.simbolo);
-      else this.deps.pickElement((symbol) => this.addVirtualCard(symbol));
-    });
-    document.querySelector('#hud-tarjetas .barra')!.prepend(this.tray);
   }
 
-  private readonly tray = document.createElement('div');
-
-  /**
-   * Los elementos de la bandeja: todos los disponibles (desbloqueados), los
-   * del reto en juego primero y marcados, luego los que más se combinan y el
-   * resto por número atómico. Los bloqueados están en la tabla periódica.
-   */
-  private renderTray(): void {
-    const unlocked = this.deps.isUnlocked ?? (() => true);
-    const needed = [...new Set(this.deps.challenge?.()?.atoms ?? [])];
-    const common = TRAY.filter((s) => unlocked(s) && !needed.includes(s));
-    const others = ELEMENTS.map((e) => e.symbol).filter((s) => unlocked(s) && !needed.includes(s) && !common.includes(s));
-    this.tray.innerHTML =
-      [...needed, ...common, ...others]
-        .map((s) => {
-          const color = FAMILY_COLORS[getElement(s).family];
-          return `<button type="button" class="ficha-bandeja${needed.includes(s) ? ' pedida' : ''}" data-simbolo="${s}" style="--c:${color}" aria-label="${t('mesa.poner', { nombre: elementName(s) })}">${s}</button>`;
-        })
-        .join('') + `<button type="button" class="ficha-bandeja mas">${t('mesa.mas')}</button>`;
-  }
 
   private stopHold(): void {
     this.holding = false;
@@ -394,7 +356,7 @@ export class CardsMode {
 
   /** Las tarjetas de la mesa al empezar: las pedidas (acertijos, laboratorio) o ninguna. */
   private tableCards(): string[] {
-    // La mesa libre empieza vacía (los átomos de un reto salen marcados en la bandeja).
+    // La mesa libre empieza vacía: se añaden con «Añadir elemento».
     return [...this.initialCards];
   }
 

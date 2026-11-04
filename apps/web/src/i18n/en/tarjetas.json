@@ -23,16 +23,7 @@
  "cara.sin_enlaces": {
   "texto": "No bonds"
  },
- "mesa.bandeja": {
-  "texto": "Elements for the table"
- },
- "mesa.poner": {
-  "texto": "Put {nombre} on the table"
- },
- "mesa.mas": {
-  "texto": "Periodic table"
- },
  "mesa.vacia": {
-  "texto": "Tap an element below to put it on the table."
+  "texto": "Tap «Add element» and pick it from the periodic table."
  }
 }

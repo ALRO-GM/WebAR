@@ -1,4 +1,5 @@
 import { ELEMENTS, REACTIONS, SPECIES, composition, reactionEnthalpy } from '@webar/chem';
+import { FEATURES } from '../features';
 import { NODES, START_ELEMENTS, nodeById, type PathNode } from '../learn/path';
 
 /**
@@ -98,7 +99,8 @@ export const BADGES: Badge[] = [
   ...COURSES.map((c) => ({ id: `curso-${c}`, species: COURSE_SPECIES[c] })),
   { id: 'coleccion', test: (p) => p.species.size >= 25 },
   { id: 'todas', test: (p) => p.species.size >= SPECIES.length },
-  { id: 'fotografo', test: (p) => p.photos >= 1 },
+  // Con la foto en pausa (features.ts), su insignia no se puede conseguir: no se enseña.
+  ...(FEATURES.foto ? [{ id: 'fotografo', test: (p: Omit<Progress, 'badges'>) => p.photos >= 1 }] : []),
   { id: 'tabla', test: (p) => p.unlocked.size >= ELEMENTS.length },
   { id: 'retos', test: (p) => p.challenges.size >= 3 },
 ];

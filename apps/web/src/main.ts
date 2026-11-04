@@ -12,6 +12,7 @@ import { PATH } from './learn/path';
 import { renderMateriaScreen } from './materia';
 import './cast/cast.css';
 import { getCastSender, renderCastPanel, type CastDeps } from './cast';
+import { FEATURES } from './features';
 import { PhotoMode } from './photo/photo';
 import { sfx } from './sfx';
 import { RIDDLES, RiddleRun, bestScores, resultHTML, stars, type Riddle, type RiddleResult } from './cards/riddle';
@@ -224,6 +225,8 @@ const explore = (() => {
     },
     onStart() {
       $('hud').hidden = false;
+      $('donde-3d').setAttribute('aria-checked', String(ar.provider !== xr));
+      $('donde-ra').setAttribute('aria-checked', String(ar.provider === xr));
       $('borrar').hidden = ar.provider !== xr;
       $('escala-explorar').hidden = ar.provider !== xr;
       $('pista').hidden = ar.provider !== xr;
@@ -451,7 +454,10 @@ const photo = new PhotoMode({
   contents: () => [...hub.progress.unlocked, ...hub.progress.species],
   onPhoto: () => void hub.add('foto', {}),
 });
+// En pausa (features.ts): el botón no se ve y no se puede entrar.
+$('entrar-foto').hidden = !FEATURES.foto;
 $('entrar-foto').addEventListener('click', () => {
+  if (!FEATURES.foto) return;
   if (!worldAR) return void ctx.launch(photo, photo.camera);
   // Con WebXR: foto con la cámara o personajes en la habitación (RA del mundo).
   $('detalle-contenido').innerHTML = `<h2 id="detalle-titulo">${t('foto.titulo')}</h2><div class="modos">
@@ -498,7 +504,18 @@ hub.onCelebrate = (kind) => {
 $('entrar-tarjetas').addEventListener('click', () => (riddles.clear(), enterCards('camara')));
 $('entrar-mesa').addEventListener('click', () => (riddles.clear(), enterCards('mesa')));
 $('entrar-3d').addEventListener('click', () => void enter('explorar', viewer));
-$('entrar-ra').addEventListener('click', () => void enter('explorar', xr));
+// Explorar átomos: un solo modo; dentro se elige verlos en 3D o colocarlos en
+// la habitación (RA con WebXR), sin volver al laboratorio.
+let noWorldAR = '';
+async function exploreWhere(where: '3d' | 'ra'): Promise<void> {
+  const provider = where === 'ra' ? xr : viewer;
+  if (ar.running && ar.provider === provider) return;
+  if (where === 'ra' && !worldAR) return hub.toast('📱', t('explorar.donde_ra'), noWorldAR);
+  if (ar.running) await ar.end();
+  await enter('explorar', provider);
+}
+$('donde-3d').addEventListener('click', () => void exploreWhere('3d'));
+$('donde-ra').addEventListener('click', () => void exploreWhere('ra'));
 for (const [bohr, cloud] of [['modelo-bohr', 'modelo-nube'], ['t-bohr', 't-nube']]) {
   $(bohr).addEventListener('click', () => selectModel('bohr'));
   $(cloud).addEventListener('click', () => selectModel('cloud'));
@@ -524,12 +541,12 @@ if (!vista && !params.has('sin-intro')) intro.openIfFirstTime();
 
 const support = await detectARSupport();
 setupInstall([$('instalar-top'), $('instalar')], $('instalar-ios'), support.ios, () => hub.toast('📲', t('instalar.boton'), t('instalar.ios')));
-const enterAR = $<HTMLButtonElement>('entrar-ra');
-enterAR.disabled = !support.webxrAR;
 worldAR = support.webxrAR;
+// Sin WebXR, «En tu mesa» explica por qué no se puede (en vez de fallar).
+$('donde-ra').classList.toggle('no-disponible', !support.webxrAR);
 // Materia ofrece «Ver en RA» solo si hay WebXR: se pinta ya sabiéndolo.
 renderMateriaScreen($('p-materia'), ctx);
-$('entrar-ra-texto').textContent = support.webxrAR ? t('modo.ra.texto') : support.ios ? t('modo.ra.ios') : t('modo.ra.no');
+noWorldAR = support.ios ? t('modo.ra.ios') : t('modo.ra.no');
 if (!ar.has3D) $('aviso').textContent = t('aviso.sin_3d');
 else if (!support.camera) {
   $<HTMLButtonElement>('entrar-tarjetas').disabled = true;

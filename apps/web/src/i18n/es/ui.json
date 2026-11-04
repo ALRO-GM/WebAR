@@ -2592,7 +2592,7 @@
   "descripcion": "Debajo de la barra de carga"
  },
  "juego.anadir": {
-  "texto": "+ Tarjeta",
+  "texto": "➕ Añadir elemento",
   "descripcion": "Botón de la mesa virtual"
  },
  "juego.reiniciar": {
@@ -2696,20 +2696,8 @@
   "descripcion": "Modo"
  },
  "modo.explorar.texto": {
-  "texto": "Tus elementos en 3D: modelo de Bohr y orbitales.",
+  "texto": "Tus elementos en 3D, con el modelo de Bohr y los orbitales, o colocados sobre tu mesa con realidad aumentada.",
   "descripcion": "Descripción del modo"
- },
- "modo.ra.titulo": {
-  "texto": "Átomos sobre la mesa",
-  "descripcion": "Modo WebXR"
- },
- "modo.ra.comprobando": {
-  "texto": "Comprobando el móvil…",
-  "descripcion": "Mientras se detecta WebXR"
- },
- "modo.ra.texto": {
-  "texto": "Deja átomos sobre el suelo o una mesa (Android con Chrome).",
-  "descripcion": "Descripción con WebXR"
  },
  "modo.ra.ios": {
   "texto": "Necesita WebXR, que Safari de iPhone aún no tiene. Las tarjetas sí funcionan.",
@@ -2750,5 +2738,17 @@
  "instalar.corto": {
   "texto": "Instalar",
   "descripcion": "Botón corto de instalar en la barra de arriba"
+ },
+ "explorar.donde": {
+  "texto": "Dónde ver los átomos",
+  "descripcion": "Etiqueta accesible del selector 3D / en tu mesa"
+ },
+ "explorar.donde_3d": {
+  "texto": "En 3D",
+  "descripcion": "Opción: ver el átomo en el visor 3D"
+ },
+ "explorar.donde_ra": {
+  "texto": "En tu mesa",
+  "descripcion": "Opción: colocar átomos en la habitación con realidad aumentada (WebXR)"
  }
 }

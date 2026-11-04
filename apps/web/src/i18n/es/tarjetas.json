@@ -31,20 +31,8 @@
   "texto": "Sin enlaces",
   "descripcion": "Pie de la tarjeta de un gas noble"
  },
- "mesa.bandeja": {
-  "texto": "Elementos para la mesa",
-  "descripcion": "Etiqueta accesible de la bandeja de elementos de la mesa virtual"
- },
- "mesa.poner": {
-  "texto": "Poner {nombre} en la mesa",
-  "descripcion": "Etiqueta accesible de un elemento de la bandeja"
- },
- "mesa.mas": {
-  "texto": "Tabla periódica",
-  "descripcion": "Botón de la bandeja: abre la tabla periódica para elegir cualquier elemento desbloqueado"
- },
  "mesa.vacia": {
-  "texto": "Toca un elemento de abajo para ponerlo en la mesa.",
+  "texto": "Pulsa «Añadir elemento» y elígelo en la tabla periódica.",
   "descripcion": "Estado de la mesa virtual vacía"
  }
 }

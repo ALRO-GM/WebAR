@@ -228,15 +228,14 @@ reconocen todas y la cara virtual cae encima de la impresa.
 
 ### La mesa virtual
 
-- **Empieza vacía**, con una **bandeja de elementos** abajo: todos los
-  disponibles (desbloqueados), los que más se combinan primero; ocupa el
-  ancho de la pantalla y se reparte en filas, así en el móvil se ven todos.
-  «Tabla periódica» abre la tabla: un elemento desbloqueado va a la mesa y
-  uno bloqueado explica en qué unidad se aprende. Un toque pone la tarjeta en un **hueco libre**, a más de la
-  distancia de unión de las demás: no reacciona hasta que se junta a mano.
-  Antes se repartían 12 tarjetas a 9,3 cm (menos que los 10 cm a los que se
-  juntan) y reaccionaban solas. Los acertijos y el laboratorio siguen
-  poniendo las suyas, también separadas (o juntas si lo piden).
+- **Empieza vacía.** El botón «➕ Añadir elemento» abre la tabla periódica:
+  un elemento desbloqueado cae en un **hueco libre**, a más de la distancia
+  de unión de las demás (no reacciona hasta que se junta a mano); uno
+  bloqueado explica en qué unidad se aprende. Antes se repartían 12 tarjetas
+  a 9,3 cm (menos que los 10 cm a los que se juntan) y reaccionaban solas; y
+  una bandeja de elementos en fila se cortaba en el móvil. Los acertijos y el
+  laboratorio siguen poniendo sus tarjetas, también separadas (o juntas si
+  lo piden).
 - **Gestos** (con `ViewerProvider.setDragHandler`): un dedo sobre una tarjeta
   la arrastra (se levanta un poco y su sombra se abre); un dedo en vacío gira;
   dos dedos desplazan y el pellizco acerca, se toquen tarjetas o no (si se
@@ -321,8 +320,14 @@ Basada en [investigacion-plataforma.md](investigacion-plataforma.md).
   de moléculas, tabla que se desbloquea, retos por curso y del profesorado,
   acertijos, meta cooperativa de clase y **ligas semanales** (`league.ts`; el
   servidor las cierra cada lunes: [servidor.md](servidor.md)).
+- **Explorar átomos** es un solo modo: dentro, «En 3D | En tu mesa» cambia
+  entre el visor y colocarlos en la habitación con WebXR (antes eran dos
+  botones en el laboratorio). Sin WebXR, «En tu mesa» se ve apagado y explica
+  por qué al tocarlo.
 - **Experiencias 3D** (`src/experience.ts`): explorar átomos, tarjetas, la
-  sección Materia (`src/materia/`), la foto con científicos (`src/photo/`)
+  sección Materia (`src/materia/`), la foto con científicos (`src/photo/`, **en
+  pausa**: no se puede entrar ni se enseña su insignia; se reactiva en
+  `src/features.ts`)
   comparten una sola `ARSession`; cada una crea y quita su HUD.
 - **Objetos cotidianos** (`src/objects/`): un modelo 3D animado para cada
   elemento y sustancia (el Sol, un doblón, una gota de agua…), en Adivina, en

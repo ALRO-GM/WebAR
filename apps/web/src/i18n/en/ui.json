@@ -510,7 +510,7 @@
   "texto": "Keep the cards together…"
  },
  "juego.anadir": {
-  "texto": "+ Card"
+  "texto": "➕ Add element"
  },
  "juego.reiniciar": {
   "texto": "Reset"
@@ -585,16 +585,7 @@
   "texto": "Explore atoms"
  },
  "modo.explorar.texto": {
-  "texto": "Your elements in 3D: Bohr model and orbitals."
- },
- "modo.ra.titulo": {
-  "texto": "Atoms on the table"
- },
- "modo.ra.comprobando": {
-  "texto": "Checking your phone…"
- },
- "modo.ra.texto": {
-  "texto": "Place atoms on the floor or a table (Android with Chrome)."
+  "texto": "Your elements in 3D, with the Bohr model and orbitals, or placed on your table in augmented reality."
  },
  "modo.ra.ios": {
   "texto": "Needs WebXR, which iPhone Safari doesn't have yet. The cards do work."
@@ -1555,5 +1546,14 @@
  },
  "instalar.corto": {
   "texto": "Install"
+ },
+ "explorar.donde": {
+  "texto": "Where to see the atoms"
+ },
+ "explorar.donde_3d": {
+  "texto": "In 3D"
+ },
+ "explorar.donde_ra": {
+  "texto": "On your table"
  }
 }

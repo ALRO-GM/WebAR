@@ -59,10 +59,6 @@
                 <span class="modo-icono" aria-hidden="true">⚛️</span>
                 <span><b data-t="modo.explorar.titulo"></b><span data-t="modo.explorar.texto"></span></span>
               </button>
-              <button id="entrar-ra" type="button" class="modo card pulsable" disabled>
-                <span class="modo-icono" aria-hidden="true">📱</span>
-                <span><b data-t="modo.ra.titulo"></b><span id="entrar-ra-texto" data-t="modo.ra.comprobando"></span></span>
-              </button>
               <button id="entrar-foto" type="button" class="modo card pulsable">
                 <span class="modo-icono" aria-hidden="true">📸</span>
                 <span><b data-t="foto.titulo"></b><span data-t="foto.subtitulo"></span></span>
@@ -139,6 +135,12 @@
         <p id="leyenda" class="leyenda flotante" data-ar-ui></p>
         <div class="barra">
           <div class="fila">
+            <div id="explorar-donde" class="segmentado" role="radiogroup" data-t-attr="aria-label:explorar.donde">
+              <button id="donde-3d" type="button" role="radio" aria-checked="true" data-t="explorar.donde_3d"></button>
+              <button id="donde-ra" type="button" role="radio" aria-checked="false" data-t="explorar.donde_ra"></button>
+            </div>
+          </div>
+          <div class="fila">
             <button id="anterior" type="button" class="btn claro redondo" data-t-attr="aria-label:explorar.anterior">‹</button>
             <button id="abrir-tabla" type="button" class="btn claro" data-t="explorar.tabla"></button>
             <button id="siguiente" type="button" class="btn claro redondo" data-t-attr="aria-label:explorar.siguiente">›</button>
@@ -171,7 +173,7 @@
         </section>
         <div class="barra">
           <div class="fila">
-            <button id="t-anadir" type="button" class="btn claro pequeno" data-t="juego.anadir"></button>
+            <button id="t-anadir" type="button" class="btn pequeno" data-t="juego.anadir"></button>
             <button id="t-reiniciar" type="button" class="btn claro pequeno" data-t="juego.reiniciar"></button>
             <button id="t-recetas" type="button" class="btn claro pequeno" data-t="juego.recetas"></button>
           </div>
