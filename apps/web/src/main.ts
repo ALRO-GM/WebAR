@@ -2,7 +2,7 @@ import './theme.css';
 import './style.css';
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
-import { ARSession, ViewerProvider, WebXRWorldProvider, detectARSupport, type ARAnchor, type ARProvider } from '@webar/ar-core';
+import { ARSession, MarkerTrackingProvider, ViewerProvider, WebXRWorldProvider, detectARSupport, type ARAnchor, type ARProvider } from '@webar/ar-core';
 import { AtomView, ELEMENTS, atomComposition, composition, formatConfiguration, getElement, getSpecies, type AtomModel, type ElementData } from '@webar/chem';
 import { CardsMode, type CardsKind } from './cards/mode';
 import { Mascot, mascotSVG } from './characters';
@@ -10,6 +10,8 @@ import type { AppContext, Experience } from './experience';
 import { playGuess } from './learn/guess';
 import { PATH } from './learn/path';
 import { renderMateriaScreen } from './materia';
+import './cast/cast.css';
+import { getCastSender, renderCastPanel, type CastDeps } from './cast';
 import { PhotoMode } from './photo/photo';
 import { sfx } from './sfx';
 import { RIDDLES, RiddleRun, bestScores, resultHTML, stars, type Riddle, type RiddleResult } from './cards/riddle';
@@ -434,6 +436,23 @@ $('entrar-foto').addEventListener('click', () => {
   );
   $<HTMLDialogElement>('detalle').showModal();
 });
+
+// --- Proyectar en clase: el móvil del profesor se ve en el ordenador del aula ---------
+
+const castDeps: CastDeps = {
+  frameSources() {
+    const gl = ar.renderer.domElement;
+    if (!ar.running) return null;
+    const provider = ar.provider;
+    if (provider === xr) return { gl, world: true };
+    if (provider instanceof MarkerTrackingProvider) return { gl, video: provider.source, mirror: provider.facing === 'user' };
+    return { gl };
+  },
+  renderNow: () => ar.renderer.render(ar.scene, ar.camera),
+  onFrame: (cb) => ar.on('rendered', cb),
+};
+getCastSender(castDeps);
+renderCastPanel($('proyectar'), castDeps);
 
 // --- La mascota ------------------------------------------------------------------------
 

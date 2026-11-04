@@ -52,6 +52,8 @@ export interface ARSessionEvents {
   end: undefined;
   /** Antes de pintar: anima aquí. `dt` en segundos. */
   frame: { time: number; dt: number };
+  /** Justo después de pintar: el lienzo aún tiene la imagen (para copiarla, p. ej. al emitir). */
+  rendered: undefined;
   /** Toque en la pantalla durante la sesión. */
   select: undefined;
 }

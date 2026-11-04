@@ -516,3 +516,6 @@ body.ar-activo .mascota-inicio { display: none; }
 @keyframes flash { from { opacity: 0.95; } to { opacity: 0; } }
 .foto-vista { position: absolute; inset: auto 12px calc(max(16px, env(safe-area-inset-bottom)) + 9rem); margin: 0 auto; max-width: 26rem; padding: 10px; display: grid; gap: 10px; animation: rebote-entrada 0.35s var(--ease-pop); }
 .foto-vista img { width: 100%; max-height: 45vh; object-fit: contain; border-radius: 14px; }
+/* El gato vive en la esquina derecha: su bocadillo se abre hacia la izquierda. */
+.mascota-inicio .gato-bocadillo { left: auto; right: 0; translate: 0 0; width: max-content; max-width: min(15rem, calc(100vw - 30px)); transform-origin: 85% 100%; }
+.mascota-inicio .gato-bocadillo::after { left: auto; right: 2rem; }

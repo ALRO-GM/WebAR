@@ -90,6 +90,7 @@ export class ARSession extends Emitter<ARSessionEvents> {
     if (!this._running) return;
     for (let t = 0; t < seconds; t += step) this.step(step, undefined, false);
     this.renderer.render(this.scene, this.camera);
+    this.emit('rendered', undefined);
   }
 
   /** Tiempo de la sesión en ms: la suma de los pasos (así `advance` y el bucle cuadran). */
@@ -98,7 +99,10 @@ export class ARSession extends Emitter<ARSessionEvents> {
     this.clock += dt * 1000;
     this._provider.update(this.clock, xrFrame);
     this.emit('frame', { time: this.clock, dt });
-    if (render) this.renderer.render(this.scene, this.camera);
+    if (render) {
+      this.renderer.render(this.scene, this.camera);
+      this.emit('rendered', undefined);
+    }
   }
 
   /** Termina la sesión. Se avisa con el evento `end`. */
