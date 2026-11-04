@@ -11,6 +11,7 @@ FROM node:22-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json tsconfig.base.json ./
 COPY packages/ar-core/package.json packages/ar-core/
+COPY packages/chem/package.json packages/chem/
 COPY apps/web/package.json apps/web/
 RUN npm ci
 COPY packages/ packages/

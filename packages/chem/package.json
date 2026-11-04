@@ -1,0 +1,13 @@
+{
+  "name": "@webar/chem",
+  "version": "0.1.0",
+  "description": "Química para la web en 3D: los 118 elementos, su composición y átomos animados (modelo de Bohr y nubes de probabilidad) con three.js",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "peerDependencies": {
+    "three": ">=0.160.0"
+  }
+}

@@ -6,12 +6,14 @@ Monorepo con *npm workspaces*, Vite y TypeScript (la arquitectura y por qué,
 en [arquitectura.md](arquitectura.md)):
 
 - `packages/ar-core`: la base de realidad aumentada, reutilizable.
-- `apps/web`: la PWA (Vite + `vite-plugin-pwa`), con la demo de la esfera.
+- `packages/chem`: los elementos y sus átomos en 3D, reutilizable.
+- `apps/web`: la PWA (Vite + `vite-plugin-pwa`), que une las dos.
 
 ```sh
 npm install
 npm run dev        # http://localhost:5173 (también en la red local, sin HTTPS)
-npm run check      # tipos de los dos paquetes
+npm run check      # tipos de los tres paquetes
+npm test           # tests (vitest)
 npm run build      # apps/web/dist
 ```
 
@@ -22,8 +24,21 @@ https://webar.peer4u.app. Otra opción, con el móvil por USB:
 En el ordenador, la extensión *Immersive Web Emulator* simula un móvil con
 WebXR.
 
-La demo de la esfera necesita WebXR: Android con Chrome y los Servicios de
-Google Play para RA. En iPhone avisa de que aún no hay soporte.
+La realidad aumentada necesita WebXR: Android con Chrome y los Servicios de
+Google Play para RA. En cualquier otro sitio (iPhone, ordenador) está «Ver en
+3D», el mismo átomo en un visor sin cámara.
+
+Enlaces directos: `?el=Fe&modelo=orbitales&vista=3d` abre el hierro con sus
+orbitales en el visor (`el` admite símbolo o número; `modelo`, `bohr` u
+`orbitales`). Sirven para compartir un átomo y para capturas sin pantalla:
+
+```sh
+google-chrome --headless=new --enable-unsafe-swiftshader --window-size=412,860 \
+  --virtual-time-budget=4000 --screenshot=fe.png 'http://localhost:4173/?el=Fe&vista=3d'
+```
+
+Los datos de los elementos se regeneran con
+`packages/chem/scripts/generar-elementos.py` (instrucciones dentro).
 
 Con Docker, igual que en producción:
 

@@ -3,6 +3,7 @@ import { Emitter } from './emitter';
 import type { ARProvider, ARSessionEvents } from './types';
 
 export interface ARSessionOptions {
+  /** El proveedor por defecto; `start(otro)` puede cambiarlo en cada sesión. */
   provider: ARProvider;
   /** Capa HTML (botones, avisos) que se verá encima de la cámara. */
   overlay: HTMLElement;
@@ -24,7 +25,7 @@ export class ARSession extends Emitter<ARSessionEvents> {
   readonly scene = new THREE.Scene();
   readonly camera = new THREE.PerspectiveCamera(70, 1, 0.01, 50);
   readonly renderer: THREE.WebGLRenderer;
-  readonly provider: ARProvider;
+  private _provider: ARProvider;
 
   private readonly overlay: HTMLElement;
   private readonly container: HTMLElement;
@@ -33,7 +34,7 @@ export class ARSession extends Emitter<ARSessionEvents> {
 
   constructor(options: ARSessionOptions) {
     super();
-    this.provider = options.provider;
+    this._provider = options.provider;
     this.overlay = options.overlay;
     this.container = options.container ?? document.body;
 
@@ -47,14 +48,23 @@ export class ARSession extends Emitter<ARSessionEvents> {
     window.addEventListener('resize', this.resize);
   }
 
+  /** El proveedor de la sesión en marcha (o de la próxima). */
+  get provider(): ARProvider {
+    return this._provider;
+  }
+
   get running(): boolean {
     return this._running;
   }
 
-  /** Arranca la realidad aumentada. Llamar desde un gesto del usuario. */
-  async start(): Promise<void> {
+  /**
+   * Arranca la sesión con `provider` (o el de siempre). Llamar desde un gesto
+   * del usuario: WebXR y la cámara lo exigen.
+   */
+  async start(provider: ARProvider = this._provider): Promise<void> {
     if (this._running) return;
-    await this.provider.start(
+    this._provider = provider;
+    await provider.start(
       { renderer: this.renderer, scene: this.scene, camera: this.camera, overlay: this.overlay },
       { select: () => this.emit('select', undefined), ended: this.handleEnded },
     );
@@ -64,7 +74,7 @@ export class ARSession extends Emitter<ARSessionEvents> {
     this.timer.reset();
     this.renderer.setAnimationLoop((time, xrFrame) => {
       this.timer.update(time);
-      this.provider.update(time, xrFrame);
+      this._provider.update(time, xrFrame);
       this.emit('frame', { time, dt: Math.min(this.timer.getDelta(), 0.1) });
       this.renderer.render(this.scene, this.camera);
     });
@@ -73,7 +83,7 @@ export class ARSession extends Emitter<ARSessionEvents> {
 
   /** Termina la sesión. Se avisa con el evento `end`. */
   async end(): Promise<void> {
-    if (this._running) await this.provider.stop();
+    if (this._running) await this._provider.stop();
   }
 
   private readonly handleEnded = (): void => {

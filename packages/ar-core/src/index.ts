@@ -9,4 +9,5 @@ export { ARAnchor, type ARAnchorEvents } from './anchor';
 export { Emitter } from './emitter';
 export { detectARSupport, type ARSupport } from './capabilities';
 export { WebXRWorldProvider, type WebXRWorldOptions } from './providers/webxr-world';
+export { ViewerProvider, type ViewerOptions } from './providers/viewer';
 export type { ARCapability, ARContext, ARProvider, ARProviderHooks, ARSessionEvents } from './types';

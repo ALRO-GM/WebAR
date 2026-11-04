@@ -36,7 +36,14 @@ packages/ar-core/      @webar/ar-core: la base reutilizable (no sabe de química
   src/types.ts           ARProvider: el contrato de un sistema de seguimiento
   src/providers/
     webxr-world.ts       WebXR: superficies y anclas (Android)
-apps/web/              la PWA: interfaz, demo e instalación (manifiesto y service worker)
+    viewer.ts            visor 3D sin cámara (iPhone, ordenador, desarrollo)
+packages/chem/         @webar/chem: los 118 elementos y sus átomos en 3D (no sabe de RA)
+  src/data/elements.ts   datos generados (scripts/generar-elementos.py)
+  src/configuration.ts   capas, subniveles, Hund y Slater
+  src/nucleus.ts         cómo se apilan protones y neutrones
+  src/orbitals.ts        nubes de probabilidad |ψ|²
+  src/three/             AtomView: núcleo + Bohr o nubes, con su animación
+apps/web/              la PWA: une las dos; interfaz e instalación
 ```
 
 - La **sesión** es dueña del renderizador y del bucle y emite `start`, `frame`,
@@ -51,11 +58,17 @@ Así, el átomo de oxígeno se dibuja igual sobre la mesa (WebXR) que sobre su
 carta (MindAR), y la lógica de «si dos anclas están cerca, forman un enlace»
 solo mira posiciones de anclas.
 
-## Lo siguiente
+Los átomos (`@webar/chem`) tampoco saben de realidad aumentada: un
+`AtomView` es un `Object3D`. La app es la única que conoce las dos partes.
+Los detalles de los átomos (datos, fuentes, modelos y escalas) están en
+[packages/chem/README.md](../packages/chem/README.md).
 
-1. Proveedor `MindARImageProvider` (`image`): cartas con un `.mind` compilado
-   desde sus imágenes, varias a la vez (`maxTrack`).
-2. Paquete de dominio aparte (`packages/chem`): elementos, modelos de átomo
-   (Bohr y relleno de espacio) y reglas de enlace (valencias).
-3. Detección de cercanía entre anclas → animación de la molécula formada.
-4. Modo «sin RA» (visor 3D normal) para ordenadores y móviles sin soporte.
+## Hecho y lo siguiente
+
+- [x] Base de RA con WebXR y visor 3D sin cámara.
+- [x] Los 118 elementos: protones, neutrones, electrones, capas y
+  configuración; átomos con modelo de Bohr y con orbitales.
+- [ ] Proveedor `MindARImageProvider` (`image`): cartas con un `.mind`
+  compilado desde sus imágenes, varias a la vez (`maxTrack`).
+- [ ] Reglas de enlace (valencias) en `@webar/chem` y detección de cercanía
+  entre anclas → animación de la molécula formada.

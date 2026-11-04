@@ -7,14 +7,17 @@ hackathon.
 
 ## Estado
 
-PWA instalable con la base de realidad aumentada (`packages/ar-core`) y una
-demo: tocar la pantalla deja esferas fijas sobre el suelo o una mesa (WebXR,
-Android con Chrome). Lo siguiente: átomos y cartas para formar moléculas
+PWA instalable con los **118 elementos**: tabla periódica, ficha (protones,
+neutrones, electrones, capas, configuración y radio) y el átomo animado en
+**modelo de Bohr** o con sus **orbitales** (nubes de probabilidad). Se ven en
+realidad aumentada sobre la mesa (WebXR, Android con Chrome) o en un visor 3D
+en cualquier navegador. Lo siguiente: cartas de átomos para formar moléculas
 ([docs/arquitectura.md](docs/arquitectura.md)).
 
 ## Cómo funciona
 
-- **Código**: `packages/ar-core` (la base de RA, reutilizable), `apps/web`
+- **Código**: `packages/ar-core` (la base de RA, reutilizable),
+  `packages/chem` (elementos y átomos en 3D, reutilizable), `apps/web`
   (la PWA) e `infra/` (imagen, compose, bloque de Caddy y scripts de
   despliegue). Arrancar en local: [docs/desarrollo.md](docs/desarrollo.md).
 - **Servidor**: la máquina de Oracle de Peer4U, detrás de su Caddy, en un
@@ -28,5 +31,6 @@ Las reglas para agentes de IA están en [AGENTS.md](AGENTS.md).
 
 | Fecha | Qué cambió |
 | --- | --- |
+| 2026-11-04 | `@webar/chem`: los 118 elementos (PubChem + radios de Clementi), átomos con núcleo, modelo de Bohr y orbitales; tabla periódica, ficha y visor 3D sin cámara |
 | 2026-11-04 | PWA con Vite + three.js, base `@webar/ar-core` (sesión, anclas, proveedor WebXR) y demo de esferas fijas en superficies |
 | 2026-11-03 | Esqueleto: página de prueba de cámara, imagen con `/health`, CI con etiquetas `ci-ok`/`ci-ko` y despliegue continuo en `webar.peer4u.app` |
