@@ -2,7 +2,9 @@ import * as THREE from 'three';
 import { ARAnchor } from '../anchor';
 import { Emitter } from '../emitter';
 import { MARKER_DICTIONARY } from '../markers';
-import { markerPose, type PinholeCamera } from '../pose';
+import { OneEuroQuaternion, OneEuroVector, type OneEuroOptions } from '../one-euro';
+import { alignCoplanar, markerPose, type PinholeCamera } from '../pose';
+import { refineCorners } from '../refine';
 import type { ARContext, ARProvider, ARProviderHooks } from '../types';
 import { AR, type ArucoDetector } from '../vendor/js-aruco2/index.js';
 
@@ -21,8 +23,16 @@ export interface MarkerTrackingOptions {
   detectWidth?: number;
   /** Milisegundos sin ver un marcador hasta darlo por perdido. */
   lostAfter?: number;
-  /** Cuánto se suaviza el temblor: 0 = nada, 0,9 = mucho (más retraso). */
-  smoothing?: number;
+  /**
+   * Filtro «1 €» del temblor (ver `one-euro.ts`): posición en metros y giro
+   * en radianes. Por defecto, quieto apenas tiembla y al moverlo no se queda atrás.
+   */
+  filter?: { position?: OneEuroOptions; rotation?: OneEuroOptions };
+  /**
+   * Los marcadores están sobre la misma superficie (tarjetas en una mesa):
+   * comparten la inclinación, que así tiembla mucho menos.
+   */
+  coplanar?: boolean;
   /** Qué ids aceptar (los demás se ignoran). */
   accept?: (id: number) => boolean;
   /** Cámara trasera (por defecto) o frontal; la frontal se ve en espejo, como un selfi. */
@@ -37,8 +47,24 @@ export interface MarkerTrackingEvents {
 interface Tracked {
   anchor: ARAnchor;
   lastSeen: number;
-  position: THREE.Vector3;
-  rotation: THREE.Quaternion;
+  /** La última pose medida, sin filtrar: pista para la siguiente. */
+  raw: THREE.Matrix4;
+  position: OneEuroVector;
+  rotation: OneEuroQuaternion;
+}
+
+const POSITION_FILTER: OneEuroOptions = { minCutoff: 0.5, beta: 30, dCutoff: 0.5 };
+const ROTATION_FILTER: OneEuroOptions = { minCutoff: 0.5, beta: 2, dCutoff: 0.3 };
+
+/** Área en píxeles del cuadrilátero (fórmula del zapatero): cuánto pesa su medida. */
+function area(c: readonly { x: number; y: number }[]): number {
+  let sum = 0;
+  for (let i = 0; i < c.length; i++) {
+    const a = c[i];
+    const b = c[(i + 1) % c.length];
+    sum += a.x * b.y - b.x * a.y;
+  }
+  return Math.abs(sum) / 2;
 }
 
 /** De la base del marcador (y hacia su borde superior, z fuera del papel) a «y hacia arriba». */
@@ -69,6 +95,8 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
   private readonly offset: THREE.Matrix4;
   private readonly tmp = { p: new THREE.Vector3(), q: new THREE.Quaternion(), s: new THREE.Vector3() };
   private screen = { width: 1, height: 1 };
+  /** Último fotograma de vídeo analizado: se pinta a 60 fps, pero la cámara da 30. */
+  private lastFrame = -1;
 
   constructor(private readonly options: MarkerTrackingOptions) {
     super();
@@ -162,19 +190,34 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     const source = this.sourceSize();
     if (!this.video || !this.detector || !source.ready) return;
     if (this.canvas.dataset.size !== `${source.width}x${source.height}`) this.configureCamera();
+    const lostAfter = this.options.lostAfter ?? 400;
+    if (this.video instanceof HTMLVideoElement) {
+      // Mismo fotograma que la vez anterior: analizarlo otra vez solo gasta batería.
+      if (this.video.currentTime === this.lastFrame) return this.markLost(time, lostAfter);
+      this.lastFrame = this.video.currentTime;
+    }
 
     const { width, height } = this.canvas;
     this.g.drawImage(this.video, 0, 0, width, height);
     const markers = this.detector.detect(this.g.getImageData(0, 0, width, height));
 
+    const seen: { id: number; pose: THREE.Matrix4; weight: number }[] = [];
     for (const marker of markers) {
       if (this.options.accept && !this.options.accept(marker.id)) continue;
-      const pose = markerPose(marker.corners, this.options.markerSize, this.pinhole, this.matrix);
+      // El detector da esquinas en píxeles enteros: afinarlas quita la mayor parte del temblor.
+      const corners = this.detector.grey ? refineCorners(this.detector.grey, marker.corners) : marker.corners;
+      const previous = this.tracked.get(marker.id);
+      const hint = previous && time - previous.lastSeen < lostAfter ? previous.raw : undefined;
+      const pose = markerPose(corners, this.options.markerSize, this.pinhole, new THREE.Matrix4(), hint);
       if (!pose) continue;
-      pose.multiply(this.offset);
-      this.updateTracked(marker.id, pose, time);
+      seen.push({ id: marker.id, pose, weight: area(corners) });
     }
-    const lostAfter = this.options.lostAfter ?? 400;
+    if (this.options.coplanar) alignCoplanar(seen.map((s) => s.pose), seen.map((s) => s.weight));
+    for (const { id, pose } of seen) this.updateTracked(id, pose, time);
+    this.markLost(time, lostAfter);
+  }
+
+  private markLost(time: number, lostAfter: number): void {
     for (const t of this.tracked.values()) if (time - t.lastSeen > lostAfter) t.anchor.setTracking(false);
   }
 
@@ -187,32 +230,42 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     for (const t of this.tracked.values()) t.anchor.dispose();
     this.tracked.clear();
     this.ctx = this.video = this.stream = this.detector = undefined;
+    this.lastFrame = -1;
     const hooks = this.hooks;
     this.hooks = undefined;
     hooks?.ended();
   }
 
+  /** `pose` es la del marcador (sin `offset`), recién medida. */
   private updateTracked(id: number, pose: THREE.Matrix4, time: number): void {
     const { p, q, s } = this.tmp;
-    pose.decompose(p, q, s);
+    // Se filtra la pose del ancla (no la del marcador): lo que se ve encima es lo que no debe temblar.
+    this.matrix.copy(pose).multiply(this.offset).decompose(p, q, s);
     let t = this.tracked.get(id);
     if (!t) {
       const anchor = new ARAnchor(`marker-${id}`, () => this.tracked.delete(id));
       this.ctx!.scene.add(anchor.object);
-      t = { anchor, lastSeen: time, position: p.clone(), rotation: q.clone() };
+      t = {
+        anchor,
+        lastSeen: time,
+        raw: new THREE.Matrix4(),
+        position: new OneEuroVector(this.options.filter?.position ?? POSITION_FILTER),
+        rotation: new OneEuroQuaternion(this.options.filter?.rotation ?? ROTATION_FILTER),
+      };
       this.tracked.set(id, t);
       this.emit('marker', { id, anchor });
-    } else {
-      // Filtro adaptativo: quieto → suaviza el temblor; rápido → sigue sin retraso.
-      const smoothing = this.options.smoothing ?? 0.6;
-      const reacquired = !t.anchor.tracking;
-      const move = t.position.distanceTo(p) / 0.01 + t.rotation.angleTo(q) / 0.15;
-      const alpha = reacquired ? 1 : Math.min(1, 1 - smoothing + move * 0.5);
-      t.position.lerp(p, alpha);
-      t.rotation.slerp(q, alpha);
     }
+    if (!t.anchor.tracking) {
+      // Vuelve a verse: salta a donde está, sin arrastrarse desde la pose vieja.
+      t.position.reset(p);
+      t.rotation.reset(q);
+    }
+    const dt = (time - t.lastSeen) / 1000;
+    const position = t.position.filter(p, dt);
+    const rotation = t.rotation.filter(q, dt);
+    t.raw.copy(pose);
     t.lastSeen = time;
-    t.anchor.setPose(this.matrix.compose(t.position, t.rotation, s.set(1, 1, 1)));
+    t.anchor.setPose(this.matrix.compose(position, rotation, s.set(1, 1, 1)));
     t.anchor.setTracking(true);
   }
 

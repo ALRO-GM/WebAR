@@ -38,7 +38,9 @@ packages/ar-core/      @webar/ar-core: la base reutilizable (no sabe de química
     webxr-world.ts       WebXR: superficies y anclas (Android)
     marker-tracking.ts   tarjetas impresas con marcadores ArUco (cualquier móvil con cámara)
     viewer.ts            visor 3D sin cámara (iPhone, ordenador, desarrollo)
-  src/pose.ts            pose de un marcador a partir de sus 4 esquinas (homografía)
+  src/pose.ts            pose de un marcador (homografía + Levenberg-Marquardt, ambigüedad, mesa común)
+  src/refine.ts          esquinas a décimas de píxel (rectas ajustadas a los bordes)
+  src/one-euro.ts        filtro «1 €» contra el temblor
   src/vendor/js-aruco2/  detector ArUco (MIT), pasado a ESM
 packages/chem/         @webar/chem: los 118 elementos y sus átomos en 3D (no sabe de RA)
   src/data/elements.ts   datos generados (scripts/generar-elementos.py)
@@ -84,10 +86,44 @@ lugar de una imagen para MindAR:
 - funcionan en **cualquier móvil con cámara**, iPhone incluido;
 - una tarjeta nueva es un número nuevo: no hay que compilar imágenes.
 
-La pose se calcula con la homografía de las 4 esquinas (sin la ambigüedad de
-POSIT) y se suaviza con un filtro adaptativo; encima, cada átomo persigue a su
-tarjeta con retardo, para que se deslice suave al moverla. La cara de la
-tarjeta se tapa con una virtual con los datos de lo que contiene.
+La cara de la tarjeta se tapa con una virtual con los datos de lo que
+contiene, y cada átomo persigue a su tarjeta con un poco de retardo, para que
+se deslice suave al moverla.
+
+### Por qué temblaba y cómo se evita
+
+Un marcador de 4 cm a 30-40 cm ocupa unos 60 px de los 640 en los que se
+busca, y el detector da sus esquinas **en píxeles enteros**. Un píxel de error
+en una esquina son grados de inclinación, y el átomo, que flota 2-3 cm por
+encima, lo amplifica: eso era el temblor. Además, visto casi de frente, un
+cuadrado pequeño encaja casi igual con dos inclinaciones (la ambigüedad de los
+marcadores planos) y la pose saltaba de una a otra. Se hace como en OpenCV,
+AprilTag, MindAR o los visores de RA:
+
+1. **Esquinas a décimas de píxel** (`refine.ts`): en cada lado se busca el
+   borde en perpendicular (máximo del gradiente, con una parábola) en hasta 40
+   puntos, se ajusta una recta y las esquinas salen de cruzarlas. Con el
+   detector de verdad sobre fotos sintéticas, el error de giro baja de 1,25° a
+   0,35° (`tracking.test.ts`).
+2. **Pose afinada y sin saltos** (`pose.ts`): de la homografía se sacan las dos
+   inclinaciones posibles, se afinan con Levenberg-Marquardt (menor error de
+   reproyección, como `solvePnP`) y, si las dos explican la imagen, gana la
+   más parecida a la del fotograma anterior.
+3. **La mesa es común** (`alignCoplanar`, opción `coplanar`): las tarjetas
+   están en el mismo plano, así que comparten la normal, que es lo peor medido
+   de cada una; se usa la media ponderada por tamaño. Una tarjeta levantada
+   más de 25° va por libre.
+4. **Filtro «1 €»** (`one-euro.ts`, Casiez et al., 2012): paso bajo cuyo corte
+   sube con la velocidad: quieto apenas tiembla y al mover la tarjeta no se
+   queda atrás (menos de 4 mm a 30 cm/s).
+5. Cada fotograma de la cámara se analiza **una sola vez** (se pinta a 60 fps,
+   la cámara da 30): menos batería y calor, que también tiran los fps.
+
+Lo que hacen ARKit y ARCore y aquí no se puede: fundir la cámara con el
+giroscopio y el acelerómetro (odometría visual-inercial) para que la tarjeta
+quede fija en el mundo aunque se mueva el móvil. Ayuda en la práctica: buena
+luz, tarjetas planas (pegadas a cartulina) y no acercar el móvil a menos de
+20 cm.
 
 ### Una sola tarjeta: papel = mesa virtual
 

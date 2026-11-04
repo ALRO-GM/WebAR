@@ -11,6 +11,8 @@ export interface ArucoMarker {
 }
 export interface ArucoDetector {
   detect(image: { width: number; height: number; data: Uint8ClampedArray }): ArucoMarker[];
+  /** La imagen en grises del último `detect` (1 byte por píxel). */
+  grey?: { width: number; height: number; data: ArrayLike<number> };
 }
 export interface ArucoDictionary {
   codeList: string[];

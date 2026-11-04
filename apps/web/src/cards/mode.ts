@@ -67,6 +67,7 @@ export class CardsMode {
     markerSize: CARD.marker,
     anchorOffset: new THREE.Matrix4().makeTranslation(0, 0, MARKER_TO_CENTER),
     accept: (id) => !!cardById(id),
+    coplanar: true,
   });
   private readonly effects: Effects;
   readonly game: CardGame;
