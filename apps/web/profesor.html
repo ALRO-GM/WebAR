@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Panel del profesorado · WebAR Átomos</title>
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#111317" />
+  </head>
+  <body class="profe">
+    <main id="profe" class="profe-main">
+      <header class="profe-cabecera">
+        <a href="/" aria-label="Volver a la app"><img src="/icons/icon.svg" alt="" width="40" height="40" /></a>
+        <h1 data-t="profe.titulo"></h1>
+        <span id="profe-quien"></span>
+      </header>
+      <div id="profe-contenido"></div>
+      <p class="pequeno privacidad" data-t="profe.privacidad"></p>
+    </main>
+    <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+    <script type="module" src="/src/teacher.ts"></script>
+  </body>
+</html>

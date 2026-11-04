@@ -7,7 +7,11 @@ en [arquitectura.md](arquitectura.md)):
 
 - `packages/ar-core`: la base de realidad aumentada, reutilizable.
 - `packages/chem`: los elementos y sus átomos en 3D, reutilizable.
-- `apps/web`: la PWA (Vite + `vite-plugin-pwa`), que une las dos.
+- `apps/web`: la PWA (Vite + `vite-plugin-pwa`), que une las dos; el juego,
+  la plataforma del alumno (`src/platform`), el panel del profesorado
+  (`profesor.html`) y la tabla de textos (`src/i18n/es.json`).
+- `server`: Node sin dependencias (`node:http`, `node:sqlite`) que sirve la
+  PWA, la API de clases y `/health`. Es TypeScript que Node ejecuta tal cual.
 
 ```sh
 npm install
@@ -15,7 +19,11 @@ npm run dev        # http://localhost:5173 (también en la red local, sin HTTPS)
 npm run check      # tipos de los tres paquetes
 npm test           # tests (vitest)
 npm run build      # apps/web/dist
+npm run server     # build + servidor en :8080 con la API (base de datos en .datos/)
 ```
+
+`npm run dev` sirve solo la PWA (sin API: la clase y el panel del profesorado
+no funcionan); para probarlos, `npm run server`.
 
 La cámara y WebXR solo funcionan en `localhost` o por HTTPS. Para probar en el
 móvil lo más rápido es desplegar (push a `main`) y abrir
@@ -64,17 +72,25 @@ docker run --rm -p 8080:8080 webar:dev
 # http://localhost:8080   ·   http://localhost:8080/health
 ```
 
+## Textos e idiomas
+
+Todos los textos nuevos van en `apps/web/src/i18n/es.json`: clave → `texto` y
+`descripcion` (para quien traduzca). En el código, `t('clave', { variable })`;
+en el HTML, `data-t="clave"` (o `data-t-attr="aria-label:clave"`). Otro idioma
+es otro fichero con las mismas claves.
+
 ## El contrato de la imagen
 
 La CI y `deploy.sh` cuentan con esto. Si lo cambias, cámbialos también:
 
 - **`infra/docker/Dockerfile`** construye una imagen que escucha en el
-  **8080**, sin TLS.
+  **8080**, sin TLS (Node: `server/src/main.ts`).
 - **`GET /health`** responde 200 con `{"ok":true,"version":"<GIT_SHA>"}`. El
   commit llega como `--build-arg GIT_SHA`.
 - **`GET /`** responde 200.
 - La imagen arranca con el sistema de ficheros de **solo lectura** (salvo
-  `/tmp`), **sin capacidades** y sin root.
+  `/tmp` y el volumen `/data`), **sin capacidades** y sin root. Si `/data` no
+  se puede escribir (la CI), la base de datos va a `/tmp`.
 
 ## Dependencias y peso
 

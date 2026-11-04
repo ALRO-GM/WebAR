@@ -32,11 +32,18 @@ services:
     read_only: true
     tmpfs:
       - /tmp
+    # La base de datos de clases (SQLite). Copia: `docker compose exec web
+    # node -e …` o copiar el fichero del volumen con la app parada.
+    volumes:
+      - datos:/data
     logging:
       driver: json-file
       options:
         max-size: '10m'
         max-file: '3'
+
+volumes:
+  datos:
 
 networks:
   peer4u:

@@ -18,7 +18,7 @@ atomo.dispose()
 
 ## Sustancias y reacciones
 
-- `SPECIES`: 35 sustancias de hasta 5 átomos de la ESO y el Bachillerato,
+- `SPECIES`: 50 sustancias de hasta 5 átomos de la ESO y el Bachillerato,
   con geometría 3D (VSEPR, enlaces reales en Å), ΔHf° (NBS) y para qué sirven.
 - `REACTIONS`: 38 reacciones de libro ajustadas (combustiones, Haber,
   neutralización, termita…); ΔH por la ley de Hess, o el medido cuando las

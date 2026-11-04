@@ -1,0 +1,10 @@
+{
+  "name": "@webar/server",
+  "version": "0.1.0",
+  "description": "Servidor de WebAR: sirve la PWA y la API de clases (Node + SQLite integrado, sin dependencias)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/main.ts"
+  }
+}

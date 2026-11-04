@@ -1,0 +1,52 @@
+body.profe { background: var(--bg); overflow-y: auto; height: auto; min-height: 100%; }
+.profe-main { max-width: 64rem; margin: 0 auto; padding: 16px; display: grid; gap: 14px; }
+.profe-cabecera { display: flex; align-items: center; gap: 12px; }
+.profe-cabecera h1 { flex: 1; margin: 0; font-size: 1.4rem; }
+.profe-cabecera #profe-quien { display: flex; gap: 8px; align-items: center; color: var(--muted); }
+.profe h2 small { color: var(--muted); font-weight: 500; font-size: 1rem; }
+.profe h3, .profe h4 { margin: 0.4rem 0; }
+.profe a { color: var(--accent); }
+.profe-dos { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
+.tarjeta-panel select { font: inherit; padding: 0.6rem; border-radius: 10px; background: rgb(0 0 0 / 0.25); color: var(--fg); border: 1px solid rgb(255 255 255 / 0.2); }
+.en-linea { grid-template-columns: 1fr 1fr auto; align-items: end; }
+.en-linea h3, .en-linea .error { grid-column: 1 / -1; }
+@media (max-width: 40rem) { .en-linea { grid-template-columns: 1fr; } }
+.clases { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); }
+.clase { display: grid; gap: 4px; padding: 14px; border-radius: 16px; background: rgb(122 165 255 / 0.14); color: var(--fg) !important; text-decoration: none; }
+.clase span { color: var(--muted); font-size: 0.9rem; }
+.clase code { font-size: 1.1rem; letter-spacing: 0.15em; }
+.codigo-clase { grid-template-columns: 1fr auto; align-items: center; }
+.codigo { font-size: 2.6rem; font-weight: 800; letter-spacing: 0.2em; margin: 0; }
+.qr { width: 9rem; background: #fff; border-radius: 12px; padding: 6px; }
+.qr svg { display: block; width: 100%; height: auto; }
+.tiles { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
+.tile { display: grid; padding: 14px; border-radius: 16px; background: rgb(255 255 255 / 0.06); }
+.tile .valor { font-size: 2rem; font-weight: 800; color: var(--fg); }
+.tile .valor small { font-size: 1rem; color: var(--muted); }
+.tile .etiqueta { color: var(--muted); font-size: 0.9rem; }
+.cabecera-grafica { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+/* Una serie: azul validado sobre superficie oscura (dataviz: contraste ≥ 3:1). */
+.grafica { width: 100%; height: auto; }
+.grafica .barra path { fill: #3987e5; }
+.grafica .barra.activa path { fill: #5a9ef0; }
+.grafica .rejilla-g { stroke: rgb(255 255 255 / 0.1); stroke-width: 1; }
+.grafica .eje { fill: var(--muted); font-size: 10px; }
+.tooltip { position: fixed; z-index: 20; pointer-events: none; padding: 6px 10px; border-radius: 8px; background: #2a2f3a; color: var(--fg); font-size: 0.85rem; box-shadow: 0 4px 16px rgb(0 0 0 / 0.4); }
+.tabla-datos { overflow-x: auto; }
+.tabla-datos table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.tabla-datos th, .tabla-datos td { padding: 0.5rem 0.6rem; text-align: left; border-bottom: 1px solid rgb(255 255 255 / 0.08); }
+.tabla-datos thead th { color: var(--muted); font-weight: 600; }
+.tabla-datos td:not(.acciones) { font-variant-numeric: tabular-nums; }
+.acciones { white-space: nowrap; display: flex; gap: 6px; }
+.acciones button { padding: 0.35rem 0.7rem; font-size: 0.82rem; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.cobertura { display: flex; flex-wrap: wrap; gap: 6px; }
+.cobertura span { padding: 0.25rem 0.6rem; border-radius: 999px; font-size: 0.88rem; }
+.cobertura .si { background: rgb(46 230 166 / 0.18); }
+.cobertura .no { background: rgb(255 255 255 / 0.05); color: var(--muted); border: 1px dashed rgb(255 255 255 / 0.2); }
+.nuevo-reto { display: grid; gap: 8px; margin-top: 8px; }
+.nuevo-reto fieldset { border: 1px solid rgb(255 255 255 / 0.15); border-radius: 12px; display: grid; gap: 10px; }
+.nuevo-reto .grupo { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.casilla { display: inline-flex !important; gap: 4px; align-items: center; font-weight: 500 !important; padding: 0.2rem 0.5rem; border-radius: 8px; background: rgb(255 255 255 / 0.05); }
+button.peligro { background: #5a1f24; color: #ffd0d0; }
+.privacidad { border-top: 1px solid rgb(255 255 255 / 0.1); padding-top: 10px; }

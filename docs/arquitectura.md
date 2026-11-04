@@ -45,12 +45,16 @@ packages/chem/         @webar/chem: los 118 elementos y sus átomos en 3D (no sa
   src/configuration.ts   capas, subniveles, Hund y Slater
   src/nucleus.ts         cómo se apilan protones y neutrones
   src/orbitals.ts        nubes de probabilidad |ψ|²
-  src/species.ts         35 sustancias de ≤5 átomos: geometría 3D y ΔHf°
+  src/species.ts         50 sustancias de ≤5 átomos: geometría 3D y ΔHf°
   src/reactions.ts       38 reacciones de libro, síntesis directa, ΔH (Hess) y reparto en tarjetas
   src/three/             AtomView (núcleo + Bohr o nubes) y MoleculeView (bolas y varillas)
 apps/web/              la PWA: une las dos; interfaz e instalación
   src/cards/             el juego de tarjetas: baraja, caras, reglas, mesa virtual
+  src/platform/          progreso, colección, desbloqueos, retos y clase (sin conexión)
+  src/i18n/              la tabla de textos (es.json) y t()
   cartas.html            imprimir las tarjetas en A4
+  profesor.html          panel del profesorado: clases, alumnado, estadísticas y retos
+server/                Node sin dependencias: PWA + API de clases + /health (SQLite)
 ```
 
 - La **sesión** es dueña del renderizador y del bucle y emite `start`, `frame`,
@@ -113,6 +117,32 @@ dependen de él.
   configuración; átomos con modelo de Bohr y con orbitales.
 - [x] Tarjetas con marcadores, mesa virtual, reacciones con fuego/hielo,
   descomponer e impresión de tarjetas.
-- [ ] Plataforma educativa: cuentas de profesor, clases, retos, estadísticas,
-  colección y desbloqueos, y uso sin conexión (ver
-  [investigacion-plataforma.md](investigacion-plataforma.md)).
+- [x] Plataforma educativa (ver más abajo).
+- [ ] Repaso de UX y accesibilidad, todos los textos en la tabla (también los
+  de `@webar/chem`) y una animación inicial que explique cómo se usa.
+
+## Plataforma educativa
+
+Basada en [investigacion-plataforma.md](investigacion-plataforma.md).
+
+- **Sin conexión primero.** Todo lo que hace el alumno es un evento en
+  IndexedDB (`src/platform/store.ts`); su progreso se calcula de ahí
+  (`progress.ts`, con tests). Sin clase, todo se queda en el móvil. Con clase,
+  los eventos se envían cuando hay red (al abrir la app, al volver la conexión,
+  al volver a la pestaña y tras cada evento: iOS no tiene Background Sync) y
+  `POST /api/sync` es idempotente por id.
+- **Clases.** El profesorado crea una cuenta y clases (curso de la LOMLOE);
+  cada clase tiene un código de 6 caracteres, un enlace `/?unirse=CÓDIGO` y su
+  QR. El alumnado se une con el código, un **alias** y un PIN (para entrar
+  desde otro móvil). Nada de nombres, correos ni ubicación.
+- **Gamificación** (lo que la investigación apoya): colección de moléculas con
+  siluetas y pistas (moleculario), tabla periódica que se desbloquea (se
+  empieza con H, C, N y O; cada molécula nueva da 3 elementos y cada reacción
+  distinta, 1), historias de descubrimiento, XP y niveles con nombres neutros,
+  insignias ligadas a competencias (óxidos, sales, cursos completos…), racha
+  **semanal** (no diaria), retos por curso y del profesorado, desafío de
+  fórmula al azar, y una **meta cooperativa de clase** con lo último que han
+  descubierto los compañeros. Sin ranking individual público.
+- **Panel del profesorado**: alumnado (renombrar, quitar), números de la
+  clase, actividad de 14 días (gráfica con tabla alternativa), qué moléculas
+  tiene la clase (buenas candidatas para retos) y creación de retos.

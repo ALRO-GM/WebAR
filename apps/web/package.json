@@ -11,6 +11,7 @@
   "dependencies": {
     "@webar/ar-core": "*",
     "@webar/chem": "*",
+    "qrcode-generator": "^2.0.4",
     "three": "^0.187.0"
   }
 }

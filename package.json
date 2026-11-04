@@ -4,16 +4,19 @@
   "type": "module",
   "workspaces": [
     "packages/*",
-    "apps/*"
+    "apps/*",
+    "server"
   ],
   "scripts": {
     "dev": "npm run dev -w @webar/web",
     "build": "npm run build -w @webar/web",
     "preview": "npm run preview -w @webar/web",
-    "check": "tsc --noEmit -p packages/ar-core && tsc --noEmit -p packages/chem && tsc --noEmit -p apps/web",
-    "test": "vitest run"
+    "check": "tsc --noEmit -p packages/ar-core && tsc --noEmit -p packages/chem && tsc --noEmit -p apps/web && tsc --noEmit -p server",
+    "test": "vitest run",
+    "server": "npm run build && STATIC_DIR=apps/web/dist DB_PATH=.datos/webar.db node --disable-warning=ExperimentalWarning server/src/main.ts"
   },
   "devDependencies": {
+    "@types/node": "^22.20.5",
     "@types/three": "^0.187.0",
     "typescript": "^7.0.2",
     "vite": "^8.3.5",

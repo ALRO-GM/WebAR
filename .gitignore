@@ -5,3 +5,4 @@ dist/
 infra/deploy.log
 .claude/settings.local.json
 .claude/worktrees/
+.datos/

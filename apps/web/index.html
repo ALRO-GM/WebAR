@@ -16,34 +16,89 @@
     <!-- La capa que se ve encima de la cámara (dom-overlay de WebXR) o del visor. -->
     <div id="overlay">
       <main id="inicio">
-        <img src="/icons/icon.svg" alt="" width="80" height="80" />
-        <h1>WebAR · Átomos</h1>
-        <p>Combina tarjetas de átomos y forma moléculas en realidad aumentada.</p>
+        <header class="perfil" aria-label="Tu progreso">
+          <img src="/icons/icon.svg" alt="" width="44" height="44" />
+          <div class="perfil-texto">
+            <p class="perfil-nivel"><b id="perfil-nivel"></b> · <span id="perfil-nombre-nivel"></span></p>
+            <div class="xp" role="progressbar" aria-labelledby="perfil-nivel" id="perfil-barra"><div></div></div>
+            <p class="pequeno"><span id="perfil-xp"></span> · <span id="perfil-racha"></span></p>
+          </div>
+          <span id="estado-red" class="estado-red" role="status"></span>
+        </header>
 
-        <section class="modos">
-          <button id="entrar-tarjetas" type="button" class="modo">
-            <b>🃏 Tarjetas con la cámara</b>
-            <span>Apunta a las tarjetas impresas y júntalas para que reaccionen.</span>
-          </button>
-          <button id="entrar-mesa" type="button" class="modo">
-            <b>🧪 Mesa virtual</b>
-            <span>Las mismas reacciones arrastrando tarjetas por la pantalla, sin imprimir nada.</span>
-          </button>
-          <button id="entrar-3d" type="button" class="modo">
-            <b>⚛️ Explorar átomos</b>
-            <span>Los 118 elementos en 3D: modelo de Bohr y orbitales.</span>
-          </button>
-          <button id="entrar-ra" type="button" class="modo" disabled>
-            <b>📱 Átomos sobre la mesa</b>
-            <span id="entrar-ra-texto">Comprobando el móvil…</span>
-          </button>
+        <nav class="pestanas" role="tablist" aria-label="Secciones">
+          <button role="tab" id="tab-jugar" aria-controls="p-jugar" aria-selected="true" data-t="inicio.jugar"></button>
+          <button role="tab" id="tab-moleculario" aria-controls="p-moleculario" aria-selected="false" data-t="inicio.moleculario"></button>
+          <button role="tab" id="tab-tabla" aria-controls="p-tabla" aria-selected="false" data-t="inicio.tabla"></button>
+          <button role="tab" id="tab-retos" aria-controls="p-retos" aria-selected="false" data-t="inicio.retos"></button>
+          <button role="tab" id="tab-clase" aria-controls="p-clase" aria-selected="false" data-t="inicio.clase"></button>
+          <button role="tab" id="tab-logros" aria-controls="p-logros" aria-selected="false" data-t="inicio.logros"></button>
+        </nav>
+
+        <section id="p-jugar" role="tabpanel" aria-labelledby="tab-jugar" class="panel">
+          <p id="reto-activo" class="reto-activo" hidden></p>
+          <div class="modos">
+            <button id="entrar-tarjetas" type="button" class="modo">
+              <b>🃏 Tarjetas con la cámara</b>
+              <span>Apunta a las tarjetas impresas y júntalas para que reaccionen.</span>
+            </button>
+            <button id="entrar-mesa" type="button" class="modo">
+              <b>🧪 Mesa virtual</b>
+              <span>Las mismas reacciones arrastrando tarjetas por la pantalla, sin imprimir nada.</span>
+            </button>
+            <button id="entrar-3d" type="button" class="modo">
+              <b>⚛️ Explorar átomos</b>
+              <span>Los elementos que tienes, en 3D: modelo de Bohr y orbitales.</span>
+            </button>
+            <button id="entrar-ra" type="button" class="modo" disabled>
+              <b>📱 Átomos sobre la mesa</b>
+              <span id="entrar-ra-texto">Comprobando el móvil…</span>
+            </button>
+          </div>
+          <p class="enlaces"><a href="/cartas.html">🖨️ Imprimir tarjetas</a> · <a href="/profesor.html">👩‍🏫 Soy profe</a></p>
+          <p id="aviso" role="status"></p>
+          <button id="instalar" type="button" class="secundario" hidden>Instalar la app</button>
+          <p id="instalar-ios" class="pista" hidden>Para instalarla en iPhone: botón Compartir → «Añadir a pantalla de inicio».</p>
         </section>
 
-        <p class="enlaces"><a href="/cartas.html">🖨️ Imprimir tarjetas</a></p>
-        <p id="aviso" role="status"></p>
-        <button id="instalar" type="button" class="secundario" hidden>Instalar la app</button>
-        <p id="instalar-ios" class="pista" hidden>Para instalarla en iPhone: botón Compartir → «Añadir a pantalla de inicio».</p>
+        <section id="p-moleculario" role="tabpanel" aria-labelledby="tab-moleculario" class="panel" hidden>
+          <h2 data-t="moleculario.titulo"></h2>
+          <p id="moleculario-progreso" class="pequeno"></p>
+          <div id="moleculario" class="coleccion"></div>
+        </section>
+
+        <section id="p-tabla" role="tabpanel" aria-labelledby="tab-tabla" class="panel" hidden>
+          <h2 data-t="tabla.titulo"></h2>
+          <p class="pequeno"><span id="tabla-progreso"></span> · <span data-t="tabla.explicacion"></span></p>
+          <div class="tabla-scroll"><div id="tabla-progresiva" class="tabla-celdas"></div></div>
+        </section>
+
+        <section id="p-retos" role="tabpanel" aria-labelledby="tab-retos" class="panel" hidden>
+          <div id="retos"></div>
+        </section>
+
+        <section id="p-clase" role="tabpanel" aria-labelledby="tab-clase" class="panel" hidden>
+          <div id="clase"></div>
+          <div class="tarjeta-panel">
+            <h3 data-t="offline.titulo"></h3>
+            <p class="pequeno" data-t="offline.texto"></p>
+            <button id="offline-boton" type="button" class="secundario" data-t="offline.boton"></button>
+            <p id="offline-estado" class="pequeno" role="status"></p>
+          </div>
+        </section>
+
+        <section id="p-logros" role="tabpanel" aria-labelledby="tab-logros" class="panel" hidden>
+          <h2 data-t="logros.titulo"></h2>
+          <div id="logros" class="coleccion"></div>
+        </section>
       </main>
+
+      <dialog id="detalle" class="detalle" aria-labelledby="detalle-titulo">
+        <div id="detalle-contenido"></div>
+        <form method="dialog"><button class="secundario" data-t="comun.cerrar"></button></form>
+      </dialog>
+
+      <div id="avisos" class="avisos" aria-live="polite"></div>
 
       <div id="hud-tarjetas" hidden>
         <p id="t-estado" class="burbuja burbuja-arriba"></p>
@@ -52,6 +107,7 @@
           <p id="t-banner-ecuacion" class="banner-ecuacion"></p>
           <p id="t-banner-texto" class="banner-texto"></p>
         </section>
+        <p id="t-reto" class="reto-juego" hidden></p>
         <section id="t-carga" class="carga" hidden>
           <p id="t-carga-ecuacion"></p>
           <div class="progreso"><div></div></div>

@@ -16,6 +16,12 @@ export interface CardsModeDeps {
   model: () => AtomModel;
   /** Abre la tabla periódica y llama a `onPick` con el símbolo elegido. */
   pickElement: (onPick: (symbol: string) => void) => void;
+  /** Para el progreso del alumno: qué se ha formado. */
+  onReaction?: (outcome: Outcome, products: string[]) => void;
+  /** Elementos disponibles en la mesa virtual (los desbloqueados). */
+  isUnlocked?: (symbol: string) => boolean;
+  /** El reto en juego: texto para el HUD y átomos que hacen falta en la mesa. */
+  challenge?: () => { label: string; atoms: string[] } | null;
 }
 
 /** Las cartas por defecto en la mesa virtual. */
@@ -51,7 +57,10 @@ export class CardsMode {
       const spec = cardById(id);
       if (this.active && spec) this.game.addCard(spec, anchor);
     });
-    this.game.on('reaction', ({ outcome }) => this.showReaction(outcome));
+    this.game.on('reaction', ({ outcome, products }) => {
+      this.showReaction(outcome);
+      deps.onReaction?.(outcome, products);
+    });
     this.game.on('decompose', ({ from, to }) =>
       this.showBanner(
         'Descomposición',
@@ -121,6 +130,9 @@ export class CardsMode {
         : 'Junta dos o más tarjetas que reaccionen y mantenlas juntas 3 segundos.';
 
     if (this.bannerTimer > 0 && (this.bannerTimer -= dt) <= 0) $('t-banner').hidden = true;
+    const challenge = this.deps.challenge?.();
+    $('t-reto').hidden = !challenge;
+    if (challenge && $('t-reto').textContent !== challenge.label) $('t-reto').textContent = challenge.label;
   }
 
   // --- HUD ------------------------------------------------------------------
@@ -221,7 +233,7 @@ export class CardsMode {
       canvas.addEventListener('pointercancel', this.onPointerUp);
     }
     viewer.setView(new THREE.Vector3(0, 0.38, 0.3), new THREE.Vector3(0, 0, 0.02));
-    const cards = this.initialCards;
+    const cards = this.tableCards();
     const columns = this.together ? cards.length : Math.min(6, cards.length);
     const spacing = this.together ? CARD.width + 0.004 : CARD.width + 0.03;
     cards.forEach((symbol, i) => {
@@ -231,6 +243,17 @@ export class CardsMode {
       const z = (row - (Math.ceil(cards.length / columns) - 1) / 2) * (CARD.height + 0.02);
       this.addVirtualCard(symbol, new THREE.Vector3(x, 0, z));
     });
+  }
+
+  /** Las tarjetas de la mesa: las pedidas (o las de siempre que estén desbloqueadas) y las que pida el reto. */
+  private tableCards(): string[] {
+    const unlocked = this.deps.isUnlocked ?? (() => true);
+    const base = this.initialCards === DEFAULT_TABLE ? DEFAULT_TABLE.filter(unlocked) : [...this.initialCards];
+    for (const atom of this.deps.challenge?.()?.atoms ?? []) {
+      const need = (this.deps.challenge!()!.atoms.filter((a) => a === atom).length);
+      while (base.filter((b) => b === atom).length < need) base.push(atom);
+    }
+    return base;
   }
 
   private addVirtualCard(symbol: string, position?: THREE.Vector3): void {

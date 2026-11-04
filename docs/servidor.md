@@ -8,7 +8,8 @@ tiene su carpeta, su compose y sus contenedores.
 | Máquina | Oracle Cloud, `eu-madrid-1`, VM.Standard.A1.Flex (ARM): 4 OCPU, 24 GB, 200 GB. Es el máximo gratuito: no pedir más |
 | Acceso | `ssh ubuntu@51.170.34.214` (la clave de Alberto ya está en local) |
 | Carpeta | `/opt/webar` (clon de `https://github.com/ALRO-GM/WebAR.git`, rama `main`) |
-| Contenedor | `webar-web-1` (compose `webar`, servicio `web`), imagen `webar:local` y `webar:previous` |
+| Contenedor | `webar-web-1` (compose `webar`, servicio `web`), imagen `webar:local` y `webar:previous`: Node sirve la PWA, la API de clases y `/health` |
+| Datos | Volumen `webar_datos` montado en `/data` (SQLite `webar.db`: profesorado, clases, alias del alumnado y su progreso) |
 | Dominio | `webar.peer4u.app`, registro `A` en Cloudflare a `51.170.34.214`, nube gris (sin proxy) |
 | HTTPS | El Caddy de Peer4U (`sanatorio-caddy-1`) pide y renueva el certificado solo |
 | Registro de despliegues | `/opt/webar/infra/deploy.log` |
@@ -54,6 +55,21 @@ Nunca:
 - Abrir puertos nuevos o publicar puertos del contenedor. Todo entra por
   Caddy (80/443).
 - Cambiar la máquina en Oracle.
+
+## La base de datos
+
+SQLite (el de Node, sin dependencias) en el volumen `webar_datos`. Copia en
+caliente (WAL), desde la máquina:
+
+```sh
+ssh ubuntu@51.170.34.214 'cd /opt/webar/infra && docker compose exec -T web node -e "
+const {DatabaseSync}=require(\"node:sqlite\");new DatabaseSync(\"/data/webar.db\").exec(\"vacuum into \x27/tmp/copia.db\x27\")
+" && docker compose cp web:/tmp/copia.db ./webar-$(date +%F).db' < /dev/null
+```
+
+Datos personales: solo correo y nombre del profesorado; del alumnado, un alias
+y su progreso (guía de la AEPD para centros). Borrar una clase borra todo lo
+suyo.
 
 ## Recursos
 

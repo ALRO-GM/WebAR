@@ -1,0 +1,1018 @@
+{
+ "perfil.nivel": {
+  "texto": "Nivel {nivel}",
+  "descripcion": "Etiqueta del nivel del alumno en la cabecera; {nivel} es un número"
+ },
+ "perfil.xp": {
+  "texto": "{xp} XP",
+  "descripcion": "Puntos de experiencia acumulados"
+ },
+ "perfil.xp_siguiente": {
+  "texto": "{faltan} XP para el siguiente nivel",
+  "descripcion": "Debajo de la barra de nivel"
+ },
+ "perfil.racha": {
+  "texto": "🔥 {semanas} semanas seguidas",
+  "descripcion": "Racha semanal de uso (al menos un día por semana)"
+ },
+ "perfil.racha_cero": {
+  "texto": "Empieza tu racha esta semana",
+  "descripcion": "Cuando no hay racha"
+ },
+ "nivel.0": {
+  "texto": "Átomo curioso",
+  "descripcion": "Nombre del nivel 1 (neutro en género)"
+ },
+ "nivel.1": {
+  "texto": "Aprendiz de laboratorio",
+  "descripcion": "Nombre del nivel 2 (neutro en género)"
+ },
+ "nivel.2": {
+  "texto": "Manos de probeta",
+  "descripcion": "Nombre del nivel 3 (neutro en género)"
+ },
+ "nivel.3": {
+  "texto": "Formulación en marcha",
+  "descripcion": "Nombre del nivel 4 (neutro en género)"
+ },
+ "nivel.4": {
+  "texto": "Mente sintética",
+  "descripcion": "Nombre del nivel 5 (neutro en género)"
+ },
+ "nivel.5": {
+  "texto": "Alquimia moderna",
+  "descripcion": "Nombre del nivel 6 (neutro en género)"
+ },
+ "nivel.6": {
+  "texto": "Bata blanca",
+  "descripcion": "Nombre del nivel 7 (neutro en género)"
+ },
+ "nivel.7": {
+  "texto": "Investigación de élite",
+  "descripcion": "Nombre del nivel 8 (neutro en género)"
+ },
+ "nivel.8": {
+  "texto": "Rumbo al Nobel",
+  "descripcion": "Nombre del nivel 9 (neutro en género)"
+ },
+ "nivel.9": {
+  "texto": "Leyenda de la tabla",
+  "descripcion": "Nombre del nivel 10 (neutro en género)"
+ },
+ "inicio.jugar": {
+  "texto": "Jugar",
+  "descripcion": "Pestaña con los modos de juego"
+ },
+ "inicio.moleculario": {
+  "texto": "Moleculario",
+  "descripcion": "Pestaña con la colección de moléculas"
+ },
+ "inicio.tabla": {
+  "texto": "Tabla",
+  "descripcion": "Pestaña con la tabla periódica por desbloquear"
+ },
+ "inicio.retos": {
+  "texto": "Retos",
+  "descripcion": "Pestaña con los retos"
+ },
+ "inicio.clase": {
+  "texto": "Clase",
+  "descripcion": "Pestaña de la clase (unirse, compañeros)"
+ },
+ "inicio.logros": {
+  "texto": "Logros",
+  "descripcion": "Pestaña de insignias"
+ },
+ "moleculario.titulo": {
+  "texto": "Moleculario",
+  "descripcion": "Título de la colección de moléculas"
+ },
+ "moleculario.progreso": {
+  "texto": "{tienes} de {total} descubiertas",
+  "descripcion": "Contador de la colección"
+ },
+ "moleculario.bloqueada": {
+  "texto": "¿?",
+  "descripcion": "Lo que se ve en vez de la fórmula de una molécula sin descubrir"
+ },
+ "moleculario.pista_atomos": {
+  "texto": "{n} átomos",
+  "descripcion": "Pista: número de átomos de una molécula bloqueada"
+ },
+ "moleculario.pista_elemento": {
+  "texto": "Lleva {elemento}",
+  "descripcion": "Pista: un elemento que contiene"
+ },
+ "moleculario.como": {
+  "texto": "Cómo se forma",
+  "descripcion": "Encabezado: qué átomos juntar"
+ },
+ "moleculario.historia": {
+  "texto": "Su historia",
+  "descripcion": "Encabezado de la historia del descubrimiento"
+ },
+ "moleculario.hoy": {
+  "texto": "Hoy",
+  "descripcion": "Encabezado de para qué se usa hoy"
+ },
+ "moleculario.curso": {
+  "texto": "Se estudia en {curso}",
+  "descripcion": "Curso en el que se estudia"
+ },
+ "curso.2ESO": {
+  "texto": "2.º ESO",
+  "descripcion": "Nombre corto del curso"
+ },
+ "curso.3ESO": {
+  "texto": "3.º ESO",
+  "descripcion": "Nombre corto del curso"
+ },
+ "curso.4ESO": {
+  "texto": "4.º ESO",
+  "descripcion": "Nombre corto del curso"
+ },
+ "curso.1BACH": {
+  "texto": "1.º Bachillerato",
+  "descripcion": "Nombre corto del curso"
+ },
+ "tabla.titulo": {
+  "texto": "Tu tabla periódica",
+  "descripcion": "Título de la tabla por desbloquear"
+ },
+ "tabla.progreso": {
+  "texto": "{tienes} de 118 elementos",
+  "descripcion": "Contador de elementos desbloqueados"
+ },
+ "tabla.explicacion": {
+  "texto": "Cada molécula nueva desbloquea elementos. Empiezas con H, C, N y O.",
+  "descripcion": "Explicación del desbloqueo"
+ },
+ "tabla.bloqueado": {
+  "texto": "Elemento bloqueado: descubre más moléculas para conseguirlo",
+  "descripcion": "Aviso al tocar un elemento bloqueado"
+ },
+ "elemento.antiguedad": {
+  "texto": "Conocido desde la Antigüedad.",
+  "descripcion": "Historia por defecto de un elemento antiguo"
+ },
+ "elemento.descubierto": {
+  "texto": "Descubierto en {anio}.",
+  "descripcion": "Historia por defecto de un elemento con año"
+ },
+ "retos.titulo": {
+  "texto": "Retos",
+  "descripcion": "Título de la sección"
+ },
+ "retos.clase": {
+  "texto": "Retos de tu clase",
+  "descripcion": "Retos que pone el profesor"
+ },
+ "retos.curso": {
+  "texto": "Retos por curso",
+  "descripcion": "Retos ya incluidos, uno por curso"
+ },
+ "retos.formula": {
+  "texto": "Desafío de fórmula",
+  "descripcion": "Reto rápido: formar una fórmula al azar"
+ },
+ "retos.formula_texto": {
+  "texto": "Te damos una fórmula; fórmala con las tarjetas o en la mesa.",
+  "descripcion": "Explicación del desafío de fórmula"
+ },
+ "retos.jugar": {
+  "texto": "Jugar",
+  "descripcion": "Botón para empezar un reto"
+ },
+ "retos.completado": {
+  "texto": "¡Completado!",
+  "descripcion": "Estado de un reto superado"
+ },
+ "retos.progreso": {
+  "texto": "{tienes}/{total}",
+  "descripcion": "Progreso de un reto"
+ },
+ "retos.hasta": {
+  "texto": "Hasta el {fecha}",
+  "descripcion": "Fecha límite de un reto"
+ },
+ "retos.activo": {
+  "texto": "Reto: forma {formula}",
+  "descripcion": "Aviso en el juego con el objetivo actual"
+ },
+ "retos.ninguno": {
+  "texto": "Tu profe aún no ha puesto retos.",
+  "descripcion": "Sin retos de clase"
+ },
+ "reto.curso.titulo": {
+  "texto": "Moléculas de {curso}",
+  "descripcion": "Título de un reto de curso"
+ },
+ "clase.unirse": {
+  "texto": "Únete a tu clase",
+  "descripcion": "Título del formulario para unirse"
+ },
+ "clase.unirse_texto": {
+  "texto": "Pide el código a tu profe. Elige un alias (no tu nombre real) y un PIN de 4 números para entrar desde otro móvil.",
+  "descripcion": "Explicación de cómo unirse, con aviso de privacidad"
+ },
+ "clase.codigo": {
+  "texto": "Código de la clase",
+  "descripcion": "Campo"
+ },
+ "clase.alias": {
+  "texto": "Tu alias",
+  "descripcion": "Campo: apodo del alumno"
+ },
+ "clase.pin": {
+  "texto": "PIN (4 números)",
+  "descripcion": "Campo"
+ },
+ "clase.entrar": {
+  "texto": "Entrar",
+  "descripcion": "Botón"
+ },
+ "clase.salir": {
+  "texto": "Salir de la clase",
+  "descripcion": "Botón"
+ },
+ "clase.meta": {
+  "texto": "Meta de la clase: {tienen} de {total} moléculas",
+  "descripcion": "Meta cooperativa: moléculas descubiertas entre todos"
+ },
+ "clase.actividad": {
+  "texto": "Lo último en tu clase",
+  "descripcion": "Encabezado del feed de la clase"
+ },
+ "clase.descubrio": {
+  "texto": "{alias} descubrió {formula}",
+  "descripcion": "Entrada del feed"
+ },
+ "clase.completo_reto": {
+  "texto": "{alias} completó un reto",
+  "descripcion": "Entrada del feed"
+ },
+ "clase.companeros": {
+  "texto": "{n} en la clase",
+  "descripcion": "Número de alumnos"
+ },
+ "clase.sin_conexion": {
+  "texto": "Sin conexión: tu progreso se guarda en el móvil y se enviará al volver.",
+  "descripcion": "Aviso cuando no hay red"
+ },
+ "clase.pendientes": {
+  "texto": "{n} cosas por enviar",
+  "descripcion": "Eventos pendientes de sincronizar"
+ },
+ "clase.sincronizado": {
+  "texto": "Todo sincronizado",
+  "descripcion": "Estado de sincronización"
+ },
+ "clase.solo": {
+  "texto": "Sin clase: tu progreso se guarda solo en este móvil.",
+  "descripcion": "Uso individual sin clase"
+ },
+ "clase.error_red": {
+  "texto": "No hay conexión. Prueba otra vez cuando tengas internet.",
+  "descripcion": "Error al unirse sin red"
+ },
+ "logros.titulo": {
+  "texto": "Logros",
+  "descripcion": "Título de la sección"
+ },
+ "insignia.primera.nombre": {
+  "texto": "Primera molécula",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.primera.descripcion": {
+  "texto": "Forma tu primera molécula",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.agua.nombre": {
+  "texto": "Fuente de vida",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.agua.descripcion": {
+  "texto": "Forma agua",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.aire.nombre": {
+  "texto": "Lo que respiras",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.aire.descripcion": {
+  "texto": "Forma N₂, O₂ y CO₂, los gases del aire",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.fuego.nombre": {
+  "texto": "Pirotecnia",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.fuego.descripcion": {
+  "texto": "Haz 5 reacciones exotérmicas",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.hielo.nombre": {
+  "texto": "Criogenia",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.hielo.descripcion": {
+  "texto": "Haz 3 reacciones endotérmicas",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.oxidos.nombre": {
+  "texto": "Maestría en óxidos",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.oxidos.descripcion": {
+  "texto": "Descubre todos los óxidos",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.sales.nombre": {
+  "texto": "Salero",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.sales.descripcion": {
+  "texto": "Descubre todas las sales",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.acidos.nombre": {
+  "texto": "Ácido total",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.acidos.descripcion": {
+  "texto": "Descubre todos los hidrácidos y el ácido nítrico",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.industria.nombre": {
+  "texto": "Química industrial",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.industria.descripcion": {
+  "texto": "Haz la síntesis de Haber y el método de contacto",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.curso-2ESO.nombre": {
+  "texto": "2.º ESO completo",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.curso-2ESO.descripcion": {
+  "texto": "Todas las moléculas de 2.º ESO",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.curso-3ESO.nombre": {
+  "texto": "3.º ESO completo",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.curso-3ESO.descripcion": {
+  "texto": "Todas las moléculas de 3.º ESO",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.curso-4ESO.nombre": {
+  "texto": "4.º ESO completo",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.curso-4ESO.descripcion": {
+  "texto": "Todas las moléculas de 4.º ESO",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.curso-1BACH.nombre": {
+  "texto": "1.º Bachillerato completo",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.curso-1BACH.descripcion": {
+  "texto": "Todas las moléculas de 1.º Bachillerato",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.coleccion.nombre": {
+  "texto": "Coleccionista",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.coleccion.descripcion": {
+  "texto": "Descubre 25 moléculas",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.todas.nombre": {
+  "texto": "Moleculario completo",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.todas.descripcion": {
+  "texto": "Descubre todas las moléculas",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.tabla.nombre": {
+  "texto": "La tabla entera",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.tabla.descripcion": {
+  "texto": "Desbloquea los 118 elementos",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.retos.nombre": {
+  "texto": "A por todas",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.retos.descripcion": {
+  "texto": "Completa 3 retos",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "insignia.racha.nombre": {
+  "texto": "Constancia",
+  "descripcion": "Nombre de una insignia"
+ },
+ "insignia.racha.descripcion": {
+  "texto": "4 semanas seguidas aprendiendo",
+  "descripcion": "Cómo se consigue la insignia"
+ },
+ "celebrar.molecula": {
+  "texto": "¡Nueva molécula!",
+  "descripcion": "Título al descubrir una molécula"
+ },
+ "celebrar.elementos": {
+  "texto": "Nuevos elementos: {lista}",
+  "descripcion": "Elementos desbloqueados"
+ },
+ "celebrar.insignia": {
+  "texto": "Insignia: {nombre}",
+  "descripcion": "Insignia conseguida"
+ },
+ "celebrar.nivel": {
+  "texto": "¡Subes a nivel {nivel}: {nombre}!",
+  "descripcion": "Subida de nivel"
+ },
+ "celebrar.reto": {
+  "texto": "¡Reto superado!",
+  "descripcion": "Reto completado"
+ },
+ "comun.cerrar": {
+  "texto": "Cerrar",
+  "descripcion": "Botón genérico"
+ },
+ "comun.vale": {
+  "texto": "¡Vale!",
+  "descripcion": "Botón para cerrar una celebración"
+ },
+ "offline.titulo": {
+  "texto": "Usar sin internet",
+  "descripcion": "Título del ajuste de descarga"
+ },
+ "offline.texto": {
+  "texto": "La app ya funciona sin conexión. Instálala y pulsa el botón para que el móvil no borre tus datos.",
+  "descripcion": "Explicación"
+ },
+ "offline.boton": {
+  "texto": "Guardar en este móvil",
+  "descripcion": "Botón que pide almacenamiento persistente"
+ },
+ "offline.ok": {
+  "texto": "✓ Lista para usar sin internet",
+  "descripcion": "Estado: datos persistentes"
+ },
+ "offline.no": {
+  "texto": "El navegador puede borrar tus datos si falta espacio. Instala la app para evitarlo.",
+  "descripcion": "Estado: sin persistencia"
+ },
+ "especie.H2.historia": {
+  "texto": "Henry Cavendish lo aisló en 1766 y lo llamó «aire inflamable». Lavoisier le dio su nombre: «el que genera agua».",
+  "descripcion": "Historia del descubrimiento de H2"
+ },
+ "especie.O2.historia": {
+  "texto": "Scheele (hacia 1772) y Priestley (1774) lo descubrieron por separado. Lavoisier entendió con él qué es arder.",
+  "descripcion": "Historia del descubrimiento de O2"
+ },
+ "especie.N2.historia": {
+  "texto": "Daniel Rutherford lo aisló en 1772: el «aire nocivo» que queda cuando una vela se apaga en un recipiente cerrado.",
+  "descripcion": "Historia del descubrimiento de N2"
+ },
+ "especie.F2.historia": {
+  "texto": "Henri Moissan lo aisló en 1886 tras décadas de intentos peligrosos de muchos químicos. Le valió el Nobel de 1906.",
+  "descripcion": "Historia del descubrimiento de F2"
+ },
+ "especie.Cl2.historia": {
+  "texto": "Scheele lo obtuvo en 1774; Humphry Davy demostró en 1810 que era un elemento y lo llamó por su color (chloros, verde).",
+  "descripcion": "Historia del descubrimiento de Cl2"
+ },
+ "especie.Br2.historia": {
+  "texto": "Antoine-Jérôme Balard lo descubrió en 1826 en las salinas de Montpellier. Su nombre viene del griego «hedor».",
+  "descripcion": "Historia del descubrimiento de Br2"
+ },
+ "especie.I2.historia": {
+  "texto": "Bernard Courtois lo descubrió en 1811 en cenizas de algas, mientras fabricaba salitre para pólvora.",
+  "descripcion": "Historia del descubrimiento de I2"
+ },
+ "especie.O3.historia": {
+  "texto": "Christian Schönbein lo identificó en 1840 por el olor que dejaban las chispas eléctricas (ozein: oler).",
+  "descripcion": "Historia del descubrimiento de O3"
+ },
+ "especie.H2O.historia": {
+  "texto": "Cavendish la formó quemando hidrógeno en 1781 y Lavoisier demostró que no era un elemento, sino hidrógeno y oxígeno.",
+  "descripcion": "Historia del descubrimiento de H2O"
+ },
+ "especie.H2O2.historia": {
+  "texto": "Louis Jacques Thénard lo preparó por primera vez en 1818.",
+  "descripcion": "Historia del descubrimiento de H2O2"
+ },
+ "especie.CO.historia": {
+  "texto": "William Cruickshank demostró en 1800 que era carbono y oxígeno. Es incoloro e inodoro: por eso los detectores salvan vidas.",
+  "descripcion": "Historia del descubrimiento de CO"
+ },
+ "especie.CO2.historia": {
+  "texto": "Joseph Black lo identificó hacia 1754 y lo llamó «aire fijo». Fue uno de los primeros gases distintos del aire que se estudiaron.",
+  "descripcion": "Historia del descubrimiento de CO2"
+ },
+ "especie.CH4.historia": {
+  "texto": "Alessandro Volta lo descubrió en 1776 en las burbujas de los pantanos del lago Mayor.",
+  "descripcion": "Historia del descubrimiento de CH4"
+ },
+ "especie.C2H2.historia": {
+  "texto": "Edmund Davy lo descubrió en 1836 y Marcellin Berthelot le dio el nombre en 1860.",
+  "descripcion": "Historia del descubrimiento de C2H2"
+ },
+ "especie.HCN.historia": {
+  "texto": "Scheele lo obtuvo en 1782 a partir del pigmento azul de Prusia.",
+  "descripcion": "Historia del descubrimiento de HCN"
+ },
+ "especie.CH2O.historia": {
+  "texto": "Aleksandr Butlerov lo describió en 1859 y August von Hofmann lo identificó bien en 1867.",
+  "descripcion": "Historia del descubrimiento de CH2O"
+ },
+ "especie.CS2.historia": {
+  "texto": "Wilhelm Lampadius lo preparó en 1796 calentando pirita con carbón.",
+  "descripcion": "Historia del descubrimiento de CS2"
+ },
+ "especie.CCl4.historia": {
+  "texto": "Henri Victor Regnault lo preparó en 1839. Se usó en extintores y tintorerías hasta que se supo que era tóxico.",
+  "descripcion": "Historia del descubrimiento de CCl4"
+ },
+ "especie.NH3.historia": {
+  "texto": "Priestley aisló el «aire alcalino» en 1774. Fritz Haber y Carl Bosch lo fabricaron a lo grande desde 1913.",
+  "descripcion": "Historia del descubrimiento de NH3"
+ },
+ "especie.NO.historia": {
+  "texto": "Priestley lo estudió en 1772. En 1998 se dio el Nobel por descubrir que nuestro cuerpo lo usa como mensajero.",
+  "descripcion": "Historia del descubrimiento de NO"
+ },
+ "especie.NO2.historia": {
+  "texto": "Se conoce desde los estudios de Priestley en el siglo XVIII. Es el color pardo del aire contaminado de las ciudades.",
+  "descripcion": "Historia del descubrimiento de NO2"
+ },
+ "especie.N2O.historia": {
+  "texto": "Priestley lo obtuvo en 1772 y Humphry Davy describió en 1799 sus efectos: el «gas de la risa».",
+  "descripcion": "Historia del descubrimiento de N2O"
+ },
+ "especie.HNO3.historia": {
+  "texto": "Los alquimistas medievales lo llamaban «agua fuerte» porque disolvía la plata. Glauber lo preparó en el siglo XVII.",
+  "descripcion": "Historia del descubrimiento de HNO3"
+ },
+ "especie.HF.historia": {
+  "texto": "Scheele lo obtuvo en 1771 atacando la fluorita con ácido.",
+  "descripcion": "Historia del descubrimiento de HF"
+ },
+ "especie.HCl.historia": {
+  "texto": "Los alquimistas lo llamaban «espíritu de sal». Priestley aisló el gas en 1772.",
+  "descripcion": "Historia del descubrimiento de HCl"
+ },
+ "especie.HBr.historia": {
+  "texto": "Se preparó poco después de descubrirse el bromo, en el siglo XIX.",
+  "descripcion": "Historia del descubrimiento de HBr"
+ },
+ "especie.HI.historia": {
+  "texto": "Se preparó poco después de descubrirse el yodo, en el siglo XIX.",
+  "descripcion": "Historia del descubrimiento de HI"
+ },
+ "especie.H2S.historia": {
+  "texto": "Scheele lo estudió en 1777. Lo producen las bacterias y los volcanes.",
+  "descripcion": "Historia del descubrimiento de H2S"
+ },
+ "especie.SO2.historia": {
+  "texto": "Se conoce desde la Antigüedad: quemar azufre para desinfectar ya aparece en los textos griegos.",
+  "descripcion": "Historia del descubrimiento de SO2"
+ },
+ "especie.SO3.historia": {
+  "texto": "Peregrine Phillips patentó en 1831 el método de contacto, que hoy fabrica el producto químico más usado del mundo: el ácido sulfúrico.",
+  "descripcion": "Historia del descubrimiento de SO3"
+ },
+ "especie.SiO2.historia": {
+  "texto": "El cuarzo se conoce desde siempre y el vidrio se fabrica desde hace unos 4500 años en Mesopotamia.",
+  "descripcion": "Historia del descubrimiento de SiO2"
+ },
+ "especie.NaCl.historia": {
+  "texto": "La sal se usa desde la Prehistoria para conservar alimentos. Según la tradición, «salario» viene de ella.",
+  "descripcion": "Historia del descubrimiento de NaCl"
+ },
+ "especie.KCl.historia": {
+  "texto": "Es el mineral silvina. Casi todo se usa como abono.",
+  "descripcion": "Historia del descubrimiento de KCl"
+ },
+ "especie.NaF.historia": {
+  "texto": "Desde 1945 se añade flúor al agua o a la pasta de dientes para proteger el esmalte.",
+  "descripcion": "Historia del descubrimiento de NaF"
+ },
+ "especie.AgCl.historia": {
+  "texto": "Base de la fotografía del siglo XIX: la luz lo oscurece y así se formaban las imágenes.",
+  "descripcion": "Historia del descubrimiento de AgCl"
+ },
+ "especie.MgCl2.historia": {
+  "texto": "Se saca del agua de mar; en Japón se usa para cuajar el tofu.",
+  "descripcion": "Historia del descubrimiento de MgCl2"
+ },
+ "especie.CaCl2.historia": {
+  "texto": "Atrapa la humedad y baja el punto de congelación del agua.",
+  "descripcion": "Historia del descubrimiento de CaCl2"
+ },
+ "especie.ZnCl2.historia": {
+  "texto": "Se usa desde hace siglos para limpiar los metales antes de soldarlos.",
+  "descripcion": "Historia del descubrimiento de ZnCl2"
+ },
+ "especie.MgO.historia": {
+  "texto": "Joseph Black estudió la «magnesia» en 1755, en los mismos experimentos con los que descubrió el CO₂.",
+  "descripcion": "Historia del descubrimiento de MgO"
+ },
+ "especie.CaO.historia": {
+  "texto": "La cal viva se usa desde hace milenios: los romanos construían con ella.",
+  "descripcion": "Historia del descubrimiento de CaO"
+ },
+ "especie.FeS.historia": {
+  "texto": "Aparece como el mineral troilita en meteoritos y en la Luna.",
+  "descripcion": "Historia del descubrimiento de FeS"
+ },
+ "especie.CuO.historia": {
+  "texto": "Es el mineral tenorita: el polvo negro que se forma al calentar el cobre.",
+  "descripcion": "Historia del descubrimiento de CuO"
+ },
+ "especie.Cu2O.historia": {
+  "texto": "Es el mineral cuprita, rojo intenso.",
+  "descripcion": "Historia del descubrimiento de Cu2O"
+ },
+ "especie.ZnO.historia": {
+  "texto": "Los alquimistas lo llamaban «lana filosófica» por los copos blancos que se forman al quemar cinc.",
+  "descripcion": "Historia del descubrimiento de ZnO"
+ },
+ "especie.Fe2O3.historia": {
+  "texto": "La hematita: el ocre rojo de las pinturas rupestres, como las de Altamira.",
+  "descripcion": "Historia del descubrimiento de Fe2O3"
+ },
+ "especie.Al2O3.historia": {
+  "texto": "Es el corindón: con un poco de cromo es rubí; con hierro y titanio, zafiro.",
+  "descripcion": "Historia del descubrimiento de Al2O3"
+ },
+ "especie.NaOH.historia": {
+  "texto": "La sosa cáustica se fabrica desde el siglo XIX para el jabón, el papel y el vidrio.",
+  "descripcion": "Historia del descubrimiento de NaOH"
+ },
+ "especie.KOH.historia": {
+  "texto": "La «potasa» viene de cocer cenizas de madera en ollas (pot ash, en inglés).",
+  "descripcion": "Historia del descubrimiento de KOH"
+ },
+ "especie.Ca(OH)2.historia": {
+  "texto": "Con ella hacían los romanos sus morteros, que siguen en pie dos mil años después.",
+  "descripcion": "Historia del descubrimiento de Ca(OH)2"
+ },
+ "especie.CaCO3.historia": {
+  "texto": "Caliza, mármol, conchas y perlas. El mármol de Carrara es carbonato de calcio casi puro.",
+  "descripcion": "Historia del descubrimiento de CaCO3"
+ },
+ "elemento.H.historia": {
+  "texto": "Cavendish lo aisló en 1766. Es el elemento más abundante del universo: las estrellas lo queman para brillar.",
+  "descripcion": "Historia del elemento H"
+ },
+ "elemento.He.historia": {
+  "texto": "Se descubrió en 1868 en la luz del Sol, antes que en la Tierra (Ramsay, 1895). Llena globos y enfría las resonancias magnéticas.",
+  "descripcion": "Historia del elemento He"
+ },
+ "elemento.Li.historia": {
+  "texto": "Arfwedson lo descubrió en 1817. Hoy está en las baterías de los móviles y de los coches eléctricos.",
+  "descripcion": "Historia del elemento Li"
+ },
+ "elemento.C.historia": {
+  "texto": "Conocido desde la Prehistoria como carbón. Es la base de la vida: todas las moléculas de tu cuerpo lo llevan.",
+  "descripcion": "Historia del elemento C"
+ },
+ "elemento.N.historia": {
+  "texto": "Rutherford lo aisló en 1772. Está en las proteínas y el ADN, y es el 78 % del aire.",
+  "descripcion": "Historia del elemento N"
+ },
+ "elemento.O.historia": {
+  "texto": "Scheele y Priestley lo descubrieron en la década de 1770. Es casi la mitad de la masa de la corteza terrestre.",
+  "descripcion": "Historia del elemento O"
+ },
+ "elemento.F.historia": {
+  "texto": "Moissan lo aisló en 1886. Protege tus dientes y forma el teflón de las sartenes.",
+  "descripcion": "Historia del elemento F"
+ },
+ "elemento.Ne.historia": {
+  "texto": "Ramsay y Travers lo descubrieron en 1898. Da el brillo rojo de los rótulos luminosos.",
+  "descripcion": "Historia del elemento Ne"
+ },
+ "elemento.Na.historia": {
+  "texto": "Humphry Davy lo aisló en 1807 con electricidad. Explota en agua y es la mitad de la sal.",
+  "descripcion": "Historia del elemento Na"
+ },
+ "elemento.Mg.historia": {
+  "texto": "Davy lo aisló en 1808. Está en el centro de la clorofila de las plantas.",
+  "descripcion": "Historia del elemento Mg"
+ },
+ "elemento.Al.historia": {
+  "texto": "Se aisló en la década de 1820 y fue más caro que el oro hasta 1886: Napoleón III lucía cubiertos de aluminio.",
+  "descripcion": "Historia del elemento Al"
+ },
+ "elemento.Si.historia": {
+  "texto": "Berzelius lo aisló en 1824. Con él se hacen los chips y las placas solares.",
+  "descripcion": "Historia del elemento Si"
+ },
+ "elemento.P.historia": {
+  "texto": "Hennig Brand lo descubrió en 1669 buscando la piedra filosofal en orina: el primer elemento con descubridor conocido.",
+  "descripcion": "Historia del elemento P"
+ },
+ "elemento.S.historia": {
+  "texto": "Conocido desde la Antigüedad como «piedra que arde». Con él se vulcaniza el caucho de las ruedas.",
+  "descripcion": "Historia del elemento S"
+ },
+ "elemento.Cl.historia": {
+  "texto": "Scheele lo obtuvo en 1774 y Davy lo reconoció como elemento en 1810. Potabiliza el agua del grifo.",
+  "descripcion": "Historia del elemento Cl"
+ },
+ "elemento.Ar.historia": {
+  "texto": "Rayleigh y Ramsay lo descubrieron en 1894. Su nombre significa «perezoso»: casi no reacciona. Es el 1 % del aire.",
+  "descripcion": "Historia del elemento Ar"
+ },
+ "elemento.K.historia": {
+  "texto": "Davy lo aisló en 1807, el primer metal obtenido con electricidad. Tus nervios lo necesitan para funcionar.",
+  "descripcion": "Historia del elemento K"
+ },
+ "elemento.Ca.historia": {
+  "texto": "Davy lo aisló en 1808. Forma tus huesos y tus dientes.",
+  "descripcion": "Historia del elemento Ca"
+ },
+ "elemento.V.historia": {
+  "texto": "Andrés Manuel del Río lo descubrió en México en 1801. Endurece el acero de las herramientas.",
+  "descripcion": "Historia del elemento V"
+ },
+ "elemento.Fe.historia": {
+  "texto": "Se trabaja desde la Edad del Hierro, hace más de 3000 años. Es el corazón de la Tierra y lleva el oxígeno en tu sangre.",
+  "descripcion": "Historia del elemento Fe"
+ },
+ "elemento.Cu.historia": {
+  "texto": "Se usa desde hace unos 10 000 años; con estaño forma el bronce. Hoy, los cables eléctricos.",
+  "descripcion": "Historia del elemento Cu"
+ },
+ "elemento.Zn.historia": {
+  "texto": "Se aisló en Europa en 1746 (Marggraf), aunque en la India se conocía antes. Protege el hierro de la corrosión.",
+  "descripcion": "Historia del elemento Zn"
+ },
+ "elemento.Br.historia": {
+  "texto": "Balard lo descubrió en 1826. Es uno de los dos elementos líquidos a temperatura ambiente.",
+  "descripcion": "Historia del elemento Br"
+ },
+ "elemento.Ag.historia": {
+  "texto": "Conocida desde la Antigüedad. Es el mejor conductor eléctrico de todos los metales.",
+  "descripcion": "Historia del elemento Ag"
+ },
+ "elemento.I.historia": {
+  "texto": "Courtois lo descubrió en 1811. Tu tiroides lo necesita: por eso se añade a la sal.",
+  "descripcion": "Historia del elemento I"
+ },
+ "elemento.W.historia": {
+  "texto": "Los hermanos Elhuyar lo aislaron en 1783 en Bergara (Guipúzcoa). Es el metal con el punto de fusión más alto.",
+  "descripcion": "Historia del elemento W"
+ },
+ "elemento.Pt.historia": {
+  "texto": "Antonio de Ulloa lo describió en 1748 en América. No se corroe: se usa en joyería y en los catalizadores de los coches.",
+  "descripcion": "Historia del elemento Pt"
+ },
+ "elemento.Au.historia": {
+  "texto": "Conocido desde la Antigüedad. No se oxida nunca, por eso está en los contactos de la electrónica.",
+  "descripcion": "Historia del elemento Au"
+ },
+ "elemento.Hg.historia": {
+  "texto": "Conocido desde la Antigüedad; el único metal líquido a temperatura ambiente. Almadén (Ciudad Real) fue la mayor mina de mercurio del mundo.",
+  "descripcion": "Historia del elemento Hg"
+ },
+ "elemento.Pb.historia": {
+  "texto": "Los romanos hacían con él las tuberías (plumbum: de ahí «fontanero» en inglés, plumber). Hoy se sabe que es tóxico.",
+  "descripcion": "Historia del elemento Pb"
+ },
+ "elemento.U.historia": {
+  "texto": "Klaproth lo descubrió en 1789. Con sales de uranio descubrió Becquerel la radiactividad en 1896.",
+  "descripcion": "Historia del elemento U"
+ },
+ "profe.titulo": {
+  "texto": "Panel del profesorado",
+  "descripcion": "Título de la página del profesor"
+ },
+ "profe.entrar": {
+  "texto": "Entrar",
+  "descripcion": "Pestaña/botón de inicio de sesión"
+ },
+ "profe.crear_cuenta": {
+  "texto": "Crear cuenta",
+  "descripcion": "Pestaña/botón de registro"
+ },
+ "profe.nombre": {
+  "texto": "Tu nombre",
+  "descripcion": "Campo del registro"
+ },
+ "profe.email": {
+  "texto": "Correo",
+  "descripcion": "Campo"
+ },
+ "profe.password": {
+  "texto": "Contraseña (mínimo 8)",
+  "descripcion": "Campo"
+ },
+ "profe.salir": {
+  "texto": "Cerrar sesión",
+  "descripcion": "Botón"
+ },
+ "profe.hola": {
+  "texto": "Hola, {nombre}",
+  "descripcion": "Saludo"
+ },
+ "profe.clases": {
+  "texto": "Tus clases",
+  "descripcion": "Encabezado de la lista de clases"
+ },
+ "profe.nueva_clase": {
+  "texto": "Nueva clase",
+  "descripcion": "Encabezado del formulario"
+ },
+ "profe.nombre_clase": {
+  "texto": "Nombre (p. ej. 3.º B)",
+  "descripcion": "Campo"
+ },
+ "profe.curso": {
+  "texto": "Curso",
+  "descripcion": "Campo"
+ },
+ "profe.crear": {
+  "texto": "Crear",
+  "descripcion": "Botón"
+ },
+ "profe.ninguna": {
+  "texto": "Aún no tienes clases. Crea una y comparte el código con tu alumnado.",
+  "descripcion": "Sin clases"
+ },
+ "profe.alumnos_n": {
+  "texto": "{n} alumnos",
+  "descripcion": "Número de alumnos de una clase"
+ },
+ "profe.volver": {
+  "texto": "← Tus clases",
+  "descripcion": "Volver a la lista"
+ },
+ "profe.codigo": {
+  "texto": "Código para unirse",
+  "descripcion": "Encabezado del código de clase"
+ },
+ "profe.codigo_texto": {
+  "texto": "Que lo escriban en la app (pestaña Clase) o que escaneen el QR.",
+  "descripcion": "Instrucciones"
+ },
+ "profe.tile.alumnos": {
+  "texto": "Alumnos",
+  "descripcion": "Número destacado"
+ },
+ "profe.tile.moleculas": {
+  "texto": "Moléculas descubiertas",
+  "descripcion": "Número destacado: entre toda la clase"
+ },
+ "profe.tile.reacciones": {
+  "texto": "Reacciones hechas",
+  "descripcion": "Número destacado"
+ },
+ "profe.tile.retos": {
+  "texto": "Retos superados",
+  "descripcion": "Número destacado"
+ },
+ "profe.actividad": {
+  "texto": "Actividad de los últimos 14 días",
+  "descripcion": "Título de la gráfica"
+ },
+ "profe.actividad_eje": {
+  "texto": "acciones por día",
+  "descripcion": "Unidad de la gráfica"
+ },
+ "profe.ver_tabla": {
+  "texto": "Ver como tabla",
+  "descripcion": "Botón alternativo a la gráfica"
+ },
+ "profe.ver_grafica": {
+  "texto": "Ver gráfica",
+  "descripcion": "Botón para volver a la gráfica"
+ },
+ "profe.dia": {
+  "texto": "Día",
+  "descripcion": "Columna"
+ },
+ "profe.acciones": {
+  "texto": "Acciones",
+  "descripcion": "Columna"
+ },
+ "profe.alumnado": {
+  "texto": "Alumnado",
+  "descripcion": "Encabezado de la tabla de alumnos"
+ },
+ "profe.col.alias": {
+  "texto": "Alias",
+  "descripcion": "Columna"
+ },
+ "profe.col.moleculas": {
+  "texto": "Moléculas",
+  "descripcion": "Columna"
+ },
+ "profe.col.reacciones": {
+  "texto": "Reacciones",
+  "descripcion": "Columna"
+ },
+ "profe.col.retos": {
+  "texto": "Retos",
+  "descripcion": "Columna"
+ },
+ "profe.col.ultima": {
+  "texto": "Última vez",
+  "descripcion": "Columna"
+ },
+ "profe.nunca": {
+  "texto": "—",
+  "descripcion": "Sin actividad"
+ },
+ "profe.renombrar": {
+  "texto": "Cambiar alias",
+  "descripcion": "Botón"
+ },
+ "profe.quitar": {
+  "texto": "Quitar",
+  "descripcion": "Botón: quitar alumno de la clase"
+ },
+ "profe.confirmar_quitar": {
+  "texto": "¿Quitar a {alias} de la clase? Se borra su progreso en ella.",
+  "descripcion": "Confirmación"
+ },
+ "profe.nuevo_alias": {
+  "texto": "Nuevo alias para {alias}",
+  "descripcion": "Pregunta"
+ },
+ "profe.sin_alumnos": {
+  "texto": "Nadie se ha unido todavía.",
+  "descripcion": "Tabla vacía"
+ },
+ "profe.cobertura": {
+  "texto": "Moléculas de la clase",
+  "descripcion": "Encabezado: quién ha descubierto qué"
+ },
+ "profe.cobertura_texto": {
+  "texto": "Entre paréntesis, cuántos alumnos la han formado. Las que nadie tiene aún son buenas candidatas para un reto.",
+  "descripcion": "Explicación"
+ },
+ "profe.retos": {
+  "texto": "Retos",
+  "descripcion": "Encabezado"
+ },
+ "profe.nuevo_reto": {
+  "texto": "Nuevo reto",
+  "descripcion": "Encabezado del formulario"
+ },
+ "profe.reto_titulo": {
+  "texto": "Título",
+  "descripcion": "Campo"
+ },
+ "profe.reto_descripcion": {
+  "texto": "Descripción (opcional)",
+  "descripcion": "Campo"
+ },
+ "profe.reto_fin": {
+  "texto": "Fecha límite (opcional)",
+  "descripcion": "Campo"
+ },
+ "profe.reto_moleculas": {
+  "texto": "Moléculas que hay que formar",
+  "descripcion": "Encabezado de la selección"
+ },
+ "profe.reto_todo_curso": {
+  "texto": "Todas las de {curso}",
+  "descripcion": "Botón para marcar las de un curso"
+ },
+ "profe.borrar": {
+  "texto": "Borrar",
+  "descripcion": "Botón"
+ },
+ "profe.borrar_clase": {
+  "texto": "Borrar la clase",
+  "descripcion": "Botón peligroso"
+ },
+ "profe.confirmar_borrar_clase": {
+  "texto": "¿Borrar la clase {nombre} y todo su progreso? No se puede deshacer.",
+  "descripcion": "Confirmación"
+ },
+ "profe.privacidad": {
+  "texto": "Privacidad: del alumnado solo se guarda un alias y su progreso en la app; nada de nombres, correos ni ubicación. La cámara se procesa en el propio móvil. Antes de usarla en clase, informa al centro (es el responsable de los datos).",
+  "descripcion": "Nota de privacidad (RGPD/LOPDGDD)"
+ },
+ "profe.error_red": {
+  "texto": "No hay conexión con el servidor.",
+  "descripcion": "Error"
+ },
+ "perfil.racha_1": {
+  "texto": "🔥 1 semana seguida",
+  "descripcion": "Racha semanal de una sola semana (singular de perfil.racha)"
+ }
+}

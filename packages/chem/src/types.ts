@@ -41,4 +41,6 @@ export interface ElementData {
   configuration: string;
   /** Configuración teórica (aún no medida). */
   configurationPredicted: boolean;
+  /** Año de su descubrimiento; `null` si se conoce desde la Antigüedad. */
+  discovered: number | null;
 }

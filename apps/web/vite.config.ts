@@ -6,8 +6,8 @@ export default defineConfig({
   build: {
     target: 'es2022',
     chunkSizeWarningLimit: 800,
-    // Dos páginas: la app y la de imprimir tarjetas.
-    rollupOptions: { input: { main: 'index.html', cartas: 'cartas.html' } },
+    // Tres páginas: la app, la de imprimir tarjetas y el panel del profesorado.
+    rollupOptions: { input: { main: 'index.html', cartas: 'cartas.html', profesor: 'profesor.html' } },
   },
   plugins: [
     VitePWA({
@@ -32,7 +32,7 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,webmanifest}'],
         // /health es del servidor y tiene que llegar siempre fresco.
-        navigateFallbackDenylist: [/^\/health/],
+        navigateFallbackDenylist: [/^\/health/, /^\/api\//, /^\/profesor/, /^\/cartas/],
       },
     }),
   ],

@@ -5,7 +5,9 @@ import { ARSession, ViewerProvider, WebXRWorldProvider, detectARSupport, type AR
 import { AtomView, ELEMENTS, FAMILY_NAMES, atomComposition, formatConfiguration, getElement, type AtomModel, type ElementData } from '@webar/chem';
 import { CardsMode, type CardsKind } from './cards/mode';
 import { setupInstall } from './install';
-import { markSelected, renderPeriodicTable } from './periodic-table';
+import { markSelected, renderPeriodicTable, updateLocks } from './periodic-table';
+import { Hub } from './platform/hub';
+import { composition, getSpecies } from '@webar/chem';
 import { createShadow } from './shadow';
 
 // La app une las dos bases: @webar/ar-core (dónde está cada cosa en el mundo)
@@ -42,15 +44,22 @@ function selectModel(m: AtomModel): void {
   cards.setModel(m);
 }
 
-// La tabla periódica es un selector compartido: cada modo decide qué hacer al elegir.
+// El progreso del alumno (colección, desbloqueos, retos, clase).
+const hub = new Hub();
+await hub.init();
+
+// La tabla periódica es un selector compartido: cada modo decide qué hacer al
+// elegir. Los elementos bloqueados se ven, pero no se pueden usar todavía.
 const tableCells = $('tabla-celdas');
 let onPick: (el: ElementData) => void = () => {};
 renderPeriodicTable(tableCells, (el) => {
+  if (!hub.isUnlocked(el.symbol)) return hub.showElement(el);
   $('tabla').hidden = true;
   onPick(el);
 });
 function pickElement(handler: (el: ElementData) => void, current?: number): void {
   onPick = handler;
+  updateLocks(tableCells, (el) => !hub.isUnlocked(el.symbol));
   if (current) markSelected(tableCells, current);
   $('tabla').hidden = false;
   tableCells.querySelector('[aria-current]')?.scrollIntoView({ block: 'nearest', inline: 'center' });
@@ -73,7 +82,8 @@ const explore = (() => {
       }
     }
     const saved = Number(localStorage.getItem('webar:z'));
-    return getElement(saved >= 1 && saved <= 118 ? saved : 8);
+    const el = getElement(saved >= 1 && saved <= 118 ? saved : 8);
+    return hub.isUnlocked(el.symbol) ? el : getElement('O');
   }
 
   function attach(anchor: ARAnchor, onSurface: boolean) {
@@ -125,8 +135,15 @@ const explore = (() => {
   }
 
   $('abrir-tabla').addEventListener('click', () => pickElement(select, element.z));
-  $('anterior').addEventListener('click', () => select(ELEMENTS[(element.z + 116) % 118]));
-  $('siguiente').addEventListener('click', () => select(ELEMENTS[element.z % 118]));
+  // ‹ › recorren solo los elementos desbloqueados.
+  const step = (dir: number) => {
+    let z = element.z;
+    do z = ((z - 1 + dir + 118) % 118) + 1;
+    while (!hub.isUnlocked(ELEMENTS[z - 1].symbol) && z !== element.z);
+    select(ELEMENTS[z - 1]);
+  };
+  $('anterior').addEventListener('click', () => step(-1));
+  $('siguiente').addEventListener('click', () => step(1));
   $('borrar').addEventListener('click', clear);
   renderCard();
 
@@ -175,6 +192,17 @@ const cards = new CardsMode({
   viewer,
   model: () => model,
   pickElement: (handler) => pickElement((el) => handler(el.symbol)),
+  onReaction: (outcome, products) => void hub.record(outcome, products),
+  isUnlocked: (symbol) => hub.isUnlocked(symbol),
+  challenge: () => {
+    const label = hub.challengeLabel();
+    if (!label || !hub.active) return null;
+    // Átomos de la primera sustancia que falta: así la mesa trae lo necesario.
+    const missing = hub.active.targets.find((s) => !hub.progress.species.has(s));
+    const species = missing ? getSpecies(missing) : undefined;
+    const atoms = species ? Object.entries(composition(species)).flatMap(([el, n]) => Array<string>(n).fill(el)) : [];
+    return { label, atoms };
+  },
 });
 
 // --- Sesión ------------------------------------------------------------------------

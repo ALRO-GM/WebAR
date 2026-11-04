@@ -183,6 +183,8 @@ def main():
             'radiusEstimated': estimado,
             'configuration': re.sub(r'\s*\((predicted|calculated)\)', '', config).replace('] ', ']'),
             'configurationPredicted': '(predicted)' in config or '(calculated)' in config,
+            # Año de descubrimiento; None si se conoce desde la Antigüedad.
+            'discovered': int(f['YearDiscovered']) if f['YearDiscovered'].isdigit() else None,
         })
 
     print('// Generado por scripts/generar-elementos.py: no editar a mano.')
