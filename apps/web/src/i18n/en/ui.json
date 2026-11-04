@@ -126,7 +126,7 @@
   "texto": "Each lesson on the path introduces an element. You start with hydrogen."
  },
  "tabla.bloqueado": {
-  "texto": "Locked element: discover more molecules to get it"
+  "texto": "Locked element: unlock it in its lesson on the path or by building a molecule that contains it."
  },
  "tabla.bloqueado_corto": {
   "texto": "locked"
@@ -214,6 +214,9 @@
  },
  "clase.pendientes": {
   "texto": "{n} items to send"
+ },
+ "clase.pendientes_1": {
+  "texto": "1 item to send"
  },
  "clase.sincronizado": {
   "texto": "All synced"
@@ -1420,6 +1423,9 @@
  },
  "profe.alumnos_n": {
   "texto": "{n} students"
+ },
+ "profe.alumnos_n_1": {
+  "texto": "1 student"
  },
  "profe.volver": {
   "texto": "← Your classes"

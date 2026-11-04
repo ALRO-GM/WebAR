@@ -1,7 +1,7 @@
 import { ELEMENTS, getSpecies } from '@webar/chem';
 import { has, t } from '../i18n';
 import { contentName } from '../i18n/content';
-import { createEveryday, hasEveryday } from '../objects';
+import { createEveryday, everydayArchetype, hasEveryday } from '../objects';
 import { calm, vibrate } from '../settings';
 import { sfx } from '../sfx';
 import { MiniScene } from './mini-scene';
@@ -85,8 +85,11 @@ export function playGuess(dialog: HTMLDialogElement, pool: string[], onClose: (r
     bar.style.setProperty('--p', String(round / rounds.length));
     foot.className = 'leccion-pie';
     feedback.innerHTML = '';
-    const others = shuffle([...candidates, ...fillers].filter((c) => c !== target && !!getSpecies(c) === !!getSpecies(target))).slice(0, 3);
-    const fallback = shuffle(fillers.filter((f) => f !== target && !others.includes(f))).slice(0, 3 - others.length);
+    // Fuera de las opciones los que se ven con el mismo objeto (p. ej. reloj atómico: Rb, Cs, Yb).
+    const look = (c: string) => JSON.stringify(everydayArchetype(c) ?? c);
+    const same = (c: string) => t(`objeto.${c}`) === t(`objeto.${target}`) || look(c) === look(target);
+    const others = shuffle([...candidates, ...fillers].filter((c) => c !== target && !same(c) && !!getSpecies(c) === !!getSpecies(target))).slice(0, 3);
+    const fallback = shuffle(fillers.filter((f) => f !== target && !same(f) && !others.includes(f))).slice(0, 3 - others.length);
     const options = shuffle([target, ...others, ...fallback]);
     body.innerHTML = `
       <h2 id="leccion-titulo">${t(getSpecies(target) ? 'adivina.pregunta_sustancia' : 'adivina.pregunta')}</h2>

@@ -20,11 +20,11 @@
   "descripcion": "Botón: abrir la realidad aumentada sobre la mesa o el suelo"
  },
  "materia.ver3d.aria": {
-  "texto": "Ver {nombre} en 3D",
+  "texto": "Ver en 3D: {nombre}",
   "descripcion": "Etiqueta accesible del botón Ver en 3D; {nombre} es la estructura o el agua"
  },
  "materia.verRA.aria": {
-  "texto": "Ver {nombre} en realidad aumentada",
+  "texto": "Ver en realidad aumentada: {nombre}",
   "descripcion": "Etiqueta accesible del botón Ver en RA"
  },
  "materia.ra.no": {
@@ -64,7 +64,7 @@
   "descripcion": "Explicación al principio del apartado de cristales"
  },
  "materia.cristales.abrir": {
-  "texto": "Ver ficha de {nombre}",
+  "texto": "Ver la ficha: {nombre}",
   "descripcion": "Etiqueta accesible de cada tarjeta de cristal"
  },
  "materia.ficha.atomos": {
@@ -220,7 +220,7 @@
   "descripcion": "Ficha: número de coordinación y espacio ocupado frente a las demás (fcc)"
  },
  "materia.s.fcc.curiosidad": {
-  "texto": "Es como se apilan las naranjas en la frutería. Que no hay forma más apretada lo sospechó Kepler en 1611 y no se demostró hasta 1998. Por sus capas que se deslizan, el oro se puede martillear hasta láminas más finas que una burbuja de jabón.",
+  "texto": "Es como se apilan las naranjas en la frutería. Que no hay forma más apretada lo sospechó Kepler en 1611 y no se demostró hasta 1998. Por sus capas que se deslizan, el oro se puede martillear hasta láminas miles de veces más finas que una hoja de papel.",
   "descripcion": "Ficha: una curiosidad (fcc)"
  },
  "materia.s.hcp.nombre": {
@@ -248,7 +248,7 @@
   "descripcion": "Ficha: dónde se encuentra en el día a día (hcp)"
  },
  "materia.s.hcp.diferencia": {
-  "texto": "También 12 vecinos y 74 % de espacio lleno, igual que la cúbica centrada en las caras. Solo cambia el orden de las capas (ABAB frente a ABCABC), y eso la hace menos fácil de doblar.",
+  "texto": "También 12 vecinos y 74 % de espacio lleno, igual que la cúbica centrada en las caras. Solo cambia el orden de las capas (ABAB frente a ABCABC), y eso la hace más difícil de doblar.",
   "descripcion": "Ficha: número de coordinación y espacio ocupado frente a las demás (hcp)"
  },
  "materia.s.hcp.curiosidad": {
@@ -268,7 +268,7 @@
   "descripcion": "Sustancia o metales de ejemplo, debajo del nombre (nacl)"
  },
  "materia.s.nacl.atomos": {
-  "texto": "Iones de sodio (Na⁺, pequeños) y de cloruro (Cl⁻, grandes), uno de cada por cada «molécula» de sal.",
+  "texto": "Iones de sodio (Na⁺, pequeños) y de cloruro (Cl⁻, grandes), en la misma cantidad: por cada ion de sodio hay 1 de cloruro.",
   "descripcion": "Ficha: qué átomos o iones la forman (nacl)"
  },
  "materia.s.nacl.formacion": {
@@ -324,7 +324,7 @@
   "descripcion": "Nombre de la estructura cristalina (fluorita)"
  },
  "materia.s.fluorita.corto": {
-  "texto": "Calcio en las caras del cubo y flúor en los huecos de dentro.",
+  "texto": "Calcio en las esquinas y en las caras del cubo, y flúor en los huecos de dentro.",
   "descripcion": "Resumen de una línea en la tarjeta (fluorita)"
  },
  "materia.s.fluorita.ejemplo": {
@@ -340,7 +340,7 @@
   "descripcion": "Ficha: tipo de enlace y cómo se colocan (fluorita)"
  },
  "materia.s.fluorita.dia": {
-  "texto": "Es un mineral precioso, de colores violeta, verde o azul. Se usa en lentes de cámaras y telescopios, y para fundir el hierro en los altos hornos.",
+  "texto": "Es un mineral precioso, de colores violeta, verde o azul. Se usa en lentes de cámaras y telescopios, y como fundente para fundir el hierro en los altos hornos.",
   "descripcion": "Ficha: dónde se encuentra en el día a día (fluorita)"
  },
  "materia.s.fluorita.diferencia": {
@@ -408,7 +408,7 @@
   "descripcion": "Ficha: dónde se encuentra en el día a día (grafito)"
  },
  "materia.s.grafito.diferencia": {
-  "texto": "3 vecinos y mucho hueco entre capas (3,35 Å, más del doble que el enlace de 1,42 Å). Por eso es blando y conduce la electricidad: le sobra un electrón por carbono que se mueve por la capa.",
+  "texto": "3 vecinos y mucho hueco entre capas (3,35 Å, más del doble que el enlace de 1,42 Å). Por eso es blando y conduce la electricidad: le sobra 1 electrón por carbono que se mueve por la capa.",
   "descripcion": "Ficha: número de coordinación y espacio ocupado frente a las demás (grafito)"
  },
  "materia.s.grafito.curiosidad": {
@@ -452,7 +452,7 @@
   "descripcion": "Nombre de la estructura cristalina (hielo)"
  },
  "materia.s.hielo.corto": {
-  "texto": "Moléculas de agua unidas por puentes de hidrógeno en anillos de seis.",
+  "texto": "Moléculas de agua unidas por puentes de hidrógeno en anillos de 6.",
   "descripcion": "Resumen de una línea en la tarjeta (hielo)"
  },
  "materia.s.hielo.ejemplo": {
@@ -460,15 +460,15 @@
   "descripcion": "Sustancia o metales de ejemplo, debajo del nombre (hielo)"
  },
  "materia.s.hielo.atomos": {
-  "texto": "Moléculas de agua (H₂O): un oxígeno y dos hidrógenos cada una.",
+  "texto": "Moléculas de agua (H₂O): 1 oxígeno y 2 hidrógenos cada una.",
   "descripcion": "Ficha: qué átomos o iones la forman (hielo)"
  },
  "materia.s.hielo.formacion": {
-  "texto": "Puentes de hidrógeno: cada hidrógeno (algo positivo) de una molécula apunta al oxígeno (algo negativo) de la vecina. Cada molécula queda unida a 4 en tetraedro y se forman anillos de seis.",
+  "texto": "Puentes de hidrógeno: cada hidrógeno (algo positivo) de una molécula apunta al oxígeno (algo negativo) de la vecina. Cada molécula queda unida a 4 en tetraedro y se forman anillos de 6.",
   "descripcion": "Ficha: tipo de enlace y cómo se colocan (hielo)"
  },
  "materia.s.hielo.dia": {
-  "texto": "Los cubitos, la escarcha y los copos de nieve: tienen seis puntas porque la red del hielo es hexagonal.",
+  "texto": "Los cubitos, la escarcha y los copos de nieve: tienen 6 puntas porque la red del hielo es hexagonal.",
   "descripcion": "Ficha: dónde se encuentra en el día a día (hielo)"
  },
  "materia.s.hielo.diferencia": {
@@ -576,7 +576,7 @@
   "descripcion": "Valor del deslizador de tamaño; {x} es el factor de escala (p. ej. 1,5)"
  },
  "materia.ra.tamano.texto": {
-  "texto": "{x} veces el tamaño normal",
+  "texto": "Tamaño multiplicado por {x}",
   "descripcion": "Texto accesible del deslizador de tamaño"
  },
  "materia.w.titulo": {
@@ -612,7 +612,7 @@
   "descripcion": "Interruptor: mostrar los puentes de hidrógeno (líneas de puntos)"
  },
  "materia.w.cuenta": {
-  "texto": "{l} juntas · {g} en el gas",
+  "texto": "Juntas: {l} · En el gas: {g}",
   "descripcion": "Contador de moléculas en el sólido/líquido y en el gas"
  },
  "materia.w.explicar": {
@@ -648,7 +648,7 @@
   "descripcion": "Nombre de la fase en la simulación del agua (ebullicion)"
  },
  "materia.w.fase.ebullicion.texto": {
-  "texto": "A 100 °C (al nivel del mar) el agua hierve: se forman burbujas de vapor dentro del líquido y las moléculas escapan de todas partes, no solo de la superficie. La gota encoge porque le quedan menos moléculas, y la temperatura no sube hasta que no queda líquido.",
+  "texto": "A 100 °C (al nivel del mar) el agua hierve: se forman burbujas de vapor dentro del líquido y las moléculas escapan de todas partes, no solo de la superficie. La gota encoge porque le quedan menos moléculas, y la temperatura no sube hasta que se acaba el líquido.",
   "descripcion": "Explicación de lo que pasa en la fase (ebullicion)"
  },
  "materia.w.fase.gas.titulo": {
@@ -724,7 +724,7 @@
   "descripcion": "Explicación de la tarjeta"
  },
  "materia.o.polar.alt": {
-  "texto": "Molécula de agua angular, con el oxígeno δ− arriba y los dos hidrógenos δ+ abajo, separados 104,5 grados.",
+  "texto": "Molécula de agua angular, con el oxígeno δ− arriba y los 2 hidrógenos δ+ abajo, separados 104,5 grados.",
   "descripcion": "Descripción de la ilustración para lectores de pantalla"
  },
  "materia.o.puentes.titulo": {
@@ -736,7 +736,7 @@
   "descripcion": "Explicación de la tarjeta"
  },
  "materia.o.puentes.alt": {
-  "texto": "Tres moléculas de agua: los hidrógenos de una apuntan al oxígeno de otra con líneas de puntos (puentes de hidrógeno).",
+  "texto": "3 moléculas de agua: los hidrógenos de una apuntan al oxígeno de otra con líneas de puntos (puentes de hidrógeno).",
   "descripcion": "Descripción de la ilustración para lectores de pantalla"
  },
  "materia.o.flota.titulo": {
@@ -748,7 +748,7 @@
   "descripcion": "Explicación de la tarjeta"
  },
  "materia.o.flota.alt": {
-  "texto": "A la izquierda, hielo: moléculas en anillos de seis con huecos. A la derecha, agua líquida: moléculas más juntas y desordenadas.",
+  "texto": "A la izquierda, hielo: moléculas en anillos de 6 con huecos. A la derecha, agua líquida: moléculas más juntas y desordenadas.",
   "descripcion": "Descripción de la ilustración para lectores de pantalla"
  },
  "materia.o.svg.cristal": {

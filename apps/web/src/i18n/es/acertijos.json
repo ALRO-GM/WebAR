@@ -36,15 +36,15 @@
   "descripcion": "Botón para abandonar el acertijo y ver la solución"
  },
  "acertijo.como": {
-  "texto": "Junta las tarjetas que creas y mantenlas juntas 3 segundos. Cada pista extra o cada combinación equivocada resta puntos.",
+  "texto": "Junta las tarjetas que creas necesarias y mantenlas juntas 3 segundos. Cada pista extra o cada combinación equivocada resta puntos.",
   "descripcion": "Instrucciones del acertijo, debajo de las pistas"
  },
  "acertijo.mal_producto": {
-  "texto": "Eso es {nombre}, pero no soy yo. −{n} puntos",
+  "texto": "Has formado: {nombre}. Pero no soy yo. −{n} puntos",
   "descripcion": "Aviso cuando se forma una sustancia que no es la buscada"
  },
  "acertijo.buen_paso": {
-  "texto": "¡Buen paso! {formula} me acerca a la respuesta",
+  "texto": "¡Buen paso! {formula} te acerca a la respuesta.",
   "descripcion": "Aviso cuando se forma una sustancia intermedia que lleva a la respuesta"
  },
  "acertijo.nada": {
@@ -60,7 +60,7 @@
   "descripcion": "Título de la pantalla cuando el alumno se rinde"
  },
  "acertijo.era": {
-  "texto": "Era {nombre} ({formula})",
+  "texto": "Respuesta: {nombre} ({formula})",
   "descripcion": "Debajo del título: qué sustancia era"
  },
  "acertijo.pistas_titulo": {
@@ -68,7 +68,7 @@
   "descripcion": "Encabezado de la explicación de cada pista al acabar"
  },
  "acertijo.resultado": {
-  "texto": "{puntos} puntos · pistas: {pistas} · fallos: {fallos}",
+  "texto": "Puntos: {puntos} · pistas: {pistas} · fallos: {fallos}",
   "descripcion": "Resumen al acabar el acertijo"
  },
  "acertijo.siguiente": {
@@ -116,7 +116,7 @@
   "descripcion": "Acertijo del H₂, pista 3"
  },
  "acertijo.H2.pista.4": {
-  "texto": "Soy dos átomos iguales del elemento que tiene un solo protón: soy el hidrógeno molecular.",
+  "texto": "Soy 2 átomos iguales del elemento que tiene 1 solo protón: soy el hidrógeno molecular.",
   "descripcion": "Acertijo del H₂, pista 4 (casi da la respuesta)"
  },
  "acertijo.H2.explica.1": {
@@ -128,11 +128,11 @@
   "descripcion": "Explicación de la pista 2 del H₂"
  },
  "acertijo.H2.explica.3": {
-  "texto": "Unas tres cuartas partes de la materia normal del universo es hidrógeno. En el Sol, sus núcleos se fusionan y forman helio, liberando la energía que nos llega como luz.",
+  "texto": "Unas tres cuartas partes de la materia normal del universo son hidrógeno. En el Sol, sus núcleos se fusionan y forman helio, liberando la energía que nos llega como luz.",
   "descripcion": "Explicación de la pista 3 del H₂"
  },
  "acertijo.H2.explica.4": {
-  "texto": "El hidrógeno tiene 1 protón y 1 electrón. Un átomo suelto es muy inestable: dos átomos comparten sus electrones en un enlace covalente y forman la molécula H₂.",
+  "texto": "El hidrógeno tiene 1 protón y 1 electrón. Un átomo suelto es muy reactivo: 2 átomos comparten sus electrones en un enlace covalente y forman la molécula H₂.",
   "descripcion": "Explicación de la pista 4 del H₂"
  },
  "acertijo.O2.pista.1": {
@@ -148,7 +148,7 @@
   "descripcion": "Acertijo del O₂, pista 3"
  },
  "acertijo.O2.pista.4": {
-  "texto": "Soy dos átomos iguales con 8 protones cada uno, unidos por un doble enlace: soy el oxígeno molecular.",
+  "texto": "Soy 2 átomos iguales con 8 protones cada uno, unidos por un doble enlace: soy el oxígeno molecular.",
   "descripcion": "Acertijo del O₂, pista 4 (casi da la respuesta)"
  },
  "acertijo.O2.explica.1": {
@@ -160,11 +160,11 @@
   "descripcion": "Explicación de la pista 2 del O₂"
  },
  "acertijo.O2.explica.3": {
-  "texto": "En la fotosíntesis, las plantas y las algas usan la luz para convertir CO₂ y agua en azúcar, y liberan O₂. Más de la mitad del oxígeno lo producen las algas del mar.",
+  "texto": "En la fotosíntesis, las plantas y las algas usan la luz para convertir CO₂ y agua en azúcar, y liberan O₂. Cerca de la mitad del oxígeno lo producen las algas del mar.",
   "descripcion": "Explicación de la pista 3 del O₂"
  },
  "acertijo.O2.explica.4": {
-  "texto": "Cada átomo de oxígeno tiene 6 electrones en su última capa y le faltan 2: los dos átomos comparten dos pares de electrones, un doble enlace.",
+  "texto": "Cada átomo de oxígeno tiene 6 electrones en su última capa y le faltan 2: los 2 átomos comparten 2 pares de electrones, un doble enlace.",
   "descripcion": "Explicación de la pista 4 del O₂"
  },
  "acertijo.N2.pista.1": {
@@ -172,11 +172,11 @@
   "descripcion": "Acertijo del nitrógeno molecular (N₂), pista 1"
  },
  "acertijo.N2.pista.2": {
-  "texto": "Soy casi inerte: no reacciono con casi nada. Por eso me meten en las bolsas de patatas fritas.",
+  "texto": "Soy muy poco reactivo: casi no reacciono con nada. Por eso me meten en las bolsas de patatas fritas.",
   "descripcion": "Acertijo del N₂, pista 2"
  },
  "acertijo.N2.pista.3": {
-  "texto": "Me formo con dos átomos iguales, unidos por un triple enlace.",
+  "texto": "Me formo con 2 átomos iguales, unidos por un triple enlace.",
   "descripcion": "Acertijo del N₂, pista 3"
  },
  "acertijo.N2.pista.4": {
@@ -212,7 +212,7 @@
   "descripcion": "Acertijo del agua, pista 3"
  },
  "acertijo.H2O.pista.4": {
-  "texto": "Tengo tres átomos: dos de hidrógeno y uno de oxígeno.",
+  "texto": "Tengo 3 átomos: 2 de hidrógeno y 1 de oxígeno.",
   "descripcion": "Acertijo del agua, pista 4 (casi da la respuesta)"
  },
  "acertijo.H2O.explica.1": {
@@ -220,7 +220,7 @@
   "descripcion": "Explicación de la pista 1 del agua"
  },
  "acertijo.H2O.explica.2": {
-  "texto": "Los dos H forman un ángulo de 104,5° con el O. El oxígeno atrae más los electrones: queda un lado negativo y otro positivo, y eso le permite rodear y separar iones como los de la sal.",
+  "texto": "Los 2 átomos de H forman un ángulo de 104,5° con el O. El oxígeno atrae más los electrones: queda un lado negativo y otro positivo, y eso le permite rodear y separar iones como los de la sal.",
   "descripcion": "Explicación de la pista 2 del agua"
  },
  "acertijo.H2O.explica.3": {

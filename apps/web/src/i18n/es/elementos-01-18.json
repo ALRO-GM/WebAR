@@ -1,6 +1,6 @@
 {
  "elemento.H.descubrimiento": {
-  "texto": "Robert Boyle ya lo había obtenido en 1671 echando ácido sobre limaduras de hierro, pero fue Henry Cavendish quien en 1766, en Londres, lo reconoció como una sustancia distinta y lo llamó «aire inflamable». En 1781 demostró que al arder forma agua. Por eso Lavoisier lo bautizó en 1783 con una palabra griega que significa «generador de agua». Cavendish era tan tímido que se comunicaba con sus criadas por notas.",
+  "texto": "Robert Boyle ya lo había obtenido en 1671 echando ácido sobre limaduras de hierro, pero fue Henry Cavendish quien en 1766, en Londres, lo reconoció como una sustancia distinta y lo llamó «aire inflamable». En 1781 demostró que al arder forma agua. Por eso Lavoisier lo bautizó en 1783 con una palabra griega que significa «generador de agua». Cavendish era tan tímido que dejaba notas escritas al personal de su casa para no tener que hablar.",
   "descripcion": "Ficha del hidrógeno: cómo se descubrió"
  },
  "elemento.H.usos": {
@@ -8,11 +8,11 @@
   "descripcion": "Ficha del hidrógeno: usos actuales"
  },
  "elemento.H.porque": {
-  "texto": "Es el combustible químico que más energía da por kilo: casi tres veces más que la gasolina. Además, al arder solo produce agua, sin CO2. Su pega es que ocupa mucho y hay que comprimirlo o enfriarlo hasta -253 °C.",
+  "texto": "Es el combustible químico que más energía da por kilo: casi 3 veces más que la gasolina. Además, al arder solo produce agua, sin CO2. Su pega es que ocupa mucho y hay que comprimirlo o enfriarlo hasta -253 °C.",
   "descripcion": "Ficha del hidrógeno: por qué se usa este elemento y no otro"
  },
  "elemento.H.unico": {
-  "texto": "Es el único elemento cuyo átomo más común no tiene ni un neutrón: solo un protón y un electrón. También es el más ligero y el más abundante del universo.",
+  "texto": "Es el único elemento cuyo átomo más común tiene 0 neutrones: solo 1 protón y 1 electrón. También es el más ligero y el más abundante del universo.",
   "descripcion": "Ficha del hidrógeno: cualidad única o récord"
  },
  "elemento.H.curiosidad": {
@@ -60,7 +60,7 @@
   "descripcion": "Ficha del helio: por qué se usa este elemento y no otro"
  },
  "elemento.He.unico": {
-  "texto": "Es el único elemento que no se vuelve sólido a presión normal, ni siquiera en el cero absoluto: hay que apretarlo unas 25 veces la presión atmosférica.",
+  "texto": "Es el único elemento que no se vuelve sólido a presión normal, ni siquiera en el cero absoluto: hay que someterlo a unas 25 veces la presión atmosférica.",
   "descripcion": "Ficha del helio: cualidad única o récord"
  },
  "elemento.He.curiosidad": {
@@ -156,7 +156,7 @@
   "descripcion": "Ficha del berilio: por qué se usa este elemento y no otro"
  },
  "elemento.Be.unico": {
-  "texto": "Es uno de los pocos metales que combina tan poca masa con tanta rigidez: es unas seis veces más rígido que el aluminio para el mismo peso.",
+  "texto": "Es uno de los pocos metales que combina tan poca masa con tanta rigidez: es unas 6 veces más rígido que el aluminio para el mismo peso.",
   "descripcion": "Ficha del berilio: cualidad única o récord"
  },
  "elemento.Be.curiosidad": {
@@ -200,7 +200,7 @@
   "descripcion": "Ficha del boro: usos actuales"
  },
  "elemento.B.porque": {
-  "texto": "El vidrio con boro se dilata unas tres veces menos al calentarse que el vidrio normal, así que no se raja con los cambios bruscos de temperatura. En los reactores se usa boro porque uno de sus isótopos atrapa neutrones mucho mejor que casi cualquier otro material.",
+  "texto": "El vidrio con boro se dilata unas 3 veces menos al calentarse que el vidrio normal, así que no se raja con los cambios bruscos de temperatura. En los reactores se usa boro porque uno de sus isótopos atrapa neutrones mucho mejor que casi cualquier otro material.",
   "descripcion": "Ficha del boro: por qué se usa este elemento y no otro"
  },
  "elemento.B.unico": {
@@ -300,19 +300,19 @@
   "descripcion": "Ficha del nitrógeno: por qué se usa este elemento y no otro"
  },
  "elemento.N.unico": {
-  "texto": "Es el gas más abundante de la atmósfera terrestre: forma el 78 % del aire. Sus dos átomos se unen por un triple enlace, uno de los más fuertes de la química, por eso es tan poco reactivo.",
+  "texto": "Es el gas más abundante de la atmósfera terrestre: forma el 78 % del aire. Sus 2 átomos se unen por un triple enlace, uno de los más fuertes de la química, por eso es tan poco reactivo.",
   "descripcion": "Ficha del nitrógeno: cualidad única o récord"
  },
  "elemento.N.curiosidad": {
-  "texto": "En cada respiración inhalas casi cuatro veces más nitrógeno que oxígeno, y lo devuelves al aire sin haberlo usado.",
+  "texto": "En cada respiración inhalas casi 4 veces más nitrógeno que oxígeno, y lo devuelves al aire sin haberlo usado.",
   "descripcion": "Ficha del nitrógeno: curiosidad sorprendente"
  },
  "elemento.N.pista": {
-  "texto": "Formo casi cuatro quintas partes del aire que respiras, pero tus pulmones no me usan.",
+  "texto": "Formo casi el 80 % del aire que respiras, pero tus pulmones no me usan.",
   "descripcion": "Juego de adivinar: pista del nitrógeno sin decir su nombre ni su símbolo"
  },
  "elemento.N.pregunta": {
-  "texto": "¿Por qué se llenan con este gas las bolsas de patatas fritas?",
+  "texto": "¿Para qué se llenan con este gas las bolsas de patatas fritas?",
   "descripcion": "Test sobre la ficha del nitrógeno: enunciado de la pregunta"
  },
  "elemento.N.pregunta.ok": {
@@ -388,7 +388,7 @@
   "descripcion": "Ficha del flúor: cómo se descubrió"
  },
  "elemento.F.usos": {
-  "texto": "Los fluoruros de la pasta de dientes protegen contra las caries. Forma el teflón de las sartenes, los gases de neveras y aires acondicionados, y está en uno de cada cinco medicamentos aproximadamente. También se usa para enriquecer el uranio de las centrales nucleares.",
+  "texto": "Los fluoruros de la pasta de dientes protegen contra las caries. Forma el teflón de las sartenes, los gases de neveras y aires acondicionados, y está en aproximadamente 1 de cada 5 medicamentos. También se usa para enriquecer el uranio de las centrales nucleares.",
   "descripcion": "Ficha del flúor: usos actuales"
  },
  "elemento.F.porque": {
@@ -436,7 +436,7 @@
   "descripcion": "Ficha del neón: cómo se descubrió"
  },
  "elemento.Ne.usos": {
-  "texto": "Da el brillo rojo anaranjado de los rótulos luminosos clásicos (los de otros colores suelen llevar otros gases). Se usa en láseres, en pilotos indicadores y en los láseres que fabrican chips. Líquido, sirve para enfriar aparatos científicos.",
+  "texto": "Da el brillo rojo anaranjado de los rótulos luminosos clásicos (los de otros colores suelen llevar otros gases). Se usa en pilotos indicadores y en láseres, como los de helio-neón o los que fabrican chips. Líquido, sirve para enfriar aparatos científicos.",
   "descripcion": "Ficha del neón: usos actuales"
  },
  "elemento.Ne.porque": {
@@ -452,7 +452,7 @@
   "descripcion": "Ficha del neón: curiosidad sorprendente"
  },
  "elemento.Ne.pista": {
-  "texto": "Brillo rojo anaranjado en los letreros luminosos y me separaron del aire líquido en 1898.",
+  "texto": "Brillo de color rojo anaranjado en los letreros luminosos y me separaron del aire líquido en 1898.",
   "descripcion": "Juego de adivinar: pista del neón sin decir su nombre ni su símbolo"
  },
  "elemento.Ne.pregunta": {
@@ -460,7 +460,7 @@
   "descripcion": "Test sobre la ficha del neón: enunciado de la pregunta"
  },
  "elemento.Ne.pregunta.ok": {
-  "texto": "El hijo de 13 años de Ramsay",
+  "texto": "El hijo de Ramsay, de 13 años",
   "descripcion": "Test sobre la ficha del neón: respuesta correcta"
  },
  "elemento.Ne.pregunta.mal1": {
@@ -488,7 +488,7 @@
   "descripcion": "Ficha del sodio: usos actuales"
  },
  "elemento.Na.porque": {
-  "texto": "Las baterías de sodio interesan porque el sodio es mil veces más abundante y barato que el litio, aunque pesan más. Las farolas de sodio gastaban muy poca electricidad porque emiten justo el amarillo al que el ojo es más sensible.",
+  "texto": "Las baterías de sodio interesan porque el sodio es unas 1000 veces más abundante y barato que el litio, aunque pesan más. Las farolas de sodio gastaban muy poca electricidad porque emiten justo el amarillo al que el ojo es más sensible.",
   "descripcion": "Ficha del sodio: por qué se usa este elemento y no otro"
  },
  "elemento.Na.unico": {
@@ -496,7 +496,7 @@
   "descripcion": "Ficha del sodio: cualidad única o récord"
  },
  "elemento.Na.curiosidad": {
-  "texto": "La sal de tu comida es un metal que arde al tocar el agua unido a un gas venenoso, y aun así es necesaria para vivir.",
+  "texto": "La sal de tu comida es la unión de un metal que arde al tocar el agua y un gas venenoso, y aun así es necesaria para vivir.",
   "descripcion": "Ficha del sodio: curiosidad sorprendente"
  },
  "elemento.Na.pista": {
@@ -540,7 +540,7 @@
   "descripcion": "Ficha del magnesio: por qué se usa este elemento y no otro"
  },
  "elemento.Mg.unico": {
-  "texto": "Hay un átomo de magnesio en el centro de cada molécula de clorofila, el pigmento con el que las plantas atrapan la luz del Sol.",
+  "texto": "Hay 1 átomo de magnesio en el centro de cada molécula de clorofila, el pigmento con el que las plantas atrapan la luz del Sol.",
   "descripcion": "Ficha del magnesio: cualidad única o récord"
  },
  "elemento.Mg.curiosidad": {
@@ -552,31 +552,31 @@
   "descripcion": "Juego de adivinar: pista del magnesio sin decir su nombre ni su símbolo"
  },
  "elemento.Mg.pregunta": {
-  "texto": "¿En qué molécula de las plantas está este átomo en el centro?",
+  "texto": "¿Qué molécula de las plantas tiene un átomo de este elemento en el centro?",
   "descripcion": "Test sobre la ficha del magnesio: enunciado de la pregunta"
  },
  "elemento.Mg.pregunta.ok": {
-  "texto": "En la clorofila",
+  "texto": "La clorofila",
   "descripcion": "Test sobre la ficha del magnesio: respuesta correcta"
  },
  "elemento.Mg.pregunta.mal1": {
-  "texto": "En la celulosa",
+  "texto": "La celulosa",
   "descripcion": "Test sobre la ficha del magnesio: respuesta incorrecta 1"
  },
  "elemento.Mg.pregunta.mal2": {
-  "texto": "En el almidón",
+  "texto": "El almidón",
   "descripcion": "Test sobre la ficha del magnesio: respuesta incorrecta 2"
  },
  "elemento.Mg.pregunta.mal3": {
-  "texto": "En la glucosa",
+  "texto": "La glucosa",
   "descripcion": "Test sobre la ficha del magnesio: respuesta incorrecta 3"
  },
  "elemento.Mg.pregunta.explicacion": {
-  "texto": "Cada molécula de clorofila tiene un átomo de magnesio en el centro, y sin él la planta no podría hacer la fotosíntesis.",
+  "texto": "Cada molécula de clorofila tiene 1 átomo de magnesio en el centro, y sin él la planta no podría hacer la fotosíntesis.",
   "descripcion": "Test sobre la ficha del magnesio: explicación de la respuesta correcta"
  },
  "elemento.Al.descubrimiento": {
-  "texto": "Hans Christian Ørsted lo aisló en 1825 en Copenhague calentando cloruro de aluminio con potasio, y Friedrich Wöhler mejoró el método en 1827. Durante décadas fue tan caro como la plata. En 1886, Charles Martin Hall (Estados Unidos) y Paul Héroult (Francia), ambos nacidos en 1863, inventaron por separado el método eléctrico que aún se usa. Su hermana Julia, que también había estudiado química, le ayudó en el taller de la casa familiar, aunque los historiadores discuten cuánto aportó.",
+  "texto": "Hans Christian Ørsted lo aisló en 1825 en Copenhague calentando cloruro de aluminio con potasio, y Friedrich Wöhler mejoró el método en 1827. Durante décadas fue tan caro como la plata. En 1886, Charles Martin Hall (Estados Unidos) y Paul Héroult (Francia), ambos nacidos en 1863, inventaron por separado el método eléctrico que aún se usa. Julia, la hermana de Hall, que también había estudiado química, le ayudó en el taller de la casa familiar, aunque los historiadores discuten cuánto aportó.",
   "descripcion": "Ficha del aluminio: cómo se descubrió"
  },
  "elemento.Al.usos": {
@@ -584,7 +584,7 @@
   "descripcion": "Ficha del aluminio: usos actuales"
  },
  "elemento.Al.porque": {
-  "texto": "En los cables de alta tensión se usa aluminio y no cobre porque, aunque conduce algo menos, pesa unas tres veces menos: por kilo conduce el doble y las torres aguantan menos peso. Además, no se oxida por dentro: lo protege una capa finísima de óxido.",
+  "texto": "En los cables de alta tensión se usa aluminio y no cobre porque, aunque conduce algo menos, pesa unas 3 veces menos: por kilo conduce el doble y las torres aguantan menos peso. Además, no se oxida por dentro: lo protege una capa finísima de óxido.",
   "descripcion": "Ficha del aluminio: por qué se usa este elemento y no otro"
  },
  "elemento.Al.unico": {
@@ -620,7 +620,7 @@
   "descripcion": "Test sobre la ficha del aluminio: respuesta incorrecta 3"
  },
  "elemento.Al.pregunta.explicacion": {
-  "texto": "Conduce algo peor que el cobre, pero pesa unas tres veces menos, así que las torres soportan menos carga.",
+  "texto": "Conduce algo peor que el cobre, pero pesa unas 3 veces menos, así que las torres soportan menos carga.",
   "descripcion": "Test sobre la ficha del aluminio: explicación de la respuesta correcta"
  },
  "elemento.Si.descubrimiento": {
@@ -652,19 +652,19 @@
   "descripcion": "Test sobre la ficha del silicio: enunciado de la pregunta"
  },
  "elemento.Si.pregunta.ok": {
-  "texto": "El germanio",
+  "texto": "De germanio",
   "descripcion": "Test sobre la ficha del silicio: respuesta correcta"
  },
  "elemento.Si.pregunta.mal1": {
-  "texto": "El cobre",
+  "texto": "De cobre",
   "descripcion": "Test sobre la ficha del silicio: respuesta incorrecta 1"
  },
  "elemento.Si.pregunta.mal2": {
-  "texto": "El aluminio",
+  "texto": "De aluminio",
   "descripcion": "Test sobre la ficha del silicio: respuesta incorrecta 2"
  },
  "elemento.Si.pregunta.mal3": {
-  "texto": "El plomo",
+  "texto": "De plomo",
   "descripcion": "Test sobre la ficha del silicio: respuesta incorrecta 3"
  },
  "elemento.Si.pregunta.explicacion": {
@@ -672,7 +672,7 @@
   "descripcion": "Test sobre la ficha del silicio: explicación de la respuesta correcta"
  },
  "elemento.P.descubrimiento": {
-  "texto": "En 1669 el alquimista Hennig Brand, en Hamburgo, buscaba la piedra filosofal hirviendo enormes cantidades de orina. Obtuvo una sustancia blanca que brillaba en la oscuridad y lo llamó con una palabra griega que significa «portador de luz». Fue el primer elemento cuyo descubridor y fecha conocemos. Lavoisier lo reconoció como elemento en 1777.",
+  "texto": "En 1669 el alquimista Hennig Brand, en Hamburgo, buscaba la piedra filosofal hirviendo enormes cantidades de orina. Obtuvo una sustancia blanca que brillaba en la oscuridad y la llamó con una palabra griega que significa «portador de luz». Fue el primer elemento cuyo descubridor y fecha conocemos. Lavoisier lo reconoció como elemento en 1777.",
   "descripcion": "Ficha del fósforo: cómo se descubrió"
  },
  "elemento.P.usos": {
@@ -724,7 +724,7 @@
   "descripcion": "Ficha del azufre: cómo se descubrió"
  },
  "elemento.S.usos": {
-  "texto": "Con él se fabrica ácido sulfúrico, uno de los productos químicos más fabricados del mundo, clave para abonos y baterías. Endurece el caucho de los neumáticos, protege las viñas de los hongos y forma parte de algunos medicamentos.",
+  "texto": "Con él se obtiene ácido sulfúrico, uno de los productos químicos más fabricados del mundo, clave para abonos y baterías. Endurece el caucho de los neumáticos, protege las viñas de los hongos y forma parte de algunos medicamentos.",
   "descripcion": "Ficha del azufre: usos actuales"
  },
  "elemento.S.porque": {
@@ -780,7 +780,7 @@
   "descripcion": "Ficha del cloro: por qué se usa este elemento y no otro"
  },
  "elemento.Cl.unico": {
-  "texto": "Es el elemento que más energía libera al capturar un electrón, incluso más que el flúor.",
+  "texto": "Es el elemento que más energía libera al capturar 1 electrón, incluso más que el flúor.",
   "descripcion": "Ficha del cloro: cualidad única o récord"
  },
  "elemento.Cl.curiosidad": {
@@ -796,19 +796,19 @@
   "descripcion": "Test sobre la ficha del cloro: enunciado de la pregunta"
  },
  "elemento.Cl.pregunta.ok": {
-  "texto": "Sigue desinfectando hasta llegar al grifo",
+  "texto": "Porque sigue desinfectando hasta el grifo",
   "descripcion": "Test sobre la ficha del cloro: respuesta correcta"
  },
  "elemento.Cl.pregunta.mal1": {
-  "texto": "Le da al agua mejor sabor",
+  "texto": "Porque le da al agua mejor sabor",
   "descripcion": "Test sobre la ficha del cloro: respuesta incorrecta 1"
  },
  "elemento.Cl.pregunta.mal2": {
-  "texto": "Hace el agua más blanda",
+  "texto": "Porque hace el agua más blanda",
   "descripcion": "Test sobre la ficha del cloro: respuesta incorrecta 2"
  },
  "elemento.Cl.pregunta.mal3": {
-  "texto": "Añade minerales buenos para los huesos",
+  "texto": "Porque añade minerales para los huesos",
   "descripcion": "Test sobre la ficha del cloro: respuesta incorrecta 3"
  },
  "elemento.Cl.pregunta.explicacion": {
@@ -820,7 +820,7 @@
   "descripcion": "Ficha del argón: cómo se descubrió"
  },
  "elemento.Ar.usos": {
-  "texto": "Llena el espacio entre los cristales de las ventanas con doble acristalamiento y las bombillas incandescentes. Protege las soldaduras del aire y se usa al fabricar chips, titanio y acero.",
+  "texto": "Llena las bombillas incandescentes y el espacio entre los cristales de las ventanas de doble acristalamiento. Protege las soldaduras del aire y se usa al fabricar chips, titanio y acero.",
   "descripcion": "Ficha del argón: usos actuales"
  },
  "elemento.Ar.porque": {

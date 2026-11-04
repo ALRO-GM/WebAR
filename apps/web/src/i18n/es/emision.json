@@ -20,7 +20,7 @@
   "descripcion": "Enlace al panel del profesorado para crear cuenta"
  },
  "emision.paso_ordenador": {
-  "texto": "En el ordenador del aula abre {url} con tu cuenta.",
+  "texto": "En el ordenador del aula, abre {url} e inicia sesión con tu cuenta.",
   "descripcion": "Paso 1 en el móvil; {url} es la dirección de la vista de proyector"
  },
  "emision.paso_movil": {
@@ -52,15 +52,15 @@
   "descripcion": "Botón para dejar de emitir"
  },
  "emision.salir": {
-  "texto": "Cerrar sesión de profesor",
+  "texto": "Cerrar sesión docente",
   "descripcion": "Botón para cerrar la sesión de profesor en el móvil"
  },
  "emision.sin_sesion": {
-  "texto": "Inicia sesión como profesor/a para emitir.",
+  "texto": "Inicia sesión con tu cuenta docente para emitir.",
   "descripcion": "Error: no hay sesión de profesor o caducó"
  },
  "emision.error_red": {
-  "texto": "Sin conexión con el servidor. Lo reintento solo.",
+  "texto": "Sin conexión con el servidor. Lo volveré a intentar automáticamente.",
   "descripcion": "Error de red al emitir o mirar"
  },
  "emision.dispositivo": {
@@ -84,7 +84,7 @@
   "descripcion": "Indicador flotante: emitiendo pero ninguna pantalla mira aún"
  },
  "emision.indicador_1": {
-  "texto": "📡 Emitiendo",
+  "texto": "📡 Emitiendo a 1 pantalla",
   "descripcion": "Indicador flotante: una pantalla mira"
  },
  "emision.indicador": {
@@ -124,11 +124,11 @@
   "descripcion": "Paso 1 en la vista de proyector"
  },
  "emision.proyector_paso2": {
-  "texto": "En «Proyectar en clase», entra con esta misma cuenta de profesor/a.",
+  "texto": "En «Proyectar en clase», entra con esta misma cuenta docente.",
   "descripcion": "Paso 2 en la vista de proyector"
  },
  "emision.proyector_paso3": {
-  "texto": "Pulsa «Emitir»: aparecerá aquí solo.",
+  "texto": "Pulsa «Emitir»: la imagen aparecerá aquí sola.",
   "descripcion": "Paso 3 en la vista de proyector"
  },
  "emision.en_directo": {
@@ -152,7 +152,7 @@
   "descripcion": "Aviso en el proyector cuando el móvil usa WebXR"
  },
  "emision.video_etiqueta": {
-  "texto": "Lo que se ve en el móvil del profesor/a",
+  "texto": "Lo que se ve en el móvil que emite",
   "descripcion": "Etiqueta accesible del vídeo del proyector"
  },
  "emision.controles": {

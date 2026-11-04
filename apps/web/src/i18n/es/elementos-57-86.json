@@ -48,7 +48,7 @@
     "descripcion": "Test de la ficha del lantano: explicación de la respuesta correcta"
   },
   "elemento.Ce.descubrimiento": {
-    "texto": "Lo descubrieron en 1803 los suecos Jöns Jacob Berzelius y Wilhelm Hisinger, y a la vez, por su cuenta, el alemán Martin Klaproth. Lo sacaron de un mineral pesado de la mina de Bastnäs (Suecia), la cerita. Le pusieron el nombre de Ceres, un asteroide descubierto solo dos años antes.",
+    "texto": "Lo descubrieron en 1803 los suecos Jöns Jacob Berzelius y Wilhelm Hisinger, y a la vez, por su cuenta, el alemán Martin Klaproth. Lo sacaron de un mineral pesado de la mina de Bastnäs (Suecia), la cerita. Le pusieron el nombre de Ceres, un asteroide descubierto solo 2 años antes.",
     "descripcion": "Ficha del cerio: quién, cuándo y cómo se descubrió"
   },
   "elemento.Ce.usos": {
@@ -56,7 +56,7 @@
     "descripcion": "Ficha del cerio: para qué se usa hoy"
   },
   "elemento.Ce.porque": {
-    "texto": "Puede cambiar con facilidad entre dos formas (Ce³⁺ y Ce⁴⁺), así que guarda y suelta oxígeno según haga falta: perfecto para un catalizador. Y al rascarlo, sus virutas arden en el aire a poca temperatura, por eso da chispas mejor que el acero.",
+    "texto": "Puede cambiar con facilidad entre 2 formas (Ce³⁺ y Ce⁴⁺), así que guarda y suelta oxígeno según haga falta: perfecto para un catalizador. Y al rascarlo, sus virutas arden en el aire a poca temperatura, por eso da chispas mejor que el acero.",
     "descripcion": "Ficha del cerio: por qué se usa este elemento y no otro"
   },
   "elemento.Ce.unico": {
@@ -96,7 +96,7 @@
     "descripcion": "Test de la ficha del cerio: explicación de la respuesta correcta"
   },
   "elemento.Pr.descubrimiento": {
-    "texto": "Lo separó el austriaco Carl Auer von Welsbach en Viena en 1885. Desde 1841 se creía que el «didimio» era un elemento, pero él lo cristalizó una y otra vez con mucha paciencia hasta partirlo en dos: uno daba sales verdes y otro, rosadas. Al verde lo llamó «gemelo verde».",
+    "texto": "Lo separó el austriaco Carl Auer von Welsbach en Viena en 1885. Desde 1841 se creía que el «didimio» era un elemento, pero él lo cristalizó una y otra vez con mucha paciencia hasta separarlo en 2 elementos: uno daba sales verdes y otro, rosadas. Al de las sales verdes lo llamó «gemelo verde».",
     "descripcion": "Ficha del praseodimio: quién, cuándo y cómo se descubrió"
   },
   "elemento.Pr.usos": {
@@ -140,11 +140,11 @@
     "descripcion": "Test de la ficha del praseodimio: respuesta incorrecta pero creíble"
   },
   "elemento.Pr.pregunta.explicacion": {
-    "texto": "El didimio parecía un elemento, pero Auer von Welsbach demostró que era una mezcla de dos.",
+    "texto": "El didimio parecía un elemento, pero Auer von Welsbach demostró que era una mezcla de 2 elementos.",
     "descripcion": "Test de la ficha del praseodimio: explicación de la respuesta correcta"
   },
   "elemento.Nd.descubrimiento": {
-    "texto": "Nació en el mismo experimento que su gemelo: Carl Auer von Welsbach partió el «didimio» en dos en Viena en 1885. A este lo llamó «nuevo gemelo». Casi cien años después, en 1982, el japonés Masato Sagawa inventó el imán de neodimio, hierro y boro, que cambió la tecnología.",
+    "texto": "Nació en el mismo experimento que su gemelo: Carl Auer von Welsbach separó el «didimio» en 2 elementos en Viena en 1885. A este lo llamó «nuevo gemelo». Casi 100 años después, en 1982, el japonés Masato Sagawa inventó el imán de neodimio, hierro y boro, que cambió la tecnología.",
     "descripcion": "Ficha del neodimio: quién, cuándo y cómo se descubrió"
   },
   "elemento.Nd.usos": {
@@ -152,7 +152,7 @@
     "descripcion": "Ficha del neodimio: para qué se usa hoy"
   },
   "elemento.Nd.porque": {
-    "texto": "El imán de neodimio es el imán permanente más fuerte que se vende: uno pequeño hace el trabajo de uno de ferrita diez veces más grande. Por eso los auriculares y motores pueden ser tan pequeños y ligeros.",
+    "texto": "El imán de neodimio es el imán permanente más fuerte que se vende: uno pequeño hace el trabajo de uno de ferrita 10 veces más grande. Por eso los auriculares y motores pueden ser tan pequeños y ligeros.",
     "descripcion": "Ficha del neodimio: por qué se usa este elemento y no otro"
   },
   "elemento.Nd.unico": {
@@ -168,7 +168,7 @@
     "descripcion": "Juego de adivinar: pista sobre el neodimio que no dice su nombre ni su símbolo"
   },
   "elemento.Nd.pregunta": {
-    "texto": "¿Para qué es famoso este elemento?",
+    "texto": "¿Para qué se usa sobre todo este elemento?",
     "descripcion": "Test de la ficha del neodimio: enunciado de la pregunta"
   },
   "elemento.Nd.pregunta.ok": {
@@ -176,7 +176,7 @@
     "descripcion": "Test de la ficha del neodimio: respuesta correcta (corta)"
   },
   "elemento.Nd.pregunta.mal1": {
-    "texto": "Para dar color rojo a los fuegos",
+    "texto": "Para dar color rojo a los fuegos artificiales",
     "descripcion": "Test de la ficha del neodimio: respuesta incorrecta pero creíble"
   },
   "elemento.Nd.pregunta.mal2": {
@@ -204,7 +204,7 @@
     "descripcion": "Ficha del prometio: por qué se usa este elemento y no otro"
   },
   "elemento.Pm.unico": {
-    "texto": "Es el único lantánido sin ningún isótopo estable: todos sus átomos acaban desintegrándose. Por eso en toda la corteza terrestre se calcula que hay menos de un kilo.",
+    "texto": "Es el único lantánido sin ningún isótopo estable: todos sus átomos acaban desintegrándose. Por eso en toda la corteza terrestre se calcula que hay menos de 1 kilo.",
     "descripcion": "Ficha del prometio: su cualidad única o récord"
   },
   "elemento.Pm.curiosidad": {
@@ -236,7 +236,7 @@
     "descripcion": "Test de la ficha del prometio: respuesta incorrecta pero creíble"
   },
   "elemento.Pm.pregunta.explicacion": {
-    "texto": "Grace Mary Coryell, esposa de uno de los descubridores, propuso llamarlo como Prometeo.",
+    "texto": "Grace Mary Coryell, casada con Charles Coryell, uno de los descubridores, propuso llamarlo como Prometeo.",
     "descripcion": "Test de la ficha del prometio: explicación de la respuesta correcta"
   },
   "elemento.Sm.descubrimiento": {
@@ -256,7 +256,7 @@
     "descripcion": "Ficha del samario: su cualidad única o récord"
   },
   "elemento.Sm.curiosidad": {
-    "texto": "Su nombre honra a un ruso que nunca investigó en química: solo dejó a los mineralogistas estudiar las rocas de sus minas.",
+    "texto": "Su nombre honra a un ruso que nunca investigó en química: solo dejó a los mineralogistas estudiar las rocas de las minas que dirigía.",
     "descripcion": "Ficha del samario: dato curioso"
   },
   "elemento.Sm.pista": {
@@ -268,19 +268,19 @@
     "descripcion": "Test de la ficha del samario: enunciado de la pregunta"
   },
   "elemento.Sm.pregunta.ok": {
-    "texto": "Aguantan el calor sin perder fuerza",
+    "texto": "Porque aguantan el calor sin perder fuerza",
     "descripcion": "Test de la ficha del samario: respuesta correcta (corta)"
   },
   "elemento.Sm.pregunta.mal1": {
-    "texto": "Son los imanes más baratos",
+    "texto": "Porque son los imanes más baratos",
     "descripcion": "Test de la ficha del samario: respuesta incorrecta pero creíble"
   },
   "elemento.Sm.pregunta.mal2": {
-    "texto": "Pesan menos que el aluminio",
+    "texto": "Porque pesan menos que el aluminio",
     "descripcion": "Test de la ficha del samario: respuesta incorrecta pero creíble"
   },
   "elemento.Sm.pregunta.mal3": {
-    "texto": "Conducen mejor la electricidad",
+    "texto": "Porque conducen mejor la electricidad",
     "descripcion": "Test de la ficha del samario: respuesta incorrecta pero creíble"
   },
   "elemento.Sm.pregunta.explicacion": {
@@ -300,7 +300,7 @@
     "descripcion": "Ficha del europio: por qué se usa este elemento y no otro"
   },
   "elemento.Eu.unico": {
-    "texto": "Es uno de los dos elementos con nombre de continente (el otro es el americio) y el lantánido más reactivo: se oxida en el aire en pocos días.",
+    "texto": "Es uno de los 2 elementos con nombre de continente (el otro es el americio) y el lantánido más reactivo: se oxida en el aire en pocos días.",
     "descripcion": "Ficha del europio: su cualidad única o récord"
   },
   "elemento.Eu.curiosidad": {
@@ -344,7 +344,7 @@
     "descripcion": "Ficha del gadolinio: para qué se usa hoy"
   },
   "elemento.Gd.porque": {
-    "texto": "El ion de gadolinio tiene siete electrones desparejados, el máximo posible, y eso lo hace muy magnético: acelera la señal del agua cercana y la imagen se ve más clara. Como suelto es tóxico, se inyecta «enjaulado» en una molécula que el riñón expulsa.",
+    "texto": "El ion de gadolinio tiene 7 electrones desparejados, el máximo posible, y eso lo hace muy magnético: acelera la señal del agua cercana y la imagen se ve más clara. Como suelto es tóxico, se inyecta «enjaulado» en una molécula que el riñón expulsa.",
     "descripcion": "Ficha del gadolinio: por qué se usa este elemento y no otro"
   },
   "elemento.Gd.unico": {
@@ -364,7 +364,7 @@
     "descripcion": "Test de la ficha del gadolinio: enunciado de la pregunta"
   },
   "elemento.Gd.pregunta.ok": {
-    "texto": "Como contraste en resonancias magnéticas",
+    "texto": "Para dar contraste en las resonancias",
     "descripcion": "Test de la ficha del gadolinio: respuesta correcta (corta)"
   },
   "elemento.Gd.pregunta.mal1": {
@@ -372,7 +372,7 @@
     "descripcion": "Test de la ficha del gadolinio: respuesta incorrecta pero creíble"
   },
   "elemento.Gd.pregunta.mal2": {
-    "texto": "En los empastes dentales",
+    "texto": "Para los empastes dentales",
     "descripcion": "Test de la ficha del gadolinio: respuesta incorrecta pero creíble"
   },
   "elemento.Gd.pregunta.mal3": {
@@ -380,11 +380,11 @@
     "descripcion": "Test de la ficha del gadolinio: respuesta incorrecta pero creíble"
   },
   "elemento.Gd.pregunta.explicacion": {
-    "texto": "Su enorme magnetismo hace que la resonancia distinga mejor los tejidos donde llega.",
+    "texto": "Se inyecta como contraste: su fuerte magnetismo hace que la resonancia distinga mejor los tejidos a los que llega.",
     "descripcion": "Test de la ficha del gadolinio: explicación de la respuesta correcta"
   },
   "elemento.Tb.descubrimiento": {
-    "texto": "Lo descubrió Carl Gustaf Mosander en Estocolmo en 1843: partió la «itria» del mineral de la cantera de Ytterby en tres óxidos distintos. El nombre viene de ese pueblecito sueco, que ha dado nombre a cuatro elementos: itrio, iterbio, terbio y erbio.",
+    "texto": "Lo descubrió Carl Gustaf Mosander en Estocolmo en 1843: partió la «itria» del mineral de la cantera de Ytterby en 3 óxidos distintos. El nombre viene de ese pueblecito sueco, que ha dado nombre a 4 elementos: itrio, iterbio, terbio y erbio.",
     "descripcion": "Ficha del terbio: quién, cuándo y cómo se descubrió"
   },
   "elemento.Tb.usos": {
@@ -408,27 +408,27 @@
     "descripcion": "Juego de adivinar: pista sobre el terbio que no dice su nombre ni su símbolo"
   },
   "elemento.Tb.pregunta": {
-    "texto": "¿Cuántos elementos llevan el nombre del pueblo sueco de Ytterby?",
+    "texto": "¿Qué color da este elemento a las lámparas fluorescentes?",
     "descripcion": "Test de la ficha del terbio: enunciado de la pregunta"
   },
   "elemento.Tb.pregunta.ok": {
-    "texto": "Cuatro",
+    "texto": "Verde",
     "descripcion": "Test de la ficha del terbio: respuesta correcta (corta)"
   },
   "elemento.Tb.pregunta.mal1": {
-    "texto": "Uno",
+    "texto": "Rojo",
     "descripcion": "Test de la ficha del terbio: respuesta incorrecta pero creíble"
   },
   "elemento.Tb.pregunta.mal2": {
-    "texto": "Dos",
+    "texto": "Azul",
     "descripcion": "Test de la ficha del terbio: respuesta incorrecta pero creíble"
   },
   "elemento.Tb.pregunta.mal3": {
-    "texto": "Siete",
+    "texto": "Violeta",
     "descripcion": "Test de la ficha del terbio: respuesta incorrecta pero creíble"
   },
   "elemento.Tb.pregunta.explicacion": {
-    "texto": "Itrio, iterbio, terbio y erbio salen del nombre de Ytterby.",
+    "texto": "Sus iones emiten un verde muy puro e intenso al recibir luz ultravioleta; el rojo lo pone el europio.",
     "descripcion": "Test de la ficha del terbio: explicación de la respuesta correcta"
   },
   "elemento.Dy.descubrimiento": {
@@ -528,7 +528,7 @@
     "descripcion": "Test de la ficha del holmio: explicación de la respuesta correcta"
   },
   "elemento.Er.descubrimiento": {
-    "texto": "Lo encontró Carl Gustaf Mosander en 1843, al partir el óxido de itrio de la cantera sueca de Ytterby en tres. El nombre sale de ese pueblo, igual que los de itrio, terbio e iterbio.",
+    "texto": "Lo encontró Carl Gustaf Mosander en 1843, al partir el óxido de itrio de la cantera sueca de Ytterby en 3. El nombre sale de ese pueblo, igual que los de itrio, terbio e iterbio.",
     "descripcion": "Ficha del erbio: quién, cuándo y cómo se descubrió"
   },
   "elemento.Er.usos": {
@@ -576,7 +576,7 @@
     "descripcion": "Test de la ficha del erbio: explicación de la respuesta correcta"
   },
   "elemento.Tm.descubrimiento": {
-    "texto": "Lo descubrió el sueco Per Teodor Cleve en Upsala en 1879, al limpiar el óxido de erbio de impurezas y ver que quedaban dos óxidos nuevos. Lo llamó por Thule, el nombre antiguo de una tierra mítica del norte.",
+    "texto": "Lo descubrió el sueco Per Teodor Cleve en Upsala en 1879, al limpiar el óxido de erbio de impurezas y ver que quedaban 2 óxidos nuevos. Lo llamó por Thule, el nombre antiguo de una tierra mítica del norte.",
     "descripcion": "Ficha del tulio: quién, cuándo y cómo se descubrió"
   },
   "elemento.Tm.usos": {
@@ -636,7 +636,7 @@
     "descripcion": "Ficha del iterbio: por qué se usa este elemento y no otro"
   },
   "elemento.Yb.unico": {
-    "texto": "Los relojes de iterbio son de los más precisos jamás construidos: tardarían miles de millones de años en desviarse un segundo.",
+    "texto": "Los relojes de iterbio son de los más precisos jamás construidos: tardarían miles de millones de años en desviarse 1 segundo.",
     "descripcion": "Ficha del iterbio: su cualidad única o récord"
   },
   "elemento.Yb.curiosidad": {
@@ -772,7 +772,7 @@
     "descripcion": "Ficha del tantalio: quién, cuándo y cómo se descubrió"
   },
   "elemento.Ta.usos": {
-    "texto": "Está en los condensadores diminutos de móviles, portátiles y consolas. Se usa en prótesis, tornillos de huesos y piezas de turbinas. Se extrae sobre todo del coltán, y en el Congo su minería ha financiado guerras.",
+    "texto": "Está en los condensadores diminutos de móviles, portátiles y consolas. Se usa en prótesis, tornillos de huesos y piezas de turbinas. Se extrae sobre todo del coltán; en el este de la República Democrática del Congo su comercio ha ayudado a financiar conflictos armados, por eso cada vez se controla más su origen.",
     "descripcion": "Ficha del tantalio: para qué se usa hoy"
   },
   "elemento.Ta.porque": {
@@ -816,7 +816,7 @@
     "descripcion": "Test de la ficha del tantalio: explicación de la respuesta correcta"
   },
   "elemento.W.descubrimiento": {
-    "texto": "Lo aislaron en 1783 los hermanos riojanos Juan José y Fausto Elhuyar en el Seminario de Bergara (Gipuzkoa). Sacaron el ácido del mineral wolframita y lo calentaron con carbón hasta obtener el metal. Es uno de los pocos elementos descubiertos por científicos españoles, con el platino y el vanadio.",
+    "texto": "Lo aislaron en 1783 los hermanos riojanos Juan José y Fausto Elhuyar en el Seminario de Bergara (Gipuzkoa). Sacaron el ácido del mineral wolframita y lo calentaron con carbón hasta obtener el metal. Es uno de los pocos elementos en cuyo descubrimiento participaron científicos españoles, con el platino y el vanadio.",
     "descripcion": "Ficha del wolframio: quién, cuándo y cómo se descubrió"
   },
   "elemento.W.usos": {
@@ -836,7 +836,7 @@
     "descripcion": "Ficha del wolframio: dato curioso"
   },
   "elemento.W.pista": {
-    "texto": "Dos hermanos españoles me aislaron en Bergara y nadie funde a tanta temperatura como yo.",
+    "texto": "Me aislaron 2 hermanos españoles en Bergara y nadie funde a tanta temperatura como yo.",
     "descripcion": "Juego de adivinar: pista sobre el wolframio que no dice su nombre ni su símbolo"
   },
   "elemento.W.pregunta": {
@@ -848,7 +848,7 @@
     "descripcion": "Test de la ficha del wolframio: respuesta correcta (corta)"
   },
   "elemento.W.pregunta.mal1": {
-    "texto": "Los hermanos Curie",
+    "texto": "Los hermanos Montgolfier",
     "descripcion": "Test de la ficha del wolframio: respuesta incorrecta pero creíble"
   },
   "elemento.W.pregunta.mal2": {
@@ -872,7 +872,7 @@
     "descripcion": "Ficha del renio: para qué se usa hoy"
   },
   "elemento.Re.porque": {
-    "texto": "Unos pocos por ciento de renio hacen que las palas de la turbina no se deformen a más de 1000 °C durante miles de horas; sin él, se «estiran» con el calor y la fuerza.",
+    "texto": "Un pequeño porcentaje de renio hace que las palas de la turbina no se deformen a más de 1000 °C durante miles de horas; sin él, se «estiran» con el calor y la fuerza.",
     "descripcion": "Ficha del renio: por qué se usa este elemento y no otro"
   },
   "elemento.Re.unico": {
@@ -924,7 +924,7 @@
     "descripcion": "Ficha del osmio: por qué se usa este elemento y no otro"
   },
   "elemento.Os.unico": {
-    "texto": "Es el elemento más denso que existe: un litro pesaría unos 22,6 kg, el doble que el plomo.",
+    "texto": "Es el elemento más denso que existe: 1 litro pesaría unos 22,6 kg, el doble que el plomo.",
     "descripcion": "Ficha del osmio: su cualidad única o récord"
   },
   "elemento.Os.curiosidad": {
@@ -976,7 +976,7 @@
     "descripcion": "Ficha del iridio: su cualidad única o récord"
   },
   "elemento.Ir.curiosidad": {
-    "texto": "El físico Luis Walter Álvarez, nieto de un médico asturiano, fue uno de los que descubrió esa capa de iridio en 1980 con su hijo Walter.",
+    "texto": "El físico Luis Walter Álvarez, nieto de un médico asturiano, fue uno de los que descubrieron esa capa de iridio en 1980 con su hijo Walter.",
     "descripcion": "Ficha del iridio: dato curioso"
   },
   "elemento.Ir.pista": {
@@ -984,7 +984,7 @@
     "descripcion": "Juego de adivinar: pista sobre el iridio que no dice su nombre ni su símbolo"
   },
   "elemento.Ir.pregunta": {
-    "texto": "¿Qué ayudó a descubrir una capa de este elemento en las rocas?",
+    "texto": "¿Qué delató una capa de este elemento en rocas de hace 66 millones de años?",
     "descripcion": "Test de la ficha del iridio: enunciado de la pregunta"
   },
   "elemento.Ir.pregunta.ok": {
@@ -1040,7 +1040,7 @@
     "descripcion": "Test de la ficha del platino: respuesta correcta (corta)"
   },
   "elemento.Pt.pregunta.mal1": {
-    "texto": "Jorge Juan",
+    "texto": "Cosme Damián Churruca",
     "descripcion": "Test de la ficha del platino: respuesta incorrecta pero creíble"
   },
   "elemento.Pt.pregunta.mal2": {
@@ -1068,11 +1068,11 @@
     "descripcion": "Ficha del oro: por qué se usa este elemento y no otro"
   },
   "elemento.Au.unico": {
-    "texto": "Es el metal más maleable: con un solo gramo se puede hacer una lámina de casi un metro cuadrado.",
+    "texto": "Es el metal más maleable: con solo 1 gramo se puede hacer una lámina de casi 1 metro cuadrado.",
     "descripcion": "Ficha del oro: su cualidad única o récord"
   },
   "elemento.Au.curiosidad": {
-    "texto": "En 1940, George de Hevesy disolvió dos medallas del Nobel en agua regia para esconderlas de los nazis; tras la guerra recuperó el metal y se volvieron a fundir.",
+    "texto": "En 1940, George de Hevesy disolvió 2 medallas del Nobel en agua regia para esconderlas de los nazis; tras la guerra recuperó el metal y se volvieron a fundir.",
     "descripcion": "Ficha del oro: dato curioso"
   },
   "elemento.Au.pista": {
@@ -1100,7 +1100,7 @@
     "descripcion": "Test de la ficha del oro: respuesta incorrecta pero creíble"
   },
   "elemento.Au.pregunta.explicacion": {
-    "texto": "Con un gramo se puede batir una lámina de casi un metro cuadrado.",
+    "texto": "Con solo 1 gramo se puede batir una lámina de casi 1 metro cuadrado.",
     "descripcion": "Test de la ficha del oro: explicación de la respuesta correcta"
   },
   "elemento.Hg.descubrimiento": {
@@ -1152,11 +1152,11 @@
     "descripcion": "Test de la ficha del mercurio: explicación de la respuesta correcta"
   },
   "elemento.Tl.descubrimiento": {
-    "texto": "Lo descubrió el inglés William Crookes en Londres en 1861. Al quemar residuos de una fábrica de ácido sulfúrico vio una línea verde brillante en el espectro, y lo llamó con la palabra griega para «brote verde». Un año después, el francés Claude-Auguste Lamy aisló el metal.",
+    "texto": "Lo descubrió el inglés William Crookes en Londres en 1861. Al quemar residuos de una fábrica de ácido sulfúrico vio una línea verde brillante en el espectro, y lo llamó con la palabra griega para «brote verde». 1 año después, el francés Claude-Auguste Lamy aisló el metal.",
     "descripcion": "Ficha del talio: quién, cuándo y cómo se descubrió"
   },
   "elemento.Tl.usos": {
-    "texto": "El talio-201 se inyecta en pruebas de esfuerzo para ver cómo llega la sangre al corazón. También está en detectores de radiación y lentes para infrarrojos. Antes se usaba como matarratas, hoy prohibido.",
+    "texto": "El talio-201 se inyecta en pruebas de esfuerzo para ver cómo llega la sangre al corazón. También está en detectores de radiación y lentes para infrarrojos. Antes se usaba como matarratas, algo que hoy está prohibido.",
     "descripcion": "Ficha del talio: para qué se usa hoy"
   },
   "elemento.Tl.porque": {
@@ -1180,19 +1180,19 @@
     "descripcion": "Test de la ficha del talio: enunciado de la pregunta"
   },
   "elemento.Tl.pregunta.ok": {
-    "texto": "Se parece al ion potasio",
+    "texto": "Porque se parece al ion potasio",
     "descripcion": "Test de la ficha del talio: respuesta correcta (corta)"
   },
   "elemento.Tl.pregunta.mal1": {
-    "texto": "Se parece al azúcar",
+    "texto": "Porque se parece al azúcar",
     "descripcion": "Test de la ficha del talio: respuesta incorrecta pero creíble"
   },
   "elemento.Tl.pregunta.mal2": {
-    "texto": "Es muy ligero",
+    "texto": "Porque es muy ligero",
     "descripcion": "Test de la ficha del talio: respuesta incorrecta pero creíble"
   },
   "elemento.Tl.pregunta.mal3": {
-    "texto": "Es magnético",
+    "texto": "Porque es magnético",
     "descripcion": "Test de la ficha del talio: respuesta incorrecta pero creíble"
   },
   "elemento.Tl.pregunta.explicacion": {
@@ -1200,7 +1200,7 @@
     "descripcion": "Test de la ficha del talio: explicación de la respuesta correcta"
   },
   "elemento.Pb.descubrimiento": {
-    "texto": "Se conoce desde hace más de 8000 años; es uno de los primeros metales que se fundió. Los romanos lo sacaban a toneladas, también de minas de Hispania como las de Cartagena, para hacer tuberías. Lavoisier lo reconoció como elemento a finales del siglo XVIII.",
+    "texto": "Se conoce desde hace más de 8000 años; es uno de los primeros metales que se fundieron. Los romanos lo sacaban a toneladas, también de minas de Hispania como las de Cartagena, para hacer tuberías. Lavoisier lo reconoció como elemento a finales del siglo XVIII.",
     "descripcion": "Ficha del plomo: quién, cuándo y cómo se descubrió"
   },
   "elemento.Pb.usos": {
@@ -1244,7 +1244,7 @@
     "descripcion": "Test de la ficha del plomo: respuesta incorrecta pero creíble"
   },
   "elemento.Pb.pregunta.explicacion": {
-    "texto": "El plomo de los gases de escape dañaba el sistema nervioso, sobre todo de niños.",
+    "texto": "El plomo de los gases de escape dañaba el sistema nervioso, sobre todo en la infancia.",
     "descripcion": "Test de la ficha del plomo: explicación de la respuesta correcta"
   },
   "elemento.Bi.descubrimiento": {
@@ -1260,7 +1260,7 @@
     "descripcion": "Ficha del bismuto: por qué se usa este elemento y no otro"
   },
   "elemento.Bi.unico": {
-    "texto": "Es el metal más diamagnético: un imán fuerte lo repele. Y es radiactivo, pero su vida media es más de mil millones de veces la edad del universo.",
+    "texto": "Es el metal más diamagnético: un imán fuerte lo repele. Y es radiactivo, pero su vida media es más de 1000 millones de veces la edad del universo.",
     "descripcion": "Ficha del bismuto: su cualidad única o récord"
   },
   "elemento.Bi.curiosidad": {
@@ -1268,7 +1268,7 @@
     "descripcion": "Ficha del bismuto: dato curioso"
   },
   "elemento.Bi.pista": {
-    "texto": "Formo cristales en escalera de colores y tomo el relevo del plomo en los anzuelos.",
+    "texto": "Formo cristales en escalera de colores y tomo el relevo del plomo en los plomos de pesca.",
     "descripcion": "Juego de adivinar: pista sobre el bismuto que no dice su nombre ni su símbolo"
   },
   "elemento.Bi.pregunta": {
@@ -1276,19 +1276,19 @@
     "descripcion": "Test de la ficha del bismuto: enunciado de la pregunta"
   },
   "elemento.Bi.pregunta.ok": {
-    "texto": "Es denso y poco tóxico",
+    "texto": "Porque es denso y poco tóxico",
     "descripcion": "Test de la ficha del bismuto: respuesta correcta (corta)"
   },
   "elemento.Bi.pregunta.mal1": {
-    "texto": "Es más ligero y barato",
+    "texto": "Porque es más ligero y barato",
     "descripcion": "Test de la ficha del bismuto: respuesta incorrecta pero creíble"
   },
   "elemento.Bi.pregunta.mal2": {
-    "texto": "Es magnético y duro",
+    "texto": "Porque es magnético y duro",
     "descripcion": "Test de la ficha del bismuto: respuesta incorrecta pero creíble"
   },
   "elemento.Bi.pregunta.mal3": {
-    "texto": "Es líquido y brillante",
+    "texto": "Porque es líquido y brillante",
     "descripcion": "Test de la ficha del bismuto: respuesta incorrecta pero creíble"
   },
   "elemento.Bi.pregunta.explicacion": {
@@ -1304,7 +1304,7 @@
     "descripcion": "Ficha del polonio: para qué se usa hoy"
   },
   "elemento.Po.porque": {
-    "texto": "Emite partículas alfa tan intensas que ioniza el aire de alrededor y neutraliza la carga estática. Como su vida media es corta, 138 días, un gramo suelta muchísimo calor.",
+    "texto": "Emite partículas alfa tan intensas que ioniza el aire de alrededor y neutraliza la carga estática. Como su vida media es corta, 138 días, 1 gramo suelta muchísimo calor.",
     "descripcion": "Ficha del polonio: por qué se usa este elemento y no otro"
   },
   "elemento.Po.unico": {
@@ -1356,7 +1356,7 @@
     "descripcion": "Ficha del astato: por qué se usa este elemento y no otro"
   },
   "elemento.At.unico": {
-    "texto": "Es el elemento natural más escaso de la corteza terrestre: se calcula que hay menos de un gramo en todo el planeta.",
+    "texto": "Es el elemento natural más escaso de la corteza terrestre: se calcula que hay menos de 1 gramo en todo el planeta.",
     "descripcion": "Ficha del astato: su cualidad única o récord"
   },
   "elemento.At.curiosidad": {
@@ -1364,11 +1364,11 @@
     "descripcion": "Ficha del astato: dato curioso"
   },
   "elemento.At.pista": {
-    "texto": "Mi nombre significa «inestable» y en toda la Tierra no hay ni un gramo de mí.",
+    "texto": "Mi nombre significa «inestable» y en toda la Tierra no llego a 1 gramo.",
     "descripcion": "Juego de adivinar: pista sobre el astato que no dice su nombre ni su símbolo"
   },
   "elemento.At.pregunta": {
-    "texto": "¿Qué dos científicas demostraron que existe en la naturaleza?",
+    "texto": "¿Qué científicas demostraron que existe en la naturaleza?",
     "descripcion": "Test de la ficha del astato: enunciado de la pregunta"
   },
   "elemento.At.pregunta.ok": {

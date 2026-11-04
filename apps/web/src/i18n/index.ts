@@ -33,8 +33,14 @@ export function registerLanguage(lang: string, table: TextTable): void {
   TABLES[lang] = table;
 }
 
-/** El texto de `key` con sus {variables} sustituidas. Si no existe, la clave entre corchetes. */
+/**
+ * El texto de `key` con sus {variables} sustituidas. Si no existe, la clave
+ * entre corchetes. Plurales: si `n` vale 1 y existe `<clave>_1`, se usa esa
+ * («1 lección» frente a «{n} lecciones»).
+ */
 export function t(key: string, vars: Record<string, string | number> = {}): string {
+  // El singular del idioma actual; el del español solo si el idioma no tiene ni la forma normal.
+  if (Number(vars.n) === 1 && (current[`${key}_1`] || (!current[key] && TABLES.es[`${key}_1`]))) key = `${key}_1`;
   const entry = current[key] ?? TABLES.es[key];
   if (!entry) return `[${key}]`;
   return entry.texto.replace(/\{(\w+)\}/g, (_, name) => String(vars[name] ?? `{${name}}`));

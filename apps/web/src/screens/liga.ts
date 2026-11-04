@@ -83,7 +83,7 @@ export function renderLeague(container: HTMLElement, leagues: Leagues, p: Progre
   } else body = `<p class="texto-suave">${leagues.error ? t('liga.sin_red') : t('liga.cargando')}</p>`;
 
   container.innerHTML = `
-    <div class="seccion-cabecera"><h2>${g && tab === 'mundial' ? t(`liga.nombre.${g.liga}`) : t('liga.titulo')}</h2>${days !== null ? `<span class="chip">⏳ ${t('liga.dias', { n: days })}</span>` : ''}</div>
+    <div class="seccion-cabecera"><h2>${g && tab === 'mundial' ? t(`liga.nombre.${g.liga}`) : t('liga.titulo')}</h2>${days !== null ? `<span class="chip">⏳ ${(days === 0 ? t('liga.dias_0') : t('liga.dias', { n: days }))}</span>` : ''}</div>
     <div class="liga card">
       <div class="liga-escudos">${tiers}</div>
       <p class="pequeno">${t('liga.semana', { xp: p.xpWeek })}</p>

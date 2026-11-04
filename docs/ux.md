@@ -52,6 +52,17 @@ que la investigación de gamificación dice que funciona con adolescentes
   registrarla en `src/i18n/index.ts` y añadirla al selector de `index.html` y
   a `LANGUAGES` de `src/settings.ts`.
 - El idioma por defecto es el del navegador si está disponible; si no, español.
+- **Cantidades en cifra** (1 protón, 2 átomos, 8 electrones), nunca con letras:
+  se leen mejor, se traducen sin errores y evitan líos de concordancia.
+- **Plurales**: un texto con `{n}` puede tener su forma singular en
+  `<clave>_1`, que se usa cuando n = 1 («1 lección» / «{n} lecciones»). Si no,
+  mejor redactarlo para que valga con cualquier número («Alumnado: {n}»).
+- **Nombres dentro de una frase en minúscula** («¿Cuántos protones tiene un
+  átomo de hidrógeno?»): el código los pasa a minúscula al insertarlos.
+- **Lenguaje respetuoso e inclusivo**: términos actuales y neutros (personal de
+  la casa, personas esclavizadas, personas con lepra, pueblos indígenas,
+  alumnado, cuenta docente); las científicas, por su nombre; guerras, armas y
+  venenos con tono informativo; el gato bromea sin burlarse de nadie.
 
 ## Lo que queda
 

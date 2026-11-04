@@ -100,7 +100,7 @@
   "descripcion": "Pista: número de átomos de una molécula bloqueada"
  },
  "moleculario.pista_elemento": {
-  "texto": "Lleva {elemento}",
+  "texto": "Contiene: {elemento}",
   "descripcion": "Pista: un elemento que contiene"
  },
  "moleculario.como": {
@@ -148,7 +148,7 @@
   "descripcion": "Explicación del desbloqueo"
  },
  "tabla.bloqueado": {
-  "texto": "Elemento bloqueado: descubre más moléculas para conseguirlo",
+  "texto": "Elemento bloqueado: se desbloquea en su lección del camino o al formar una molécula que lo lleve.",
   "descripcion": "Aviso al tocar un elemento bloqueado"
  },
  "elemento.antiguedad": {
@@ -212,7 +212,7 @@
   "descripcion": "Título del formulario para unirse"
  },
  "clase.unirse_texto": {
-  "texto": "Pide el código a tu profe. Elige un alias (no tu nombre real) y un PIN de 4 números para entrar desde otro móvil.",
+  "texto": "Pide el código a tu profe. Elige un alias (no tu nombre real) y un PIN de 4 cifras para entrar desde otro móvil.",
   "descripcion": "Explicación de cómo unirse, con aviso de privacidad"
  },
  "clase.codigo": {
@@ -224,7 +224,7 @@
   "descripcion": "Campo: apodo del alumno"
  },
  "clase.pin": {
-  "texto": "PIN (4 números)",
+  "texto": "PIN (4 cifras)",
   "descripcion": "Campo"
  },
  "clase.entrar": {
@@ -262,6 +262,10 @@
  "clase.pendientes": {
   "texto": "{n} cosas por enviar",
   "descripcion": "Eventos pendientes de sincronizar"
+ },
+ "clase.pendientes_1": {
+  "texto": "1 cosa por enviar",
+  "descripcion": "Eventos pendientes de sincronizar (singular)"
  },
  "clase.sincronizado": {
   "texto": "Todo sincronizado",
@@ -428,7 +432,7 @@
   "descripcion": "Título al descubrir una molécula"
  },
  "celebrar.elementos": {
-  "texto": "Nuevos elementos: {lista}",
+  "texto": "Desbloqueas: {lista}",
   "descripcion": "Elementos desbloqueados"
  },
  "celebrar.insignia": {
@@ -436,7 +440,7 @@
   "descripcion": "Insignia conseguida"
  },
  "celebrar.nivel": {
-  "texto": "¡Subes a nivel {nivel}: {nombre}!",
+  "texto": "¡Subes al nivel {nivel}: {nombre}!",
   "descripcion": "Subida de nivel"
  },
  "celebrar.reto": {
@@ -600,7 +604,7 @@
   "descripcion": "Historia del descubrimiento de NaCl"
  },
  "especie.KCl.historia": {
-  "texto": "Es el mineral silvina. Casi todo se usa como abono.",
+  "texto": "Es el mineral silvina. Casi todo el que se extrae se usa como abono.",
   "descripcion": "Historia del descubrimiento de KCl"
  },
  "especie.NaF.historia": {
@@ -672,7 +676,7 @@
   "descripcion": "Historia del descubrimiento de CaCO3"
  },
  "elemento.H.historia": {
-  "texto": "Cavendish lo aisló en 1766. Es el elemento más abundante del universo: las estrellas lo queman para brillar.",
+  "texto": "Cavendish lo aisló en 1766. Es el elemento más abundante del universo: las estrellas lo fusionan para brillar.",
   "descripcion": "Historia del elemento H"
  },
  "elemento.He.historia": {
@@ -684,7 +688,7 @@
   "descripcion": "Historia del elemento Li"
  },
  "elemento.C.historia": {
-  "texto": "Conocido desde la Prehistoria como carbón. Es la base de la vida: todas las moléculas de tu cuerpo lo llevan.",
+  "texto": "Conocido desde la Prehistoria como carbón. Es la base de la vida: las proteínas, los azúcares, las grasas y el ADN de tu cuerpo lo llevan.",
   "descripcion": "Historia del elemento C"
  },
  "elemento.N.historia": {
@@ -696,7 +700,7 @@
   "descripcion": "Historia del elemento O"
  },
  "elemento.F.historia": {
-  "texto": "Moissan lo aisló en 1886. Protege tus dientes y forma el teflón de las sartenes.",
+  "texto": "Moissan lo aisló en 1886. Protege tus dientes y forma parte del teflón de las sartenes.",
   "descripcion": "Historia del elemento F"
  },
  "elemento.Ne.historia": {
@@ -704,7 +708,7 @@
   "descripcion": "Historia del elemento Ne"
  },
  "elemento.Na.historia": {
-  "texto": "Humphry Davy lo aisló en 1807 con electricidad. Explota en agua y es la mitad de la sal.",
+  "texto": "Humphry Davy lo aisló en 1807 con electricidad. Reacciona con violencia con el agua y, unido al cloro, forma la sal común.",
   "descripcion": "Historia del elemento Na"
  },
  "elemento.Mg.historia": {
@@ -720,7 +724,7 @@
   "descripcion": "Historia del elemento Si"
  },
  "elemento.P.historia": {
-  "texto": "Hennig Brand lo descubrió en 1669 buscando la piedra filosofal en orina: el primer elemento con descubridor conocido.",
+  "texto": "Hennig Brand lo descubrió en 1669 buscando la piedra filosofal en la orina: el primer elemento con descubridor conocido.",
   "descripcion": "Historia del elemento P"
  },
  "elemento.S.historia": {
@@ -748,11 +752,11 @@
   "descripcion": "Historia del elemento V"
  },
  "elemento.Fe.historia": {
-  "texto": "Se trabaja desde la Edad del Hierro, hace más de 3000 años. Es el corazón de la Tierra y lleva el oxígeno en tu sangre.",
+  "texto": "Se trabaja desde la Edad del Hierro, hace más de 3000 años. Forma casi todo el núcleo de la Tierra y lleva el oxígeno en tu sangre.",
   "descripcion": "Historia del elemento Fe"
  },
  "elemento.Cu.historia": {
-  "texto": "Se usa desde hace unos 10 000 años; con estaño forma el bronce. Hoy, los cables eléctricos.",
+  "texto": "Se usa desde hace unos 10 000 años; con estaño forma el bronce. Hoy está en los cables eléctricos.",
   "descripcion": "Historia del elemento Cu"
  },
  "elemento.Zn.historia": {
@@ -776,7 +780,7 @@
   "descripcion": "Historia del elemento W"
  },
  "elemento.Pt.historia": {
-  "texto": "Antonio de Ulloa lo describió en 1748 en América. No se corroe: se usa en joyería y en los catalizadores de los coches.",
+  "texto": "Los pueblos indígenas de las actuales Colombia y Ecuador ya lo trabajaban; Antonio de Ulloa lo describió para Europa en 1748. No se corroe: se usa en joyería y en los catalizadores de los coches.",
   "descripcion": "Historia del elemento Pt"
  },
  "elemento.Au.historia": {
@@ -816,7 +820,7 @@
   "descripcion": "Campo"
  },
  "profe.password": {
-  "texto": "Contraseña (mínimo 8)",
+  "texto": "Contraseña (mínimo 8 caracteres)",
   "descripcion": "Campo"
  },
  "profe.salir": {
@@ -852,8 +856,12 @@
   "descripcion": "Sin clases"
  },
  "profe.alumnos_n": {
-  "texto": "{n} alumnos",
+  "texto": "{n} estudiantes",
   "descripcion": "Número de alumnos de una clase"
+ },
+ "profe.alumnos_n_1": {
+  "texto": "1 estudiante",
+  "descripcion": "Número de alumnos de una clase (singular)"
  },
  "profe.volver": {
   "texto": "← Tus clases",
@@ -868,7 +876,7 @@
   "descripcion": "Instrucciones"
  },
  "profe.tile.alumnos": {
-  "texto": "Alumnos",
+  "texto": "Alumnado",
   "descripcion": "Número destacado"
  },
  "profe.tile.moleculas": {
@@ -960,7 +968,7 @@
   "descripcion": "Encabezado: quién ha descubierto qué"
  },
  "profe.cobertura_texto": {
-  "texto": "Entre paréntesis, cuántos alumnos la han formado. Las que nadie tiene aún son buenas candidatas para un reto.",
+  "texto": "Entre paréntesis, cuántas personas de la clase la han formado. Las que nadie tiene aún son buenas candidatas para un reto.",
   "descripcion": "Explicación"
  },
  "profe.retos": {
@@ -1132,7 +1140,7 @@
   "descripcion": "Nombre del elemento Cu"
  },
  "elemento.Zn.nombre": {
-  "texto": "Zinc",
+  "texto": "Cinc",
   "descripcion": "Nombre del elemento Zn"
  },
  "elemento.Ga.nombre": {
@@ -1644,7 +1652,7 @@
   "descripcion": "Nombre de la sustancia HCN"
  },
  "especie.HCN.uso": {
-  "texto": "Muy tóxico; aparece en las semillas de algunas frutas.",
+  "texto": "Muy tóxico; lo pueden liberar las semillas de algunas frutas, como las del albaricoque.",
   "descripcion": "Para qué sirve HCN hoy (texto corto)"
  },
  "especie.CH2O.nombre": {
@@ -1964,7 +1972,7 @@
   "descripcion": "Nombre de una reacción"
  },
  "reaccion.boudouard.nota": {
-  "texto": "En los altos hornos: el CO2 se reduce con carbón al rojo.",
+  "texto": "En los altos hornos: el CO₂ se reduce con carbón al rojo.",
   "descripcion": "Lo que conviene contar de la reacción"
  },
  "reaccion.gas-agua.nombre": {
@@ -2108,7 +2116,7 @@
   "descripcion": "Nombre de una reacción"
  },
  "reaccion.carbonatacion.nota": {
-  "texto": "Los morteros de cal se endurecen así, con el CO2 del aire.",
+  "texto": "Los morteros de cal se endurecen así, con el CO₂ del aire.",
   "descripcion": "Lo que conviene contar de la reacción"
  },
  "reaccion.combustion-s.nombre": {
@@ -2140,7 +2148,7 @@
   "descripcion": "Nombre de una reacción"
  },
  "reaccion.sintesis-nacl.nota": {
-  "texto": "Un metal explosivo y un gas venenoso dan sal de mesa.",
+  "texto": "Un metal que arde en contacto con el agua y un gas venenoso dan la sal de mesa.",
   "descripcion": "Lo que conviene contar de la reacción"
  },
  "reaccion.sintesis-hcl.nombre": {
@@ -2404,7 +2412,7 @@
   "descripcion": "Pista en RA mientras busca superficie"
  },
  "explorar.pista_toca": {
-  "texto": "Toca la pantalla para poner un átomo de {elemento} en el anillo.",
+  "texto": "Toca la pantalla para poner un átomo en el anillo: {elemento}.",
   "descripcion": "Pista en RA cuando hay superficie"
  },
  "imprimir.volver": {
@@ -2436,11 +2444,11 @@
   "descripcion": "Botón"
  },
  "imprimir.resumen": {
-  "texto": "{tarjetas} tarjetas en {hojas} hojas.",
+  "texto": "Tarjetas: {tarjetas}, en {hojas} hojas.",
   "descripcion": "Resumen (plural)"
  },
  "imprimir.resumen_1": {
-  "texto": "{tarjetas} tarjetas en 1 hoja.",
+  "texto": "Tarjetas: {tarjetas}, en 1 hoja.",
   "descripcion": "Resumen (una hoja)"
  },
  "imprimir.faltan": {
@@ -2524,7 +2532,7 @@
   "descripcion": "Introducción, escena 4: texto"
  },
  "intro.5.titulo": {
-  "texto": "Solo o con tu clase",
+  "texto": "Por tu cuenta o con tu clase",
   "descripcion": "Introducción, escena 5: título"
  },
  "intro.5.texto": {
@@ -2564,7 +2572,7 @@
   "descripcion": "Estado con tarjetas a la vista"
  },
  "juego.seleccionada": {
-  "texto": "{nombre} elegida: toca otra tarjeta para juntarlas.",
+  "texto": "Tarjeta elegida: {nombre}. Toca otra tarjeta para juntarlas.",
   "descripcion": "Mesa: una tarjeta elegida con un toque"
  },
  "juego.manten": {
@@ -2592,7 +2600,7 @@
   "descripcion": "Título del aviso al descomponer"
  },
  "juego.descomposicion_texto": {
-  "texto": "Se rompen los enlaces de {nombre}: la tarjeta vuelve a ser un átomo libre, lista para otra reacción.",
+  "texto": "{nombre}: se rompen sus enlaces y la tarjeta vuelve a ser un átomo libre, lista para otra reacción.",
   "descripcion": "Texto del aviso al descomponer"
  },
  "juego.exo": {

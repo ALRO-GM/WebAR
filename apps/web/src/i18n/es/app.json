@@ -5,7 +5,7 @@
  },
  "stats.quarks_aria": {
   "texto": "Quarks: {n}. Abre la tienda en tu perfil",
-  "descripcion": "Lectores de pantalla: botón de los quarks (moneda del juego)"
+  "descripcion": "Lectores de pantalla"
  },
  "stats.xp_aria": {
   "texto": "XP de hoy: {n} de {meta}",
@@ -84,7 +84,7 @@
   "descripcion": "Fallo en Adivina"
  },
  "adivina.fin": {
-  "texto": "{n} de {total} aciertos",
+  "texto": "Aciertos: {n} de {total}",
   "descripcion": "Final de Adivina"
  },
  "foto.titulo": {
@@ -204,12 +204,12 @@
   "descripcion": "Título de la tarjeta de cualidad única"
  },
  "leccion.protones": {
-  "texto": "¿Cuántos protones tiene el {nombre}?",
-  "descripcion": "Pregunta de lección"
+  "texto": "¿Cuántos protones tiene un átomo de {nombre}?",
+  "descripcion": "Pregunta de lección; {nombre} en minúscula («hidrógeno»)"
  },
  "leccion.protones_explica": {
-  "texto": "El número atómico del {nombre} es {z}: tiene {z} protones (y, neutro, {z} electrones).",
-  "descripcion": "Explicación tras responder"
+  "texto": "El número atómico del {nombre} es {z}, y el número atómico es justo el número de protones del núcleo: {z}.",
+  "descripcion": "Explicación tras responder; {z} es el número atómico"
  },
  "leccion.simbolo": {
   "texto": "¿Cuál es el símbolo del {nombre}?",
@@ -245,7 +245,7 @@
  },
  "leccion.combo": {
   "texto": "🔥 ¡{n} seguidas!",
-  "descripcion": "Racha de aciertos dentro de la lección"
+  "descripcion": "Racha de aciertos en la lección (siempre 3 o más)"
  },
  "leccion.bien.1": {
   "texto": "¡Genial!",
@@ -357,11 +357,11 @@
  },
  "camino.dice.leccion": {
   "texto": "¡Te presento al {nombre}! Te va a sorprender.",
-  "descripcion": "Lo que dice el guía antes de una lección"
+  "descripcion": "Lo que dice el guía antes de una lección; {nombre} en minúscula"
  },
  "camino.dice.laboratorio": {
-  "texto": "Al laboratorio: junta las tarjetas y {nombre}.",
-  "descripcion": "Lo que dice el guía antes del laboratorio ({nombre} = «Forma H₂O»; se acepta la mayúscula)"
+  "texto": "¡Al laboratorio! Junta las tarjetas para formar {formula}.",
+  "descripcion": "Lo que dice el guía antes de un laboratorio"
  },
  "camino.dice.adivina": {
   "texto": "¿Reconoces cada elemento por su objeto?",
@@ -532,7 +532,7 @@
   "descripcion": "Aviso"
  },
  "liga.reglas": {
-  "texto": "Suben los {sube} primeros (zona verde) y bajan los {baja} últimos (zona roja).",
+  "texto": "Suben de liga: los {sube} primeros (zona verde). Bajan: los {baja} últimos (zona roja).",
   "descripcion": "Reglas"
  },
  "liga.apodo": {
@@ -636,7 +636,7 @@
   "descripcion": "Encabezado del calendario"
  },
  "perfil.protectores": {
-  "texto": "🧊 Protectores de racha: {n} (se gastan solos si un día no juegas)",
+  "texto": "🧊 Protectores de racha: {n}. Se gastan solos si un día no juegas.",
   "descripcion": "Bajo el calendario"
  },
  "perfil.elige_avatar": {
@@ -676,7 +676,7 @@
   "descripcion": "Título"
  },
  "tienda.texto": {
-  "texto": "Tienes {n} quarks. Se ganan con lecciones, misiones y cofres.",
+  "texto": "Quarks: {n}. Se ganan con lecciones, misiones y cofres.",
   "descripcion": "Tienda"
  },
  "tienda.gratis": {
@@ -938,5 +938,61 @@
  "tema.a_claro": {
   "texto": "Cambiar a tema claro",
   "descripcion": "Botón de la barra de arriba (lectores de pantalla y título)"
+ },
+ "leccion.electrones": {
+  "texto": "¿Cuántos electrones tiene un átomo neutro de {nombre}?",
+  "descripcion": "Pregunta de lección"
+ },
+ "leccion.electrones_explica": {
+  "texto": "Un átomo neutro tiene tantos electrones como protones. El {nombre} tiene {z} protones, así que tiene {z} electrones.",
+  "descripcion": "Explicación tras responder"
+ },
+ "leccion.neutrones": {
+  "texto": "¿Cuántos neutrones tiene el isótopo más común de {nombre} ({simbolo}-{a})?",
+  "descripcion": "Pregunta de lección; {simbolo}-{a} es el isótopo, p. ej. «H-1»"
+ },
+ "leccion.neutrones_explica": {
+  "texto": "Neutrones = número másico − número atómico. En el {simbolo}-{a}: {a} − {z} = {neutrones}.",
+  "descripcion": "Explicación tras responder"
+ },
+ "mision.lecciones_1": {
+  "texto": "Completa 1 lección",
+  "descripcion": "Misión (singular)"
+ },
+ "mision.lecturas_1": {
+  "texto": "Lee 1 ficha de elemento",
+  "descripcion": "Misión (singular)"
+ },
+ "mision.reacciones_1": {
+  "texto": "Haz 1 reacción con tarjetas",
+  "descripcion": "Misión (singular)"
+ },
+ "stats.racha_aria_1": {
+  "texto": "Racha: 1 día",
+  "descripcion": "Lectores de pantalla (singular)"
+ },
+ "camino.racha_hoy_1": {
+  "texto": "🔥 Racha de 1 día: hoy ya cuenta",
+  "descripcion": "Bajo la meta diaria (singular)"
+ },
+ "camino.racha_peligro_1": {
+  "texto": "🔥 Tu racha de 1 día te espera: haz una lección hoy",
+  "descripcion": "Bajo la meta diaria (singular)"
+ },
+ "camino.mas_1": {
+  "texto": "… y 1 unidad más por descubrir",
+  "descripcion": "Final del camino visible (singular)"
+ },
+ "liga.dias_1": {
+  "texto": "1 día",
+  "descripcion": "Días que quedan de semana (singular)"
+ },
+ "liga.dias_0": {
+  "texto": "Último día",
+  "descripcion": "Días que quedan de semana (hoy acaba)"
+ },
+ "perfil.calendario_aria_1": {
+  "texto": "Calendario de las últimas semanas: racha de 1 día",
+  "descripcion": "Lectores de pantalla (singular)"
  }
 }

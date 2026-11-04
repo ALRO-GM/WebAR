@@ -56,5 +56,7 @@ ve en ≤ 2 min (cron) y despliega sola → comprueba
 10. **Ningún texto de la interfaz en el código**: va en la tabla de textos,
     repartida por secciones en `apps/web/src/i18n/es/*.json` con su
     descripción (y en `en/*.json`). Un test impide claves repetidas.
+    Cantidades en cifra, singulares con `<clave>_1` y lenguaje respetuoso e
+    inclusivo: ver «Textos e idiomas» en [docs/ux.md](docs/ux.md).
 11. **Datos de alumnos**: solo alias y progreso; nada de nombres reales,
     correos, fotos ni ubicación (guía de la AEPD para centros).

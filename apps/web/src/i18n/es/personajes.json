@@ -20,7 +20,7 @@
   "descripcion": "Biografía breve de Marie Curie para alumnado de ESO (3-4 frases)"
  },
  "personaje.marie-curie.logro": {
-  "texto": "Descubrió el polonio y el radio y es la primera persona que ganó dos Premios Nobel en ciencias distintas.",
+  "texto": "Descubrió el polonio y el radio, y fue la primera persona en ganar dos Premios Nobel y la única en dos ciencias distintas.",
   "descripcion": "Logro principal de Marie Curie, en una frase"
  },
  "personaje.marie-curie.dato.1": {
@@ -88,7 +88,7 @@
   "descripcion": "Dato curioso y verídico sobre Dmitri Mendeléiev"
  },
  "personaje.dmitri-mendeleiev.dato.2": {
-  "texto": "Se atrevió a cambiar de sitio algunos elementos, como el teluro y el yodo, porque sus propiedades encajaban mejor así. Tenía razón: hoy la tabla se ordena por número atómico.",
+  "texto": "Se atrevió a cambiar de sitio algunos elementos, como el telurio y el yodo, porque sus propiedades encajaban mejor así. Tenía razón: hoy la tabla se ordena por número atómico.",
   "descripcion": "Dato curioso y verídico sobre Dmitri Mendeléiev"
  },
  "personaje.dmitri-mendeleiev.dato.3": {
@@ -156,7 +156,7 @@
   "descripcion": "Dato curioso y verídico sobre Cecilia Payne-Gaposchkin"
  },
  "personaje.cecilia-payne-gaposchkin.saludo": {
-  "texto": "¡Hola! Soy Cecilia. ¿Sabías que el Sol es casi todo hidrógeno?",
+  "texto": "¡Hola! Soy Cecilia. ¿Sabías que el Sol está hecho sobre todo de hidrógeno?",
   "descripcion": "Saludo de Cecilia Payne-Gaposchkin al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
  },
  "personaje.cecilia-payne-gaposchkin.frase.1": {
@@ -216,7 +216,7 @@
   "descripcion": "Dato curioso y verídico sobre Marie-Anne Paulze Lavoisier"
  },
  "personaje.marie-anne-paulze-lavoisier.saludo": {
-  "texto": "Bonjour! Soy Marie-Anne. Trae tu cuaderno: aquí se apunta todo.",
+  "texto": "¡Bonjour! Soy Marie-Anne. Trae tu cuaderno: aquí se apunta todo.",
   "descripcion": "Saludo de Marie-Anne Paulze Lavoisier al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
  },
  "personaje.marie-anne-paulze-lavoisier.frase.1": {
@@ -280,7 +280,7 @@
   "descripcion": "Saludo de Mario Molina al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
  },
  "personaje.mario-molina.frase.1": {
-  "texto": "El ozono, O₃, son tres átomos de oxígeno juntos. Allá arriba, en la estratosfera, nos protege del sol como unas gafas gigantes.",
+  "texto": "El ozono, O₃, son 3 átomos de oxígeno juntos. Allá arriba, en la estratosfera, nos protege de los rayos ultravioleta del Sol como unas gafas de sol gigantes.",
   "descripcion": "Lo que dice Mario Molina en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
  },
  "personaje.mario-molina.frase.2": {
@@ -308,7 +308,7 @@
   "descripcion": "Años de nacimiento y muerte de Jabir ibn Hayyan"
  },
  "personaje.jabir-ibn-hayyan.pais": {
-  "texto": "Persia y Kufa (actual Irak)",
+  "texto": "Jorasán (Persia) y Kufa (actual Irak)",
   "descripcion": "De dónde era Jabir ibn Hayyan y adónde emigró, si lo hizo"
  },
  "personaje.jabir-ibn-hayyan.campo": {
@@ -380,7 +380,7 @@
   "descripcion": "Biografía breve de Alice Ball para alumnado de ESO (3-4 frases)"
  },
  "personaje.alice-ball.logro": {
-  "texto": "Creó el «método Ball», el mejor tratamiento contra la lepra hasta que llegaron los antibióticos en los años 40.",
+  "texto": "Creó el «método Ball», el mejor tratamiento para las personas con lepra hasta que llegaron nuevos medicamentos en los años 40.",
   "descripcion": "Logro principal de Alice Ball, en una frase"
  },
  "personaje.alice-ball.dato.1": {
@@ -436,7 +436,7 @@
   "descripcion": "Campo de trabajo de Tu Youyou, en pocas palabras"
  },
  "personaje.tu-youyou.bio": {
-  "texto": "Nació en Ningbo (China) y estudió farmacia en Pekín. En 1969 se unió a un proyecto para encontrar un tratamiento contra la malaria y revisó más de dos mil recetas de la medicina tradicional china. Un texto del siglo IV le dio la pista: extraer la planta Artemisia annua sin calentarla. Así obtuvo la artemisinina, que ha salvado millones de vidas, y en 2015 recibió el Premio Nobel de Fisiología o Medicina.",
+  "texto": "Nació en Ningbo (China) y estudió farmacia en Pekín. En 1969 se unió a un proyecto para encontrar un tratamiento contra la malaria y revisó más de dos mil recetas de la medicina tradicional china. Un texto del siglo IV le dio la pista: extraer el principio activo de la planta Artemisia annua sin calentarla. Así obtuvo la artemisinina, que ha salvado millones de vidas, y en 2015 recibió el Premio Nobel de Fisiología o Medicina.",
   "descripcion": "Biografía breve de Tu Youyou para alumnado de ESO (3-4 frases)"
  },
  "personaje.tu-youyou.logro": {
@@ -468,7 +468,7 @@
   "descripcion": "Lo que dice Tu Youyou en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
  },
  "personaje.tu-youyou.frase.3": {
-  "texto": "La artemisinina tiene un puente de dos átomos de oxígeno muy especial. Gracias a él ataca al parásito de la malaria.",
+  "texto": "La artemisinina tiene un puente de 2 átomos de oxígeno muy especial. Gracias a él ataca al parásito de la malaria.",
   "descripcion": "Lo que dice Tu Youyou en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
  },
  "personaje.tu-youyou.frase.4": {
@@ -496,7 +496,7 @@
   "descripcion": "Campo de trabajo de Andrés Manuel del Río, en pocas palabras"
  },
  "personaje.andres-manuel-del-rio.bio": {
-  "texto": "Nació en Madrid, estudió en Alcalá y en escuelas de minas de varios países de Europa, y en 1795 se fue a enseñar al Real Seminario de Minería de la Ciudad de México. En 1801, analizando un mineral llamado «plomo pardo» de Zimapán, descubrió un elemento nuevo. Un químico francés le convenció, por error, de que era cromo, y retiró su descubrimiento. En 1830 el sueco Nils Sefström volvió a encontrarlo y lo llamó vanadio.",
+  "texto": "Nació en Madrid, estudió en Alcalá y en escuelas de minas de varios países de Europa, y en 1795 se fue a enseñar al Real Seminario de Minería de la Ciudad de México. En 1801, analizando un mineral llamado «plomo pardo» de Zimapán, descubrió un elemento nuevo. Un químico francés lo convenció, por error, de que era cromo, y él retiró su descubrimiento. En 1830 el sueco Nils Sefström volvió a encontrarlo y lo llamó vanadio.",
   "descripcion": "Biografía breve de Andrés Manuel del Río para alumnado de ESO (3-4 frases)"
  },
  "personaje.andres-manuel-del-rio.logro": {
@@ -576,7 +576,7 @@
   "descripcion": "Dato curioso y verídico sobre Rosalind Franklin"
  },
  "personaje.rosalind-franklin.saludo": {
-  "texto": "¡Hola! Soy Rosalind. ¿Le sacamos una foto a los átomos?",
+  "texto": "¡Hola! Soy Rosalind. ¿Les sacamos una foto a los átomos?",
   "descripcion": "Saludo de Rosalind Franklin al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
  },
  "personaje.rosalind-franklin.frase.1": {
@@ -696,7 +696,7 @@
   "descripcion": "Dato curioso y verídico sobre Niels Bohr"
  },
  "personaje.niels-bohr.saludo": {
-  "texto": "Hej! Soy Niels. ¿Saltamos de órbita en órbita?",
+  "texto": "¡Hej! Soy Niels. ¿Saltamos de órbita en órbita?",
   "descripcion": "Saludo de Niels Bohr al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
  },
  "personaje.niels-bohr.frase.1": {
@@ -736,7 +736,7 @@
   "descripcion": "Campo de trabajo de Lise Meitner, en pocas palabras"
  },
  "personaje.lise-meitner.bio": {
-  "texto": "Nació en Viena y fue la segunda mujer que se doctoró en física en la Universidad de Viena. Trabajó unos treinta años en Berlín con el químico Otto Hahn. En 1938, por su origen judío, tuvo que huir de la Alemania nazi a Suecia. Desde allí, junto a su sobrino Otto Frisch, explicó que el núcleo de uranio se había partido en dos y le dieron nombre: fisión nuclear.",
+  "texto": "Nació en Viena y fue la segunda mujer que se doctoró en física en la Universidad de Viena. Trabajó unos treinta años en Berlín con el químico Otto Hahn. En 1938, por su origen judío, tuvo que huir de la Alemania nazi a Suecia. Desde allí, junto a su sobrino Otto Frisch, explicó que el núcleo de uranio se había partido en dos y llamaron a ese proceso fisión nuclear.",
   "descripcion": "Biografía breve de Lise Meitner para alumnado de ESO (3-4 frases)"
  },
  "personaje.lise-meitner.logro": {
@@ -748,11 +748,11 @@
   "descripcion": "Dato curioso y verídico sobre Lise Meitner"
  },
  "personaje.lise-meitner.dato.2": {
-  "texto": "El elemento 109, el meitnerio (Mt), lleva su nombre: es uno de los pocos elementos dedicados a una mujer.",
+  "texto": "El elemento 109, el meitnerio (Mt), lleva su nombre: es el único elemento dedicado solo a una mujer (el curio honra a Marie y a Pierre Curie).",
   "descripcion": "Dato curioso y verídico sobre Lise Meitner"
  },
  "personaje.lise-meitner.dato.3": {
-  "texto": "La invitaron a trabajar en la bomba atómica y se negó.",
+  "texto": "La invitaron a unirse al proyecto que fabricó la bomba atómica y no aceptó: no quiso trabajar en armas.",
   "descripcion": "Dato curioso y verídico sobre Lise Meitner"
  },
  "personaje.lise-meitner.saludo": {
@@ -820,7 +820,7 @@
   "descripcion": "Saludo de Kathleen Lonsdale al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
  },
  "personaje.kathleen-lonsdale.frase.1": {
-  "texto": "El benceno tiene seis átomos de carbono que forman un hexágono plano, como una celda de un panal.",
+  "texto": "El benceno tiene 6 átomos de carbono que forman un hexágono plano, como una celda de un panal.",
   "descripcion": "Lo que dice Kathleen Lonsdale en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
  },
  "personaje.kathleen-lonsdale.frase.2": {
@@ -856,7 +856,7 @@
   "descripcion": "Campo de trabajo de Asima Chatterjee, en pocas palabras"
  },
  "personaje.asima-chatterjee.bio": {
-  "texto": "Nació en Calcuta (hoy Kolkata). En 1944 fue la primera mujer en obtener el título de Doctora en Ciencias por una universidad india, la de Calcuta. Estudió las moléculas de plantas medicinales de la India, sobre todo los alcaloides, y ayudó a desarrollar medicamentos contra la epilepsia y la malaria. En 1975 fue la primera mujer que presidió el Congreso Científico de la India.",
+  "texto": "Nació en Calcuta (hoy Kolkata). En 1944 fue la primera mujer en obtener el título de doctora en Ciencias por una universidad india, la de Calcuta. Estudió las moléculas de plantas medicinales de la India, sobre todo los alcaloides, y ayudó a desarrollar medicamentos contra la epilepsia y la malaria. En 1975 fue la primera mujer que presidió el Congreso Científico de la India.",
   "descripcion": "Biografía breve de Asima Chatterjee para alumnado de ESO (3-4 frases)"
  },
  "personaje.asima-chatterjee.logro": {
@@ -872,7 +872,7 @@
   "descripcion": "Dato curioso y verídico sobre Asima Chatterjee"
  },
  "personaje.asima-chatterjee.dato.3": {
-  "texto": "Publicó cerca de cuatrocientos artículos científicos.",
+  "texto": "Publicó cerca de 400 artículos científicos.",
   "descripcion": "Dato curioso y verídico sobre Asima Chatterjee"
  },
  "personaje.asima-chatterjee.saludo": {
@@ -936,7 +936,7 @@
   "descripcion": "Dato curioso y verídico sobre Shuji Nakamura"
  },
  "personaje.shuji-nakamura.saludo": {
-  "texto": "Konnichiwa! Soy Shuji. ¿Encendemos una luz azul?",
+  "texto": "¡Konnichiwa! Soy Shuji. ¿Encendemos una luz azul?",
   "descripcion": "Saludo de Shuji Nakamura al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
  },
  "personaje.shuji-nakamura.frase.1": {
@@ -1032,7 +1032,7 @@
   "descripcion": "Lo que dice la mascota cuando el alumno lleva un rato sin hacer nada. Humor de física y química para adolescentes"
  },
  "gato.frase.inactivo.2": {
-  "texto": "Estoy midiendo tu actividad y me sale… cero coma cero.",
+  "texto": "Estoy midiendo tu actividad y me sale… cero coma cero. ¿Seguimos cuando quieras?",
   "descripcion": "Lo que dice la mascota cuando el alumno lleva un rato sin hacer nada. Humor de física y química para adolescentes"
  },
  "gato.frase.inactivo.3": {
@@ -1052,7 +1052,7 @@
   "descripcion": "Reacción de la mascota cuando el alumno acierta. Humor de física y química para adolescentes"
  },
  "gato.frase.acierto.2": {
-  "texto": "¡Bien! Tu neurona acaba de saltar a un nivel de energía superior.",
+  "texto": "¡Bien! Tus neuronas acaban de saltar a un nivel de energía superior.",
   "descripcion": "Reacción de la mascota cuando el alumno acierta. Humor de física y química para adolescentes"
  },
  "gato.frase.acierto.3": {
@@ -1072,7 +1072,7 @@
   "descripcion": "Reacción de la mascota cuando el alumno acierta. Humor de física y química para adolescentes"
  },
  "gato.frase.fallo.1": {
-  "texto": "Casi. Hasta los mejores experimentos fallan a la primera.",
+  "texto": "¡Buen intento! Hasta los mejores experimentos fallan a la primera.",
   "descripcion": "Reacción de la mascota cuando el alumno falla (siempre amable, nunca humillante). Humor de física y química para adolescentes"
  },
  "gato.frase.fallo.2": {

@@ -1,6 +1,6 @@
 {
  "especie.H2.porque": {
-  "texto": "Son dos átomos de hidrógeno unidos por un enlace covalente simple: una molécula diminuta y apolar. Las atracciones entre moléculas son tan débiles que no se licúa hasta los −253 °C.",
+  "texto": "Son 2 átomos de hidrógeno unidos por un enlace covalente simple: una molécula diminuta y apolar. Las atracciones entre moléculas son tan débiles que no se licúa hasta los −253 °C.",
   "descripcion": "Por qué el hidrógeno molecular tiene sus propiedades (nivel ESO)"
  },
  "especie.H2.curiosidad": {
@@ -12,7 +12,7 @@
   "descripcion": "Pista para adivinar el hidrógeno molecular; no debe contener su nombre ni su fórmula"
  },
  "especie.O2.porque": {
-  "texto": "Sus dos átomos comparten un doble enlace y la molécula es apolar; por eso se disuelve poco en agua, aunque a los peces les basta con lo que se disuelve.",
+  "texto": "Sus 2 átomos comparten un doble enlace y la molécula es apolar; por eso se disuelve poco en agua, aunque a los peces les basta con lo que se disuelve.",
   "descripcion": "Por qué el oxígeno molecular tiene sus propiedades (nivel ESO)"
  },
  "especie.O2.curiosidad": {
@@ -24,7 +24,7 @@
   "descripcion": "Pista para adivinar el oxígeno molecular; no debe contener su nombre ni su fórmula"
  },
  "especie.N2.porque": {
-  "texto": "Sus dos átomos están unidos por un triple enlace, uno de los más fuertes que existen. Romperlo cuesta tanta energía que casi nunca reacciona.",
+  "texto": "Sus 2 átomos están unidos por un triple enlace, uno de los más fuertes que existen. Romperlo cuesta tanta energía que casi nunca reacciona.",
   "descripcion": "Por qué el nitrógeno molecular tiene sus propiedades (nivel ESO)"
  },
  "especie.N2.curiosidad": {
@@ -36,7 +36,7 @@
   "descripcion": "Pista para adivinar el nitrógeno molecular; no debe contener su nombre ni su fórmula"
  },
  "especie.F2.porque": {
-  "texto": "Cada átomo es pequeñísimo y atrae los electrones más que ningún otro, y el enlace entre los dos es débil. Se rompe con facilidad y los átomos libres arrancan electrones a casi todo.",
+  "texto": "Cada átomo es pequeñísimo y atrae los electrones más que ningún otro, y el enlace entre los 2 es débil. Se rompe con facilidad y los átomos libres arrancan electrones a casi todo.",
   "descripcion": "Por qué el flúor molecular tiene sus propiedades (nivel ESO)"
  },
  "especie.F2.curiosidad": {
@@ -48,7 +48,7 @@
   "descripcion": "Pista para adivinar el flúor molecular; no debe contener su nombre ni su fórmula"
  },
  "especie.Cl2.porque": {
-  "texto": "La molécula es apolar, pero cada átomo tiene muchas ganas de ganar un electrón: es un oxidante fuerte que destruye bacterias y virus.",
+  "texto": "La molécula es apolar, pero cada átomo tiene muchas ganas de ganar 1 electrón: es un oxidante fuerte que destruye bacterias y virus.",
   "descripcion": "Por qué el cloro molecular tiene sus propiedades (nivel ESO)"
  },
  "especie.Cl2.curiosidad": {
@@ -84,7 +84,7 @@
   "descripcion": "Pista para adivinar el yodo molecular; no debe contener su nombre ni su fórmula"
  },
  "especie.O3.porque": {
-  "texto": "Son tres átomos de oxígeno en forma de V: una molécula inestable que suelta con facilidad un átomo de oxígeno, por eso es muy oxidante. La luz ultravioleta tiene justo la energía para romperla, y así la absorbe.",
+  "texto": "Son 3 átomos de oxígeno en forma de V: una molécula inestable que suelta con facilidad 1 átomo de oxígeno, por eso es muy oxidante. La luz ultravioleta tiene justo la energía para romperla, y así la absorbe.",
   "descripcion": "Por qué el ozono tiene sus propiedades (nivel ESO)"
  },
  "especie.O3.curiosidad": {
@@ -92,7 +92,7 @@
   "descripcion": "Curiosidad sobre el ozono"
  },
  "especie.O3.pista": {
-  "texto": "Soy tres átomos del mismo elemento: allá arriba te protejo del sol y aquí abajo irrito los pulmones.",
+  "texto": "Soy 3 átomos del mismo elemento: allá arriba te protejo del sol y aquí abajo irrito los pulmones.",
   "descripcion": "Pista para adivinar el ozono; no debe contener su nombre ni su fórmula"
  },
  "especie.H2O.porque": {
@@ -104,11 +104,11 @@
   "descripcion": "Curiosidad sobre el agua"
  },
  "especie.H2O.pista": {
-  "texto": "Cubro más de dos tercios de la Tierra y, cuando me congelo, floto sobre mí misma.",
+  "texto": "Cubro más de dos tercios de la superficie de la Tierra y, cuando me congelo, floto sobre mí misma.",
   "descripcion": "Pista para adivinar el agua; no debe contener su nombre ni su fórmula"
  },
  "especie.H2O2.porque": {
-  "texto": "Tiene dos oxígenos unidos por un enlace débil que se rompe con facilidad y libera oxígeno muy reactivo: por eso desinfecta y blanquea.",
+  "texto": "Tiene 2 oxígenos unidos por un enlace débil que se rompe con facilidad y libera oxígeno muy reactivo: por eso desinfecta y blanquea.",
   "descripcion": "Por qué el peróxido de hidrógeno tiene sus propiedades (nivel ESO)"
  },
  "especie.H2O2.curiosidad": {
@@ -116,7 +116,7 @@
   "descripcion": "Curiosidad sobre el peróxido de hidrógeno"
  },
  "especie.H2O2.pista": {
-  "texto": "Me parezco al agua pero con un oxígeno de más, y hago espuma cuando me echas en una herida.",
+  "texto": "Me parezco al agua pero con 1 oxígeno de más, y hago espuma cuando me echas en una herida.",
   "descripcion": "Pista para adivinar el peróxido de hidrógeno; no debe contener su nombre ni su fórmula"
  },
  "especie.CO.porque": {
@@ -124,7 +124,7 @@
   "descripcion": "Por qué el monóxido de carbono tiene sus propiedades (nivel ESO)"
  },
  "especie.CO.curiosidad": {
-  "texto": "El triple enlace entre sus dos átomos es el más fuerte que se conoce en una molécula de dos átomos, más incluso que el del nitrógeno.",
+  "texto": "El triple enlace entre sus 2 átomos es el más fuerte que se conoce en una molécula de 2 átomos, más incluso que el del nitrógeno.",
   "descripcion": "Curiosidad sobre el monóxido de carbono"
  },
  "especie.CO.pista": {
@@ -144,7 +144,7 @@
   "descripcion": "Pista para adivinar el dióxido de carbono; no debe contener su nombre ni su fórmula"
  },
  "especie.CH4.porque": {
-  "texto": "Es un tetraedro perfecto con cuatro enlaces C–H casi apolares: la molécula es apolar, por eso es un gas que no se mezcla con el agua.",
+  "texto": "Es un tetraedro perfecto con 4 enlaces C–H casi apolares: la molécula es apolar, por eso es un gas que no se mezcla con el agua.",
   "descripcion": "Por qué el metano tiene sus propiedades (nivel ESO)"
  },
  "especie.CH4.curiosidad": {
@@ -156,7 +156,7 @@
   "descripcion": "Pista para adivinar el metano; no debe contener su nombre ni su fórmula"
  },
  "especie.C2H2.porque": {
-  "texto": "Sus dos carbonos están unidos por un triple enlace que guarda muchísima energía; al arder con oxígeno puro, la llama supera los 3000 °C.",
+  "texto": "Sus 2 carbonos están unidos por un triple enlace que guarda muchísima energía; al arder con oxígeno puro, la llama supera los 3000 °C.",
   "descripcion": "Por qué el acetileno tiene sus propiedades (nivel ESO)"
  },
  "especie.C2H2.curiosidad": {
@@ -164,11 +164,11 @@
   "descripcion": "Curiosidad sobre el acetileno"
  },
  "especie.C2H2.pista": {
-  "texto": "Soy un gas con un triple enlace entre dos carbonos y mi llama corta el acero.",
+  "texto": "Soy un gas con un triple enlace entre 2 carbonos y mi llama corta el acero.",
   "descripcion": "Pista para adivinar el acetileno; no debe contener su nombre ni su fórmula"
  },
  "especie.HCN.porque": {
-  "texto": "Es una molécula lineal que bloquea una enzima que las células necesitan para usar el oxígeno: aunque respires, tus células se ahogan.",
+  "texto": "Es una molécula lineal que bloquea una enzima que las células necesitan para usar el oxígeno: aunque haya oxígeno, las células no pueden aprovecharlo.",
   "descripcion": "Por qué el cianuro de hidrógeno tiene sus propiedades (nivel ESO)"
  },
  "especie.HCN.curiosidad": {
@@ -204,7 +204,7 @@
   "descripcion": "Pista para adivinar el disulfuro de carbono; no debe contener su nombre ni su fórmula"
  },
  "especie.CCl4.porque": {
-  "texto": "Es un tetraedro con cuatro enlaces polares que se anulan entre sí: la molécula es apolar, disuelve grasas y no arde.",
+  "texto": "Es un tetraedro con 4 enlaces polares que se anulan entre sí: la molécula es apolar, disuelve grasas y no arde.",
   "descripcion": "Por qué el tetracloruro de carbono tiene sus propiedades (nivel ESO)"
  },
  "especie.CCl4.curiosidad": {
@@ -212,7 +212,7 @@
   "descripcion": "Curiosidad sobre el tetracloruro de carbono"
  },
  "especie.CCl4.pista": {
-  "texto": "Soy un líquido denso que quitaba manchas de grasa en las tintorerías y hoy estoy prohibido por dañar la capa de ozono.",
+  "texto": "Soy un líquido denso que quitaba manchas de grasa en las tintorerías y hoy casi no se me usa porque daño la capa de ozono.",
   "descripcion": "Pista para adivinar el tetracloruro de carbono; no debe contener su nombre ni su fórmula"
  },
  "especie.NH3.porque": {
@@ -228,19 +228,19 @@
   "descripcion": "Pista para adivinar el amoniaco; no debe contener su nombre ni su fórmula"
  },
  "especie.NO.porque": {
-  "texto": "Tiene un número impar de electrones, así que uno queda desparejado: es un radical muy reactivo que se combina enseguida con el oxígeno del aire.",
+  "texto": "Tiene un número impar de electrones, así que 1 queda desparejado: es un radical muy reactivo que se combina enseguida con el oxígeno del aire.",
   "descripcion": "Por qué el monóxido de nitrógeno tiene sus propiedades (nivel ESO)"
  },
  "especie.NO.curiosidad": {
-  "texto": "La nitroglicerina que se da a algunos enfermos del corazón funciona porque el cuerpo la convierte en este gas, que relaja los vasos sanguíneos.",
+  "texto": "La nitroglicerina que se da a algunas personas con enfermedades del corazón funciona porque el cuerpo la convierte en este gas, que relaja los vasos sanguíneos.",
   "descripcion": "Curiosidad sobre el monóxido de nitrógeno"
  },
  "especie.NO.pista": {
-  "texto": "Tengo un electrón desparejado; me forman los rayos al juntar los dos gases principales del aire y tu cuerpo me usa como mensajero.",
+  "texto": "Tengo 1 electrón desparejado; me forman los rayos al juntar los 2 gases principales del aire y tu cuerpo me usa como mensajero.",
   "descripcion": "Pista para adivinar el monóxido de nitrógeno; no debe contener su nombre ni su fórmula"
  },
  "especie.NO2.porque": {
-  "texto": "También tiene un electrón desparejado, y dos moléculas se pueden unir formando N₂O₄, que es incoloro: por eso su color cambia con la temperatura.",
+  "texto": "También tiene 1 electrón desparejado, y 2 moléculas se pueden unir formando N₂O₄, que es incoloro: por eso su color cambia con la temperatura.",
   "descripcion": "Por qué el dióxido de nitrógeno tiene sus propiedades (nivel ESO)"
  },
  "especie.NO2.curiosidad": {
@@ -252,7 +252,7 @@
   "descripcion": "Pista para adivinar el dióxido de nitrógeno; no debe contener su nombre ni su fórmula"
  },
  "especie.N2O.porque": {
-  "texto": "Es una molécula lineal muy estable a temperatura ambiente, por eso dura en la atmósfera más de un siglo y atrapa calor como gas de efecto invernadero.",
+  "texto": "Es una molécula lineal muy estable a temperatura ambiente, por eso dura en la atmósfera más de 100 años y atrapa calor como gas de efecto invernadero.",
   "descripcion": "Por qué el óxido de dinitrógeno tiene sus propiedades (nivel ESO)"
  },
  "especie.N2O.curiosidad": {
@@ -368,7 +368,7 @@
   "descripcion": "Curiosidad sobre el dióxido de silicio"
  },
  "especie.SiO2.pista": {
-  "texto": "Soy la arena de la playa y, fundido, me convierto en vidrio.",
+  "texto": "Formo casi toda la arena de muchas playas y, fundido, me convierto en vidrio.",
   "descripcion": "Pista para adivinar el dióxido de silicio; no debe contener su nombre ni su fórmula"
  },
  "especie.NaCl.porque": {
@@ -404,11 +404,11 @@
   "descripcion": "Curiosidad sobre el fluoruro de sodio"
  },
  "especie.NaF.pista": {
-  "texto": "Estoy en muchas pastas de dientes y en el agua de algunas ciudades para que el esmalte resista a las caries.",
+  "texto": "Estoy en muchas pastas de dientes y en el agua de algunas ciudades para que el esmalte resista mejor la caries.",
   "descripcion": "Pista para adivinar el fluoruro de sodio; no debe contener su nombre ni su fórmula"
  },
  "especie.AgCl.porque": {
-  "texto": "Es iónico pero casi insoluble en agua, por eso aparece como un sólido blanco. La luz arranca electrones a los iones y forma plata metálica, negra.",
+  "texto": "Es iónico pero casi insoluble en agua, por eso aparece como un sólido blanco. La luz arranca electrones a los iones y forma plata metálica, que se ve oscura.",
   "descripcion": "Por qué el cloruro de plata tiene sus propiedades (nivel ESO)"
  },
  "especie.AgCl.curiosidad": {
@@ -432,7 +432,7 @@
   "descripcion": "Pista para adivinar el cloruro de magnesio; no debe contener su nombre ni su fórmula"
  },
  "especie.CaCl2.porque": {
-  "texto": "Es iónico y cada unidad suelta tres iones al disolverse: muchas partículas que bajan mucho el punto de congelación del agua. Además, al disolverse desprende calor.",
+  "texto": "Es iónico y cada unidad suelta 3 iones al disolverse: muchas partículas que bajan mucho el punto de congelación del agua. Además, al disolverse desprende calor.",
   "descripcion": "Por qué el cloruro de calcio tiene sus propiedades (nivel ESO)"
  },
  "especie.CaCl2.curiosidad": {
@@ -524,7 +524,7 @@
   "descripcion": "Curiosidad sobre el óxido de cinc"
  },
  "especie.ZnO.pista": {
-  "texto": "Soy el polvo blanco de las cremas solares minerales y de las pomadas para el culito de los bebés.",
+  "texto": "Soy el polvo blanco de las cremas solares minerales y de las pomadas contra las rozaduras del pañal.",
   "descripcion": "Pista para adivinar el óxido de cinc; no debe contener su nombre ni su fórmula"
  },
  "especie.Fe2O3.porque": {

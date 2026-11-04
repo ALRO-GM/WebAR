@@ -46,13 +46,29 @@ function factQuestion(symbol: string): Exercise | null {
   return choice(t(q), t(`${q}.ok`), [t(`${q}.mal1`), t(`${q}.mal2`), t(`${q}.mal3`)], { explain: t(`${q}.explicacion`), symbol });
 }
 
-function protonsQuestion(symbol: string): Exercise {
+/** Nombre de un elemento dentro de una frase: «el hidrógeno», no «el Hidrógeno». */
+const inSentence = (symbol: string) => elementName(symbol).toLowerCase();
+
+/** Tres cantidades falsas, distintas, no negativas y cercanas a la buena. */
+function nearby(right: number, also: number[]): string[] {
+  const pool = [...also, right + 1, right - 1, right + 2, right - 2, right + 3, right * 2, right + 4]
+    .filter((n) => n >= 0 && n !== right)
+    .filter((n, i, all) => all.indexOf(n) === i);
+  return pool.slice(0, 3).map(String);
+}
+
+/**
+ * Partículas del átomo, siempre en cifra: protones (número atómico), electrones
+ * (átomo neutro: los mismos que protones) o neutrones del isótopo que se dibuja
+ * (número másico − número atómico).
+ */
+export function particleQuestion(symbol: string, kind = (['protones', 'electrones', 'neutrones'] as const)[Math.floor(Math.random() * 3)]): Exercise {
   const e = getElement(symbol);
-  const wrong = [e.z + 1, Math.max(1, e.z - 1), e.massNumber, e.z * 2, e.massNumber - e.z].filter((n) => n !== e.z).map(String);
-  return choice(t('leccion.protones', { nombre: elementName(symbol) }), String(e.z), [...new Set(wrong)], {
-    explain: t('leccion.protones_explica', { nombre: elementName(symbol), z: e.z }),
-    symbol,
-  });
+  const n = e.massNumber - e.z;
+  const vars = { nombre: inSentence(symbol), simbolo: e.symbol, z: e.z, a: e.massNumber, neutrones: n };
+  const right = kind === 'neutrones' ? n : e.z;
+  const wrong = kind === 'neutrones' ? nearby(n, [e.z, e.massNumber]) : nearby(e.z, [n, e.massNumber]);
+  return choice(t(`leccion.${kind}`, vars), String(right), wrong, { explain: t(`leccion.${kind}_explica`, vars), symbol });
 }
 
 function symbolQuestion(symbol: string, known: string[]): Exercise {
@@ -60,7 +76,7 @@ function symbolQuestion(symbol: string, known: string[]): Exercise {
   // Símbolos parecidos: misma inicial primero.
   const similar = ELEMENTS.filter((x) => x.symbol !== symbol && x.symbol[0] === symbol[0]).map((x) => x.symbol);
   const wrong = [...pick(similar, 2), ...distractors(symbol, known)];
-  return choice(t('leccion.simbolo', { nombre: elementName(symbol) }), e.symbol, [...new Set(wrong)]);
+  return choice(t('leccion.simbolo', { nombre: inSentence(symbol) }), e.symbol, [...new Set(wrong)]);
 }
 
 function clueQuestion(symbol: string, known: string[]): Exercise | null {
@@ -88,11 +104,11 @@ export function lessonExercises(node: PathNode, known: string[]): Exercise[] {
     const s = node.elements[0];
     const name = elementName(s);
     const teach = ([
-      { kind: 'ensena', symbol: s, title: t('leccion.conoce', { nombre: name }), text: has(key(s, 'descubrimiento')) ? t(key(s, 'descubrimiento')) : t(`elemento.${s}.historia`), visual: 'guia' },
-      { kind: 'ensena', symbol: s, title: t('leccion.usos', { nombre: name }), text: t(key(s, 'usos')), extra: t(key(s, 'porque')), visual: 'objeto' },
+      { kind: 'ensena', symbol: s, title: t('leccion.conoce', { nombre: name.toLowerCase() }), text: has(key(s, 'descubrimiento')) ? t(key(s, 'descubrimiento')) : t(`elemento.${s}.historia`), visual: 'guia' },
+      { kind: 'ensena', symbol: s, title: t('leccion.usos', { nombre: name.toLowerCase() }), text: t(key(s, 'usos')), extra: t(key(s, 'porque')), visual: 'objeto' },
       { kind: 'ensena', symbol: s, title: t('leccion.unico'), text: t(key(s, 'unico')), extra: t(key(s, 'curiosidad')), visual: 'atomo' },
     ] as Exercise[]).filter((x) => x.kind === 'ensena' && (has(key(s, 'usos')) || x.visual === 'guia'));
-    const ask = [factQuestion(s), protonsQuestion(s), symbolQuestion(s, known), clueQuestion(s, known), formulaFor(s, knownSet)].filter(
+    const ask = [factQuestion(s), particleQuestion(s), symbolQuestion(s, known), clueQuestion(s, known), formulaFor(s, knownSet)].filter(
       (x): x is Exercise => !!x,
     );
     return [...teach, ...ask];
@@ -101,7 +117,7 @@ export function lessonExercises(node: PathNode, known: string[]): Exercise[] {
   const pool = pick(node.elements, 6);
   const out: Exercise[] = [];
   for (const s of pool) {
-    const makers = [() => factQuestion(s), () => clueQuestion(s, node.elements), () => protonsQuestion(s), () => symbolQuestion(s, node.elements)];
+    const makers = [() => factQuestion(s), () => clueQuestion(s, node.elements), () => particleQuestion(s), () => symbolQuestion(s, node.elements)];
     const ex = shuffle(makers).map((m) => m()).find(Boolean);
     if (ex) out.push(ex);
   }

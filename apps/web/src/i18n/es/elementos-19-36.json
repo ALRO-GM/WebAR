@@ -72,27 +72,27 @@
   "descripcion": "Juego de adivinar: pista del calcio, sin decir su nombre ni su símbolo"
  },
  "elemento.Ca.pregunta": {
-  "texto": "¿Cuál es el metal más abundante en el cuerpo humano?",
+  "texto": "¿Dónde está casi todo este elemento de tu cuerpo?",
   "descripcion": "Test de la ficha del calcio: enunciado de la pregunta"
  },
  "elemento.Ca.pregunta.ok": {
-  "texto": "Este elemento, sobre todo en los huesos",
+  "texto": "En los huesos y los dientes",
   "descripcion": "Test de la ficha del calcio: respuesta correcta"
  },
  "elemento.Ca.pregunta.mal1": {
-  "texto": "El hierro de la sangre",
+  "texto": "En la sangre",
   "descripcion": "Test de la ficha del calcio: respuesta incorrecta 1"
  },
  "elemento.Ca.pregunta.mal2": {
-  "texto": "El sodio de la sal",
+  "texto": "En los músculos",
   "descripcion": "Test de la ficha del calcio: respuesta incorrecta 2"
  },
  "elemento.Ca.pregunta.mal3": {
-  "texto": "El potasio de los nervios",
+  "texto": "En la piel",
   "descripcion": "Test de la ficha del calcio: respuesta incorrecta 3"
  },
  "elemento.Ca.pregunta.explicacion": {
-  "texto": "Un adulto tiene alrededor de 1 kg de este elemento, casi todo en huesos y dientes; ningún otro metal de tu cuerpo llega a tanto.",
+  "texto": "Un adulto lleva alrededor de 1 kg de este elemento y casi todo está en los huesos y los dientes, en forma de fosfato de calcio.",
   "descripcion": "Test de la ficha del calcio: explicación de la respuesta correcta"
  },
  "elemento.Sc.descubrimiento": {
@@ -104,7 +104,7 @@
   "descripcion": "Ficha del escandio: dónde se usa hoy"
  },
  "elemento.Sc.porque": {
-  "texto": "Con solo un 0,1-0,5 % de este elemento, el aluminio se vuelve mucho más resistente y se puede soldar sin debilitarse, sin apenas ganar peso. El titanio también es ligero y fuerte, pero es más pesado y difícil de trabajar; el escandio mejora el aluminio sin cambiarlo por otro metal.",
+  "texto": "Con solo un 0,1-0,5 % de este elemento, el aluminio se vuelve mucho más resistente y se puede soldar sin debilitarse, sin apenas ganar peso. El titanio también es fuerte, pero pesa más y es difícil de trabajar; el escandio mejora el aluminio sin cambiarlo por otro metal.",
   "descripcion": "Ficha del escandio: por qué se usa este elemento y no otro"
  },
  "elemento.Sc.unico": {
@@ -172,19 +172,19 @@
   "descripcion": "Test de la ficha del titanio: enunciado de la pregunta"
  },
  "elemento.Ti.pregunta.ok": {
-  "texto": "Ligero, inoxidable y el hueso se une",
+  "texto": "Porque es ligero, no se oxida y el hueso se une a él",
   "descripcion": "Test de la ficha del titanio: respuesta correcta"
  },
  "elemento.Ti.pregunta.mal1": {
-  "texto": "Es el metal más barato del mundo",
+  "texto": "Porque es el metal más barato del mundo",
   "descripcion": "Test de la ficha del titanio: respuesta incorrecta 1"
  },
  "elemento.Ti.pregunta.mal2": {
-  "texto": "Brilla en la oscuridad dentro del cuerpo",
+  "texto": "Porque brilla en la oscuridad dentro del cuerpo",
   "descripcion": "Test de la ficha del titanio: respuesta incorrecta 2"
  },
  "elemento.Ti.pregunta.mal3": {
-  "texto": "Es magnético y se pega al hueso",
+  "texto": "Porque es magnético y atrae el calcio del hueso",
   "descripcion": "Test de la ficha del titanio: respuesta incorrecta 3"
  },
  "elemento.Ti.pregunta.explicacion": {
@@ -204,7 +204,7 @@
   "descripcion": "Ficha del vanadio: por qué se usa este elemento y no otro"
  },
  "elemento.V.unico": {
-  "texto": "Es de los pocos elementos que pueden llenar los dos lados de una batería: en sus baterías de flujo cambia entre cuatro estados de oxidación, cada uno con su color (violeta, verde, azul y amarillo).",
+  "texto": "Es de los pocos elementos que pueden llenar ambos lados de una batería: en sus baterías de flujo cambia entre 4 estados de oxidación, cada uno con su color (violeta, verde, azul y amarillo).",
   "descripcion": "Ficha del vanadio: cualidad única o récord"
  },
  "elemento.V.curiosidad": {
@@ -268,19 +268,19 @@
   "descripcion": "Test de la ficha del cromo: enunciado de la pregunta"
  },
  "elemento.Cr.pregunta.ok": {
-  "texto": "Una capa invisible de óxido lo protege",
+  "texto": "Porque una capa invisible de óxido lo protege",
   "descripcion": "Test de la ficha del cromo: respuesta correcta"
  },
  "elemento.Cr.pregunta.mal1": {
-  "texto": "Lleva una laca transparente por fuera",
+  "texto": "Porque lleva una laca transparente por fuera",
   "descripcion": "Test de la ficha del cromo: respuesta incorrecta 1"
  },
  "elemento.Cr.pregunta.mal2": {
-  "texto": "Tiene oro mezclado por dentro",
+  "texto": "Porque tiene oro mezclado por dentro",
   "descripcion": "Test de la ficha del cromo: respuesta incorrecta 2"
  },
  "elemento.Cr.pregunta.mal3": {
-  "texto": "No contiene nada de hierro",
+  "texto": "Porque no contiene nada de hierro",
   "descripcion": "Test de la ficha del cromo: respuesta incorrecta 3"
  },
  "elemento.Cr.pregunta.explicacion": {
@@ -396,7 +396,7 @@
   "descripcion": "Ficha del cobalto: por qué se usa este elemento y no otro"
  },
  "elemento.Co.unico": {
-  "texto": "Es el único elemento que forma parte de una vitamina: la vitamina B12 tiene un átomo de cobalto en el centro.",
+  "texto": "Es el único metal que forma parte de una vitamina: la vitamina B12 tiene 1 átomo de cobalto en el centro.",
   "descripcion": "Ficha del cobalto: cualidad única o récord"
  },
  "elemento.Co.curiosidad": {
@@ -408,7 +408,7 @@
   "descripcion": "Juego de adivinar: pista del cobalto, sin decir su nombre ni su símbolo"
  },
  "elemento.Co.pregunta": {
-  "texto": "¿Qué vitamina contiene un átomo de este elemento?",
+  "texto": "¿Qué vitamina lleva este elemento en el centro de su molécula?",
   "descripcion": "Test de la ficha del cobalto: enunciado de la pregunta"
  },
  "elemento.Co.pregunta.ok": {
@@ -428,7 +428,7 @@
   "descripcion": "Test de la ficha del cobalto: respuesta incorrecta 3"
  },
  "elemento.Co.pregunta.explicacion": {
-  "texto": "La vitamina B12 tiene un átomo de cobalto en su centro; es la única vitamina con un metal.",
+  "texto": "La vitamina B12 tiene 1 átomo de cobalto en su centro; es la única vitamina con un metal.",
   "descripcion": "Test de la ficha del cobalto: explicación de la respuesta correcta"
  },
  "elemento.Ni.descubrimiento": {
@@ -444,7 +444,7 @@
   "descripcion": "Ficha del níquel: por qué se usa este elemento y no otro"
  },
  "elemento.Ni.unico": {
-  "texto": "Es uno de los solo cuatro elementos que son magnéticos como un imán a temperatura ambiente, junto al hierro, el cobalto y el gadolinio.",
+  "texto": "Es uno de los solo 4 elementos que son magnéticos como un imán a temperatura ambiente, junto al hierro, el cobalto y el gadolinio.",
   "descripcion": "Ficha del níquel: cualidad única o récord"
  },
  "elemento.Ni.curiosidad": {
@@ -460,23 +460,23 @@
   "descripcion": "Test de la ficha del níquel: enunciado de la pregunta"
  },
  "elemento.Ni.pregunta.ok": {
-  "texto": "Cuatro",
+  "texto": "4",
   "descripcion": "Test de la ficha del níquel: respuesta correcta"
  },
  "elemento.Ni.pregunta.mal1": {
-  "texto": "Uno",
+  "texto": "1",
   "descripcion": "Test de la ficha del níquel: respuesta incorrecta 1"
  },
  "elemento.Ni.pregunta.mal2": {
-  "texto": "Diez",
+  "texto": "10",
   "descripcion": "Test de la ficha del níquel: respuesta incorrecta 2"
  },
  "elemento.Ni.pregunta.mal3": {
-  "texto": "Veinte",
+  "texto": "20",
   "descripcion": "Test de la ficha del níquel: respuesta incorrecta 3"
  },
  "elemento.Ni.pregunta.explicacion": {
-  "texto": "Solo el hierro, el cobalto, el gadolinio y este elemento son ferromagnéticos a temperatura ambiente.",
+  "texto": "Solo el hierro, el cobalto, el gadolinio y este elemento son magnéticos como un imán a temperatura ambiente.",
   "descripcion": "Test de la ficha del níquel: explicación de la respuesta correcta"
  },
  "elemento.Cu.descubrimiento": {
@@ -508,19 +508,19 @@
   "descripcion": "Test de la ficha del cobre: enunciado de la pregunta"
  },
  "elemento.Cu.pregunta.ok": {
-  "texto": "Conduce casi igual y es mucho más barato",
+  "texto": "Porque conduce casi igual y es mucho más barato",
   "descripcion": "Test de la ficha del cobre: respuesta correcta"
  },
  "elemento.Cu.pregunta.mal1": {
-  "texto": "Es más ligero que el aire",
+  "texto": "Porque es más ligero que el aire",
   "descripcion": "Test de la ficha del cobre: respuesta incorrecta 1"
  },
  "elemento.Cu.pregunta.mal2": {
-  "texto": "La plata no conduce la electricidad",
+  "texto": "Porque la plata no conduce la electricidad",
   "descripcion": "Test de la ficha del cobre: respuesta incorrecta 2"
  },
  "elemento.Cu.pregunta.mal3": {
-  "texto": "Es imposible doblar la plata",
+  "texto": "Porque es imposible doblar la plata",
   "descripcion": "Test de la ficha del cobre: respuesta incorrecta 3"
  },
  "elemento.Cu.pregunta.explicacion": {
@@ -576,7 +576,7 @@
   "descripcion": "Test de la ficha del cinc: explicación de la respuesta correcta"
  },
  "elemento.Ga.descubrimiento": {
-  "texto": "En 1871 Mendeléiev predijo un «eka-aluminio». En 1875 el francés Paul-Émile Lecoq de Boisbaudran lo encontró usando un espectroscopio: vio dos líneas violetas nuevas en la luz de un mineral de cinc de los Pirineos. Mendeléiev le escribió diciendo que la densidad que había medido estaba mal; Lecoq purificó más su muestra y le dio la razón. Lo llamó como Galia, el nombre latino de Francia.",
+  "texto": "En 1871 Mendeléiev predijo un «eka-aluminio». En 1875 el francés Paul-Émile Lecoq de Boisbaudran lo encontró usando un espectroscopio: vio 2 líneas violetas nuevas en la luz de un mineral de cinc de los Pirineos. Mendeléiev le escribió diciendo que la densidad que había medido estaba mal; Lecoq purificó más su muestra y le dio la razón. Lo llamó como Galia, el nombre latino de Francia.",
   "descripcion": "Ficha del galio: quién, cuándo y cómo se descubrió"
  },
  "elemento.Ga.usos": {
@@ -616,7 +616,7 @@
   "descripcion": "Test de la ficha del galio: respuesta incorrecta 2"
  },
  "elemento.Ga.pregunta.mal3": {
-  "texto": "Cambia a color rojo",
+  "texto": "Se vuelve de color rojo",
   "descripcion": "Test de la ficha del galio: respuesta incorrecta 3"
  },
  "elemento.Ga.pregunta.explicacion": {
@@ -672,7 +672,7 @@
   "descripcion": "Test de la ficha del germanio: explicación de la respuesta correcta"
  },
  "elemento.As.descubrimiento": {
-  "texto": "Sus minerales amarillos y rojos (oropimente y rejalgar) se usaban desde la Antigüedad como pigmentos y venenos en Egipto, Grecia y China. Se suele atribuir al alemán Alberto Magno, hacia 1250, el primero en aislarlo calentando oropimente con jabón. Lavoisier lo incluyó en 1789 en su lista de elementos.",
+  "texto": "Sus minerales amarillos y rojos (oropimente y rejalgar) se usaban desde la Antigüedad como pigmentos y venenos en Egipto, Grecia y China. Se suele considerar que el primero en aislarlo fue el alemán Alberto Magno, hacia 1250, calentando oropimente con jabón. Lavoisier lo incluyó en 1789 en su lista de elementos.",
   "descripcion": "Ficha del arsénico: quién, cuándo y cómo se descubrió"
  },
  "elemento.As.usos": {
@@ -688,7 +688,7 @@
   "descripcion": "Ficha del arsénico: cualidad única o récord"
  },
  "elemento.As.curiosidad": {
-  "texto": "Fue tan usado para envenenar herencias que en Francia lo llamaban «polvo de sucesión», hasta que en 1836 la prueba de Marsh permitió detectarlo en los cuerpos.",
+  "texto": "Se usó tanto para envenenar a parientes ricos y cobrar su herencia que en Francia lo llamaban «polvo de sucesión», hasta que en 1836 la prueba de Marsh permitió detectarlo en los cuerpos.",
   "descripcion": "Ficha del arsénico: dato curioso de una frase"
  },
  "elemento.As.pista": {
@@ -736,7 +736,7 @@
   "descripcion": "Ficha del selenio: cualidad única o récord"
  },
  "elemento.Se.curiosidad": {
-  "texto": "Con solo una o dos nueces de Brasil tomas el selenio que necesitas en un día; comer muchas de golpe puede ser demasiado.",
+  "texto": "Con solo 1 o 2 nueces de Brasil tomas el selenio que necesitas en un día; comer muchas de golpe puede ser demasiado.",
   "descripcion": "Ficha del selenio: dato curioso de una frase"
  },
  "elemento.Se.pista": {
@@ -788,7 +788,7 @@
   "descripcion": "Ficha del bromo: dato curioso de una frase"
  },
  "elemento.Br.pista": {
-  "texto": "Soy uno de los dos únicos elementos líquidos a temperatura ambiente, rojo oscuro y con un olor espantoso.",
+  "texto": "Soy uno de los 2 únicos elementos líquidos a temperatura ambiente, rojo oscuro y con un olor espantoso.",
   "descripcion": "Juego de adivinar: pista del bromo, sin decir su nombre ni su símbolo"
  },
  "elemento.Br.pregunta": {

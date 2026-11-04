@@ -63,7 +63,7 @@
   "texto": "It was {nombre}"
  },
  "adivina.fin": {
-  "texto": "{n} of {total} right"
+  "texto": "Correct: {n} of {total}"
  },
  "foto.titulo": {
   "texto": "Photo with scientists"
@@ -153,10 +153,10 @@
   "texto": "What makes it unique"
  },
  "leccion.protones": {
-  "texto": "How many protons does {nombre} have?"
+  "texto": "How many protons does an atom of {nombre} have?"
  },
  "leccion.protones_explica": {
-  "texto": "The atomic number of {nombre} is {z}: it has {z} protons (and, when neutral, {z} electrons)."
+  "texto": "The atomic number of {nombre} is {z}, and the atomic number is exactly the number of protons in the nucleus: {z}."
  },
  "leccion.simbolo": {
   "texto": "What is the symbol for {nombre}?"
@@ -270,7 +270,7 @@
   "texto": "Let me introduce {nombre}! You'll be surprised."
  },
  "camino.dice.laboratorio": {
-  "texto": "To the lab: put the cards together and {nombre}."
+  "texto": "To the lab! Put the cards together to build {formula}."
  },
  "camino.dice.adivina": {
   "texto": "Can you recognise each element by its object?"
@@ -399,7 +399,7 @@
   "texto": "Earn XP this week to join a group."
  },
  "liga.reglas": {
-  "texto": "Top {sube} move up (green) and bottom {baja} move down (red)."
+  "texto": "Moving up: top {sube} (green). Moving down: bottom {baja} (red)."
  },
  "liga.apodo": {
   "texto": "Your nickname: {apodo}"
@@ -477,7 +477,7 @@
   "texto": "Your streak"
  },
  "perfil.protectores": {
-  "texto": "🧊 Streak protectors: {n} (used automatically if you miss a day)"
+  "texto": "🧊 Streak protectors: {n}. Used automatically if you miss a day."
  },
  "perfil.elige_avatar": {
   "texto": "Choose your avatar"
@@ -507,7 +507,7 @@
   "texto": "Quark shop"
  },
  "tienda.texto": {
-  "texto": "You have {n} quarks. Earn them with lessons, quests and chests."
+  "texto": "Quarks: {n}. Earn them with lessons, quests and chests."
  },
  "tienda.gratis": {
   "texto": "Everything here is paid with in-game quarks: the app is 100% free, no real-money purchases."
@@ -703,5 +703,47 @@
  },
  "tema.a_claro": {
   "texto": "Switch to light theme"
+ },
+ "leccion.electrones": {
+  "texto": "How many electrons does a neutral atom of {nombre} have?"
+ },
+ "leccion.electrones_explica": {
+  "texto": "A neutral atom has as many electrons as protons. {nombre} has {z} protons, so it has {z} electrons."
+ },
+ "leccion.neutrones": {
+  "texto": "How many neutrons does the most common isotope of {nombre} ({simbolo}-{a}) have?"
+ },
+ "leccion.neutrones_explica": {
+  "texto": "Neutrons = mass number − atomic number. In {simbolo}-{a}: {a} − {z} = {neutrones}."
+ },
+ "mision.lecciones_1": {
+  "texto": "Complete 1 lesson"
+ },
+ "mision.lecturas_1": {
+  "texto": "Read 1 element card"
+ },
+ "mision.reacciones_1": {
+  "texto": "Do 1 reaction with cards"
+ },
+ "stats.racha_aria_1": {
+  "texto": "Streak: 1 day"
+ },
+ "camino.racha_hoy_1": {
+  "texto": "🔥 1-day streak: today counts"
+ },
+ "camino.racha_peligro_1": {
+  "texto": "🔥 Your 1-day streak is waiting: do a lesson today"
+ },
+ "camino.mas_1": {
+  "texto": "… and 1 more unit to discover"
+ },
+ "liga.dias_1": {
+  "texto": "1 day"
+ },
+ "liga.dias_0": {
+  "texto": "Last day"
+ },
+ "perfil.calendario_aria_1": {
+  "texto": "Calendar of the last weeks: 1-day streak"
  }
 }

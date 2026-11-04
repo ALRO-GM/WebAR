@@ -107,13 +107,13 @@ export const NOUNS: Array<[string, Gender]> = [
 export const ADJECTIVES: Array<[string, string?]> = [
   ['Veloz'], ['Cuántico', 'Cuántica'], ['Curioso', 'Curiosa'], ['Brillante'], ['Valiente'], ['Radiante'],
   ['Eléctrico', 'Eléctrica'], ['Magnético', 'Magnética'], ['Luminoso', 'Luminosa'], ['Inquieto', 'Inquieta'],
-  ['Sabio', 'Sabia'], ['Audaz'], ['Feliz'], ['Risueño', 'Risueña'], ['Despistado', 'Despistada'],
+  ['Sabio', 'Sabia'], ['Audaz'], ['Feliz'], ['Risueño', 'Risueña'],
   ['Intrépido', 'Intrépida'], ['Burbujeante'], ['Saltarín', 'Saltarina'], ['Travieso', 'Traviesa'], ['Noble'],
   ['Gaseoso', 'Gaseosa'], ['Estable'], ['Polar'], ['Alcalino', 'Alcalina'], ['Efervescente'], ['Fosforescente'],
   ['Fluorescente'], ['Incandescente'], ['Volátil'], ['Ligero', 'Ligera'], ['Cristalino', 'Cristalina'],
-  ['Elegante'], ['Dormilón', 'Dormilona'], ['Glotón', 'Glotona'], ['Bailarín', 'Bailarina'], ['Cósmico', 'Cósmica'],
+  ['Elegante'], ['Dormilón', 'Dormilona'], ['Bailarín', 'Bailarina'], ['Cósmico', 'Cósmica'],
   ['Atómico', 'Atómica'], ['Galáctico', 'Galáctica'], ['Tenaz'], ['Alegre'], ['Genial'], ['Ingenioso', 'Ingeniosa'],
-  ['Diminuto', 'Diminuta'], ['Gigante'], ['Supersónico', 'Supersónica'],
+  ['Supersónico', 'Supersónica'],
 ];
 
 export function nickname(): string {

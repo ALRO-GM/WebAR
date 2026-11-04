@@ -433,7 +433,7 @@ export class Hub {
     this.openDetail(`
       <div class="nodo-hoja" style="--u: var(--primary)">
         <div class="nodo-hoja-guia">${avatarSVG(unit.guide, { expression: 'habla', size: 72 })}
-          <div class="bocadillo"><p>${t(`camino.dice.${node.kind}`, { nombre: nodeTitle(node) })}</p></div></div>
+          <div class="bocadillo"><p>${t(`camino.dice.${node.kind}`, { nombre: node.kind === 'leccion' ? nodeTitle(node).toLowerCase() : nodeTitle(node), formula: node.species ? getSpecies(node.species)!.formula : '' })}</p></div></div>
         <h2 id="detalle-titulo">${esc(nodeTitle(node))}</h2>
         <p class="texto-suave">${t(`camino.que.${node.kind}`)}</p>
         <button type="button" class="btn ancho ${done ? 'claro' : ''}" data-empezar>${done ? t('camino.repasar') : t('camino.empezar')} <span class="chip">${reward}</span></button>

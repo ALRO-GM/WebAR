@@ -1,6 +1,6 @@
 {
  "elemento.Rb.descubrimiento": {
-  "texto": "Lo descubrieron Robert Bunsen y Gustav Kirchhoff en 1861, en Heidelberg (Alemania), un año después del cesio. Calentaron en una llama un mineral llamado lepidolita y miraron su luz con un espectroscopio, un aparato que separa la luz en colores. Aparecieron dos rayas rojas que nadie había visto antes, y por eso lo llamaron «rubidus», que en latín significa «rojo oscuro».",
+  "texto": "Lo descubrieron Robert Bunsen y Gustav Kirchhoff en 1861, en Heidelberg (Alemania), 1 año después del cesio. Calentaron en una llama un mineral llamado lepidolita y miraron su luz con un espectroscopio, un aparato que separa la luz en colores. Aparecieron 2 rayas rojas que nadie había visto antes, y por eso lo llamaron «rubidus», que en latín significa «rojo oscuro».",
   "descripcion": "Ficha del rubidio: cómo se descubrió"
  },
  "elemento.Rb.usos": {
@@ -20,7 +20,7 @@
   "descripcion": "Ficha del rubidio: curiosidad sorprendente"
  },
  "elemento.Rb.pista": {
-  "texto": "Me descubrieron por dos rayas rojas en un espectroscopio y me derrito a la temperatura de una fiebre alta.",
+  "texto": "Me descubrieron por 2 rayas rojas en un espectroscopio y me derrito a la temperatura de una fiebre alta.",
   "descripcion": "Ficha del rubidio: pista para el juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
  },
  "elemento.Rb.pregunta": {
@@ -28,7 +28,7 @@
   "descripcion": "Ficha del rubidio: pregunta tipo test sobre la ficha"
  },
  "elemento.Rb.pregunta.ok": {
-  "texto": "Por dos rayas rojas en su espectro",
+  "texto": "Por 2 rayas rojas en su espectro",
   "descripcion": "Ficha del rubidio: respuesta correcta de la pregunta tipo test"
  },
  "elemento.Rb.pregunta.mal1": {
@@ -44,7 +44,7 @@
   "descripcion": "Ficha del rubidio: respuesta incorrecta pero plausible de la pregunta tipo test"
  },
  "elemento.Rb.pregunta.explicacion": {
-  "texto": "Bunsen y Kirchhoff vieron dos rayas rojas nuevas con el espectroscopio, y de ahí viene su nombre, «rojo oscuro».",
+  "texto": "Bunsen y Kirchhoff vieron 2 rayas rojas nuevas con el espectroscopio, y de ahí viene su nombre, «rojo oscuro».",
   "descripcion": "Ficha del rubidio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Sr.descubrimiento": {
@@ -108,7 +108,7 @@
   "descripcion": "Ficha del itrio: por qué se usa ese elemento y no otro"
  },
  "elemento.Y.unico": {
-  "texto": "Su pueblo tiene un récord: Ytterby da nombre a cuatro elementos (itrio, iterbio, terbio y erbio), más que ningún otro lugar del mundo.",
+  "texto": "La cantera de Ytterby, donde apareció su mineral, tiene un récord: da nombre a 4 elementos (itrio, iterbio, terbio y erbio), más que ningún otro lugar del mundo.",
   "descripcion": "Ficha del itrio: cualidad única o récord"
  },
  "elemento.Y.curiosidad": {
@@ -116,7 +116,7 @@
   "descripcion": "Ficha del itrio: curiosidad sorprendente"
  },
  "elemento.Y.pista": {
-  "texto": "Mi nombre sale de una cantera sueca que bautizó a cuatro elementos, y me esconden en los láseres de los oculistas.",
+  "texto": "Mi nombre sale de una cantera sueca que bautizó a 4 elementos, y me esconden en los láseres de los oculistas.",
   "descripcion": "Ficha del itrio: pista para el juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
  },
  "elemento.Y.pregunta": {
@@ -124,7 +124,7 @@
   "descripcion": "Ficha del itrio: pregunta tipo test sobre la ficha"
  },
  "elemento.Y.pregunta.ok": {
-  "texto": "Da nombre a cuatro elementos",
+  "texto": "Da nombre a 4 elementos",
   "descripcion": "Ficha del itrio: respuesta correcta de la pregunta tipo test"
  },
  "elemento.Y.pregunta.mal1": {
@@ -192,11 +192,11 @@
   "descripcion": "Ficha del circonio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Nb.descubrimiento": {
-  "texto": "En 1801 el inglés Charles Hatchett analizó en Londres un mineral que había llegado desde Connecticut (Estados Unidos) y halló un elemento nuevo; lo llamó «columbio», por Columbia, nombre poético de América. Durante décadas se confundió con el tántalo, hasta que en 1844 Heinrich Rose demostró que eran distintos y lo llamó niobio, por Níobe, la hija de Tántalo en la mitología griega.",
+  "texto": "En 1801 el inglés Charles Hatchett analizó en Londres un mineral que había llegado desde Connecticut (Estados Unidos) y halló un elemento nuevo; lo llamó «columbio», por Columbia, nombre poético de América. Durante décadas se confundió con el tantalio, hasta que en 1844 Heinrich Rose demostró que eran distintos y lo llamó niobio, por Níobe, la hija de Tántalo en la mitología griega.",
   "descripcion": "Ficha del niobio: cómo se descubrió"
  },
  "elemento.Nb.usos": {
-  "texto": "Sus aleaciones superconductoras (niobio-titanio) forman los imanes de las resonancias magnéticas de los hospitales y del acelerador LHC del CERN. Una pizca en el acero lo hace más resistente y ligero, para gasoductos, puentes y coches. Brasil produce cerca del 90 % del mundial.",
+  "texto": "Sus aleaciones superconductoras (niobio-titanio) forman los imanes de las resonancias magnéticas de los hospitales y del acelerador LHC del CERN. Una pizca en el acero lo hace más resistente y ligero, para gasoductos, puentes y coches. Brasil produce cerca del 90 % del niobio mundial.",
   "descripcion": "Ficha del niobio: usos actuales en la vida diaria, la industria o la medicina"
  },
  "elemento.Nb.porque": {
@@ -220,19 +220,19 @@
   "descripcion": "Ficha del niobio: pregunta tipo test sobre la ficha"
  },
  "elemento.Nb.pregunta.ok": {
-  "texto": "Imanes superconductores de resonancia magnética",
+  "texto": "Para los imanes de las resonancias magnéticas",
   "descripcion": "Ficha del niobio: respuesta correcta de la pregunta tipo test"
  },
  "elemento.Nb.pregunta.mal1": {
-  "texto": "Agujas de acupuntura",
+  "texto": "Para las agujas de acupuntura",
   "descripcion": "Ficha del niobio: respuesta incorrecta pero plausible de la pregunta tipo test"
  },
  "elemento.Nb.pregunta.mal2": {
-  "texto": "Pantallas de los monitores",
+  "texto": "Para las pantallas de los monitores",
   "descripcion": "Ficha del niobio: respuesta incorrecta pero plausible de la pregunta tipo test"
  },
  "elemento.Nb.pregunta.mal3": {
-  "texto": "Pigmento de las batas",
+  "texto": "Para teñir las batas del personal",
   "descripcion": "Ficha del niobio: respuesta incorrecta pero plausible de la pregunta tipo test"
  },
  "elemento.Nb.pregunta.explicacion": {
@@ -268,19 +268,19 @@
   "descripcion": "Ficha del molibdeno: pregunta tipo test sobre la ficha"
  },
  "elemento.Mo.pregunta.ok": {
-  "texto": "Su mineral se confundía con menas de plomo",
+  "texto": "Porque su mineral se confundía con el plomo",
   "descripcion": "Ficha del molibdeno: respuesta correcta de la pregunta tipo test"
  },
  "elemento.Mo.pregunta.mal1": {
-  "texto": "Es más pesado que el plomo",
+  "texto": "Porque es más pesado que el plomo",
   "descripcion": "Ficha del molibdeno: respuesta incorrecta pero plausible de la pregunta tipo test"
  },
  "elemento.Mo.pregunta.mal2": {
-  "texto": "Se descubrió en una mina de plomo",
+  "texto": "Porque se descubrió en una mina de plomo",
   "descripcion": "Ficha del molibdeno: respuesta incorrecta pero plausible de la pregunta tipo test"
  },
  "elemento.Mo.pregunta.mal3": {
-  "texto": "Sustituye al plomo en las pinturas",
+  "texto": "Porque sustituye al plomo en las pinturas",
   "descripcion": "Ficha del molibdeno: respuesta incorrecta pero plausible de la pregunta tipo test"
  },
  "elemento.Mo.pregunta.explicacion": {
@@ -304,7 +304,7 @@
   "descripcion": "Ficha del tecnecio: cualidad única o récord"
  },
  "elemento.Tc.curiosidad": {
-  "texto": "En 1952 se detectó tecnecio en la luz de estrellas gigantes rojas: como no dura tanto como la edad de una estrella, demostró que las estrellas fabrican elementos.",
+  "texto": "En 1952 se detectó tecnecio en la luz de estrellas gigantes rojas. Como se desintegra en mucho menos tiempo del que vive una estrella, tenía que haberse fabricado allí: así se demostró que las estrellas fabrican elementos.",
   "descripcion": "Ficha del tecnecio: curiosidad sorprendente"
  },
  "elemento.Tc.pista": {
@@ -316,23 +316,23 @@
   "descripcion": "Ficha del tecnecio: pregunta tipo test sobre la ficha"
  },
  "elemento.Tc.pregunta.ok": {
-  "texto": "Fue el primer elemento artificial",
+  "texto": "Porque fue el primer elemento artificial",
   "descripcion": "Ficha del tecnecio: respuesta correcta de la pregunta tipo test"
  },
  "elemento.Tc.pregunta.mal1": {
-  "texto": "Es el metal más denso",
+  "texto": "Porque es el metal más denso",
   "descripcion": "Ficha del tecnecio: respuesta incorrecta pero plausible de la pregunta tipo test"
  },
  "elemento.Tc.pregunta.mal2": {
-  "texto": "Es el único gas metálico",
+  "texto": "Porque es el único gas metálico",
   "descripcion": "Ficha del tecnecio: respuesta incorrecta pero plausible de la pregunta tipo test"
  },
  "elemento.Tc.pregunta.mal3": {
-  "texto": "Se descubrió en la Luna",
+  "texto": "Porque se descubrió en la Luna",
   "descripcion": "Ficha del tecnecio: respuesta incorrecta pero plausible de la pregunta tipo test"
  },
  "elemento.Tc.pregunta.explicacion": {
-  "texto": "Segrè y Perrier lo obtuvieron en 1937 a partir de molibdeno bombardeado en un ciclotrón.",
+  "texto": "Fue el primer elemento obtenido de forma artificial: Segrè y Perrier lo hallaron en 1937 en molibdeno bombardeado en un ciclotrón.",
   "descripcion": "Ficha del tecnecio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Ru.descubrimiento": {
@@ -396,7 +396,7 @@
   "descripcion": "Ficha del rodio: por qué se usa ese elemento y no otro"
  },
  "elemento.Rh.unico": {
-  "texto": "Es uno de los metales más caros del mundo: en 2021 llegó a costar más de diez veces lo que el oro.",
+  "texto": "Es uno de los metales más caros del mundo: en 2021 llegó a costar más de 10 veces lo que el oro.",
   "descripcion": "Ficha del rodio: cualidad única o récord"
  },
  "elemento.Rh.curiosidad": {
@@ -480,7 +480,7 @@
   "descripcion": "Ficha del paladio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Ag.descubrimiento": {
-  "texto": "Se conoce desde la Antigüedad: hacia el 3000 a. C. ya se extraía en Anatolia separándola del plomo con la copelación, fundiendo la mena y oxidando el plomo. En Hispania, las minas de Cartagena dieron mucha plata a Roma, y siglos después la de Potosí (Bolivia) y México llenó el mundo de monedas de plata españolas. Lavoisier la incluyó en su lista de elementos en 1789.",
+  "texto": "Se conoce desde la Antigüedad: hacia el 3000 a. C. ya se extraía en Anatolia separándola del plomo con la copelación, fundiendo la mena y oxidando el plomo. En Hispania, las minas de Cartagena dieron mucha plata a Roma, y siglos después las minas de Potosí (Bolivia) y México, donde miles de personas indígenas fueron obligadas a trabajar, llenaron el mundo de monedas de plata españolas. Lavoisier la incluyó en su lista de elementos en 1789.",
   "descripcion": "Ficha de la plata: cómo se descubrió"
  },
  "elemento.Ag.usos": {
@@ -604,19 +604,19 @@
   "descripcion": "Ficha del indio: pregunta tipo test sobre la ficha"
  },
  "elemento.In.pregunta.ok": {
-  "texto": "Hace una capa transparente que conduce",
+  "texto": "Para formar una capa transparente que conduce",
   "descripcion": "Ficha del indio: respuesta correcta de la pregunta tipo test"
  },
  "elemento.In.pregunta.mal1": {
-  "texto": "Hace la pantalla irrompible",
+  "texto": "Para hacer la pantalla irrompible",
   "descripcion": "Ficha del indio: respuesta incorrecta pero plausible de la pregunta tipo test"
  },
  "elemento.In.pregunta.mal2": {
-  "texto": "Da color rojo a los píxeles",
+  "texto": "Para dar color rojo a los píxeles",
   "descripcion": "Ficha del indio: respuesta incorrecta pero plausible de la pregunta tipo test"
  },
  "elemento.In.pregunta.mal3": {
-  "texto": "Protege de la radiación ultravioleta",
+  "texto": "Para proteger de la luz ultravioleta",
   "descripcion": "Ficha del indio: respuesta incorrecta pero plausible de la pregunta tipo test"
  },
  "elemento.In.pregunta.explicacion": {
@@ -636,7 +636,7 @@
   "descripcion": "Ficha del estaño: por qué se usa ese elemento y no otro"
  },
  "elemento.Sn.unico": {
-  "texto": "Tiene diez isótopos estables, más que ningún otro elemento.",
+  "texto": "Tiene 10 isótopos estables, más que ningún otro elemento.",
   "descripcion": "Ficha del estaño: cualidad única o récord"
  },
  "elemento.Sn.curiosidad": {
@@ -644,7 +644,7 @@
   "descripcion": "Ficha del estaño: curiosidad sorprendente"
  },
  "elemento.Sn.pista": {
-  "texto": "Mezclado con cobre di nombre a una edad entera de la Prehistoria, y hoy uno los chips de tu móvil.",
+  "texto": "Mezclado con cobre di nombre a una edad entera de la Prehistoria, y hoy pego los chips de tu móvil a su placa.",
   "descripcion": "Ficha del estaño: pista para el juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
  },
  "elemento.Sn.pregunta": {
@@ -668,7 +668,7 @@
   "descripcion": "Ficha del estaño: respuesta incorrecta pero plausible de la pregunta tipo test"
  },
  "elemento.Sn.pregunta.explicacion": {
-  "texto": "El estaño tiene diez isótopos estables, el récord de toda la tabla periódica.",
+  "texto": "El estaño tiene 10 isótopos estables, el récord de toda la tabla periódica.",
   "descripcion": "Ficha del estaño: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Sb.descubrimiento": {
@@ -832,7 +832,7 @@
   "descripcion": "Ficha del xenón: cualidad única o récord"
  },
  "elemento.Xe.curiosidad": {
-  "texto": "Hay tan poco en el aire, menos de una parte en diez millones, que para conseguir un litro hay que destilar más de diez millones de litros de aire.",
+  "texto": "Hay tan poco en el aire, menos de 1 parte en 10 millones, que para conseguir 1 litro hay que destilar más de 10 millones de litros de aire.",
   "descripcion": "Ficha del xenón: curiosidad sorprendente"
  },
  "elemento.Xe.pista": {
@@ -864,7 +864,7 @@
   "descripcion": "Ficha del xenón: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Cs.descubrimiento": {
-  "texto": "Fue el primer elemento descubierto con el espectroscopio: Robert Bunsen y Gustav Kirchhoff lo encontraron en 1860 en Heidelberg, en agua mineral de Bad Dürkheim. Tuvieron que evaporar decenas de miles de litros para obtener unos pocos gramos de sal. Vieron dos rayas azules nuevas y lo llamaron «caesius», azul cielo en latín.",
+  "texto": "Fue el primer elemento descubierto con el espectroscopio: Robert Bunsen y Gustav Kirchhoff lo encontraron en 1860 en Heidelberg, en agua mineral de Bad Dürkheim. Tuvieron que evaporar decenas de miles de litros para obtener unos pocos gramos de sal. Vieron 2 rayas azules nuevas y lo llamaron «caesius», azul cielo en latín.",
   "descripcion": "Ficha del cesio: cómo se descubrió"
  },
  "elemento.Cs.usos": {
@@ -872,7 +872,7 @@
   "descripcion": "Ficha del cesio: usos actuales en la vida diaria, la industria o la medicina"
  },
  "elemento.Cs.porque": {
-  "texto": "Una transición de su único electrón externo oscila siempre exactamente igual, y es fácil de medir con microondas. Por eso se eligió para definir el segundo: los relojes de cesio solo se desvían un segundo en millones de años.",
+  "texto": "Una transición de su único electrón externo oscila siempre exactamente igual, y es fácil de medir con microondas. Por eso se eligió para definir el segundo: los relojes de cesio solo se desvían 1 segundo en millones de años.",
   "descripcion": "Ficha del cesio: por qué se usa ese elemento y no otro"
  },
  "elemento.Cs.unico": {
@@ -912,7 +912,7 @@
   "descripcion": "Ficha del cesio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Ba.descubrimiento": {
-  "texto": "Hacia 1603 Vincenzo Casciarolo, un zapatero aficionado a la alquimia de Bolonia, calcinó una piedra (barita) y vio que brillaba en la oscuridad: la «piedra de Bolonia». En 1774 Carl Wilhelm Scheele identificó en ella un óxido nuevo, la barita, y en 1808 Humphry Davy aisló el metal por electrólisis. Su nombre viene del griego «barys», pesado.",
+  "texto": "Hacia 1603 Vincenzo Casciarolo, un zapatero de Bolonia aficionado a la alquimia, calcinó una piedra (barita) y vio que brillaba en la oscuridad: la «piedra de Bolonia». En 1774 Carl Wilhelm Scheele identificó en ella un óxido nuevo, la barita, y en 1808 Humphry Davy aisló el metal por electrólisis. Su nombre viene del griego «barys», pesado.",
   "descripcion": "Ficha del bario: cómo se descubrió"
  },
  "elemento.Ba.usos": {

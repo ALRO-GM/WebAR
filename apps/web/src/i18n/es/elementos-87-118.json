@@ -8,7 +8,7 @@
   "descripcion": "Ficha del francio: dónde se usa hoy"
  },
  "elemento.Fr.porque": {
-  "texto": "Su isótopo más estable, el francio-223, tiene una semivida de solo 22 minutos: antes de juntar una muestra, ya se ha desintegrado. Interesa a los físicos porque es el alcalino más pesado: un solo electrón externo y un núcleo enorme, ideal para medir efectos muy finos.",
+  "texto": "Su isótopo más estable, el francio-223, tiene una semivida de solo 22 minutos: antes de juntar una muestra, ya se ha desintegrado. Interesa a los físicos porque es el alcalino más pesado: solo 1 electrón externo y un núcleo enorme, ideal para medir efectos muy finos.",
   "descripcion": "Ficha del francio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Fr.unico": {
@@ -60,7 +60,7 @@
   "descripcion": "Ficha del radio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Ra.unico": {
-  "texto": "La antigua unidad de radiactividad, el curio, se definió a partir de la actividad de un gramo de radio-226. Ese isótopo tiene una semivida de unos 1600 años.",
+  "texto": "La antigua unidad de radiactividad, el curio, se definió a partir de la actividad de 1 gramo de radio-226. Ese isótopo tiene una semivida de unos 1600 años.",
   "descripcion": "Ficha del radio: una cualidad única o un récord"
  },
  "elemento.Ra.curiosidad": {
@@ -76,7 +76,7 @@
   "descripcion": "Ficha del radio: pregunta tipo test sobre la ficha"
  },
  "elemento.Ra.pregunta.ok": {
-  "texto": "El cuerpo lo confunde con calcio",
+  "texto": "Porque el cuerpo lo confunde con calcio",
   "descripcion": "Ficha del radio: respuesta correcta de la pregunta tipo test"
  },
  "elemento.Ra.pregunta.mal1": {
@@ -104,7 +104,7 @@
   "descripcion": "Ficha del actinio: dónde se usa hoy"
  },
  "elemento.Ac.porque": {
-  "texto": "El actinio-225 tiene una semivida de unos 10 días: da tiempo a fabricarlo, enviarlo y usarlo, pero no sigue radiando mucho tiempo en el cuerpo. Además, en su cadena de desintegración cada átomo suelta cuatro partículas alfa, lo que lo hace muy eficaz.",
+  "texto": "El actinio-225 tiene una semivida de unos 10 días: da tiempo a fabricarlo, enviarlo y usarlo, pero no sigue radiando mucho tiempo en el cuerpo. Además, en su cadena de desintegración cada átomo suelta 4 partículas alfa, lo que lo hace muy eficaz.",
   "descripcion": "Ficha del actinio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Ac.unico": {
@@ -116,11 +116,11 @@
   "descripcion": "Ficha del actinio: una curiosidad sorprendente"
  },
  "elemento.Ac.pista": {
-  "texto": "Doy nombre a toda una fila de la parte de abajo de la tabla y brillo de azul en la oscuridad.",
+  "texto": "Doy nombre a toda una fila de la parte de abajo de la tabla y brillo en azul en la oscuridad.",
   "descripcion": "Ficha del actinio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
  },
  "elemento.Ac.pregunta": {
-  "texto": "¿Cuántos elementos forman la serie que lleva su nombre?",
+  "texto": "¿Cuántos elementos forman la serie que lleva el nombre del actinio?",
   "descripcion": "Ficha del actinio: pregunta tipo test sobre la ficha"
  },
  "elemento.Ac.pregunta.ok": {
@@ -152,7 +152,7 @@
   "descripcion": "Ficha del torio: dónde se usa hoy"
  },
  "elemento.Th.porque": {
-  "texto": "El torio-232 no se fisiona directamente, pero al absorber un neutrón acaba convirtiéndose en uranio-233, que sí lo hace. Es unas tres veces más abundante que el uranio en la corteza, y por eso interesa como combustible del futuro.",
+  "texto": "El torio-232 no se fisiona directamente, pero al absorber un neutrón acaba convirtiéndose en uranio-233, que sí lo hace. Es unas 3 veces más abundante que el uranio en la corteza, y por eso interesa como combustible del futuro.",
   "descripcion": "Ficha del torio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Th.unico": {
@@ -160,7 +160,7 @@
   "descripcion": "Ficha del torio: una cualidad única o un récord"
  },
  "elemento.Th.curiosidad": {
-  "texto": "Berzelius ya había anunciado un «torio» en 1815, pero resultó ser un error; guardó el nombre y se lo puso al elemento auténtico catorce años después.",
+  "texto": "Berzelius ya había anunciado un «torio» en 1815, pero resultó ser un error; guardó el nombre y se lo puso al elemento auténtico 14 años después.",
   "descripcion": "Ficha del torio: una curiosidad sorprendente"
  },
  "elemento.Th.pista": {
@@ -188,11 +188,11 @@
   "descripcion": "Ficha del torio: tercera respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Th.pregunta.explicacion": {
-  "texto": "Tras absorber un neutrón y sufrir dos desintegraciones beta, se convierte en uranio-233, un combustible nuclear.",
+  "texto": "Tras absorber un neutrón y sufrir 2 desintegraciones beta, se convierte en uranio-233, un combustible nuclear.",
   "descripcion": "Ficha del torio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Pa.descubrimiento": {
-  "texto": "En 1913, Kasimir Fajans y Oswald Göhring detectaron un isótopo que duraba poco más de un minuto. En 1917-1918, Lise Meitner y Otto Hahn encontraron en Berlín el protactinio-231, que dura miles de años; Meitner hizo gran parte del trabajo mientras Hahn estaba en la guerra. En Glasgow, Frederick Soddy y John Cranston lo hallaron casi a la vez.",
+  "texto": "En 1913, Kasimir Fajans y Oswald Göhring detectaron un isótopo que duraba poco más de 1 minuto. En 1917-1918, Lise Meitner y Otto Hahn encontraron en Berlín el protactinio-231, que dura miles de años; Meitner hizo gran parte del trabajo mientras Hahn estaba en la guerra. En Glasgow, Frederick Soddy y John Cranston lo hallaron casi a la vez.",
   "descripcion": "Ficha del protactinio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Pa.usos": {
@@ -240,7 +240,7 @@
   "descripcion": "Ficha del protactinio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.U.descubrimiento": {
-  "texto": "El químico alemán Martin Heinrich Klaproth lo identificó en 1789 en Berlín, en la pechblenda, y lo bautizó por el planeta Urano, descubierto ocho años antes. En realidad había obtenido un óxido: el francés Eugène-Melchior Péligot aisló el metal en 1841.",
+  "texto": "El químico alemán Martin Heinrich Klaproth lo identificó en 1789 en Berlín, en la pechblenda, y lo bautizó por el planeta Urano, descubierto 8 años antes. En realidad había obtenido un óxido: el francés Eugène-Melchior Péligot aisló el metal en 1841.",
   "descripcion": "Ficha del uranio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.U.usos": {
@@ -260,7 +260,7 @@
   "descripcion": "Ficha del uranio: una curiosidad sorprendente"
  },
  "elemento.U.pista": {
-  "texto": "Me bautizaron por un planeta descubierto ocho años antes que yo y alimento las centrales nucleares.",
+  "texto": "Me bautizaron por un planeta descubierto 8 años antes que yo y alimento las centrales nucleares.",
   "descripcion": "Ficha del uranio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
  },
  "elemento.U.pregunta": {
@@ -340,7 +340,7 @@
   "descripcion": "Ficha del plutonio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Pu.usos": {
-  "texto": "Se usa como combustible en algunas centrales nucleares mezclado con uranio y, por desgracia, en armas nucleares. El plutonio-238 da electricidad a sondas como las Voyager y a los rovers Curiosity y Perseverance en Marte.",
+  "texto": "Se usa como combustible en algunas centrales nucleares mezclado con uranio y también en armas nucleares. El plutonio-238 da electricidad a sondas como las Voyager y a los rovers Curiosity y Perseverance en Marte.",
   "descripcion": "Ficha del plutonio: dónde se usa hoy"
  },
  "elemento.Pu.porque": {
@@ -348,7 +348,7 @@
   "descripcion": "Ficha del plutonio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Pu.unico": {
-  "texto": "El plutonio metálico cambia seis veces de estructura cristalina entre la temperatura ambiente y su punto de fusión, más que ningún otro elemento.",
+  "texto": "El plutonio metálico cambia 6 veces de estructura cristalina entre la temperatura ambiente y su punto de fusión, más que ningún otro elemento.",
   "descripcion": "Ficha del plutonio: una cualidad única o un récord"
  },
  "elemento.Pu.curiosidad": {
@@ -388,7 +388,7 @@
   "descripcion": "Ficha del americio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Am.usos": {
-  "texto": "Casi todos los detectores de humo iónicos llevan una pizca de americio-241, menos de un microgramo. También se usa en medidores de espesor y, mezclado con berilio, como fuente de neutrones para explorar pozos de petróleo.",
+  "texto": "Casi todos los detectores de humo iónicos llevan una pizca de americio-241, menos de 1 microgramo. También se usa en medidores de espesor y, mezclado con berilio, como fuente de neutrones para explorar pozos de petróleo.",
   "descripcion": "Ficha del americio: dónde se usa hoy"
  },
  "elemento.Am.porque": {
@@ -432,7 +432,7 @@
   "descripcion": "Ficha del americio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Cm.descubrimiento": {
-  "texto": "Glenn Seaborg, Ralph James y Albert Ghiorso lo produjeron en 1944 bombardeando plutonio-239 con partículas alfa en el ciclotrón de Berkeley; la química que lo identificó se hizo en Chicago. Se identificó unos meses antes que el americio, aunque tenga un número más.",
+  "texto": "Glenn Seaborg, Ralph James y Albert Ghiorso lo produjeron en 1944 bombardeando plutonio-239 con partículas alfa en el ciclotrón de Berkeley; la química que lo identificó se hizo en Chicago. Se identificó unos meses antes que el americio, aunque su número atómico sea mayor.",
   "descripcion": "Ficha del curio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Cm.usos": {
@@ -444,7 +444,7 @@
   "descripcion": "Ficha del curio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Cm.unico": {
-  "texto": "Es uno de los dos únicos elementos que homenajean a una mujer científica, Marie Curie (junto a Pierre). El otro es el meitnerio.",
+  "texto": "Es uno de los 2 únicos elementos cuyo nombre homenajea a una científica: Marie Curie, junto a Pierre Curie. El otro es el meitnerio.",
   "descripcion": "Ficha del curio: una cualidad única o un récord"
  },
  "elemento.Cm.curiosidad": {
@@ -536,7 +536,7 @@
   "descripcion": "Ficha del californio: dónde se usa hoy"
  },
  "elemento.Cf.porque": {
-  "texto": "El californio-252 se rompe solo (fisión espontánea) y, al hacerlo, suelta neutrones: un solo microgramo emite más de 2 millones por segundo. Así se tiene una fuente potente y diminuta que dura años (semivida de unos 2,6 años).",
+  "texto": "El californio-252 se rompe solo (fisión espontánea) y, al hacerlo, suelta neutrones: solo 1 microgramo emite más de 2 millones por segundo. Así se tiene una fuente potente y diminuta que dura años (semivida de unos 2,6 años).",
   "descripcion": "Ficha del californio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Cf.unico": {
@@ -588,7 +588,7 @@
   "descripcion": "Ficha del einstenio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Es.unico": {
-  "texto": "Junto con el fermio, es uno de los dos únicos elementos descubiertos en los restos de una explosión nuclear.",
+  "texto": "Junto con el fermio, es uno de los 2 únicos elementos descubiertos en los restos de una explosión nuclear.",
   "descripcion": "Ficha del einstenio: una cualidad única o un récord"
  },
  "elemento.Es.curiosidad": {
@@ -604,7 +604,7 @@
   "descripcion": "Ficha del einstenio: pregunta tipo test sobre la ficha"
  },
  "elemento.Es.pregunta.ok": {
-  "texto": "En los restos de una bomba H",
+  "texto": "En los restos de una bomba de hidrógeno",
   "descripcion": "Ficha del einstenio: respuesta correcta de la pregunta tipo test"
  },
  "elemento.Es.pregunta.mal1": {
@@ -632,7 +632,7 @@
   "descripcion": "Ficha del fermio: dónde se usa hoy"
  },
  "elemento.Fm.porque": {
-  "texto": "Es el último elemento que se puede fabricar añadiendo neutrones a núcleos más ligeros: el fermio-258 se rompe solo en menos de un milisegundo, así que la cadena se corta ahí. Para ir más allá hay que hacer chocar núcleos en aceleradores.",
+  "texto": "Es el último elemento que se puede fabricar añadiendo neutrones a núcleos más ligeros: el fermio-258 se rompe solo en menos de 1 milisegundo, así que la cadena se corta ahí. Para ir más allá hay que hacer chocar núcleos en aceleradores.",
   "descripcion": "Ficha del fermio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Fm.unico": {
@@ -668,11 +668,11 @@
   "descripcion": "Ficha del fermio: tercera respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Fm.pregunta.explicacion": {
-  "texto": "Al capturar 17 neutrones pasó de 238 a 255 de masa; después, las desintegraciones beta subieron su número de protones hasta 100.",
+  "texto": "Al capturar 17 neutrones su número másico pasó de 238 a 255; después, las desintegraciones beta subieron su número de protones hasta 100.",
   "descripcion": "Ficha del fermio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Md.descubrimiento": {
-  "texto": "Albert Ghiorso, Bernard Harvey, Gregory Choppin, Stanley Thompson y Glenn Seaborg lo crearon en 1955 en Berkeley. Bombardearon una muestra minúscula de einstenio-253 (unos mil millones de átomos) con partículas alfa y detectaron, en total, solo 17 átomos de mendelevio-256.",
+  "texto": "Albert Ghiorso, Bernard Harvey, Gregory Choppin, Stanley Thompson y Glenn Seaborg lo crearon en 1955 en Berkeley. Bombardearon una muestra minúscula de einstenio-253 (unos 1000 millones de átomos) con partículas alfa y detectaron, en total, solo 17 átomos de mendelevio-256.",
   "descripcion": "Ficha del mendelevio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Md.usos": {
@@ -680,7 +680,7 @@
   "descripcion": "Ficha del mendelevio: dónde se usa hoy"
  },
  "elemento.Md.porque": {
-  "texto": "Necesita como blanco einstenio, que ya es rarísimo, y casi ningún choque funciona: cada experimento daba uno o dos átomos, que además se desintegraban en horas.",
+  "texto": "Necesita como blanco einstenio, que ya es rarísimo, y casi ningún choque funciona: cada experimento daba 1 o 2 átomos, que además se desintegraban en horas.",
   "descripcion": "Ficha del mendelevio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Md.unico": {
@@ -712,7 +712,7 @@
   "descripcion": "Ficha del mendelevio: segunda respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Md.pregunta.mal3": {
-  "texto": "Un millón",
+  "texto": "1 millón",
   "descripcion": "Ficha del mendelevio: tercera respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Md.pregunta.explicacion": {
@@ -728,7 +728,7 @@
   "descripcion": "Ficha del nobelio: dónde se usa hoy"
  },
  "elemento.No.porque": {
-  "texto": "Para fabricarlo hay que fusionar dos núcleos, por ejemplo curio con carbono, y la mayoría de los choques no funcionan. Su isótopo más estable dura menos de una hora.",
+  "texto": "Para fabricarlo hay que fusionar dos núcleos, por ejemplo curio con carbono, y la mayoría de los choques no funcionan. Su isótopo más estable dura menos de 1 hora.",
   "descripcion": "Ficha del nobelio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.No.unico": {
@@ -824,7 +824,7 @@
   "descripcion": "Ficha del rutherfordio: dónde se usa hoy"
  },
  "elemento.Rf.porque": {
-  "texto": "Cada choque necesita una puntería y una energía exactas para que los núcleos se fundan sin romperse. Su isótopo más estable dura del orden de una hora; los primeros que se vieron duraban segundos.",
+  "texto": "Cada choque necesita una puntería y una energía exactas para que los núcleos se fundan sin romperse. Su isótopo más estable dura del orden de 1 hora; los primeros que se vieron duraban segundos.",
   "descripcion": "Ficha del rutherfordio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Rf.unico": {
@@ -852,7 +852,7 @@
   "descripcion": "Ficha del rutherfordio: primera respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Rf.pregunta.mal2": {
-  "texto": "Fliorovio",
+  "texto": "Flerovio",
   "descripcion": "Ficha del rutherfordio: segunda respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Rf.pregunta.mal3": {
@@ -912,7 +912,7 @@
   "descripcion": "Ficha del dubnio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Sg.descubrimiento": {
-  "texto": "En 1974, un equipo de Berkeley y Livermore dirigido por Albert Ghiorso y Kenneth Hulet lo obtuvo bombardeando californio-249 con oxígeno-18. Detectaron unos pocos átomos de seaborgio-263, que duraban menos de un segundo. En Dubna, el equipo de Yuri Oganessian probó a la vez otro camino, con plomo y cromo.",
+  "texto": "En 1974, un equipo de Berkeley y Livermore dirigido por Albert Ghiorso y Kenneth Hulet lo obtuvo bombardeando californio-249 con oxígeno-18. Detectaron unos pocos átomos de seaborgio-263, que duraban menos de 1 segundo. En Dubna, el equipo de Yuri Oganessian probó a la vez otro camino, con plomo y cromo.",
   "descripcion": "Ficha del seaborgio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Sg.usos": {
@@ -960,19 +960,19 @@
   "descripcion": "Ficha del seaborgio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Bh.descubrimiento": {
-  "texto": "Peter Armbruster y Gottfried Münzenberg lo crearon en 1981 en el GSI de Darmstadt (Alemania), bombardeando bismuto-209 con cromo-54. Vieron unos pocos átomos de bohrio-262, que se desintegraban en menos de un segundo.",
+  "texto": "Peter Armbruster y Gottfried Münzenberg lo crearon en 1981 en el GSI de Darmstadt (Alemania), bombardeando bismuto-209 con cromo-54. Vieron unos pocos átomos de bohrio-262, que se desintegraban en menos de 1 segundo.",
   "descripcion": "Ficha del bohrio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Bh.usos": {
-  "texto": "Solo investigación. En el año 2000, en el Instituto Paul Scherrer (Suiza), se formó un compuesto con oxígeno y cloro usando solo seis átomos, y se comportó como el renio, su vecino de columna.",
+  "texto": "Solo investigación. En el año 2000, en el Instituto Paul Scherrer (Suiza), se formó un compuesto con oxígeno y cloro usando solo 6 átomos, y se comportó como el renio, su vecino de columna.",
   "descripcion": "Ficha del bohrio: dónde se usa hoy"
  },
  "elemento.Bh.porque": {
-  "texto": "Se usó la «fusión fría»: un blanco de bismuto o plomo y un proyectil mediano, para que el núcleo nuevo se forme con poca energía y no se rompa. Aun así, sale un átomo tras muchas horas de bombardeo.",
+  "texto": "Se usó la «fusión fría»: un blanco de bismuto o plomo y un proyectil mediano, para que el núcleo nuevo se forme con poca energía y no se rompa. Aun así, sale 1 átomo tras muchas horas de bombardeo.",
   "descripcion": "Ficha del bohrio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Bh.unico": {
-  "texto": "Su química se estudió con solo seis átomos: uno de los experimentos químicos más pequeños de la historia.",
+  "texto": "Su química se estudió con solo 6 átomos: uno de los experimentos químicos más pequeños de la historia.",
   "descripcion": "Ficha del bohrio: una cualidad única o un récord"
  },
  "elemento.Bh.curiosidad": {
@@ -988,27 +988,27 @@
   "descripcion": "Ficha del bohrio: pregunta tipo test sobre la ficha"
  },
  "elemento.Bh.pregunta.ok": {
-  "texto": "Con seis",
+  "texto": "Con 6 átomos",
   "descripcion": "Ficha del bohrio: respuesta correcta de la pregunta tipo test"
  },
  "elemento.Bh.pregunta.mal1": {
-  "texto": "Con seis mil",
+  "texto": "Con 6000 átomos",
   "descripcion": "Ficha del bohrio: primera respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Bh.pregunta.mal2": {
-  "texto": "Con un gramo",
+  "texto": "Con 1 gramo",
   "descripcion": "Ficha del bohrio: segunda respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Bh.pregunta.mal3": {
-  "texto": "Con un millón",
+  "texto": "Con 1 millón de átomos",
   "descripcion": "Ficha del bohrio: tercera respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Bh.pregunta.explicacion": {
-  "texto": "En el año 2000 se formó un compuesto con oxígeno y cloro a partir de solo seis átomos.",
+  "texto": "En el año 2000 se formó un compuesto con oxígeno y cloro a partir de solo 6 átomos.",
   "descripcion": "Ficha del bohrio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Hs.descubrimiento": {
-  "texto": "El equipo de Peter Armbruster y Gottfried Münzenberg lo creó en 1984 en el GSI de Darmstadt (Alemania), bombardeando plomo-208 con hierro-58. Detectaron tres átomos de hasio-265.",
+  "texto": "El equipo de Peter Armbruster y Gottfried Münzenberg lo creó en 1984 en el GSI de Darmstadt (Alemania), bombardeando plomo-208 con hierro-58. Detectaron 3 átomos de hasio-265.",
   "descripcion": "Ficha del hasio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Hs.usos": {
@@ -1056,7 +1056,7 @@
   "descripcion": "Ficha del hasio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Mt.descubrimiento": {
-  "texto": "Peter Armbruster y Gottfried Münzenberg lo crearon el 29 de agosto de 1982 en el GSI de Darmstadt (Alemania), bombardeando bismuto-209 con hierro-58 durante días. Vieron un único átomo, que se desintegró en milésimas de segundo.",
+  "texto": "Peter Armbruster y Gottfried Münzenberg lo crearon el 29 de agosto de 1982 en el GSI de Darmstadt (Alemania), bombardeando bismuto-209 con hierro-58 durante días. Vieron solo 1 átomo, que se desintegró en milésimas de segundo.",
   "descripcion": "Ficha del meitnerio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Mt.usos": {
@@ -1104,7 +1104,7 @@
   "descripcion": "Ficha del meitnerio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Ds.descubrimiento": {
-  "texto": "El equipo de Sigurd Hofmann lo creó el 9 de noviembre de 1994 en el GSI de Darmstadt (Alemania), bombardeando plomo-208 con níquel-62. Tras días de bombardeo vieron un átomo de darmstatio-269, que duró menos de un milisegundo.",
+  "texto": "El equipo de Sigurd Hofmann lo creó el 9 de noviembre de 1994 en el GSI de Darmstadt (Alemania), bombardeando plomo-208 con níquel-62. Tras días de bombardeo vieron 1 átomo de darmstatio-269, que duró menos de 1 milisegundo.",
   "descripcion": "Ficha del darmstatio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Ds.usos": {
@@ -1116,7 +1116,7 @@
   "descripcion": "Ficha del darmstatio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Ds.unico": {
-  "texto": "Es uno de los seis elementos descubiertos en el GSI de Darmstadt, que encontró todos los del 107 al 112.",
+  "texto": "Es uno de los 6 elementos descubiertos en el GSI de Darmstadt, que encontró todos los del 107 al 112.",
   "descripcion": "Ficha del darmstatio: una cualidad única o un récord"
  },
  "elemento.Ds.curiosidad": {
@@ -1132,19 +1132,19 @@
   "descripcion": "Ficha del darmstatio: pregunta tipo test sobre la ficha"
  },
  "elemento.Ds.pregunta.ok": {
-  "texto": "Seis, del 107 al 112",
+  "texto": "6, del 107 al 112",
   "descripcion": "Ficha del darmstatio: respuesta correcta de la pregunta tipo test"
  },
  "elemento.Ds.pregunta.mal1": {
-  "texto": "Uno, solo el 110",
+  "texto": "1, solo el 110",
   "descripcion": "Ficha del darmstatio: primera respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Ds.pregunta.mal2": {
-  "texto": "Tres, del 110 al 112",
+  "texto": "3, del 110 al 112",
   "descripcion": "Ficha del darmstatio: segunda respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Ds.pregunta.mal3": {
-  "texto": "Diez, del 100 al 109",
+  "texto": "10, del 100 al 109",
   "descripcion": "Ficha del darmstatio: tercera respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Ds.pregunta.explicacion": {
@@ -1152,7 +1152,7 @@
   "descripcion": "Ficha del darmstatio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Rg.descubrimiento": {
-  "texto": "El equipo de Sigurd Hofmann lo creó el 8 de diciembre de 1994 en el GSI de Darmstadt (Alemania), un mes después del elemento 110. Bombardearon bismuto-209 con níquel-64 y detectaron tres átomos de roentgenio-272.",
+  "texto": "El equipo de Sigurd Hofmann lo creó el 8 de diciembre de 1994 en el GSI de Darmstadt (Alemania), 1 mes después del elemento 110. Bombardearon bismuto-209 con níquel-64 y detectaron 3 átomos de roentgenio-272.",
   "descripcion": "Ficha del roentgenio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Rg.usos": {
@@ -1200,7 +1200,7 @@
   "descripcion": "Ficha del roentgenio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Cn.descubrimiento": {
-  "texto": "El equipo de Sigurd Hofmann lo creó el 9 de febrero de 1996 en el GSI de Darmstadt (Alemania), bombardeando plomo-208 con cinc-70. Vieron un único átomo de copernicio-277, que duró menos de un milisegundo.",
+  "texto": "El equipo de Sigurd Hofmann lo creó el 9 de febrero de 1996 en el GSI de Darmstadt (Alemania), bombardeando plomo-208 con cinc-70. Vieron solo 1 átomo de copernicio-277, que duró menos de 1 milisegundo.",
   "descripcion": "Ficha del copernicio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Cn.usos": {
@@ -1248,7 +1248,7 @@
   "descripcion": "Ficha del copernicio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Nh.descubrimiento": {
-  "texto": "El equipo de Kosuke Morita en el RIKEN (Wako, Japón) bombardeó bismuto-209 con cinc-70 durante casi nueve años, entre 2003 y 2012. En todo ese tiempo detectaron solo tres átomos de nihonio-278 (en 2004, 2005 y 2012). En 2015 la IUPAC le dio el mérito: fue el primer elemento descubierto en Asia.",
+  "texto": "El equipo de Kosuke Morita en el RIKEN (Wako, Japón) bombardeó bismuto-209 con cinc-70 durante casi 9 años, entre 2003 y 2012. En todo ese tiempo detectaron solo 3 átomos de nihonio-278 (en 2004, 2005 y 2012). En 2015 la IUPAC le dio el mérito: fue el primer elemento descubierto en Asia.",
   "descripcion": "Ficha del nihonio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Nh.usos": {
@@ -1264,7 +1264,7 @@
   "descripcion": "Ficha del nihonio: una cualidad única o un récord"
  },
  "elemento.Nh.curiosidad": {
-  "texto": "En 1908 el japonés Masataka Ogawa anunció el «niponio», pero se equivocó de elemento; un siglo después, Japón tuvo por fin su elemento con un nombre casi igual.",
+  "texto": "En 1908 el japonés Masataka Ogawa anunció el «niponio», pero se equivocó de elemento; más de 100 años después, Japón tuvo por fin su elemento con un nombre casi igual.",
   "descripcion": "Ficha del nihonio: una curiosidad sorprendente"
  },
  "elemento.Nh.pista": {
@@ -1272,31 +1272,31 @@
   "descripcion": "Ficha del nihonio: pista para un juego de adivinar el elemento; no debe contener su nombre ni su símbolo"
  },
  "elemento.Nh.pregunta": {
-  "texto": "¿Cuántos átomos de nihonio vio el RIKEN en nueve años?",
+  "texto": "¿Cuántos átomos de nihonio vio el RIKEN en 9 años?",
   "descripcion": "Ficha del nihonio: pregunta tipo test sobre la ficha"
  },
  "elemento.Nh.pregunta.ok": {
-  "texto": "Tres",
+  "texto": "3",
   "descripcion": "Ficha del nihonio: respuesta correcta de la pregunta tipo test"
  },
  "elemento.Nh.pregunta.mal1": {
-  "texto": "Mil",
+  "texto": "1000",
   "descripcion": "Ficha del nihonio: primera respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Nh.pregunta.mal2": {
-  "texto": "Uno por semana",
+  "texto": "1 por semana",
   "descripcion": "Ficha del nihonio: segunda respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Nh.pregunta.mal3": {
-  "texto": "Medio millón",
+  "texto": "500 000",
   "descripcion": "Ficha del nihonio: tercera respuesta incorrecta de la pregunta tipo test"
  },
  "elemento.Nh.pregunta.explicacion": {
-  "texto": "Tras casi nueve años de bombardeo solo detectaron tres átomos, en 2004, 2005 y 2012.",
+  "texto": "Tras casi 9 años de bombardeo solo detectaron 3 átomos, en 2004, 2005 y 2012.",
   "descripcion": "Ficha del nihonio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Fl.descubrimiento": {
-  "texto": "Un equipo del laboratorio de Dubna (Rusia), con Yuri Oganessian y en colaboración con el Laboratorio Lawrence Livermore (EE. UU.), lo obtuvo a finales de 1998 bombardeando plutonio-244 con calcio-48. Al principio vieron un solo átomo; la IUPAC confirmó el descubrimiento en 2011.",
+  "texto": "Un equipo del laboratorio de Dubna (Rusia), con Yuri Oganessian y en colaboración con el Laboratorio Lawrence Livermore (EE. UU.), lo obtuvo a finales de 1998 bombardeando plutonio-244 con calcio-48. Al principio vieron solo 1 átomo; la IUPAC confirmó el descubrimiento en 2011.",
   "descripcion": "Ficha del flerovio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Fl.usos": {
@@ -1344,7 +1344,7 @@
   "descripcion": "Ficha del flerovio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Mc.descubrimiento": {
-  "texto": "Un equipo ruso-estadounidense de Dubna y Livermore, dirigido por Yuri Oganessian, lo anunció en 2004 tras bombardear americio-243 con calcio-48. Detectaron cuatro átomos. Un equipo internacional en Darmstadt (Alemania), liderado desde Lund (Suecia), confirmó el resultado en 2013.",
+  "texto": "Un equipo ruso-estadounidense de Dubna y Livermore, dirigido por Yuri Oganessian, lo anunció en 2004 tras bombardear americio-243 con calcio-48. Detectaron 4 átomos. Un equipo internacional en Darmstadt (Alemania), liderado desde Lund (Suecia), confirmó el resultado en 2013.",
   "descripcion": "Ficha del moscovio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Mc.usos": {
@@ -1352,7 +1352,7 @@
   "descripcion": "Ficha del moscovio: dónde se usa hoy"
  },
  "elemento.Mc.porque": {
-  "texto": "Sus isótopos viven menos de un segundo y se forman de uno en uno: para cada átomo hacen falta muchísimos choques de calcio contra americio.",
+  "texto": "Sus isótopos viven menos de 1 segundo y se forman de uno en uno: para cada átomo hacen falta muchísimos choques de calcio contra americio.",
   "descripcion": "Ficha del moscovio: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Mc.unico": {
@@ -1360,7 +1360,7 @@
   "descripcion": "Ficha del moscovio: una cualidad única o un récord"
  },
  "elemento.Mc.curiosidad": {
-  "texto": "En 1989 un hombre aseguró en la televisión que los ovnis usaban el elemento 115 como combustible; cuando por fin se fabricó, sus átomos duraban menos de un segundo.",
+  "texto": "En 1989 un hombre aseguró en la televisión que los ovnis usaban el elemento 115 como combustible; cuando por fin se fabricó, sus átomos duraban menos de 1 segundo.",
   "descripcion": "Ficha del moscovio: una curiosidad sorprendente"
  },
  "elemento.Mc.pista": {
@@ -1392,7 +1392,7 @@
   "descripcion": "Ficha del moscovio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Lv.descubrimiento": {
-  "texto": "El equipo de Dubna y Livermore lo creó el 19 de julio de 2000 bombardeando curio-248 con calcio-48. Vieron un solo átomo, que vivió una fracción de segundo. La IUPAC lo confirmó en 2011 y le puso nombre en 2012.",
+  "texto": "El equipo de Dubna y Livermore lo creó el 19 de julio de 2000 bombardeando curio-248 con calcio-48. Vieron solo 1 átomo, que vivió una fracción de segundo. La IUPAC lo confirmó en 2011 y le puso nombre en 2012.",
   "descripcion": "Ficha del livermorio: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Lv.usos": {
@@ -1440,7 +1440,7 @@
   "descripcion": "Ficha del livermorio: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Ts.descubrimiento": {
-  "texto": "Fue fruto de una colaboración entre Rusia y EE. UU.: el Laboratorio Nacional de Oak Ridge produjo 22 miligramos de berkelio-249 tras unos 250 días en un reactor, y en Dubna lo bombardearon con calcio-48. En 2010 anunciaron seis átomos.",
+  "texto": "Fue fruto de una colaboración entre Rusia y EE. UU.: el Laboratorio Nacional de Oak Ridge produjo 22 miligramos de berkelio-249 tras unos 250 días en un reactor, y en Dubna lo bombardearon con calcio-48. En 2010 anunciaron 6 átomos.",
   "descripcion": "Ficha del teneso: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Ts.usos": {
@@ -1448,7 +1448,7 @@
   "descripcion": "Ficha del teneso: dónde se usa hoy"
  },
  "elemento.Ts.porque": {
-  "texto": "Necesitaba un blanco de berkelio, que hay que fabricar en un reactor durante meses y que pierde la mitad en menos de un año: todo el experimento fue una carrera contrarreloj.",
+  "texto": "Necesitaba un blanco de berkelio, que hay que fabricar en un reactor durante meses y que pierde la mitad en menos de 1 año: todo el experimento fue una carrera contrarreloj.",
   "descripcion": "Ficha del teneso: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Ts.unico": {
@@ -1488,7 +1488,7 @@
   "descripcion": "Ficha del teneso: explicación de la respuesta correcta de la pregunta tipo test"
  },
  "elemento.Og.descubrimiento": {
-  "texto": "Un equipo de Dubna y Livermore, con Yuri Oganessian, vio un átomo en 2002 y otros dos en 2005 bombardeando californio-249 con calcio-48. Cada átomo duró menos de un milisegundo. La IUPAC lo confirmó en 2015 y lo bautizó en 2016.",
+  "texto": "Un equipo de Dubna y Livermore, con Yuri Oganessian, vio 1 átomo en 2002 y otros 2 en 2005 bombardeando californio-249 con calcio-48. Cada átomo duró menos de 1 milisegundo. La IUPAC lo confirmó en 2015 y lo bautizó en 2016.",
   "descripcion": "Ficha del oganesón: cómo se descubrió (quién, cuándo, dónde y cómo)"
  },
  "elemento.Og.usos": {
@@ -1496,7 +1496,7 @@
   "descripcion": "Ficha del oganesón: dónde se usa hoy"
  },
  "elemento.Og.porque": {
-  "texto": "Hay que juntar californio (98 protones) y calcio (20) en un único núcleo, y casi todos los choques fallan: tres átomos costaron meses de bombardeo. Además, se desintegra en menos de un milisegundo.",
+  "texto": "Hay que juntar californio (98 protones) y calcio (20) en un único núcleo, y casi todos los choques fallan: 3 átomos costaron meses de bombardeo. Además, se desintegra en menos de 1 milisegundo.",
   "descripcion": "Ficha del oganesón: por qué se usa ese elemento y no otro, o por qué cuesta fabricarlo"
  },
  "elemento.Og.unico": {
