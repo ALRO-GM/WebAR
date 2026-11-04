@@ -279,7 +279,7 @@ export class CardsMode {
 
   private showBanner(title: string, equation: string, text: string, kind: string): void {
     const banner = $('t-banner');
-    banner.className = `banner ${kind}`;
+    banner.className = `banner flotante ${kind}`;
     $('t-banner-titulo').textContent = title;
     $('t-banner-ecuacion').textContent = equation;
     $('t-banner-texto').textContent = text;
