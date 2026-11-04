@@ -1,0 +1,1378 @@
+{
+ "personaje.marie-curie.nombre": {
+  "texto": "Marie Curie",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.marie-curie.vida": {
+  "texto": "1867-1934",
+  "descripcion": "Años de nacimiento y muerte de Marie Curie"
+ },
+ "personaje.marie-curie.pais": {
+  "texto": "Polonia y Francia",
+  "descripcion": "De dónde era Marie Curie y adónde emigró, si lo hizo"
+ },
+ "personaje.marie-curie.campo": {
+  "texto": "Física y química de la radiactividad",
+  "descripcion": "Campo de trabajo de Marie Curie, en pocas palabras"
+ },
+ "personaje.marie-curie.bio": {
+  "texto": "Nació en Varsovia como Maria Skłodowska y, como en Polonia las mujeres no podían ir a la universidad, se fue a estudiar a París. Junto a Pierre Curie descubrió dos elementos nuevos, el polonio y el radio, y popularizó la palabra «radiactividad». Fue la primera mujer en ganar un Premio Nobel y la primera persona en ganar dos, en Física (1903) y en Química (1911). Durante la Primera Guerra Mundial organizó unidades móviles de rayos X para atender a los heridos.",
+  "descripcion": "Biografía breve de Marie Curie para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.marie-curie.logro": {
+  "texto": "Descubrió el polonio y el radio y es la primera persona que ganó dos Premios Nobel en ciencias distintas.",
+  "descripcion": "Logro principal de Marie Curie, en una frase"
+ },
+ "personaje.marie-curie.dato.1": {
+  "texto": "Llamó «polonio» al primer elemento que descubrió en honor a Polonia, su país, que entonces no existía como Estado independiente.",
+  "descripcion": "Dato curioso y verídico sobre Marie Curie"
+ },
+ "personaje.marie-curie.dato.2": {
+  "texto": "Sus cuadernos de laboratorio siguen siendo radiactivos: se guardan en cajas forradas de plomo y para consultarlos hay que usar ropa de protección.",
+  "descripcion": "Dato curioso y verídico sobre Marie Curie"
+ },
+ "personaje.marie-curie.dato.3": {
+  "texto": "El elemento 96, el curio (Cm), lleva el apellido de Marie y Pierre Curie.",
+  "descripcion": "Dato curioso y verídico sobre Marie Curie"
+ },
+ "personaje.marie-curie.saludo": {
+  "texto": "¡Hola! Soy Marie. ¿Buscamos juntos algo que brille en la oscuridad?",
+  "descripcion": "Saludo de Marie Curie al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.marie-curie.frase.1": {
+  "texto": "Para conseguir un poquito de radio tuvimos que tratar toneladas de mineral. La paciencia también es una herramienta de laboratorio.",
+  "descripcion": "Lo que dice Marie Curie en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.marie-curie.frase.2": {
+  "texto": "Un elemento radiactivo emite radiación por sí solo: no hace falta encenderlo ni calentarlo.",
+  "descripcion": "Lo que dice Marie Curie en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.marie-curie.frase.3": {
+  "texto": "Pierre y yo trabajábamos en un cobertizo frío y con goteras. ¡No hace falta un laboratorio perfecto para empezar!",
+  "descripcion": "Lo que dice Marie Curie en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.marie-curie.frase.4": {
+  "texto": "Si un mineral emite más radiación de la que esperas, pregúntate qué otro elemento esconde. Así encontramos el polonio.",
+  "descripcion": "Lo que dice Marie Curie en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.marie-curie.anima": {
+  "texto": "Equivocarse es parte del experimento. ¡Prueba otra vez!",
+  "descripcion": "Frase de ánimo de Marie Curie cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.dmitri-mendeleiev.nombre": {
+  "texto": "Dmitri Mendeléiev",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.dmitri-mendeleiev.vida": {
+  "texto": "1834-1907",
+  "descripcion": "Años de nacimiento y muerte de Dmitri Mendeléiev"
+ },
+ "personaje.dmitri-mendeleiev.pais": {
+  "texto": "Rusia",
+  "descripcion": "De dónde era Dmitri Mendeléiev y adónde emigró, si lo hizo"
+ },
+ "personaje.dmitri-mendeleiev.campo": {
+  "texto": "Química: la tabla periódica",
+  "descripcion": "Campo de trabajo de Dmitri Mendeléiev, en pocas palabras"
+ },
+ "personaje.dmitri-mendeleiev.bio": {
+  "texto": "Nació en Tobolsk, en Siberia. Mientras escribía un libro de química para sus estudiantes, ordenó los elementos conocidos por su masa atómica y vio que sus propiedades se repetían de forma periódica. En 1869 publicó su tabla periódica y dejó huecos para elementos que aún nadie había descubierto. Cuando se encontraron el galio, el escandio y el germanio, encajaron casi exactamente como él había predicho.",
+  "descripcion": "Biografía breve de Dmitri Mendeléiev para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.dmitri-mendeleiev.logro": {
+  "texto": "Creó la tabla periódica y predijo las propiedades de elementos que todavía no se conocían.",
+  "descripcion": "Logro principal de Dmitri Mendeléiev, en una frase"
+ },
+ "personaje.dmitri-mendeleiev.dato.1": {
+  "texto": "Llamó «eka-aluminio» al elemento que faltaba debajo del aluminio. Se descubrió en 1875 y hoy lo conocemos como galio.",
+  "descripcion": "Dato curioso y verídico sobre Dmitri Mendeléiev"
+ },
+ "personaje.dmitri-mendeleiev.dato.2": {
+  "texto": "Se atrevió a cambiar de sitio algunos elementos, como el teluro y el yodo, porque sus propiedades encajaban mejor así. Tenía razón: hoy la tabla se ordena por número atómico.",
+  "descripcion": "Dato curioso y verídico sobre Dmitri Mendeléiev"
+ },
+ "personaje.dmitri-mendeleiev.dato.3": {
+  "texto": "El elemento 101 se llama mendelevio (Md) en su honor.",
+  "descripcion": "Dato curioso y verídico sobre Dmitri Mendeléiev"
+ },
+ "personaje.dmitri-mendeleiev.saludo": {
+  "texto": "¡Saludos! Soy Dmitri. ¿Ordenamos unos cuantos elementos?",
+  "descripcion": "Saludo de Dmitri Mendeléiev al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.dmitri-mendeleiev.frase.1": {
+  "texto": "Si en una fila falta un elemento, no lo inventes: deja el hueco. Algún día alguien lo encontrará.",
+  "descripcion": "Lo que dice Dmitri Mendeléiev en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.dmitri-mendeleiev.frase.2": {
+  "texto": "Los elementos de una misma columna se parecen como hermanos: el litio, el sodio y el potasio reaccionan con fuerza con el agua.",
+  "descripcion": "Lo que dice Dmitri Mendeléiev en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.dmitri-mendeleiev.frase.3": {
+  "texto": "Ordené los elementos por su masa y me fijé en cómo se repetían sus propiedades. ¡Puedes hacer lo mismo con tus cartas!",
+  "descripcion": "Lo que dice Dmitri Mendeléiev en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.dmitri-mendeleiev.frase.4": {
+  "texto": "Mi tabla tenía huecos y aun así funcionaba. Una buena teoría se atreve a predecir.",
+  "descripcion": "Lo que dice Dmitri Mendeléiev en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.dmitri-mendeleiev.anima": {
+  "texto": "Ningún patrón aparece a la primera. Sigue moviendo las piezas.",
+  "descripcion": "Frase de ánimo de Dmitri Mendeléiev cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.cecilia-payne-gaposchkin.nombre": {
+  "texto": "Cecilia Payne-Gaposchkin",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.cecilia-payne-gaposchkin.vida": {
+  "texto": "1900-1979",
+  "descripcion": "Años de nacimiento y muerte de Cecilia Payne-Gaposchkin"
+ },
+ "personaje.cecilia-payne-gaposchkin.pais": {
+  "texto": "Reino Unido y Estados Unidos",
+  "descripcion": "De dónde era Cecilia Payne-Gaposchkin y adónde emigró, si lo hizo"
+ },
+ "personaje.cecilia-payne-gaposchkin.campo": {
+  "texto": "Astronomía y astrofísica",
+  "descripcion": "Campo de trabajo de Cecilia Payne-Gaposchkin, en pocas palabras"
+ },
+ "personaje.cecilia-payne-gaposchkin.bio": {
+  "texto": "Nació en Inglaterra y estudió en Cambridge, pero allí no daban títulos a las mujeres, así que se fue a Harvard, en Estados Unidos. En su tesis de 1925 analizó la luz de las estrellas y descubrió que están formadas sobre todo por hidrógeno y helio. Al principio no la creyeron, porque se pensaba que las estrellas tenían la misma composición que la Tierra. En 1956 fue la primera mujer catedrática de la Facultad de Artes y Ciencias de Harvard y la primera en dirigir uno de sus departamentos.",
+  "descripcion": "Biografía breve de Cecilia Payne-Gaposchkin para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.cecilia-payne-gaposchkin.logro": {
+  "texto": "Descubrió que las estrellas, y con ellas casi todo el universo visible, están hechas sobre todo de hidrógeno y helio.",
+  "descripcion": "Logro principal de Cecilia Payne-Gaposchkin, en una frase"
+ },
+ "personaje.cecilia-payne-gaposchkin.dato.1": {
+  "texto": "Un astrónomo muy famoso, Henry Norris Russell, la convenció de escribir que su resultado «casi seguro no era real». Pocos años después él mismo llegó a la misma conclusión.",
+  "descripcion": "Dato curioso y verídico sobre Cecilia Payne-Gaposchkin"
+ },
+ "personaje.cecilia-payne-gaposchkin.dato.2": {
+  "texto": "Decidió dedicarse a la astronomía después de oír a Arthur Eddington contar la expedición del eclipse de 1919, la que puso a prueba la teoría de Einstein.",
+  "descripcion": "Dato curioso y verídico sobre Cecilia Payne-Gaposchkin"
+ },
+ "personaje.cecilia-payne-gaposchkin.dato.3": {
+  "texto": "Para saber de qué está hecha una estrella no hace falta viajar hasta ella: basta con estudiar las rayas de su espectro, la «huella dactilar» de cada elemento.",
+  "descripcion": "Dato curioso y verídico sobre Cecilia Payne-Gaposchkin"
+ },
+ "personaje.cecilia-payne-gaposchkin.saludo": {
+  "texto": "¡Hola! Soy Cecilia. ¿Sabías que el Sol es casi todo hidrógeno?",
+  "descripcion": "Saludo de Cecilia Payne-Gaposchkin al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.cecilia-payne-gaposchkin.frase.1": {
+  "texto": "Cada elemento deja unas rayas propias en la luz. Leer un espectro es como leer el código de barras de una estrella.",
+  "descripcion": "Lo que dice Cecilia Payne-Gaposchkin en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.cecilia-payne-gaposchkin.frase.2": {
+  "texto": "El hidrógeno es el elemento más sencillo y también el más abundante del universo. ¡Por algo es el número 1!",
+  "descripcion": "Lo que dice Cecilia Payne-Gaposchkin en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.cecilia-payne-gaposchkin.frase.3": {
+  "texto": "Cuando los datos no encajan con lo que todos creen, revisa los datos… y luego revisa lo que todos creen.",
+  "descripcion": "Lo que dice Cecilia Payne-Gaposchkin en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.cecilia-payne-gaposchkin.frase.4": {
+  "texto": "El helio se descubrió antes en el Sol que en la Tierra. Su nombre viene de Helios, el Sol en griego.",
+  "descripcion": "Lo que dice Cecilia Payne-Gaposchkin en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.cecilia-payne-gaposchkin.anima": {
+  "texto": "Si los demás dudan de ti, deja que tus datos hablen.",
+  "descripcion": "Frase de ánimo de Cecilia Payne-Gaposchkin cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.marie-anne-paulze-lavoisier.nombre": {
+  "texto": "Marie-Anne Paulze Lavoisier",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.marie-anne-paulze-lavoisier.vida": {
+  "texto": "1758-1836",
+  "descripcion": "Años de nacimiento y muerte de Marie-Anne Paulze Lavoisier"
+ },
+ "personaje.marie-anne-paulze-lavoisier.pais": {
+  "texto": "Francia",
+  "descripcion": "De dónde era Marie-Anne Paulze Lavoisier y adónde emigró, si lo hizo"
+ },
+ "personaje.marie-anne-paulze-lavoisier.campo": {
+  "texto": "Química experimental, traducción e ilustración científica",
+  "descripcion": "Campo de trabajo de Marie-Anne Paulze Lavoisier, en pocas palabras"
+ },
+ "personaje.marie-anne-paulze-lavoisier.bio": {
+  "texto": "Trabajó junto a Antoine Lavoisier en su laboratorio de París y anotaba con detalle cada medida de los experimentos. Aprendió inglés para traducir obras científicas al francés y les añadía sus propias notas críticas. Dibujó y grabó las láminas de los aparatos del «Tratado elemental de química» (1789), un libro que cambió la química. Gracias a sus dibujos, cualquiera podía montar y repetir aquellos experimentos.",
+  "descripcion": "Biografía breve de Marie-Anne Paulze Lavoisier para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.marie-anne-paulze-lavoisier.logro": {
+  "texto": "Documentó e ilustró los experimentos que demostraron que la masa se conserva en las reacciones y que para arder hace falta oxígeno.",
+  "descripcion": "Logro principal de Marie-Anne Paulze Lavoisier, en una frase"
+ },
+ "personaje.marie-anne-paulze-lavoisier.dato.1": {
+  "texto": "Estudió dibujo con el pintor Jacques-Louis David, que también pintó un famoso retrato de ella junto a Antoine.",
+  "descripcion": "Dato curioso y verídico sobre Marie-Anne Paulze Lavoisier"
+ },
+ "personaje.marie-anne-paulze-lavoisier.dato.2": {
+  "texto": "Tradujo al francés el «Ensayo sobre el flogisto» de Richard Kirwan y añadió notas que rebatían la idea del flogisto.",
+  "descripcion": "Dato curioso y verídico sobre Marie-Anne Paulze Lavoisier"
+ },
+ "personaje.marie-anne-paulze-lavoisier.dato.3": {
+  "texto": "Además de las trece láminas del «Tratado», dibujó escenas del laboratorio en las que aparece ella misma tomando notas en una mesa.",
+  "descripcion": "Dato curioso y verídico sobre Marie-Anne Paulze Lavoisier"
+ },
+ "personaje.marie-anne-paulze-lavoisier.saludo": {
+  "texto": "Bonjour! Soy Marie-Anne. Trae tu cuaderno: aquí se apunta todo.",
+  "descripcion": "Saludo de Marie-Anne Paulze Lavoisier al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.marie-anne-paulze-lavoisier.frase.1": {
+  "texto": "Si pesas todo antes y después de una reacción, verás que la masa no desaparece: solo se reorganiza.",
+  "descripcion": "Lo que dice Marie-Anne Paulze Lavoisier en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.marie-anne-paulze-lavoisier.frase.2": {
+  "texto": "Un buen dibujo de un aparato vale más que mil explicaciones. ¡Así cualquiera puede repetir el experimento!",
+  "descripcion": "Lo que dice Marie-Anne Paulze Lavoisier en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.marie-anne-paulze-lavoisier.frase.3": {
+  "texto": "Durante años se creyó que al arder las cosas soltaban «flogisto». Midiendo con cuidado vimos que, en realidad, toman oxígeno del aire.",
+  "descripcion": "Lo que dice Marie-Anne Paulze Lavoisier en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.marie-anne-paulze-lavoisier.frase.4": {
+  "texto": "Traducir ciencia también es hacer ciencia: hay que entenderla muy bien para contarla en otro idioma.",
+  "descripcion": "Lo que dice Marie-Anne Paulze Lavoisier en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.marie-anne-paulze-lavoisier.anima": {
+  "texto": "Apunta lo que pasa, aunque salga mal: un error bien anotado enseña mucho.",
+  "descripcion": "Frase de ánimo de Marie-Anne Paulze Lavoisier cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.mario-molina.nombre": {
+  "texto": "Mario Molina",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.mario-molina.vida": {
+  "texto": "1943-2020",
+  "descripcion": "Años de nacimiento y muerte de Mario Molina"
+ },
+ "personaje.mario-molina.pais": {
+  "texto": "México y Estados Unidos",
+  "descripcion": "De dónde era Mario Molina y adónde emigró, si lo hizo"
+ },
+ "personaje.mario-molina.campo": {
+  "texto": "Química de la atmósfera",
+  "descripcion": "Campo de trabajo de Mario Molina, en pocas palabras"
+ },
+ "personaje.mario-molina.bio": {
+  "texto": "Nació en Ciudad de México y de niño convirtió un cuarto de baño de su casa en un pequeño laboratorio. En 1974, junto a F. Sherwood Rowland, advirtió que los CFC, unos gases que se usaban en aerosoles y frigoríficos, podían destruir la capa de ozono que nos protege de la radiación ultravioleta. Su trabajo llevó al Protocolo de Montreal (1987), con el que casi todos los países dejaron de fabricar esos gases. En 1995 recibió el Premio Nobel de Química.",
+  "descripcion": "Biografía breve de Mario Molina para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.mario-molina.logro": {
+  "texto": "Demostró que los CFC destruyen la capa de ozono, lo que llevó a prohibirlos en todo el planeta.",
+  "descripcion": "Logro principal de Mario Molina, en una frase"
+ },
+ "personaje.mario-molina.dato.1": {
+  "texto": "Fue la primera persona nacida en México en ganar el Premio Nobel de Química.",
+  "descripcion": "Dato curioso y verídico sobre Mario Molina"
+ },
+ "personaje.mario-molina.dato.2": {
+  "texto": "Un solo átomo de cloro liberado por un CFC puede destruir miles de moléculas de ozono, porque sale intacto de cada reacción y vuelve a empezar.",
+  "descripcion": "Dato curioso y verídico sobre Mario Molina"
+ },
+ "personaje.mario-molina.dato.3": {
+  "texto": "Gracias al Protocolo de Montreal, la capa de ozono se está recuperando poco a poco.",
+  "descripcion": "Dato curioso y verídico sobre Mario Molina"
+ },
+ "personaje.mario-molina.saludo": {
+  "texto": "¡Hola! Soy Mario. ¿Hablamos de la química del aire que respiras?",
+  "descripcion": "Saludo de Mario Molina al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.mario-molina.frase.1": {
+  "texto": "El ozono, O₃, son tres átomos de oxígeno juntos. Allá arriba, en la estratosfera, nos protege del sol como unas gafas gigantes.",
+  "descripcion": "Lo que dice Mario Molina en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.mario-molina.frase.2": {
+  "texto": "Una molécula que parece inofensiva aquí abajo puede hacer mucho daño a 30 kilómetros de altura. ¡La química depende del lugar!",
+  "descripcion": "Lo que dice Mario Molina en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.mario-molina.frase.3": {
+  "texto": "Con la química entendimos el problema, y con la química también encontramos la solución.",
+  "descripcion": "Lo que dice Mario Molina en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.mario-molina.frase.4": {
+  "texto": "Cuando un átomo sale intacto de una reacción y vuelve a empezar, actúa como catalizador. El cloro lo hacía… para mal.",
+  "descripcion": "Lo que dice Mario Molina en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.mario-molina.anima": {
+  "texto": "Los grandes problemas se resuelven paso a paso. ¡Da el siguiente!",
+  "descripcion": "Frase de ánimo de Mario Molina cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.jabir-ibn-hayyan.nombre": {
+  "texto": "Jabir ibn Hayyan",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.jabir-ibn-hayyan.vida": {
+  "texto": "hacia 721 - hacia 815",
+  "descripcion": "Años de nacimiento y muerte de Jabir ibn Hayyan"
+ },
+ "personaje.jabir-ibn-hayyan.pais": {
+  "texto": "Persia y Kufa (actual Irak)",
+  "descripcion": "De dónde era Jabir ibn Hayyan y adónde emigró, si lo hizo"
+ },
+ "personaje.jabir-ibn-hayyan.campo": {
+  "texto": "Alquimia y química práctica",
+  "descripcion": "Campo de trabajo de Jabir ibn Hayyan, en pocas palabras"
+ },
+ "personaje.jabir-ibn-hayyan.bio": {
+  "texto": "Es uno de los nombres más importantes de la alquimia árabe medieval; en la Europa latina se le conoció como «Geber». Las obras que llevan su nombre describen técnicas de laboratorio como la destilación, la cristalización y la sublimación, y clasifican las sustancias por sus propiedades. Los historiadores creen que muchos de esos textos los escribieron varios autores entre los siglos IX y X. Aun así, ayudaron a convertir la alquimia en una práctica experimental.",
+  "descripcion": "Biografía breve de Jabir ibn Hayyan para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.jabir-ibn-hayyan.logro": {
+  "texto": "Los textos que llevan su nombre defendieron la experimentación y describieron técnicas que todavía se usan en los laboratorios.",
+  "descripcion": "Logro principal de Jabir ibn Hayyan, en una frase"
+ },
+ "personaje.jabir-ibn-hayyan.dato.1": {
+  "texto": "La palabra «alambique» viene del árabe «al-anbiq», el aparato que se usaba para destilar.",
+  "descripcion": "Dato curioso y verídico sobre Jabir ibn Hayyan"
+ },
+ "personaje.jabir-ibn-hayyan.dato.2": {
+  "texto": "De la tradición alquímica árabe vienen también palabras como «álcali», «alcohol» y «elixir».",
+  "descripcion": "Dato curioso y verídico sobre Jabir ibn Hayyan"
+ },
+ "personaje.jabir-ibn-hayyan.dato.3": {
+  "texto": "No se conserva ningún retrato suyo de la época: todas sus imágenes, también esta, son imaginadas.",
+  "descripcion": "Dato curioso y verídico sobre Jabir ibn Hayyan"
+ },
+ "personaje.jabir-ibn-hayyan.saludo": {
+  "texto": "¡Salam! Soy Jabir. Enciende el fuego con cuidado: vamos a destilar.",
+  "descripcion": "Saludo de Jabir ibn Hayyan al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.jabir-ibn-hayyan.frase.1": {
+  "texto": "Al destilar calentamos una mezcla y recogemos el vapor que se enfría: así separamos sustancias que hierven a distinta temperatura.",
+  "descripcion": "Lo que dice Jabir ibn Hayyan en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.jabir-ibn-hayyan.frase.2": {
+  "texto": "Si disuelves una sal en agua caliente y la dejas enfriar despacio, aparecen cristales. ¡La paciencia también cristaliza!",
+  "descripcion": "Lo que dice Jabir ibn Hayyan en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.jabir-ibn-hayyan.frase.3": {
+  "texto": "Los alquimistas creíamos que los metales estaban hechos de azufre y mercurio. Nos equivocamos, pero de tanto probar inventamos técnicas muy útiles.",
+  "descripcion": "Lo que dice Jabir ibn Hayyan en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.jabir-ibn-hayyan.frase.4": {
+  "texto": "Lee mucho, pero luego compruébalo con tus propias manos: el laboratorio tiene la última palabra.",
+  "descripcion": "Lo que dice Jabir ibn Hayyan en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.jabir-ibn-hayyan.anima": {
+  "texto": "Cada intento fallido te enseña a ajustar el fuego. ¡Otra vez!",
+  "descripcion": "Frase de ánimo de Jabir ibn Hayyan cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.alice-ball.nombre": {
+  "texto": "Alice Ball",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.alice-ball.vida": {
+  "texto": "1892-1916",
+  "descripcion": "Años de nacimiento y muerte de Alice Ball"
+ },
+ "personaje.alice-ball.pais": {
+  "texto": "Estados Unidos",
+  "descripcion": "De dónde era Alice Ball y adónde emigró, si lo hizo"
+ },
+ "personaje.alice-ball.campo": {
+  "texto": "Química farmacéutica",
+  "descripcion": "Campo de trabajo de Alice Ball, en pocas palabras"
+ },
+ "personaje.alice-ball.bio": {
+  "texto": "Nació en Seattle y estudió química farmacéutica y farmacia. En 1915 fue la primera mujer y la primera persona afroamericana en obtener un máster en el College of Hawaii (hoy Universidad de Hawái), donde también fue la primera mujer que dio clases de química. Con 23 años encontró la manera de convertir el aceite del árbol de chaulmoogra en un medicamento inyectable contra la lepra. Murió muy joven, en 1916, y durante años otro químico se atribuyó su descubrimiento.",
+  "descripcion": "Biografía breve de Alice Ball para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.alice-ball.logro": {
+  "texto": "Creó el «método Ball», el mejor tratamiento contra la lepra hasta que llegaron los antibióticos en los años 40.",
+  "descripcion": "Logro principal de Alice Ball, en una frase"
+ },
+ "personaje.alice-ball.dato.1": {
+  "texto": "Antes de su método, el aceite de chaulmoogra era tan espeso que casi no se podía inyectar, y tomado por boca sentaba muy mal.",
+  "descripcion": "Dato curioso y verídico sobre Alice Ball"
+ },
+ "personaje.alice-ball.dato.2": {
+  "texto": "En el año 2000 la Universidad de Hawái puso una placa en su honor junto a un árbol de chaulmoogra del campus, y Hawái declaró el 29 de febrero «Día de Alice Ball».",
+  "descripcion": "Dato curioso y verídico sobre Alice Ball"
+ },
+ "personaje.alice-ball.dato.3": {
+  "texto": "Su abuelo, James Presley Ball, fue uno de los primeros fotógrafos afroamericanos famosos de Estados Unidos.",
+  "descripcion": "Dato curioso y verídico sobre Alice Ball"
+ },
+ "personaje.alice-ball.saludo": {
+  "texto": "¡Hola! Soy Alice. ¿Preparamos un medicamento con química?",
+  "descripcion": "Saludo de Alice Ball al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.alice-ball.frase.1": {
+  "texto": "Un aceite muy espeso no se puede inyectar. Transformé sus ácidos grasos en ésteres y así el cuerpo pudo absorberlo.",
+  "descripcion": "Lo que dice Alice Ball en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.alice-ball.frase.2": {
+  "texto": "La química no solo explica el mundo: también puede curar a las personas.",
+  "descripcion": "Lo que dice Alice Ball en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.alice-ball.frase.3": {
+  "texto": "Las plantas guardan medicinas en sus moléculas. Nuestro trabajo es sacarlas sin estropearlas.",
+  "descripcion": "Lo que dice Alice Ball en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.alice-ball.frase.4": {
+  "texto": "Apunta siempre tu trabajo con tu nombre y la fecha: la historia acaba poniendo a cada cual en su sitio.",
+  "descripcion": "Lo que dice Alice Ball en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.alice-ball.anima": {
+  "texto": "No importa tu edad: una buena idea puede ayudar a muchísima gente.",
+  "descripcion": "Frase de ánimo de Alice Ball cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.tu-youyou.nombre": {
+  "texto": "Tu Youyou",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.tu-youyou.vida": {
+  "texto": "Nacida en 1930",
+  "descripcion": "Años de nacimiento y muerte de Tu Youyou"
+ },
+ "personaje.tu-youyou.pais": {
+  "texto": "China",
+  "descripcion": "De dónde era Tu Youyou y adónde emigró, si lo hizo"
+ },
+ "personaje.tu-youyou.campo": {
+  "texto": "Química farmacéutica y medicina tradicional",
+  "descripcion": "Campo de trabajo de Tu Youyou, en pocas palabras"
+ },
+ "personaje.tu-youyou.bio": {
+  "texto": "Nació en Ningbo (China) y estudió farmacia en Pekín. En 1969 se unió a un proyecto para encontrar un tratamiento contra la malaria y revisó más de dos mil recetas de la medicina tradicional china. Un texto del siglo IV le dio la pista: extraer la planta Artemisia annua sin calentarla. Así obtuvo la artemisinina, que ha salvado millones de vidas, y en 2015 recibió el Premio Nobel de Fisiología o Medicina.",
+  "descripcion": "Biografía breve de Tu Youyou para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.tu-youyou.logro": {
+  "texto": "Descubrió la artemisinina, uno de los medicamentos más importantes contra la malaria.",
+  "descripcion": "Logro principal de Tu Youyou, en una frase"
+ },
+ "personaje.tu-youyou.dato.1": {
+  "texto": "Fue la primera mujer de China en ganar un Premio Nobel de ciencias.",
+  "descripcion": "Dato curioso y verídico sobre Tu Youyou"
+ },
+ "personaje.tu-youyou.dato.2": {
+  "texto": "Para comprobar que el extracto era seguro antes de dárselo a pacientes, ella y dos compañeros se ofrecieron a probarlo en sí mismos.",
+  "descripcion": "Dato curioso y verídico sobre Tu Youyou"
+ },
+ "personaje.tu-youyou.dato.3": {
+  "texto": "La pista clave la encontró en un libro de Ge Hong, un médico que vivió hace más de 1600 años.",
+  "descripcion": "Dato curioso y verídico sobre Tu Youyou"
+ },
+ "personaje.tu-youyou.saludo": {
+  "texto": "¡Hola! Soy Tu Youyou. ¿Investigamos qué esconde una planta?",
+  "descripcion": "Saludo de Tu Youyou al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.tu-youyou.frase.1": {
+  "texto": "Al hervir la planta, el principio activo se estropeaba. Con un disolvente a baja temperatura, ¡funcionó! La temperatura importa.",
+  "descripcion": "Lo que dice Tu Youyou en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.tu-youyou.frase.2": {
+  "texto": "Leer libros antiguos también es investigar: a veces la pista lleva siglos esperando.",
+  "descripcion": "Lo que dice Tu Youyou en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.tu-youyou.frase.3": {
+  "texto": "La artemisinina tiene un puente de dos átomos de oxígeno muy especial. Gracias a él ataca al parásito de la malaria.",
+  "descripcion": "Lo que dice Tu Youyou en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.tu-youyou.frase.4": {
+  "texto": "La muestra que funcionó fue la número 191. Las anteriores también sirvieron: nos enseñaron qué no hacer.",
+  "descripcion": "Lo que dice Tu Youyou en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.tu-youyou.anima": {
+  "texto": "Paso a paso, prueba a prueba. ¡El siguiente intento puede ser el bueno!",
+  "descripcion": "Frase de ánimo de Tu Youyou cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.andres-manuel-del-rio.nombre": {
+  "texto": "Andrés Manuel del Río",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.andres-manuel-del-rio.vida": {
+  "texto": "1764-1849",
+  "descripcion": "Años de nacimiento y muerte de Andrés Manuel del Río"
+ },
+ "personaje.andres-manuel-del-rio.pais": {
+  "texto": "España y México",
+  "descripcion": "De dónde era Andrés Manuel del Río y adónde emigró, si lo hizo"
+ },
+ "personaje.andres-manuel-del-rio.campo": {
+  "texto": "Mineralogía y química",
+  "descripcion": "Campo de trabajo de Andrés Manuel del Río, en pocas palabras"
+ },
+ "personaje.andres-manuel-del-rio.bio": {
+  "texto": "Nació en Madrid, estudió en Alcalá y en escuelas de minas de varios países de Europa, y en 1795 se fue a enseñar al Real Seminario de Minería de la Ciudad de México. En 1801, analizando un mineral llamado «plomo pardo» de Zimapán, descubrió un elemento nuevo. Un químico francés le convenció, por error, de que era cromo, y retiró su descubrimiento. En 1830 el sueco Nils Sefström volvió a encontrarlo y lo llamó vanadio.",
+  "descripcion": "Biografía breve de Andrés Manuel del Río para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.andres-manuel-del-rio.logro": {
+  "texto": "Descubrió el vanadio en 1801, casi treinta años antes de que recibiera ese nombre.",
+  "descripcion": "Logro principal de Andrés Manuel del Río, en una frase"
+ },
+ "personaje.andres-manuel-del-rio.dato.1": {
+  "texto": "Primero lo llamó «pancromio», porque sus sales tenían muchos colores, y después «eritronio», porque al calentarlas se volvían rojas.",
+  "descripcion": "Dato curioso y verídico sobre Andrés Manuel del Río"
+ },
+ "personaje.andres-manuel-del-rio.dato.2": {
+  "texto": "Escribió «Elementos de orictognosia», uno de los primeros libros de mineralogía publicados en América.",
+  "descripcion": "Dato curioso y verídico sobre Andrés Manuel del Río"
+ },
+ "personaje.andres-manuel-del-rio.dato.3": {
+  "texto": "El mineral en el que lo descubrió se llama hoy vanadinita y forma cristales hexagonales de color rojo.",
+  "descripcion": "Dato curioso y verídico sobre Andrés Manuel del Río"
+ },
+ "personaje.andres-manuel-del-rio.saludo": {
+  "texto": "¡Buenas! Soy Andrés Manuel. ¿Te gustan los cristales de colores?",
+  "descripcion": "Saludo de Andrés Manuel del Río al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.andres-manuel-del-rio.frase.1": {
+  "texto": "Las sales de mi elemento cambiaban de color como un arcoíris. ¡El vanadio forma compuestos de muchos colores!",
+  "descripcion": "Lo que dice Andrés Manuel del Río en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.andres-manuel-del-rio.frase.2": {
+  "texto": "Si has comprobado bien tu experimento, defiéndelo. Yo dudé… y otro le puso nombre.",
+  "descripcion": "Lo que dice Andrés Manuel del Río en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.andres-manuel-del-rio.frase.3": {
+  "texto": "Un mineral es como un cofre: dentro puede esconder elementos que nadie conoce todavía.",
+  "descripcion": "Lo que dice Andrés Manuel del Río en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.andres-manuel-del-rio.frase.4": {
+  "texto": "Hoy el vanadio hace más resistentes los aceros de las herramientas. ¡Mi elemento trabaja en tu caja de herramientas!",
+  "descripcion": "Lo que dice Andrés Manuel del Río en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.andres-manuel-del-rio.anima": {
+  "texto": "Confía en tus resultados y vuelve a comprobarlos. ¡Puedes hacerlo!",
+  "descripcion": "Frase de ánimo de Andrés Manuel del Río cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.rosalind-franklin.nombre": {
+  "texto": "Rosalind Franklin",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.rosalind-franklin.vida": {
+  "texto": "1920-1958",
+  "descripcion": "Años de nacimiento y muerte de Rosalind Franklin"
+ },
+ "personaje.rosalind-franklin.pais": {
+  "texto": "Reino Unido",
+  "descripcion": "De dónde era Rosalind Franklin y adónde emigró, si lo hizo"
+ },
+ "personaje.rosalind-franklin.campo": {
+  "texto": "Química física y cristalografía de rayos X",
+  "descripcion": "Campo de trabajo de Rosalind Franklin, en pocas palabras"
+ },
+ "personaje.rosalind-franklin.bio": {
+  "texto": "Nació en Londres y se doctoró en Cambridge estudiando la estructura del carbón. Era experta en difracción de rayos X, una técnica que permite deducir cómo se ordenan los átomos. En 1952, en el King's College de Londres, ella y su estudiante Raymond Gosling obtuvieron la «Fotografía 51», clave para descubrir la doble hélice del ADN. Después estudió la estructura de virus, como el del mosaico del tabaco.",
+  "descripcion": "Biografía breve de Rosalind Franklin para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.rosalind-franklin.logro": {
+  "texto": "Sus imágenes de rayos X del ADN fueron decisivas para descubrir su estructura de doble hélice.",
+  "descripcion": "Logro principal de Rosalind Franklin, en una frase"
+ },
+ "personaje.rosalind-franklin.dato.1": {
+  "texto": "James Watson y Francis Crick vieron la Fotografía 51 sin que ella lo supiera, y les ayudó a construir su modelo del ADN.",
+  "descripcion": "Dato curioso y verídico sobre Rosalind Franklin"
+ },
+ "personaje.rosalind-franklin.dato.2": {
+  "texto": "Sus estudios sobre el carbón ayudaron a entender por qué unos carbones sirven mejor que otros, por ejemplo para filtros como los de las máscaras de gas.",
+  "descripcion": "Dato curioso y verídico sobre Rosalind Franklin"
+ },
+ "personaje.rosalind-franklin.dato.3": {
+  "texto": "El vehículo que la Agencia Espacial Europea prepara para buscar rastros de vida en Marte se llama «Rosalind Franklin».",
+  "descripcion": "Dato curioso y verídico sobre Rosalind Franklin"
+ },
+ "personaje.rosalind-franklin.saludo": {
+  "texto": "¡Hola! Soy Rosalind. ¿Le sacamos una foto a los átomos?",
+  "descripcion": "Saludo de Rosalind Franklin al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.rosalind-franklin.frase.1": {
+  "texto": "Los rayos X rebotan en los átomos de un cristal y dibujan un patrón. Con matemáticas, ese patrón te dice dónde está cada átomo.",
+  "descripcion": "Lo que dice Rosalind Franklin en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.rosalind-franklin.frase.2": {
+  "texto": "La forma de X en la Fotografía 51 indicaba una hélice. ¡Una sola imagen puede contar muchísimo!",
+  "descripcion": "Lo que dice Rosalind Franklin en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.rosalind-franklin.frase.3": {
+  "texto": "Para conseguir una buena imagen, la muestra pasaba horas y horas bajo los rayos X. La ciencia de calidad lleva su tiempo.",
+  "descripcion": "Lo que dice Rosalind Franklin en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.rosalind-franklin.frase.4": {
+  "texto": "El ADN, el carbón, los virus: todo tiene una estructura. Si conoces la forma, entiendes cómo funciona.",
+  "descripcion": "Lo que dice Rosalind Franklin en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.rosalind-franklin.anima": {
+  "texto": "Mira los datos con calma y con cuidado: la respuesta está ahí.",
+  "descripcion": "Frase de ánimo de Rosalind Franklin cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.ahmed-zewail.nombre": {
+  "texto": "Ahmed Zewail",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.ahmed-zewail.vida": {
+  "texto": "1946-2016",
+  "descripcion": "Años de nacimiento y muerte de Ahmed Zewail"
+ },
+ "personaje.ahmed-zewail.pais": {
+  "texto": "Egipto y Estados Unidos",
+  "descripcion": "De dónde era Ahmed Zewail y adónde emigró, si lo hizo"
+ },
+ "personaje.ahmed-zewail.campo": {
+  "texto": "Química física: femtoquímica",
+  "descripcion": "Campo de trabajo de Ahmed Zewail, en pocas palabras"
+ },
+ "personaje.ahmed-zewail.bio": {
+  "texto": "Nació en Damanhur (Egipto), estudió en la Universidad de Alejandría y se doctoró en Estados Unidos. En el Instituto de Tecnología de California (Caltech) usó destellos de láser ultrarrápidos para «fotografiar» las reacciones químicas mientras ocurren. Así nació la femtoquímica, que estudia lo que pasa en femtosegundos, milbillonésimas de segundo. En 1999 recibió él solo el Premio Nobel de Química.",
+  "descripcion": "Biografía breve de Ahmed Zewail para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.ahmed-zewail.logro": {
+  "texto": "Consiguió observar en tiempo real cómo se rompen y se forman los enlaces químicos.",
+  "descripcion": "Logro principal de Ahmed Zewail, en una frase"
+ },
+ "personaje.ahmed-zewail.dato.1": {
+  "texto": "Un femtosegundo es a un segundo lo que un segundo es a unos 32 millones de años.",
+  "descripcion": "Dato curioso y verídico sobre Ahmed Zewail"
+ },
+ "personaje.ahmed-zewail.dato.2": {
+  "texto": "Fue la primera persona de Egipto en ganar un Premio Nobel de ciencias.",
+  "descripcion": "Dato curioso y verídico sobre Ahmed Zewail"
+ },
+ "personaje.ahmed-zewail.dato.3": {
+  "texto": "Sus primeros experimentos siguieron cómo se separan los átomos de moléculas sencillas como el cianuro de yodo (ICN) y el yoduro de sodio (NaI).",
+  "descripcion": "Dato curioso y verídico sobre Ahmed Zewail"
+ },
+ "personaje.ahmed-zewail.saludo": {
+  "texto": "¡Hola! Soy Ahmed. Prepárate: vamos a ver una reacción a cámara superlenta.",
+  "descripcion": "Saludo de Ahmed Zewail al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.ahmed-zewail.frase.1": {
+  "texto": "Un enlace químico se rompe en unos pocos femtosegundos. Para verlo necesitas un «flash» todavía más rápido.",
+  "descripcion": "Lo que dice Ahmed Zewail en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.ahmed-zewail.frase.2": {
+  "texto": "Con dos destellos de láser, uno que empieza la reacción y otro que la fotografía, puedes hacer una película de las moléculas.",
+  "descripcion": "Lo que dice Ahmed Zewail en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.ahmed-zewail.frase.3": {
+  "texto": "Los átomos de una molécula vibran sin parar, como si estuvieran unidos por muelles. ¡Nada está quieto, ni siquiera dentro de ti!",
+  "descripcion": "Lo que dice Ahmed Zewail en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.ahmed-zewail.frase.4": {
+  "texto": "Empecé en un laboratorio de Alejandría y llegué a Caltech. La curiosidad no entiende de fronteras.",
+  "descripcion": "Lo que dice Ahmed Zewail en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.ahmed-zewail.anima": {
+  "texto": "Las grandes cosas pasan en pequeños instantes. ¡Aprovecha este!",
+  "descripcion": "Frase de ánimo de Ahmed Zewail cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.niels-bohr.nombre": {
+  "texto": "Niels Bohr",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.niels-bohr.vida": {
+  "texto": "1885-1962",
+  "descripcion": "Años de nacimiento y muerte de Niels Bohr"
+ },
+ "personaje.niels-bohr.pais": {
+  "texto": "Dinamarca",
+  "descripcion": "De dónde era Niels Bohr y adónde emigró, si lo hizo"
+ },
+ "personaje.niels-bohr.campo": {
+  "texto": "Física atómica y cuántica",
+  "descripcion": "Campo de trabajo de Niels Bohr, en pocas palabras"
+ },
+ "personaje.niels-bohr.bio": {
+  "texto": "Nació en Copenhague. En 1913 propuso un modelo de átomo en el que los electrones solo pueden estar en ciertas órbitas y, al saltar de una a otra, absorben o emiten luz de colores concretos. Así explicó el espectro del hidrógeno. En 1922 recibió el Premio Nobel de Física y su instituto de Copenhague se convirtió en el centro de la nueva física cuántica. En 1943 tuvo que huir en barca a Suecia para escapar de los nazis.",
+  "descripcion": "Biografía breve de Niels Bohr para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.niels-bohr.logro": {
+  "texto": "Su modelo atómico explicó por qué cada elemento emite luz de unos colores concretos.",
+  "descripcion": "Logro principal de Niels Bohr, en una frase"
+ },
+ "personaje.niels-bohr.dato.1": {
+  "texto": "Fue portero de fútbol en el club Akademisk Boldklub; su hermano Harald ganó la medalla de plata olímpica con Dinamarca en 1908.",
+  "descripcion": "Dato curioso y verídico sobre Niels Bohr"
+ },
+ "personaje.niels-bohr.dato.2": {
+  "texto": "En su instituto, el químico George de Hevesy disolvió en agua regia las medallas Nobel de dos colegas para esconderlas de los nazis. Después de la guerra se recuperó el oro y se volvieron a acuñar.",
+  "descripcion": "Dato curioso y verídico sobre Niels Bohr"
+ },
+ "personaje.niels-bohr.dato.3": {
+  "texto": "El elemento 107 se llama bohrio (Bh) en su honor, y el hafnio (Hf) se descubrió en su instituto: su nombre viene de Hafnia, el nombre en latín de Copenhague.",
+  "descripcion": "Dato curioso y verídico sobre Niels Bohr"
+ },
+ "personaje.niels-bohr.saludo": {
+  "texto": "Hej! Soy Niels. ¿Saltamos de órbita en órbita?",
+  "descripcion": "Saludo de Niels Bohr al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.niels-bohr.frase.1": {
+  "texto": "En mi modelo, un electrón no puede estar en cualquier sitio: solo en ciertos niveles de energía, como los peldaños de una escalera.",
+  "descripcion": "Lo que dice Niels Bohr en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.niels-bohr.frase.2": {
+  "texto": "Cuando un electrón baja de nivel, suelta un poco de luz. ¡Por eso cada elemento tiene sus propios colores!",
+  "descripcion": "Lo que dice Niels Bohr en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.niels-bohr.frase.3": {
+  "texto": "Mi modelo no era perfecto y la mecánica cuántica lo mejoró después. Así avanza la ciencia: de modelo en modelo.",
+  "descripcion": "Lo que dice Niels Bohr en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.niels-bohr.frase.4": {
+  "texto": "Las nubes de electrones de esta app son la versión moderna de mis órbitas. ¡Compáralas!",
+  "descripcion": "Lo que dice Niels Bohr en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.niels-bohr.anima": {
+  "texto": "Un salto pequeño también te lleva a otro nivel. ¡Adelante!",
+  "descripcion": "Frase de ánimo de Niels Bohr cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.lise-meitner.nombre": {
+  "texto": "Lise Meitner",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.lise-meitner.vida": {
+  "texto": "1878-1968",
+  "descripcion": "Años de nacimiento y muerte de Lise Meitner"
+ },
+ "personaje.lise-meitner.pais": {
+  "texto": "Austria, Alemania, Suecia y Reino Unido",
+  "descripcion": "De dónde era Lise Meitner y adónde emigró, si lo hizo"
+ },
+ "personaje.lise-meitner.campo": {
+  "texto": "Física nuclear",
+  "descripcion": "Campo de trabajo de Lise Meitner, en pocas palabras"
+ },
+ "personaje.lise-meitner.bio": {
+  "texto": "Nació en Viena y fue la segunda mujer que se doctoró en física en la Universidad de Viena. Trabajó unos treinta años en Berlín con el químico Otto Hahn. En 1938, por su origen judío, tuvo que huir de la Alemania nazi a Suecia. Desde allí, junto a su sobrino Otto Frisch, explicó que el núcleo de uranio se había partido en dos y le dieron nombre: fisión nuclear.",
+  "descripcion": "Biografía breve de Lise Meitner para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.lise-meitner.logro": {
+  "texto": "Explicó la fisión nuclear: cómo un núcleo de uranio se divide en dos y libera muchísima energía.",
+  "descripcion": "Logro principal de Lise Meitner, en una frase"
+ },
+ "personaje.lise-meitner.dato.1": {
+  "texto": "El Premio Nobel de Química de 1944 por la fisión fue solo para Otto Hahn, aunque a ella la propusieron para el Nobel casi 50 veces a lo largo de su vida.",
+  "descripcion": "Dato curioso y verídico sobre Lise Meitner"
+ },
+ "personaje.lise-meitner.dato.2": {
+  "texto": "El elemento 109, el meitnerio (Mt), lleva su nombre: es uno de los pocos elementos dedicados a una mujer.",
+  "descripcion": "Dato curioso y verídico sobre Lise Meitner"
+ },
+ "personaje.lise-meitner.dato.3": {
+  "texto": "La invitaron a trabajar en la bomba atómica y se negó.",
+  "descripcion": "Dato curioso y verídico sobre Lise Meitner"
+ },
+ "personaje.lise-meitner.saludo": {
+  "texto": "¡Hola! Soy Lise. ¿Sabes qué pasa si partes un núcleo?",
+  "descripcion": "Saludo de Lise Meitner al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.lise-meitner.frase.1": {
+  "texto": "Al partirse un núcleo de uranio aparecen bario y kriptón… y la masa que «falta» se convierte en energía, como dice E = mc².",
+  "descripcion": "Lo que dice Lise Meitner en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.lise-meitner.frase.2": {
+  "texto": "Otto Frisch y yo hicimos los cálculos sentados en un tronco, durante un paseo por la nieve en Navidad. ¡Las ideas llegan en cualquier sitio!",
+  "descripcion": "Lo que dice Lise Meitner en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.lise-meitner.frase.3": {
+  "texto": "En 1918 Otto Hahn y yo anunciamos un elemento nuevo: el protactinio.",
+  "descripcion": "Lo que dice Lise Meitner en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.lise-meitner.frase.4": {
+  "texto": "La física sirve para entender el mundo. Lo que hagamos con ella depende de nosotros.",
+  "descripcion": "Lo que dice Lise Meitner en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.lise-meitner.anima": {
+  "texto": "Aunque las cosas se pongan difíciles, no dejes de buscar la explicación.",
+  "descripcion": "Frase de ánimo de Lise Meitner cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.kathleen-lonsdale.nombre": {
+  "texto": "Kathleen Lonsdale",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.kathleen-lonsdale.vida": {
+  "texto": "1903-1971",
+  "descripcion": "Años de nacimiento y muerte de Kathleen Lonsdale"
+ },
+ "personaje.kathleen-lonsdale.pais": {
+  "texto": "Irlanda y Reino Unido",
+  "descripcion": "De dónde era Kathleen Lonsdale y adónde emigró, si lo hizo"
+ },
+ "personaje.kathleen-lonsdale.campo": {
+  "texto": "Cristalografía de rayos X",
+  "descripcion": "Campo de trabajo de Kathleen Lonsdale, en pocas palabras"
+ },
+ "personaje.kathleen-lonsdale.bio": {
+  "texto": "Nació en Newbridge (Irlanda) y se crio en Inglaterra. En 1929 demostró con rayos X que el anillo de benceno es plano y hexagonal, algo que los químicos se preguntaban desde hacía décadas. En 1945 fue una de las dos primeras mujeres elegidas miembro de la Royal Society, la academia científica británica. También fue la primera mujer catedrática del University College de Londres.",
+  "descripcion": "Biografía breve de Kathleen Lonsdale para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.kathleen-lonsdale.logro": {
+  "texto": "Demostró que la molécula de benceno es un hexágono plano.",
+  "descripcion": "Logro principal de Kathleen Lonsdale, en una frase"
+ },
+ "personaje.kathleen-lonsdale.dato.1": {
+  "texto": "Un tipo raro de diamante hexagonal que se encuentra en meteoritos se llama lonsdaleíta en su honor.",
+  "descripcion": "Dato curioso y verídico sobre Kathleen Lonsdale"
+ },
+ "personaje.kathleen-lonsdale.dato.2": {
+  "texto": "Era cuáquera y pacifista: en 1943 pasó un mes en la cárcel por negarse a inscribirse para tareas de guerra, y después luchó por mejorar las prisiones.",
+  "descripcion": "Dato curioso y verídico sobre Kathleen Lonsdale"
+ },
+ "personaje.kathleen-lonsdale.dato.3": {
+  "texto": "También estudió con rayos X las piedras del riñón para entender cómo se forman.",
+  "descripcion": "Dato curioso y verídico sobre Kathleen Lonsdale"
+ },
+ "personaje.kathleen-lonsdale.saludo": {
+  "texto": "¡Hola! Soy Kathleen. ¿Miramos dentro de un cristal?",
+  "descripcion": "Saludo de Kathleen Lonsdale al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.kathleen-lonsdale.frase.1": {
+  "texto": "El benceno tiene seis átomos de carbono que forman un hexágono plano, como una celda de un panal.",
+  "descripcion": "Lo que dice Kathleen Lonsdale en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.kathleen-lonsdale.frase.2": {
+  "texto": "El diamante y el grafito están hechos solo de carbono. Lo que cambia es cómo se ordenan sus átomos.",
+  "descripcion": "Lo que dice Kathleen Lonsdale en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.kathleen-lonsdale.frase.3": {
+  "texto": "Hice muchísimos cálculos a mano para interpretar mis imágenes de rayos X. ¡Las matemáticas también son una herramienta de laboratorio!",
+  "descripcion": "Lo que dice Kathleen Lonsdale en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.kathleen-lonsdale.frase.4": {
+  "texto": "Un cristal es un orden que se repite y se repite. Si entiendes una celdita, entiendes todo el cristal.",
+  "descripcion": "Lo que dice Kathleen Lonsdale en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.kathleen-lonsdale.anima": {
+  "texto": "La paciencia ordena las ideas como los átomos en un cristal. ¡Tú puedes!",
+  "descripcion": "Frase de ánimo de Kathleen Lonsdale cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.asima-chatterjee.nombre": {
+  "texto": "Asima Chatterjee",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.asima-chatterjee.vida": {
+  "texto": "1917-2006",
+  "descripcion": "Años de nacimiento y muerte de Asima Chatterjee"
+ },
+ "personaje.asima-chatterjee.pais": {
+  "texto": "India",
+  "descripcion": "De dónde era Asima Chatterjee y adónde emigró, si lo hizo"
+ },
+ "personaje.asima-chatterjee.campo": {
+  "texto": "Química orgánica de productos naturales",
+  "descripcion": "Campo de trabajo de Asima Chatterjee, en pocas palabras"
+ },
+ "personaje.asima-chatterjee.bio": {
+  "texto": "Nació en Calcuta (hoy Kolkata). En 1944 fue la primera mujer en obtener el título de Doctora en Ciencias por una universidad india, la de Calcuta. Estudió las moléculas de plantas medicinales de la India, sobre todo los alcaloides, y ayudó a desarrollar medicamentos contra la epilepsia y la malaria. En 1975 fue la primera mujer que presidió el Congreso Científico de la India.",
+  "descripcion": "Biografía breve de Asima Chatterjee para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.asima-chatterjee.logro": {
+  "texto": "Investigó los alcaloides de las plantas y ayudó a crear medicamentos contra la epilepsia y la malaria.",
+  "descripcion": "Logro principal de Asima Chatterjee, en una frase"
+ },
+ "personaje.asima-chatterjee.dato.1": {
+  "texto": "Estudió los alcaloides de la vinca de Madagascar, una planta de la que hoy se obtienen medicamentos contra el cáncer.",
+  "descripcion": "Dato curioso y verídico sobre Asima Chatterjee"
+ },
+ "personaje.asima-chatterjee.dato.2": {
+  "texto": "Su medicamento contra la epilepsia, Ayush-56, se obtiene de una planta acuática, Marsilea minuta.",
+  "descripcion": "Dato curioso y verídico sobre Asima Chatterjee"
+ },
+ "personaje.asima-chatterjee.dato.3": {
+  "texto": "Publicó cerca de cuatrocientos artículos científicos.",
+  "descripcion": "Dato curioso y verídico sobre Asima Chatterjee"
+ },
+ "personaje.asima-chatterjee.saludo": {
+  "texto": "¡Namaste! Soy Asima. ¿Descubrimos qué moléculas hay en una flor?",
+  "descripcion": "Saludo de Asima Chatterjee al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.asima-chatterjee.frase.1": {
+  "texto": "Los alcaloides son moléculas de las plantas que contienen nitrógeno. Muchas actúan sobre nuestro cuerpo: ¡por eso pueden ser medicinas!",
+  "descripcion": "Lo que dice Asima Chatterjee en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.asima-chatterjee.frase.2": {
+  "texto": "Para estudiar una molécula primero hay que separarla de todas las demás. Es como encontrar a tu amigo en un estadio lleno.",
+  "descripcion": "Lo que dice Asima Chatterjee en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.asima-chatterjee.frase.3": {
+  "texto": "La India tiene una enorme tradición de plantas medicinales. La química permite comprobar cuáles funcionan de verdad.",
+  "descripcion": "Lo que dice Asima Chatterjee en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.asima-chatterjee.frase.4": {
+  "texto": "Fui la primera mujer en muchos sitios. Lo importante es que después llegaron muchas más.",
+  "descripcion": "Lo que dice Asima Chatterjee en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.asima-chatterjee.anima": {
+  "texto": "Ser la primera persona en algo da vértigo, pero abre camino. ¡Atrévete!",
+  "descripcion": "Frase de ánimo de Asima Chatterjee cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.shuji-nakamura.nombre": {
+  "texto": "Shuji Nakamura",
+  "descripcion": "Nombre de la persona (no se traduce, salvo la transliteración habitual en cada idioma)"
+ },
+ "personaje.shuji-nakamura.vida": {
+  "texto": "Nacido en 1954",
+  "descripcion": "Años de nacimiento y muerte de Shuji Nakamura"
+ },
+ "personaje.shuji-nakamura.pais": {
+  "texto": "Japón y Estados Unidos",
+  "descripcion": "De dónde era Shuji Nakamura y adónde emigró, si lo hizo"
+ },
+ "personaje.shuji-nakamura.campo": {
+  "texto": "Física e ingeniería de semiconductores",
+  "descripcion": "Campo de trabajo de Shuji Nakamura, en pocas palabras"
+ },
+ "personaje.shuji-nakamura.bio": {
+  "texto": "Nació en Ehime (Japón) y trabajaba en Nichia, una pequeña empresa química. Casi nadie creía que se pudiera fabricar un LED azul brillante con nitruro de galio, pero él lo consiguió a principios de los años 90 mejorando sus propias máquinas. Con el LED azul se pudieron hacer LED blancos, que gastan muchísima menos energía que las bombillas antiguas. En 2014 compartió el Premio Nobel de Física con Isamu Akasaki e Hiroshi Amano.",
+  "descripcion": "Biografía breve de Shuji Nakamura para alumnado de ESO (3-4 frases)"
+ },
+ "personaje.shuji-nakamura.logro": {
+  "texto": "Desarrolló el LED azul brillante, que hizo posible la iluminación LED blanca y eficiente.",
+  "descripcion": "Logro principal de Shuji Nakamura, en una frase"
+ },
+ "personaje.shuji-nakamura.dato.1": {
+  "texto": "Al principio su empresa le pagó por el invento una gratificación de unos 20 000 yenes, menos de 200 euros. Años después la llevó a juicio y llegaron a un acuerdo millonario.",
+  "descripcion": "Dato curioso y verídico sobre Shuji Nakamura"
+ },
+ "personaje.shuji-nakamura.dato.2": {
+  "texto": "Modificó él mismo un reactor de crecimiento de cristales para conseguir capas de nitruro de galio de gran calidad.",
+  "descripcion": "Dato curioso y verídico sobre Shuji Nakamura"
+ },
+ "personaje.shuji-nakamura.dato.3": {
+  "texto": "Hoy investiga y da clase en la Universidad de California en Santa Bárbara.",
+  "descripcion": "Dato curioso y verídico sobre Shuji Nakamura"
+ },
+ "personaje.shuji-nakamura.saludo": {
+  "texto": "Konnichiwa! Soy Shuji. ¿Encendemos una luz azul?",
+  "descripcion": "Saludo de Shuji Nakamura al aparecer en la app; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.shuji-nakamura.frase.1": {
+  "texto": "El color de un LED depende del material: con nitruro de galio e indio sale azul. ¡Química convertida en luz!",
+  "descripcion": "Lo que dice Shuji Nakamura en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.shuji-nakamura.frase.2": {
+  "texto": "Un LED blanco suele ser un LED azul con una capa que convierte parte de la luz en amarilla. Juntas, se ven blancas.",
+  "descripcion": "Lo que dice Shuji Nakamura en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.shuji-nakamura.frase.3": {
+  "texto": "Casi todo el mundo decía que el nitruro de galio no iba a funcionar. A veces hay que probar justo lo que nadie prueba.",
+  "descripcion": "Lo que dice Shuji Nakamura en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.shuji-nakamura.frase.4": {
+  "texto": "Arreglé y modifiqué mis máquinas cientos de veces. Saber reparar tus herramientas también es investigar.",
+  "descripcion": "Lo que dice Shuji Nakamura en la app sobre su trabajo; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.shuji-nakamura.anima": {
+  "texto": "Si nadie cree en tu idea, demuéstrala. ¡Enciende tu luz!",
+  "descripcion": "Frase de ánimo de Shuji Nakamura cuando el alumno falla o se atasca; frase escrita para la app con su voz; no es una cita real"
+ },
+ "personaje.avatar.aria": {
+  "texto": "Ilustración de {nombre}",
+  "descripcion": "Texto alternativo del avatar de un personaje; {nombre} es su nombre"
+ },
+ "personaje.ficha.campo": {
+  "texto": "Campo",
+  "descripcion": "Etiqueta en la ficha de un personaje: su campo de trabajo"
+ },
+ "personaje.ficha.pais": {
+  "texto": "De",
+  "descripcion": "Etiqueta en la ficha: de dónde era (seguida del país)"
+ },
+ "personaje.ficha.logro": {
+  "texto": "Su gran logro",
+  "descripcion": "Título del logro principal en la ficha de un personaje"
+ },
+ "personaje.ficha.datos": {
+  "texto": "¿Sabías que…?",
+  "descripcion": "Título de los datos curiosos en la ficha de un personaje"
+ },
+ "personaje.ficha.elementos": {
+  "texto": "Elementos relacionados",
+  "descripcion": "Título de la lista de elementos químicos relacionados con un personaje"
+ },
+ "personaje.ficha.escuchar": {
+  "texto": "Otra frase",
+  "descripcion": "Botón para que el personaje diga otra frase"
+ },
+ "gato.nombre": {
+  "texto": "Schrödingato",
+  "descripcion": "Nombre de la mascota: juego de palabras entre Schrödinger y «gato». En otro idioma, adáptalo (en inglés, p. ej., «Schrödicat»)"
+ },
+ "gato.apodo": {
+  "texto": "Schrödi",
+  "descripcion": "Nombre corto y cariñoso de la mascota"
+ },
+ "gato.presentacion": {
+  "texto": "Soy Schrödingato, un gato cuántico. Vivo en esta caja y, mientras nadie me mira, puedo estar en varios sitios a la vez.",
+  "descripcion": "Presentación de la mascota la primera vez que aparece"
+ },
+ "gato.aria": {
+  "texto": "Schrödingato, el gato cuántico. Tócalo para observarlo.",
+  "descripcion": "Etiqueta accesible del botón de la mascota (lector de pantalla)"
+ },
+ "gato.frase.saludo.1": {
+  "texto": "¡Hola! Has abierto la caja y… ¡estoy vivo! Y con ganas de química.",
+  "descripcion": "Saludo de la mascota al abrir la app. Humor de física y química para adolescentes"
+ },
+ "gato.frase.saludo.2": {
+  "texto": "¡Miau! Te doy la bienvenida al laboratorio. Yo pongo la curiosidad; tú, el cerebro.",
+  "descripcion": "Saludo de la mascota al abrir la app. Humor de física y química para adolescentes"
+ },
+ "gato.frase.saludo.3": {
+  "texto": "Estaba en superposición de «dormido» y «despierto» hasta que has llegado. ¡Ahora, despierto del todo!",
+  "descripcion": "Saludo de la mascota al abrir la app. Humor de física y química para adolescentes"
+ },
+ "gato.frase.saludo.4": {
+  "texto": "¿Lista esa mente? Hoy toca descubrir átomos.",
+  "descripcion": "Saludo de la mascota al abrir la app. Humor de física y química para adolescentes"
+ },
+ "gato.frase.saludo.5": {
+  "texto": "¡Hola, hola! Mis electrones están emocionadísimos de verte.",
+  "descripcion": "Saludo de la mascota al abrir la app. Humor de física y química para adolescentes"
+ },
+ "gato.frase.saludo.6": {
+  "texto": "Ya estás aquí: la probabilidad de pasarlo bien acaba de subir al 100 %.",
+  "descripcion": "Saludo de la mascota al abrir la app. Humor de física y química para adolescentes"
+ },
+ "gato.frase.inactivo.1": {
+  "texto": "¿Sigues ahí? Desde dentro de la caja no lo tengo claro…",
+  "descripcion": "Lo que dice la mascota cuando el alumno lleva un rato sin hacer nada. Humor de física y química para adolescentes"
+ },
+ "gato.frase.inactivo.2": {
+  "texto": "Estoy midiendo tu actividad y me sale… cero coma cero.",
+  "descripcion": "Lo que dice la mascota cuando el alumno lleva un rato sin hacer nada. Humor de física y química para adolescentes"
+ },
+ "gato.frase.inactivo.3": {
+  "texto": "Mientras piensas, yo voy contando electrones. Llevo… muchos.",
+  "descripcion": "Lo que dice la mascota cuando el alumno lleva un rato sin hacer nada. Humor de física y química para adolescentes"
+ },
+ "gato.frase.inactivo.4": {
+  "texto": "Qué tranquilidad. Ni que fueras un gas noble.",
+  "descripcion": "Lo que dice la mascota cuando el alumno lleva un rato sin hacer nada. Humor de física y química para adolescentes"
+ },
+ "gato.frase.inactivo.5": {
+  "texto": "Tómate tu tiempo. Yo aprovecho para lamerme la función de onda.",
+  "descripcion": "Lo que dice la mascota cuando el alumno lleva un rato sin hacer nada. Humor de física y química para adolescentes"
+ },
+ "gato.frase.acierto.1": {
+  "texto": "¡Correcto! Eso merece un ronroneo de alta energía.",
+  "descripcion": "Reacción de la mascota cuando el alumno acierta. Humor de física y química para adolescentes"
+ },
+ "gato.frase.acierto.2": {
+  "texto": "¡Bien! Tu neurona acaba de saltar a un nivel de energía superior.",
+  "descripcion": "Reacción de la mascota cuando el alumno acierta. Humor de física y química para adolescentes"
+ },
+ "gato.frase.acierto.3": {
+  "texto": "¡Exacto! Ni Bohr lo habría explicado mejor.",
+  "descripcion": "Reacción de la mascota cuando el alumno acierta. Humor de física y química para adolescentes"
+ },
+ "gato.frase.acierto.4": {
+  "texto": "¡Acierto! Mis bigotes vibran a la frecuencia de la alegría.",
+  "descripcion": "Reacción de la mascota cuando el alumno acierta. Humor de física y química para adolescentes"
+ },
+ "gato.frase.acierto.5": {
+  "texto": "¡Toma ya! Más rápido que un electrón cambiando de órbita.",
+  "descripcion": "Reacción de la mascota cuando el alumno acierta. Humor de física y química para adolescentes"
+ },
+ "gato.frase.acierto.6": {
+  "texto": "¡Perfecto! Reacción completa y sin residuos.",
+  "descripcion": "Reacción de la mascota cuando el alumno acierta. Humor de física y química para adolescentes"
+ },
+ "gato.frase.fallo.1": {
+  "texto": "Casi. Hasta los mejores experimentos fallan a la primera.",
+  "descripcion": "Reacción de la mascota cuando el alumno falla (siempre amable, nunca humillante). Humor de física y química para adolescentes"
+ },
+ "gato.frase.fallo.2": {
+  "texto": "No pasa nada: equivocarse también es recoger datos.",
+  "descripcion": "Reacción de la mascota cuando el alumno falla (siempre amable, nunca humillante). Humor de física y química para adolescentes"
+ },
+ "gato.frase.fallo.3": {
+  "texto": "Uy, ese resultado ha colapsado hacia el lado equivocado. ¡Vuelve a medir!",
+  "descripcion": "Reacción de la mascota cuando el alumno falla (siempre amable, nunca humillante). Humor de física y química para adolescentes"
+ },
+ "gato.frase.fallo.4": {
+  "texto": "Mendeléiev también cambió de sitio muchos elementos antes de acertar.",
+  "descripcion": "Reacción de la mascota cuando el alumno falla (siempre amable, nunca humillante). Humor de física y química para adolescentes"
+ },
+ "gato.frase.fallo.5": {
+  "texto": "Tranqui: en el laboratorio, un error bien entendido vale por dos aciertos.",
+  "descripcion": "Reacción de la mascota cuando el alumno falla (siempre amable, nunca humillante). Humor de física y química para adolescentes"
+ },
+ "gato.frase.fallo.6": {
+  "texto": "Esta vez no, pero tu cerebro ya está formando enlaces nuevos.",
+  "descripcion": "Reacción de la mascota cuando el alumno falla (siempre amable, nunca humillante). Humor de física y química para adolescentes"
+ },
+ "gato.frase.racha.1": {
+  "texto": "¡Racha encendida! Brillas más que el magnesio ardiendo.",
+  "descripcion": "Lo que dice la mascota cuando el alumno mantiene una racha. Humor de física y química para adolescentes"
+ },
+ "gato.frase.racha.2": {
+  "texto": "¡Otra más! Esto ya es una reacción en cadena.",
+  "descripcion": "Lo que dice la mascota cuando el alumno mantiene una racha. Humor de física y química para adolescentes"
+ },
+ "gato.frase.racha.3": {
+  "texto": "Tu racha es tan estable como un gas noble. ¡No la rompas!",
+  "descripcion": "Lo que dice la mascota cuando el alumno mantiene una racha. Humor de física y química para adolescentes"
+ },
+ "gato.frase.racha.4": {
+  "texto": "Tu constancia tiene una vida media larguísima. ¡Sigue así!",
+  "descripcion": "Lo que dice la mascota cuando el alumno mantiene una racha. Humor de física y química para adolescentes"
+ },
+ "gato.frase.racha.5": {
+  "texto": "¡Combo! Si sigues así, tendré que salir de la caja a aplaudir.",
+  "descripcion": "Lo que dice la mascota cuando el alumno mantiene una racha. Humor de física y química para adolescentes"
+ },
+ "gato.frase.reaccion.1": {
+  "texto": "¡Eh! Me has observado y he colapsado. Gracias, supongo.",
+  "descripcion": "Lo que dice la mascota cuando el alumno la toca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.reaccion.2": {
+  "texto": "¡Miau! Cuidado, que en esta caja hay un 50 % de gato y un 50 % de cosquillas.",
+  "descripcion": "Lo que dice la mascota cuando el alumno la toca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.reaccion.3": {
+  "texto": "Soy el único gato que puede estar en dos sitios a la vez. Bueno… casi siempre.",
+  "descripcion": "Lo que dice la mascota cuando el alumno la toca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.reaccion.4": {
+  "texto": "Si me sigues tocando, voy a acabar cargado de electricidad estática.",
+  "descripcion": "Lo que dice la mascota cuando el alumno la toca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.reaccion.5": {
+  "texto": "¡Ronroneo cuántico activado! Prrr… prrr… prrr…",
+  "descripcion": "Lo que dice la mascota cuando el alumno la toca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.reaccion.6": {
+  "texto": "Puedes acariciarme, pero saber exactamente dónde estoy es otro tema. Pregúntale a Heisenberg.",
+  "descripcion": "Lo que dice la mascota cuando el alumno la toca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.descubre.1": {
+  "texto": "¡Elemento nuevo en tu colección! Tu tabla periódica va creciendo.",
+  "descripcion": "Lo que dice la mascota cuando el alumno descubre un elemento o molécula nuevos. Humor de física y química para adolescentes"
+ },
+ "gato.frase.descubre.2": {
+  "texto": "¡Has descubierto algo! Marie Curie estaría orgullosa.",
+  "descripcion": "Lo que dice la mascota cuando el alumno descubre un elemento o molécula nuevos. Humor de física y química para adolescentes"
+ },
+ "gato.frase.descubre.3": {
+  "texto": "¡Nueva molécula! Los átomos que iban por libre ahora van de la mano.",
+  "descripcion": "Lo que dice la mascota cuando el alumno descubre un elemento o molécula nuevos. Humor de física y química para adolescentes"
+ },
+ "gato.frase.descubre.4": {
+  "texto": "¡Mira lo que has encontrado! Apúntalo antes de que se me olvide… soy un gato.",
+  "descripcion": "Lo que dice la mascota cuando el alumno descubre un elemento o molécula nuevos. Humor de física y química para adolescentes"
+ },
+ "gato.frase.descubre.5": {
+  "texto": "¡Descubrimiento! Esto ya va camino de llevar tu alias.",
+  "descripcion": "Lo que dice la mascota cuando el alumno descubre un elemento o molécula nuevos. Humor de física y química para adolescentes"
+ },
+ "gato.frase.desaparece.1": {
+  "texto": "Si no me miras mucho, puede que desaparezca un rato…",
+  "descripcion": "Lo que dice la mascota cuando nadie interactúa y empieza a desvanecerse como una nube de probabilidad. Humor de física y química para adolescentes"
+ },
+ "gato.frase.desaparece.2": {
+  "texto": "Nadie me observa… empiezo a ser una nube de probabilidad.",
+  "descripcion": "Lo que dice la mascota cuando nadie interactúa y empieza a desvanecerse como una nube de probabilidad. Humor de física y química para adolescentes"
+ },
+ "gato.frase.desaparece.3": {
+  "texto": "Me estoy deslocalizando. Tócame si quieres que vuelva.",
+  "descripcion": "Lo que dice la mascota cuando nadie interactúa y empieza a desvanecerse como una nube de probabilidad. Humor de física y química para adolescentes"
+ },
+ "gato.frase.desaparece.4": {
+  "texto": "Sin observador no hay gato. Bueno, hay un poco de gato. Un gato borroso.",
+  "descripcion": "Lo que dice la mascota cuando nadie interactúa y empieza a desvanecerse como una nube de probabilidad. Humor de física y química para adolescentes"
+ },
+ "gato.frase.desaparece.5": {
+  "texto": "Me voy difuminando… ¡avísame cuando vuelvas!",
+  "descripcion": "Lo que dice la mascota cuando nadie interactúa y empieza a desvanecerse como una nube de probabilidad. Humor de física y química para adolescentes"
+ },
+ "gato.frase.colapso.1": {
+  "texto": "¡Colapso! Ya estoy aquí.",
+  "descripcion": "Lo que dice la mascota al volver a aparecer cuando el alumno la mira o la toca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.colapso.2": {
+  "texto": "¡Me has medido! Ahora sí estoy en un solo sitio.",
+  "descripcion": "Lo que dice la mascota al volver a aparecer cuando el alumno la mira o la toca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.colapso.3": {
+  "texto": "¡Función de onda colapsada! Hola otra vez.",
+  "descripcion": "Lo que dice la mascota al volver a aparecer cuando el alumno la mira o la toca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.colapso.4": {
+  "texto": "Has vuelto y yo también. Qué casualidad cuántica.",
+  "descripcion": "Lo que dice la mascota al volver a aparecer cuando el alumno la mira o la toca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.colapso.5": {
+  "texto": "¡Pum! De nube a gato en cero coma nada.",
+  "descripcion": "Lo que dice la mascota al volver a aparecer cuando el alumno la mira o la toca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.animo.1": {
+  "texto": "Los átomos de tu cuerpo llevan miles de millones de años en el universo. Un ratito más estudiando no es nada.",
+  "descripcion": "Frase de ánimo de la mascota cuando el alumno se atasca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.animo.2": {
+  "texto": "Si un electrón puede atravesar una barrera por efecto túnel, tú puedes con este ejercicio.",
+  "descripcion": "Frase de ánimo de la mascota cuando el alumno se atasca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.animo.3": {
+  "texto": "La gente de ciencia también se atasca. La diferencia es que lo vuelve a intentar.",
+  "descripcion": "Frase de ánimo de la mascota cuando el alumno se atasca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.animo.4": {
+  "texto": "Despacio y con buena letra: la química no tiene prisa.",
+  "descripcion": "Frase de ánimo de la mascota cuando el alumno se atasca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.animo.5": {
+  "texto": "Tu cerebro tiene unos 86 000 millones de neuronas. Seguro que alguna sabe la respuesta.",
+  "descripcion": "Frase de ánimo de la mascota cuando el alumno se atasca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.animo.6": {
+  "texto": "Respira hondo: oxígeno para las neuronas, y a por la siguiente.",
+  "descripcion": "Frase de ánimo de la mascota cuando el alumno se atasca. Humor de física y química para adolescentes"
+ },
+ "gato.frase.noche.1": {
+  "texto": "Es tarde… hasta los electrones bajan a su estado fundamental para descansar.",
+  "descripcion": "Lo que dice la mascota si el alumno usa la app muy tarde (22:00-7:00). Humor de física y química para adolescentes"
+ },
+ "gato.frase.noche.2": {
+  "texto": "¿Química a estas horas? Me encanta, pero no olvides dormir: tu cerebro guarda lo aprendido mientras duermes.",
+  "descripcion": "Lo que dice la mascota si el alumno usa la app muy tarde (22:00-7:00). Humor de física y química para adolescentes"
+ },
+ "gato.frase.noche.3": {
+  "texto": "Modo nocturno activado. Yo bostezo en superposición.",
+  "descripcion": "Lo que dice la mascota si el alumno usa la app muy tarde (22:00-7:00). Humor de física y química para adolescentes"
+ },
+ "gato.frase.noche.4": {
+  "texto": "Un poco más y a dormir, ¿vale? Mañana tus neuronas te lo agradecerán.",
+  "descripcion": "Lo que dice la mascota si el alumno usa la app muy tarde (22:00-7:00). Humor de física y química para adolescentes"
+ },
+ "gato.frase.tunel.1": {
+  "texto": "¡Efecto túnel! He atravesado la barrera sin romperla.",
+  "descripcion": "Lo que dice la mascota al hacer el efecto túnel (atraviesa una barrera). Humor de física y química para adolescentes"
+ },
+ "gato.frase.tunel.2": {
+  "texto": "Para un gato normal esa pared era imposible. Para mí, un atajo.",
+  "descripcion": "Lo que dice la mascota al hacer el efecto túnel (atraviesa una barrera). Humor de física y química para adolescentes"
+ },
+ "gato.frase.tunel.3": {
+  "texto": "¿Me has visto? He pasado al otro lado por pura probabilidad.",
+  "descripcion": "Lo que dice la mascota al hacer el efecto túnel (atraviesa una barrera). Humor de física y química para adolescentes"
+ },
+ "gato.frase.superposicion.1": {
+  "texto": "¡Estoy aquí, y aquí, y también aquí! Tócame para elegir uno.",
+  "descripcion": "Lo que dice la mascota cuando aparece en varias copias a la vez (superposición). Humor de física y química para adolescentes"
+ },
+ "gato.frase.superposicion.2": {
+  "texto": "Superposición activada: ahora mismo soy tres gatos a la vez. ¿Cuál es el de verdad?",
+  "descripcion": "Lo que dice la mascota cuando aparece en varias copias a la vez (superposición). Humor de física y química para adolescentes"
+ },
+ "gato.frase.superposicion.3": {
+  "texto": "Mientras no me observes bien, estoy en todas partes. ¡Mírame fijamente!",
+  "descripcion": "Lo que dice la mascota cuando aparece en varias copias a la vez (superposición). Humor de física y química para adolescentes"
+ },
+ "galeria.titulo": {
+  "texto": "Personajes y Schrödingato",
+  "descripcion": "Título de la galería de pruebas de personajes (solo desarrollo)"
+ },
+ "galeria.intro": {
+  "texto": "Galería para revisar los avatares, la mascota y las figuras 3D.",
+  "descripcion": "Subtítulo de la galería de pruebas (solo desarrollo)"
+ },
+ "galeria.personajes": {
+  "texto": "Personajes",
+  "descripcion": "Sección de la galería: los avatares"
+ },
+ "galeria.gato": {
+  "texto": "La mascota",
+  "descripcion": "Sección de la galería: el gato"
+ },
+ "galeria.figuras": {
+  "texto": "Figuras 3D",
+  "descripcion": "Sección de la galería: las figuras en 3D"
+ },
+ "galeria.expresion": {
+  "texto": "Expresión",
+  "descripcion": "Selector de expresión de los avatares"
+ },
+ "galeria.expresion.neutral": {
+  "texto": "Neutral",
+  "descripcion": "Expresión del avatar"
+ },
+ "galeria.expresion.feliz": {
+  "texto": "Feliz",
+  "descripcion": "Expresión del avatar"
+ },
+ "galeria.expresion.habla": {
+  "texto": "Habla",
+  "descripcion": "Expresión del avatar"
+ },
+ "galeria.expresion.sorpresa": {
+  "texto": "Sorpresa",
+  "descripcion": "Expresión del avatar"
+ },
+ "galeria.expresion.piensa": {
+  "texto": "Piensa",
+  "descripcion": "Expresión del avatar"
+ },
+ "galeria.saluda": {
+  "texto": "Saluda",
+  "descripcion": "Botón: el personaje saluda con la mano"
+ },
+ "galeria.celebra": {
+  "texto": "Celebra",
+  "descripcion": "Botón: el personaje da un saltito"
+ },
+ "galeria.habla": {
+  "texto": "Habla",
+  "descripcion": "Botón: el personaje dice una frase"
+ },
+ "galeria.superponer": {
+  "texto": "Superposición",
+  "descripcion": "Botón: el gato aparece en varias copias"
+ },
+ "galeria.tunel": {
+  "texto": "Túnel",
+  "descripcion": "Botón: el gato atraviesa una barrera"
+ },
+ "galeria.asomar": {
+  "texto": "Asomarse",
+  "descripcion": "Botón: el gato se esconde en la caja y asoma"
+ },
+ "galeria.nube": {
+  "texto": "Dejar de mirar",
+  "descripcion": "Botón: simula que nadie mira al gato (se vuelve nube)"
+ },
+ "galeria.frase": {
+  "texto": "Frase",
+  "descripcion": "Botón: el gato dice una frase al azar"
+ },
+ "galeria.reaccion.feliz": {
+  "texto": "Feliz",
+  "descripcion": "Botón: reacción del gato"
+ },
+ "galeria.reaccion.triste": {
+  "texto": "Triste",
+  "descripcion": "Botón: reacción del gato"
+ },
+ "galeria.reaccion.sorpresa": {
+  "texto": "Sorpresa",
+  "descripcion": "Botón: reacción del gato"
+ },
+ "galeria.reaccion.celebra": {
+  "texto": "Celebra",
+  "descripcion": "Botón: reacción del gato"
+ },
+ "galeria.reaccion.piensa": {
+  "texto": "Piensa",
+  "descripcion": "Botón: reacción del gato"
+ },
+ "galeria.todos_saludan": {
+  "texto": "Saludar",
+  "descripcion": "Botón: todas las figuras 3D saludan"
+ },
+ "galeria.todos_celebran": {
+  "texto": "Celebrar",
+  "descripcion": "Botón: todas las figuras 3D celebran"
+ },
+ "galeria.superponer3d": {
+  "texto": "Superposición del gato",
+  "descripcion": "Botón: el gato 3D aparece en varias copias"
+ },
+ "galeria.asomar3d": {
+  "texto": "El gato asoma",
+  "descripcion": "Botón: el gato 3D se esconde y asoma"
+ }
+}
