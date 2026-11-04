@@ -89,6 +89,49 @@ POSIT) y se suaviza con un filtro adaptativo; encima, cada átomo persigue a su
 tarjeta con retardo, para que se deslice suave al moverla. La cara de la
 tarjeta se tapa con una virtual con los datos de lo que contiene.
 
+### Una sola tarjeta: papel = mesa virtual
+
+La tarjeta se dibuja **una vez**, en SVG (`apps/web/src/cards/card-svg.ts`,
+`cardSVG(spec, content?)`), en décimas de milímetro (630 × 880):
+
+- marco del color de su familia, panel blanco con el marcador (40 mm de negro,
+  a 8 mm del borde superior y centrado) y su **margen blanco de 5 mm**, en el
+  que no se dibuja nada (si no, deja de detectarse);
+- debajo: casilla con número atómico, símbolo y masa; nombre, familia,
+  p⁺/n⁰/e⁻, capas con un icono del modelo de Bohr, y el nº de la tarjeta;
+- si la tarjeta ha formado una molécula, la «tarjeta de molécula» con el mismo
+  diseño: la molécula dibujada (bolas y palitos, de su geometría real),
+  fórmula, nombre, uso y ΔHf°.
+
+`cartas.html` mete ese SVG tal cual en la hoja A4. La mesa virtual y la cara
+que se superpone a la tarjeta real en la cámara lo convierten en textura
+(`card-face.ts`: SVG → imagen → lienzo → `CanvasTexture`, con la letra Nunito
+incrustada), así que lo virtual es idéntico al papel, marcador incluido (las
+tarjetas virtuales llevan el marcador de su equivalente impresa). Comprobado
+con `?vista=tarjetas&imagen=…` sobre una captura de `cartas.html`: se
+reconocen todas y la cara virtual cae encima de la impresa.
+
+### La mesa virtual
+
+- **Gestos** (con `ViewerProvider.setDragHandler`): un dedo sobre una tarjeta
+  la arrastra (se levanta un poco y su sombra se abre); un dedo en vacío gira;
+  dos dedos desplazan y el pellizco acerca, se toquen tarjetas o no (si se
+  estaba arrastrando una, se suelta y pasa a gesto de cámara).
+- **Cámara** (`ViewerProvider.setControls`): giro lento y con inercia, nunca
+  por debajo de 35° sobre la mesa, desplazamiento en el plano de la mesa y
+  límites de zoom y de desplazamiento para no perderla.
+- **Entorno** (`table-scene.ts`, todo generado por código): mesa de madera
+  clara, tapete de fieltro con pespunte, habitación difuminada (una esfera
+  pintada por dentro y niebla cálida), luz cálida, una planta, un flexo y unos
+  libros low-poly. Las sombras son falsas (texturas difuminadas bajo tarjetas,
+  átomos y adornos): baratas en cualquier móvil.
+- **Tamaño** de los átomos y moléculas de 1× a 3×: botones +/− en el HUD (y
+  pellizco con dos dedos en la cámara), guardado en `localStorage`
+  (`webar:escala-tarjetas`).
+- `CardVisual.setExtra(objeto | null)`: un objeto 3D extra al lado del átomo
+  o la molécula, que sigue a la tarjeta y aparece con un saltito (se quita al
+  cambiar el contenido de la tarjeta).
+
 Cada tarjeta física tiene un id distinto (la primera de cada elemento, su
 número atómico; las copias extra de H, O, C… del 119 en adelante), en
 `apps/web/src/cards/deck.ts`. **No cambiar ese orden**: los ids ya impresos

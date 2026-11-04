@@ -1,0 +1,9 @@
+/* Modo tarjetas: piezas que crea el código dentro de #hud-tarjetas. */
+
+/* Tamaño de los átomos y moléculas (1×-3×): botones +/− a la derecha, a media altura. */
+.t-escala {
+  position: absolute; right: max(10px, env(safe-area-inset-right)); top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.4rem; padding: 0.45rem 0.35rem 0.55rem;
+}
+.t-escala .btn.redondo { font-size: 1.5rem; font-weight: 900; line-height: 1; }
+.t-escala output { font-weight: 900; font-size: 0.95rem; color: var(--fg-strong); min-width: 3.2ch; text-align: center; font-variant-numeric: tabular-nums; }

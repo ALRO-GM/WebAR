@@ -1,0 +1,7 @@
+{
+ "tarjetas.escala": { "texto": "Atom size" },
+ "tarjetas.escala_ayuda": { "texto": "Make atoms and molecules bigger to see them better (with the camera, you can also pinch with two fingers)" },
+ "tarjetas.escala_mas": { "texto": "Bigger atoms" },
+ "tarjetas.escala_menos": { "texto": "Smaller atoms" },
+ "tarjetas.escala_valor": { "texto": "{n}×" }
+}

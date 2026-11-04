@@ -1,0 +1,22 @@
+{
+ "tarjetas.escala": {
+  "texto": "Tamaño de los átomos",
+  "descripcion": "Nombre (para lectores de pantalla) del control +/− que agranda los átomos y moléculas sobre las tarjetas"
+ },
+ "tarjetas.escala_ayuda": {
+  "texto": "Agranda los átomos y moléculas para verlos mejor (con la cámara, también pellizcando con dos dedos)",
+  "descripcion": "Pista al pasar el ratón por el control de tamaño"
+ },
+ "tarjetas.escala_mas": {
+  "texto": "Átomos más grandes",
+  "descripcion": "Botón + del control de tamaño (solo lo leen los lectores de pantalla)"
+ },
+ "tarjetas.escala_menos": {
+  "texto": "Átomos más pequeños",
+  "descripcion": "Botón − del control de tamaño (solo lo leen los lectores de pantalla)"
+ },
+ "tarjetas.escala_valor": {
+  "texto": "{n}×",
+  "descripcion": "Tamaño actual de los átomos; {n} es un número entre 1 y 3 (p. ej. «1,5×»)"
+ }
+}
