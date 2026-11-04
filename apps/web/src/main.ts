@@ -21,7 +21,7 @@ import { setupInstall } from './install';
 import { setupIntro } from './intro';
 import { markSelected, renderPeriodicTable, updateLocks } from './periodic-table';
 import { Hub } from './platform/hub';
-import { applySettings, onSettingsChange, settings, setupSettingsForm, vibrate } from './settings';
+import { applySettings, isDark, onSettingsChange, settings, setTheme, setupSettingsForm, vibrate } from './settings';
 import { createShadow } from './shadow';
 
 // La app une las dos bases: @webar/ar-core (dónde está cada cosa en el mundo)
@@ -34,6 +34,25 @@ applySettings();
 
 const xr = new WebXRWorldProvider();
 const viewer = new ViewerProvider();
+
+// Tema claro u oscuro: la interfaz (clase en <html>) y el fondo del visor 3D.
+const VIEWER_BACKGROUND = { claro: 0xeef0f7, oscuro: 0x15181d };
+function applyTheme(): void {
+  viewer.setBackground(isDark() ? VIEWER_BACKGROUND.oscuro : VIEWER_BACKGROUND.claro);
+  const button = document.getElementById('cambiar-tema')!;
+  button.textContent = isDark() ? '☀️' : '🌙';
+  const label = t(isDark() ? 'tema.a_claro' : 'tema.a_oscuro');
+  button.setAttribute('aria-label', label);
+  button.title = label;
+}
+applyTheme();
+onSettingsChange.push(applyTheme);
+$('cambiar-tema').addEventListener('click', () => {
+  setTheme(isDark() ? 'claro' : 'oscuro');
+  // El formulario de ajustes refleja el cambio.
+  const radio = document.querySelector<HTMLInputElement>(`#ajustes-form input[name=tema][value="${settings.tema}"]`);
+  if (radio) radio.checked = true;
+});
 const ar = new ARSession({ provider: viewer, overlay: $('overlay') });
 
 const pmrem = new THREE.PMREMGenerator(ar.renderer);

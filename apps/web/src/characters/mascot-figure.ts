@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { disposeTree, mesh, Palette, sphere } from './figure';
 
 /**
- * Schrödingato en 3D: el gato asomando de su caja de cartón con la ψ, para
+ * Schrödingato en 3D: el gato asomando de su caja de cartón, para
  * ponerlo en RA o en la foto. Mismos colores que el SVG.
  *
  * ```ts
@@ -33,7 +33,6 @@ const C = {
   boxSide: '#c88a4c',
   boxIn: '#8d5c2e',
   flap: '#eebd85',
-  psi: '#7c5cff',
 };
 
 export class MascotFigure {
@@ -118,22 +117,9 @@ export class MascotFigure {
     flap(W, D * 0.42, 0, -D / 2, 0, -1, 1.15); // trasera: levantada
     flap(D * 0.42, D, -W / 2, 0, -1, 0, -1.0); // izquierda
     flap(D * 0.42, D, W / 2, 0, 1, 0, 0.5); // derecha
-    // ψ en la cara delantera, con tubos (sin texturas)
-    const psi = new THREE.Group();
-    const pm = P.toon(C.psi);
-    const r = 0.012;
-    const u = new THREE.TorusGeometry(0.055, r, 8, 20, Math.PI);
-    const um = mesh(u, pm, 0, 0.03, 0);
-    um.rotation.z = Math.PI;
-    psi.add(um);
-    for (const s of [-1, 1]) psi.add(mesh(new THREE.CylinderGeometry(r, r, 0.04, 8), pm, s * 0.055, 0.05, 0));
-    psi.add(mesh(new THREE.CylinderGeometry(r, r, 0.17, 8), pm, 0, 0.01, 0));
-    const foot = mesh(new THREE.CylinderGeometry(r, r, 0.06, 8), pm, 0, -0.075, 0);
-    foot.rotation.z = Math.PI / 2;
-    psi.add(foot);
-    psi.position.set(0, H * 0.48, D / 2 + T);
-    psi.scale.set(1, 1, 0.4);
-    box.add(psi);
+    // Cinta de embalar en la cara delantera (una caja normal, sin símbolos).
+    const tape = mesh(new THREE.BoxGeometry(W * 0.22, H * 0.98, 0.004), P.toon('#f3d3a4'), 0, H / 2, D / 2 + T);
+    box.add(tape);
     this.inner.add(box);
   }
 
@@ -178,24 +164,28 @@ export class MascotFigure {
       stripe.rotation.x = -0.6;
       head.add(stripe);
     }
-    // Ojos grandes menta con pupila vertical
+    // Ojos redondos y oscuros con dos brillos: mirada dulce (como en el dibujo).
     const eyes = main ? this.eyes : new THREE.Group();
     eyes.position.set(0, 0.07, 0);
     for (const s of [-1, 1]) {
-      const white = mesh(sphere(0.055, 18, 12), P.toon('#ffffff'), s * 0.085, 0, 0.15);
-      white.scale.set(0.9, 1, 0.5);
-      const iris = mesh(sphere(0.038, 16, 10), P.toon(C.iris), s * 0.085, -0.003, 0.172);
-      iris.scale.set(1, 1, 0.4);
-      const pupil = mesh(sphere(0.026, 10, 8), P.basic(C.ink), s * 0.085, -0.003, 0.184);
-      pupil.scale.set(0.4, 1, 0.3);
-      const shine = mesh(sphere(0.01, 8, 6), P.basic('#ffffff'), s * 0.085 + 0.016, 0.02, 0.19);
-      eyes.add(white, iris, pupil, shine);
+      const eye = mesh(sphere(0.038, 16, 12), P.basic(C.ink), s * 0.08, 0, 0.165);
+      eye.scale.set(0.9, 1.05, 0.45);
+      const shine = mesh(sphere(0.013, 8, 6), P.basic('#ffffff'), s * 0.08 + 0.012, 0.016, 0.183);
+      const shine2 = mesh(sphere(0.006, 6, 5), P.basic('#ffffff'), s * 0.08 - 0.01, -0.014, 0.182);
+      eyes.add(eye, shine, shine2);
+      // Mejillas sonrosadas
+      const cheek = mesh(sphere(0.026, 10, 8), P.basic('#ff9fbf'), s * 0.125, -0.045, 0.15);
+      cheek.scale.set(1.2, 0.7, 0.3);
+      head.add(cheek);
     }
     head.add(eyes);
     head.add(mesh(sphere(0.018, 10, 8), P.toon(C.nose), 0, 0.025, 0.2));
-    const mouth = mesh(new THREE.TorusGeometry(0.018, 0.005, 6, 12, Math.PI), P.basic('#4b3f8f'), 0, -0.012, 0.198);
-    mouth.rotation.z = Math.PI;
-    head.add(mouth);
+    // Sonrisa de gato (ω): dos arcos hacia arriba.
+    for (const s of [-1, 1]) {
+      const arc = mesh(new THREE.TorusGeometry(0.016, 0.0045, 6, 12, Math.PI), P.basic('#4b3f8f'), s * 0.016, -0.008, 0.198);
+      arc.rotation.z = Math.PI;
+      head.add(arc);
+    }
     const whisker = P.basic('#4b3f8f');
     for (const s of [-1, 1])
       for (const a of [0.08, -0.08]) {

@@ -116,9 +116,6 @@
  "ajustes.meta.50": {
   "texto": "Intense · 50 XP a day"
  },
- "ajustes.oscuro": {
-  "texto": "Dark theme"
- },
  "ajustes.sonido": {
   "texto": "Sounds"
  },
@@ -688,5 +685,23 @@
  },
  "foto.modo_ra_texto": {
   "texto": "Place them on the floor at figurine size and walk around them."
+ },
+ "ajustes.tema": {
+  "texto": "Theme"
+ },
+ "ajustes.tema.claro": {
+  "texto": "Light"
+ },
+ "ajustes.tema.oscuro": {
+  "texto": "Dark"
+ },
+ "ajustes.tema.sistema": {
+  "texto": "Same as device"
+ },
+ "tema.a_oscuro": {
+  "texto": "Switch to dark theme"
+ },
+ "tema.a_claro": {
+  "texto": "Switch to light theme"
  }
 }

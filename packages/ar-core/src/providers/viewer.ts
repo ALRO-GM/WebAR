@@ -187,6 +187,12 @@ export class ViewerProvider implements ARProvider {
     this.controls.update();
   }
 
+  /** Cambia el color de fondo (ahora, si está en marcha, y en las próximas sesiones). */
+  setBackground(color: THREE.ColorRepresentation): void {
+    this.options.background = color;
+    if (this.ctx) this.ctx.scene.background = new THREE.Color(color);
+  }
+
   /** Activa o desactiva el giro con el dedo (p. ej. mientras se arrastra algo). */
   setControlsEnabled(enabled: boolean): void {
     if (this.controls) this.controls.enabled = enabled;

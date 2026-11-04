@@ -24,6 +24,7 @@
             <button id="chip-xp" type="button" class="stat xp" data-t-attr="aria-label:stats.xp_aria"><span class="stat-icono" aria-hidden="true">⚡</span><b id="xp-n">0</b></button>
           </div>
           <span id="estado-red" class="estado-red" role="status"></span>
+          <button id="cambiar-tema" type="button" class="btn claro redondo pequeno"></button>
           <button id="abrir-ayuda" type="button" class="btn claro redondo pequeno" data-t-attr="aria-label:ayuda.abrir;title:ayuda.abrir">?</button>
         </header>
 
@@ -245,7 +246,11 @@
           <label class="opcion"><input type="radio" name="letra" value="1.15" /> <span data-t="ajustes.letra.grande"></span></label>
           <label class="opcion"><input type="radio" name="letra" value="1.3" /> <span data-t="ajustes.letra.muy_grande"></span></label>
         </fieldset>
-        <label class="interruptor"><input type="checkbox" name="oscuro" /> <span data-t="ajustes.oscuro"></span></label>
+        <fieldset><legend data-t="ajustes.tema"></legend>
+          <label class="opcion"><input type="radio" name="tema" value="claro" /> <span data-t="ajustes.tema.claro"></span></label>
+          <label class="opcion"><input type="radio" name="tema" value="oscuro" /> <span data-t="ajustes.tema.oscuro"></span></label>
+          <label class="opcion"><input type="radio" name="tema" value="sistema" /> <span data-t="ajustes.tema.sistema"></span></label>
+        </fieldset>
         <label class="interruptor"><input type="checkbox" name="contraste" /> <span data-t="ajustes.contraste"></span></label>
         <label class="interruptor"><input type="checkbox" name="calma" /> <span data-t="ajustes.calma"></span></label>
         <label class="interruptor"><input type="checkbox" name="sonido" /> <span data-t="ajustes.sonido"></span></label>

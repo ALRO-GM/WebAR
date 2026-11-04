@@ -155,10 +155,6 @@
   "texto": "A tope · 50 XP al día",
   "descripcion": "Opción de meta diaria"
  },
- "ajustes.oscuro": {
-  "texto": "Tema oscuro",
-  "descripcion": "Ajuste"
- },
  "ajustes.sonido": {
   "texto": "Sonidos",
   "descripcion": "Ajuste"
@@ -918,5 +914,29 @@
  "foto.modo_ra_texto": {
   "texto": "Colócalos en el suelo a tamaño de muñeco y da vueltas a su alrededor.",
   "descripcion": "Opción del modo foto con WebXR"
+ },
+ "ajustes.tema": {
+  "texto": "Tema",
+  "descripcion": "Ajustes: claro u oscuro"
+ },
+ "ajustes.tema.claro": {
+  "texto": "Claro",
+  "descripcion": "Opción de tema"
+ },
+ "ajustes.tema.oscuro": {
+  "texto": "Oscuro",
+  "descripcion": "Opción de tema"
+ },
+ "ajustes.tema.sistema": {
+  "texto": "Como el móvil",
+  "descripcion": "Opción de tema: sigue el modo claro/oscuro del sistema"
+ },
+ "tema.a_oscuro": {
+  "texto": "Cambiar a tema oscuro",
+  "descripcion": "Botón de la barra de arriba (lectores de pantalla y título)"
+ },
+ "tema.a_claro": {
+  "texto": "Cambiar a tema claro",
+  "descripcion": "Botón de la barra de arriba (lectores de pantalla y título)"
  }
 }

@@ -10,8 +10,8 @@ export interface Settings {
   calma: boolean;
   vibrar: boolean;
   sonido: boolean;
-  /** Tema oscuro (por defecto, el del sistema). */
-  oscuro: boolean;
+  /** Tema: claro (por defecto), oscuro o el que tenga el sistema. */
+  tema: 'claro' | 'oscuro' | 'sistema';
   /** Meta diaria de XP. */
   meta: number;
   /** Mostrar la mascota (el gato cuántico). */
@@ -30,21 +30,40 @@ function defaults(): Settings {
     calma: matchMedia('(prefers-reduced-motion: reduce)').matches,
     vibrar: true,
     sonido: true,
-    oscuro: matchMedia('(prefers-color-scheme: dark)').matches,
+    tema: 'claro',
     meta: 20,
     gato: true,
   };
 }
 
-export const settings: Settings = { ...defaults(), ...JSON.parse(localStorage.getItem(KEY) ?? '{}') };
+// El antiguo «oscuro» (que copiaba el del sistema) se olvida: ahora se elige el tema.
+const { oscuro: _old, ...saved } = JSON.parse(localStorage.getItem(KEY) ?? '{}') as Partial<Settings> & { oscuro?: boolean };
+export const settings: Settings = { ...defaults(), ...saved };
+
+const systemDark = matchMedia('(prefers-color-scheme: dark)');
+/** ¿Se ve en oscuro ahora? (el tema elegido o, con «sistema», el del móvil). */
+export const isDark = () => settings.tema === 'oscuro' || (settings.tema === 'sistema' && systemDark.matches);
+systemDark.addEventListener('change', () => {
+  if (settings.tema !== 'sistema') return;
+  applySettings();
+  onSettingsChange.forEach((fn) => fn());
+});
+
+/** Cambia el tema y lo guarda (botón rápido de la barra de arriba). */
+export function setTheme(tema: Settings['tema']): void {
+  settings.tema = tema;
+  localStorage.setItem(KEY, JSON.stringify(settings));
+  applySettings();
+  onSettingsChange.forEach((fn) => fn());
+}
 
 export function applySettings(): void {
   const root = document.documentElement;
   root.style.setProperty('--scale', String(settings.letra));
   root.classList.toggle('alto-contraste', settings.contraste);
   root.classList.toggle('calma', settings.calma);
-  root.classList.toggle('oscuro', settings.oscuro);
-  document.querySelector('meta[name=theme-color]')?.setAttribute('content', settings.oscuro ? '#131a20' : '#ffffff');
+  root.classList.toggle('oscuro', isDark());
+  document.querySelector('meta[name=theme-color]')?.setAttribute('content', isDark() ? '#131a20' : '#ffffff');
   setLanguage(settings.idioma);
   translate();
 }
@@ -68,7 +87,8 @@ export function setupSettingsForm(form: HTMLFormElement): void {
   field<HTMLInputElement>('contraste').checked = settings.contraste;
   field<HTMLInputElement>('calma').checked = settings.calma;
   field<HTMLInputElement>('vibrar').checked = settings.vibrar;
-  for (const name of ['sonido', 'oscuro', 'gato'] as const) if (form.elements.namedItem(name)) field<HTMLInputElement>(name).checked = settings[name];
+  (form.querySelector(`input[name=tema][value="${settings.tema}"]`) as HTMLInputElement | null)?.setAttribute('checked', '');
+  for (const name of ['sonido', 'gato'] as const) if (form.elements.namedItem(name)) field<HTMLInputElement>(name).checked = settings[name];
   (form.querySelector(`input[name=meta][value="${settings.meta}"]`) as HTMLInputElement | null)?.setAttribute('checked', '');
   form.addEventListener('change', () => {
     const data = new FormData(form);
@@ -81,7 +101,7 @@ export function setupSettingsForm(form: HTMLFormElement): void {
       calma: data.has('calma'),
       vibrar: data.has('vibrar'),
       sonido: data.has('sonido'),
-      oscuro: data.has('oscuro'),
+      tema: (data.get('tema') ?? settings.tema) as Settings['tema'],
       gato: data.has('gato'),
       meta: Number(data.get('meta') ?? settings.meta),
     });

@@ -10,13 +10,13 @@ import './characters.css';
 import { animateAvatar, avatarSVG, setExpression, type Expression } from './avatar';
 import { CHARACTERS } from './data';
 import { CharacterFigure } from './figure';
-import { Mascot, mascotSVG, type MascotMood, type MascotReaction } from './mascot';
+import { MASCOT_MOODS, Mascot, mascotSVG, type MascotMood, type MascotReaction } from './mascot';
 import { MascotFigure } from './mascot-figure';
 import { randomKey, tx } from './text';
 
 const EXPRESSIONS: Expression[] = ['neutral', 'feliz', 'habla', 'sorpresa', 'piensa'];
 const REACTIONS: MascotReaction[] = ['feliz', 'triste', 'sorpresa', 'celebra', 'piensa'];
-const MOODS: MascotMood[] = ['neutral', 'feliz', 'triste', 'sorpresa', 'piensa'];
+const MOODS: readonly MascotMood[] = MASCOT_MOODS;
 
 const css = document.createElement('style');
 css.textContent = `
