@@ -64,6 +64,7 @@ Las reglas para agentes de IA están en [AGENTS.md](AGENTS.md).
 
 | Fecha | Qué cambió |
 | --- | --- |
+| 2026-11-04 | Tarjetas: hasta 5 (o más) a la vez sin tarjetas fantasma; lectura estricta, confirmación en 3 fotogramas y la identidad de cada tarjeta bloqueada |
 | 2026-11-04 | Tarjetas sin temblor: esquinas a décimas de píxel, pose afinada sin saltos de inclinación, mesa común y filtro «1 €» |
 | 2026-11-04 | Emitir al proyector: el móvil del profesor se ve en el ordenador del aula (WebRTC con relevo de JPEG por el servidor si la red lo bloquea), sin códigos, con la misma cuenta |
 | 2026-11-04 | Renovación: estilo de juego para aprender, camino de lecciones desde el hidrógeno, personajes históricos y gato cuántico, fichas ampliadas de los 118 elementos, racha diaria, misiones, quarks, ligas semanales (clase y mundial), Adivina con objetos 3D, foto con científicos, sección Materia (cristales y estados del agua), mesa virtual más natural y tarjetas iguales en papel y en pantalla |

@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { ARAnchor } from '../anchor';
 import { Emitter } from '../emitter';
+import { IdentityGate, type IdentityGateOptions } from '../gate';
 import { MARKER_DICTIONARY } from '../markers';
 import { OneEuroQuaternion, OneEuroVector, type OneEuroOptions } from '../one-euro';
 import { alignCoplanar, markerPose, type PinholeCamera } from '../pose';
@@ -33,6 +34,13 @@ export interface MarkerTrackingOptions {
    * comparten la inclinación, que así tiembla mucho menos.
    */
   coplanar?: boolean;
+  /**
+   * Bits erróneos (de 36) que se toleran al leer un código. El detector, de
+   * serie, aceptaba hasta 11 y se inventaba tarjetas; 2 es lo prudente.
+   */
+  maxBitErrors?: number;
+  /** Confirmación de tarjetas nuevas y bloqueo de identidad (ver `gate.ts`). */
+  identity?: IdentityGateOptions;
   /** Qué ids aceptar (los demás se ignoran). */
   accept?: (id: number) => boolean;
   /** Cámara trasera (por defecto) o frontal; la frontal se ve en espejo, como un selfi. */
@@ -95,12 +103,15 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
   private readonly offset: THREE.Matrix4;
   private readonly tmp = { p: new THREE.Vector3(), q: new THREE.Quaternion(), s: new THREE.Vector3() };
   private screen = { width: 1, height: 1 };
-  /** Último fotograma de vídeo analizado: se pinta a 60 fps, pero la cámara da 30. */
-  private lastFrame = -1;
+  /** Hay un fotograma de cámara sin analizar (se pinta a 60 fps, pero la cámara da 30). */
+  private freshFrame = true;
+  private frameCallback?: number;
+  private gate: IdentityGate;
 
   constructor(private readonly options: MarkerTrackingOptions) {
     super();
     this.offset = UPRIGHT.clone().multiply(options.anchorOffset ?? new THREE.Matrix4());
+    this.gate = new IdentityGate(options.identity);
   }
 
   async isSupported(): Promise<boolean> {
@@ -141,7 +152,10 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     this.video = video;
     this.ctx = ctx;
     this.hooks = hooks;
-    this.detector = new AR.Detector({ dictionaryName: MARKER_DICTIONARY });
+    // El detector compara con `<`: 2 bits erróneos como mucho → 3.
+    this.detector = new AR.Detector({ dictionaryName: MARKER_DICTIONARY, maxHammingDistance: (this.options.maxBitErrors ?? 2) + 1 });
+    this.gate.reset();
+    this.watchFrames();
 
     ctx.camera.position.set(0, 0, 0);
     ctx.camera.quaternion.identity();
@@ -191,19 +205,19 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     if (!this.video || !this.detector || !source.ready) return;
     if (this.canvas.dataset.size !== `${source.width}x${source.height}`) this.configureCamera();
     const lostAfter = this.options.lostAfter ?? 400;
-    if (this.video instanceof HTMLVideoElement) {
-      // Mismo fotograma que la vez anterior: analizarlo otra vez solo gasta batería.
-      if (this.video.currentTime === this.lastFrame) return this.markLost(time, lostAfter);
-      this.lastFrame = this.video.currentTime;
-    }
+    // Mismo fotograma que la vez anterior: analizarlo otra vez solo gasta batería.
+    if (!this.freshFrame) return this.markLost(time, lostAfter);
+    if (this.frameCallback !== undefined) this.freshFrame = false;
 
     const { width, height } = this.canvas;
     this.g.drawImage(this.video, 0, 0, width, height);
-    const markers = this.detector.detect(this.g.getImageData(0, 0, width, height));
+    const markers = this.gate.filter(
+      this.detector.detect(this.g.getImageData(0, 0, width, height)).filter((m) => !this.options.accept || this.options.accept(m.id)),
+      time,
+    );
 
     const seen: { id: number; pose: THREE.Matrix4; weight: number }[] = [];
     for (const marker of markers) {
-      if (this.options.accept && !this.options.accept(marker.id)) continue;
       // El detector da esquinas en píxeles enteros: afinarlas quita la mayor parte del temblor.
       const corners = this.detector.grey ? refineCorners(this.detector.grey, marker.corners) : marker.corners;
       const previous = this.tracked.get(marker.id);
@@ -221,8 +235,20 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     for (const t of this.tracked.values()) if (time - t.lastSeen > lostAfter) t.anchor.setTracking(false);
   }
 
+  /** Avisa de cada fotograma nuevo de la cámara (si el navegador sabe; si no, se analiza siempre). */
+  private watchFrames(): void {
+    const video = this.video;
+    if (!(video instanceof HTMLVideoElement) || !('requestVideoFrameCallback' in video)) return;
+    const next = () => {
+      this.freshFrame = true;
+      if (this.video === video) this.frameCallback = video.requestVideoFrameCallback(next);
+    };
+    this.frameCallback = video.requestVideoFrameCallback(next);
+  }
+
   async stop(): Promise<void> {
     if (!this.ctx) return;
+    const video = this.video;
     this.stream?.getTracks().forEach((track) => track.stop());
     this.video?.remove();
     this.ctx.renderer.domElement.removeEventListener('click', this.onClick);
@@ -230,7 +256,9 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     for (const t of this.tracked.values()) t.anchor.dispose();
     this.tracked.clear();
     this.ctx = this.video = this.stream = this.detector = undefined;
-    this.lastFrame = -1;
+    if (this.frameCallback !== undefined && video instanceof HTMLVideoElement) video.cancelVideoFrameCallback(this.frameCallback);
+    this.frameCallback = undefined;
+    this.freshFrame = true;
     const hooks = this.hooks;
     this.hooks = undefined;
     hooks?.ended();

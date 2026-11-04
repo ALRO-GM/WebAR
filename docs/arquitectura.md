@@ -41,6 +41,7 @@ packages/ar-core/      @webar/ar-core: la base reutilizable (no sabe de química
   src/pose.ts            pose de un marcador (homografía + Levenberg-Marquardt, ambigüedad, mesa común)
   src/refine.ts          esquinas a décimas de píxel (rectas ajustadas a los bordes)
   src/one-euro.ts        filtro «1 €» contra el temblor
+  src/gate.ts            qué lecturas son tarjetas de verdad y con qué identidad
   src/vendor/js-aruco2/  detector ArUco (MIT), pasado a ESM
 packages/chem/         @webar/chem: los 118 elementos y sus átomos en 3D (no sabe de RA)
   src/data/elements.ts   datos generados (scripts/generar-elementos.py)
@@ -118,6 +119,25 @@ AprilTag, MindAR o los visores de RA:
    queda atrás (menos de 4 mm a 30 cm/s).
 5. Cada fotograma de la cámara se analiza **una sola vez** (se pinta a 60 fps,
    la cámara da 30): menos batería y calor, que también tiran los fps.
+
+### Varias tarjetas, sin fantasmas y sin cambiar de átomo
+
+El detector de serie aceptaba un código con hasta 11 bits erróneos de 36 y se
+inventaba tarjetas (un trozo del propio marcador leído como el 97, berkelio).
+Esa tarjeta fantasma caía encima de una real, «reaccionaba» con ella y le
+cambiaba el átomo. Ahora, como en el «tracking by detection» de los sistemas
+reales:
+
+- **lectura estricta**: como mucho 2 bits erróneos (`maxBitErrors`);
+- **confirmación**: una tarjeta nueva tiene que verse 3 fotogramas seguidos en
+  el mismo sitio (≈ 0,1 s); un reflejo no aguanta tanto;
+- **identidad bloqueada** (`IdentityGate`): donde hay una tarjeta conocida no
+  puede aparecer otra con otro número durante 1 s, aunque un fotograma
+  borroso la lea mal; la tarjeta sigue siendo el átomo que era;
+- de dos lecturas solapadas en el mismo fotograma gana la de menos errores.
+
+`cards.test.ts` fotografía (sintéticamente) 5 tarjetas a 40-60 cm, rectas e
+inclinadas, con desenfoque: se leen las 5 y ninguna inventada.
 
 Lo que hacen ARKit y ARCore y aquí no se puede: fundir la cámara con el
 giroscopio y el acelerómetro (odometría visual-inercial) para que la tarjeta
