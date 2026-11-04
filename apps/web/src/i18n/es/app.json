@@ -40,7 +40,7 @@
   "descripcion": "Título de la pantalla del laboratorio"
  },
  "lab.subtitulo": {
-  "texto": "Experimenta con tus elementos: forma moléculas, resuelve acertijos y míralo todo en realidad aumentada.",
+  "texto": "Forma moléculas juntando tarjetas y mira los átomos de cerca.",
   "descripcion": "Subtítulo del laboratorio"
  },
  "adivina.titulo": {
@@ -104,7 +104,7 @@
   "descripcion": "Subpestaña de la colección"
  },
  "coleccion.tabla": {
-  "texto": "Tabla",
+  "texto": "Tabla periódica",
   "descripcion": "Subpestaña de la colección: tabla periódica"
  },
  "coleccion.personajes": {

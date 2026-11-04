@@ -2676,19 +2676,19 @@
   "descripcion": "Leyenda"
  },
  "modo.tarjetas.titulo": {
-  "texto": "Tarjetas con la cámara",
+  "texto": "Tarjetas en papel",
   "descripcion": "Modo principal"
  },
  "modo.tarjetas.texto": {
-  "texto": "Apunta a las tarjetas impresas y júntalas para que reaccionen.",
+  "texto": "Imprime las tarjetas, apúntalas con la cámara y júntalas para que reaccionen.",
   "descripcion": "Descripción del modo"
  },
  "modo.mesa.titulo": {
-  "texto": "Mesa virtual",
+  "texto": "Tarjetas en pantalla",
   "descripcion": "Modo"
  },
  "modo.mesa.texto": {
-  "texto": "Las mismas reacciones arrastrando (o tocando) tarjetas, sin imprimir nada.",
+  "texto": "Las mismas tarjetas en una mesa virtual, sin imprimir nada.",
   "descripcion": "Descripción del modo"
  },
  "modo.explorar.titulo": {
@@ -2750,5 +2750,157 @@
  "explorar.donde_ra": {
   "texto": "En tu mesa",
   "descripcion": "Opción: colocar átomos en la habitación con realidad aumentada (WebXR)"
+ },
+ "lab.formar": {
+  "texto": "Formar moléculas",
+  "descripcion": "Laboratorio: sección de las tarjetas"
+ },
+ "lab.mirar": {
+  "texto": "Mirar de cerca",
+  "descripcion": "Laboratorio: sección de explorar átomos"
+ },
+ "nav.clase": {
+  "texto": "Clase",
+  "descripcion": "Pestaña de la clase"
+ },
+ "clase.titulo": {
+  "texto": "Tu clase",
+  "descripcion": "Título de la pestaña Clase"
+ },
+ "clase.subtitulo": {
+  "texto": "Las actividades y los retos de tu profe, la meta de toda la clase y lo que ha descubierto cada cual.",
+  "descripcion": "Subtítulo de la pestaña Clase"
+ },
+ "actividad.titulo": {
+  "texto": "Actividades de tu profe",
+  "descripcion": "Sección de la pestaña Clase"
+ },
+ "actividad.acertijo": {
+  "texto": "Acertijo",
+  "descripcion": "Tipo de actividad"
+ },
+ "actividad.adivina": {
+  "texto": "Adivina",
+  "descripcion": "Tipo de actividad"
+ },
+ "actividad.acertijo_texto": {
+  "texto": "Una sustancia te da pistas: fórmala juntando tarjetas.",
+  "descripcion": "Explicación de un acertijo"
+ },
+ "actividad.adivina_texto": {
+  "texto": "¿De qué elemento o sustancia es cada objeto? {n} rondas.",
+  "descripcion": "Explicación de una Adivina"
+ },
+ "actividad.hecha": {
+  "texto": "Hecha · {n} puntos",
+  "descripcion": "Estado de una actividad hecha"
+ },
+ "actividad.repetir": {
+  "texto": "Repetir",
+  "descripcion": "Botón para repetir una actividad"
+ },
+ "actividad.ninguna": {
+  "texto": "Tu profe aún no ha lanzado ninguna. Cuando lo haga, aparecerá aquí.",
+  "descripcion": "Sin actividades"
+ },
+ "actividad.donde": {
+  "texto": "¿Dónde quieres resolverlo?",
+  "descripcion": "Elegir mesa o tarjetas impresas para un acertijo"
+ },
+ "profe.actividades": {
+  "texto": "Actividades para la clase",
+  "descripcion": "Sección del panel"
+ },
+ "profe.actividades_texto": {
+  "texto": "Lanza un acertijo o una Adivina: le sale a todo el alumnado de la clase en la pestaña Clase (en menos de un minuto) y aquí ves quién lo ha hecho y cómo.",
+  "descripcion": "Explicación"
+ },
+ "profe.actividades_ninguna": {
+  "texto": "Aún no has lanzado ninguna.",
+  "descripcion": "Sin actividades"
+ },
+ "profe.lanzar_acertijo": {
+  "texto": "Lanzar un acertijo",
+  "descripcion": "Formulario"
+ },
+ "profe.que_acertijo": {
+  "texto": "Sustancia que hay que adivinar y formar",
+  "descripcion": "Campo"
+ },
+ "profe.lanzar_adivina": {
+  "texto": "Lanzar una Adivina",
+  "descripcion": "Formulario"
+ },
+ "profe.adivina_texto": {
+  "texto": "Elige los elementos y sustancias: verán su objeto cotidiano en 3D y tendrán que decir de cuál es (5 rondas).",
+  "descripcion": "Explicación"
+ },
+ "profe.elementos": {
+  "texto": "Elementos",
+  "descripcion": "Grupo de casillas"
+ },
+ "profe.sustancias_curso": {
+  "texto": "Sustancias de {curso}",
+  "descripcion": "Grupo de casillas"
+ },
+ "profe.lanzar": {
+  "texto": "Lanzar a la clase",
+  "descripcion": "Botón"
+ },
+ "profe.actividad_abierta": {
+  "texto": "abierta",
+  "descripcion": "Estado"
+ },
+ "profe.actividad_cerrada": {
+  "texto": "cerrada",
+  "descripcion": "Estado"
+ },
+ "profe.actividad_hecha": {
+  "texto": "la han hecho: {n} de {de}",
+  "descripcion": "Cuántos la han hecho"
+ },
+ "profe.actividad_media": {
+  "texto": "media: {n} puntos",
+  "descripcion": "Puntuación media"
+ },
+ "profe.actividad_resultados": {
+  "texto": "Resultados",
+  "descripcion": "Desplegable"
+ },
+ "profe.actividad_cerrar": {
+  "texto": "Cerrar",
+  "descripcion": "Botón: deja de verse en la app"
+ },
+ "demo.titulo": {
+  "texto": "Modo demostración",
+  "descripcion": "Ajustes: para presentar la app"
+ },
+ "demo.texto": {
+  "texto": "Para presentar Labtory: todos los elementos desbloqueados, un mes de progreso inventado y dentro de una clase de demostración con actividades. Tu progreso de verdad se queda aparte y vuelve al salir.",
+  "descripcion": "Explicación"
+ },
+ "demo.entrar": {
+  "texto": "Entrar en la demostración",
+  "descripcion": "Botón"
+ },
+ "demo.salir": {
+  "texto": "Salir de la demostración",
+  "descripcion": "Botón"
+ },
+ "demo.chip": {
+  "texto": "🎬",
+  "descripcion": "Marca en la barra de arriba mientras dura la demostración (su nombre accesible es demo.titulo)"
+ },
+ "demo.profe_titulo": {
+  "texto": "Demostración",
+  "descripcion": "Panel: entrar sin cuenta"
+ },
+ "demo.profe_texto": {
+  "texto": "Una clase con 24 alias inventados y un mes de actividad, para ver las estadísticas, las recomendaciones y las actividades sin datos reales.",
+  "descripcion": "Explicación"
+ },
+ "demo.profe_boton": {
+  "texto": "Ver la clase de demostración",
+  "descripcion": "Botón"
  }
 }

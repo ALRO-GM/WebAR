@@ -101,6 +101,20 @@ pregunta (`dato`, `protones`, `electrones`, `neutrones`, `simbolo`, `pista`,
 `formula`, `objeto`), el elemento o sustancia y si se acertó a la primera.
 Una lección de repaso son unas 8, unos 400 caracteres.
 
+### Actividades de clase y demostración
+
+| Ruta | Token | Qué hace |
+| --- | --- | --- |
+| `POST /api/clases/:id/actividades` `{ tipo: 'acertijo', acertijo }` o `{ tipo: 'adivina', elementos: [...] }` | profesor | Lanza una actividad a la clase (tabla `activities`) |
+| `DELETE /api/clases/:id/actividades/:aid` | profesor | La cierra: deja de salir en la app |
+| `GET /api/clases/:id` | profesor | Ahora también `actividades` con `resultados` (mejor intento de cada alias, de los eventos `actividad`) |
+| `POST /api/sync` | alumno | Ahora también `actividades` abiertas (la app sincroniza cada minuto) |
+| `POST /api/demo` | ninguno | Token del profesor de demostración y su clase (24 alias inventados, un mes de actividad; se rehace cada 12 h). Ver `server/src/demo.ts` |
+| `POST /api/demo/alumno` | ninguno | Token del alumno «Demo» de esa clase |
+
+La demostración no tiene datos reales: cualquiera puede entrar. Si alguien
+la ensucia, se rehace sola en 12 h (o al borrar la fila de `demo_state`).
+
 ### Estadísticas del profesorado
 
 | Ruta | Token | Qué hace |

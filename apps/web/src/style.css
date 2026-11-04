@@ -42,8 +42,14 @@ a { color: var(--primary); }
 @media (max-width: 480px) {
   .instalar-texto { display: none; }
   .instalar-top { padding-inline: 12px; }
-  .barra-top:has(.instalar-top:not([hidden])) .stat { padding: 0 6px; }
-  .barra-top:has(.instalar-top:not([hidden])) { gap: 4px; padding-inline: 8px; }
+  /* Barra estrecha: avatar y botones algo más pequeños para que quepa todo (con Instalar y Demo). */
+  .barra-top { gap: 4px; padding-inline: 8px; }
+  .barra-top .avatar-boton { width: 40px; height: 40px; flex: none; }
+  .barra-top .avatar-boton svg { width: 34px; height: 34px; }
+  .barra-top .stat { padding: 0 4px; font-size: 0.95rem; }
+  .barra-top .stat-icono { font-size: 1.1rem; }
+  .barra-top .btn.redondo.pequeno { width: 40px; height: 40px; min-height: 40px; padding: 0; flex: none; }
+  .barra-top .instalar-top { min-height: 40px; height: 40px; }
 }
 
 #pantallas { flex: 1; overflow-y: auto; overscroll-behavior: contain; scroll-behavior: smooth; }
@@ -533,3 +539,11 @@ body.ar-activo .mascota-inicio { display: none; }
 .segmentado button.no-disponible { opacity: 0.55; }
 /* En explorar la barra tiene una fila más (En 3D / En tu mesa): la leyenda, más arriba. */
 #hud .leyenda { bottom: calc(max(16px, env(safe-area-inset-bottom)) + 11.5rem); }
+.demo-chip { border: 2px solid var(--primary); background: var(--surface); cursor: pointer; padding: 0.2rem 0.45rem; border-radius: 999px; font-size: 1.05rem; line-height: 1; }
+.demo-chip[hidden] { display: none; }
+/* Muy estrecho y con Instalar o Demo a la vista: el tema rápido se va (sigue en Ajustes). */
+@media (max-width: 420px) {
+  .barra-top:has(.instalar-top:not([hidden]), .demo-chip:not([hidden])) #cambiar-tema { display: none; }
+  .barra-top { gap: 2px; padding-inline: 6px; }
+  .barra-top .stats { gap: 0; }
+}

@@ -58,6 +58,17 @@ create table if not exists challenges (
   created text not null default (datetime('now'))
 );
 
+-- Actividades que el profesorado lanza a su clase (acertijo o Adivina). Los
+-- resultados son eventos 'actividad' del alumnado con su id.
+create table if not exists activities (
+  id integer primary key,
+  class_id integer not null references classes(id) on delete cascade,
+  kind text not null check (kind in ('acertijo', 'adivina')),
+  config text not null,
+  created text not null default (datetime('now')),
+  closed text
+);
+
 -- Ligas. Un jugador es anónimo: un apodo que genera el servidor, un avatar
 -- (id de personaje) y su liga. Si es de una clase, se enlaza a su alumno.
 create table if not exists players (

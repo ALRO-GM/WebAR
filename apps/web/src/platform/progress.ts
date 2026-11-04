@@ -7,7 +7,7 @@ import { NODES, START_ELEMENTS, nodeById, type PathNode } from '../learn/path';
  * así funciona igual sin conexión, en varios dispositivos y al sincronizar.
  * Todo lo demás (XP, racha, quarks, misiones, camino) se recalcula de ahí.
  */
-export type EventType = 'descubrir' | 'reaccion' | 'reto' | 'leccion' | 'lectura' | 'adivina' | 'compra' | 'cofre' | 'foto';
+export type EventType = 'descubrir' | 'reaccion' | 'reto' | 'leccion' | 'lectura' | 'adivina' | 'compra' | 'cofre' | 'foto' | 'actividad';
 
 export interface ProgressEvent {
   id: string;
@@ -121,6 +121,8 @@ export interface Progress {
   read: Set<string>;
   guessed: number;
   photos: number;
+  /** Actividades de clase hechas: id → mejor puntuación (0–100). */
+  activities: Map<number, number>;
   xp: number;
   level: number;
   /** XP del nivel actual y del siguiente (para la barra). */
@@ -201,6 +203,7 @@ export function computeProgress(events: ProgressEvent[], now = new Date()): Prog
   let perfectLessons = 0;
   let guessed = 0;
   let photos = 0;
+  const activities = new Map<number, number>();
   let boostUntil = 0;
   let level = 0;
   const thisMonday = mondayOf(now);
@@ -297,6 +300,12 @@ export function computeProgress(events: ProgressEvent[], now = new Date()): Prog
       case 'foto':
         photos++;
         break;
+      case 'actividad': {
+        // El XP ya lo da su juego (acertijo o Adivina): aquí solo se apunta que se hizo.
+        const id = Number(d.actividad);
+        if (id) activities.set(id, Math.max(activities.get(id) ?? 0, Number(d.puntos) || 0));
+        break;
+      }
     }
     if (gained > 0 && time < boostUntil) gained *= 2;
     xp += gained;
@@ -347,7 +356,7 @@ export function computeProgress(events: ProgressEvent[], now = new Date()): Prog
   }
 
   const base = {
-    species, reactions, challenges, unlocked, done, current, lessons, perfectLessons, read, guessed, photos,
+    species, reactions, challenges, unlocked, done, current, lessons, perfectLessons, read, guessed, photos, activities,
     xp, level, exothermic, endothermic, streak, longestStreak, streakToday: activeDays.has(today), protectors, frozenDays, activeDays,
     xpToday: todayStats.xp, xpWeek, quarks, quests, boostUntil,
     levelFloor: LEVELS[level],

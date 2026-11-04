@@ -570,16 +570,16 @@
   "texto": "electron"
  },
  "modo.tarjetas.titulo": {
-  "texto": "Cards with the camera"
+  "texto": "Paper cards"
  },
  "modo.tarjetas.texto": {
-  "texto": "Point at the printed cards and put them together to react."
+  "texto": "Print the cards, point the camera at them and join them to react."
  },
  "modo.mesa.titulo": {
-  "texto": "Virtual table"
+  "texto": "On-screen cards"
  },
  "modo.mesa.texto": {
-  "texto": "The same reactions by dragging (or tapping) cards, nothing to print."
+  "texto": "The same cards on a virtual table, nothing to print."
  },
  "modo.explorar.titulo": {
   "texto": "Explore atoms"
@@ -1555,5 +1555,119 @@
  },
  "explorar.donde_ra": {
   "texto": "On your table"
+ },
+ "lab.formar": {
+  "texto": "Forming molecules"
+ },
+ "lab.mirar": {
+  "texto": "Take a closer look"
+ },
+ "nav.clase": {
+  "texto": "Class"
+ },
+ "clase.titulo": {
+  "texto": "Your class"
+ },
+ "clase.subtitulo": {
+  "texto": "Your teacher's activities and challenges, the whole-class goal and what everyone has discovered."
+ },
+ "actividad.titulo": {
+  "texto": "Activities from your teacher"
+ },
+ "actividad.acertijo": {
+  "texto": "Riddle"
+ },
+ "actividad.adivina": {
+  "texto": "Guess"
+ },
+ "actividad.acertijo_texto": {
+  "texto": "A substance gives you clues: build it by joining cards."
+ },
+ "actividad.adivina_texto": {
+  "texto": "Which element or substance is each object? {n} rounds."
+ },
+ "actividad.hecha": {
+  "texto": "Done · {n} points"
+ },
+ "actividad.repetir": {
+  "texto": "Play again"
+ },
+ "actividad.ninguna": {
+  "texto": "Your teacher hasn't launched any yet. When they do, it will appear here."
+ },
+ "actividad.donde": {
+  "texto": "Where do you want to solve it?"
+ },
+ "profe.actividades": {
+  "texto": "Class activities"
+ },
+ "profe.actividades_texto": {
+  "texto": "Launch a riddle or a Guess game: every student in the class sees it in the Class tab (within a minute) and here you see who did it and how."
+ },
+ "profe.actividades_ninguna": {
+  "texto": "You haven't launched any yet."
+ },
+ "profe.lanzar_acertijo": {
+  "texto": "Launch a riddle"
+ },
+ "profe.que_acertijo": {
+  "texto": "Substance to guess and build"
+ },
+ "profe.lanzar_adivina": {
+  "texto": "Launch a Guess game"
+ },
+ "profe.adivina_texto": {
+  "texto": "Pick elements and substances: they see each one's everyday object in 3D and must say which it is (5 rounds)."
+ },
+ "profe.elementos": {
+  "texto": "Elements"
+ },
+ "profe.sustancias_curso": {
+  "texto": "Substances in {curso}"
+ },
+ "profe.lanzar": {
+  "texto": "Launch to the class"
+ },
+ "profe.actividad_abierta": {
+  "texto": "open"
+ },
+ "profe.actividad_cerrada": {
+  "texto": "closed"
+ },
+ "profe.actividad_hecha": {
+  "texto": "done by: {n} of {de}"
+ },
+ "profe.actividad_media": {
+  "texto": "average: {n} points"
+ },
+ "profe.actividad_resultados": {
+  "texto": "Results"
+ },
+ "profe.actividad_cerrar": {
+  "texto": "Close"
+ },
+ "demo.titulo": {
+  "texto": "Demo mode"
+ },
+ "demo.texto": {
+  "texto": "To present Labtory: every element unlocked, a month of made-up progress and inside a demo class with activities. Your real progress is kept apart and comes back when you leave."
+ },
+ "demo.entrar": {
+  "texto": "Start the demo"
+ },
+ "demo.salir": {
+  "texto": "Leave the demo"
+ },
+ "demo.chip": {
+  "texto": "🎬"
+ },
+ "demo.profe_titulo": {
+  "texto": "Demo"
+ },
+ "demo.profe_texto": {
+  "texto": "A class with 24 made-up aliases and a month of activity, to see the statistics, recommendations and activities without real data."
+ },
+ "demo.profe_boton": {
+  "texto": "See the demo class"
  }
 }

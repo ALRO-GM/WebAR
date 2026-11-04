@@ -13,6 +13,7 @@ import { renderMateriaScreen } from './materia';
 import './cast/cast.css';
 import { getCastSender, renderCastPanel, type CastDeps } from './cast';
 import { FEATURES } from './features';
+import { disableDemo, enableDemo, isDemo } from './platform/demo';
 import { PhotoMode } from './photo/photo';
 import { sfx } from './sfx';
 import { RIDDLES, RiddleRun, bestScores, resultHTML, stars, type Riddle, type RiddleResult } from './cards/riddle';
@@ -283,7 +284,7 @@ onSettingsChange.push(() => (cards.marker.debug = settings.diagnostico));
 // --- Acertijos: pistas → formar la sustancia con las tarjetas --------------------
 
 const riddles = (() => {
-  let pending: { riddle: Riddle; kind: CardsKind } | null = null;
+  let pending: { riddle: Riddle; kind: CardsKind; activity?: number } | null = null;
   let run: RiddleRun | null = null;
   let last: RiddleResult | null = null;
   const list = $('acertijos-lista');
@@ -309,15 +310,18 @@ const riddles = (() => {
     );
   }
 
-  function start(riddle: Riddle, kind: CardsKind, cardList = riddle.cards, together = false): void {
-    pending = { riddle, kind };
-    if (ar.running) void ar.end().then(() => start(riddle, kind, cardList, together));
+  function start(riddle: Riddle, kind: CardsKind, cardList = riddle.cards, together = false, activity?: number): void {
+    pending = { riddle, kind, activity };
+    if (ar.running) void ar.end().then(() => start(riddle, kind, cardList, together, activity));
     else enterCards(kind, kind === 'mesa' ? cardList : undefined, together);
   }
 
   function finish(result: RiddleResult): void {
     last = result;
     if (result.solved) void hub.recordChallenge(`acertijo-${result.riddle.id}`);
+    // Lanzado por el profesorado: el resultado le llega (aunque no se resuelva).
+    if (pending?.activity)
+      void hub.add('actividad', { actividad: pending.activity, tipo: 'acertijo', puntos: result.solved ? result.points : 0, resuelto: result.solved, pistas: result.clues, fallos: result.mistakes });
     $('acertijo-fin-contenido').innerHTML = resultHTML(result);
     const i = RIDDLES.indexOf(result.riddle);
     $('acertijo-siguiente').hidden = i === RIDDLES.length - 1;
@@ -330,16 +334,18 @@ const riddles = (() => {
   });
   $('acertijo-repetir').addEventListener('click', () => {
     $<HTMLDialogElement>('acertijo-fin').close();
-    if (last) start(last.riddle, pending?.kind ?? 'mesa');
+    if (last) start(last.riddle, pending?.kind ?? 'mesa', last.riddle.cards, false, pending?.activity);
   });
   $('acertijo-siguiente').addEventListener('click', () => {
     $<HTMLDialogElement>('acertijo-fin').close();
     if (last) start(RIDDLES[RIDDLES.indexOf(last.riddle) + 1] ?? RIDDLES[0], pending?.kind ?? 'mesa');
   });
-  $('entrar-acertijos').addEventListener('click', () => {
-    renderList();
-    $<HTMLDialogElement>('acertijos').showModal();
-  });
+  // Los acertijos los lanza el profesorado (pestaña Clase); la lista sigue para `?acertijos`.
+  if (params.has('acertijos'))
+    queueMicrotask(() => {
+      renderList();
+      $<HTMLDialogElement>('acertijos').showModal();
+    });
 
   return {
     onStart() {
@@ -435,6 +441,7 @@ function startGuess(nodeId?: string): void {
 }
 
 hub.actions = {
+  ...hub.actions,
   lab(node) {
     // La mesa trae lo necesario y un par de tarjetas que despistan.
     const species = getSpecies(node.species!)!;
@@ -445,7 +452,30 @@ hub.actions = {
   },
   guess: (node) => startGuess(node.id),
 };
-$('entrar-adivina').addEventListener('click', () => startGuess());
+// Actividades del profesorado (pestaña Clase): un acertijo (en la mesa o con
+// las tarjetas impresas) o una Adivina con los elementos que ha elegido.
+hub.actions.activity = (activity) => {
+  if (activity.tipo === 'adivina') {
+    playGuess($<HTMLDialogElement>('leccion'), activity.elementos, (r) => {
+      if (!r) return;
+      void hub.add('adivina', { aciertos: r.right, total: r.total, xp: r.xp, preguntas: r.answers });
+      void hub.add('actividad', { actividad: activity.id, tipo: 'adivina', puntos: r.total ? Math.round((100 * r.right) / r.total) : 0, aciertos: r.right, total: r.total });
+    });
+    return;
+  }
+  const riddle = RIDDLES.find((x) => x.id === activity.acertijo);
+  if (!riddle) return;
+  if (!cameraOk) return riddles.start(riddle, 'mesa', riddle.cards, false, activity.id);
+  hub.openDetail(`<h2 id="detalle-titulo">🕵️ ${t('actividad.acertijo')}</h2><p class="texto-suave">${t('actividad.donde')}</p><div class="modos">
+    <button type="button" class="modo card pulsable" data-donde="mesa"><span class="modo-icono" aria-hidden="true">🧪</span><span><b>${t('modo.mesa.titulo')}</b><span>${t('modo.mesa.texto')}</span></span></button>
+    <button type="button" class="modo card pulsable" data-donde="camara"><span class="modo-icono" aria-hidden="true">🃏</span><span><b>${t('modo.tarjetas.titulo')}</b><span>${t('modo.tarjetas.texto')}</span></span></button></div>`);
+  $('detalle-contenido').querySelectorAll<HTMLButtonElement>('[data-donde]').forEach((b) =>
+    b.addEventListener('click', () => {
+      $<HTMLDialogElement>('detalle').close();
+      riddles.start(riddle, b.dataset.donde as CardsKind, riddle.cards, false, activity.id);
+    }),
+  );
+};
 
 // Foto con científicos: los que ya conoces en el camino (y el gato) con tus átomos y moléculas.
 const photo = new PhotoMode({
@@ -454,6 +484,16 @@ const photo = new PhotoMode({
   contents: () => [...hub.progress.unlocked, ...hub.progress.species],
   onPhoto: () => void hub.add('foto', {}),
 });
+// Modo demostración (Ajustes, o ?demo=alumno): otro almacén, todo desbloqueado y la clase de demostración.
+$('demo-boton').textContent = isDemo() ? t('demo.salir') : t('demo.entrar');
+$('demo-chip').hidden = !isDemo();
+$('demo-chip').addEventListener('click', () => $<HTMLDialogElement>('ajustes').showModal());
+$('demo-boton').addEventListener('click', () => {
+  if (isDemo()) disableDemo();
+  else enableDemo();
+  location.href = location.pathname;
+});
+
 // En pausa (features.ts): el botón no se ve y no se puede entrar.
 $('entrar-foto').hidden = !FEATURES.foto;
 $('entrar-foto').addEventListener('click', () => {

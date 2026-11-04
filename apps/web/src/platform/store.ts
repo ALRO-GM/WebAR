@@ -1,3 +1,4 @@
+import { isDemo } from './demo';
 import type { EventType, ProgressEvent } from './progress';
 
 /**
@@ -9,7 +10,8 @@ interface StoredEvent extends ProgressEvent {
   enviado: 0 | 1;
 }
 
-const DB_NAME = 'webar';
+// En modo demostración, otro almacén: el progreso propio no se toca (platform/demo.ts).
+const DB_NAME = isDemo() ? 'webar-demo' : 'webar';
 let opening: Promise<IDBDatabase> | undefined;
 
 function open(): Promise<IDBDatabase> {
@@ -94,4 +96,15 @@ export async function persistStorage(): Promise<boolean> {
 
 export async function isPersisted(): Promise<boolean> {
   return (await navigator.storage?.persisted?.()) ?? false;
+}
+
+/** Mete eventos ya hechos (la demostración): marcados como enviados, no se sincronizan. */
+export async function importEvents(events: ProgressEvent[]): Promise<void> {
+  const db = await open();
+  await new Promise<void>((resolve, reject) => {
+    const tx = db.transaction('eventos', 'readwrite');
+    for (const e of events) tx.objectStore('eventos').put({ ...e, enviado: 1 });
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
 }

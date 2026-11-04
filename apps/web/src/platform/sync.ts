@@ -9,11 +9,18 @@ export interface ClassChallenge {
   ends: string | null;
 }
 
+/** Una actividad que el profesorado ha lanzado a la clase. */
+export type ClassActivity =
+  | { id: number; tipo: 'acertijo'; acertijo: string; creada: string }
+  | { id: number; tipo: 'adivina'; elementos: string[]; creada: string };
+
 /** Lo que el servidor cuenta de la clase en cada sincronización. */
 export interface ClassState {
   alumno: { id: number; alias: string };
   clase: { id: number; name: string; course: string; alumnos?: number };
   retos: ClassChallenge[];
+  /** Abiertas ahora (puede faltar en estados guardados antes de existir). */
+  actividades?: ClassActivity[];
   discovered: Array<{ species: string; students: number }>;
   feed: Array<{ alias: string; type: string; data: Record<string, unknown>; time: string }>;
   /** Cuándo se recibió (ISO). */
@@ -70,6 +77,8 @@ export class ClassSync extends Emitter<SyncEvents> {
       this.emit('change', undefined);
     });
     document.addEventListener('visibilitychange', () => document.visibilityState === 'visible' && void this.sync());
+    // En clase, cada minuto: así lo que lanza el profesorado llega sin recargar.
+    setInterval(() => document.visibilityState === 'visible' && this.online && void this.sync(), 60_000);
     this.emit('change', undefined);
     void this.sync();
   }

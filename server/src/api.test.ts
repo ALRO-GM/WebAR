@@ -51,11 +51,41 @@ describe('API de clases', () => {
     const resumen = call('GET', '/api/profesor/resumen', undefined, teacher).body as { clases: Array<{ alumnos: number }> };
     expect(resumen.clases).toEqual([expect.objectContaining({ id: cls.id, alumnos: 1 })]);
 
+    // Actividades: el profesor lanza un acertijo y una Adivina; el alumno las ve al sincronizar y su resultado le llega al profesor.
+    expect(call('POST', `/api/clases/${cls.id}/actividades`, { tipo: 'adivina', elementos: ['H'] }, teacher).status).toBe(400);
+    const riddle = call('POST', `/api/clases/${cls.id}/actividades`, { tipo: 'acertijo', acertijo: 'H2O' }, teacher).body as { id: number };
+    call('POST', `/api/clases/${cls.id}/actividades`, { tipo: 'adivina', elementos: ['H', 'O', 'He'] }, teacher);
+    const seen = call('POST', '/api/sync', { eventos: [{ id: 'act1', tipo: 'actividad', datos: { actividad: riddle.id, tipo: 'acertijo', puntos: 85, resuelto: true }, fecha: '2026-11-04T11:00:00Z' }] }, student).body as { actividades: Array<{ id: number; tipo: string }> };
+    expect(seen.actividades.map((a) => a.tipo).sort()).toEqual(['acertijo', 'adivina']);
+    const withResults = call('GET', `/api/clases/${cls.id}`, undefined, teacher).body as { actividades: Array<{ id: number; resultados: Array<{ alias: string; puntos: number }> }> };
+    expect(withResults.actividades.find((a) => a.id === riddle.id)!.resultados).toEqual([expect.objectContaining({ alias: 'Neón', puntos: 85 })]);
+    call('DELETE', `/api/clases/${cls.id}/actividades/${riddle.id}`, undefined, teacher);
+    const after = call('POST', '/api/sync', { eventos: [] }, student).body as { actividades: Array<{ tipo: string }> };
+    expect(after.actividades.map((a) => a.tipo)).toEqual(['adivina']);
+
     // Otro profesor no ve la clase; un alumno no puede usar rutas de profesor.
     const other = (call('POST', '/api/profesores', { email: 'otro@insti.es', nombre: 'Luis', password: 'segura123' }).body as { token: string }).token;
     expect(call('GET', `/api/clases/${cls.id}`, undefined, other).status).toBe(404);
     expect(call('GET', `/api/clases/${cls.id}/eventos`, undefined, other).status).toBe(404);
     expect(call('GET', `/api/clases/${cls.id}/eventos`, undefined, student).status).toBe(401);
     expect(call('GET', '/api/profesor', undefined, student).status).toBe(401);
+  });
+
+  it('demostración: un profesor con una clase de alias inventados y un alumno «Demo» en ella', () => {
+    const { call } = setup();
+    const demo = call('POST', '/api/demo').body as { token: string; clase: number };
+    const stats = call('GET', `/api/clases/${demo.clase}/eventos`, undefined, demo.token).body as { alumnos: unknown[]; eventos: unknown[] };
+    expect(stats.alumnos.length).toBe(24);
+    expect(stats.eventos.length).toBeGreaterThan(200);
+    const detail = call('GET', `/api/clases/${demo.clase}`, undefined, demo.token).body as { actividades: Array<{ resultados: unknown[] }> };
+    expect(detail.actividades).toHaveLength(2);
+    expect(detail.actividades.every((a) => a.resultados.length > 3)).toBe(true);
+    // Otra vez: la misma clase, sin duplicar alias.
+    expect((call('POST', '/api/demo').body as { clase: number }).clase).toBe(demo.clase);
+    const student = call('POST', '/api/demo/alumno').body as { token: string; alumno: { alias: string } };
+    expect(student.alumno.alias).toBe('Demo');
+    const sync = call('POST', '/api/sync', { eventos: [] }, student.token).body as { actividades: unknown[]; clase: { alumnos: number } };
+    expect(sync.actividades).toHaveLength(2);
+    expect(sync.clase.alumnos).toBe(25);
   });
 });

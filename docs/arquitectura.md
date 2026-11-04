@@ -338,6 +338,20 @@ Basada en [investigacion-plataforma.md](investigacion-plataforma.md).
 - **Estadísticas y recomendaciones** (`src/teacher/`, ruta
   `profesor.html#clase/<id>/estadisticas`): ver la sección siguiente.
 
+## Actividades de clase y demostración
+
+- **Actividades**: el profesorado lanza un acertijo o una Adivina (elige los
+  elementos y sustancias) desde su panel; a la clase le sale en la pestaña
+  Clase (sync cada minuto) y su resultado vuelve como evento `actividad`
+  (puntos, resuelto o aciertos). El panel enseña quién la ha hecho y la
+  media.
+- **Demostración** (`platform/demo.ts`, `server/src/demo.ts`): en Ajustes o
+  con `?demo=alumno`, la app usa otro almacén (`webar-demo`), con todo
+  desbloqueado, un mes de progreso inventado y el alumno «Demo» en la clase
+  de demostración; «Salir de la demostración» (o `?demo=salir`) vuelve al
+  progreso propio. En el panel, «Ver la clase de demostración» entra sin
+  cuenta en esa clase.
+
 ## Estadísticas del profesorado
 
 Cada respuesta del alumnado se guarda con su **tipo de pregunta** (datos de

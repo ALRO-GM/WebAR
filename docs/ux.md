@@ -19,6 +19,27 @@ que la investigación de gamificación dice que funciona con adolescentes
 | **Competir sin exponer** | Ligas semanales: la de clase usa el alias de clase; la mundial es opcional y el apodo lo pone el servidor («Neutrón Veloz 427»), para que nadie use su nombre. Quien no juega una semana no baja |
 | **Personajes y mascota** | 16 guías reales y diversos (sexo, origen, época) con frases escritas para la app (no citas inventadas). Schrödingato reacciona a lo que pasa y, si no lo miras, se vuelve nube de probabilidad; se puede quitar en ajustes |
 
+## Cómo se organiza la app
+
+Lo que imita a Duolingo no se toca: **Aprender** (el camino), la barra de
+arriba (racha, quarks, XP), **Liga** (misiones y liga) y el **perfil**
+(avatar y logros). El resto se ordena por lo que se hace en cada sitio:
+
+| Pestaña | Qué hay | Por qué ahí |
+| --- | --- | --- |
+| Aprender | Camino de lecciones | (Duolingo) |
+| Laboratorio | **Formar moléculas** (tarjetas en papel o en pantalla, imprimir), **Mirar de cerca** (explorar átomos: en 3D o en tu mesa) y **Retos** personales | Todo es experimentar; los retos se juegan aquí |
+| Materia | Cristales, formas de agruparse, estados del agua | Contenido propio |
+| Colección | Moléculas, tabla periódica, científicos | Lo conseguido |
+| **Clase** | Actividades que lanza el profesorado (acertijo, Adivina), unirse, meta común, retos del profesorado, proyectar y «Soy profe» | Antes estaba escondido en el perfil y los retos de clase en la Liga |
+| Liga | Misiones y liga | (Duolingo) |
+
+Nombres revisados: «Tarjetas en papel» y «Tarjetas en pantalla» (antes
+«Tarjetas con la cámara» y «Mesa virtual»: no se veía que eran lo mismo),
+«Tabla periódica» en la colección. Acertijos y Adivina libres salen del
+laboratorio: ahora los lanza el profesorado a su clase (Adivina sigue en el
+camino).
+
 ## Instalar la app
 
 Botón «⬇ Instalar» en la barra de arriba (en móviles estrechos, solo la

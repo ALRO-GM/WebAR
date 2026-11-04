@@ -14,8 +14,9 @@ import { sfx } from '../sfx';
 import { settings } from '../settings';
 import { Leagues } from './league';
 import { BADGES, COURSES, COURSE_SPECIES, SHOP, XP, chestQuarks, computeProgress, courseOf, progressDiff, type EventType, type Progress, type ShopItem } from './progress';
-import { addEvent, allEvents, isPersisted, persistStorage } from './store';
-import { ClassSync } from './sync';
+import { demoEvents, isDemo } from './demo';
+import { addEvent, allEvents, getSetting, importEvents, isPersisted, persistStorage, setSetting } from './store';
+import { ClassSync, type ClassActivity } from './sync';
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
@@ -34,9 +35,11 @@ export interface HubActions {
   lab(node: PathNode): void;
   /** Abre el juego de adivinar con esos elementos. */
   guess(node: PathNode): void;
+  /** Empieza una actividad que ha lanzado el profesorado. */
+  activity(activity: ClassActivity): void;
 }
 
-export type Screen = 'aprender' | 'lab' | 'materia' | 'coleccion' | 'liga' | 'perfil';
+export type Screen = 'aprender' | 'lab' | 'materia' | 'coleccion' | 'clase' | 'liga' | 'perfil';
 
 /**
  * La parte de «aprender jugando»: progreso, camino, misiones, ligas,
@@ -48,7 +51,7 @@ export class Hub {
   readonly sync = new ClassSync();
   readonly leagues = new Leagues(() => this.sync.studentToken);
   active: ActiveChallenge | null = null;
-  actions: HubActions = { lab: () => {}, guess: () => {} };
+  actions: HubActions = { lab: () => {}, guess: () => {}, activity: () => {} };
   /** Avisa de lo nuevo (la mascota lo comenta). */
   onCelebrate: (kind: 'leccion' | 'molecula' | 'racha' | 'nivel' | 'fallo', detail?: string) => void = () => {};
   private screen: Screen = 'aprender';
@@ -59,6 +62,7 @@ export class Hub {
 
   async init(): Promise<void> {
     translate();
+    if (isDemo()) await this.prepareDemo();
     this.progress = computeProgress(await allEvents());
     this.setupTabs();
     renderPeriodicTable($('tabla-progresiva'), (el) => this.showElement(el), (el) => !this.isUnlocked(el.symbol));
@@ -73,6 +77,7 @@ export class Hub {
       this.renderHeader();
       this.renderClass();
       this.renderChallenges();
+      this.renderActivities();
     });
     await this.leagues.init();
     await this.sync.init();
@@ -85,7 +90,20 @@ export class Hub {
   }
 
   isUnlocked(symbol: string): boolean {
-    return this.progress.unlocked.has(symbol);
+    // En la demostración, todo a mano para enseñarlo.
+    return isDemo() || this.progress.unlocked.has(symbol);
+  }
+
+  /** Demostración: un mes de progreso inventado y el alumno «Demo» en la clase de demostración. */
+  private async prepareDemo(): Promise<void> {
+    if (!(await allEvents()).length) await importEvents(demoEvents());
+    if (await getSetting('token')) return;
+    try {
+      const res = await fetch('/api/demo/alumno', { method: 'POST' });
+      if (res.ok) await setSetting('token', ((await res.json()) as { token: string }).token);
+    } catch {
+      // Sin red: la demostración funciona igual, sin clase.
+    }
   }
 
   /** Guarda un evento, recalcula y celebra lo nuevo. */
@@ -190,6 +208,7 @@ export class Hub {
     this.renderCharacters();
     this.renderChallenges();
     this.renderClass();
+    this.renderActivities();
     this.renderBadges();
     this.renderProfile();
     void this.renderOffline();
@@ -340,12 +359,15 @@ export class Hub {
       ...classChallenges.map((c) => ({ id: `clase-${c.id}`, title: c.title, targets: c.targets })),
       ...COURSES.map((c) => ({ id: `curso-${c}`, title: t('reto.curso.titulo', { curso: t(`curso.${c}`) }), targets: COURSE_SPECIES[c] })),
     ];
+    // Los personales en el laboratorio (es donde se juegan); los del profesorado, en Clase.
     $('retos').innerHTML = `
       <article class="reto card destacado"><div><b>⚡ ${t('retos.formula')}</b><small>${t('retos.formula_texto')}</small></div>
         <div class="reto-lado"><button type="button" class="btn racha pequeno" data-reto="formula">${t('retos.jugar')}</button></div></article>
-      ${this.sync.joined ? `<h3>${t('retos.clase')}</h3>${classChallenges.length ? classChallenges.map((c) => card(`clase-${c.id}`, c.title, c.targets, c.ends ? `${t('retos.hasta', { fecha: new Date(c.ends).toLocaleDateString(document.documentElement.lang) })} · ` : '')).join('') : `<p class="pequeno">${t('retos.ninguno')}</p>`}` : ''}
       <h3>${t('retos.curso')}</h3>${COURSES.map((c) => card(`curso-${c}`, t('reto.curso.titulo', { curso: t(`curso.${c}`) }), COURSE_SPECIES[c])).join('')}`;
-    $('retos').querySelectorAll<HTMLButtonElement>('[data-reto]').forEach((b) =>
+    $('retos-clase').innerHTML = this.sync.joined
+      ? `<h2>${t('retos.clase')}</h2>${classChallenges.length ? classChallenges.map((c) => card(`clase-${c.id}`, c.title, c.targets, c.ends ? `${t('retos.hasta', { fecha: new Date(c.ends).toLocaleDateString(document.documentElement.lang) })} · ` : '')).join('') : `<p class="pequeno">${t('retos.ninguno')}</p>`}`
+      : '';
+    document.querySelectorAll<HTMLButtonElement>('#retos [data-reto], #retos-clase [data-reto]').forEach((b) =>
       b.addEventListener('click', () => {
         const id = b.dataset.reto!;
         this.active = id === 'formula' ? this.formulaChallenge() : challenges.find((c) => c.id === id) ?? null;
@@ -407,6 +429,33 @@ export class Hub {
       ${feed ? `<h4>${t('clase.actividad')}</h4><ul class="feed">${feed}</ul>` : ''}
       <button id="clase-salir" type="button" class="btn claro pequeno">${t('clase.salir')}</button></div>`;
     $('clase-salir').addEventListener('click', () => void s.leave());
+  }
+
+  /** Lo que el profesorado ha lanzado a la clase: acertijos y Adivina. */
+  private renderActivities(): void {
+    const list = this.sync.joined ? (this.sync.state?.actividades ?? []) : [];
+    if (!this.sync.joined) return void ($('clase-actividades').innerHTML = '');
+    $('clase-actividades').innerHTML = `<h2>${t('actividad.titulo')}</h2>${
+      list.length
+        ? list
+            .map((a) => {
+              const done = this.progress.activities.get(a.id);
+              const what = a.tipo === 'acertijo' ? t('actividad.acertijo_texto') : t('actividad.adivina_texto', { n: Math.min(5, a.elementos.length) });
+              return `<article class="reto card ${done !== undefined ? 'hecho' : ''}">
+                <div><b>${a.tipo === 'acertijo' ? '🕵️' : '🔮'} ${t(`actividad.${a.tipo}`)}</b><small>${esc(what)}</small></div>
+                <div class="reto-lado">${done !== undefined ? `<span class="contador">${t('actividad.hecha', { n: done })}</span>` : ''}
+                <button type="button" class="btn pequeno${done !== undefined ? ' claro' : ''}" data-actividad="${a.id}">${done !== undefined ? t('actividad.repetir') : t('retos.jugar')}</button></div>
+              </article>`;
+            })
+            .join('')
+        : `<p class="pequeno">${t('actividad.ninguna')}</p>`
+    }`;
+    $('clase-actividades').querySelectorAll<HTMLButtonElement>('[data-actividad]').forEach((b) =>
+      b.addEventListener('click', () => {
+        const activity = list.find((a) => a.id === Number(b.dataset.actividad));
+        if (activity) this.actions.activity(activity);
+      }),
+    );
   }
 
   private renderBadges(): void {
@@ -548,7 +597,7 @@ export class Hub {
     if (!this.progress.read.has(el.symbol)) void this.add('lectura', { elemento: el.symbol });
   }
 
-  private openDetail(html: string): void {
+  openDetail(html: string): void {
     $('detalle-contenido').innerHTML = html;
     const d = $<HTMLDialogElement>('detalle');
     if (!d.open) d.showModal();

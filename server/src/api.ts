@@ -1,5 +1,6 @@
 import { checkSecret, classCode, hashSecret, issueToken, newToken, resolveToken, sha256 } from './auth.ts';
 import type { DB } from './db.ts';
+import { demoStudent, ensureDemo } from './demo.ts';
 import { closePastWeeks, freshNickname, GROUP_SIZE, previousWeek, quotas, weekOf, XP_PER_DAY, DEMOTE, PROMOTE } from './liga.ts';
 
 export interface ApiRequest {
@@ -14,7 +15,7 @@ export interface ApiResponse {
 }
 
 export const COURSES = ['2ESO', '3ESO', '4ESO', '1BACH'] as const;
-const EVENT_TYPES = new Set(['descubrir', 'reaccion', 'reto', 'elemento', 'leccion', 'lectura', 'adivina', 'compra', 'cofre', 'foto', 'racha']);
+const EVENT_TYPES = new Set(['actividad', 'descubrir', 'reaccion', 'reto', 'elemento', 'leccion', 'lectura', 'adivina', 'compra', 'cofre', 'foto', 'racha']);
 const MAX_EVENT_DATA = 2000;
 const AVATAR = /^[a-z0-9-]{1,30}$/;
 const MAX_EVENTS_PER_SYNC = 500;
@@ -81,6 +82,35 @@ export function createApi(db: DB, options: ApiOptions = {}) {
     return (q('select id, title, description, targets, ends, created from challenges where class_id = ? order by created desc').all(classId) as Row[]).map(
       (c) => ({ ...c, targets: JSON.parse(c.targets as string) }),
     );
+  }
+
+  /** Las actividades abiertas de la clase (lo que el alumnado ve para jugar). */
+  function openActivities(classId: number) {
+    return (q('select id, kind, config, created from activities where class_id = ? and closed is null order by created desc').all(classId) as Row[]).map((a) => ({
+      id: a.id,
+      tipo: a.kind,
+      ...JSON.parse(a.config as string),
+      creada: a.created,
+    }));
+  }
+
+  /** Todas las actividades con quién las ha hecho y cómo (para el profesorado). */
+  function activitiesWithResults(classId: number) {
+    const rows = q('select id, kind, config, created, closed from activities where class_id = ? order by created desc limit 30').all(classId) as Row[];
+    const results = q(
+      `select s.alias, e.data, e.client_time as fecha from events e join students s on s.id = e.student_id
+       where e.class_id = ? and e.type = 'actividad' order by e.client_time`,
+    ).all(classId) as Array<{ alias: string; data: string; fecha: string }>;
+    return rows.map((a) => {
+      const mine = results.map((r): Row => ({ alias: r.alias, fecha: r.fecha, ...(JSON.parse(r.data) as Row) })).filter((r) => r.actividad === a.id);
+      // Una fila por alias: su mejor intento.
+      const best = new Map<string, Row>();
+      for (const r of mine) {
+        const prev = best.get(r.alias as string);
+        if (!prev || Number(r.puntos ?? 0) > Number(prev.puntos ?? 0)) best.set(r.alias as string, r);
+      }
+      return { id: a.id, tipo: a.kind, ...JSON.parse(a.config as string), creada: a.created, cerrada: a.closed, resultados: [...best.values()] };
+    });
   }
 
   /** Lo que la clase ha conseguido junta (meta cooperativa) y lo último que ha pasado. */
@@ -189,6 +219,13 @@ export function createApi(db: DB, options: ApiOptions = {}) {
       return { desde: since, clases: rows };
     }],
 
+    // --- Demostración (datos inventados; ver demo.ts) -------------------------
+    ['POST', /^\/api\/demo$/, () => {
+      const { teacherToken, classId } = ensureDemo(db, now());
+      return { token: teacherToken, profesor: q('select id, email, name from teachers where id = (select teacher_id from classes where id = ?)').get(classId), clase: classId };
+    }],
+    ['POST', /^\/api\/demo\/alumno$/, () => demoStudent(db, now())],
+
     // --- Clases -------------------------------------------------------------
     ['POST', /^\/api\/clases$/, (req) => {
       const teacher = teacherFrom(req);
@@ -218,7 +255,7 @@ export function createApi(db: DB, options: ApiOptions = {}) {
         `select json_extract(data, '$.reaccion') as reaction, count(*) as times from events
          where class_id = ? and type = 'reaccion' group by reaction order by times desc limit 15`,
       ).all(id);
-      return { clase: cls, alumnos: students, retos: challengesOf(id), actividad: activity, reacciones: reactions, ...classSummary(id) };
+      return { clase: cls, alumnos: students, retos: challengesOf(id), actividades: activitiesWithResults(id), actividad: activity, reacciones: reactions, ...classSummary(id) };
     }],
     // Los eventos de la clase para las estadísticas: el panel los analiza (con
     // el mismo cálculo de progreso que la app). Solo alias y lo que se ha hecho.
@@ -263,6 +300,25 @@ export function createApi(db: DB, options: ApiOptions = {}) {
           .lastInsertRowid,
       );
       return { id };
+    }],
+    // Actividades: acertijo { acertijo: id } o Adivina { elementos: [...] }.
+    ['POST', /^\/api\/clases\/(\d+)\/actividades$/, (req, m) => {
+      ownClass(teacherFrom(req), Number(m[1]));
+      const b = (req.body ?? {}) as Row;
+      let config: Row;
+      if (b.tipo === 'acertijo') config = { acertijo: str(b.acertijo, 'acertijo', 1, 20) };
+      else if (b.tipo === 'adivina') {
+        const list = b.elementos;
+        if (!Array.isArray(list) || list.length < 2 || list.length > 40 || !list.every((x) => typeof x === 'string' && /^[A-Za-z0-9()]{1,12}$/.test(x))) fail(400, 'Elige al menos 2 elementos o sustancias');
+        config = { elementos: [...new Set(list as string[])] };
+      } else return fail(400, 'Tipo de actividad no válido');
+      const id = Number(q('insert into activities (class_id, kind, config) values (?, ?, ?)').run(Number(m[1]), b.tipo as string, JSON.stringify(config)).lastInsertRowid);
+      return { id };
+    }],
+    ['DELETE', /^\/api\/clases\/(\d+)\/actividades\/(\d+)$/, (req, m) => {
+      ownClass(teacherFrom(req), Number(m[1]));
+      q("update activities set closed = datetime('now') where id = ? and class_id = ? and closed is null").run(Number(m[2]), Number(m[1]));
+      return { ok: true };
     }],
     ['DELETE', /^\/api\/clases\/(\d+)\/retos\/(\d+)$/, (req, m) => {
       ownClass(teacherFrom(req), Number(m[1]));
@@ -314,7 +370,14 @@ export function createApi(db: DB, options: ApiOptions = {}) {
       }
       const cls = q('select id, name, course from classes where id = ?').get(student.class_id as number) as Row;
       const classmates = (q('select count(*) as n from students where class_id = ?').get(cls.id as number) as Row).n;
-      return { aceptados: accepted, alumno: { id: student.id, alias: student.alias }, clase: { ...cls, alumnos: classmates }, retos: challengesOf(cls.id as number), ...classSummary(cls.id as number) };
+      return {
+        aceptados: accepted,
+        alumno: { id: student.id, alias: student.alias },
+        clase: { ...cls, alumnos: classmates },
+        retos: challengesOf(cls.id as number),
+        actividades: openActivities(cls.id as number),
+        ...classSummary(cls.id as number),
+      };
     }],
 
     // --- Jugadores (anónimos) y ligas --------------------------------------

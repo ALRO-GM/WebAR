@@ -3,7 +3,10 @@ import './style.css';
 import './teacher.css';
 import qrcode from 'qrcode-generator';
 import { REACTIONS, SPECIES, getSpecies } from '@webar/chem';
-import { t, translate } from './i18n';
+import { has, t, translate } from './i18n';
+import { contentName, speciesName } from './i18n/content';
+import { RIDDLES } from './cards/riddle';
+import { NODES } from './learn/path';
 import { applySettings } from './settings';
 import { COURSES, COURSE_SPECIES } from './platform/progress';
 import { wireTooltips } from './teacher/charts';
@@ -22,6 +25,10 @@ interface Detail {
   clase: ClassRow;
   alumnos: Array<{ id: number; alias: string; last_seen: string | null; discovered: number; reactions: number; challenges: number }>;
   retos: Array<{ id: number; title: string; description: string; targets: string[]; ends: string | null }>;
+  actividades: Array<{
+    id: number; tipo: 'acertijo' | 'adivina'; acertijo?: string; elementos?: string[]; creada: string; cerrada: string | null;
+    resultados: Array<{ alias: string; puntos?: number; resuelto?: boolean; aciertos?: number; total?: number }>;
+  }>;
   actividad: Array<{ day: string; events: number }>;
   reacciones: Array<{ reaction: string; times: number }>;
   discovered: Array<{ species: string; students: number }>;
@@ -77,7 +84,20 @@ function renderLogin(): void {
       <label>${t('profe.nombre')}<input name="nombre" required maxlength="80" autocomplete="name" /></label>
       <label>${t('profe.email')}<input name="email" type="email" required autocomplete="email" /></label>
       <label>${t('profe.password')}<input name="password" type="password" required minlength="8" autocomplete="new-password" /></label>
-      <button>${t('profe.crear_cuenta')}</button><p class="error" role="alert"></p></form></div>`;
+      <button>${t('profe.crear_cuenta')}</button><p class="error" role="alert"></p></form></div>
+    <section class="tarjeta-panel demo-profe"><h2>🎬 ${t('demo.profe_titulo')}</h2><p class="pequeno">${t('demo.profe_texto')}</p>
+      <button id="demo-profe" type="button">${t('demo.profe_boton')}</button><p class="error" role="alert"></p></section>`;
+  $('demo-profe').addEventListener('click', async () => {
+    try {
+      const res = await api<{ token: string; clase: number }>('POST', '/api/demo');
+      token = res.token;
+      localStorage.setItem('webar:profe', res.token);
+      location.hash = `clase/${res.clase}/estadisticas`;
+      await route();
+    } catch (error) {
+      view.querySelector('.demo-profe .error')!.textContent = (error as Error).message;
+    }
+  });
   for (const [id, path] of [['f-entrar', '/api/sesion'], ['f-registro', '/api/profesores']] as const) {
     const form = $<HTMLFormElement>(id);
     guard(form, async () => {
@@ -132,6 +152,8 @@ async function renderClass(id: number): Promise<void> {
       <div><h3>${t('profe.codigo')}</h3><p class="codigo">${d.clase.code}</p><p class="pequeno">${t('profe.codigo_texto')}</p><p class="pequeno"><a href="${esc(link)}">${esc(link)}</a></p></div>
       <div class="qr" role="img" aria-label="QR: ${esc(link)}">${qr.createSvgTag({ cellSize: 5, margin: 2, scalable: true })}</div>
     </section>
+
+    ${activitiesSection(d)}
 
     <section class="tiles">
       ${tile(t('profe.tile.alumnos'), d.alumnos.length)}
@@ -189,6 +211,7 @@ async function renderClass(id: number): Promise<void> {
   view.querySelectorAll<HTMLButtonElement>('[data-curso]').forEach((b) =>
     b.addEventListener('click', () => view.querySelectorAll<HTMLInputElement>(`[data-de="${b.dataset.curso}"]`).forEach((i) => (i.checked = true))),
   );
+  wireActivities(id);
   const form = $<HTMLFormElement>('f-reto');
   guard(form, async () => {
     const data = new FormData(form);
@@ -220,6 +243,59 @@ async function renderClass(id: number): Promise<void> {
     await api('DELETE', `/api/clases/${id}`);
     location.hash = '';
   });
+}
+
+// --- Actividades para la clase (acertijos y Adivina) -------------------------------
+
+/** Lo que se puede poner en una Adivina: elementos del camino y sustancias del curso con objeto cotidiano. */
+function guessOptions(course: string): { elements: string[]; species: string[] } {
+  const elements = [...new Set(NODES.filter((n) => n.kind === 'leccion').map((n) => n.elements[0]))].filter((s) => has(`objeto.${s}`)).slice(0, 40);
+  const species = (COURSE_SPECIES[course as keyof typeof COURSE_SPECIES] ?? []).filter((s) => has(`objeto.${s}`));
+  return { elements, species };
+}
+
+function activitiesSection(d: Detail): string {
+  const students = d.alumnos.length;
+  const { elements, species } = guessOptions(d.clase.course);
+  const check = (c: string, on: boolean) => `<label class="casilla"><input type="checkbox" name="elementos" value="${esc(c)}" ${on ? 'checked' : ''}/>${esc(contentName(c))}</label>`;
+  const list = d.actividades.map((a) => {
+    const done = a.resultados.length;
+    const avg = done ? Math.round(a.resultados.reduce((s, r) => s + Number(r.puntos ?? 0), 0) / done) : 0;
+    const what = a.tipo === 'acertijo' ? `🕵️ ${t('actividad.acertijo')}: ${esc(speciesName(a.acertijo ?? ''))}` : `🔮 ${t('actividad.adivina')}: ${(a.elementos ?? []).map((c) => esc(contentName(c))).join(', ')}`;
+    return `<div class="reto actividad"><div><b>${what}</b>
+      <small>${new Date(a.creada.replace(' ', 'T') + 'Z').toLocaleString(document.documentElement.lang, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })} · ${a.cerrada ? t('profe.actividad_cerrada') : t('profe.actividad_abierta')} · ${t('profe.actividad_hecha', { n: done, de: students })}${done ? ` · ${t('profe.actividad_media', { n: avg })}` : ''}</small>
+      ${done ? `<details><summary>${t('profe.actividad_resultados')}</summary><ul>${a.resultados.map((r) => `<li>${esc(r.alias)}: ${r.puntos ?? 0}${a.tipo === 'acertijo' ? (r.resuelto ? ' ✓' : ' ✗') : ` (${r.aciertos ?? 0}/${r.total ?? 0})`}</li>`).join('')}</ul></details>` : ''}</div>
+      ${a.cerrada ? '' : `<button class="secundario" data-cerrar-actividad="${a.id}">${t('profe.actividad_cerrar')}</button>`}</div>`;
+  }).join('');
+  return `<section class="tarjeta-panel"><h3>${t('profe.actividades')}</h3><p class="pequeno">${t('profe.actividades_texto')}</p>
+    ${list || `<p class="pequeno">${t('profe.actividades_ninguna')}</p>`}
+    <form id="f-acertijo" class="nuevo-reto"><h4>🕵️ ${t('profe.lanzar_acertijo')}</h4>
+      <label>${t('profe.que_acertijo')}<select name="acertijo">${RIDDLES.map((r) => `<option value="${r.id}">${esc(speciesName(r.target))} (${t(`acertijo.dificultad.${r.difficulty}`)})</option>`).join('')}</select></label>
+      <button>${t('profe.lanzar')}</button><p class="error" role="alert"></p></form>
+    <form id="f-adivina" class="nuevo-reto"><h4>🔮 ${t('profe.lanzar_adivina')}</h4><p class="pequeno">${t('profe.adivina_texto')}</p>
+      <fieldset><legend>${t('profe.elementos')}</legend><div class="grupo">${elements.map((c, i) => check(c, i < 8)).join('')}</div></fieldset>
+      ${species.length ? `<fieldset><legend>${t('profe.sustancias_curso', { curso: t(`curso.${d.clase.course}`) })}</legend><div class="grupo">${species.map((c) => check(c, false)).join('')}</div></fieldset>` : ''}
+      <button>${t('profe.lanzar')}</button><p class="error" role="alert"></p></form>
+  </section>`;
+}
+
+function wireActivities(id: number): void {
+  const riddle = $<HTMLFormElement>('f-acertijo');
+  guard(riddle, async () => {
+    await api('POST', `/api/clases/${id}/actividades`, { tipo: 'acertijo', acertijo: new FormData(riddle).get('acertijo') });
+    await renderClass(id);
+  });
+  const guess = $<HTMLFormElement>('f-adivina');
+  guard(guess, async () => {
+    await api('POST', `/api/clases/${id}/actividades`, { tipo: 'adivina', elementos: new FormData(guess).getAll('elementos') });
+    await renderClass(id);
+  });
+  view.querySelectorAll<HTMLButtonElement>('[data-cerrar-actividad]').forEach((b) =>
+    b.addEventListener('click', async () => {
+      await api('DELETE', `/api/clases/${id}/actividades/${b.dataset.cerrarActividad}`);
+      await renderClass(id);
+    }),
+  );
 }
 
 const tile = (label: string, value: unknown) => `<div class="tile"><span class="valor">${value}</span><span class="etiqueta">${esc(label)}</span></div>`;

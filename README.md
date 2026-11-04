@@ -65,6 +65,7 @@ Las reglas para agentes de IA están en [AGENTS.md](AGENTS.md).
 
 | Fecha | Qué cambió |
 | --- | --- |
+| 2026-11-04 | Pestaña **Clase** (actividades del profesorado, meta común, retos de clase, proyectar); laboratorio ordenado en «Formar moléculas», «Mirar de cerca» y retos; acertijos y Adivina los lanza el profesorado a su clase y ve los resultados; **modo demostración** (clase con alias inventados en el panel y alumno con todo desbloqueado: Ajustes o `?demo=alumno`) |
 | 2026-11-04 | La app se llama **Labtory** y vive en `labtory.peer4u.app`; `webar.peer4u.app` redirige (enlaces, QR y tarjetas impresas siguen valiendo) |
 | 2026-11-04 | Mesa virtual: «➕ Añadir elemento» abre la tabla periódica (la bandeja se cortaba en el móvil). Explorar átomos y átomos sobre la mesa, en un solo modo con «En 3D / En tu mesa». Foto con científicos en pausa |
 | 2026-11-04 | Botón «Instalar» a la vista en la barra de arriba (solo donde se puede instalar; en iPhone explica los pasos) que desaparece al instalarla; el aviso del navegador ya no se pierde al arrancar |
