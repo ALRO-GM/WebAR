@@ -9,6 +9,7 @@
     "preview": "vite preview --host"
   },
   "dependencies": {
+    "@fontsource-variable/nunito": "^5.3.0",
     "@webar/ar-core": "*",
     "@webar/chem": "*",
     "qrcode-generator": "^2.0.4",

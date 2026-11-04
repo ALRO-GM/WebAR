@@ -1,9 +1,7 @@
-import en from './en.json';
-import es from './es.json';
-
 /**
- * Todos los textos de la interfaz están en una tabla (es.json): clave → texto y
- * una descripción para quien traduzca. Otro idioma = otro fichero con las
+ * Todos los textos de la interfaz están en tablas (es/*.json): clave → texto y
+ * una descripción para quien traduzca. Cada sección tiene su fichero (ui,
+ * personajes, elementos…); se juntan aquí. Otro idioma = otra carpeta con las
  * mismas claves (basta con «texto»); lo que falte sale en español.
  */
 export interface TextEntry {
@@ -12,12 +10,22 @@ export interface TextEntry {
 }
 export type TextTable = Record<string, TextEntry>;
 
-const TABLES: Record<string, TextTable> = { es: es as TextTable, en: en as TextTable };
+/** Junta los ficheros de una carpeta de idioma en una sola tabla. */
+function merge(files: Record<string, unknown>): TextTable {
+  const table: TextTable = {};
+  for (const mod of Object.values(files)) Object.assign(table, (mod as { default: TextTable }).default);
+  return table;
+}
+
+const TABLES: Record<string, TextTable> = {
+  es: merge(import.meta.glob('./es/*.json', { eager: true })),
+  en: merge(import.meta.glob('./en/*.json', { eager: true })),
+};
 let current: TextTable = TABLES.es;
 
 export function setLanguage(lang: string): void {
   current = TABLES[lang] ?? TABLES[lang.split('-')[0]] ?? TABLES.es;
-  document.documentElement.lang = TABLES[lang] ? lang : 'es';
+  if (typeof document !== 'undefined') document.documentElement.lang = TABLES[lang] ? lang : 'es';
 }
 
 /** Añade un idioma (p. ej. cargado bajo demanda). */
@@ -34,6 +42,11 @@ export function t(key: string, vars: Record<string, string | number> = {}): stri
 
 export function has(key: string): boolean {
   return key in current || key in TABLES.es;
+}
+
+/** Todas las claves en español que empiezan por `prefix` (p. ej. las frases del gato). */
+export function keysWithPrefix(prefix: string): string[] {
+  return Object.keys(TABLES.es).filter((k) => k.startsWith(prefix));
 }
 
 /** Traduce el HTML: data-t="clave" (texto) y data-t-attr="atributo:clave;otro:clave". */
