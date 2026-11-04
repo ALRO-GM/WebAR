@@ -37,6 +37,10 @@
               <span class="modo-icono" aria-hidden="true">🃏</span>
               <span><b data-t="modo.tarjetas.titulo"></b><span data-t="modo.tarjetas.texto"></span></span>
             </button>
+            <button id="entrar-acertijos" type="button" class="modo modo-acertijo">
+              <span class="modo-icono" aria-hidden="true">🕵️</span>
+              <span><b data-t="acertijo.titulo"></b><span data-t="acertijo.subtitulo"></span></span>
+            </button>
             <button id="entrar-mesa" type="button" class="modo">
               <span class="modo-icono" aria-hidden="true">🧪</span>
               <span><b data-t="modo.mesa.titulo"></b><span data-t="modo.mesa.texto"></span></span>
@@ -175,6 +179,21 @@
     <dialog id="detalle" class="detalle" aria-labelledby="detalle-titulo">
       <div id="detalle-contenido"></div>
       <form method="dialog"><button class="secundario" data-t="comun.cerrar"></button></form>
+    </dialog>
+
+    <dialog id="acertijos" class="detalle" aria-labelledby="acertijos-titulo">
+      <h2 id="acertijos-titulo" data-t="acertijo.elige"></h2>
+      <div id="acertijos-lista" class="acertijos-lista"></div>
+      <form method="dialog"><button class="secundario" data-t="comun.cerrar"></button></form>
+    </dialog>
+
+    <dialog id="acertijo-fin" class="detalle" aria-labelledby="detalle-titulo">
+      <div id="acertijo-fin-contenido"></div>
+      <div class="fila acertijo-botones">
+        <button id="acertijo-salir" type="button" class="secundario" data-t="acertijo.salir"></button>
+        <button id="acertijo-repetir" type="button" class="secundario" data-t="acertijo.repetir"></button>
+        <button id="acertijo-siguiente" type="button" data-t="acertijo.siguiente"></button>
+      </div>
     </dialog>
 
     <dialog id="ajustes" class="detalle" aria-labelledby="ajustes-titulo">

@@ -1,0 +1,242 @@
+{
+ "acertijo.titulo": {
+  "texto": "Acertijos",
+  "descripcion": "Nombre del juego de acertijos (botón del inicio)"
+ },
+ "acertijo.subtitulo": {
+  "texto": "Te doy pistas y tú formas la sustancia con las tarjetas",
+  "descripcion": "Explicación corta del juego de acertijos en el botón del inicio"
+ },
+ "acertijo.elige": {
+  "texto": "Elige un acertijo",
+  "descripcion": "Título de la lista de acertijos"
+ },
+ "acertijo.numero": {
+  "texto": "Acertijo {n} de {total}",
+  "descripcion": "Cabecera del panel del acertijo en juego"
+ },
+ "acertijo.quien": {
+  "texto": "¿Quién soy?",
+  "descripcion": "Pregunta del acertijo, encima de las pistas"
+ },
+ "acertijo.puntos": {
+  "texto": "{n} puntos",
+  "descripcion": "Puntos que quedan en el acertijo"
+ },
+ "acertijo.pista_boton": {
+  "texto": "Otra pista (−{n})",
+  "descripcion": "Botón para pedir otra pista; entre paréntesis, los puntos que cuesta"
+ },
+ "acertijo.sin_pistas": {
+  "texto": "No quedan pistas",
+  "descripcion": "Botón de pista cuando ya se han dado todas"
+ },
+ "acertijo.rendirse": {
+  "texto": "Me rindo",
+  "descripcion": "Botón para abandonar el acertijo y ver la solución"
+ },
+ "acertijo.como": {
+  "texto": "Junta las tarjetas que creas y mantenlas juntas 3 segundos. Cada pista extra o cada combinación equivocada resta puntos.",
+  "descripcion": "Instrucciones del acertijo, debajo de las pistas"
+ },
+ "acertijo.mal_producto": {
+  "texto": "Eso es {nombre}, pero no soy yo. −{n} puntos",
+  "descripcion": "Aviso cuando se forma una sustancia que no es la buscada"
+ },
+ "acertijo.buen_paso": {
+  "texto": "¡Buen paso! {formula} me acerca a la respuesta",
+  "descripcion": "Aviso cuando se forma una sustancia intermedia que lleva a la respuesta"
+ },
+ "acertijo.nada": {
+  "texto": "Esas tarjetas no forman nada. −{n} puntos",
+  "descripcion": "Aviso cuando unas tarjetas juntas no forman ninguna sustancia"
+ },
+ "acertijo.conseguido": {
+  "texto": "¡Lo has conseguido!",
+  "descripcion": "Título de la pantalla de acierto"
+ },
+ "acertijo.solucion_titulo": {
+  "texto": "La solución",
+  "descripcion": "Título de la pantalla cuando el alumno se rinde"
+ },
+ "acertijo.era": {
+  "texto": "Era {nombre} ({formula})",
+  "descripcion": "Debajo del título: qué sustancia era"
+ },
+ "acertijo.pistas_titulo": {
+  "texto": "Las pistas, explicadas",
+  "descripcion": "Encabezado de la explicación de cada pista al acabar"
+ },
+ "acertijo.resultado": {
+  "texto": "{puntos} puntos · pistas: {pistas} · fallos: {fallos}",
+  "descripcion": "Resumen al acabar el acertijo"
+ },
+ "acertijo.siguiente": {
+  "texto": "Siguiente acertijo",
+  "descripcion": "Botón para pasar al siguiente acertijo"
+ },
+ "acertijo.repetir": {
+  "texto": "Repetir",
+  "descripcion": "Botón para volver a jugar el mismo acertijo"
+ },
+ "acertijo.salir": {
+  "texto": "Volver al inicio",
+  "descripcion": "Botón para salir del juego de acertijos"
+ },
+ "acertijo.mejor": {
+  "texto": "Mejor: {n} puntos",
+  "descripcion": "Mejor puntuación guardada de un acertijo"
+ },
+ "acertijo.nuevo": {
+  "texto": "Sin jugar",
+  "descripcion": "Acertijo que aún no se ha jugado"
+ },
+ "acertijo.estrellas": {
+  "texto": "{n} de 3 estrellas",
+  "descripcion": "Para lectores de pantalla: estrellas conseguidas"
+ },
+ "acertijo.dificultad.1": {
+  "texto": "Fácil",
+  "descripcion": "Dificultad del acertijo"
+ },
+ "acertijo.dificultad.2": {
+  "texto": "Media",
+  "descripcion": "Dificultad del acertijo"
+ },
+ "acertijo.H2.pista.1": {
+  "texto": "Soy el gas más ligero que existe: los primeros dirigibles volaban gracias a mí.",
+  "descripcion": "Acertijo del hidrógeno molecular (H₂), pista 1"
+ },
+ "acertijo.H2.pista.2": {
+  "texto": "Si me quemas, solo dejo agua. Por eso me llaman «combustible limpio».",
+  "descripcion": "Acertijo del H₂, pista 2"
+ },
+ "acertijo.H2.pista.3": {
+  "texto": "Mi elemento es el más abundante del universo: las estrellas lo fusionan para brillar.",
+  "descripcion": "Acertijo del H₂, pista 3"
+ },
+ "acertijo.H2.pista.4": {
+  "texto": "Soy dos átomos iguales del elemento que tiene un solo protón: soy el hidrógeno molecular.",
+  "descripcion": "Acertijo del H₂, pista 4 (casi da la respuesta)"
+ },
+ "acertijo.H2.explica.1": {
+  "texto": "El H₂ pesa unas 14 veces menos que el aire. Por eso un globo lleno de hidrógeno sube… y por eso es peligroso: el dirigible Hindenburg ardió en 1937. Hoy los globos se llenan de helio.",
+  "descripcion": "Explicación de la pista 1 del H₂ al acabar"
+ },
+ "acertijo.H2.explica.2": {
+  "texto": "Al arder, 2 H₂ + O₂ → 2 H₂O: no sale CO₂. Por eso los coches de pila de hidrógeno solo expulsan vapor de agua.",
+  "descripcion": "Explicación de la pista 2 del H₂"
+ },
+ "acertijo.H2.explica.3": {
+  "texto": "Unas tres cuartas partes de la materia normal del universo es hidrógeno. En el Sol, sus núcleos se fusionan y forman helio, liberando la energía que nos llega como luz.",
+  "descripcion": "Explicación de la pista 3 del H₂"
+ },
+ "acertijo.H2.explica.4": {
+  "texto": "El hidrógeno tiene 1 protón y 1 electrón. Un átomo suelto es muy inestable: dos átomos comparten sus electrones en un enlace covalente y forman la molécula H₂.",
+  "descripcion": "Explicación de la pista 4 del H₂"
+ },
+ "acertijo.O2.pista.1": {
+  "texto": "Sin mí no podrías respirar: soy una de cada cinco partes del aire.",
+  "descripcion": "Acertijo del oxígeno molecular (O₂), pista 1"
+ },
+ "acertijo.O2.pista.2": {
+  "texto": "Ningún fuego arde sin mí: por eso una manta apaga las llamas.",
+  "descripcion": "Acertijo del O₂, pista 2"
+ },
+ "acertijo.O2.pista.3": {
+  "texto": "Las plantas me sueltan al hacer la fotosíntesis.",
+  "descripcion": "Acertijo del O₂, pista 3"
+ },
+ "acertijo.O2.pista.4": {
+  "texto": "Soy dos átomos iguales con 8 protones cada uno, unidos por un doble enlace: soy el oxígeno molecular.",
+  "descripcion": "Acertijo del O₂, pista 4 (casi da la respuesta)"
+ },
+ "acertijo.O2.explica.1": {
+  "texto": "El aire tiene un 21 % de O₂. Tus células lo usan para «quemar» la glucosa y sacar energía: por eso respiras unas 20 000 veces al día.",
+  "descripcion": "Explicación de la pista 1 del O₂"
+ },
+ "acertijo.O2.explica.2": {
+  "texto": "Para que haya fuego hacen falta combustible, calor y oxígeno (el triángulo del fuego). Una manta o la espuma de un extintor le quitan el oxígeno a la llama.",
+  "descripcion": "Explicación de la pista 2 del O₂"
+ },
+ "acertijo.O2.explica.3": {
+  "texto": "En la fotosíntesis, las plantas y las algas usan la luz para convertir CO₂ y agua en azúcar, y liberan O₂. Más de la mitad del oxígeno lo producen las algas del mar.",
+  "descripcion": "Explicación de la pista 3 del O₂"
+ },
+ "acertijo.O2.explica.4": {
+  "texto": "Cada átomo de oxígeno tiene 6 electrones en su última capa y le faltan 2: los dos átomos comparten dos pares de electrones, un doble enlace.",
+  "descripcion": "Explicación de la pista 4 del O₂"
+ },
+ "acertijo.N2.pista.1": {
+  "texto": "Soy el gas más abundante del aire que respiras: casi cuatro de cada cinco partes.",
+  "descripcion": "Acertijo del nitrógeno molecular (N₂), pista 1"
+ },
+ "acertijo.N2.pista.2": {
+  "texto": "Soy casi inerte: no reacciono con casi nada. Por eso me meten en las bolsas de patatas fritas.",
+  "descripcion": "Acertijo del N₂, pista 2"
+ },
+ "acertijo.N2.pista.3": {
+  "texto": "Me formo con dos átomos iguales, unidos por un triple enlace.",
+  "descripcion": "Acertijo del N₂, pista 3"
+ },
+ "acertijo.N2.pista.4": {
+  "texto": "Cada uno de mis átomos tiene 7 protones: soy el nitrógeno molecular.",
+  "descripcion": "Acertijo del N₂, pista 4 (casi da la respuesta)"
+ },
+ "acertijo.N2.explica.1": {
+  "texto": "El aire es un 78 % N₂. En cada respiración tomas casi cuatro veces más nitrógeno que oxígeno, y lo devuelves sin usarlo.",
+  "descripcion": "Explicación de la pista 1 del N₂"
+ },
+ "acertijo.N2.explica.2": {
+  "texto": "Las bolsas de patatas se llenan de nitrógeno para echar el oxígeno, que pondría rancio el aceite. Además hace de cojín para que no se rompan.",
+  "descripcion": "Explicación de la pista 2 del N₂"
+ },
+ "acertijo.N2.explica.3": {
+  "texto": "El triple enlace N≡N es de los más fuertes de la química: romperlo cuesta tanta energía que el N₂ casi no reacciona. Las plantas lo necesitan pero no pueden usarlo directamente: dependen de bacterias, de los rayos o de los abonos.",
+  "descripcion": "Explicación de la pista 3 del N₂"
+ },
+ "acertijo.N2.explica.4": {
+  "texto": "Al nitrógeno le faltan 3 electrones para llenar su última capa: cada átomo comparte 3 con el otro. Enfriado a −196 °C se vuelve líquido y se usa para congelar al instante.",
+  "descripcion": "Explicación de la pista 4 del N₂"
+ },
+ "acertijo.H2O.pista.1": {
+  "texto": "Cubro más de dos tercios de la superficie de la Tierra y soy más de la mitad de tu cuerpo.",
+  "descripcion": "Acertijo del agua (H₂O), pista 1"
+ },
+ "acertijo.H2O.pista.2": {
+  "texto": "Mi forma es angular, como un bumerán: por eso soy polar y disuelvo muchísimas cosas.",
+  "descripcion": "Acertijo del agua, pista 2"
+ },
+ "acertijo.H2O.pista.3": {
+  "texto": "Cuando me congelo, floto sobre mí misma.",
+  "descripcion": "Acertijo del agua, pista 3"
+ },
+ "acertijo.H2O.pista.4": {
+  "texto": "Tengo tres átomos: dos de hidrógeno y uno de oxígeno.",
+  "descripcion": "Acertijo del agua, pista 4 (casi da la respuesta)"
+ },
+ "acertijo.H2O.explica.1": {
+  "texto": "Los océanos cubren un 71 % de la Tierra y el cuerpo de un adulto es, más o menos, un 60 % agua.",
+  "descripcion": "Explicación de la pista 1 del agua"
+ },
+ "acertijo.H2O.explica.2": {
+  "texto": "Los dos H forman un ángulo de 104,5° con el O. El oxígeno atrae más los electrones: queda un lado negativo y otro positivo, y eso le permite rodear y separar iones como los de la sal.",
+  "descripcion": "Explicación de la pista 2 del agua"
+ },
+ "acertijo.H2O.explica.3": {
+  "texto": "Al congelarse, las moléculas se ordenan en una red hexagonal con huecos, unidas por puentes de hidrógeno: el hielo es menos denso que el agua líquida y flota. Casi todas las sustancias hacen lo contrario.",
+  "descripcion": "Explicación de la pista 3 del agua"
+ },
+ "acertijo.H2O.explica.4": {
+  "texto": "Puedes formarla de golpe (H + H + O) o por pasos: primero H₂ y luego H₂ + O. Cavendish la obtuvo quemando hidrógeno en 1781 y Lavoisier demostró que no era un elemento.",
+  "descripcion": "Explicación de la pista 4 del agua"
+ },
+ "acertijo.plegar": {
+  "texto": "Plegar las pistas",
+  "descripcion": "Botón para plegar o desplegar el panel de pistas (lectores de pantalla)"
+ },
+ "acertijo.desplegar": {
+  "texto": "Ver las pistas",
+  "descripcion": "Botón para plegar o desplegar el panel de pistas (lectores de pantalla)"
+ }
+}

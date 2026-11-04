@@ -4,6 +4,7 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { ARSession, ViewerProvider, WebXRWorldProvider, detectARSupport, type ARAnchor, type ARProvider } from '@webar/ar-core';
 import { AtomView, ELEMENTS, atomComposition, composition, formatConfiguration, getElement, getSpecies, type AtomModel, type ElementData } from '@webar/chem';
 import { CardsMode, type CardsKind } from './cards/mode';
+import { RIDDLES, RiddleRun, bestScores, resultHTML, stars, type Riddle, type RiddleResult } from './cards/riddle';
 import { t } from './i18n';
 import { elementName, familyName } from './i18n/content';
 import { setupInstall } from './install';
@@ -224,6 +225,87 @@ const cards = new CardsMode({
   },
 });
 
+// --- Acertijos: pistas → formar la sustancia con las tarjetas --------------------
+
+const riddles = (() => {
+  let pending: { riddle: Riddle; kind: CardsKind } | null = null;
+  let run: RiddleRun | null = null;
+  let last: RiddleResult | null = null;
+  const list = $('acertijos-lista');
+
+  function renderList(): void {
+    const best = bestScores();
+    list.innerHTML = RIDDLES.map((r, i) => {
+      const score = best[r.id];
+      const s = getSpecies(r.target)!;
+      return `<article class="acertijo-item">
+        <div><b>${i + 1}. ${t('acertijo.quien')}</b>
+          <small>${t(`acertijo.dificultad.${r.difficulty}`)} · ${score ? `<span aria-label="${t('acertijo.estrellas', { n: stars(score) })}">${'★'.repeat(stars(score))}</span> ${t('acertijo.mejor', { n: score })}` : t('acertijo.nuevo')}</small>
+          ${score ? `<small>${s.formula}</small>` : ''}</div>
+        <div class="fila"><button type="button" data-acertijo="${r.id}" data-tipo="mesa">${t('modo.mesa.titulo')}</button>
+          ${cameraOk ? `<button type="button" class="secundario" data-acertijo="${r.id}" data-tipo="camara">${t('modo.tarjetas.titulo')}</button>` : ''}</div>
+      </article>`;
+    }).join('');
+    list.querySelectorAll<HTMLButtonElement>('[data-acertijo]').forEach((b) =>
+      b.addEventListener('click', () => {
+        $<HTMLDialogElement>('acertijos').close();
+        start(RIDDLES.find((r) => r.id === b.dataset.acertijo)!, b.dataset.tipo as CardsKind);
+      }),
+    );
+  }
+
+  function start(riddle: Riddle, kind: CardsKind, cardList = riddle.cards, together = false): void {
+    pending = { riddle, kind };
+    if (ar.running) void ar.end().then(() => start(riddle, kind, cardList, together));
+    else enterCards(kind, kind === 'mesa' ? cardList : undefined, together);
+  }
+
+  function finish(result: RiddleResult): void {
+    last = result;
+    if (result.solved) void hub.recordChallenge(`acertijo-${result.riddle.id}`);
+    $('acertijo-fin-contenido').innerHTML = resultHTML(result);
+    const i = RIDDLES.indexOf(result.riddle);
+    $('acertijo-siguiente').hidden = i === RIDDLES.length - 1;
+    $<HTMLDialogElement>('acertijo-fin').showModal();
+  }
+
+  $('acertijo-salir').addEventListener('click', () => {
+    $<HTMLDialogElement>('acertijo-fin').close();
+    void ar.end();
+  });
+  $('acertijo-repetir').addEventListener('click', () => {
+    $<HTMLDialogElement>('acertijo-fin').close();
+    if (last) start(last.riddle, pending?.kind ?? 'mesa');
+  });
+  $('acertijo-siguiente').addEventListener('click', () => {
+    $<HTMLDialogElement>('acertijo-fin').close();
+    if (last) start(RIDDLES[RIDDLES.indexOf(last.riddle) + 1] ?? RIDDLES[0], pending?.kind ?? 'mesa');
+  });
+  $('entrar-acertijos').addEventListener('click', () => {
+    renderList();
+    $<HTMLDialogElement>('acertijos').showModal();
+  });
+
+  return {
+    onStart() {
+      if (!pending) return;
+      run = new RiddleRun(pending.riddle, cards.game, $('hud-tarjetas'), finish);
+      $('hud-tarjetas').classList.add('con-acertijo');
+    },
+    onEnd() {
+      run?.destroy();
+      run = null;
+      $('hud-tarjetas').classList.remove('con-acertijo');
+    },
+    /** Al salir del juego sin acertijo (p. ej. modo libre), olvidar el pendiente. */
+    clear() {
+      pending = null;
+    },
+    start,
+  };
+})();
+let cameraOk = true;
+
 // --- Sesión ------------------------------------------------------------------------
 
 ar.on('select', () => (mode === 'explorar' ? void explore.onSelect() : undefined));
@@ -232,9 +314,13 @@ ar.on('start', () => {
   document.body.classList.add('ar-activo');
   $('inicio').hidden = true;
   if (mode === 'explorar') explore.onStart();
-  else cards.onStart();
+  else {
+    cards.onStart();
+    riddles.onStart();
+  }
 });
 ar.on('end', () => {
+  riddles.onEnd();
   explore.onEnd();
   cards.onEnd();
   document.body.classList.remove('ar-activo');
@@ -259,8 +345,8 @@ function enterCards(kind: CardsKind, list?: string[], together = false): void {
   void enter('tarjetas', cards.provider);
 }
 
-$('entrar-tarjetas').addEventListener('click', () => enterCards('camara'));
-$('entrar-mesa').addEventListener('click', () => enterCards('mesa'));
+$('entrar-tarjetas').addEventListener('click', () => (riddles.clear(), enterCards('camara')));
+$('entrar-mesa').addEventListener('click', () => (riddles.clear(), enterCards('mesa')));
 $('entrar-3d').addEventListener('click', () => void enter('explorar', viewer));
 $('entrar-ra').addEventListener('click', () => void enter('explorar', xr));
 for (const [bohr, cloud] of [['modelo-bohr', 'modelo-nube'], ['t-bohr', 't-nube']]) {
@@ -276,7 +362,10 @@ if (vista === '3d') void enter('explorar', viewer);
 // ?vista=tarjetas&imagen=/foto.png: las tarjetas sobre una foto en vez de la cámara (pruebas, demos).
 if (params.get('imagen')) cards.marker.useImage(params.get('imagen')!);
 if (vista === 'tarjetas') enterCards('camara');
-if (vista === 'mesa') enterCards('mesa', params.get('cartas')?.split(',').filter(Boolean), params.get('juntas') === '1');
+// ?acertijo=N2: abre un acertijo en la mesa (demos, capturas).
+const riddleParam = RIDDLES.find((r) => r.id === params.get('acertijo'));
+if (riddleParam) riddles.start(riddleParam, 'mesa', params.get('cartas')?.split(',') ?? riddleParam.cards, params.get('juntas') === '1');
+else if (vista === 'mesa') enterCards('mesa', params.get('cartas')?.split(',').filter(Boolean), params.get('juntas') === '1');
 // ?avanzar=3.5: adelanta la animación (capturas automáticas, demos).
 const advance = Number(params.get('avanzar'));
 if (advance > 0) ar.on('start', () => setTimeout(() => ar.advance(advance), 50));
@@ -290,5 +379,6 @@ enterAR.disabled = !support.webxrAR;
 $('entrar-ra-texto').textContent = support.webxrAR ? t('modo.ra.texto') : support.ios ? t('modo.ra.ios') : t('modo.ra.no');
 if (!support.camera) {
   $<HTMLButtonElement>('entrar-tarjetas').disabled = true;
+  cameraOk = false;
   $('aviso').textContent = !support.secureContext ? t('aviso.https') : t('aviso.camara');
 }

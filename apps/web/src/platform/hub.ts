@@ -73,6 +73,17 @@ export class Hub {
     void this.sync.queued();
   }
 
+  /** Un reto superado fuera del camino normal (p. ej. un acertijo). */
+  async recordChallenge(id: string): Promise<void> {
+    const before = this.progress;
+    if (before.challenges.has(id)) return;
+    await addEvent('reto', { reto: id });
+    this.progress = computeProgress(await allEvents());
+    this.celebrate(before, this.progress);
+    this.renderAll();
+    void this.sync.queued();
+  }
+
   /** Texto del reto en juego para el HUD («Reto: forma Ca(OH)₂ · 2/5»). */
   challengeLabel(): string | null {
     if (!this.active) return null;

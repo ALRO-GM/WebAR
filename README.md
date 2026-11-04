@@ -14,7 +14,10 @@ flotando encima. Al juntar las que reaccionan durante 3 s se forma la molécula
 (agua, CO₂, metano, amoniaco, sal… 50 sustancias y 38 reacciones de libro),
 con fuego o hielo según sea exotérmica o endotérmica. También hay una mesa
 virtual (sin imprimir nada) y un explorador de los 118 elementos con el modelo
-de Bohr y los orbitales.
+de Bohr y los orbitales. En los **acertijos**, la sustancia da pistas en
+primera persona («soy el gas más abundante del aire…») y hay que formarla con
+las tarjetas; pedir pistas o equivocarse resta puntos y, al acertar, se
+explica cada pista (H₂, O₂, N₂ y H₂O de momento).
 
 Para clase: el progreso funciona **sin conexión** (moleculario, tabla periódica
 que se desbloquea, historias, retos, insignias) y, si el alumno se une a una
@@ -43,6 +46,7 @@ Las reglas para agentes de IA están en [AGENTS.md](AGENTS.md).
 
 | Fecha | Qué cambió |
 | --- | --- |
+| 2026-11-04 | Acertijos con tarjetas: pistas que restan puntos, fallos que también, y explicación de cada pista al acertar (H₂, O₂, N₂, H₂O) |
 | 2026-11-04 | UX y accesibilidad: navegación inferior, introducción animada, ajustes (idioma, tamaño de texto, alto contraste, menos movimiento, vibración), tocar para juntar en la mesa; todos los textos en una tabla traducible, con inglés |
 | 2026-11-04 | Plataforma educativa: progreso sin conexión (moleculario, tabla que se desbloquea, historias, retos, insignias, racha semanal), clases con código y QR, panel del profesorado con estadísticas y retos, servidor Node + SQLite y tabla de textos traducible |
 | 2026-11-04 | Tarjetas de átomos con marcadores ArUco: reacciones al juntarlas (50 sustancias, 38 reacciones, ΔH), fuego/hielo, descomponer, mesa virtual e impresión de tarjetas |

@@ -325,3 +325,49 @@ button.mantener:not(:disabled) { color: #0b1020; background: linear-gradient(90d
 :root.calma .visual *, :root.calma .visual *::before, :root.calma .visual *::after { animation: none !important; }
 :root.calma .destello { display: none; }
 @media (prefers-reduced-motion: reduce) { .visual *, .visual *::before, .visual *::after { animation: none !important; } .destello { display: none; } }
+
+/* --- Acertijos ---------------------------------------------------------------- */
+.modo-acertijo { background: linear-gradient(135deg, rgb(255 209 102 / 0.28), rgb(199 125 255 / 0.22)); border-color: rgb(255 209 102 / 0.5); }
+.acertijos-lista { display: grid; gap: 8px; margin: 10px 0; }
+.acertijo-item { display: grid; gap: 8px; padding: 12px; border-radius: 14px; background: var(--chip); }
+.acertijo-item > div:first-child { display: grid; gap: 2px; }
+.acertijo-item small { color: var(--muted); }
+.acertijo-item small span { color: var(--warm); letter-spacing: 1px; }
+.fila { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+#hud-tarjetas.con-acertijo #t-estado, #hud-tarjetas.con-acertijo #t-reto { display: none !important; }
+.acertijo {
+  position: absolute; top: max(10px, env(safe-area-inset-top)); left: 50%; transform: translateX(-50%); width: min(28rem, calc(100% - 20px));
+  max-height: 46vh; overflow-y: auto; padding: 12px 14px; border-radius: 18px; background: rgb(17 19 23 / 0.88); backdrop-filter: blur(10px);
+  border: 1px solid rgb(255 209 102 / 0.45); box-shadow: 0 8px 30px rgb(0 0 0 / 0.35); display: grid; gap: 6px;
+}
+.acertijo header { display: flex; justify-content: space-between; align-items: center; }
+.acertijo h2 { margin: 0; font-size: 1.15rem; }
+.acertijo .chip { padding: 0.2rem 0.6rem; border-radius: 999px; background: rgb(255 209 102 / 0.18); color: var(--warm); font-weight: 750; font-size: 0.85rem; }
+.acertijo .pistas { margin: 0; padding-left: 1.3rem; display: grid; gap: 4px; }
+.acertijo .pistas li { font-size: 0.98rem; }
+.acertijo .pistas li:last-child { animation: aparecer-suave 0.4s ease-out; }
+.acertijo-nota { margin: 0; font-weight: 650; font-size: 0.92rem; min-height: 0; }
+.acertijo-nota:empty { display: none; }
+.acertijo-nota.mal { color: #ff9a9a; }
+.acertijo-nota.bien { color: var(--ok); }
+.acertijo .btn { min-height: var(--tap); padding: 0.45rem 0.9rem; font-size: 0.88rem; }
+.acertijo .btn.claro { background: var(--chip); color: var(--fg); }
+.acertijo .btn.info { background: #1cb0f6; color: #04121c; }
+.acertijo.sacude { animation: sacudir 0.4s; }
+@keyframes sacudir { 20%, 60% { transform: translateX(calc(-50% - 8px)); } 40%, 80% { transform: translateX(calc(-50% + 8px)); } }
+.acertijo-final { text-align: center; }
+.acertijo-final .estrellas { font-size: 2.6rem; color: var(--warm); margin: 0; letter-spacing: 4px; animation: aparecer 0.5s cubic-bezier(.2,1.4,.4,1); }
+.acertijo-final .estrellas span { color: rgb(255 255 255 / 0.18); }
+.acertijo-final .formula-grande { font-size: 3rem; font-weight: 800; margin: 4px 0 !important; color: var(--accent); }
+.acertijo-final .chip { display: inline-block; margin-top: 8px !important; padding: 0.3rem 0.8rem; border-radius: 999px; background: var(--chip); font-weight: 650; }
+.pistas-explicadas { text-align: left; padding-left: 1.2rem; display: grid; gap: 10px; }
+.pistas-explicadas b { display: block; }
+.pistas-explicadas p { color: var(--muted); margin-top: 2px !important; font-size: 0.93rem; }
+.acertijo-botones { justify-content: flex-end; margin-top: 14px; }
+.acertijo header { gap: 8px; }
+.acertijo header .pequeno { flex: 1; }
+.acertijo .plegar { min-height: 2.2rem; width: 2.4rem; padding: 0; background: var(--chip); color: var(--fg); font-size: 1rem; }
+.acertijo.plegado > :not(header):not(.pistas):not(.acertijo-nota) { display: none; }
+.acertijo.plegado .pistas li:not(:last-child) { display: none; }
+.acertijo.plegado .pistas { list-style: none; padding: 0; }
+.acertijo { max-height: 40vh; }

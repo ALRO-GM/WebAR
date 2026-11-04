@@ -1,0 +1,86 @@
+{
+ "acertijo.titulo": {
+  "texto": "Riddles"
+ },
+ "acertijo.subtitulo": {
+  "texto": "I give you clues and you build the substance with the cards"
+ },
+ "acertijo.elige": {
+  "texto": "Choose a riddle"
+ },
+ "acertijo.numero": {
+  "texto": "Riddle {n} of {total}"
+ },
+ "acertijo.quien": {
+  "texto": "Who am I?"
+ },
+ "acertijo.puntos": {
+  "texto": "{n} points"
+ },
+ "acertijo.pista_boton": {
+  "texto": "Another clue (−{n})"
+ },
+ "acertijo.sin_pistas": {
+  "texto": "No clues left"
+ },
+ "acertijo.rendirse": {
+  "texto": "I give up"
+ },
+ "acertijo.como": {
+  "texto": "Put together the cards you think and keep them together for 3 seconds. Each extra clue or wrong combination costs points."
+ },
+ "acertijo.mal_producto": {
+  "texto": "That's {nombre}, but it's not me. −{n} points"
+ },
+ "acertijo.buen_paso": {
+  "texto": "Good step! {formula} brings you closer"
+ },
+ "acertijo.nada": {
+  "texto": "Those cards don't make anything. −{n} points"
+ },
+ "acertijo.conseguido": {
+  "texto": "You got it!"
+ },
+ "acertijo.solucion_titulo": {
+  "texto": "The solution"
+ },
+ "acertijo.era": {
+  "texto": "It was {nombre} ({formula})"
+ },
+ "acertijo.pistas_titulo": {
+  "texto": "The clues, explained"
+ },
+ "acertijo.resultado": {
+  "texto": "{puntos} points · clues: {pistas} · mistakes: {fallos}"
+ },
+ "acertijo.siguiente": {
+  "texto": "Next riddle"
+ },
+ "acertijo.repetir": {
+  "texto": "Play again"
+ },
+ "acertijo.salir": {
+  "texto": "Back to start"
+ },
+ "acertijo.mejor": {
+  "texto": "Best: {n} points"
+ },
+ "acertijo.nuevo": {
+  "texto": "Not played"
+ },
+ "acertijo.estrellas": {
+  "texto": "{n} of 3 stars"
+ },
+ "acertijo.dificultad.1": {
+  "texto": "Easy"
+ },
+ "acertijo.dificultad.2": {
+  "texto": "Medium"
+ },
+ "acertijo.plegar": {
+  "texto": "Fold the clues"
+ },
+ "acertijo.desplegar": {
+  "texto": "Show the clues"
+ }
+}

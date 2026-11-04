@@ -18,6 +18,8 @@ export interface CardGameEvents {
   decompose: { cardId: number; from: Content; to: Content };
   /** La carga más avanzada (para el HUD), o null si no hay ninguna. */
   charging: { outcome: Outcome; progress: number } | null;
+  /** Unas tarjetas llevan juntas un rato y no forman nada (una vez por grupo). */
+  invalid: { contents: Content[] };
 }
 
 interface CardState {
@@ -43,6 +45,8 @@ interface Charge {
 export class CardGame extends Emitter<CardGameEvents> {
   private readonly cards = new Map<number, CardState>();
   private readonly charges = new Map<string, Charge>();
+  /** Grupos sin receta y cuánto llevan juntos. */
+  private readonly invalid = new Map<string, number>();
   private hold: { cardId: number; progress: number } | null = null;
   private model: AtomModel;
   private lastCharging = '';
@@ -139,6 +143,7 @@ export class CardGame extends Emitter<CardGameEvents> {
       c.visual.targeted = false;
     }
 
+    const seenInvalid = new Set<string>();
     for (const cluster of clusters) {
       const members = cluster.map((i) => present[i]);
       if (members.length < 2) {
@@ -147,7 +152,15 @@ export class CardGame extends Emitter<CardGameEvents> {
       }
       if (members.some((m) => m.cooldown)) continue;
       const outcome = findOutcome(members.map((m) => m.visual.content));
-      if (!outcome) continue;
+      if (!outcome) {
+        // Juntas sin receta: se avisa una vez, pasado el tiempo de carga.
+        const key = 'x' + members.map((m) => m.spec.id).sort((a, b) => a - b).join(',');
+        const t = (this.invalid.get(key) ?? 0) + dt;
+        this.invalid.set(key, t);
+        if (t - dt < HOLD_SECONDS && t >= HOLD_SECONDS) this.emit('invalid', { contents: members.map((m) => m.visual.content) });
+        seenInvalid.add(key);
+        continue;
+      }
       const key = members.map((m) => m.spec.id).sort((a, b) => a - b).join(',') + '|' + outcome.reaction.id;
       const charge = this.charges.get(key) ?? { outcome, cards: members.map((m) => m.spec.id), t: 0, seen: true };
       charge.seen = true;
@@ -167,6 +180,7 @@ export class CardGame extends Emitter<CardGameEvents> {
       }
     }
     for (const [key, c] of this.charges) if (!c.seen) this.charges.delete(key);
+    for (const key of this.invalid.keys()) if (!seenInvalid.has(key)) this.invalid.delete(key);
 
     // Descomponer: se marca el objetivo; tiembla y brilla mientras se mantiene el botón.
     this.currentTarget = this.target(camera, this.preferred);
