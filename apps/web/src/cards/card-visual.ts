@@ -16,7 +16,7 @@ import { CARD_SHADOW, cardShadowTexture, roundShadowTexture } from './table-scen
 const atomRadius = (pm: number) => 0.012 + pm * 0.00013;
 const METERS_PER_ANGSTROM = 0.015;
 /** Cuánto tarda el contenido en alcanzar la tarjeta al moverla (más = más «flotante»). */
-const FOLLOW = 7;
+const FOLLOW = 16;
 
 const easeOutBack = (t: number) => 1 + 2.7 * (t - 1) ** 3 + 1.7 * (t - 1) ** 2;
 /** Límites del tamaño del contenido (control «Tamaño» del HUD y pellizco en la cámara). */

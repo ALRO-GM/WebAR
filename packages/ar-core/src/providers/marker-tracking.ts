@@ -5,7 +5,7 @@ import { IdentityGate, type DetectionStatus, type IdentityGateOptions } from '..
 import { OneEuroQuaternion, OneEuroVector, type OneEuroOptions } from '../one-euro';
 import { alignCoplanar, markerPose, type PinholeCamera } from '../pose';
 import type { ARContext, ARProvider, ARProviderHooks } from '../types';
-import { createDetector, detectMarkers, type DetectedMarker } from '../detection';
+import { createDetector, detectMarkers, profileFor, type DetectedMarker } from '../detection';
 import type { ArucoDetector } from '../vendor/js-aruco2/index.js';
 
 export interface MarkerTrackingOptions {
@@ -62,8 +62,11 @@ interface Tracked {
   rotation: OneEuroQuaternion;
 }
 
-const POSITION_FILTER: OneEuroOptions = { minCutoff: 0.5, beta: 30, dCutoff: 0.5 };
-const ROTATION_FILTER: OneEuroOptions = { minCutoff: 0.5, beta: 2, dCutoff: 0.3 };
+// Menos suavizado que al principio: la tarjeta virtual seguía a la real con retraso al moverla.
+/** Sin ver una tarjeta este tiempo (ms), se da por perdida: con margen para un par de fotogramas borrosos. */
+const LOST_AFTER = 700;
+const POSITION_FILTER: OneEuroOptions = { minCutoff: 1.2, beta: 60, dCutoff: 1 };
+const ROTATION_FILTER: OneEuroOptions = { minCutoff: 1, beta: 4, dCutoff: 0.5 };
 
 /** Colores del modo diagnóstico. */
 const DEBUG_COLORS: Record<DetectionStatus | 'desconocida', string> = {
@@ -227,7 +230,7 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     const source = this.sourceSize();
     if (!this.video || !this.detector || !source.ready) return;
     if (this.canvas.dataset.size !== `${source.width}x${source.height}`) this.configureCamera();
-    const lostAfter = this.options.lostAfter ?? 400;
+    const lostAfter = this.options.lostAfter ?? LOST_AFTER;
     // Lo que haya terminado el worker se aplica en cuanto llega, haya fotograma nuevo o no.
     if (this.workerResult) {
       const { markers, time: at } = this.workerResult;
@@ -241,7 +244,7 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     if (this.worker) return this.updateWithWorker(time, lostAfter);
     const { width, height } = this.canvas;
     this.g.drawImage(this.video, 0, 0, width, height);
-    this.process(detectMarkers(this.detector, this.g.getImageData(0, 0, width, height)), time);
+    this.process(detectMarkers(this.detector, this.g.getImageData(0, 0, width, height), profileFor(++this.workerFrame)), time);
     this.markLost(time, lostAfter);
   }
 
@@ -289,7 +292,7 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
 
   /** Identidades, poses y anclas a partir de lo detectado en un fotograma. */
   private process(raw: DetectedMarker[], time: number): void {
-    const lostAfter = this.options.lostAfter ?? 400;
+    const lostAfter = this.options.lostAfter ?? LOST_AFTER;
     const known = raw.filter((m) => !this.options.accept || this.options.accept(m.id));
     const markers = this.gate.filter(known, time);
     if (this.debugEnabled) this.drawDebug([...this.gate.last, ...raw.filter((m) => !known.includes(m)).map((detection) => ({ detection, status: 'desconocida' as const }))]);

@@ -73,6 +73,8 @@ export class CardsMode {
     anchorOffset: new THREE.Matrix4().makeTranslation(0, 0, MARKER_TO_CENTER),
     accept: (id) => !!cardById(id),
     coplanar: true,
+    // Una tarjeta nueva aparece al segundo fotograma (no al tercero): la lectura ya es estricta.
+    identity: { confirmFrames: 2 },
   });
   private readonly effects: Effects;
   readonly game: CardGame;

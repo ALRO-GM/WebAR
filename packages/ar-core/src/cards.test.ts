@@ -1,3 +1,4 @@
+import { THRESHOLD_PROFILES } from './detection';
 import * as THREE from 'three';
 import { describe, expect, it } from 'vitest';
 import { IdentityGate, type Detection } from './gate';
@@ -13,7 +14,8 @@ function gauss(rnd: () => number) {
 }
 const dict = new AR.Dictionary(MARKER_DICTIONARY);
 /** Los ajustes del detector que usa `MarkerTrackingProvider`. */
-const WEBAR = { relativeThreshold: 0.16, thresholdKernel: 3, brightestChannel: true };
+const WEBAR = { ...THRESHOLD_PROFILES.papel, brightestChannel: true };
+const MOTION = { ...THRESHOLD_PROFILES.movimiento, brightestChannel: true };
 
 /** Foto sintética de tarjetas sobre una mesa: marcador, panel blanco, marco de color; desenfoque y ruido. */
 function photo(markers: { pose: THREE.Matrix4; id: number }[], rnd: () => number, width: number, height: number, focal: number, blur: number, noise: number) {
@@ -205,3 +207,30 @@ describe('tarjetas dibujadas a mano en papel cuadriculado', () => {
   }, 120000);
 });
 
+describe('tarjetas en movimiento', () => {
+  it('borrosas y con poco contraste: el perfil «movimiento» las sigue leyendo, sin inventarse ninguna', () => {
+    const rate = (options: object) => {
+      let found = 0;
+      let total = 0;
+      let fake = 0;
+      for (const dist of [0.45, 0.6, 0.75])
+        for (const tilt of [0, 0.7])
+          for (const blur of [2, 4, 6]) {
+            const rnd = random(13 + blur);
+            const img = photo(scene(dist, tilt), rnd, W, H, FOCAL, blur, 7);
+            // Al moverse, la imagen pierde contraste.
+            for (let i = 0; i < img.data.length; i += 4) img.data[i] = img.data[i + 1] = img.data[i + 2] = 128 + (img.data[i] - 128) * 0.7;
+            const ids = new Set(new AR.Detector({ dictionaryName: MARKER_DICTIONARY, maxHammingDistance: 4, ...options }).detect(img).map((m) => m.id));
+            fake += [...ids].filter((id) => ![1, 6, 7, 8, 119].includes(id)).length;
+            found += [1, 6, 7, 8, 119].filter((id) => ids.has(id)).length;
+            total += 5;
+          }
+      return { rate: found / total, fake };
+    };
+    const motion = rate(MOTION);
+    expect(motion.rate).toBeGreaterThan(0.9);
+    expect(motion.fake).toBe(0);
+    // El de papel cuadriculado, casi nunca: por eso se alternan.
+    expect(rate(WEBAR).rate).toBeLessThan(0.2);
+  }, 300000);
+});

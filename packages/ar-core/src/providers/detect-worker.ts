@@ -1,5 +1,5 @@
 /// <reference lib="webworker" />
-import { createDetector, detectMarkers } from '../detection';
+import { createDetector, detectMarkers, profileFor } from '../detection';
 
 /**
  * La detección de marcadores fuera del hilo principal: recibe el fotograma
@@ -20,6 +20,6 @@ self.onmessage = (event: MessageEvent<{ frame: number; bitmap: ImageBitmap; maxB
   }
   g!.drawImage(bitmap, 0, 0);
   bitmap.close();
-  const markers = detectMarkers(detector, g!.getImageData(0, 0, canvas.width, canvas.height));
+  const markers = detectMarkers(detector, g!.getImageData(0, 0, canvas.width, canvas.height), profileFor(frame));
   self.postMessage({ frame, markers });
 };

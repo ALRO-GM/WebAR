@@ -357,6 +357,21 @@ Al juntar tarjetas iba cada vez más lento. Causas y arreglos:
   salta (mejor uno por detrás que una cola). Sin Worker/OffscreenCanvas, se
   detecta como antes.
 
+**Seguimiento rápido sin confundir tarjetas** (2026-11-05): la lectura del
+código sigue igual de estricta (es lo que evita confundirlas), pero:
+
+- **Dos umbrales alternos** (`detection.ts`, `THRESHOLD_PROFILES`): «papel»
+  (exigente, para el papel cuadriculado) y «movimiento» (ventana más grande
+  y umbral más suave). Con fotos sintéticas borrosas y con poco contraste,
+  «papel» lee menos del 20 % y «movimiento» más del 90 %, sin tarjetas
+  inventadas (test «tarjetas en movimiento»). Se alternan fotograma a
+  fotograma y las tarjetas ya reconocidas se mantienen entre medias.
+- **Menos suavizado** en el filtro 1 € (seguía a la tarjeta con retraso) y el
+  átomo sigue a su tarjeta más deprisa.
+- Una tarjeta se da por perdida a los 700 ms sin verla (antes 400: un par de
+  fotogramas borrosos la hacían parpadear) y una nueva aparece al segundo
+  fotograma, no al tercero.
+
 Átomos más grandes sobre la tarjeta (H ≈ 1,9 cm de radio, moléculas un 35 %
 mayores) y electrones al doble.
 

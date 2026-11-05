@@ -17,20 +17,41 @@ export interface DetectedMarker {
   hammingDistance: number;
 }
 
+/**
+ * Dos formas de separar la tinta del papel, que se alternan fotograma a
+ * fotograma (ver cards.test.ts, con fotos sintéticas):
+ *
+ * - `papel`: exigente, para que las líneas de un papel cuadriculado o de
+ *   color no cuenten como tinta (tarjetas dibujadas a mano);
+ * - `movimiento`: con la tarjeta o el móvil moviéndose, la imagen sale
+ *   borrosa y con poco contraste; una ventana más grande y un umbral más
+ *   suave la siguen leyendo (con `papel`, casi nunca).
+ *
+ * Ninguna de las dos se inventa tarjetas (la lectura del código es igual de
+ * estricta) y las ya reconocidas se mantienen entre fotogramas: el
+ * seguimiento suma lo mejor de las dos.
+ */
+export const THRESHOLD_PROFILES = {
+  papel: { relativeThreshold: 0.16, thresholdKernel: 3 },
+  movimiento: { relativeThreshold: 0.08, thresholdKernel: 6 },
+} as const;
+export type ThresholdProfile = keyof typeof THRESHOLD_PROFILES;
+
 export function createDetector(maxBitErrors = 3): ArucoDetector {
   return new AR.Detector({
     dictionaryName: MARKER_DICTIONARY,
     // El detector compara con `<`: 3 bits erróneos como mucho → 4.
     maxHammingDistance: maxBitErrors + 1,
-    // Que las líneas de un papel cuadriculado o de color no cuenten como tinta (ver cv.js).
-    // Valores elegidos con las fotos sintéticas de cards.test.ts (impresas y a mano).
-    relativeThreshold: 0.16,
-    thresholdKernel: 3,
+    ...THRESHOLD_PROFILES.papel,
     brightestChannel: true,
   });
 }
 
-export function detectMarkers(detector: ArucoDetector, image: ImageData): DetectedMarker[] {
+/** El perfil de umbral para el fotograma número `frame`: uno y otro, alternos. */
+export const profileFor = (frame: number): ThresholdProfile => (frame % 2 ? 'movimiento' : 'papel');
+
+export function detectMarkers(detector: ArucoDetector, image: ImageData, profile: ThresholdProfile = 'papel'): DetectedMarker[] {
+  Object.assign(detector, THRESHOLD_PROFILES[profile]);
   return detector.detect(image).map((m) => ({
     id: m.id,
     corners: m.corners,
