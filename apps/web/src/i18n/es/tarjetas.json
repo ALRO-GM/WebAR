@@ -34,5 +34,197 @@
  "mesa.vacia": {
   "texto": "Pulsa «Añadir elemento» y elígelo en la tabla periódica.",
   "descripcion": "Estado de la mesa virtual vacía"
+ },
+ "ajuste.titulo": {
+  "texto": "Ajuste fino de la realidad aumentada",
+  "descripcion": "Título del panel y de su bloque en Ajustes"
+ },
+ "ajuste.ajustes_texto": {
+  "texto": "Abre la cámara con tus tarjetas y un panel para ajustar en vivo cómo se leen y se siguen. Se guarda en este dispositivo.",
+  "descripcion": "Ajustes: explicación"
+ },
+ "ajuste.abrir": {
+  "texto": "Ajustar con la cámara",
+  "descripcion": "Botón"
+ },
+ "ajuste.explicacion": {
+  "texto": "Pon tarjetas delante de la cámara y mueve los deslizadores: el cambio se ve al momento. Verde = tarjeta seguida, amarillo = confirmándose, rojo = descartada.",
+  "descripcion": "Panel: explicación"
+ },
+ "ajuste.estado": {
+  "texto": "Tarjetas seguidas: {n} · análisis por segundo: {fps}",
+  "descripcion": "Panel: estado en vivo"
+ },
+ "ajuste.plegar": {
+  "texto": "Plegar",
+  "descripcion": "Botón: esconde los deslizadores para ver la cámara"
+ },
+ "ajuste.desplegar": {
+  "texto": "Ajustes",
+  "descripcion": "Botón: vuelve a enseñar los deslizadores"
+ },
+ "ajuste.restablecer": {
+  "texto": "Valores de serie",
+  "descripcion": "Botón"
+ },
+ "ajuste.listo": {
+  "texto": "Listo",
+  "descripcion": "Botón: cierra y vuelve a la app"
+ },
+ "ajuste.umbral": {
+  "texto": "Cómo separar la tinta del papel",
+  "descripcion": "Grupo"
+ },
+ "ajuste.umbral_alternar": {
+  "texto": "Alternar",
+  "descripcion": "Opción: papel y movimiento alternos"
+ },
+ "ajuste.umbral_papel": {
+  "texto": "Solo papel",
+  "descripcion": "Opción"
+ },
+ "ajuste.umbral_movimiento": {
+  "texto": "Solo movimiento",
+  "descripcion": "Opción"
+ },
+ "ajuste.mismaMesa": {
+  "texto": "Todas las tarjetas en la misma mesa (comparten inclinación: tiemblan menos)",
+  "descripcion": "Interruptor"
+ },
+ "ajuste.deteccion": {
+  "texto": "Detección",
+  "descripcion": "Grupo"
+ },
+ "ajuste.identidad": {
+  "texto": "Aparecer y desaparecer",
+  "descripcion": "Grupo"
+ },
+ "ajuste.temblor": {
+  "texto": "Temblor y retraso",
+  "descripcion": "Grupo"
+ },
+ "ajuste.encaje": {
+  "texto": "Encaje con la tarjeta real",
+  "descripcion": "Grupo"
+ },
+ "ajuste.bitsErroneos": {
+  "texto": "Bits erróneos tolerados",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.bitsErroneos_ayuda": {
+  "texto": "Más: lee tarjetas peor impresas o lejanas; demasiados, puede confundirlas.",
+  "descripcion": "Ayuda"
+ },
+ "ajuste.anchoDeteccion": {
+  "texto": "Resolución del análisis (px)",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.anchoDeteccion_ayuda": {
+  "texto": "Más: tarjetas más lejanas y esquinas más precisas, pero más lento.",
+  "descripcion": "Ayuda"
+ },
+ "ajuste.papelRelativo": {
+  "texto": "Umbral «papel»",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.papelRelativo_ayuda": {
+  "texto": "Cuánto más oscuro que su entorno ha de ser un punto para ser tinta. Más: ignora la cuadrícula del papel.",
+  "descripcion": "Ayuda"
+ },
+ "ajuste.papelVentana": {
+  "texto": "Ventana «papel»",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.papelVentana_ayuda": {
+  "texto": "Tamaño del entorno con el que se compara cada punto.",
+  "descripcion": "Ayuda"
+ },
+ "ajuste.movimientoRelativo": {
+  "texto": "Umbral «movimiento»",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.movimientoRelativo_ayuda": {
+  "texto": "Menos: sigue leyendo con la imagen borrosa al moverse.",
+  "descripcion": "Ayuda"
+ },
+ "ajuste.movimientoVentana": {
+  "texto": "Ventana «movimiento»",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.movimientoVentana_ayuda": {
+  "texto": "Más: aguanta mejor el desenfoque.",
+  "descripcion": "Ayuda"
+ },
+ "ajuste.confirmar": {
+  "texto": "Fotogramas para confirmar",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.confirmar_ayuda": {
+  "texto": "Una tarjeta nueva aparece tras verla tantas veces. Menos: aparece antes; más: menos fantasmas.",
+  "descripcion": "Ayuda"
+ },
+ "ajuste.reservar": {
+  "texto": "Memoria de la tarjeta (ms)",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.reservar_ayuda": {
+  "texto": "Tiempo que una tarjeta conocida guarda su sitio y su átomo aunque no se vea.",
+  "descripcion": "Ayuda"
+ },
+ "ajuste.perder": {
+  "texto": "Perderla tras (ms)",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.perder_ayuda": {
+  "texto": "Sin verla este tiempo, desaparece. Más: no parpadea al moverla rápido; menos: se va antes al quitarla.",
+  "descripcion": "Ayuda"
+ },
+ "ajuste.posicionCorte": {
+  "texto": "Suavizado de la posición",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.posicionCorte_ayuda": {
+  "texto": "Menos: tiembla menos quieta, pero va con más retraso.",
+  "descripcion": "Ayuda"
+ },
+ "ajuste.posicionBeta": {
+  "texto": "Reacción al moverla (posición)",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.posicionBeta_ayuda": {
+  "texto": "Más: al moverla, la virtual la sigue sin quedarse atrás.",
+  "descripcion": "Ayuda"
+ },
+ "ajuste.giroCorte": {
+  "texto": "Suavizado del giro",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.giroCorte_ayuda": {
+  "texto": "Menos: la inclinación tiembla menos, pero va con retraso.",
+  "descripcion": "Ayuda"
+ },
+ "ajuste.giroBeta": {
+  "texto": "Reacción al girarla",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.giroBeta_ayuda": {
+  "texto": "Más: al girarla, sigue el giro sin retraso.",
+  "descripcion": "Ayuda"
+ },
+ "ajuste.seguirAtomo": {
+  "texto": "Rapidez del átomo",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.seguirAtomo_ayuda": {
+  "texto": "Lo deprisa que el átomo alcanza a su tarjeta. Menos: más «flotante».",
+  "descripcion": "Ayuda"
+ },
+ "ajuste.campoVision": {
+  "texto": "Campo de visión de la cámara (°)",
+  "descripcion": "Deslizador"
+ },
+ "ajuste.campoVision_ayuda": {
+  "texto": "Si la tarjeta virtual sale más grande o más pequeña que la real, ajusta esto hasta que encajen.",
+  "descripcion": "Ayuda"
  }
 }

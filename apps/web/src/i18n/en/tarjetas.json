@@ -25,5 +25,149 @@
  },
  "mesa.vacia": {
   "texto": "Tap «Add element» and pick it from the periodic table."
+ },
+ "ajuste.titulo": {
+  "texto": "Fine-tune augmented reality"
+ },
+ "ajuste.ajustes_texto": {
+  "texto": "Opens the camera with your cards and a panel to tune live how they are read and tracked. Saved on this device."
+ },
+ "ajuste.abrir": {
+  "texto": "Tune with the camera"
+ },
+ "ajuste.explicacion": {
+  "texto": "Put cards in front of the camera and move the sliders: changes show instantly. Green = tracked, yellow = confirming, red = rejected."
+ },
+ "ajuste.estado": {
+  "texto": "Cards tracked: {n} · analyses per second: {fps}"
+ },
+ "ajuste.plegar": {
+  "texto": "Collapse"
+ },
+ "ajuste.desplegar": {
+  "texto": "Settings"
+ },
+ "ajuste.restablecer": {
+  "texto": "Defaults"
+ },
+ "ajuste.listo": {
+  "texto": "Done"
+ },
+ "ajuste.umbral": {
+  "texto": "How ink is told from paper"
+ },
+ "ajuste.umbral_alternar": {
+  "texto": "Alternate"
+ },
+ "ajuste.umbral_papel": {
+  "texto": "Paper only"
+ },
+ "ajuste.umbral_movimiento": {
+  "texto": "Motion only"
+ },
+ "ajuste.mismaMesa": {
+  "texto": "All cards on the same table (shared tilt: less jitter)"
+ },
+ "ajuste.deteccion": {
+  "texto": "Detection"
+ },
+ "ajuste.identidad": {
+  "texto": "Appearing and disappearing"
+ },
+ "ajuste.temblor": {
+  "texto": "Jitter and lag"
+ },
+ "ajuste.encaje": {
+  "texto": "Fit to the real card"
+ },
+ "ajuste.bitsErroneos": {
+  "texto": "Tolerated bit errors"
+ },
+ "ajuste.bitsErroneos_ayuda": {
+  "texto": "More: reads worse-printed or distant cards; too many may mix them up."
+ },
+ "ajuste.anchoDeteccion": {
+  "texto": "Analysis resolution (px)"
+ },
+ "ajuste.anchoDeteccion_ayuda": {
+  "texto": "More: farther cards and sharper corners, but slower."
+ },
+ "ajuste.papelRelativo": {
+  "texto": "«Paper» threshold"
+ },
+ "ajuste.papelRelativo_ayuda": {
+  "texto": "How much darker than its surroundings a point must be to count as ink. More: ignores grid paper lines."
+ },
+ "ajuste.papelVentana": {
+  "texto": "«Paper» window"
+ },
+ "ajuste.papelVentana_ayuda": {
+  "texto": "Size of the area each point is compared with."
+ },
+ "ajuste.movimientoRelativo": {
+  "texto": "«Motion» threshold"
+ },
+ "ajuste.movimientoRelativo_ayuda": {
+  "texto": "Less: keeps reading when the image blurs while moving."
+ },
+ "ajuste.movimientoVentana": {
+  "texto": "«Motion» window"
+ },
+ "ajuste.movimientoVentana_ayuda": {
+  "texto": "More: copes better with blur."
+ },
+ "ajuste.confirmar": {
+  "texto": "Frames to confirm"
+ },
+ "ajuste.confirmar_ayuda": {
+  "texto": "A new card appears after being seen this many times. Less: appears sooner; more: fewer ghosts."
+ },
+ "ajuste.reservar": {
+  "texto": "Card memory (ms)"
+ },
+ "ajuste.reservar_ayuda": {
+  "texto": "How long a known card keeps its place and atom when unseen."
+ },
+ "ajuste.perder": {
+  "texto": "Lose it after (ms)"
+ },
+ "ajuste.perder_ayuda": {
+  "texto": "Unseen for this long, it disappears. More: no flicker when moving fast; less: goes sooner when removed."
+ },
+ "ajuste.posicionCorte": {
+  "texto": "Position smoothing"
+ },
+ "ajuste.posicionCorte_ayuda": {
+  "texto": "Less: steadier when still, but more lag."
+ },
+ "ajuste.posicionBeta": {
+  "texto": "Reaction to movement (position)"
+ },
+ "ajuste.posicionBeta_ayuda": {
+  "texto": "More: the virtual card keeps up when you move it."
+ },
+ "ajuste.giroCorte": {
+  "texto": "Rotation smoothing"
+ },
+ "ajuste.giroCorte_ayuda": {
+  "texto": "Less: steadier tilt, but more lag."
+ },
+ "ajuste.giroBeta": {
+  "texto": "Reaction to rotation"
+ },
+ "ajuste.giroBeta_ayuda": {
+  "texto": "More: follows rotation without lag."
+ },
+ "ajuste.seguirAtomo": {
+  "texto": "Atom speed"
+ },
+ "ajuste.seguirAtomo_ayuda": {
+  "texto": "How fast the atom catches up with its card. Less: more «floaty»."
+ },
+ "ajuste.campoVision": {
+  "texto": "Camera field of view (°)"
+ },
+ "ajuste.campoVision_ayuda": {
+  "texto": "If the virtual card looks bigger or smaller than the real one, adjust this until they match."
  }
 }

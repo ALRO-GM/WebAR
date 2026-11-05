@@ -15,8 +15,12 @@ import { CARD_SHADOW, cardShadowTexture, roundShadowTexture } from './table-scen
 // Más grandes que al principio (se veían pequeños sobre la tarjeta): H ≈ 1,9 cm de radio.
 const atomRadius = (pm: number) => 0.012 + pm * 0.00013;
 const METERS_PER_ANGSTROM = 0.015;
-/** Cuánto tarda el contenido en alcanzar la tarjeta al moverla (más = más «flotante»). */
-const FOLLOW = 16;
+/** Lo deprisa que el contenido alcanza a su tarjeta al moverla (menos = más «flotante»). Se cambia en el ajuste fino. */
+let FOLLOW = 16;
+export const DEFAULT_FOLLOW = 16;
+export function setFollow(value: number): void {
+  FOLLOW = value;
+}
 
 const easeOutBack = (t: number) => 1 + 2.7 * (t - 1) ** 3 + 1.7 * (t - 1) ** 2;
 /** Límites del tamaño del contenido (control «Tamaño» del HUD y pellizco en la cámara). */

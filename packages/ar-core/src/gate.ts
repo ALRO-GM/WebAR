@@ -71,9 +71,9 @@ function inside(p: Point2, quad: readonly Point2[], margin = 0.25): boolean {
 export class IdentityGate {
   private readonly pending = new Map<number, Pending>();
   private readonly known = new Map<number, { corners: Point2[]; lastSeen: number }>();
-  private readonly confirmFrames: number;
-  private readonly confirmWindow: number;
-  private readonly hold: number;
+  private confirmFrames: number;
+  private confirmWindow: number;
+  private hold: number;
   /** Las lecturas del último fotograma y qué se hizo con cada una. */
   last: Array<{ detection: Detection; status: DetectionStatus }> = [];
 
@@ -81,6 +81,13 @@ export class IdentityGate {
     this.confirmFrames = options.confirmFrames ?? 3;
     this.confirmWindow = options.confirmWindow ?? 500;
     this.hold = options.hold ?? 1000;
+  }
+
+  /** Cambia las opciones en marcha (ajuste fino). */
+  configure(options: IdentityGateOptions): void {
+    this.confirmFrames = options.confirmFrames ?? this.confirmFrames;
+    this.confirmWindow = options.confirmWindow ?? this.confirmWindow;
+    this.hold = options.hold ?? this.hold;
   }
 
   filter<T extends Detection>(detections: readonly T[], time: number): T[] {

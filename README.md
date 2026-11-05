@@ -65,6 +65,7 @@ Las reglas para agentes de IA están en [AGENTS.md](AGENTS.md).
 
 | Fecha | Qué cambió |
 | --- | --- |
+| 2026-11-05 | Ajuste fino de la RA en el propio dispositivo (Ajustes): la cámara con las tarjetas y deslizadores para umbrales, bits erróneos, resolución, confirmación, pérdida, temblor, rapidez del átomo y campo de visión, aplicados en vivo y guardados en el móvil |
 | 2026-11-05 | Seguimiento de tarjetas más rápido y estable al moverlas: dos umbrales alternos (papel cuadriculado / movimiento), menos suavizado y más margen antes de perderlas, sin relajar la lectura del código |
 | 2026-11-05 | RA más fluida: la detección de tarjetas va en otro hilo, los objetos de moléculas que no se ven ya no se animan (iba cada vez más lento) y los destellos de electrones se dibujan de una vez; átomos más grandes, electrones al doble y tarjetas de fondo neutro con el color de la familia en el marco |
 | 2026-11-04 | Pestaña **Clase** (actividades del profesorado, meta común, retos de clase, proyectar); laboratorio ordenado en «Formar moléculas», «Mirar de cerca» y retos; acertijos y Adivina los lanza el profesorado a su clase y ve los resultados; **modo demostración** (clase con alias inventados en el panel y alumno con todo desbloqueado: Ajustes o `?demo=alumno`) |

@@ -5,7 +5,7 @@ import { IdentityGate, type DetectionStatus, type IdentityGateOptions } from '..
 import { OneEuroQuaternion, OneEuroVector, type OneEuroOptions } from '../one-euro';
 import { alignCoplanar, markerPose, type PinholeCamera } from '../pose';
 import type { ARContext, ARProvider, ARProviderHooks } from '../types';
-import { createDetector, detectMarkers, profileFor, type DetectedMarker } from '../detection';
+import { THRESHOLD_PROFILES, createDetector, detectMarkers, profileFor, type DetectedMarker, type Threshold } from '../detection';
 import type { ArucoDetector } from '../vendor/js-aruco2/index.js';
 
 export interface MarkerTrackingOptions {
@@ -48,6 +48,60 @@ export interface MarkerTrackingOptions {
   facing?: 'environment' | 'user';
 }
 
+/**
+ * Todo lo que decide cómo se lee y se sigue una tarjeta, para ajustarlo en
+ * el propio móvil (Ajustes → «Ajuste fino de la RA») viendo el resultado.
+ */
+export interface MarkerTuning {
+  /** Qué umbral usar: los dos alternos (lo normal), o siempre uno. */
+  umbral: 'alternar' | 'papel' | 'movimiento';
+  /** Umbral «papel»: cuánto más oscuro que su entorno ha de ser un píxel (0–0,4) y ventana (1–10). */
+  papelRelativo: number;
+  papelVentana: number;
+  /** Umbral «movimiento». */
+  movimientoRelativo: number;
+  movimientoVentana: number;
+  /** Bits erróneos tolerados al leer el código (0–6). Más = más alcance, más riesgo de confundir. */
+  bitsErroneos: number;
+  /** Ancho de la imagen que se analiza (320–1280). Más = más lejos, más lento. */
+  anchoDeteccion: number;
+  /** Campo de visión del lado largo de la cámara (grados): cuadra el tamaño de lo virtual con lo real. */
+  campoVision: number;
+  /** Fotogramas para dar por buena una tarjeta nueva (1–5). */
+  confirmar: number;
+  /** Ms que una tarjeta conocida guarda su sitio y su identidad. */
+  reservar: number;
+  /** Ms sin verla hasta darla por perdida (700: margen para un par de fotogramas borrosos). */
+  perder: number;
+  /** Filtro 1 € de la posición: corte en reposo (Hz) y cuánto se relaja al moverse. */
+  posicionCorte: number;
+  posicionBeta: number;
+  /** Filtro 1 € del giro. */
+  giroCorte: number;
+  giroBeta: number;
+  /** Las tarjetas comparten la inclinación de la mesa. */
+  mismaMesa: boolean;
+}
+
+export const DEFAULT_TUNING: MarkerTuning = {
+  umbral: 'alternar',
+  papelRelativo: THRESHOLD_PROFILES.papel.relativeThreshold,
+  papelVentana: THRESHOLD_PROFILES.papel.thresholdKernel,
+  movimientoRelativo: THRESHOLD_PROFILES.movimiento.relativeThreshold,
+  movimientoVentana: THRESHOLD_PROFILES.movimiento.thresholdKernel,
+  bitsErroneos: 3,
+  anchoDeteccion: 640,
+  campoVision: 65,
+  confirmar: 3,
+  reservar: 1000,
+  perder: 700,
+  posicionCorte: 1.2,
+  posicionBeta: 60,
+  giroCorte: 1,
+  giroBeta: 4,
+  mismaMesa: false,
+};
+
 export interface MarkerTrackingEvents {
   /** Primera vez que se ve un marcador: ya tiene su ancla. */
   marker: { id: number; anchor: ARAnchor };
@@ -63,8 +117,6 @@ interface Tracked {
 }
 
 // Menos suavizado que al principio: la tarjeta virtual seguía a la real con retraso al moverla.
-/** Sin ver una tarjeta este tiempo (ms), se da por perdida: con margen para un par de fotogramas borrosos. */
-const LOST_AFTER = 700;
 const POSITION_FILTER: OneEuroOptions = { minCutoff: 1.2, beta: 60, dCutoff: 1 };
 const ROTATION_FILTER: OneEuroOptions = { minCutoff: 1, beta: 4, dCutoff: 0.5 };
 
@@ -121,6 +173,17 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
   private freshFrame = true;
   private frameCallback?: number;
   private gate: IdentityGate;
+  /** Para el ajuste fino: fotogramas analizados y tarjetas que se siguen ahora. */
+  readonly stats = { analyzed: 0 };
+  get trackedCount(): number {
+    let n = 0;
+    for (const t of this.tracked.values()) if (t.anchor.tracking) n++;
+    return n;
+  }
+  /** Los valores en uso (ver `tune`). Los filtros leen estos objetos en cada fotograma. */
+  readonly tuning: MarkerTuning;
+  private readonly positionFilter: OneEuroOptions;
+  private readonly rotationFilter: OneEuroOptions;
   /** Lienzo del modo diagnóstico (lo que lee el detector, dibujado sobre la cámara). */
   private debugCanvas?: HTMLCanvasElement;
   private debugEnabled = false;
@@ -138,6 +201,48 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     super();
     this.offset = UPRIGHT.clone().multiply(options.anchorOffset ?? new THREE.Matrix4());
     this.gate = new IdentityGate(options.identity);
+    const position = options.filter?.position ?? POSITION_FILTER;
+    const rotation = options.filter?.rotation ?? ROTATION_FILTER;
+    this.positionFilter = { ...position };
+    this.rotationFilter = { ...rotation };
+    this.tuning = {
+      ...DEFAULT_TUNING,
+      bitsErroneos: options.maxBitErrors ?? DEFAULT_TUNING.bitsErroneos,
+      anchoDeteccion: options.detectWidth ?? DEFAULT_TUNING.anchoDeteccion,
+      campoVision: options.fovLongSide ?? DEFAULT_TUNING.campoVision,
+      confirmar: options.identity?.confirmFrames ?? DEFAULT_TUNING.confirmar,
+      reservar: options.identity?.hold ?? DEFAULT_TUNING.reservar,
+      perder: options.lostAfter ?? DEFAULT_TUNING.perder,
+      posicionCorte: position.minCutoff,
+      posicionBeta: position.beta,
+      giroCorte: rotation.minCutoff,
+      giroBeta: rotation.beta,
+      mismaMesa: options.coplanar ?? false,
+    };
+  }
+
+  /**
+   * Cambia valores en marcha: se notan en el siguiente fotograma (los filtros,
+   * el umbral, la confirmación…); el ancho y el campo de visión recolocan la
+   * cámara virtual.
+   */
+  tune(patch: Partial<MarkerTuning>): void {
+    const camera = patch.anchoDeteccion !== undefined || patch.campoVision !== undefined;
+    Object.assign(this.tuning, patch);
+    const t = this.tuning;
+    Object.assign(this.positionFilter, { minCutoff: t.posicionCorte, beta: t.posicionBeta });
+    Object.assign(this.rotationFilter, { minCutoff: t.giroCorte, beta: t.giroBeta });
+    this.gate.configure({ confirmFrames: t.confirmar, hold: t.reservar });
+    if (camera) delete this.canvas.dataset.size; // se recalcula en el siguiente update
+  }
+
+  /** El umbral del fotograma `frame` según el ajuste. */
+  private thresholdFor(frame: number): Threshold {
+    const t = this.tuning;
+    const profile = t.umbral === 'alternar' ? profileFor(frame) : t.umbral;
+    return profile === 'papel'
+      ? { relativeThreshold: t.papelRelativo, thresholdKernel: Math.round(t.papelVentana) }
+      : { relativeThreshold: t.movimientoRelativo, thresholdKernel: Math.round(t.movimientoVentana) };
   }
 
   async isSupported(): Promise<boolean> {
@@ -178,7 +283,7 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     this.video = video;
     this.ctx = ctx;
     this.hooks = hooks;
-    this.detector = createDetector(this.options.maxBitErrors ?? 3);
+    this.detector = createDetector(this.tuning.bitsErroneos);
     this.startWorker();
     this.gate.reset();
     this.watchFrames();
@@ -230,7 +335,7 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     const source = this.sourceSize();
     if (!this.video || !this.detector || !source.ready) return;
     if (this.canvas.dataset.size !== `${source.width}x${source.height}`) this.configureCamera();
-    const lostAfter = this.options.lostAfter ?? LOST_AFTER;
+    const lostAfter = this.tuning.perder;
     // Lo que haya terminado el worker se aplica en cuanto llega, haya fotograma nuevo o no.
     if (this.workerResult) {
       const { markers, time: at } = this.workerResult;
@@ -244,7 +349,8 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     if (this.worker) return this.updateWithWorker(time, lostAfter);
     const { width, height } = this.canvas;
     this.g.drawImage(this.video, 0, 0, width, height);
-    this.process(detectMarkers(this.detector, this.g.getImageData(0, 0, width, height), profileFor(++this.workerFrame)), time);
+    const frame = ++this.workerFrame;
+    this.process(detectMarkers(this.detector, this.g.getImageData(0, 0, width, height), this.thresholdFor(frame), Math.round(this.tuning.bitsErroneos)), time);
     this.markLost(time, lostAfter);
   }
 
@@ -281,7 +387,7 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
       this.workerSent.set(frame, time);
       const worker = this.worker!;
       createImageBitmap(this.video, { resizeWidth: this.canvas.width, resizeHeight: this.canvas.height, resizeQuality: 'medium' })
-        .then((bitmap) => worker.postMessage({ frame, bitmap, maxBitErrors: this.options.maxBitErrors ?? 3 }, [bitmap]))
+        .then((bitmap) => worker.postMessage({ frame, bitmap, threshold: this.thresholdFor(frame), maxBitErrors: Math.round(this.tuning.bitsErroneos) }, [bitmap]))
         .catch(() => {
           this.workerBusy = false;
           this.workerSent.delete(frame);
@@ -292,7 +398,8 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
 
   /** Identidades, poses y anclas a partir de lo detectado en un fotograma. */
   private process(raw: DetectedMarker[], time: number): void {
-    const lostAfter = this.options.lostAfter ?? LOST_AFTER;
+    this.stats.analyzed++;
+    const lostAfter = this.tuning.perder;
     const known = raw.filter((m) => !this.options.accept || this.options.accept(m.id));
     const markers = this.gate.filter(known, time);
     if (this.debugEnabled) this.drawDebug([...this.gate.last, ...raw.filter((m) => !known.includes(m)).map((detection) => ({ detection, status: 'desconocida' as const }))]);
@@ -306,7 +413,7 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
       if (!pose) continue;
       seen.push({ id: marker.id, pose, weight: area(corners) });
     }
-    if (this.options.coplanar) alignCoplanar(seen.map((s) => s.pose), seen.map((s) => s.weight));
+    if (this.tuning.mismaMesa) alignCoplanar(seen.map((s) => s.pose), seen.map((s) => s.weight));
     for (const { id, pose } of seen) this.updateTracked(id, pose, time);
   }
 
@@ -415,8 +522,8 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
         anchor,
         lastSeen: time,
         raw: new THREE.Matrix4(),
-        position: new OneEuroVector(this.options.filter?.position ?? POSITION_FILTER),
-        rotation: new OneEuroQuaternion(this.options.filter?.rotation ?? ROTATION_FILTER),
+        position: new OneEuroVector(this.positionFilter),
+        rotation: new OneEuroQuaternion(this.rotationFilter),
       };
       this.tracked.set(id, t);
       this.emit('marker', { id, anchor });
@@ -440,10 +547,10 @@ export class MarkerTrackingProvider extends Emitter<MarkerTrackingEvents> implem
     const camera = this.ctx?.camera;
     const { width: vw, height: vh } = this.sourceSize();
     if (!camera || !vw) return;
-    const fov = THREE.MathUtils.degToRad(this.options.fovLongSide ?? 65);
+    const fov = THREE.MathUtils.degToRad(this.tuning.campoVision);
     const focal = Math.max(vw, vh) / 2 / Math.tan(fov / 2);
 
-    const detectWidth = Math.min(this.options.detectWidth ?? 640, vw);
+    const detectWidth = Math.min(Math.round(this.tuning.anchoDeteccion), vw);
     const scale = detectWidth / vw;
     this.canvas.width = Math.round(vw * scale);
     this.canvas.height = Math.round(vh * scale);

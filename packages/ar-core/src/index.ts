@@ -10,7 +10,7 @@ export { Emitter } from './emitter';
 export { detectARSupport, type ARSupport } from './capabilities';
 export { WebXRWorldProvider, type WebXRWorldOptions } from './providers/webxr-world';
 export { ViewerProvider, type ViewerOptions } from './providers/viewer';
-export { MarkerTrackingProvider, type MarkerTrackingEvents, type MarkerTrackingOptions } from './providers/marker-tracking';
+export { DEFAULT_TUNING, MarkerTrackingProvider, type MarkerTrackingEvents, type MarkerTrackingOptions, type MarkerTuning } from './providers/marker-tracking';
 export { MARKER_COUNT, MARKER_DICTIONARY, markerSVG } from './markers';
 export { homography, markerPose, type PinholeCamera, type Point2 } from './pose';
 export { IdentityGate, type Detection, type DetectionStatus, type IdentityGateOptions } from './gate';

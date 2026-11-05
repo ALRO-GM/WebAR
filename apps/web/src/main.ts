@@ -409,8 +409,8 @@ async function enter(next: typeof mode, provider: ARProvider): Promise<void> {
   }
 }
 
-function enterCards(kind: CardsKind, list?: string[], together = false): void {
-  cards.prepare(kind, list, together);
+function enterCards(kind: CardsKind, list?: string[], together = false, tuning = false): void {
+  cards.prepare(kind, list, together, tuning);
   void enter('tarjetas', cards.provider);
 }
 
@@ -485,6 +485,13 @@ const photo = new PhotoMode({
   contents: () => [...hub.progress.unlocked, ...hub.progress.species],
   onPhoto: () => void hub.add('foto', {}),
 });
+// Ajuste fino de la RA: la cámara con las tarjetas y el panel de valores encima.
+$('ajuste-ra-boton').addEventListener('click', () => {
+  $<HTMLDialogElement>('ajustes').close();
+  riddles.clear();
+  enterCards('camara', undefined, false, true);
+});
+
 // Modo demostración (Ajustes, o ?demo=alumno): otro almacén, todo desbloqueado y la clase de demostración.
 $('demo-boton').textContent = isDemo() ? t('demo.salir') : t('demo.entrar');
 $('demo-chip').hidden = !isDemo();

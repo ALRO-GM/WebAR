@@ -1,5 +1,5 @@
 /// <reference lib="webworker" />
-import { createDetector, detectMarkers, profileFor } from '../detection';
+import { createDetector, detectMarkers, type Threshold } from '../detection';
 
 /**
  * La detección de marcadores fuera del hilo principal: recibe el fotograma
@@ -11,8 +11,8 @@ let detector: ReturnType<typeof createDetector> | undefined;
 let canvas: OffscreenCanvas | undefined;
 let g: OffscreenCanvasRenderingContext2D | null = null;
 
-self.onmessage = (event: MessageEvent<{ frame: number; bitmap: ImageBitmap; maxBitErrors: number }>) => {
-  const { frame, bitmap, maxBitErrors } = event.data;
+self.onmessage = (event: MessageEvent<{ frame: number; bitmap: ImageBitmap; threshold: Threshold; maxBitErrors: number }>) => {
+  const { frame, bitmap, threshold, maxBitErrors } = event.data;
   detector ??= createDetector(maxBitErrors);
   if (!canvas || canvas.width !== bitmap.width || canvas.height !== bitmap.height) {
     canvas = new OffscreenCanvas(bitmap.width, bitmap.height);
@@ -20,6 +20,6 @@ self.onmessage = (event: MessageEvent<{ frame: number; bitmap: ImageBitmap; maxB
   }
   g!.drawImage(bitmap, 0, 0);
   bitmap.close();
-  const markers = detectMarkers(detector, g!.getImageData(0, 0, canvas.width, canvas.height), profileFor(frame));
+  const markers = detectMarkers(detector, g!.getImageData(0, 0, canvas.width, canvas.height), threshold, maxBitErrors);
   self.postMessage({ frame, markers });
 };

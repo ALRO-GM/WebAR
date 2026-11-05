@@ -372,6 +372,19 @@ código sigue igual de estricta (es lo que evita confundirlas), pero:
   fotogramas borrosos la hacían parpadear) y una nueva aparece al segundo
   fotograma, no al tercero.
 
+**Ajuste fino en el dispositivo** (Ajustes → «Ajuste fino de la realidad
+aumentada», `cards/tuning.ts`): abre la cámara con el diagnóstico encendido
+y un panel plegable con deslizadores para todo lo que decide la lectura y el
+seguimiento (`MarkerTuning` en `marker-tracking.ts`: umbrales «papel» y
+«movimiento» y si se alternan, bits erróneos, resolución del análisis,
+fotogramas para confirmar, memoria y pérdida de la tarjeta, filtro 1 € de
+posición y giro, rapidez del átomo, misma mesa y campo de visión de la
+cámara, que hace encajar el tamaño de lo virtual con lo real). Cada cambio se
+aplica en el fotograma siguiente (`MarkerTrackingProvider.tune`; el worker
+recibe el umbral con cada fotograma) y se guarda en el dispositivo
+(`webar:ajuste-ra`, solo lo que difiere de serie). Enseña en vivo cuántas
+tarjetas se siguen y cuántos análisis por segundo hace.
+
 Átomos más grandes sobre la tarjeta (H ≈ 1,9 cm de radio, moléculas un 35 %
 mayores) y electrones al doble.
 

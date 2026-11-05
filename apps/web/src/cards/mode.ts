@@ -11,6 +11,8 @@ import { MAX_CONTENT_SCALE, MIN_CONTENT_SCALE } from './card-visual';
 import { CARD, DECK, MARKER_TO_CENTER, cardById, type CardSpec } from './deck';
 import { CardGame, HOLD_SECONDS, JOIN_DISTANCE } from './game';
 import { TableScene } from './table-scene';
+import { applySavedTuning, openTuningPanel } from './tuning';
+import type { MarkerTuning } from '@webar/ar-core';
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
 const kj = (n: number) => `${n > 0 ? '+' : n < 0 ? '−' : ''}${num(Math.abs(n))} kJ/mol`;
@@ -98,6 +100,8 @@ export class CardsMode {
   private together = false;
 
   constructor(private readonly deps: CardsModeDeps) {
+    this.defaultTuning = { ...this.marker.tuning };
+    applySavedTuning(this.marker);
     this.effects = new Effects(deps.ar.scene);
     this.game = new CardGame(deps.ar.scene, this.effects, deps.model());
     this.marker.on('marker', ({ id, anchor }) => {
@@ -129,7 +133,15 @@ export class CardsMode {
   }
 
   /** Prepara el modo; luego hay que arrancar la sesión con `provider`. */
-  prepare(kind: CardsKind, cards?: string[], together = false): void {
+  /** Los valores de serie (antes de lo guardado en el ajuste fino), para «Restablecer». */
+  private defaultTuning?: MarkerTuning;
+  /** Próxima sesión con el panel de ajuste fino; y cómo quitarlo. */
+  private tuningMode = false;
+  private closeTuning?: () => void;
+  private debugBefore = false;
+
+  prepare(kind: CardsKind, cards?: string[], together = false, tuning = false): void {
+    this.tuningMode = tuning && kind === 'camara';
     this.kind = kind;
     this.initialCards = cards?.length ? cards : DEFAULT_TABLE;
     this.together = together;
@@ -143,10 +155,23 @@ export class CardsMode {
     this.game.setModel(this.deps.model());
     if (this.kind === 'mesa') this.setupTable();
     else this.setupPinch();
+    if (this.tuningMode) {
+      // Con el diagnóstico encendido: se ve qué lee la cámara mientras se ajusta.
+      this.debugBefore = this.marker.debug;
+      this.marker.debug = true;
+      // En el body: el lienzo del diagnóstico queda por encima de todo el HUD.
+      this.closeTuning = openTuningPanel(document.body, this.marker, this.defaultTuning!, () => void this.deps.ar.end());
+    }
   }
 
   onEnd(): void {
     this.active = false;
+    if (this.closeTuning) {
+      this.closeTuning();
+      this.closeTuning = undefined;
+      this.marker.debug = this.debugBefore;
+    }
+    this.tuningMode = false;
     for (const extra of this.extras.values()) extra.dispose();
     this.extras.clear();
     this.selected = null;

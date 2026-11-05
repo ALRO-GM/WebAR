@@ -36,6 +36,10 @@ export const THRESHOLD_PROFILES = {
   movimiento: { relativeThreshold: 0.08, thresholdKernel: 6 },
 } as const;
 export type ThresholdProfile = keyof typeof THRESHOLD_PROFILES;
+export interface Threshold {
+  relativeThreshold: number;
+  thresholdKernel: number;
+}
 
 export function createDetector(maxBitErrors = 3): ArucoDetector {
   return new AR.Detector({
@@ -50,8 +54,10 @@ export function createDetector(maxBitErrors = 3): ArucoDetector {
 /** El perfil de umbral para el fotograma número `frame`: uno y otro, alternos. */
 export const profileFor = (frame: number): ThresholdProfile => (frame % 2 ? 'movimiento' : 'papel');
 
-export function detectMarkers(detector: ArucoDetector, image: ImageData, profile: ThresholdProfile = 'papel'): DetectedMarker[] {
-  Object.assign(detector, THRESHOLD_PROFILES[profile]);
+/** Detecta con un perfil o con un umbral concreto (los del ajuste fino), y con los bits erróneos que se toleran. */
+export function detectMarkers(detector: ArucoDetector, image: ImageData, profile: ThresholdProfile | Threshold = 'papel', maxBitErrors?: number): DetectedMarker[] {
+  Object.assign(detector, typeof profile === 'string' ? THRESHOLD_PROFILES[profile] : profile);
+  if (maxBitErrors !== undefined) detector.dictionary.tau = maxBitErrors + 1;
   return detector.detect(image).map((m) => ({
     id: m.id,
     corners: m.corners,
