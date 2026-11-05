@@ -81,6 +81,22 @@ flecha) y otro en Ajustes (`src/install.ts`). Solo sale donde se puede:
 | 3.1.1 / 3.1.2 Idioma | `lang` del documento según el idioma elegido |
 | 4.1.3 Mensajes de estado | Avisos de logro, reacciones y estados en regiones `aria-live` |
 
+### Texto grande sin tapar nada
+
+Con «Tamaño del texto: muy grande» (×1,3) en un móvil de 360 px, se revisan
+todas las pantallas con un script que busca botones tapados, solapados,
+fuera de la pantalla o con el texto cortado. Reglas que salieron de ahí:
+
+- Las dos barras fijas (arriba y pestañas) crecen con el texto solo hasta lo
+  que cabe en el ancho (`min(… rem, … vw)`), con zonas táctiles de 44 px;
+  las etiquetas de las pestañas se recortan con «…» antes que salirse.
+- Las rejillas usan `minmax(min(X rem, 100%), 1fr)`: una columna nunca es
+  más ancha que la pantalla. Dentro de las pantallas, los textos largos
+  parten línea.
+- Los paneles sobre la cámara (ajuste fino) parten líneas y botones.
+- Lo que sí puede ir más ancho a propósito se desliza en horizontal: la
+  tabla periódica, las tablas de datos del panel del profesorado.
+
 ## Textos e idiomas
 
 - **Todos los textos** están en `apps/web/src/i18n/es/*.json` (un fichero por

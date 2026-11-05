@@ -30,7 +30,7 @@
 .mat-aviso { margin: 0; padding: 0.6rem 0.9rem; border-radius: var(--radius); background: var(--bad-soft); color: var(--fg-strong); font-weight: 700; }
 
 /* Rejilla de cristales */
-.mat-rejilla { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); }
+.mat-rejilla { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fill, minmax(min(10rem, 100%), 1fr)); }
 .mat-cristal { display: flex; flex-direction: column; gap: 0.25rem; height: 100%; min-height: var(--tap); }
 .mat-cristal strong { color: var(--fg-strong); font-size: 1.02rem; line-height: 1.2; }
 .mat-cristal-dibujo {
@@ -46,7 +46,7 @@
 .chip.mat-enlace-metalico, .chip.mat-enlace-ionico, .chip.mat-enlace-covalente, .chip.mat-enlace-puentes { border-color: var(--tono); }
 
 /* Otras formas de agruparse */
-.mat-otras { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); }
+.mat-otras { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fill, minmax(min(17rem, 100%), 1fr)); }
 .mat-otra { display: flex; flex-direction: column; gap: 0.4rem; }
 .mat-otra h3 { margin: 0.2rem 0 0; font-size: 1.15rem; }
 .mat-otra p { margin: 0; }

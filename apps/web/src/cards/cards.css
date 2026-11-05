@@ -28,3 +28,10 @@
 .ajuste-nombre output { font-variant-numeric: tabular-nums; color: var(--primary); }
 .ajuste-fila input[type=range] { width: 100%; accent-color: var(--primary); }
 .ajuste-fila small { color: var(--muted); font-size: 0.75rem; line-height: 1.3; }
+/* Con texto grande, que el panel no sea más ancho que la pantalla: todo parte línea. */
+.ajuste-ra { box-sizing: border-box; width: auto; }
+.ajuste-ra * { min-width: 0; overflow-wrap: anywhere; }
+.ajuste-ra header { flex-wrap: wrap; }
+.ajuste-ra .segmentado { flex-wrap: wrap; }
+.ajuste-ra .segmentado button { flex: 1 1 auto; }
+.ajuste-ra .interruptor { display: flex; gap: 8px; align-items: flex-start; }

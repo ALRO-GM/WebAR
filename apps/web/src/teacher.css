@@ -16,12 +16,12 @@ body.profe { background: var(--bg); overflow-y: auto; height: auto; min-height: 
 .profe button.peligro { background: var(--bad); box-shadow: 0 var(--press) 0 var(--bad-shadow); }
 .tarjeta-panel { display: grid; gap: 8px; padding: 16px; border-radius: var(--radius-lg); background: var(--surface); border: 2px solid var(--line); border-bottom-width: 4px; }
 .tarjeta-panel label { display: grid; gap: 4px; font-weight: 800; font-size: 0.92rem; }
-.profe-dos { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
+.profe-dos { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr)); }
 .tarjeta-panel select { font: inherit; padding: 0.6rem; border-radius: 10px; background: var(--bg-2); color: var(--fg); border: 2px solid var(--line); }
 .en-linea { grid-template-columns: 1fr 1fr auto; align-items: end; }
 .en-linea h3, .en-linea .error { grid-column: 1 / -1; }
 @media (max-width: 40rem) { .en-linea { grid-template-columns: 1fr; } }
-.clases { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); }
+.clases { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(14rem, 100%), 1fr)); }
 .clase { display: grid; gap: 4px; padding: 14px; border-radius: 16px; background: rgb(122 165 255 / 0.14); color: var(--fg) !important; text-decoration: none; }
 .clase span { color: var(--muted); font-size: 0.9rem; }
 .clase code { font-size: 1.1rem; letter-spacing: 0.15em; }
@@ -29,7 +29,7 @@ body.profe { background: var(--bg); overflow-y: auto; height: auto; min-height: 
 .codigo { font-size: 2.6rem; font-weight: 800; letter-spacing: 0.2em; margin: 0; }
 .qr { width: 9rem; background: #fff; border-radius: 12px; padding: 6px; }
 .qr svg { display: block; width: 100%; height: auto; }
-.tiles { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
+.tiles { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr)); }
 .tile { display: grid; padding: 14px; border-radius: 16px; background: var(--surface); border: 2px solid var(--line); }
 .tile small { color: var(--muted); font-size: 0.8rem; }
 .tile .valor { font-size: 2rem; font-weight: 800; color: var(--fg); }
@@ -84,7 +84,7 @@ button.peligro { background: #5a1f24; color: #ffd0d0; }
 .indice a { padding: 0.35rem 0.8rem; border-radius: 999px; border: 2px solid var(--line); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
 .seccion { margin: 10px 0 0; font-size: 1.25rem; scroll-margin-top: 56px; }
 .aviso-datos { padding: 8px 12px; border-radius: 10px; border-left: 4px solid #fab219; background: var(--surface); }
-.recos-rejilla { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); align-items: start; }
+.recos-rejilla { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr)); align-items: start; }
 .reco { align-content: start; }
 .reco h4 { font-size: 1.05rem; }
 .recos { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
@@ -123,7 +123,7 @@ button.peligro { background: #5a1f24; color: #ffd0d0; }
 .calor-leyenda { display: flex; gap: 3px; align-items: center; }
 .calor-leyenda .celda { width: 14px; min-height: 14px; }
 .calor-leyenda span:first-child { margin-right: 4px; } .calor-leyenda span:last-child { margin-left: 4px; }
-.chips-elementos { display: grid; grid-template-columns: repeat(auto-fill, minmax(3.2rem, 1fr)); gap: 4px; }
+.chips-elementos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(3.2rem, 100%), 1fr)); gap: 4px; }
 .chip-elemento { display: grid; place-items: center; padding: 6px 2px; border-radius: 8px; color: var(--fg); border: 1px solid var(--line); }
 .chip-elemento small { font-size: 0.72rem; }
 .chip-elemento.n4, .chip-elemento.n5 { color: #fff; }
