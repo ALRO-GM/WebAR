@@ -7,6 +7,7 @@ import { calm, vibrate } from '../settings';
 import { sfx } from '../sfx';
 import { bohrSVG } from './bohr-svg';
 import { answerKey, type Answer, type Exercise } from './exercises';
+import { watchLeave } from './leave-guard';
 import { MiniScene } from './mini-scene';
 
 export interface LessonResult {
@@ -17,6 +18,8 @@ export interface LessonResult {
   seconds: number;
   /** Cada pregunta, la primera vez que se responde (para las estadísticas del profesorado). */
   answers: Answer[];
+  /** Veces que se empezó de nuevo por salir a mitad. */
+  restarts: number;
 }
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
@@ -35,7 +38,10 @@ export function playLesson(
   const failed = new Set<Exercise>();
   const answered = new Set<Exercise>();
   const answers: Answer[] = [];
-  const started = performance.now();
+  let started = performance.now();
+  let restarts = 0;
+  /** En la pantalla de «empieza de nuevo»: el botón lleva a la primera. */
+  let restarting = false;
   let doneCount = 0;
   let current: Exercise | null = null;
   let selected: number | null = null;
@@ -67,6 +73,32 @@ export function playLesson(
   action.addEventListener('click', onAction);
   dialog.showModal();
   next();
+  // Salir a mitad (otra app, otra pestaña, otra ventana): se empieza de nuevo.
+  let stopWatching = watchLeave(restart);
+
+  function restart(): void {
+    restarts++;
+    mini?.dispose();
+    mini = null;
+    queue.splice(0, queue.length, ...opts.exercises);
+    failed.clear();
+    answered.clear();
+    answers.length = 0;
+    doneCount = 0;
+    streakInRow = 0;
+    started = performance.now();
+    current = null;
+    combo.textContent = '';
+    progress();
+    foot.className = 'leccion-pie';
+    feedback.innerHTML = '';
+    body.innerHTML = `<div class="leccion-reinicio"><div class="fin-avatar">${avatarSVG(opts.guide, { expression: 'sorpresa', size: 130 })}</div>
+      <h2 id="leccion-titulo">${t('leccion.reinicio_titulo')}</h2><p class="leccion-texto">${t('leccion.reinicio_texto')}</p></div>`;
+    action.textContent = t('leccion.reinicio_boton');
+    action.className = 'btn ancho';
+    action.disabled = false;
+    restarting = true;
+  }
 
   function onCancel(e: Event): void {
     e.preventDefault();
@@ -74,6 +106,7 @@ export function playLesson(
   }
 
   function close(result: LessonResult | null): void {
+    stopWatching();
     mini?.dispose();
     mini = null;
     dialog.removeEventListener('cancel', onCancel);
@@ -193,6 +226,10 @@ export function playLesson(
   }
 
   function onAction(): void {
+    if (restarting) {
+      restarting = false;
+      return next();
+    }
     if (!current) return;
     if (current.kind === 'ensena' || checked) {
       doneCount++;
@@ -256,6 +293,9 @@ export function playLesson(
   }
 
   function finish(): void {
+    // Terminada: salir ya no la reinicia.
+    stopWatching();
+    stopWatching = () => {};
     const right = questions - failed.size;
     const perfect = failed.size === 0;
     const xp = Math.min(10 + right + (perfect ? 5 : 0), 30);
@@ -277,7 +317,7 @@ export function playLesson(
     action.textContent = t('leccion.continuar');
     action.className = 'btn ancho';
     action.disabled = false;
-    action.onclick = () => close({ total: questions, right, xp, seconds, answers });
+    action.onclick = () => close({ total: questions, right, xp, seconds, answers, restarts });
     action.removeEventListener('click', onAction);
   }
 }

@@ -40,6 +40,16 @@ Nombres revisados: «Tarjetas en papel» y «Tarjetas en pantalla» (antes
 laboratorio: ahora los lanza el profesorado a su clase (Adivina sigue en el
 camino).
 
+## Salir a mitad de una lección
+
+Si a mitad de una lección o de una Adivina (del camino o lanzada por el
+profesorado) se sale de la app o de la pestaña, o se cambia a otra ventana
+(p. ej. para preguntar a una IA), al volver se empieza de nuevo desde la
+primera pregunta, con una pantalla que lo explica (`learn/leave-guard.ts`:
+`visibilitychange`, `blur` y `pagehide`). Repetir es lo que fija lo
+aprendido. Una vez terminada, salir ya no la reinicia. El evento de la
+lección guarda cuántas veces se reinició (`reinicios`).
+
 ## Instalar la app
 
 Botón «⬇ Instalar» en la barra de arriba (en móviles estrechos, solo la

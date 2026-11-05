@@ -5,6 +5,7 @@ import { createEveryday, everydayArchetype, hasEveryday } from '../objects';
 import { calm, vibrate } from '../settings';
 import { sfx } from '../sfx';
 import type { Answer } from './exercises';
+import { watchLeave } from './leave-guard';
 import { MiniScene } from './mini-scene';
 
 export interface GuessResult {
@@ -63,8 +64,34 @@ export function playGuess(dialog: HTMLDialogElement, pool: string[], onClose: (r
   const cancel = (e: Event) => (e.preventDefault(), close(null));
   dialog.addEventListener('cancel', cancel);
   dialog.querySelector('[data-cerrar]')!.addEventListener('click', () => close(null));
-  action.addEventListener('click', () => (answered ? next() : undefined));
+  action.addEventListener('click', () => {
+    if (restarting) {
+      restarting = false;
+      return show();
+    }
+    if (answered) next();
+  });
   dialog.showModal();
+  // Salir a mitad (otra app, pestaña o ventana): se empieza de nuevo.
+  let restarting = false;
+  const stopWatching = watchLeave(() => {
+    if (round >= rounds.length) return;
+    round = 0;
+    score = 0;
+    right = 0;
+    answers.length = 0;
+    points.textContent = '⭐ 0';
+    mini?.dispose();
+    mini = null;
+    bar.style.setProperty('--p', '0');
+    foot.className = 'leccion-pie';
+    feedback.innerHTML = '';
+    body.innerHTML = `<div class="leccion-reinicio"><h2 id="leccion-titulo">${t('leccion.reinicio_titulo')}</h2><p class="leccion-texto">${t('leccion.reinicio_texto')}</p></div>`;
+    action.textContent = t('leccion.reinicio_boton');
+    action.className = 'btn ancho';
+    action.disabled = false;
+    restarting = true;
+  });
   if (!rounds.length) {
     body.innerHTML = `<p>${t('adivina.vacio')}</p>`;
     action.textContent = t('comun.cerrar');
@@ -74,6 +101,7 @@ export function playGuess(dialog: HTMLDialogElement, pool: string[], onClose: (r
   show();
 
   function close(r: GuessResult | null): void {
+    stopWatching();
     mini?.dispose();
     mini = null;
     dialog.removeEventListener('cancel', cancel);

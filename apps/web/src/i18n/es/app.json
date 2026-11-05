@@ -994,5 +994,17 @@
  "perfil.calendario_aria_1": {
   "texto": "Calendario de las últimas semanas: racha de 1 día",
   "descripcion": "Lectores de pantalla (singular)"
+ },
+ "leccion.reinicio_titulo": {
+  "texto": "Has salido de la lección",
+  "descripcion": "Pantalla al volver tras salir a mitad de una lección"
+ },
+ "leccion.reinicio_texto": {
+  "texto": "Empezamos de nuevo desde la primera pregunta. Si sales a mitad (a otra app, pestaña o ventana), la lección vuelve a empezar: repetir es lo que hace que se quede.",
+  "descripcion": "Explicación"
+ },
+ "leccion.reinicio_boton": {
+  "texto": "Empezar de nuevo",
+  "descripcion": "Botón"
  }
 }

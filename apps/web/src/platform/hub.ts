@@ -506,7 +506,7 @@ export class Hub {
           onClose: async (result) => {
             if (!result) return;
             const wasToday = this.progress.streakToday;
-            await this.add('leccion', { nodo: node.id, aciertos: result.right, total: result.total, xp: result.xp, segundos: result.seconds, preguntas: result.answers });
+            await this.add('leccion', { nodo: node.id, aciertos: result.right, total: result.total, xp: result.xp, segundos: result.seconds, preguntas: result.answers, ...(result.restarts ? { reinicios: result.restarts } : {}) });
             if (node.kind === 'leccion') void this.add('lectura', { elemento: node.elements[0] });
             this.onCelebrate('leccion');
             if (!wasToday && this.progress.streakToday) this.showStreak();

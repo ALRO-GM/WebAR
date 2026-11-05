@@ -745,5 +745,14 @@
  },
  "perfil.calendario_aria_1": {
   "texto": "Calendar of the last weeks: 1-day streak"
+ },
+ "leccion.reinicio_titulo": {
+  "texto": "You left the lesson"
+ },
+ "leccion.reinicio_texto": {
+  "texto": "We start again from the first question. If you leave halfway (to another app, tab or window), the lesson starts over: repeating is what makes it stick."
+ },
+ "leccion.reinicio_boton": {
+  "texto": "Start again"
  }
 }
